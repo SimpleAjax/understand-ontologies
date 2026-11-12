@@ -1,0 +1,6 @@
+{
+  "checked_at": "2026-11-12T11:06:26.243931+00:00",
+  "benchmark_read_attempts": 0,
+  "source_files_opened": 20,
+  "guard": "Python audit hook denies questions.json and data/benchmarks file opens during graph build."
+}

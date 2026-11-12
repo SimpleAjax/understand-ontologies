@@ -1,0 +1,5 @@
+{
+  "unlocked_at": "2026-11-12T11:06:57.288380+00:00",
+  "graph_lock_sha256": "08640093500179c3af42c5ba6136c68f3f466071232f3d8a827a134823689b6b",
+  "statement": "First benchmark access by this experiment after graph sealing."
+}

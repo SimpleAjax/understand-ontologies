@@ -1,0 +1,8 @@
+{
+  "frozen_at": "2026-11-12T11:00:00.244556+00:00",
+  "seed": 20261112,
+  "protocol_sha256": "c44265d7f3914f58ff430c4e54c17f0120cca47c43bd8344fe68c24b7f27b9d3",
+  "schema_sha256": "d58357bf0b68d7aef64304577dd31d1f1a1653baac732c84b2b231a9ee60f663",
+  "top_k": 5,
+  "character_budget": 6000
+}

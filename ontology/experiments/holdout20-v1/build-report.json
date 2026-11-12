@@ -1,0 +1,9 @@
+{
+  "built_at": "2026-11-12T11:06:26.168423+00:00",
+  "materialization_seconds": 0.08210270013660192,
+  "documents": 20,
+  "rules": 53,
+  "source_characters": 929705,
+  "extraction": "Manual coding-assistant source-only curation aided by document-wide topic scans; no independent legal review.",
+  "effort": "Protocol-to-seal elapsed wall time includes coding and validation, not measured human extraction labor."
+}

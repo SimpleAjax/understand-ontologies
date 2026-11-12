@@ -1,0 +1,598 @@
+@prefix ct: <https://cimulink.local/ontology/contract-terms/0.1#> .
+@prefix ex: <https://cimulink.local/ontology/examples/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ct: a owl:Ontology ;
+    rdfs:comment "Partial five-contract development sample. No claim of complete contract coverage or legal correctness." .
+
+ct:agreement_effective_from a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:applies_within a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:calendar_date_status a owl:DatatypeProperty .
+
+ct:coverage a owl:DatatypeProperty .
+
+ct:description a owl:DatatypeProperty .
+
+ct:duration a owl:DatatypeProperty .
+
+ct:duration_status a owl:DatatypeProperty .
+
+ct:end_char a owl:DatatypeProperty .
+
+ct:end_date_status a owl:DatatypeProperty .
+
+ct:ends_on_event a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:exact_text a owl:DatatypeProperty .
+
+ct:has_party a owl:ObjectProperty ;
+    rdfs:domain ct:Agreement ;
+    rdfs:range ct:Party .
+
+ct:has_rule a owl:ObjectProperty ;
+    rdfs:domain ct:Agreement ;
+    rdfs:range ct:Rule .
+
+ct:kind a owl:DatatypeProperty .
+
+ct:notice_actor a owl:DatatypeProperty .
+
+ct:notice_form a owl:DatatypeProperty .
+
+ct:notice_period_status a owl:DatatypeProperty .
+
+ct:qualifies a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Rule .
+
+ct:references_section a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:renewal_count a owl:DatatypeProperty .
+
+ct:resolution_status a owl:DatatypeProperty .
+
+ct:resolved_to a owl:ObjectProperty ;
+    rdfs:domain ct:Reference ;
+    rdfs:range ct:SourcePassage .
+
+ct:source_path a owl:DatatypeProperty .
+
+ct:source_sha256 a owl:DatatypeProperty .
+
+ct:start_char a owl:DatatypeProperty .
+
+ct:starts_from a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:stated_end_date a owl:DatatypeProperty .
+
+ct:subject_to a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Condition .
+
+ct:supported_by a owl:ObjectProperty ;
+    rdfs:range ct:SourcePassage .
+
+ct:termination_notice a owl:DatatypeProperty .
+
+ex:A10 a ct:Agreement ;
+    rdfs:label "Rogers Cable Communications Inc. / EuroMedia Holdings Corp." ;
+    ct:coverage "PARTIAL_TERM_RENEWAL_TERMINATION_SAMPLE" ;
+    ct:has_party ex:EuroMedia,
+        ex:Rogers ;
+    ct:has_rule ex:Continuation10,
+        ex:InitialTerm10,
+        ex:Renewal10 .
+
+ex:A129 a ct:Agreement ;
+    rdfs:label "Eton Pharmaceuticals, Inc. / Aucta Pharmaceuticals, Inc." ;
+    ct:coverage "PARTIAL_TERM_RENEWAL_TERMINATION_SAMPLE" ;
+    ct:has_party ex:Aucta,
+        ex:Eton ;
+    ct:has_rule ex:BreachTermination129,
+        ex:Term129 .
+
+ex:A268 a ct:Agreement ;
+    rdfs:label "T-Mobile Netherlands B.V. / Elephant Talk Communication Holding AG" ;
+    ct:coverage "PARTIAL_TERM_RENEWAL_TERMINATION_SAMPLE" ;
+    ct:has_party ex:ElephantTalk,
+        ex:TMobile ;
+    ct:has_rule ex:BreachTermination268,
+        ex:InitialTerm268,
+        ex:Renewal268 .
+
+ex:A30 a ct:Agreement ;
+    rdfs:label "PSiTech Corporation / Empirical Ventures, Inc." ;
+    ct:coverage "PARTIAL_TERM_RENEWAL_TERMINATION_SAMPLE" ;
+    ct:has_party ex:Empirical,
+        ex:PSiTech ;
+    ct:has_rule ex:InitialTerm30,
+        ex:Renewal30 .
+
+ex:A373 a ct:Agreement ;
+    rdfs:label "The Johns Hopkins University / Virtuoso Surgical, Inc." ;
+    ct:coverage "PARTIAL_TERM_RENEWAL_TERMINATION_SAMPLE" ;
+    ct:has_party ex:JHU,
+        ex:Virtuoso ;
+    ct:has_rule ex:CompanyTermination373,
+        ex:JHUTermination373,
+        ex:Term373 .
+
+ex:AgreementDate268 a ct:Reference ;
+    rdfs:label "Date of the Agreement (not resolved in this sample)" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:Article18_268 a ct:Reference ;
+    rdfs:label "Article 18; only Article 18.1(b) linked, other grounds not modelled" ;
+    ct:resolution_status "PASSAGE_LINKED" ;
+    ct:resolved_to ex:P268c .
+
+ex:Aucta a ct:Party ;
+    rdfs:label "Aucta Pharmaceuticals, Inc." ;
+    ct:supported_by ex:P129parties .
+
+ex:BreachCure129 a ct:Condition ;
+    rdfs:label "Written notice; non-payment and other breaches have different 30/60-day branches and a conditional cure extension capped at 90 days. Read the full clause; this is not an executable decision rule." ;
+    ct:description "Written notice; non-payment and other breaches have different 30/60-day branches and a conditional cure extension capped at 90 days. Read the full clause; this is not an executable decision rule." ;
+    ct:supported_by ex:P129b .
+
+ex:BreachTermination129 a ct:Rule ;
+    rdfs:label "Termination for breach subject to notice and cure branches" ;
+    ct:kind "BREACH_TERMINATION" ;
+    ct:qualifies ex:Term129 ;
+    ct:references_section ex:Section11_2_129 ;
+    ct:subject_to ex:BreachCure129 ;
+    ct:supported_by ex:P129b .
+
+ex:BreachTermination268 a ct:Rule ;
+    rdfs:label "Article 18.1(b) material-breach termination" ;
+    ct:kind "BREACH_TERMINATION" ;
+    ct:qualifies ex:InitialTerm268,
+        ex:Renewal268 ;
+    ct:subject_to ex:PaymentExclusion268,
+        ex:Remedy268 ;
+    ct:supported_by ex:P268c .
+
+ex:CompanyTermination373 a ct:Rule ;
+    rdfs:label "Company may terminate for any reason with 60 days written notice" ;
+    ct:kind "COMPANY_TERMINATION" ;
+    ct:notice_actor "COMPANY_TO_JHU" ;
+    ct:notice_form "WRITTEN" ;
+    ct:qualifies ex:Term373 ;
+    ct:references_section ex:Paragraph8_1_373 ;
+    ct:supported_by ex:P373b ;
+    ct:termination_notice "P60D"^^xsd:duration .
+
+ex:Continuation10 a ct:Rule ;
+    rdfs:label "Conditional continuation after expiry" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:notice_actor "EITHER_PARTY" ;
+    ct:notice_form "WRITTEN" ;
+    ct:qualifies ex:InitialTerm10,
+        ex:Renewal10 ;
+    ct:subject_to ex:ContinuedDistribution10 ;
+    ct:supported_by ex:P10b ;
+    ct:termination_notice "P60D"^^xsd:duration .
+
+ex:ContinuedDistribution10 a ct:Condition ;
+    rdfs:label "After initial or renewal expiry, no new agreement has been executed AND Rogers or permitted assigns continues distribution and exhibition on the ROD Service." ;
+    ct:description "After initial or renewal expiry, no new agreement has been executed AND Rogers or permitted assigns continues distribution and exhibition on the ROD Service." ;
+    ct:supported_by ex:P10b .
+
+ex:Country373 a ct:Reference ;
+    rdfs:label "Each country separately; country list not supplied" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:EarlyTermination10 a ct:Condition ;
+    rdfs:label "Unless earlier terminated in accordance with the agreement." ;
+    ct:description "Unless earlier terminated in accordance with the agreement." ;
+    ct:supported_by ex:P10a .
+
+ex:EarlyTermination30 a ct:Condition ;
+    rdfs:label "Unless terminated earlier under an express provision of the agreement; Section 6.2 is not modelled here." ;
+    ct:description "Unless terminated earlier under an express provision of the agreement; Section 6.2 is not modelled here." ;
+    ct:supported_by ex:P30a .
+
+ex:EffectiveDate10 a ct:Reference ;
+    rdfs:label "Effective Date (definition not resolved in this sample)" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:EffectiveDate129 a ct:Reference ;
+    rdfs:label "Effective Date conditional on Section 11.1 wording" ;
+    ct:resolution_status "PASSAGE_LINKED" ;
+    ct:resolved_to ex:P129a .
+
+ex:EffectiveDate30 a ct:Reference ;
+    rdfs:label "Effective Date (definition not resolved in this sample)" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:EffectiveDate373 a ct:Reference ;
+    rdfs:label "Effective Date (definition not resolved in this sample)" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:Effectiveness129 a ct:Condition ;
+    rdfs:label "Supply-agreement and FDA-review conditions, deadlines, proviso, and ETON waiver wording must be read together in the full source passage; satisfaction is not established." ;
+    ct:description "Supply-agreement and FDA-review conditions, deadlines, proviso, and ETON waiver wording must be read together in the full source passage; satisfaction is not established." ;
+    ct:supported_by ex:P129a .
+
+ex:ElephantTalk a ct:Party ;
+    rdfs:label "Elephant Talk Communication Holding AG" ;
+    ct:supported_by ex:P268parties .
+
+ex:Empirical a ct:Party ;
+    rdfs:label "Empirical Ventures, Inc." ;
+    ct:supported_by ex:P30parties .
+
+ex:Eton a ct:Party ;
+    rdfs:label "Eton Pharmaceuticals, Inc." ;
+    ct:supported_by ex:P129parties .
+
+ex:EuroMedia a ct:Party ;
+    rdfs:label "EuroMedia Holdings Corp." ;
+    ct:supported_by ex:P10parties .
+
+ex:JHU a ct:Party ;
+    rdfs:label "The Johns Hopkins University" ;
+    ct:supported_by ex:P373parties .
+
+ex:JHUTermination373 a ct:Rule ;
+    rdfs:label "JHU option to terminate after qualifying period without sales" ;
+    ct:kind "JHU_OPTIONAL_TERMINATION" ;
+    ct:qualifies ex:Term373 ;
+    ct:subject_to ex:NoSales373 ;
+    ct:supported_by ex:P373b .
+
+ex:LaunchDate268 a ct:Reference ;
+    rdfs:label "Commercial Launch Date (not resolved in this sample)" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:NoSales373 a ct:Condition ;
+    rdfs:label "No sales of LICENSED PRODUCTS or LICENSED SERVICES in any four consecutive quarters after initial commercial sale; whether this occurred is not established." ;
+    ct:description "No sales of LICENSED PRODUCTS or LICENSED SERVICES in any four consecutive quarters after initial commercial sale; whether this occurred is not established." ;
+    ct:supported_by ex:P373b .
+
+ex:NonRenewal30 a ct:Condition ;
+    rdfs:label "Automatic renewal unless either party gives the other written non-renewal notice at least 90 days before initial-term expiry." ;
+    ct:description "Automatic renewal unless either party gives the other written non-renewal notice at least 90 days before initial-term expiry." ;
+    ct:supported_by ex:P30b .
+
+ex:Notice268 a ct:Condition ;
+    rdfs:label "Automatic extensions if no termination notice is provided; periods and further negotiation wording contain redactions. Preserve the full clause." ;
+    ct:description "Automatic extensions if no termination notice is provided; periods and further negotiation wording contain redactions. Preserve the full clause." ;
+    ct:supported_by ex:P268b .
+
+ex:P268a a ct:SourcePassage ;
+    rdfs:label "P268a: agreement 268, characters 53736-53935" ;
+    ct:end_char 53935 ;
+    ct:exact_text "17.1 This Agreement shall come into force on the Date of the Agreement, and shall, subject to article 18, remain in full force and effect for an initial period of *** from the Commercial Launch Date." ;
+    ct:source_path "cuad/PareteumCorp_20081001_8-K_EX-99.1_2654808_EX-99.1_Hosting Agreement.txt" ;
+    ct:source_sha256 "9c66eef9725257be89d3735e03bde9a00c307f60d1668d177cc88b42c35d4edc" ;
+    ct:start_char 53736 .
+
+ex:P373a a ct:SourcePassage ;
+    rdfs:label "P373a: agreement 373, characters 11714-11913" ;
+    ct:end_char 11913 ;
+    ct:exact_text "This term of this Agreement shall commence on the EFFECTIVE DATE and shall continue, in each country, until the date of expiration of the last to expire patent within PATENT RIGHT(S) in that country." ;
+    ct:source_path "cuad/VirtuosoSurgicalInc_20191227_1-A_EX1A-6 MAT CTRCT_11933379_EX1A-6 MAT CTRCT_License Agreement.txt" ;
+    ct:source_sha256 "f430f627738934e99e4ef645a86b95ed73b39f8c586b3c754a56400783256792" ;
+    ct:start_char 11714 .
+
+ex:PSiTech a ct:Party ;
+    rdfs:label "PSiTech Corporation" ;
+    ct:supported_by ex:P30parties .
+
+ex:Paragraph8_1_373 a ct:Reference ;
+    rdfs:label "Paragraph 8.1 notice requirements (not resolved in this sample)" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:PatentExpiry373 a ct:Reference ;
+    rdfs:label "Expiry of last patent within PATENT RIGHTS in the country; patent dates not supplied" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:PaymentExclusion268 a ct:Condition ;
+    rdfs:label "For Article 18.1(b) only, failure by Elephant Talk to comply with Article 9.2 payment obligations is excluded from material breach. This is not a global exclusion from all termination grounds." ;
+    ct:description "For Article 18.1(b) only, failure by Elephant Talk to comply with Article 9.2 payment obligations is excluded from material breach. This is not a global exclusion from all termination grounds." ;
+    ct:supported_by ex:P268c .
+
+ex:Remedy268 a ct:Condition ;
+    rdfs:label "Material breach not remedied or incapable of remedy within a reasonable time, in any event within 60 Business Days of receipt of written notice. Business Days must not be treated as calendar days." ;
+    ct:description "Material breach not remedied or incapable of remedy within a reasonable time, in any event within 60 Business Days of receipt of written notice. Business Days must not be treated as calendar days." ;
+    ct:supported_by ex:P268c .
+
+ex:Renewal30 a ct:Rule ;
+    rdfs:label "One additional three-year renewal unless timely non-renewal notice" ;
+    ct:duration "P3Y"^^xsd:duration ;
+    ct:kind "AUTOMATIC_RENEWAL" ;
+    ct:qualifies ex:InitialTerm30 ;
+    ct:renewal_count 1 ;
+    ct:subject_to ex:NonRenewal30 ;
+    ct:supported_by ex:P30b .
+
+ex:Rogers a ct:Party ;
+    rdfs:label "Rogers Cable Communications Inc." ;
+    ct:supported_by ex:P10parties .
+
+ex:RogersOption10 a ct:Condition ;
+    rdfs:label "Renewal is at Rogers option; exercise of the option is not established." ;
+    ct:description "Renewal is at Rogers option; exercise of the option is not established." ;
+    ct:supported_by ex:P10b .
+
+ex:Section11_129 a ct:Reference ;
+    rdfs:label "Section 11; only selected passages linked, not the complete section" ;
+    ct:resolution_status "PASSAGE_LINKED" ;
+    ct:resolved_to ex:P129a .
+
+ex:Section11_2_129 a ct:Reference ;
+    rdfs:label "Section 11.2" ;
+    ct:resolution_status "PASSAGE_LINKED" ;
+    ct:resolved_to ex:P129b .
+
+ex:TMobile a ct:Party ;
+    rdfs:label "T-Mobile Netherlands B.V." ;
+    ct:supported_by ex:P268parties .
+
+ex:Virtuoso a ct:Party ;
+    rdfs:label "Virtuoso Surgical, Inc." ;
+    ct:supported_by ex:P373parties .
+
+ex:InitialTerm30 a ct:Rule ;
+    rdfs:label "Five years from Effective Date unless earlier terminated" ;
+    ct:duration "P5Y"^^xsd:duration ;
+    ct:kind "INITIAL_TERM" ;
+    ct:starts_from ex:EffectiveDate30 ;
+    ct:subject_to ex:EarlyTermination30 ;
+    ct:supported_by ex:P30a .
+
+ex:P10a a ct:SourcePassage ;
+    rdfs:label "P10a: agreement 10, characters 6970-7157" ;
+    ct:end_char 7157 ;
+    ct:exact_text "The term of this Agreement (the \"Initial Term\") shall commence as of the Effective Date and, unless earlier terminated in accordance with this Agreement, shall terminate on June 30, 2010." ;
+    ct:source_path "cuad/EuromediaHoldingsCorp_20070215_10SB12G_EX-10.B(01)_525118_EX-10.B(01)_Content License Agreement.txt" ;
+    ct:source_sha256 "410d3d3ff1c928befd4d2c5f405cc1215f4687db744c5abf1e98adefd97d7478" ;
+    ct:start_char 6970 .
+
+ex:P10parties a ct:SourcePassage ;
+    rdfs:label "P10parties: agreement 10, characters 0-282" ;
+    ct:end_char 282 ;
+    ct:exact_text """Exhibit 10.B.01 EXECUTION COPY
+
+VIDEO-ON-DEMAND CONTENT LICENSE AGREEMENT between Rogers Cable Communications Inc. ("Rogers") and EuroMedia Holdings Corp. ("Licensor") offering EurocinemaSM Video-on-Demand service made as of July 11 , 2006 (the "Effective Date") (the "Agreement")
+
+""" ;
+    ct:source_path "cuad/EuromediaHoldingsCorp_20070215_10SB12G_EX-10.B(01)_525118_EX-10.B(01)_Content License Agreement.txt" ;
+    ct:source_sha256 "410d3d3ff1c928befd4d2c5f405cc1215f4687db744c5abf1e98adefd97d7478" ;
+    ct:start_char 0 .
+
+ex:P129parties a ct:SourcePassage ;
+    rdfs:label "P129parties: agreement 129, characters 0-661" ;
+    ct:end_char 661 ;
+    ct:exact_text "Exhibit 10.1 Certain information identified by bracketed asterisks ([ * * * ]) has been omitted from this exhibit because it is both not material and would be competitively harmful if publicly disclosed. EXCLUSIVE LICENSE AND PRODUCT DEVELOPMENT AGREEMENT THIS EXCLUSIVE LICENSE AND PRODUCT DEVELOPMENT AGREEMENT (this \"Agreement\") is entered into as of June 12, 2019 (the \"Execution Date\") by and between Eton Pharmaceuticals, Inc., a Delaware corporation with offices at 21925 W. Field Pkwy, Suite 235, Deer Park, Illinois, USA (\"ETON\"), and Aucta Pharmaceuticals, Inc., a Delaware corporation with offices at 71 Suttons Lane, Piscataway, NJ 08854 (\"Aucta\") ." ;
+    ct:source_path "cuad/EtonPharmaceuticalsInc_20191114_10-Q_EX-10.1_11893941_EX-10.1_Development Agreement.txt" ;
+    ct:source_sha256 "b6332d4edff49352cf0187da49df2c5b680625b248423d4dae8c7bc603f7a358" ;
+    ct:start_char 0 .
+
+ex:P268b a ct:SourcePassage ;
+    rdfs:label "P268b: agreement 268, characters 53937-54349" ;
+    ct:end_char 54349 ;
+    ct:exact_text "17.2 The Agreement may be terminated by both Parties with a notification period of *** before the end of the Initial Term of the Agreement. If no termination notice is provided, the Agreement will be automatically extended for consecutive *** periods until such time as *** termination notice is provided. At the end of *** Parties will negotiate in good faith regarding a possible extension of the Initial Term." ;
+    ct:source_path "cuad/PareteumCorp_20081001_8-K_EX-99.1_2654808_EX-99.1_Hosting Agreement.txt" ;
+    ct:source_sha256 "9c66eef9725257be89d3735e03bde9a00c307f60d1668d177cc88b42c35d4edc" ;
+    ct:start_char 53937 .
+
+ex:P268parties a ct:SourcePassage ;
+    rdfs:label "P268parties: agreement 268, characters 0-2205" ;
+    ct:end_char 2205 ;
+    ct:exact_text """Exhibit 99.1   CONFIDENTIAL TREATMENT REQUESTED WITH RESPECT TO CERTAIN PORTIONS HEREOF DENOTED WITH "***"
+
+MOBILE VIRTUAL NETWORK ENABLER HOSTING AGREEMENT
+
+BETWEEN
+
+T-MOBILE NETHERLANDS B.V.
+
+&
+
+Elephant Talk Communication Holding AG
+
+Source: PARETEUM CORP, 8-K, 10/1/2008
+
+
+
+
+
+CONFIDENTIAL TREATMENT REQUESTED WITH RESPECT TO CERTAIN PORTIONS HEREOF DENOTED WITH "***"   Hosting Agreement between ELEPHANT TALK and T-Mobile, 18/9/2008
+
+  TABLE OF CONTENT 1. Definitions 2. Purpose and Scope of the Agreement 3. Hosting Services 4. Implementation 5. Forecast & Commitments 6. Service level 7. Data Protection & Privacy 8. The co-operation relationship 9. Prices, Charging, Billing & Accounting 10. Customer Care Support 11. Confidentiality 12. Limitation of Liability 13. Suspension and termination of Hosting Services 14. Force Majeure 15. Intellectual Property Rights 16. SIM cards and Calling Credit 17. Duration of the Agreement 18. Termination of the Agreement 19. Modifications 20. Miscellaneous 21. Governing Law 22. Dispute resolution 23. Counterpart
+
+Source: PARETEUM CORP, 8-K, 10/1/2008
+
+
+
+
+
+CONFIDENTIAL TREATMENT REQUESTED WITH RESPECT TO CERTAIN PORTIONS HEREOF DENOTED WITH "***"   Hosting Agreement between ELEPHANT TALK and T-Mobile, 18/9/2008
+
+  MOBILE VIRTUALNETWORK ENABLER HOSTING AGREEMENT by and between ELEPHANT TALK and T-Mobile
+
+(T-Mobile hosting ELEPHANT TALK)
+
+This Agreement is made between "Elephant Talk Communication Holding AG", a company incorporated under the laws of Switzerland, having its registered office at Baarerstrasse 135, CH-6301 Zug, Switzerland, legally and duly represented by its Chief Executive Officer Steven van der Velden and its Chief Operations Officer and Chief Technology Officer Martin Zuurbier, hereinafter referred to as: "ELEPHANT TALK"
+
+and
+
+T-Mobile Netherlands B.V., a company incorporated under the laws of the Netherlands, having its registered office at the Waldorpstraat 60, 2521 CC Den Haag, the Netherlands, legally and duly represented by its Managing Director Niek Jan van Damme and its Marketing Director, Bart Weijermars, hereinafter referred to as: "T-Mobile"
+
+each individually referred to as "Party" and together as "Parties".""" ;
+    ct:source_path "cuad/PareteumCorp_20081001_8-K_EX-99.1_2654808_EX-99.1_Hosting Agreement.txt" ;
+    ct:source_sha256 "9c66eef9725257be89d3735e03bde9a00c307f60d1668d177cc88b42c35d4edc" ;
+    ct:start_char 0 .
+
+ex:P30a a ct:SourcePassage ;
+    rdfs:label "P30a: agreement 30, characters 17382-17622" ;
+    ct:end_char 17622 ;
+    ct:exact_text "The initial term of this Agreement commences as of the Effective Date and, unless terminated earlier pursuant to any express provision of this Agreement, shall continue until five (5) years following the Effective Date (the \"Initial Term\")." ;
+    ct:source_path "cuad/GopageCorp_20140221_10-K_EX-10.1_8432966_EX-10.1_Content License Agreement.txt" ;
+    ct:source_sha256 "9915baf3632fcf879008f7240a9f8047f8da3a88d2fd9808a0f492004ac009fa" ;
+    ct:start_char 17382 .
+
+ex:P30b a ct:SourcePassage ;
+    rdfs:label "P30b: agreement 30, characters 17623-17946" ;
+    ct:end_char 17946 ;
+    ct:exact_text "Thereafter, this Agreement shall renew automatically for one (1) additional three (3) year period (the \"Renewal Term\" and collectively, together with the Initial Term, the \"Term\") unless either party provides the other with written notice of non-renewal at least ninety (90) days before the expiration of the Initial Term]." ;
+    ct:source_path "cuad/GopageCorp_20140221_10-K_EX-10.1_8432966_EX-10.1_Content License Agreement.txt" ;
+    ct:source_sha256 "9915baf3632fcf879008f7240a9f8047f8da3a88d2fd9808a0f492004ac009fa" ;
+    ct:start_char 17623 .
+
+ex:P30parties a ct:SourcePassage ;
+    rdfs:label "P30parties: agreement 30, characters 0-456" ;
+    ct:end_char 456 ;
+    ct:exact_text """CONFIDENTIAL
+
+  PSiTECHCORPORATION   WEBSITE CONTENT LICENSE AGREEMENT     This Content License Agreement ("Agreement"), dated as of Feb 10, 2014 (the "Effective Date"), is by and between PSiTech Corporation, a BVI Corporation, with offices located at 303, 3rdFl, St. Georges Bldg, 2 Ice House St, Central, Hong Kong("Licensor"), and Empirical Ventures, Inc., a Nevada corporation with offices located at 100, 40 Lake Bellevue Dr, Bellevue, WA("Licensee").""" ;
+    ct:source_path "cuad/GopageCorp_20140221_10-K_EX-10.1_8432966_EX-10.1_Content License Agreement.txt" ;
+    ct:source_sha256 "9915baf3632fcf879008f7240a9f8047f8da3a88d2fd9808a0f492004ac009fa" ;
+    ct:start_char 0 .
+
+ex:P373parties a ct:SourcePassage ;
+    rdfs:label "P373parties: agreement 373, characters 0-710" ;
+    ct:end_char 710 ;
+    ct:exact_text """Exhibit 6.2 NON-EXCLUSIVE LICENSE AGREEMENT BETWEEN THE JOHNS HOPKINS UNIVERSITY & VIRTUOSO SURGICAL, INC.
+
+JHU Agreement: A29889
+
+Source: VIRTUOSO SURGICAL, INC., 1-A, 12/27/2019
+
+
+
+
+
+1
+
+May 3, 2016 NON-EXCLUSIVE LICENSE AGREEMENT- FOR SALES This Non-Exclusive License Agreement (hereinafter "Agreement") is entered into by and between The Johns Hopkins University (hereinafter "JHU"), a corporation of the State of Maryland, having a principal place of business 3400 N. Charles Street, Baltimore, Maryland 21218- 2695 and, Virtuoso Surgical, Inc. (hereinafter "Company"), a Tennessee corporation having an address at 5701 Old Harding Pike; Suite 200; Nashville, TN 37205. The parties hereto agree as follows:""" ;
+    ct:source_path "cuad/VirtuosoSurgicalInc_20191227_1-A_EX1A-6 MAT CTRCT_11933379_EX1A-6 MAT CTRCT_License Agreement.txt" ;
+    ct:source_sha256 "f430f627738934e99e4ef645a86b95ed73b39f8c586b3c754a56400783256792" ;
+    ct:start_char 0 .
+
+ex:Renewal10 a ct:Rule ;
+    rdfs:label "Rogers option: two-year renewal" ;
+    ct:duration "P2Y"^^xsd:duration ;
+    ct:kind "OPTIONAL_RENEWAL" ;
+    ct:qualifies ex:InitialTerm10 ;
+    ct:subject_to ex:RogersOption10 ;
+    ct:supported_by ex:P10b .
+
+ex:Renewal268 a ct:Rule ;
+    rdfs:label "Consecutive extensions with redacted durations and notice periods" ;
+    ct:duration_status "REDACTED" ;
+    ct:kind "AUTOMATIC_RENEWAL" ;
+    ct:notice_period_status "REDACTED" ;
+    ct:qualifies ex:InitialTerm268 ;
+    ct:subject_to ex:Notice268 ;
+    ct:supported_by ex:P268b .
+
+ex:Term129 a ct:Rule ;
+    rdfs:label "Conditional effectiveness; ending refers to Section 11" ;
+    ct:end_date_status "NOT_ESTABLISHED_IN_SAMPLE" ;
+    ct:kind "CONDITIONAL_REFERENCED_TERM" ;
+    ct:references_section ex:Section11_129 ;
+    ct:starts_from ex:EffectiveDate129 ;
+    ct:subject_to ex:Effectiveness129 ;
+    ct:supported_by ex:P129a .
+
+ex:InitialTerm10 a ct:Rule ;
+    rdfs:label "Initial term: ends 30 June 2010 unless earlier terminated" ;
+    ct:kind "INITIAL_TERM" ;
+    ct:starts_from ex:EffectiveDate10 ;
+    ct:stated_end_date "2010-06-30"^^xsd:date ;
+    ct:subject_to ex:EarlyTermination10 ;
+    ct:supported_by ex:P10a .
+
+ex:InitialTerm268 a ct:Rule ;
+    rdfs:label "Redacted initial period from Commercial Launch Date" ;
+    ct:agreement_effective_from ex:AgreementDate268 ;
+    ct:duration_status "REDACTED" ;
+    ct:kind "INITIAL_TERM" ;
+    ct:references_section ex:Article18_268 ;
+    ct:starts_from ex:LaunchDate268 ;
+    ct:supported_by ex:P268a .
+
+ex:P129b a ct:SourcePassage ;
+    rdfs:label "P129b: agreement 129, characters 37649-38951" ;
+    ct:end_char 38951 ;
+    ct:exact_text "11.2 Termination for Breach. The Agreement may be terminated by either Party by written notice to the other at any time if the other Party (the \"Breaching Party\") is in material breach or default of any of its obligations hereunder or any of its representations or warranties as follows: (i) the terminating Party shall send a written notice of the material breach or material default to the Breaching Party and (ii) the termination shall become effective a) thirty (30) days after sending notice of the breach if the breach is non-payment of amounts due hereunder, such as milestone, minimum royalty or royalties amounts and b) sixty (60) days after sending notice of the breach for all other breaches unless the Breaching Party has cured any such material breach or material default prior to the expiration of the thirty (30) or sixty (60) day period as the case may be; or if for non- payment breaches such material default or material breach is not capable of being cured within such sixty (60) day period and the Breaching Party has commenced activities reasonably expected to cure such material breach or material default within such sixty (60) day period and thereafter uses diligent efforts to complete the cure as soon as practicable, but in no event shall such period exceed ninety (90) days." ;
+    ct:source_path "cuad/EtonPharmaceuticalsInc_20191114_10-Q_EX-10.1_11893941_EX-10.1_Development Agreement.txt" ;
+    ct:source_sha256 "b6332d4edff49352cf0187da49df2c5b680625b248423d4dae8c7bc603f7a358" ;
+    ct:start_char 37649 .
+
+ex:P373b a ct:SourcePassage ;
+    rdfs:label "P373b: agreement 373, characters 11914-12398" ;
+    ct:end_char 12398 ;
+    ct:exact_text "6.2 Termination by Company: Company may terminate this Agreement and the license granted herein, for any reason, upon giving JHU sixty (60) days written notice under Paragraph 8.1. 6.3 Termination by JHU: JHU, at its option, may terminate this Agreement and the license granted herein if Company has not made any sales of LICENSED PRODUCT(S) or LICENSED SERVICE(S) in any period of four consecutive quarters, after the initial commercial sale of the PRODUCT(S) or LICENSED SERVICE(S)." ;
+    ct:source_path "cuad/VirtuosoSurgicalInc_20191227_1-A_EX1A-6 MAT CTRCT_11933379_EX1A-6 MAT CTRCT_License Agreement.txt" ;
+    ct:source_sha256 "f430f627738934e99e4ef645a86b95ed73b39f8c586b3c754a56400783256792" ;
+    ct:start_char 11914 .
+
+ex:Term373 a ct:Rule ;
+    rdfs:label "Last relevant patent expiry in each country" ;
+    ct:applies_within ex:Country373 ;
+    ct:calendar_date_status "REQUIRES_ADDITIONAL_PATENT_FACTS" ;
+    ct:ends_on_event ex:PatentExpiry373 ;
+    ct:kind "EVENT_BASED_TERM" ;
+    ct:starts_from ex:EffectiveDate373 ;
+    ct:supported_by ex:P373a .
+
+ex:P10b a ct:SourcePassage ;
+    rdfs:label "P10b: agreement 10, characters 7158-7967" ;
+    ct:end_char 7967 ;
+    ct:exact_text "At Rogers' option, this Agreement shall renew for a subsequent term of two (2) years on the terms and conditions herein (the \"Renewal Term\"). Notwithstanding the foregoing, if, at the expiry of this Agreement following the Initial Term or the Renewal Term (if any), as applicable, Licensor and Rogers have not executed a new agreement governing the VOD distribution and exhibition of Licensed Programs and Rogers (or its permitted assigns) continues to distribute and exhibit Licensed Programs on the ROD Service following such expiry, such continued distribution and exhibition shall be governed by the terms of this Agreement in effect at the time of expiry, except that each of Licensor and Rogers shall have the right, on sixty (60) days' prior written notice, to terminate this Agreement, as so extended." ;
+    ct:source_path "cuad/EuromediaHoldingsCorp_20070215_10SB12G_EX-10.B(01)_525118_EX-10.B(01)_Content License Agreement.txt" ;
+    ct:source_sha256 "410d3d3ff1c928befd4d2c5f405cc1215f4687db744c5abf1e98adefd97d7478" ;
+    ct:start_char 7158 .
+
+ex:P129a a ct:SourcePassage ;
+    rdfs:label "P129a: agreement 129, characters 36378-37648" ;
+    ct:end_char 37648 ;
+    ct:exact_text "The term of this Agreement shall automatically become effective upon the occurrence of (i) ETON executing a commercial supply agreement with a contract manufacturing organization within forty-five (45) days of the Execution Date, provided that ETON has exercised best efforts to execute such agreement and the failure to execute is solely caused by the refusal or inability of the proposed manufacturing organization to sign a reasonable agreement; and (ii) acceptance for review of the Dossier or marketing application for [ * * * ] by the FDA no later than September 2, 2019 (such date, the \"Effective Date\") and shall end upon the termination or expiration of the Agreement as set forth in Section 11 (the \"Term\"). For avoidance of doubt, all rights conferred to ETON under this Agreement for the purpose of allowing ETON to Market the Product in the Territory shall continue until a Party terminates this Agreement. Aucta should continue to receive 15% of Net Sales Royalty for as long as ETON is selling the Product(s) in the Territory, unless otherwise agreed to under this Agreement. The obligations of ETON to consummate the transactions contemplated by this Agreement shall be subject to the fulfillment or ETON's waiver of the occurrence of the Effective Date." ;
+    ct:source_path "cuad/EtonPharmaceuticalsInc_20191114_10-Q_EX-10.1_11893941_EX-10.1_Development Agreement.txt" ;
+    ct:source_sha256 "b6332d4edff49352cf0187da49df2c5b680625b248423d4dae8c7bc603f7a358" ;
+    ct:start_char 36378 .
+
+ex:P268c a ct:SourcePassage ;
+    rdfs:label "P268c: agreement 268, characters 54870-55336" ;
+    ct:end_char 55336 ;
+    ct:exact_text "  b. by either Party, with immediate effect, if the other Party is in material breach of any provision of this Agreement and does not or is not capable of remedying such breach within a reasonable time and in any event within sixty (60) Business Days of receipt of a written notice to such effect. A material breach will, for the purpose of this Agreement, not include the event that ELEPHANT TALK fails to comply with its payments obligations under article 9.2.; or" ;
+    ct:source_path "cuad/PareteumCorp_20081001_8-K_EX-99.1_2654808_EX-99.1_Hosting Agreement.txt" ;
+    ct:source_sha256 "9c66eef9725257be89d3735e03bde9a00c307f60d1668d177cc88b42c35d4edc" ;
+    ct:start_char 54870 .
+
+ct:Agreement a owl:Class ;
+    rdfs:label "Agreement" .
+
+ct:Party a owl:Class ;
+    rdfs:label "Party" .
+
+ct:Condition a owl:Class ;
+    rdfs:label "Condition" .
+
+ct:Reference a owl:Class ;
+    rdfs:label "Reference" .
+
+ct:SourcePassage a owl:Class ;
+    rdfs:label "SourcePassage" .
+
+ct:Rule a owl:Class ;
+    rdfs:label "Rule" .
+

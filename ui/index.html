@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Retrieval workbench · CUAD</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='8' fill='%23215ddd'/%3E%3Ctext x='9' y='29' font-size='27' fill='white'%3ER%3C/text%3E%3C/svg%3E">
+<style>
+:root{color-scheme:dark;--ink:#e0e9f6;--muted:#a0aec2;--blue:#8aafff;--line:#304158;--paper:#172235;--bg:#0e1624;--green:#83dbb6;--wash:#153c30;--red:#ffb2b9}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.55 'Segoe UI',sans-serif}button,input,select{font:inherit}button,select{cursor:pointer}button:disabled{cursor:wait;opacity:.65}button:focus-visible,input:focus-visible,select:focus-visible,summary:focus-visible{outline:3px solid #6698ff;outline-offset:3px}header{padding:22px 32px;background:#131e30;color:white;display:flex;align-items:center;justify-content:space-between;gap:20px}h1{margin:0;font:600 25px/1.2 'Segoe UI',sans-serif;letter-spacing:-.7px}header p{margin:5px 0 0;color:#c0cee1;font-size:13px}.tag{font:12px Consolas,monospace;padding:7px 11px;border:1px solid #62728a;border-radius:6px;white-space:nowrap}.layout{display:grid;grid-template-columns:340px minmax(0,1fr);max-width:1700px;margin:auto}aside{padding:24px 18px;border-right:1px solid var(--line);height:calc(100vh - 100px);position:sticky;top:0;display:flex;flex-direction:column;gap:12px}h2{font-size:17px;margin:0}h3{font-size:14px;margin:0 0 8px}.muted,.hint{color:var(--muted);font-size:13px}.hint{margin:8px 0}.search,.filter{width:100%;padding:10px 12px;border:1px solid var(--line);border-radius:7px;background:var(--paper);color:var(--ink)}.bank{overflow:auto;flex:1;padding:2px 4px 10px 0;display:flex;flex-direction:column;gap:7px}.question-item{text-align:left;border:1px solid transparent;border-radius:8px;background:transparent;padding:12px;color:var(--ink);line-height:1.45}.question-item:hover{background:#21324d}.question-item[aria-current=true]{background:var(--paper);border-color:var(--blue);box-shadow:inset 3px 0 var(--blue)}.qid{display:block;font:11px Consolas,monospace;color:var(--muted);margin-bottom:5px}.qtext{display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;font-size:13px}main{padding:28px 32px;min-width:0}.eyebrow{color:var(--blue);font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1.5px}.question-title{font:500 25px/1.4 Georgia,serif;letter-spacing:-.3px;margin:12px 0 16px;max-width:1000px}.controls{display:flex;align-items:end;flex-wrap:wrap;gap:14px}.controls label{display:flex;flex-direction:column;gap:5px;font-size:12px;color:var(--muted)}.controls select{padding:9px 35px 9px 12px;border:1px solid var(--line);background:var(--paper);border-radius:6px}.primary{border:0;background:#346cdb;color:#fff;padding:11px 20px;border-radius:6px;font-weight:600}.secondary{border:1px solid var(--line);background:var(--paper);color:var(--ink);padding:7px 12px;border-radius:5px;font-size:12px}.status{color:var(--muted);font-size:13px;min-height:24px;margin:12px 0}.error{background:#48232d;color:var(--red);padding:10px;border-radius:5px}.flow{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:24px 0}.flow div{border-top:3px solid #b8c8df;padding-top:9px}.flow strong{display:block;font-size:13px}.flow span{font-size:12px;color:var(--muted)}.flow div:first-child{border-color:var(--blue)}.flow div:last-child{border-color:#45a88a}.panel{background:var(--paper);border:1px solid var(--line);border-radius:9px;padding:20px;margin-bottom:18px}.panel-head{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:14px}.mono{font:12px/1.6 Consolas,monospace;white-space:pre-wrap;overflow-wrap:anywhere;background:#101a2a;padding:14px;border-radius:6px;margin:0}.metadata{display:flex;gap:8px 18px;flex-wrap:wrap;font-size:12px;color:var(--muted);margin-bottom:12px}.metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:20px 0}.metric{background:var(--paper);padding:15px;border:1px solid var(--line);border-radius:8px}.metric b{display:block;font:600 26px/1.3 'Segoe UI',sans-serif;letter-spacing:-1px}.metric span{display:block;font-size:12px;color:var(--muted)}.comparison{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(260px,1fr);gap:18px;align-items:start}.passage{border:1px solid var(--line);border-radius:7px;padding:15px;margin-top:12px}.passage p{white-space:pre-wrap;overflow-wrap:anywhere;margin:9px 0 0;font:14px/1.7 Georgia,serif;max-height:340px;overflow:auto}.filename{font:11px/1.5 Consolas,monospace;overflow-wrap:anywhere;color:var(--muted)}mark{background:#235641;color:#dcffec;padding:1px 0}.match{color:var(--green);font-size:12px}.expected{border-top:3px solid #45a88a}.empty{border:1px dashed #b8c8df;padding:28px;border-radius:8px;color:var(--muted);text-align:center}summary{cursor:pointer;font-size:13px;color:var(--muted)}details .mono{margin-top:12px;max-height:380px;overflow:auto}.summary-text{font-size:14px;margin:0 0 14px}.footer-note{font-size:12px;color:var(--muted);margin:12px 0 24px}label.sr{position:absolute;left:-10000px}[hidden]{display:none!important}
+.passage-summary{color:var(--ink);font-size:13px}.chunk-distance,.chunk-meta{font-size:12px;color:var(--muted)}.chunk-file{display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;margin-top:5px}.chunk-meta{display:block;margin-top:3px}.passage[open] .match{margin-top:12px}.rank-row{display:flex;flex-direction:column;gap:5px;margin-top:14px;padding-top:14px;border-top:1px solid var(--line)}#first-rank{color:var(--blue);font-size:15px}.footer-note{overflow-wrap:anywhere}.panel-head{flex-wrap:wrap}
+@media(max-width:1050px){.layout{grid-template-columns:280px minmax(0,1fr)}main{padding:22px}.comparison{grid-template-columns:1fr}.metrics{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:700px){header{padding:18px;align-items:start}.tag{display:none}.layout{display:block}aside{height:320px;position:relative;border-right:0;border-bottom:1px solid var(--line);padding:18px}.question-title{font-size:22px}main{padding:20px 16px}.flow{gap:8px}.panel{padding:15px}.metrics{gap:8px}}
+
+.chunk-stats{display:inline-flex;flex-wrap:wrap;align-items:center;gap:10px 16px;max-width:100%;vertical-align:top}
+.chunk-rank{font-size:18px;font-weight:700;color:var(--ink);line-height:1.5}
+.chunk-distance{font-size:16px;font-weight:600;color:#c2d4f0;line-height:1.5}
+.chunk-match{font-size:16px;font-weight:700;line-height:1.5}
+.match-present{color:#96e5bd;background:#173e31;border:1px solid #327759;border-radius:5px;padding:3px 9px}
+.match-absent{color:#f0b6be;background:#382631;border:1px solid #68414c;border-radius:5px;padding:3px 9px}
+#first-rank{font-size:20px;font-weight:700}
+.rank-row .chunk-match{align-self:flex-start}
+.compare-columns{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:18px;align-items:start}.compare-columns .metrics{grid-template-columns:repeat(2,minmax(0,1fr));margin:12px 0}.compare-columns .metric b{font-size:23px}.compare-columns .panel{min-width:0}.graph-step{padding:10px 0;border-bottom:1px solid var(--line);font-size:13px;overflow-wrap:anywhere}.graph-step strong{color:var(--green)}.graph-rule{padding:12px 0;border-top:1px solid var(--line)}.graph-rule ul{padding-left:20px;font-size:13px}.warning{border-left:3px solid #d6ad58;padding:10px 14px;background:#302b21;color:#f0d69b;font-size:13px;overflow-wrap:anywhere}.compare-columns h2{font-size:20px}.compare-path{color:var(--blue);font:12px Consolas,monospace;overflow-wrap:anywhere}@media(max-width:1150px){.compare-columns{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header><div><h1>Retrieval workbench</h1><p>Choose a question. Follow the evidence.</p></div><span class="tag" id="collection">CUAD · local search</span></header>
+<div class="layout">
+<aside aria-label="Question bank">
+<div style="display:flex;justify-content:space-between;align-items:center"><h2>Question bank</h2><span class="muted" id="bank-count">Loading…</span></div>
+<label class="sr" for="search">Search questions</label><input class="search" id="search" type="search" placeholder="Search questions or contract names…">
+<label class="sr" for="document">Filter by contract</label><select id="document" class="filter"><option value="">All contracts</option></select>
+<div id="bank" class="bank" aria-label="Available questions"></div>
+</aside>
+<main>
+<span class="eyebrow" id="selected-label">Select a question</span>
+<h2 class="question-title" id="question-title">Loading the question bank…</h2>
+<div class="controls"><label for="mode">Search mode<select id="mode"><option value="holdout20" selected>RAG vs ontology · 20-contract batch</option><option value="compare">RAG vs ontology · 5 original samples</option><option value="vector">Original RAG · all questions</option></select></label><label for="budget" id="budget-label">Text budget per method<select id="budget"><option value="3000">3,000 characters</option><option value="6000" selected>6,000 characters</option><option value="12000">12,000 characters</option></select></label><label for="top-k">Vector candidate chunks<select id="top-k"><option>1</option><option>3</option><option selected>5</option><option>10</option><option>20</option></select></label><button class="primary" id="run" disabled>Run this question</button><span class="hint" id="scope-hint">Same selected agreement for both methods</span></div>
+<div id="status" class="status" role="status" aria-live="polite">Connecting to the local database…</div>
+<div class="flow" aria-label="Search steps"><div><strong>1. Question → embedding</strong><span>The exact text sent to BGE</span></div><div><strong>2. Search → passages</strong><span>Closest chunks in pgvector</span></div><div><strong>3. Compare → evidence</strong><span>Match against the known answer</span></div></div>
+<section class="panel"><div class="panel-head"><h2>What we pass to search</h2></div><p class="hint" id="input-hint">BGE receives the question below. Ontology search starts from the selected agreement and its term rule. Expected evidence is used only after retrieval.</p><div class="metadata" id="input-meta"></div><pre class="mono" id="embedding-input"></pre><details><summary>Model and search settings</summary><pre class="mono" id="settings"></pre></details></section>
+<div id="vector-view"><div id="result-area" hidden><div class="metrics" id="metrics"></div><p class="summary-text" id="verdict"></p></div>
+<section class="panel" id="rank-panel" hidden><div class="panel-head"><h2>Where did the expected evidence rank?</h2><strong id="first-rank"></strong></div><p class="hint" id="rank-explanation"></p><div id="rank-evidence"></div></section>
+<div class="comparison">
+<section class="panel"><div class="panel-head"><h2>Retrieved passages</h2><button class="secondary" id="download" hidden>Download result JSON</button></div><p class="hint">Each match percentage is the share of all expected evidence found in that chunk. Green text highlights the overlap. Cosine distance measures vector closeness; lower is closer.</p><div id="retrieved"><div class="empty">Run the selected question to see what search finds.</div></div></section>
+<section class="panel expected"><div class="panel-head"><h2>Expected evidence</h2></div><p class="hint">The benchmark’s marked passages for this question.</p><div id="expected"></div></section>
+</div>
+</div>
+<section id="compare-view" hidden aria-label="RAG and ontology comparison">
+<p class="warning" id="batch-warning">Five manually curated development examples, not an accuracy test on unseen contracts. Both methods search the same selected agreement. Benchmark precision/recall measures marked text overlap; useful renewal or exception passages may lower precision.</p>
+<div class="panel-head"><h2>Compare the retrieved evidence</h2><button class="secondary" id="download-comparison" hidden>Download comparison JSON</button></div>
+<p id="compare-summary" class="hint">Run a sample to compare both methods. No answer-generating LLM is involved.</p>
+<div class="compare-columns">
+<section class="panel"><h2>Normal RAG</h2><p class="hint">Closest vector chunks in this agreement, in cosine rank order, within the text budget.</p><div id="vector-metrics" class="metrics"></div><p id="vector-limit" class="hint"></p><div id="vector-passages"></div></section>
+<section class="panel expected"><h2>Ontology</h2><p class="hint">Initial term → linked renewal / termination rules → conditions and original evidence. No vector ranking or LLM routing.</p><div id="ontology-metrics" class="metrics"></div><p id="ontology-limit" class="hint"></p><div id="ontology-passages"></div></section>
+</div>
+<section class="panel"><h2>How the ontology found these passages</h2><p class="hint">These are candidate graph paths before the text budget is applied. Open a rule to inspect its fields and conditions.</p><div id="graph-rules"></div><details><summary>Follow the relationship paths</summary><div id="graph-paths"></div></details><div id="graph-warnings"></div></section>
+<section class="panel expected"><h2>Expected evidence for scoring</h2><p class="hint">Used after retrieval. This is the benchmark's minimal marked passage, not a complete list of useful qualifications.</p><div id="compare-expected"></div></section>
+</section>
+<p class="footer-note" id="result-note">One question at a time. No answer-generating LLM is involved.</p>
+<details id="raw-panel" hidden><summary>Full request and result</summary><pre class="mono" id="raw-result"></pre></details>
+</main></div>
+<script>
+'use strict';
+let bankData=null,selected=0,lastResult=null,busy=false,modelReady=false,lastServerState=null;
+const $=id=>document.getElementById(id);
+const isCompare=()=>$('mode').value!=='vector';
+const isHoldout=()=>$('mode').value==='holdout20';
+const supported=q=>(isHoldout()?bankData.holdout20_source_ids:bankData.comparison_source_ids).includes(q.source_index);
+function node(tag,cls,text){const e=document.createElement(tag);if(cls)e.className=cls;if(text!==undefined)e.textContent=text;return e;}
+function status(text,error=false){$('status').textContent=text;$('status').classList.toggle('error',error);}
+function clearResults(){lastResult=null;$('download-comparison').hidden=true;for(const id of ['vector-metrics','ontology-metrics','vector-limit','ontology-limit','vector-passages','ontology-passages','graph-rules','graph-paths','graph-warnings'])$(id).replaceChildren();$('compare-summary').textContent='Run a sample to compare both methods. No answer-generating LLM is involved.';$('rank-panel').hidden=true;$('result-area').hidden=true;$('download').hidden=true;$('raw-panel').hidden=true;$('retrieved').replaceChildren(node('div','empty','Run the selected question to see what search finds.'));$('result-note').textContent='One question at a time. No answer-generating LLM is involved.';}
+function matchPercent(value){return value>0&&value<0.001?'<0.1':(value*100).toFixed(1);}
+function passage(item,rank,expectedCharacters=0){
+ const card=node('details','passage');
+ const summary=node('summary','passage-summary');
+ const stats=node('span','chunk-stats');
+ stats.append(node('strong','chunk-rank',rank?`Rank #${rank}`:'Expected passage'));
+ if(item.distance!==undefined)stats.append(node('span','chunk-distance',`Cosine distance ${item.distance.toFixed(4)}`));
+ if(item.segments){
+   const found=item.relevant_characters||0;
+   const coverage=expectedCharacters?found/expectedCharacters:0;
+   const badge=node('span',found?'chunk-match match-present':'chunk-match match-absent',`${found?'Match present':'No match'} · ${matchPercent(coverage)}% of expected evidence`);
+   badge.title=`${found} matching characters / ${expectedCharacters} expected characters. Character overlap in the same source document.`;
+   stats.append(badge);
+ }
+ summary.append(stats);
+ const file=node('span','filename chunk-file',item.file_path);file.title=item.file_path;summary.append(file);
+ summary.append(node('span','chunk-meta',`Characters ${item.span[0].toLocaleString()}–${item.span[1].toLocaleString()}`));
+ card.append(summary);
+ const text=node('p');
+ if(item.segments){
+   item.segments.forEach(s=>text.append(node(s.relevant?'mark':'span','',s.text)));
+   card.append(node('div','match',item.relevant_characters?`${item.relevant_characters} characters overlap the expected evidence`:'No overlap with expected evidence'));
+ }else{text.textContent=item.text??item.answer;}
+ card.append(text);
+ return card;
+}
+function populateDocuments(){
+ const previous=$('document').value;
+ const questions=isCompare()?bankData.questions.filter(supported):bankData.questions;
+ const paths=[...new Set(questions.flatMap(q=>q.snippets.map(s=>s.file_path)))].sort();
+ const all=node('option','','All contracts');all.value='';
+ $('document').replaceChildren(all,...paths.map(path=>{const option=node('option','',path.replace(/^cuad\//,'').replace(/\.txt$/,''));option.value=path;return option;}));
+ $('document').value=paths.includes(previous)?previous:'';
+}
+function selectQuestion(index){
+ if(busy)return;selected=index;const q=bankData.questions[index],comparison=isCompare();
+ $('selected-label').textContent=isHoldout()?`20-contract batch · source ID ${q.source_index}`:`Question ${index+1} of ${bankData.questions.length} · source ID ${q.source_index}`;
+ $('question-title').textContent=q.query;$('embedding-input').textContent=bankData.query_prefix+q.query;
+ $('expected').replaceChildren(...q.snippets.map(s=>passage(s)));$('compare-expected').replaceChildren(...q.snippets.map(s=>passage(s)));
+ $('vector-view').hidden=comparison;$('compare-view').hidden=!comparison;$('budget-label').hidden=!comparison;
+ $('collection').textContent=isHoldout()?'20 contracts · 31 in-scope questions · live search':`${bankData.documents} contracts · ${bankData.chunks.toLocaleString()} chunks · local BGE`;
+ $('batch-warning').textContent=isHoldout()?'20 randomly selected contracts, 53 rules; 31 in-scope questions across 16 contracts. Four contracts have no matching benchmark questions. These are live exploratory runs against the sealed graph; the first evaluation stays unchanged. Useful qualifications may be absent from benchmark gold.':'Five manually curated development examples. Both methods search the same agreement. Benchmark scores measure marked text overlap, not complete legal understanding.';
+ $('scope-hint').textContent=comparison?'Both methods: selected agreement · fixed term topic':'Search across all 100 contracts';
+ $('input-hint').textContent=comparison?(isHoldout()?'BGE receives the question below. Ontology follows the selected agreement to its stored term, renewal and termination rules, their conditions and linked source evidence. The graph is unchanged from the sealed batch.':'BGE receives the question below. Ontology starts from the selected agreement and follows its term and qualification links. No LLM interprets the question.'):'BGE receives the question with a short search instruction. Expected evidence is used only after retrieval, for scoring.';
+ $('input-meta').textContent=`${bankData.config.model} · CPU · top ${$('top-k').value} vector candidates · ${comparison?'same agreement / '+$('budget').value+' characters per method':'100 contracts'}`;
+ $('settings').textContent=JSON.stringify({mode:$('mode').value,ingestion_id:bankData.ingestion_id,model:bankData.config,query_prefix:bankData.query_prefix,top_k:Number($('top-k').value),scope:comparison?'Selected agreement':'All 100 contracts',...(comparison?{character_budget:Number($('budget').value),topic:'Term / expiry and linked qualifications',comparison_batch:isHoldout()?'holdout20':'sample5',ontology_sha256:isHoldout()?bankData.holdout20_graph_sha256:bankData.ontology_sha256}:{} )},null,2);
+ clearResults();populateDocuments();renderBank();$('run').disabled=!modelReady;status(modelReady?'Ready. Local BGE is loaded.':'Loading local BGE at server startup… Search will be available when ready.');
+ const steps=document.querySelectorAll('.flow div');
+ steps[0].querySelector('strong').textContent=comparison?'1. Select one agreement':'1. Question → embedding';
+ steps[0].querySelector('span').textContent=comparison?'Same document scope for both methods':'The exact text sent to BGE';
+ steps[1].querySelector('strong').textContent=comparison?'2. Retrieve two ways':'2. Search → passages';
+ steps[1].querySelector('span').textContent=comparison?'Vector chunks vs connected rules':'Closest chunks in pgvector';
+ steps[2].querySelector('strong').textContent='3. Compare → evidence';
+ steps[2].querySelector('span').textContent=comparison?'Same text budget; score after retrieval':'Match against the known answer';
+}
+function renderBank(){const needle=$('search').value.toLowerCase(),doc=$('document').value;const items=[];bankData.questions.forEach((q,i)=>{if(isCompare()&&!supported(q))return;if((!needle||(q.query+' '+q.snippets.map(s=>s.file_path).join(' ')).toLowerCase().includes(needle))&&(!doc||q.snippets.some(s=>s.file_path===doc))){const b=node('button','question-item');b.type='button';b.setAttribute('aria-current',String(i===selected));b.disabled=busy;b.append(node('span','qid',`QUESTION ${i+1} · SOURCE ${q.source_index}`),node('span','qtext',q.query));b.onclick=()=>selectQuestion(i);items.push(b);}});$('bank-count').textContent=`${items.length} / ${isCompare()?bankData.questions.filter(supported).length:bankData.questions.length}`;$('bank').replaceChildren(...(items.length?items:[node('p','hint','No questions match. Try another search or contract.')]));}
+function renderRanking(data){
+ const diag=data.ranking_diagnostic;
+ if(!diag)return;
+ $('rank-panel').hidden=false;
+ $('first-rank').textContent=diag.first_relevant_rank===null?'No overlapping chunk':`First overlap: #${diag.first_relevant_rank} of ${diag.total_chunks.toLocaleString()}`;
+ $('rank-explanation').textContent=`Ranked all ${diag.total_chunks.toLocaleString()} chunks using the same question embedding. Your search returns the first ${data.top_k}. Partial overlap counts as relevant; coverage shows how much of each marked passage is present. Cosine distance: lower is closer. Cosine similarity: higher is closer. Diagnostic time: ${(diag.seconds*1000).toFixed(0)} ms, separate from search.`;
+ const items=diag.evidence.map((e,i)=>{
+   const box=node('article','passage');box.append(node('h3','',`Expected passage ${i+1}`),node('div','filename',e.file_path),node('div','hint',`Marked characters ${e.span[0]}–${e.span[1]}`));
+   if(!e.chunks.length)box.append(node('p','hint','No indexed chunk overlaps this evidence.'));
+   e.chunks.forEach(c=>{const row=node('div','rank-row');row.append(node('strong','chunk-rank',`Rank #${c.rank}`),node('span',c.returned?'match':'hint',c.returned?`Returned in top ${data.top_k}`:`Outside top ${data.top_k}`),node('span','chunk-distance',`Cosine distance ${c.distance.toFixed(6)} · similarity ${c.cosine_similarity.toFixed(6)}`),node('span','chunk-match match-present',`Match present · ${matchPercent(c.evidence_coverage)}% of this expected passage`),node('span','hint',`Chunk ${c.span[0]}–${c.span[1]}`));const details=node('details');details.append(node('summary','','Read this indexed chunk'),node('pre','mono',c.text));row.append(details);box.append(row);});return box;
+ });$('rank-evidence').replaceChildren(...items);
+}
+function metric(value,label,explanation){const e=node('div','metric');e.append(node('b','',value),node('span','',label),node('span','',explanation));return e;}
+function renderComparison(data){
+ const expectedChars=data.vector.expected.reduce((sum,e)=>sum+e.span[1]-e.span[0],0);
+ for(const method of ['vector','ontology']){
+   const r=data[method];
+   $(method+'-metrics').replaceChildren(metric((r.precision*100).toFixed(1)+'%','Precision','Marked text / returned text'),metric((r.recall*100).toFixed(1)+'%','Recall','Marked evidence found'),metric((r.retrieval_seconds*1000).toFixed(1)+' ms','Retrieval time','Excludes loading and scoring'),metric(r.returned_characters.toLocaleString(),'Unique characters',`Budget: ${data.character_budget.toLocaleString()}`));
+   $(method+'-limit').textContent=`${r.candidate_passages} candidate passages → ${r.retrieved.length} deduplicated evidence portions. ${r.budget_truncated?'Text budget reached: some evidence omitted.':'All candidate text fits within the budget.'}`;
+   $(method+'-passages').replaceChildren(...(r.retrieved.length?r.retrieved.map((p,i)=>{const card=passage(p,method==='vector'?p.candidate_rank:null,expectedChars);if(method==='ontology')card.querySelector('.chunk-rank').textContent=p.evidence_id;return card;}):[node('div','empty','No evidence returned.')]));
+ }
+ $('compare-summary').textContent=`${data.comparison_batch==='holdout20'?'Live 20-contract batch · ':''}Agreement ${data.agreement_id} · ${data.topic} · ${data.character_budget.toLocaleString()} character cap per method. Vector: top ${data.top_k} candidate chunks. Ontology: rule order, not similarity ranking.`;
+ $('graph-rules').replaceChildren(...data.ontology.rules.map(rule=>{
+   const box=node('details','graph-rule'),sum=node('summary','passage-summary',`${rule.id} · ${rule.label}`);box.append(sum);
+   const fields=node('ul');rule.fields.forEach(f=>fields.append(node('li','',`${f.field}: ${f.value}`)));rule.conditions.forEach(c=>fields.append(node('li','',`subject_to: ${c}`)));box.append(fields);return box;
+ }));
+ $('graph-paths').replaceChildren(...data.ontology.paths.map(p=>{const row=node('div','graph-step');row.append(node('span','',p.from+' → '),node('strong','',p.relationship),node('span','',' → '+p.to));return row;}));
+ const warning=node('div','warning');warning.append(node('p','',data.ontology.coverage));
+ data.ontology.references.forEach(ref=>warning.append(node('p','',`${ref.status==='UNRESOLVED'?'Unresolved':'Passage linked, not a completeness guarantee'}: ${ref.label}`)));
+ $('graph-warnings').replaceChildren(warning);
+ $('download-comparison').hidden=false;$('raw-panel').hidden=false;$('raw-result').textContent=JSON.stringify(data,null,2);
+ $('result-note').textContent=`${data.caveat} Model startup (before search): ${(data.startup_model_load_seconds??data.model_load_seconds).toFixed(2)} s; graph parsing/validation occurs at server startup. Budget may cut a passage mid-clause. Saved: ${data.saved_result}`;
+ if(data.first_evaluation){const f=data.first_evaluation;$('compare-summary').textContent+=` First frozen run (top 5, 6,000 chars): recall RAG ${(f.vector.recall*100).toFixed(1)}% / ontology ${(f.ontology.recall*100).toFixed(1)}%.`; }
+ status('Finished. Open the passages and ontology rules to inspect the evidence.');
+}
+async function run(){if(busy||!modelReady)return;busy=true;$('run').disabled=true;$('run').textContent='Searching…';$('top-k').disabled=true;$('mode').disabled=true;$('budget').disabled=true;clearResults();renderBank();status('Searching with the loaded model and comparing evidence…');try{const response=await fetch(isCompare()?'/api/compare':'/api/run',{signal:AbortSignal.timeout(30000),method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({question_index:selected,top_k:Number($('top-k').value),character_budget:Number($('budget').value),comparison_batch:isHoldout()?'holdout20':'sample5'})});const data=await response.json();if(!response.ok)throw Error(data.error||'Search failed');lastResult=data;if(data.mode==='comparison'){renderComparison(data);return;}renderRanking(data);$('retrieved').replaceChildren(...(data.retrieved.length?data.retrieved.map((s,i)=>passage(s,i+1,data.expected.reduce((sum,e)=>sum+e.span[1]-e.span[0],0))):[node('div','empty','No passages returned.')]));$('metrics').replaceChildren(metric((data.precision*100).toFixed(1)+'%','Precision','Returned text that is relevant'),metric((data.recall*100).toFixed(1)+'%','Recall','Expected evidence found'),metric((data.retrieval_seconds*1000).toFixed(0)+' ms','Embedding + search','Excludes model loading'),metric(String(data.retrieved.length),'Passages returned',`${data.scored_spans.length} merged ranges scored`));$('verdict').textContent=data.recall===0?'Search missed the expected evidence for this question.':data.recall>=.999999?'Search found all of the marked evidence for this question.':'Search found part of the marked evidence for this question.';$('result-area').hidden=false;$('download').hidden=false;$('raw-panel').hidden=false;$('raw-result').textContent=JSON.stringify(data,null,2);$('result-note').textContent=`Scored with LegalBench-RAG after merging overlapping passages. Model startup (before search): ${(data.startup_model_load_seconds??data.model_load_seconds).toFixed(2)} s. Saved: ${data.saved_result}. One question does not establish overall quality.`;status(`Finished. Embedding ${(data.embedding_seconds*1000).toFixed(0)} ms · database search ${(data.search_seconds*1000).toFixed(0)} ms.`);}catch(e){status(e.name==='TimeoutError'?'Search exceeded 30 seconds. Check server status before retrying.':e.message,true);}finally{busy=false;$('run').disabled=!modelReady;$('run').textContent='Run this question';$('top-k').disabled=false;$('mode').disabled=false;$('budget').disabled=false;renderBank();}}
+async function pollStatus(){
+ try{
+   const response=await fetch('/api/status',{signal:AbortSignal.timeout(5000)});
+   if(!response.ok)throw Error('Cannot read server readiness');
+   const state=await response.json();modelReady=state.model_state==='ready'&&!state.search_running;
+   if(!busy){
+     $('run').disabled=!modelReady;
+     const key=state.model_state+':'+state.search_running;
+     if(state.model_state==='loading')status(`Loading local BGE from disk… ${Math.floor(state.loading_elapsed_seconds)} seconds. Search will be available when ready.`);
+     else if(state.model_state==='failed')status(state.model_error,true);
+     else if(key!==lastServerState)status(state.search_running?'Another search is running on this server. Waiting…':'Ready. Local BGE is loaded; searches reuse it.');
+     lastServerState=key;
+   }
+ }catch(e){modelReady=false;lastServerState=null;if(!busy){$('run').disabled=true;status('Cannot reach the local server. Retrying readiness check…',true);}}
+ setTimeout(pollStatus,1000);
+}
+$('mode').onchange=()=>{if(!bankData)return;$('document').value='';$('search').value='';selectQuestion(isCompare()&&!supported(bankData.questions[selected])?bankData.questions.findIndex(supported):selected);};$('budget').onchange=()=>bankData&&selectQuestion(selected);$('download-comparison').onclick=()=>$('download').click();$('run').onclick=run;$('search').oninput=()=>bankData&&renderBank();$('document').onchange=()=>bankData&&renderBank();$('top-k').onchange=()=>bankData&&selectQuestion(selected);$('download').onclick=()=>{if(!lastResult)return;const url=URL.createObjectURL(new Blob([JSON.stringify(lastResult,null,2)],{type:'application/json'}));const a=node('a');a.href=url;a.download=`${lastResult.mode||"vector"}-question-${lastResult.source_index}-top-${lastResult.top_k}.json`;a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);};
+(async()=>{try{const response=await fetch('/api/questions');if(!response.ok)throw Error('Cannot load the question bank. Check the workbench terminal.');bankData=await response.json();$('collection').textContent=`${bankData.documents} contracts · ${bankData.chunks.toLocaleString()} chunks · local BGE`;const documents=[...new Set(bankData.questions.flatMap(q=>q.snippets.map(s=>s.file_path)))].sort();documents.forEach(path=>{const o=node('option','',path.replace(/^cuad\//,'').replace(/\.txt$/,''));o.value=path;$('document').append(o);});selectQuestion(bankData.questions.findIndex(supported));pollStatus();}catch(e){status(e.message,true);$('question-title').textContent='Could not load the question bank.';}})();
+</script>
+</body></html>

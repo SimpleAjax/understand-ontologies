@@ -1,0 +1,5 @@
+{
+  "repository": "https://github.com/ZeroEntropy-AI/legalbenchrag.git",
+  "commit": "431bc8f2488a81569ab7259fa633dcc50ab77f9a",
+  "checkout": "vendor/legalbenchrag"
+}

@@ -1,0 +1,1749 @@
+@prefix ct: <https://cimulink.local/ontology/contract-terms/0.1#> .
+@prefix ex: <https://cimulink.local/ontology/holdout20-v1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ct: a owl:Ontology ;
+    rdfs:comment "Partial five-contract development sample. No claim of complete contract coverage or legal correctness." .
+
+ct:agreement_effective_from a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:applies_within a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:calendar_date_status a owl:DatatypeProperty .
+
+ct:coverage a owl:DatatypeProperty .
+
+ct:description a owl:DatatypeProperty .
+
+ct:duration a owl:DatatypeProperty .
+
+ct:duration_status a owl:DatatypeProperty .
+
+ct:end_char a owl:DatatypeProperty .
+
+ct:end_date_status a owl:DatatypeProperty .
+
+ct:ends_on_event a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:exact_text a owl:DatatypeProperty .
+
+ct:has_party a owl:ObjectProperty ;
+    rdfs:domain ct:Agreement ;
+    rdfs:range ct:Party .
+
+ct:has_rule a owl:ObjectProperty ;
+    rdfs:domain ct:Agreement ;
+    rdfs:range ct:Rule .
+
+ct:kind a owl:DatatypeProperty .
+
+ct:notice_actor a owl:DatatypeProperty .
+
+ct:notice_form a owl:DatatypeProperty .
+
+ct:notice_period_status a owl:DatatypeProperty .
+
+ct:qualifies a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Rule .
+
+ct:references_section a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:renewal_count a owl:DatatypeProperty .
+
+ct:resolution_status a owl:DatatypeProperty .
+
+ct:resolved_to a owl:ObjectProperty ;
+    rdfs:domain ct:Reference ;
+    rdfs:range ct:SourcePassage .
+
+ct:source_path a owl:DatatypeProperty .
+
+ct:source_sha256 a owl:DatatypeProperty .
+
+ct:start_char a owl:DatatypeProperty .
+
+ct:starts_from a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:stated_end_date a owl:DatatypeProperty .
+
+ct:subject_to a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Condition .
+
+ct:supported_by a owl:ObjectProperty ;
+    rdfs:range ct:SourcePassage .
+
+ct:termination_notice a owl:DatatypeProperty .
+
+ex:H01 a ct:Agreement ;
+    rdfs:label "DataCallTechnologies_20060918_SB-2A_EX-10.9_944510_EX-10.9_Content License Agreement.txt" ;
+    ct:coverage "PARTIAL_SOURCE_ONLY_TERM_RENEWAL_TERMINATION; NOT_INDEPENDENTLY_REVIEWED" ;
+    ct:has_rule ex:H01R01,
+        ex:H01R02,
+        ex:H01R03,
+        ex:H01R04 .
+
+ex:H02 a ct:Agreement ;
+    rdfs:label "RISEEDUCATIONCAYMANLTD_04_17_2020-EX-4.23-SERVICE AGREEMENT.txt" ;
+    ct:coverage "PARTIAL_SOURCE_ONLY_TERM_RENEWAL_TERMINATION; NOT_INDEPENDENTLY_REVIEWED" ;
+    ct:has_rule ex:H02R01,
+        ex:H02R02,
+        ex:H02R03 .
+
+ex:H03 a ct:Agreement ;
+    rdfs:label "MEETGROUP,INC_06_29_2017-EX-10.1-COOPERATION AGREEMENT.txt" ;
+    ct:coverage "PARTIAL_SOURCE_ONLY_TERM_RENEWAL_TERMINATION; NOT_INDEPENDENTLY_REVIEWED" ;
+    ct:has_rule ex:H03R01,
+        ex:H03R02,
+        ex:H03R03 .
+
+ex:H04 a ct:Agreement ;
+    rdfs:label "FEDERATEDGOVERNMENTINCOMESECURITIESINC_04_28_2020-EX-99.SERV AGREE-SERVICES AGREEMENT_POWEROF.txt" ;
+    ct:coverage "PARTIAL_SOURCE_ONLY_TERM_RENEWAL_TERMINATION; NOT_INDEPENDENTLY_REVIEWED" ;
+    ct:has_rule ex:H04R01 .
+
+ex:H05 a ct:Agreement ;
+    rdfs:label "TRUENORTHENERGYCORP_02_08_2007-EX-10.1-DEVELOPMENT AGREEMENT.txt" ;
+    ct:coverage "PARTIAL_SOURCE_ONLY_TERM_RENEWAL_TERMINATION; NOT_INDEPENDENTLY_REVIEWED" ;
+    ct:has_rule ex:H05R01,
+        ex:H05R02,
+        ex:H05R03 .
+
+ex:H06 a ct:Agreement ;
+    rdfs:label "BICYCLETHERAPEUTICSPLC_03_10_2020-EX-10.11-SERVICE AGREEMENT.txt" ;
+    ct:coverage "PARTIAL_SOURCE_ONLY_TERM_RENEWAL_TERMINATION; NOT_INDEPENDENTLY_REVIEWED" ;
+    ct:has_rule ex:H06R01,
+        ex:H06R02,
+        ex:H06R03,
+        ex:H06R04 .
+
+ex:H07 a ct:Agreement ;
+    rdfs:label "ON4COMMUNICATIONSINC_07_02_2009-EX-10.1-PROMOTION AGREEMENT.txt" ;
+    ct:coverage "PARTIAL_SOURCE_ONLY_TERM_RENEWAL_TERMINATION; NOT_INDEPENDENTLY_REVIEWED" ;
+    ct:has_rule ex:H07R01,
+        ex:H07R02 .
+
+ex:H08 a ct:Agreement ;
+    rdfs:label "KIROMICBIOPHARMA,INC_04_08_2020-EX-10.28-JOINT VENTURE AGREEMENT.txt" ;
+    ct:coverage "PARTIAL_SOURCE_ONLY_TERM_RENEWAL_TERMINATION; NOT_INDEPENDENTLY_REVIEWED" ;
+    ct:has_rule ex:H08R01,
+        ex:H08R02,
+        ex:H08R03 .
+
+ex:H09 a ct:Agreement ;
+    rdfs:label "CreditcardscomInc_20070810_S-1_EX-10.33_362297_EX-10.33_Affiliate Agreement.txt" ;
+    ct:coverage "PARTIAL_SOURCE_ONLY_TERM_RENEWAL_TERMINATION; NOT_INDEPENDENTLY_REVIEWED" ;
+    ct:has_rule ex:H09R01,
+        ex:H09R02 .
+
+ex:H10 a ct:Agreement ;
+    rdfs:label "PacificapEntertainmentHoldingsInc_20051115_8-KA_EX-1.01_4300894_EX-1.01_Content License Agreement.txt" ;
+    ct:coverage "PARTIAL_SOURCE_ONLY_TERM_RENEWAL_TERMINATION; NOT_INDEPENDENTLY_REVIEWED" ;
+    ct:has_rule ex:H10R01,
+        ex:H10R02,
+        ex:H10R03 .
+
+ex:H11 a ct:Agreement ;
+    rdfs:label "SIBANNAC,INC_12_04_2017-EX-2.1-Strategic Alliance Agreement.txt" ;
+    ct:coverage "PARTIAL_SOURCE_ONLY_TERM_RENEWAL_TERMINATION; NOT_INDEPENDENTLY_REVIEWED" ;
+    ct:has_rule ex:H11R01 .
+
+ex:H12 a ct:Agreement ;
+    rdfs:label "ENERGOUSCORP_03_16_2017-EX-10.24-STRATEGIC ALLIANCE AGREEMENT.txt" ;
+    ct:coverage "PARTIAL_SOURCE_ONLY_TERM_RENEWAL_TERMINATION; NOT_INDEPENDENTLY_REVIEWED" ;
+    ct:has_rule ex:H12R01,
+        ex:H12R02,
+        ex:H12R03,
+        ex:H12R04 .
+
+ex:H13 a ct:Agreement ;
+    rdfs:label "PrudentialBancorpInc_20170606_8-K_EX-10.4_10474434_EX-10.4_Endorsement Agreement.txt" ;
+    ct:coverage "PARTIAL_SOURCE_ONLY_TERM_RENEWAL_TERMINATION; NOT_INDEPENDENTLY_REVIEWED" ;
+    ct:has_rule ex:H13R01 .
+
+ex:H14 a ct:Agreement ;
+    rdfs:label "ALLIANCEBANCORPINCOFPENNSYLVANIA_10_18_2006-EX-1.2-AGENCY AGREEMENT.txt" ;
+    ct:coverage "PARTIAL_SOURCE_ONLY_TERM_RENEWAL_TERMINATION; NOT_INDEPENDENTLY_REVIEWED" ;
+    ct:has_rule ex:H14R01 .
+
+ex:H15 a ct:Agreement ;
+    rdfs:label "RemarkHoldingsInc_20081114_10-Q_EX-10.24_2895649_EX-10.24_Content License Agreement.txt" ;
+    ct:coverage "PARTIAL_SOURCE_ONLY_TERM_RENEWAL_TERMINATION; NOT_INDEPENDENTLY_REVIEWED" ;
+    ct:has_rule ex:H15R01,
+        ex:H15R02,
+        ex:H15R03 .
+
+ex:H16 a ct:Agreement ;
+    rdfs:label "HEMISPHERX - Sales, Marketing, Distribution, and Supply Agreement.txt" ;
+    ct:coverage "PARTIAL_SOURCE_ONLY_TERM_RENEWAL_TERMINATION; NOT_INDEPENDENTLY_REVIEWED" ;
+    ct:has_rule ex:H16R01,
+        ex:H16R02,
+        ex:H16R03 .
+
+ex:H17 a ct:Agreement ;
+    rdfs:label "BANUESTRAFINANCIALCORP_09_08_2006-EX-10.16-AGENCY AGREEMENT.txt" ;
+    ct:coverage "PARTIAL_SOURCE_ONLY_TERM_RENEWAL_TERMINATION; NOT_INDEPENDENTLY_REVIEWED" ;
+    ct:has_rule ex:H17R01,
+        ex:H17R02,
+        ex:H17R03 .
+
+ex:H18 a ct:Agreement ;
+    rdfs:label "ReynoldsConsumerProductsInc_20200121_S-1A_EX-10.22_11948918_EX-10.22_Service Agreement.txt" ;
+    ct:coverage "PARTIAL_SOURCE_ONLY_TERM_RENEWAL_TERMINATION; NOT_INDEPENDENTLY_REVIEWED" ;
+    ct:has_rule ex:H18R01,
+        ex:H18R02,
+        ex:H18R03,
+        ex:H18R04 .
+
+ex:H19 a ct:Agreement ;
+    rdfs:label "WestPharmaceuticalServicesInc_20200116_8-K_EX-10.1_11947529_EX-10.1_Supply Agreement.txt" ;
+    ct:coverage "PARTIAL_SOURCE_ONLY_TERM_RENEWAL_TERMINATION; NOT_INDEPENDENTLY_REVIEWED" ;
+    ct:has_rule ex:H19R01,
+        ex:H19R02,
+        ex:H19R03 .
+
+ex:H20 a ct:Agreement ;
+    rdfs:label "BLACKBOXSTOCKSINC_08_05_2014-EX-10.1-DISTRIBUTOR AGREEMENT.txt" ;
+    ct:coverage "PARTIAL_SOURCE_ONLY_TERM_RENEWAL_TERMINATION; NOT_INDEPENDENTLY_REVIEWED" ;
+    ct:has_rule ex:H20R01,
+        ex:H20R02 .
+
+ct:Party a owl:Class ;
+    rdfs:label "Party" .
+
+ex:H01R01C a ct:Condition ;
+    rdfs:label "Appendix may state otherwise; earlier termination or extension is possible. Written notice at least 60 days before period end prevents the half-year extension." ;
+    ct:description "Appendix may state otherwise; earlier termination or extension is possible. Written notice at least 60 days before period end prevents the half-year extension." ;
+    ct:supported_by ex:H01R01P .
+
+ex:H01R01F0 a ct:Reference ;
+    rdfs:label "effective date" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:H01R01F1 a ct:Reference ;
+    rdfs:label "Appendix" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:H01R02 a ct:Rule ;
+    rdfs:label "Material or prospective breach cancellation" ;
+    ct:description """7.2  Either  Party  shall  be  entitled  to  cancel  this  Agreement if the           other Party is materially in breach of the terms of this Agreement. If           the  breach  of  contract is capable of being remedied, this Agreement           can  be  cancelled  only  provided  that  the  Party in breach has not           rectified  its breach within thirty (30) days of the written notice by           the  other  Party.
+
+     7.3  Either  Party  may  cancel  this  Agreement  already prior to the date           of  its  fulfillment,  if it becomes evident that the other Party will           commit  a  breach  of  contract  entitling  to  cancellation  of  this           Agreement.""" ;
+    ct:kind "TERMINATION" ;
+    ct:qualifies ex:H01R01 ;
+    ct:subject_to ex:H01R02C ;
+    ct:supported_by ex:H01R02P .
+
+ex:H01R02C a ct:Condition ;
+    rdfs:label "Remediable breach requires failure to rectify within 30 days of written notice; clause 7.3 covers evident prospective breach." ;
+    ct:description "Remediable breach requires failure to rectify within 30 days of written notice; clause 7.3 covers evident prospective breach." ;
+    ct:supported_by ex:H01R02P .
+
+ex:H01R03 a ct:Rule ;
+    rdfs:label "Sell-off period refers to Appendix 2" ;
+    ct:description "7.5  After termination  of  this  contract,  there  shall  be  a  sell-off           period  (defined  in  APPENDIX 2) following the date of termination of           this  contract." ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:qualifies ex:H01R01 ;
+    ct:references_section ex:H01R03F0 ;
+    ct:supported_by ex:H01R03P .
+
+ex:H01R03F0 a ct:Reference ;
+    rdfs:label "Appendix 2 sell-off period" ;
+    ct:resolution_status "PASSAGE_LINKED" ;
+    ct:resolved_to ex:H01R03FP0 .
+
+ex:H01R03FP0 a ct:SourcePassage ;
+    ct:end_char 13841 ;
+    ct:exact_text """2.1  Contract  start:  04-01-06
+
+     2.2  Contract  end:  04-01-08
+
+     2.3  Commercial  distribution  possible  from:
+
+     2.4  Sell-off  period:  3  months  after  termination""" ;
+    ct:source_path "cuad/DataCallTechnologies_20060918_SB-2A_EX-10.9_944510_EX-10.9_Content License Agreement.txt" ;
+    ct:source_sha256 "20f0f1630d8ae7ba221fbbf9d0449a593605989dfa3c779cafdb9c233bb6ebe7" ;
+    ct:start_char 13661 .
+
+ex:H01R03P a ct:SourcePassage ;
+    ct:end_char 8921 ;
+    ct:exact_text "7.5  After termination  of  this  contract,  there  shall  be  a  sell-off           period  (defined  in  APPENDIX 2) following the date of termination of           this  contract." ;
+    ct:source_path "cuad/DataCallTechnologies_20060918_SB-2A_EX-10.9_944510_EX-10.9_Content License Agreement.txt" ;
+    ct:source_sha256 "20f0f1630d8ae7ba221fbbf9d0449a593605989dfa3c779cafdb9c233bb6ebe7" ;
+    ct:start_char 8740 .
+
+ex:H01R04 a ct:Rule ;
+    rdfs:label "Appendix dates and three-month sell-off" ;
+    ct:description """2.1  Contract  start:  04-01-06
+
+     2.2  Contract  end:  04-01-08
+
+     2.3  Commercial  distribution  possible  from:
+
+     2.4  Sell-off  period:  3  months  after  termination""" ;
+    ct:kind "CONDITIONAL_REFERENCED_TERM" ;
+    ct:qualifies ex:H01R01 ;
+    ct:subject_to ex:H01R04C ;
+    ct:supported_by ex:H01R04P .
+
+ex:H01R04C a ct:Condition ;
+    rdfs:label "Raw start 04-01-06 and end 04-01-08 have ambiguous date order; preserve wording, do not normalize to calendar dates." ;
+    ct:description "Raw start 04-01-06 and end 04-01-08 have ambiguous date order; preserve wording, do not normalize to calendar dates." ;
+    ct:supported_by ex:H01R04P .
+
+ex:H02R01C a ct:Condition ;
+    rdfs:label "Effective on the date set forth above; renewal unless parties confirm termination in writing." ;
+    ct:description "Effective on the date set forth above; renewal unless parties confirm termination in writing." ;
+    ct:supported_by ex:H02R01P .
+
+ex:H02R01F0 a ct:Reference ;
+    rdfs:label "date set forth above" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:H02R02 a ct:Rule ;
+    rdfs:label "Expiry without renewal, mutual agreement, or provider termination on recipient default" ;
+    ct:description """10. Termination
+
+This Agreement shall be terminated upon the occurrence of any of the following: (1) The validity period of this Agreement expires and the Parties fail to reach an agreement on renewal; (2) The Parties mutually agree to terminate this Agreement; or (3) Service Provider exercises the right to terminate this Agreement upon a default by Service Recipient.
+
+If this Agreement is terminated by Service Provider upon a default by Service Recipient, Service Provider will not refund the prepaid Service Fee to Service Recipient.""" ;
+    ct:kind "TERMINATION" ;
+    ct:qualifies ex:H02R01 ;
+    ct:supported_by ex:H02R02P .
+
+ex:H02R02P a ct:SourcePassage ;
+    ct:end_char 11775 ;
+    ct:exact_text """10. Termination
+
+This Agreement shall be terminated upon the occurrence of any of the following: (1) The validity period of this Agreement expires and the Parties fail to reach an agreement on renewal; (2) The Parties mutually agree to terminate this Agreement; or (3) Service Provider exercises the right to terminate this Agreement upon a default by Service Recipient.
+
+If this Agreement is terminated by Service Provider upon a default by Service Recipient, Service Provider will not refund the prepaid Service Fee to Service Recipient.""" ;
+    ct:source_path "cuad/RISEEDUCATIONCAYMANLTD_04_17_2020-EX-4.23-SERVICE AGREEMENT.txt" ;
+    ct:source_sha256 "4d9af82e13bc95c4459e66c7d19439753237bc89e6e4bf10819aedcc4018534f" ;
+    ct:start_char 11236 .
+
+ex:H02R03 a ct:Rule ;
+    rdfs:label "Provider may terminate for payment delay exceeding 15 days" ;
+    ct:description "In the event that such delay in payment is more than fifteen (15) days, Service Provider may terminate this Agreement. Service Recipient shall be liable for indemnifying Service Provider in full for the losses it incurred therefrom." ;
+    ct:kind "TERMINATION" ;
+    ct:qualifies ex:H02R01 ;
+    ct:supported_by ex:H02R03P .
+
+ex:H02R03P a ct:SourcePassage ;
+    ct:end_char 11060 ;
+    ct:exact_text "In the event that such delay in payment is more than fifteen (15) days, Service Provider may terminate this Agreement. Service Recipient shall be liable for indemnifying Service Provider in full for the losses it incurred therefrom." ;
+    ct:source_path "cuad/RISEEDUCATIONCAYMANLTD_04_17_2020-EX-4.23-SERVICE AGREEMENT.txt" ;
+    ct:source_sha256 "4d9af82e13bc95c4459e66c7d19439753237bc89e6e4bf10819aedcc4018534f" ;
+    ct:start_char 10828 .
+
+ex:H03R01C a ct:Condition ;
+    rdfs:label "This describes the standstill period, not an unconditional ending of every contract provision." ;
+    ct:description "This describes the standstill period, not an unconditional ending of every contract provision." ;
+    ct:supported_by ex:H03R01P .
+
+ex:H03R01F0 a ct:Reference ;
+    rdfs:label "Standstill Period obligations" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:H03R01F1 a ct:Reference ;
+    rdfs:label "11:59 p.m. Eastern on certification date of stockholder vote at 2018 annual meeting" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:H03R02 a ct:Rule ;
+    rdfs:label "Conditional change-of-control termination of Sections 1, 2 and 3" ;
+    ct:applies_within ex:H03R02F0 ;
+    ct:description """(e) Notwithstanding anything contained in this Agreement to the contrary:   (i) The provisions of Sections 1, 2, and 3 of this Agreement shall automatically terminate upon the occurrence of a Change of Control transaction (as defined below) involving the Company if the acquiring or counter-party to the Change of Control transaction has conditioned the closing of the transaction on the termination of such sections; provided, however, that the Company shall not directly or indirectly, propose, seek, encourage or otherwise influence such acquiring or counter-party to the Change of Control transaction to condition the closing of such transaction on the termination of Sections 1, 2, and 3 of this Agreement; and     8
+
+
+
+
+
+    (ii) For purposes of this Agreement, a "Change of Control" transaction shall be deemed to have taken place if (1) any person is or becomes a beneficial owner, directly or indirectly, of securities of the Company representing more than 50% of the equity interests and voting power of the Company's then outstanding equity securities or (2) the Company enters into a stock-for-stock transaction whereby immediately after the consummation of the transaction the Company's stockholders retain less than 50% of the equity interests and voting power of the surviving entity's then outstanding equity securities.""" ;
+    ct:kind "TERMINATION" ;
+    ct:qualifies ex:H03R01 ;
+    ct:subject_to ex:H03R02C ;
+    ct:supported_by ex:H03R02P .
+
+ex:H03R02C a ct:Condition ;
+    rdfs:label "Acquiring or counterparty must condition closing on termination of those sections; Company must not encourage that condition." ;
+    ct:description "Acquiring or counterparty must condition closing on termination of those sections; Company must not encourage that condition." ;
+    ct:supported_by ex:H03R02P .
+
+ex:H03R02F0 a ct:Reference ;
+    rdfs:label "Sections 1, 2 and 3 only" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:H03R03 a ct:Rule ;
+    rdfs:label "Non-disparagement obligations may end earlier on qualifying breach" ;
+    ct:applies_within ex:H03R03F0 ;
+    ct:description "7. Mutual Non-Disparagement.   (a) Each Investor agrees that, until the earlier of (i) the expiration of the Standstill Period or (ii) any material breach of this Agreement by the Company (provided that the Company shall have three (3) business days following written notice from such Investor of any material breach to remedy such material breach if capable of remedy), neither it nor any of its Affiliates or Associates will, and it will cause each of its Affiliates and Associates not to, directly or indirectly, publicly make, express, transmit, speak, write, verbalize or otherwise publicly communicate in any way (or cause, further, assist, solicit, encourage, support or participate in any of the foregoing), any remark, comment, message, information, declaration, communication or other statement of any kind, whether verbal or in writing, that might reasonably be construed to be derogatory or critical of, or negative toward, the Company or any of its directors, officers, Affiliates, Associates, subsidiaries, employees, agents or representatives (collectively, the \"Company Representatives\"), or that reveals, discloses, incorporates, is based upon, discusses, includes or otherwise involves any confidential or proprietary information of the Company or its subsidiaries or Affiliates or Associates, or to malign, harm, disparage, defame or damage the reputation or good name of the Company, its business or any of the Company Representatives.   (b) The Company hereby agrees that, until the earlier of (i) the expiration of the Standstill Period or (ii) any material breach of this Agreement by an Investor (provided that such Investor shall have three (3) business days following written notice from the Company of any material breach to remedy such material breach if capable of remedy), neither it nor any of its Affiliates will, and it will cause each of its Affiliates not to, directly or indirectly, publicly make, express, transmit, speak, write, verbalize or otherwise publicly communicate in any way (or cause, further, assist, solicit, encourage, support or participate in any of the foregoing), any remark, comment, message, information, declaration, communication or other statement of any kind, whether verbal or in writing, that might reasonably be construed to be derogatory or critical of, or negative toward, the Investors or their Affiliates or Associates or any of their agents or representatives (collectively, the \"Investor Agents\"), or that reveals, discloses, incorporates, is based upon, discusses, includes or otherwise involves any confidential or proprietary information of any Investor or its Affiliates or Associates, or to malign, harm, disparage, defame or damage the reputation or good name of any Investor, its business or any of the Investor Agents.   (c) Notwithstanding the foregoing, nothing in this Section 7 or elsewhere in this Agreement shall prohibit any party from making any statement or disclosure required under the federal securities laws or other applicable laws.   (d) The limitations set forth in Section 7(a) and 7(b) shall not prevent any party from responding to any public statement made by the other party of the nature described in Section 7(a) and 7(b) if such statement by the other party was made in breach of this Agreement.     10" ;
+    ct:kind "CONDITIONAL_REFERENCED_TERM" ;
+    ct:qualifies ex:H03R01 ;
+    ct:subject_to ex:H03R03C ;
+    ct:supported_by ex:H03R03P .
+
+ex:H03R03C a ct:Condition ;
+    rdfs:label "Standstill expiry or material breach, subject to three-business-day notice/cure wording. Clause scope is mutual non-disparagement." ;
+    ct:description "Standstill expiry or material breach, subject to three-business-day notice/cure wording. Clause scope is mutual non-disparagement." ;
+    ct:supported_by ex:H03R03P .
+
+ex:H03R03F0 a ct:Reference ;
+    rdfs:label "Section 7 non-disparagement" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:H04R01 a ct:Rule ;
+    rdfs:label "Power of attorney ends with underlying agreements or actual written revocation" ;
+    ct:description "This Limited Power of Attorney shall be revoked and terminated automatically upon the cancellation or termination of the Services Agreement or as to any Fund upon the cancellation or termination of the Adviser's Investment Advisory Contract for such Fund. Except as provided in the immediately preceding sentence, the powers and authorities herein granted may be revoked or terminated by the Adviser at any time provided that no such revocation or termination shall be effective until FASC has received actual notice of such revocation or termination in writing from the Adviser." ;
+    ct:ends_on_event ex:H04R01F0 ;
+    ct:kind "INITIAL_TERM" ;
+    ct:subject_to ex:H04R01C ;
+    ct:supported_by ex:H04R01P .
+
+ex:H04R01C a ct:Condition ;
+    rdfs:label "Automatic revocation on cancellation/termination of Services Agreement, or for a fund its advisory contract; other revocation effective only when FASC receives actual written notice." ;
+    ct:description "Automatic revocation on cancellation/termination of Services Agreement, or for a fund its advisory contract; other revocation effective only when FASC receives actual written notice." ;
+    ct:supported_by ex:H04R01P .
+
+ex:H04R01F0 a ct:Reference ;
+    rdfs:label "Underlying Services Agreement or fund advisory-contract cancellation/termination" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:H05R01F0 a ct:Reference ;
+    rdfs:label "Rig Release Date" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:H05R01F1 a ct:Reference ;
+    rdfs:label "Sections 6.2-6.5" ;
+    ct:resolution_status "PASSAGE_LINKED" ;
+    ct:resolved_to ex:H05R01FP1 .
+
+ex:H05R01FP1 a ct:SourcePassage ;
+    ct:end_char 29686 ;
+    ct:exact_text """6.2  Notwithstanding Section 6.1, if the Initial Well is drilled to the Objective Zone and successfully Completed as a well capable of producing oil and/or gas in paying quantities, this Agreement shall continue for so long as the Operating Agreement remains in full force and effect.
+
+6.3   Notwithstanding Section 6.1, this Agreement shall remain in full force and effect for so long as Company participates in the drilling of a Substitute Well in accordance with Section 3.2.
+
+6.4  Notwithstanding anything in this Agreement to the contrary, if Company earns a Partial Interest in the Initial Well and the BP Interests pursuant to Section 4.2, the Parties shall first enter into an operating agreement in the form of the Operating Agreement, except that the contract area of such operating agreement shall be limited to the Partial Interest, prior to termination of this Agreement.
+
+6.5  Notwithstanding anything in this Agreement to the contrary, the expiration or termination of this Agreement shall not release any of the Parties from any obligation or liability which accrued prior to such expiration or termination (including the costs to plug and abandon the Initial Well and any Substitute Wells and Additional Wells) or which, by the terms hereof, is intended to survive such expiration or termination, including but not limited to Articles I, X, XI, XII, XIII, XIV, XV, and XVI and Sections 5.1 and 5.6, which terms shall survive indefinitely.""" ;
+    ct:source_path "cuad/TRUENORTHENERGYCORP_02_08_2007-EX-10.1-DEVELOPMENT AGREEMENT.txt" ;
+    ct:source_sha256 "37104b954c35b7e787eebe9da39567d4025449a11167072c06e81ab4286eb0c3" ;
+    ct:start_char 28231 .
+
+ex:H05R01P a ct:SourcePassage ;
+    ct:end_char 28229 ;
+    ct:exact_text "6.1  Except as provided in Sections 6.2, 6.3, 6.4, and 6.5, this Agreement shall terminate one (1) year from the Rig Release Date, if such has not been terminated sooner pursuant to the provisions hereof." ;
+    ct:source_path "cuad/TRUENORTHENERGYCORP_02_08_2007-EX-10.1-DEVELOPMENT AGREEMENT.txt" ;
+    ct:source_sha256 "37104b954c35b7e787eebe9da39567d4025449a11167072c06e81ab4286eb0c3" ;
+    ct:start_char 28025 .
+
+ex:H05R02 a ct:Rule ;
+    rdfs:label "Successful well, substitute drilling, operating-agreement and survival qualifications" ;
+    ct:description """6.2  Notwithstanding Section 6.1, if the Initial Well is drilled to the Objective Zone and successfully Completed as a well capable of producing oil and/or gas in paying quantities, this Agreement shall continue for so long as the Operating Agreement remains in full force and effect.
+
+6.3   Notwithstanding Section 6.1, this Agreement shall remain in full force and effect for so long as Company participates in the drilling of a Substitute Well in accordance with Section 3.2.
+
+6.4  Notwithstanding anything in this Agreement to the contrary, if Company earns a Partial Interest in the Initial Well and the BP Interests pursuant to Section 4.2, the Parties shall first enter into an operating agreement in the form of the Operating Agreement, except that the contract area of such operating agreement shall be limited to the Partial Interest, prior to termination of this Agreement.
+
+6.5  Notwithstanding anything in this Agreement to the contrary, the expiration or termination of this Agreement shall not release any of the Parties from any obligation or liability which accrued prior to such expiration or termination (including the costs to plug and abandon the Initial Well and any Substitute Wells and Additional Wells) or which, by the terms hereof, is intended to survive such expiration or termination, including but not limited to Articles I, X, XI, XII, XIII, XIV, XV, and XVI and Sections 5.1 and 5.6, which terms shall survive indefinitely.""" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:qualifies ex:H05R01 ;
+    ct:subject_to ex:H05R02C ;
+    ct:supported_by ex:H05R02P .
+
+ex:H05R02C a ct:Condition ;
+    rdfs:label "Sections 6.2-6.5 preserve conditional continuation and accrued/surviving liabilities; do not collapse them into one final end date." ;
+    ct:description "Sections 6.2-6.5 preserve conditional continuation and accrued/surviving liabilities; do not collapse them into one final end date." ;
+    ct:supported_by ex:H05R02P .
+
+ex:H05R03 a ct:Rule ;
+    rdfs:label "Nonparticipation in substitute well terminates subject to Sections 6.2-6.5" ;
+    ct:description "3.4  If Company elects not to participate in a Substitute Well, or is deemed not to participate in a Substitute Well, this Agreement shall terminate except as provided in Sections 6.2, 6.3, 6.4, and 6.5." ;
+    ct:kind "TERMINATION" ;
+    ct:qualifies ex:H05R01 ;
+    ct:supported_by ex:H05R03P .
+
+ex:H05R03P a ct:SourcePassage ;
+    ct:end_char 20563 ;
+    ct:exact_text "3.4  If Company elects not to participate in a Substitute Well, or is deemed not to participate in a Substitute Well, this Agreement shall terminate except as provided in Sections 6.2, 6.3, 6.4, and 6.5." ;
+    ct:source_path "cuad/TRUENORTHENERGYCORP_02_08_2007-EX-10.1-DEVELOPMENT AGREEMENT.txt" ;
+    ct:source_sha256 "37104b954c35b7e787eebe9da39567d4025449a11167072c06e81ab4286eb0c3" ;
+    ct:start_char 20360 .
+
+ex:H06R01F0 a ct:Reference ;
+    rdfs:label "26 September 2019" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:H06R01F1 a ct:Reference ;
+    rdfs:label "Paragraph 11" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:H06R01P a ct:SourcePassage ;
+    ct:end_char 964 ;
+    ct:exact_text """1.1 This Agreement shall take effect 26  September 2019 (the "Effective Date").
+
+1.2 Your employment shall commence on 26  September 2019 and shall continue unless and until either party gives notice to the other in accordance with paragraph 11 below. No employment with a previous employer is deemed to be continuous with your employment with the Company.""" ;
+    ct:source_path "cuad/BICYCLETHERAPEUTICSPLC_03_10_2020-EX-10.11-SERVICE AGREEMENT.txt" ;
+    ct:source_sha256 "f8438559b293e8223834f2d6d9d3fd9d7e74c2356132851878b970d840db8d29" ;
+    ct:start_char 608 .
+
+ex:H06R02 a ct:Rule ;
+    rdfs:label "Six months written notice, subject to summary termination and payment-in-lieu rules" ;
+    ct:description """11.1 Without prejudice to the Company's right to summarily terminate your employment in accordance with paragraph 11.3 below and your right to summarily terminate your employment for Good Reason in accordance with paragraph 11.4 below, either you or the Company may terminate your employment by giving to the other not less than six months' notice in writing.
+
+11.2 The Company reserves the right in its sole and absolute discretion to give written notice to
+
+6
+
+
+
+
+
+terminate your employment forthwith and to make a payment to you in lieu of salary and the benefits set out in paragraph 5 of this Agreement for all or any unexpired part of the notice period. For the avoidance of doubt, any payment in lieu made pursuant to this paragraph 11.2 will not include any element in relation to any payment in respect of (i) any Annual Performance Bonus or (ii) any holiday entitlement that would have otherwise accrued during the period for which the payment in lieu is made. For the further avoidance of doubt, if the Company elects to make a Payment in Lieu after notice of termination has been given by you, this will not constitute a termination by the Company without Cause for the purposes of paragraphs 11.7 and 11.8 below.""" ;
+    ct:kind "TERMINATION" ;
+    ct:notice_form "WRITTEN" ;
+    ct:qualifies ex:H06R01 ;
+    ct:subject_to ex:H06R02C ;
+    ct:supported_by ex:H06R02P ;
+    ct:termination_notice "P6M"^^xsd:duration .
+
+ex:H06R02C a ct:Condition ;
+    rdfs:label "Company may terminate forthwith by written notice and payment in lieu as qualified by paragraph 11.2; summary termination rights remain distinct." ;
+    ct:description "Company may terminate forthwith by written notice and payment in lieu as qualified by paragraph 11.2; summary termination rights remain distinct." ;
+    ct:supported_by ex:H06R02P .
+
+ex:H06R03 a ct:Rule ;
+    rdfs:label "Company Cause, employee Good Reason process, and death" ;
+    ct:description """11.3 The Company may summarily terminate your employment hereunder (without notice) for Cause. For purposes of this Agreement, "Cause" shall mean where you:
+
+(a) commit gross misconduct which includes, but is not limited to, dishonesty, fraud, theft, being under the influence of alcohol or drugs at work, causing actual or threatening physical harm and causing damage to Company property;
+
+(b) commit a material breach or non-observance of your duties or any of the provisions of this Agreement, or materially fail to observe the lawful directions of the Company, or breach any material Company policy or code of conduct, including but not limited to the Company's policy from time to time on matters relating to harassment;
+
+(c) are convicted of a criminal offence (other than an offence under the road traffic legislation in the United Kingdom or elsewhere for which a non-custodial sentence is imposed);
+
+(d) act in a manner which in the reasonable opinion of the Company, brings the Company into disrepute or otherwise prejudices or is in the reasonable opinion of the Company considered likely to prejudice the reputation of the Company;
+
+(e) in the reasonable opinion of the Company, are guilty of any serious negligence in connection with or affecting the business or affairs of the Company;
+
+(f) are unfit to carry out the duties hereunder because of sickness, injury or otherwise for an aggregate period of 26 weeks in any fifty-two (52) week period even if, as a result of such termination, you would or might forfeit any entitlement to benefit from sick pay under paragraph 9.3 above.
+
+Any delay or forbearance by the Company in exercising any right of termination in accordance with this paragraph 11.3 will not constitute a waiver of such right.
+
+11.4 You may summarily terminate your employment hereunder at any time (without notice) for Good Reason after complying with the Good Reason Process. For purposes of this Agreement, "Good Reason" shall mean that you have complied with the "Good Reason Process" (hereinafter defined) following the occurrence of any of the following events: (i) a material diminution in your responsibilities, authority or duties; (ii) a material diminution in your Salary; (iii) a material change in the geographic location at which you provides services to the Company; or (iv) the material breach of this Agreement by the Company. "Good Reason Process" shall mean that (i) you reasonably determine in good faith that a "Good Reason" condition has occurred; (ii) you notify the Company in writing of the first occurrence of the Good
+
+7
+
+
+
+
+
+Reason condition within 60 days of the first occurrence of such condition; (iii) you cooperate in good faith with the Company's efforts, for a period not less than 30 days following such notice (the "Cure Period"), to remedy the condition; (iv) notwithstanding such efforts, the Good Reason condition continues to exist; and (v) you terminate your employment (without notice) within 60 days after the end of the Cure Period. If the Company cures the Good Reason condition during the Cure Period, Good Reason shall be deemed not to have occurred.
+
+11.5 Your employment hereunder shall also terminate immediately upon your death.""" ;
+    ct:kind "TERMINATION" ;
+    ct:qualifies ex:H06R01 ;
+    ct:subject_to ex:H06R03C ;
+    ct:supported_by ex:H06R03P .
+
+ex:H06R03C a ct:Condition ;
+    rdfs:label "Preserve full Cause list, Good Reason notice/cure/process and immediate termination on death; no assertion that these events occurred." ;
+    ct:description "Preserve full Cause list, Good Reason notice/cure/process and immediate termination on death; no assertion that these events occurred." ;
+    ct:supported_by ex:H06R03P .
+
+ex:H06R04 a ct:Rule ;
+    rdfs:label "Company may immediately end employment on loss of UK work rights" ;
+    ct:description "If at any time during the course of this Agreement you cease to have the right to work in the United Kingdom the Company may immediately terminate your employment without payment of compensation." ;
+    ct:kind "TERMINATION" ;
+    ct:qualifies ex:H06R01 ;
+    ct:supported_by ex:H06R04P .
+
+ex:H06R04P a ct:SourcePassage ;
+    ct:end_char 1799 ;
+    ct:exact_text "If at any time during the course of this Agreement you cease to have the right to work in the United Kingdom the Company may immediately terminate your employment without payment of compensation." ;
+    ct:source_path "cuad/BICYCLETHERAPEUTICSPLC_03_10_2020-EX-10.11-SERVICE AGREEMENT.txt" ;
+    ct:source_sha256 "f8438559b293e8223834f2d6d9d3fd9d7e74c2356132851878b970d840db8d29" ;
+    ct:start_char 1604 .
+
+ex:H07R01C a ct:Condition ;
+    rdfs:label "Approximate distribution ends December 31, 2009; redemption may continue to March 31, 2010. These are promotion/redemption windows, not a demonstrated global contract expiry." ;
+    ct:description "Approximate distribution ends December 31, 2009; redemption may continue to March 31, 2010. These are promotion/redemption windows, not a demonstrated global contract expiry." ;
+    ct:supported_by ex:H07R01P .
+
+ex:H07R01F0 a ct:Reference ;
+    rdfs:label "Promotion and pin-code redemption only" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:H07R02 a ct:Rule ;
+    rdfs:label "Exclusive sponsorship window" ;
+    ct:applies_within ex:H07R02F0 ;
+    ct:description "In consideration of the fees paid by Sponsor as set out herein, Charity Tunes agrees that during the period beginning October  1, 2009 and ending March 31, 2010, Charity Tunes shall not enable another program sponsorship for all competitive  products/product categories distributed/sold within the total Canadian consumer/retail/wholesale market place, inclusive of:     - Total Frozen Handhelds     - Total Corporation General Mills Handhelds     - Total Pizza Pops Handhelds / total Pillsbury Mini Pizzas     - Total Corporation McCain Foods Handhelds     - Total Pizza Pockets / total McCain Mini Pizzas     - Total Corporation Heinz Handhelds     - Total Heinz Hot bites (Bagel Bites and Taco Bites) / total Anchor Poppers     - Total Corporation Schneider Foods Handhelds     - Total Hot Stuffs / total Lean Stuffs     - Total Resers Burritos     - Total Corp les Plats du Chef Handhelds     - Total Hinsdale Farms Corndogs" ;
+    ct:kind "CONDITIONAL_REFERENCED_TERM" ;
+    ct:qualifies ex:H07R01 ;
+    ct:subject_to ex:H07R02C ;
+    ct:supported_by ex:H07R02P .
+
+ex:H07R02C a ct:Condition ;
+    rdfs:label "October 1, 2009 through March 31, 2010 is the sponsorship restriction period, not proof every contractual obligation expires then." ;
+    ct:description "October 1, 2009 through March 31, 2010 is the sponsorship restriction period, not proof every contractual obligation expires then." ;
+    ct:supported_by ex:H07R02P .
+
+ex:H07R02F0 a ct:Reference ;
+    rdfs:label "Competitive program sponsorship restriction" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:H08R01C a ct:Condition ;
+    rdfs:label "Non-renewal notice one year before natural expiry; automatic cessation on winding-up or insolvency; accrued obligations preserved." ;
+    ct:description "Non-renewal notice one year before natural expiry; automatic cessation on winding-up or insolvency; accrued obligations preserved." ;
+    ct:supported_by ex:H08R01P .
+
+ex:H08R01F0 a ct:Reference ;
+    rdfs:label "signing date" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:H08R02 a ct:Rule ;
+    rdfs:label "Withdrawal and express resolution grounds" ;
+    ct:description """9. WITHDRAWAL AND RESOLUTION
+
+The Parties may withdraw from this JV only for serious and justified reasons or by mutual consent. The withdrawal must be exercised by written notice, to be sent to the other Party by certified letter or PEC, with minimum notice of 30 days.
+
+Withdrawal or termination by mutual consent shall only have effect for the future and shall not affect the part of the Agreement already executed.
+
+In case of withdrawal according to the previous paragraph, Kiromic is obliged to cover Molipharma for the expenses incurred and for those committed, related to the research programs being developed, until receipt of the notice of withdrawal. -8-
+
+
+
+
+
+Pursuant to art. 1456 of the Italian Civil Code, this JV shall be terminated by right in the following cases: a. Breach of confidentiality obligations; b. Unilateral and unagreed variation of the Scope of the JV; c. Failure of each Party to comply with its obligations, including the economic commitments.
+
+The Party concerned must communicate by registered letter with return receipt, or PEC, its intention to avail itself of the termination clause.
+
+In the event of termination of the Agreement pursuant to this clause or, in any case, to termination due to Kiromic's default, the same is required; in addition, Kiromic undertakes to the reimbursement of expenses incurred and/or committed by Molipharma, and agrees to recognize financially the additional damage suffered by Molipharma by such a default.
+
+Upon termination of the contract, the agreement set forth in clause 5 ("Intellectual property rights and prohibition of transfer to third parties") and clause 6 ("Economic rights") will remain into force.""" ;
+    ct:kind "TERMINATION" ;
+    ct:qualifies ex:H08R01 ;
+    ct:subject_to ex:H08R02C ;
+    ct:supported_by ex:H08R02P .
+
+ex:H08R02C a ct:Condition ;
+    rdfs:label "Serious justified reasons or mutual consent; 30-day written withdrawal and listed breach/communication provisions; IP/economic clauses survive." ;
+    ct:description "Serious justified reasons or mutual consent; 30-day written withdrawal and listed breach/communication provisions; IP/economic clauses survive." ;
+    ct:supported_by ex:H08R02P .
+
+ex:H08R03 a ct:Rule ;
+    rdfs:label "Insolvency-related termination rights" ;
+    ct:description """10. TERMINATION
+
+Each Parties shall have the right to terminate its obligations, if one of the following events occurs: the Company (i) applies for or consents to the appointment of a receiver, trustee, custodian or liquidator of itself or substantially all of its property, (ii) becomes subject to the appointment of a receiver, trustee, custodian or liquidator of itself or substantially all of its property, (iii) makes an assignment for the benefit of creditors, (iv) institutes any proceedings under or state bankruptcy, reorganization, receivership, insolvency or other similar law affecting the rights of creditors generally, or files a petition or answer seeking reorganization or an arrangement with creditors to take advantage of any insolvency law, or files an answer admitting the material allegations of a bankruptcy, reorganization or insolvency petition filed against it, or (v) becomes subject to any involuntary proceedings under the state bankruptcy, reorganization, receivership, insolvency or other similar law affecting the rights of creditors generally, when proceeding is not dismissed within thirty (30) days of filing, or have an order for relief entered against it in any proceedings under Bankruptcy Code. -9-""" ;
+    ct:kind "TERMINATION" ;
+    ct:qualifies ex:H08R01 ;
+    ct:subject_to ex:H08R03C ;
+    ct:supported_by ex:H08R03P .
+
+ex:H08R03C a ct:Condition ;
+    rdfs:label "Preserve listed company insolvency events and 30-day dismissal qualification for involuntary proceedings." ;
+    ct:description "Preserve listed company insolvency events and 30-day dismissal qualification for involuntary proceedings." ;
+    ct:supported_by ex:H08R03P .
+
+ex:H09R01F0 a ct:Reference ;
+    rdfs:label "Chase approval of Affiliate Registration Form" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:H09R01F1 a ct:Reference ;
+    rdfs:label "termination by either party" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:H09R01P a ct:SourcePassage ;
+    ct:end_char 8222 ;
+    ct:exact_text "5.Term of this Agreement   The term of this Agreement will commence on the date that the Affiliate Registration Form is approved by Chase and will end when terminated by either party. Either Affiliate or Chase may terminate this Agreement at any time, with or without cause, by giving the other party written or e-mail notice of termination. At the time of termination, any links to Chase's Website must be removed immediately. Affiliate will continue to receive Commission payments for all Approved Accounts placed during the term of this Agreement. Notwithstanding the foregoing, Chase may   terminate this Agreement if Affiliate does not comply with the terms and conditions herein." ;
+    ct:source_path "cuad/CreditcardscomInc_20070810_S-1_EX-10.33_362297_EX-10.33_Affiliate Agreement.txt" ;
+    ct:source_sha256 "29b719c456250aea65501b771c0dc859094c9a5d5b074a6af4fe4254bd5c4384" ;
+    ct:start_char 7537 .
+
+ex:H09R02 a ct:Rule ;
+    rdfs:label "Chase termination for restricted content or unsuitable site" ;
+    ct:description "Chase also reserves the right to terminate this Agreement in the event that any Restricted Content is incorporated on Affiliate's site after acceptance of your registration form and the commencement of the term of this Agreement. Chase may also terminate this Agreement if your site is deemed unsuitable based on the criteria below:" ;
+    ct:kind "TERMINATION" ;
+    ct:qualifies ex:H09R01 ;
+    ct:subject_to ex:H09R02C ;
+    ct:supported_by ex:H09R02P .
+
+ex:H09R02C a ct:Condition ;
+    rdfs:label "Site criteria continue in subsequent bullets; retain reference rather than assume this excerpt lists every unsuitable-site criterion." ;
+    ct:description "Site criteria continue in subsequent bullets; retain reference rather than assume this excerpt lists every unsuitable-site criterion." ;
+    ct:supported_by ex:H09R02P .
+
+ex:H10R01C a ct:Condition ;
+    rdfs:label "Agreement effective at last signature, but initial term measured from first public availability. Non-renewal notice at least 60 days before end of a term." ;
+    ct:description "Agreement effective at last signature, but initial term measured from first public availability. Non-renewal notice at least 60 days before end of a term." ;
+    ct:supported_by ex:H10R01P .
+
+ex:H10R01F0 a ct:Reference ;
+    rdfs:label "first public availability of content on licensee property" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:H10R02 a ct:Rule ;
+    rdfs:label "Insolvency or uncured material breach termination" ;
+    ct:description "TERMINATION FOR CAUSE: Notwithstanding the foregoing, this Agreement may be terminated by either party immediately upon notice if the other party: (w) becomes insolvent; (x) files a petition in bankruptcy; (y) makes an assignment for the benefit of its creditors; or (z) breach any of its obligations under this Agreement in any material respect, which breach is not remedied within thirty (30) days following written notice to such party." ;
+    ct:kind "TERMINATION" ;
+    ct:qualifies ex:H10R01 ;
+    ct:subject_to ex:H10R02C ;
+    ct:supported_by ex:H10R02P .
+
+ex:H10R02C a ct:Condition ;
+    rdfs:label "Material breach has 30-day written cure provision; preserve full clause distinctions." ;
+    ct:description "Material breach has 30-day written cure provision; preserve full clause distinctions." ;
+    ct:supported_by ex:H10R02P .
+
+ex:H10R03 a ct:Rule ;
+    rdfs:label "Property and confidentiality survive; revenue sharing ceases" ;
+    ct:description "EFFECT OF TERMINATION: Any termination shall be without any liability or obligation of the terminating party, other than with respect to any breach of this Agreement prior to termination. The provisions relating to property rights and confidentiality shall survive any termination or expiration of this Agreement. All revenue sharing ceases with the termination of this Agreement." ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:qualifies ex:H10R01 ;
+    ct:supported_by ex:H10R03P .
+
+ex:H10R03P a ct:SourcePassage ;
+    ct:end_char 10444 ;
+    ct:exact_text "EFFECT OF TERMINATION: Any termination shall be without any liability or obligation of the terminating party, other than with respect to any breach of this Agreement prior to termination. The provisions relating to property rights and confidentiality shall survive any termination or expiration of this Agreement. All revenue sharing ceases with the termination of this Agreement." ;
+    ct:source_path "cuad/PacificapEntertainmentHoldingsInc_20051115_8-KA_EX-1.01_4300894_EX-1.01_Content License Agreement.txt" ;
+    ct:source_sha256 "167674d1478745bdbd7be6c3195f3e0eb3e7d741dfa6ad27c56ab4152f2a9a62" ;
+    ct:start_char 10064 .
+
+ex:H11R01 a ct:Rule ;
+    rdfs:label "Twelve months, one further twelve-month renewal, and termination on notice" ;
+    ct:description """7) Term   The term of this Agreement is twelve (12) months from the date hereof, and will be automatically renewed for one (1) additional twelve month period unless either party shall notify the other in writing of its intention not to renew. Such notice must be given ninety (90) days prior to expiration of the original term. This Agreement may also be terminated by either party upon ninety (90) days written notice.
+
+ 3""" ;
+    ct:duration "P1Y"^^xsd:duration ;
+    ct:kind "INITIAL_TERM" ;
+    ct:starts_from ex:H11R01F0 ;
+    ct:subject_to ex:H11R01C ;
+    ct:supported_by ex:H11R01P .
+
+ex:H11R01C a ct:Condition ;
+    rdfs:label "Written non-renewal notice 90 days before original expiry; either party may also terminate on 90 days written notice." ;
+    ct:description "Written non-renewal notice 90 days before original expiry; either party may also terminate on 90 days written notice." ;
+    ct:supported_by ex:H11R01P .
+
+ex:H11R01F0 a ct:Reference ;
+    rdfs:label "date hereof" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:H12R01C a ct:Condition ;
+    rdfs:label "Earlier termination possible; non-renewal notice at least 180 days before beginning of renewal term." ;
+    ct:description "Earlier termination possible; non-renewal notice at least 180 days before beginning of renewal term." ;
+    ct:supported_by ex:H12R01P .
+
+ex:H12R01F0 a ct:Reference ;
+    rdfs:label "Effective Date" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:H12R02 a ct:Rule ;
+    rdfs:label "Mutual breach/insolvency and party-specific acquisition, competition and performance grounds" ;
+    ct:description """15.2 Termination.   (a) Mutual Termination Rights. Either party may, in addition to any other remedies available to it under this Agreement or at law or in equity, terminate this Agreement (or, in the event this Agreement has been previously terminated, the Wind Down Period, if any) immediately upon the issuance of written notice to the other party in the event that (i) the other party materially breaches a material provision of this Agreement, and fails to cure such breach within thirty (30) days, or (ii) the other party undergoes an Insolvency Event.   (b) Termination By ENERGOUS.   (i) If ENERGOUS is acquired by a third party, ENERGOUS' acquirer will have the right, for a period of [***] following closing of such acquisition, to terminate this Agreement upon written notice to DIALOG.   (ii)  ENERGOUS will have the right to terminate this Agreement immediately upon the issuance of written notice to DIALOG (A) if DIALOG undergoes a Change of Control involving a competitor of ENERGOUS (as reasonably determined by ENERGOUS), or (B) if DIALOG or any of its Affiliates acquires, whether directly or indirectly through a sale of assets or a Change of Control transaction or otherwise, any competitor of ENERGOUS. DIALOG will provide ENERGOUS with notice of any such Change of Control or acquisition within [***] after the closing thereof and ENERGOUS' right to terminate the Agreement will expire [***] after receipt of such notice.   (iii) ENERGOUS may, at any time after the third anniversary of the Effective Date, terminate this Agreement with or without cause upon not less than one hundred and eighty (180) days prior written notice to DIALOG.   (iv) ENERGOUS will have the right to terminate this Agreement, upon not less than [***] prior written notice to DIALOG, in the event that, following termination by the [***] of its agreement with ENERGOUS, DIALOG participates in or indicates its intention to participate in the development, design or manufacture of products incorporating Uncoupled Power Transfer Technology not provided by ENERGOUS to [***].   (c) Termination by DIALOG.   (i) If DIALOG is acquired by a third party, DIALOG's acquirer will have the right, for a period of [***] following closing of such acquisition, to terminate this Agreement upon written notice to ENERGOUS.   * Confidential Treatment Requested
+
+  Page 19
+
+
+
+
+
+
+
+  (ii) DIALOG may terminate this Agreement, immediately upon issuance of written notice to ENERGOUS in the event that: (A) DIALOG or its Affiliates fail to achieve a design-win pipeline with an annual projected sales value to DIALOG of at least [***] in the [***] after the availability of a Mass Production Qualified Product; or (B) the aggregate annual Net Sales of Products are below [***] by the [***] of the availability of a Mass Production Qualified Product, or below [***] by the [***] of the availability of a Mass Production Qualified Product, or below [***] by each [***] of the availability of a Mass Production Qualified Product during the remainder of the Term.   (iii)  DIALOG will have the right to terminate this Agreement immediately upon the issuance of written notice to ENERGOUS (A) if ENERGOUS undergoes a Change of Control involving a competitor of DIALOG, or (B) if ENERGOUS acquires, whether directly through a sale of assets or through a Change of Control transaction, any competitor of DIALOG (as reasonably determined by DIALOG). ENERGOUS will provide DIALOG with notice of any such Change of Control or acquisition within [***] after the closing thereof and DIALOG's right to terminate the Agreement will expire [***] after receipt of such notice.""" ;
+    ct:kind "TERMINATION" ;
+    ct:qualifies ex:H12R01 ;
+    ct:subject_to ex:H12R02C ;
+    ct:supported_by ex:H12R02P .
+
+ex:H12R02C a ct:Condition ;
+    rdfs:label "Some acquisition and performance values are redacted. Keep the complete source provision, including ENERGOUS convenience right after third anniversary on 180 days notice." ;
+    ct:description "Some acquisition and performance values are redacted. Keep the complete source provision, including ENERGOUS convenience right after third anniversary on 180 days notice." ;
+    ct:supported_by ex:H12R02P .
+
+ex:H12R03 a ct:Rule ;
+    rdfs:label "Survival, wind-down period and continuing supply obligations" ;
+    ct:description """15.3 Effect of Termination. Upon any termination or expiration of this Agreement, all rights, licenses (including any sublicenses granted by DIALOG) and obligations hereunder will cease, except that the provisions of Sections 6 (Intellectual Property Ownership), 9 (Royalties and Service Fees), 10 (Confidentiality), 11 (Representations and Warranties; Disclaimers), 12 (Indemnification), 13 (Limitation of Liability), 15.3 (Effect of Termination), 15.4 (Wind Down Period), 16 (Escrow), 18 (Non-Solicitation), 19 (Choice of Law and Dispute Resolution) and any provisions to give effect thereto, will survive such termination or expiration and remain in full force and effect in accordance with their terms.   15.4 Wind Down Period.   (a) Notwithstanding any statement in Section 15.3 to the contrary, upon any termination or expiration of this Agreement and until the later to occur of (i) [***] from the Effective Date or (ii) [***] following the effective date of termination or expiration of this Agreement (the "Wind Down Period"), the parties' respective rights and obligations under Sections 2 (License), 3 (Sourcing), 7 (Product Sales), 9 (Royalties and Service Fees), 11 (Representations and Warranties; Disclaimers), 12 (Indemnification), 13 (Limitation of Liability), 14 (Compliance with Laws), 15.2 (Termination), 16 (Escrow) and all Exhibits hereto which are associated with any of the foregoing listed sections will remain in full force and effect as to (A) any Products or repackaged Product Die with respect to which DIALOG or any of its Affiliates has secured a design win at a customer prior to or within one (1) month after the start of the Wind Down Period, or (B) the sale of any MCMs which have been released for production at a foundry, provided, however, that DIALOG's license rights under Section 2.1 (including any sublicenses granted by DIALOG pursuant to Section 2.4) will be non-exclusive during the Wind Down Period.   (b) If, at the time of notice of any termination of this Agreement, DIALOG or any of its Affiliates has a written supply contract with a customer that extends beyond the end of the Wind Down Period (a "Continuing Obligation"), DIALOG and/or its Affiliates may continue to Sell Licensed Products to such customer through the term of the Wind Down Period and for the remainder of the term of such Continuing Obligation, provided that in no event may DIALOG or its Affiliates Sell Licensed Products to such customer pursuant to this Section 15.4(b) for a period longer than [***] after the effective date of termination of this Agreement. In such event, the provisions of this Agreement that survive during the Wind Down Period will continue to survive for the remainder of the period of time that DIALOG is authorized to Sell Licensed Products to any customer in accordance with the foregoing sentence. The rights granted under this Section 15.4(b) will be conditioned upon DIALOG providing ENERGOUS a complete or redacted copy of the applicable supply contract demonstrating the existence of the Continuing Obligation as of the date of notice of termination or, if DIALOG or its Affiliate is prohibited from providing a copy of the contract by the confidentiality obligations set forth therein, a written certification from an officer of DIALOG attesting to the existence of the Continuing Obligation.   * Confidential Treatment Requested
+
+  Page 20""" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:qualifies ex:H12R01 ;
+    ct:subject_to ex:H12R03C ;
+    ct:supported_by ex:H12R03P .
+
+ex:H12R03C a ct:Condition ;
+    rdfs:label "Redacted wind-down/end caps and customer-contract conditions prevent treating initial expiry as the end of all rights." ;
+    ct:description "Redacted wind-down/end caps and customer-contract conditions prevent treating initial expiry as the end of all rights." ;
+    ct:supported_by ex:H12R03P .
+
+ex:H12R04 a ct:Rule ;
+    rdfs:label "DIALOG infringement-remedy termination" ;
+    ct:description "If none of the foregoing alternatives is available within a commercially reasonable time period, DIALOG may terminate this Agreement with immediate effect, provided that it will give ENERGOUS prompt prior written notice thereof. Nothing in this Section 11.3 is intended to limit DIALOG's rights to indemnification under Section 12 in connection with any such infringement claim." ;
+    ct:kind "TERMINATION" ;
+    ct:qualifies ex:H12R01 ;
+    ct:references_section ex:H12R04F0 ;
+    ct:subject_to ex:H12R04C ;
+    ct:supported_by ex:H12R04P .
+
+ex:H12R04C a ct:Condition ;
+    rdfs:label "If preceding remedy alternatives unavailable within commercially reasonable time; prompt prior written notice." ;
+    ct:description "If preceding remedy alternatives unavailable within commercially reasonable time; prompt prior written notice." ;
+    ct:supported_by ex:H12R04P .
+
+ex:H12R04F0 a ct:Reference ;
+    rdfs:label "Section 11.3 preceding remedy alternatives" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:H13R01 a ct:Rule ;
+    rdfs:label "Written-notice termination while employee lives; automatic end on employment termination" ;
+    ct:description """ARTICLE VI "Termination of Agreement"
+
+This Agreement may be terminated at any time while the Employee is living by written notice thereof by either the Employer or the Employee to the other; and, in any event, this Agreement will terminate upon termination of the Employee's employment.""" ;
+    ct:ends_on_event ex:H13R01F0 ;
+    ct:kind "INITIAL_TERM" ;
+    ct:supported_by ex:H13R01P .
+
+ex:H13R01F0 a ct:Reference ;
+    rdfs:label "termination of Employee employment" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:H13R01P a ct:SourcePassage ;
+    ct:end_char 6235 ;
+    ct:exact_text """ARTICLE VI "Termination of Agreement"
+
+This Agreement may be terminated at any time while the Employee is living by written notice thereof by either the Employer or the Employee to the other; and, in any event, this Agreement will terminate upon termination of the Employee's employment.""" ;
+    ct:source_path "cuad/PrudentialBancorpInc_20170606_8-K_EX-10.4_10474434_EX-10.4_Endorsement Agreement.txt" ;
+    ct:source_sha256 "fbd91f8673f9f240dbc62ccfe0665bec3490abb191df5cff64061b4c00ac71f3" ;
+    ct:start_char 5948 .
+
+ex:H14R01 a ct:Rule ;
+    rdfs:label "Agent termination grounds before Closing Time, including unconsummated offering by June 30, 2007" ;
+    ct:applies_within ex:H14R01F1 ;
+    ct:description """SECTION 9. TERMINATION OF AGREEMENT.
+
+(a) The Agent may terminate this Agreement, by notice to the Company, at any time at or prior to Closing Time (i) if there has been, since the date of this Agreement or since the respective dates as of which information is given in the Registration Statement, any material adverse change in the financial condition, results of operations, business affairs or prospects of the Company, the MHCs or the Bank, considered as one enterprise, whether or not arising in the ordinary course of business, (ii) if there has occurred any material adverse change in the financial markets in the United States or elsewhere or any outbreak of hostilities or escalation thereof or other calamity or crisis the effect of which, in the judgment of the Agent, is so material and adverse as to make it impracticable to market the Securities or to enforce contracts, including subscriptions or orders, for the sale of the Securities, (iii) if trading generally on the Nasdaq Global Market, the American Stock Exchange or the New York Stock Exchange has been suspended, or minimum or maximum prices for trading have been fixed, or maximum ranges for prices for securities have been required, by either of said Exchanges or by order of the Commission or any other governmental authority, or if a banking moratorium has been declared by either Federal, Pennsylvania or New York authorities, (iv) if any condition specified in Section 5 shall not have been fulfilled when and as required to be fulfilled; (v) if there shall have been such material adverse changes in the condition or prospects of the Company, the MHCs or the Bank or the prospective market for the Company's Securities as in the Agent's
+
+38
+
+
+
+
+
+good faith opinion would make it inadvisable to proceed with the offering, sale or delivery of the Securities; (vi) if, in the Agent's good faith opinion, the price for the Securities established by the Appraiser is not reasonable or equitable under then prevailing market conditions, or (vii) if the Offerings are not consummated on or prior to June 30, 2007.
+
+(b) If this Agreement is terminated pursuant to this Section, such termination shall be without liability of any party to any other party except as provided in Sections 2 and 4 hereof relating to the reimbursement of expenses and except that the provisions of Sections 6 and 7 hereof shall survive any termination of this Agreement.""" ;
+    ct:kind "CONDITIONAL_REFERENCED_TERM" ;
+    ct:references_section ex:H14R01F0 ;
+    ct:subject_to ex:H14R01C ;
+    ct:supported_by ex:H14R01P .
+
+ex:H14R01C a ct:Condition ;
+    rdfs:label "June 30, 2007 is one conditional termination ground, not an unconditional fixed end date. Expense and indemnity survival qualifications remain." ;
+    ct:description "June 30, 2007 is one conditional termination ground, not an unconditional fixed end date. Expense and indemnity survival qualifications remain." ;
+    ct:supported_by ex:H14R01P .
+
+ex:H14R01F0 a ct:Reference ;
+    rdfs:label "Section 5 conditions" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:H14R01F1 a ct:Reference ;
+    rdfs:label "Agent termination at or before Closing Time" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:H15R01F0 a ct:Reference ;
+    rdfs:label "Effective Date" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:H15R01F1 a ct:Reference ;
+    rdfs:label "end of Delivery Period" ;
+    ct:resolution_status "PASSAGE_LINKED" ;
+    ct:resolved_to ex:H15R01FP1 .
+
+ex:H15R01FP1 a ct:SourcePassage ;
+    ct:end_char 3601 ;
+    ct:exact_text "1.11 \"Delivery Period\" means the following:   (i)   July 1, 2008 - December 30th, 2009" ;
+    ct:source_path "cuad/RemarkHoldingsInc_20081114_10-Q_EX-10.24_2895649_EX-10.24_Content License Agreement.txt" ;
+    ct:source_sha256 "633730271ed5a6b43ae1f54c01d6760b01d3442f4802679c8dcfa08078e7d937" ;
+    ct:start_char 3515 .
+
+ex:H15R01P a ct:SourcePassage ;
+    ct:end_char 30116 ;
+    ct:exact_text "6.1 Term.   (i) Term of Agreement. This Agreement shall commence on the Effective Date and, except as set forth in Subsection (ii), continue in full force and effect through the Delivery Period.   (ii) Term of Licenses. Notwithstanding Subsection (i), certain license grants for Content, Images and Affinities extend beyond the expiration or earlier termination of this Agreement as set forth herein. With respect to such Content, Images and Affinities, the terms and conditions of this Agreement shall continue to apply." ;
+    ct:source_path "cuad/RemarkHoldingsInc_20081114_10-Q_EX-10.24_2895649_EX-10.24_Content License Agreement.txt" ;
+    ct:source_sha256 "633730271ed5a6b43ae1f54c01d6760b01d3442f4802679c8dcfa08078e7d937" ;
+    ct:start_char 29595 .
+
+ex:H15R02 a ct:Rule ;
+    rdfs:label "Material breach, bankruptcy and termination effects" ;
+    ct:description """6.2 Termination for Cause or Bankruptcy. This Agreement may be terminated by a party in the event of:   (i) any material default in, or material breach of, any of the material terms and conditions of this Agreement by the other party, which default continues in effect after the defaulting party has been provided with written notice of default and sixty (60) days to cure such default;   (ii) the commencement of a voluntary case or other voluntary proceeding seeking liquidation, reorganization or other relief with respect to the other party of its debts under any bankruptcy, insolvency, or other similar law now or hereafter in effect, that authorizes the reorganization or liquidation of such other party or its debt or the appointment of a trustee, receiver, liquidator, custodian or other similar official of it or any substantial part of its property;   (iii) the other party's consent to any such relief or to the appointment of or taking possession by any such official in an involuntary case or other proceeding commenced against it; or   (iv) the other party's making a general assignment for the benefit of creditors; or the other party's being adjudicated insolvent; or the other party taking any corporate action to authorize any of the foregoing.   6.3 Effect of Termination. Upon the expiration or termination of this Agreement, HSWI shall pay World Book all amounts due and owing up to the date of termination, within [*] ([*]) days after such expiration or termination. In addition, upon the expiration or termination of the applicable license, HSWI shall cease to Display the applicable Content that is not licensed under a perpetual license, return or destroy such Content within [*] ([*]) days after such expiration or termination at the direction of World Book, and, upon request by World Book, certify completion of the return or destruction in writing. There shall be no effect upon the applicable Content that is licensed under a perpetual license.   [*] Confidential treatment requested; certain information omitted and filed separately with the SEC.
+
+Source: REMARK HOLDINGS, INC., 10-Q, 11/14/2008
+
+
+
+
+
+Source: REMARK HOLDINGS, INC., 10-Q, 11/14/2008""" ;
+    ct:kind "TERMINATION" ;
+    ct:qualifies ex:H15R01 ;
+    ct:subject_to ex:H15R02C ;
+    ct:supported_by ex:H15R02P .
+
+ex:H15R02C a ct:Condition ;
+    rdfs:label "Material breach includes 60-day written cure period. Perpetual content licenses are unaffected as described in Section 6.3." ;
+    ct:description "Material breach includes 60-day written cure period. Perpetual content licenses are unaffected as described in Section 6.3." ;
+    ct:supported_by ex:H15R02P .
+
+ex:H15R03 a ct:Rule ;
+    rdfs:label "Translated-content license has redacted duration and renewal or purchase options" ;
+    ct:applies_within ex:H15R03F0 ;
+    ct:description "(ii) Scope of License. The term of the license for Translated Content shall be for a term of [*] ([*]) years from the time such Translated Content is first Displayed on an HSWI Website. In addition, such license for Translated Content shall be Exclusive for Display on the Open Free Web. At the end of such [*] ([*]) year period, HSWI shall have the right to renew the Agreement under materially the same terms or shall have an option to purchase the Translated Content outright to the extent rights permit and to the extent the parties mutually agree to terms for such sale." ;
+    ct:duration_status "REDACTED" ;
+    ct:kind "OPTIONAL_RENEWAL" ;
+    ct:qualifies ex:H15R01 ;
+    ct:subject_to ex:H15R03C ;
+    ct:supported_by ex:H15R03P .
+
+ex:H15R03C a ct:Condition ;
+    rdfs:label "Scope is Translated Content; duration and rights differ from main agreement Delivery Period." ;
+    ct:description "Scope is Translated Content; duration and rights differ from main agreement Delivery Period." ;
+    ct:supported_by ex:H15R03P .
+
+ex:H15R03F0 a ct:Reference ;
+    rdfs:label "Translated Content license only" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:H16R01F0 a ct:Reference ;
+    rdfs:label "Effective Date" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:H16R01P a ct:SourcePassage ;
+    ct:end_char 15583 ;
+    ct:exact_text "VI. TERM/TERMINATION   A. The Term will be 3 years from Effective Date with an automatic 2 year term extensions unless otherwise advised by one of the Parties." ;
+    ct:source_path "cuad/HEMISPHERX - Sales, Marketing, Distribution, and Supply Agreement.txt" ;
+    ct:source_sha256 "871238d0e146f01c49d2cccba73c8b8cbaee1d6e5181cdae8d241d0c897200d2" ;
+    ct:start_char 15424 .
+
+ex:H16R02 a ct:Rule ;
+    rdfs:label "Purchase failures, insolvency, cure and three-month wind-down rights" ;
+    ct:description """B. Termination for breach will include:   1. Failure to purchase Product and distribute to End Users as called for in II D.   2. Failure of SCIEN achieving less than 50% achievement of the minimum Purchases as in III B.7. for two (2) consecutive years,   3. Insolvency, or the filing for protection under either Party's bankruptcy laws. Upon the filing of a petition in bankruptcy, insolvency or reorganization against or by either Party, or either Party becoming subject to a composition for creditors , whether by law or agreement, or either party going into receivership or otherwise becoming insolvent (such party hereinafter referred to as the "insolvent party"), this Agreement may be terminated by the other Party by giving written notice of termination to the insolvent Party, such termination immediately effective upon the giving of such notice of termination.
+
+{***} Confidential portions of this exhibit have been redacted and filed separately with the Commission pursuant to a confidential treatment request in accordance with Rule 24b-2 of the Securities Exchange Act of 1934, as amended.   Page 5 of 28
+
+
+
+
+
+
+
+  C. Upon the occurrence of a breach or default as to any obligation hereunder by either Party and the failure of the breaching Party to cure (within thirty (30) days after receiving written notice thereof from the non-breaching Party) such breach or default, this Agreement may be terminated by the non- breaching Party by giving written notice of termination to the breaching Party, such termination being immediately effective upon the giving of such notice of termination.   D. In the event this Agreement is terminated by either Party for any reason whatsoever, HEMISPHERX agrees to reasonable efforts to make Product available to SCIEN for a period of three (3) months after the termination date at the same Transfer Price and under the same terms of payment.   E. In the event of termination of this Agreement, SCIEN will have the right to complete all contracts for the sale or disposition of Product) under which SCIEN is obligated on the date of termination, provided SCIEN pays the associated Transfer Price and provided all such sales or dispositions are completed within three (3) months after the date of termination. Thereafter, HEMISPHERX shall purchase from the SCIEN all remaining stock of Product that is of merchantable quality at the same price as was paid by SCIEN.""" ;
+    ct:kind "TERMINATION" ;
+    ct:qualifies ex:H16R01 ;
+    ct:subject_to ex:H16R02C ;
+    ct:supported_by ex:H16R02P .
+
+ex:H16R02C a ct:Condition ;
+    rdfs:label "Preserve purchase thresholds, 30-day breach cure, immediate notice and post-termination sales/supply conditions together." ;
+    ct:description "Preserve purchase thresholds, 30-day breach cure, immediate notice and post-termination sales/supply conditions together." ;
+    ct:supported_by ex:H16R02P .
+
+ex:H16R03 a ct:Rule ;
+    rdfs:label "Termination if price-increase agreement cannot be reached" ;
+    ct:description "C. Price Increase: Beginning on the second year anniversary of the signing of this Agreement (\"Effective Date\") and on each succeeding anniversary of the Effective Date during the term of this agreement and in consideration of a varies of economic factors such as for example, costs of labour, costs of material and costs the price paid by SCIEN for Product(s) shall be renegotiated. Any price increase will need to be justified by HEMISPHERX. Both parties shall, in good faith, attempt to agree upon a reasonable price increase. In the event agreement cannot be reached the Agreement shall terminate." ;
+    ct:kind "TERMINATION" ;
+    ct:qualifies ex:H16R01 ;
+    ct:subject_to ex:H16R03C ;
+    ct:supported_by ex:H16R03P .
+
+ex:H16R03C a ct:Condition ;
+    rdfs:label "Parties must first attempt in good faith to agree reasonable justified price increase." ;
+    ct:description "Parties must first attempt in good faith to agree reasonable justified price increase." ;
+    ct:supported_by ex:H16R03P .
+
+ex:H17R01F0 a ct:Reference ;
+    rdfs:label "date hereof" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:H17R01F1 a ct:Reference ;
+    rdfs:label "termination of Offering" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:H17R01P a ct:SourcePassage ;
+    ct:end_char 41893 ;
+    ct:exact_text """13. Termination and Payment of Expenses. This Agreement shall become effective on the date hereof and shall terminate upon the termination of the Offering. If for any reason any Shares are not delivered by or on behalf of the Company as provided herein, the Company will reimburse the Agent for all actual and accountable out-of-pocket expenses, including fees and disbursements of counsel, reasonably incurred by the Agent in making preparations for the purchase, sale and delivery of the Shares not so delivered, but the Company shall then be under no further liability to the Agent except as provided in Section 8 and Section 10 hereof.
+
+10""" ;
+    ct:source_path "cuad/BANUESTRAFINANCIALCORP_09_08_2006-EX-10.16-AGENCY AGREEMENT.txt" ;
+    ct:source_sha256 "8a409e55f61a647c258e02748912d68112b3a13fce72f17a060135157c73cd9c" ;
+    ct:start_char 41250 .
+
+ex:H17R02 a ct:Rule ;
+    rdfs:label "Minimum-share sale deadline and refund condition" ;
+    ct:description "In the event the Company is unable to sell a minimum of 1,875,000 Shares on or before June 30, 2007, this Agreement shall terminate and the Company shall cause the Escrow Agent (as defined below) to refund to any persons who have subscribed for any of the Shares the full amount it received from them, without interest, as set forth in the Prospectus; and none of the parties to this Agreement shall have any obligation to the other parties hereunder, except as set forth in this Section 2 and in Sections 8, 10, and 11." ;
+    ct:kind "TERMINATION" ;
+    ct:qualifies ex:H17R01 ;
+    ct:subject_to ex:H17R02C ;
+    ct:supported_by ex:H17R02P .
+
+ex:H17R02C a ct:Condition ;
+    rdfs:label "Termination if unable to sell minimum 1,875,000 shares on or before June 30, 2007; specified surviving sections remain." ;
+    ct:description "Termination if unable to sell minimum 1,875,000 shares on or before June 30, 2007; specified surviving sections remain." ;
+    ct:supported_by ex:H17R02P .
+
+ex:H17R03 a ct:Rule ;
+    rdfs:label "Agent appointment ends at completion, expiry or termination of Offering" ;
+    ct:applies_within ex:H17R03F0 ;
+    ct:description "Except as otherwise provided in this Agreement, the appointment of the Agent will terminate upon completion, expiration or termination of the Offering." ;
+    ct:kind "CONDITIONAL_REFERENCED_TERM" ;
+    ct:qualifies ex:H17R01 ;
+    ct:supported_by ex:H17R03P .
+
+ex:H17R03F0 a ct:Reference ;
+    rdfs:label "Agent appointment" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:H17R03P a ct:SourcePassage ;
+    ct:end_char 5303 ;
+    ct:exact_text "Except as otherwise provided in this Agreement, the appointment of the Agent will terminate upon completion, expiration or termination of the Offering." ;
+    ct:source_path "cuad/BANUESTRAFINANCIALCORP_09_08_2006-EX-10.16-AGENCY AGREEMENT.txt" ;
+    ct:source_sha256 "8a409e55f61a647c258e02748912d68112b3a13fce72f17a060135157c73cd9c" ;
+    ct:start_char 5152 .
+
+ex:H18R01C a ct:Condition ;
+    rdfs:label "Each service has its own commencement/ending date; Exhibits A/B and earlier termination may override the twelve-month default." ;
+    ct:description "Each service has its own commencement/ending date; Exhibits A/B and earlier termination may override the twelve-month default." ;
+    ct:supported_by ex:H18R01P .
+
+ex:H18R01F0 a ct:Reference ;
+    rdfs:label "service-specific Commencement Date" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:H18R01F1 a ct:Reference ;
+    rdfs:label "each service separately" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:H18R02 a ct:Rule ;
+    rdfs:label "Agreement ends when all services end, or on qualifying breach/insolvency" ;
+    ct:description """Section 6.3 Termination of Agreement. This Agreement shall terminate when the Termination Date has occurred for all Services. In addition, this Agreement may be terminated by either Party (the "Terminating Party") upon written notice to the other Party (which notice, in case of material breach, shall specify the basis for such claim for breach), if:
+
+(a) the other Party or its Affiliates materially breaches this Agreement and such breach is not cured, to the reasonable satisfaction of the Terminating Party, within thirty (30) days of written notice thereof, it being understood that a good-faith dispute over an invoice or Service shall not constitute a material breach of this Agreement; or
+
+(b) the other Party files for bankruptcy or similar proceeding, is the subject of an involuntary filing for bankruptcy or similar proceeding (not dismissed within sixty (60) days), makes a general assignment of all or substantially all of its assets for the benefit of creditors, becomes or is declared insolvent, becomes the subject of any proceedings (not dismissed within sixty (60) days) related to its liquidation, insolvency, bankruptcy or the appointment of a trustee or a receiver, takes any corporate action for its winding up or dissolution, or a court approves reorganization proceedings on such Party.""" ;
+    ct:kind "TERMINATION" ;
+    ct:qualifies ex:H18R01 ;
+    ct:subject_to ex:H18R02C ;
+    ct:supported_by ex:H18R02P .
+
+ex:H18R02C a ct:Condition ;
+    rdfs:label "Good-faith invoice/service disputes are excluded from material breach; cure and insolvency conditions preserved." ;
+    ct:description "Good-faith invoice/service disputes are excluded from material breach; cure and insolvency conditions preserved." ;
+    ct:supported_by ex:H18R02P .
+
+ex:H18R03 a ct:Rule ;
+    rdfs:label "Convenience termination of services with migration-plan and cost qualifications" ;
+    ct:description """Section 6.2 Termination of Services. Except as agreed by the Parties in writing or as otherwise stated in the Exhibits, Company may terminate for convenience any Transition Service, and RGHI may terminate for convenience any Reverse Transition Service, upon 30 days' prior written notice of such termination; provided, (a) that, with respect to the Services described in Section G1 of Exhibit A, unless otherwise indicated therein, those Services may not be terminated independently except in accordance with an agreed Migration Plan and, (b) any unamortized costs associated with Provider's purchase of any license or other costs incurred specifically for the purpose of providing the Services hereunder will be passed through to the Terminating Party. Upon termination of any Service pursuant to this Section 6.2, the Terminating Party's obligation
+
+Source: REYNOLDS CONSUMER PRODUCTS INC., S-1/A, 1/21/2020
+
+
+
+
+
+to pay for such Service will cease except any sums accrued or due as of the date of such early termination for Services rendered (which shall include (i) any amounts contemplated by 6.2(b), plus (ii) a pro rata portion of any fees applicable to the current period in which such Services are being performed if the applicable fee is determined on a period by period basis as set forth on Exhibit A or Exhibit B, as applicable). The provisions of this Section 6.2 shall apply mutatis mutandis with respect to any assignment of this Agreement subject to Section 10.10(b) and the Parties will negotiate in good faith regarding fee allocations and, if necessary, early termination or partial termination of any Services.""" ;
+    ct:kind "TERMINATION" ;
+    ct:qualifies ex:H18R01 ;
+    ct:subject_to ex:H18R03C ;
+    ct:supported_by ex:H18R03P .
+
+ex:H18R03C a ct:Condition ;
+    rdfs:label "30 days prior written notice subject to exhibits and Section G1 migration plan; not an unconditional agreement-wide termination right." ;
+    ct:description "30 days prior written notice subject to exhibits and Section G1 migration plan; not an unconditional agreement-wide termination right." ;
+    ct:supported_by ex:H18R03P .
+
+ex:H18R04 a ct:Rule ;
+    rdfs:label "Exhibit G1 service-group term is twenty-four months with migration plan" ;
+    ct:applies_within ex:H18R04F0 ;
+    ct:description "All services in group 24 months from the Commencement Date Termination can only be as per an agreed Migration Plan" ;
+    ct:duration "P2Y"^^xsd:duration ;
+    ct:kind "CONDITIONAL_REFERENCED_TERM" ;
+    ct:qualifies ex:H18R01 ;
+    ct:supported_by ex:H18R04P .
+
+ex:H18R04F0 a ct:Reference ;
+    rdfs:label "Exhibit A G1.1 service group" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:H18R04P a ct:SourcePassage ;
+    ct:end_char 71392 ;
+    ct:exact_text "All services in group 24 months from the Commencement Date Termination can only be as per an agreed Migration Plan" ;
+    ct:source_path "cuad/ReynoldsConsumerProductsInc_20200121_S-1A_EX-10.22_11948918_EX-10.22_Service Agreement.txt" ;
+    ct:source_sha256 "0ddc8b40e5ad7b4f6b1a9d2a921cc7ab2e5d4076a4dcd2575b10b59fc2e6f6d2" ;
+    ct:start_char 71278 .
+
+ex:H19R01F0 a ct:Reference ;
+    rdfs:label "January 1, 2019" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:H19R01P a ct:SourcePassage ;
+    ct:end_char 10345 ;
+    ct:exact_text """AGREEMENT PERIOD
+
+Effective Date: January 1, 2019
+
+Termination Date: December 31, 2023""" ;
+    ct:source_path "cuad/WestPharmaceuticalServicesInc_20200116_8-K_EX-10.1_11947529_EX-10.1_Supply Agreement.txt" ;
+    ct:source_sha256 "7c991c9f55f81fd83a885f40cf89eb81f276897ee3ff068f0b7d689b6f88d495" ;
+    ct:start_char 10259 .
+
+ex:H19R02 a ct:Rule ;
+    rdfs:label "Main agreement requires written material-breach notice and thirty-day cure" ;
+    ct:description """TERMINATION
+
+Notwithstanding anything to the contrary in Attachments A, G or H, neither party can suspend its further performance, terminate this Agreement or require specific performance of the other party of this Agreement in whole or in part as a result of the other party's material breach of the terms and conditions of this Agreement without first providing notice to such party in writing and thirty (30) days' opportunity to cure the material breach (and then only if such party fails to cure such breach).""" ;
+    ct:kind "TERMINATION" ;
+    ct:qualifies ex:H19R01 ;
+    ct:subject_to ex:H19R02C ;
+    ct:supported_by ex:H19R02P .
+
+ex:H19R02C a ct:Condition ;
+    rdfs:label "Expressly applies notwithstanding Attachments A, G or H; do not use conflicting attachment wording without this qualification." ;
+    ct:description "Expressly applies notwithstanding Attachments A, G or H; do not use conflicting attachment wording without this qualification." ;
+    ct:supported_by ex:H19R02P .
+
+ex:H19R03 a ct:Rule ;
+    rdfs:label "Main-agreement change-in-circumstances termination limited by law-compliance requirement" ;
+    ct:description """CHANGE IN CIRCUMSTANCES
+
+Notwithstanding anything to the contrary in Attachments A, G or H, in connection with any Change in Circumstances (as defined below), and without limiting Seller's/ExxonMobil Selling Affiliate's other rights under this Agreement or applicable law, Seller/ExxonMobil Selling Affiliates shall have the right: (i) only if required to enable Seller/ExxonMobil Selling Affiliate to comply with applicable laws and regulations, to terminate this Agreement and accelerate all amounts due from Buyer hereunder, making them immediately payable (ii) to modify the payment terms hereunder; and/or (iii) to require that Buyer/Buyer Affiliates pay in advance for shipments hereunder.""" ;
+    ct:kind "TERMINATION" ;
+    ct:qualifies ex:H19R01 ;
+    ct:references_section ex:H19R03F0 ;
+    ct:subject_to ex:H19R03C ;
+    ct:supported_by ex:H19R03P .
+
+ex:H19R03C a ct:Condition ;
+    rdfs:label "Expressly notwithstanding Attachments A/G/H; other notice and defined-event requirements remain." ;
+    ct:description "Expressly notwithstanding Attachments A/G/H; other notice and defined-event requirements remain." ;
+    ct:supported_by ex:H19R03P .
+
+ex:H19R03F0 a ct:Reference ;
+    rdfs:label "Change in Circumstances definition and notice requirements" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:H20R01C a ct:Condition ;
+    rdfs:label "Additional two-year period requires written consent of both parties; accrued obligations survive." ;
+    ct:description "Additional two-year period requires written consent of both parties; accrued obligations survive." ;
+    ct:supported_by ex:H20R01P .
+
+ex:H20R02 a ct:Rule ;
+    rdfs:label "Material breach, company-specific grounds and mutual consent" ;
+    ct:description """6.02.  Termination. This Agreement may be terminated only:
+
+(a)  By either party for substantial breach of any material provision of this Agreement by the other, provided due notice has been given to the other of the alleged breach and such other party has not cured the breach within (30) days] thereof; or
+
+(b)  By the Company if: there is an unacceptable change in the control or management of the Distributor; if the Distributor  makes an assignment for the benefit of creditors; if a petition in bankruptcy is filed by or against the Distributor, resulting in an adjudication of bankruptcy; or, if the Distributor fails to pay its debts as they become due and provided due notice has been given by the Company to the Distributor and the Distributor has not cured such breach within thirty (30) days thereof; or   (c)  By the written consent of both parties;
+
+                (d)  Upon termination of this Agreement all further rights and obligations of the parties shall cease, except that Distributor shall not be relieved of (i) its obligation to pay any monies due, or to become due, as of or after the date of termination, and (ii) any other obligation set forth in this Agreement which is to take effect after the date of termination.""" ;
+    ct:kind "TERMINATION" ;
+    ct:qualifies ex:H20R01 ;
+    ct:subject_to ex:H20R02C ;
+    ct:supported_by ex:H20R02P .
+
+ex:H20R02C a ct:Condition ;
+    rdfs:label "Preserve thirty-day cure and listed change-of-control, bankruptcy and other grounds; surviving obligations remain." ;
+    ct:description "Preserve thirty-day cure and listed change-of-control, bankruptcy and other grounds; surviving obligations remain." ;
+    ct:supported_by ex:H20R02P .
+
+ex:H01R01P a ct:SourcePassage ;
+    ct:end_char 7840 ;
+    ct:exact_text "7.1  Unless  otherwise  stated  in  the  Appendix  the  term of this letter           Agreement  shall  continue  for  twenty-four  (24)  months  with  the           effective  date  unless  terminated sooner or extended pursuant to the           terms hereof (\"Initial Term\"). The Initial Term shall automatically be           extended  for  an additional period of half a year unless either party           provides  the  other party with written notification of termination of           the  letter  Agreement  at  least 60 days prior to end of such period." ;
+    ct:source_path "cuad/DataCallTechnologies_20060918_SB-2A_EX-10.9_944510_EX-10.9_Content License Agreement.txt" ;
+    ct:source_sha256 "20f0f1630d8ae7ba221fbbf9d0449a593605989dfa3c779cafdb9c233bb6ebe7" ;
+    ct:start_char 7280 .
+
+ex:H01R02P a ct:SourcePassage ;
+    ct:end_char 8540 ;
+    ct:exact_text """7.2  Either  Party  shall  be  entitled  to  cancel  this  Agreement if the           other Party is materially in breach of the terms of this Agreement. If           the  breach  of  contract is capable of being remedied, this Agreement           can  be  cancelled  only  provided  that  the  Party in breach has not           rectified  its breach within thirty (30) days of the written notice by           the  other  Party.
+
+     7.3  Either  Party  may  cancel  this  Agreement  already prior to the date           of  its  fulfillment,  if it becomes evident that the other Party will           commit  a  breach  of  contract  entitling  to  cancellation  of  this           Agreement.""" ;
+    ct:source_path "cuad/DataCallTechnologies_20060918_SB-2A_EX-10.9_944510_EX-10.9_Content License Agreement.txt" ;
+    ct:source_sha256 "20f0f1630d8ae7ba221fbbf9d0449a593605989dfa3c779cafdb9c233bb6ebe7" ;
+    ct:start_char 7847 .
+
+ex:H01R04P a ct:SourcePassage ;
+    ct:end_char 13841 ;
+    ct:exact_text """2.1  Contract  start:  04-01-06
+
+     2.2  Contract  end:  04-01-08
+
+     2.3  Commercial  distribution  possible  from:
+
+     2.4  Sell-off  period:  3  months  after  termination""" ;
+    ct:source_path "cuad/DataCallTechnologies_20060918_SB-2A_EX-10.9_944510_EX-10.9_Content License Agreement.txt" ;
+    ct:source_sha256 "20f0f1630d8ae7ba221fbbf9d0449a593605989dfa3c779cafdb9c233bb6ebe7" ;
+    ct:start_char 13661 .
+
+ex:H02R01P a ct:SourcePassage ;
+    ct:end_char 13581 ;
+    ct:exact_text """13. Renewal
+
+This Agreement shall be effective as of the date set forth above in this Agreement. The term of this Agreement shall be five (5) years. This Agreement shall be renewed automatically for another five (5) years upon the expiration unless the Parties confirm, in writing, the termination of this Agreement.""" ;
+    ct:source_path "cuad/RISEEDUCATIONCAYMANLTD_04_17_2020-EX-4.23-SERVICE AGREEMENT.txt" ;
+    ct:source_sha256 "4d9af82e13bc95c4459e66c7d19439753237bc89e6e4bf10819aedcc4018534f" ;
+    ct:start_char 13265 .
+
+ex:H03R01P a ct:SourcePassage ;
+    ct:end_char 29844 ;
+    ct:exact_text "(f) For purposes of this Agreement, \"Standstill Period\" shall mean the period commencing on the date of this Agreement and ending at 11:59 p.m. Eastern Time on the date of the certification of the vote of stockholders at the 2018 Annual Meeting." ;
+    ct:source_path "cuad/MEETGROUP,INC_06_29_2017-EX-10.1-COOPERATION AGREEMENT.txt" ;
+    ct:source_sha256 "7aa6582007f2f953ed7f0fdc4418025054183c37386162db7ae073249cbadaec" ;
+    ct:start_char 29599 .
+
+ex:H03R02P a ct:SourcePassage ;
+    ct:end_char 29596 ;
+    ct:exact_text """(e) Notwithstanding anything contained in this Agreement to the contrary:   (i) The provisions of Sections 1, 2, and 3 of this Agreement shall automatically terminate upon the occurrence of a Change of Control transaction (as defined below) involving the Company if the acquiring or counter-party to the Change of Control transaction has conditioned the closing of the transaction on the termination of such sections; provided, however, that the Company shall not directly or indirectly, propose, seek, encourage or otherwise influence such acquiring or counter-party to the Change of Control transaction to condition the closing of such transaction on the termination of Sections 1, 2, and 3 of this Agreement; and     8
+
+
+
+
+
+    (ii) For purposes of this Agreement, a "Change of Control" transaction shall be deemed to have taken place if (1) any person is or becomes a beneficial owner, directly or indirectly, of securities of the Company representing more than 50% of the equity interests and voting power of the Company's then outstanding equity securities or (2) the Company enters into a stock-for-stock transaction whereby immediately after the consummation of the transaction the Company's stockholders retain less than 50% of the equity interests and voting power of the surviving entity's then outstanding equity securities.""" ;
+    ct:source_path "cuad/MEETGROUP,INC_06_29_2017-EX-10.1-COOPERATION AGREEMENT.txt" ;
+    ct:source_sha256 "7aa6582007f2f953ed7f0fdc4418025054183c37386162db7ae073249cbadaec" ;
+    ct:start_char 28260 .
+
+ex:H03R03P a ct:SourcePassage ;
+    ct:end_char 37039 ;
+    ct:exact_text "7. Mutual Non-Disparagement.   (a) Each Investor agrees that, until the earlier of (i) the expiration of the Standstill Period or (ii) any material breach of this Agreement by the Company (provided that the Company shall have three (3) business days following written notice from such Investor of any material breach to remedy such material breach if capable of remedy), neither it nor any of its Affiliates or Associates will, and it will cause each of its Affiliates and Associates not to, directly or indirectly, publicly make, express, transmit, speak, write, verbalize or otherwise publicly communicate in any way (or cause, further, assist, solicit, encourage, support or participate in any of the foregoing), any remark, comment, message, information, declaration, communication or other statement of any kind, whether verbal or in writing, that might reasonably be construed to be derogatory or critical of, or negative toward, the Company or any of its directors, officers, Affiliates, Associates, subsidiaries, employees, agents or representatives (collectively, the \"Company Representatives\"), or that reveals, discloses, incorporates, is based upon, discusses, includes or otherwise involves any confidential or proprietary information of the Company or its subsidiaries or Affiliates or Associates, or to malign, harm, disparage, defame or damage the reputation or good name of the Company, its business or any of the Company Representatives.   (b) The Company hereby agrees that, until the earlier of (i) the expiration of the Standstill Period or (ii) any material breach of this Agreement by an Investor (provided that such Investor shall have three (3) business days following written notice from the Company of any material breach to remedy such material breach if capable of remedy), neither it nor any of its Affiliates will, and it will cause each of its Affiliates not to, directly or indirectly, publicly make, express, transmit, speak, write, verbalize or otherwise publicly communicate in any way (or cause, further, assist, solicit, encourage, support or participate in any of the foregoing), any remark, comment, message, information, declaration, communication or other statement of any kind, whether verbal or in writing, that might reasonably be construed to be derogatory or critical of, or negative toward, the Investors or their Affiliates or Associates or any of their agents or representatives (collectively, the \"Investor Agents\"), or that reveals, discloses, incorporates, is based upon, discusses, includes or otherwise involves any confidential or proprietary information of any Investor or its Affiliates or Associates, or to malign, harm, disparage, defame or damage the reputation or good name of any Investor, its business or any of the Investor Agents.   (c) Notwithstanding the foregoing, nothing in this Section 7 or elsewhere in this Agreement shall prohibit any party from making any statement or disclosure required under the federal securities laws or other applicable laws.   (d) The limitations set forth in Section 7(a) and 7(b) shall not prevent any party from responding to any public statement made by the other party of the nature described in Section 7(a) and 7(b) if such statement by the other party was made in breach of this Agreement.     10" ;
+    ct:source_path "cuad/MEETGROUP,INC_06_29_2017-EX-10.1-COOPERATION AGREEMENT.txt" ;
+    ct:source_sha256 "7aa6582007f2f953ed7f0fdc4418025054183c37386162db7ae073249cbadaec" ;
+    ct:start_char 33735 .
+
+ex:H04R01P a ct:SourcePassage ;
+    ct:end_char 7747 ;
+    ct:exact_text "This Limited Power of Attorney shall be revoked and terminated automatically upon the cancellation or termination of the Services Agreement or as to any Fund upon the cancellation or termination of the Adviser's Investment Advisory Contract for such Fund. Except as provided in the immediately preceding sentence, the powers and authorities herein granted may be revoked or terminated by the Adviser at any time provided that no such revocation or termination shall be effective until FASC has received actual notice of such revocation or termination in writing from the Adviser." ;
+    ct:source_path "cuad/FEDERATEDGOVERNMENTINCOMESECURITIESINC_04_28_2020-EX-99.SERV AGREE-SERVICES AGREEMENT_POWEROF.txt" ;
+    ct:source_sha256 "df60e354f88a3b0120135e0886e3c6ff141309d8a0c253c0ac4c5a5b9ed50ce6" ;
+    ct:start_char 7168 .
+
+ex:H05R02P a ct:SourcePassage ;
+    ct:end_char 29686 ;
+    ct:exact_text """6.2  Notwithstanding Section 6.1, if the Initial Well is drilled to the Objective Zone and successfully Completed as a well capable of producing oil and/or gas in paying quantities, this Agreement shall continue for so long as the Operating Agreement remains in full force and effect.
+
+6.3   Notwithstanding Section 6.1, this Agreement shall remain in full force and effect for so long as Company participates in the drilling of a Substitute Well in accordance with Section 3.2.
+
+6.4  Notwithstanding anything in this Agreement to the contrary, if Company earns a Partial Interest in the Initial Well and the BP Interests pursuant to Section 4.2, the Parties shall first enter into an operating agreement in the form of the Operating Agreement, except that the contract area of such operating agreement shall be limited to the Partial Interest, prior to termination of this Agreement.
+
+6.5  Notwithstanding anything in this Agreement to the contrary, the expiration or termination of this Agreement shall not release any of the Parties from any obligation or liability which accrued prior to such expiration or termination (including the costs to plug and abandon the Initial Well and any Substitute Wells and Additional Wells) or which, by the terms hereof, is intended to survive such expiration or termination, including but not limited to Articles I, X, XI, XII, XIII, XIV, XV, and XVI and Sections 5.1 and 5.6, which terms shall survive indefinitely.""" ;
+    ct:source_path "cuad/TRUENORTHENERGYCORP_02_08_2007-EX-10.1-DEVELOPMENT AGREEMENT.txt" ;
+    ct:source_sha256 "37104b954c35b7e787eebe9da39567d4025449a11167072c06e81ab4286eb0c3" ;
+    ct:start_char 28231 .
+
+ex:H06R02P a ct:SourcePassage ;
+    ct:end_char 19076 ;
+    ct:exact_text """11.1 Without prejudice to the Company's right to summarily terminate your employment in accordance with paragraph 11.3 below and your right to summarily terminate your employment for Good Reason in accordance with paragraph 11.4 below, either you or the Company may terminate your employment by giving to the other not less than six months' notice in writing.
+
+11.2 The Company reserves the right in its sole and absolute discretion to give written notice to
+
+6
+
+
+
+
+
+terminate your employment forthwith and to make a payment to you in lieu of salary and the benefits set out in paragraph 5 of this Agreement for all or any unexpired part of the notice period. For the avoidance of doubt, any payment in lieu made pursuant to this paragraph 11.2 will not include any element in relation to any payment in respect of (i) any Annual Performance Bonus or (ii) any holiday entitlement that would have otherwise accrued during the period for which the payment in lieu is made. For the further avoidance of doubt, if the Company elects to make a Payment in Lieu after notice of termination has been given by you, this will not constitute a termination by the Company without Cause for the purposes of paragraphs 11.7 and 11.8 below.""" ;
+    ct:source_path "cuad/BICYCLETHERAPEUTICSPLC_03_10_2020-EX-10.11-SERVICE AGREEMENT.txt" ;
+    ct:source_sha256 "f8438559b293e8223834f2d6d9d3fd9d7e74c2356132851878b970d840db8d29" ;
+    ct:start_char 17851 .
+
+ex:H06R03P a ct:SourcePassage ;
+    ct:end_char 22291 ;
+    ct:exact_text """11.3 The Company may summarily terminate your employment hereunder (without notice) for Cause. For purposes of this Agreement, "Cause" shall mean where you:
+
+(a) commit gross misconduct which includes, but is not limited to, dishonesty, fraud, theft, being under the influence of alcohol or drugs at work, causing actual or threatening physical harm and causing damage to Company property;
+
+(b) commit a material breach or non-observance of your duties or any of the provisions of this Agreement, or materially fail to observe the lawful directions of the Company, or breach any material Company policy or code of conduct, including but not limited to the Company's policy from time to time on matters relating to harassment;
+
+(c) are convicted of a criminal offence (other than an offence under the road traffic legislation in the United Kingdom or elsewhere for which a non-custodial sentence is imposed);
+
+(d) act in a manner which in the reasonable opinion of the Company, brings the Company into disrepute or otherwise prejudices or is in the reasonable opinion of the Company considered likely to prejudice the reputation of the Company;
+
+(e) in the reasonable opinion of the Company, are guilty of any serious negligence in connection with or affecting the business or affairs of the Company;
+
+(f) are unfit to carry out the duties hereunder because of sickness, injury or otherwise for an aggregate period of 26 weeks in any fifty-two (52) week period even if, as a result of such termination, you would or might forfeit any entitlement to benefit from sick pay under paragraph 9.3 above.
+
+Any delay or forbearance by the Company in exercising any right of termination in accordance with this paragraph 11.3 will not constitute a waiver of such right.
+
+11.4 You may summarily terminate your employment hereunder at any time (without notice) for Good Reason after complying with the Good Reason Process. For purposes of this Agreement, "Good Reason" shall mean that you have complied with the "Good Reason Process" (hereinafter defined) following the occurrence of any of the following events: (i) a material diminution in your responsibilities, authority or duties; (ii) a material diminution in your Salary; (iii) a material change in the geographic location at which you provides services to the Company; or (iv) the material breach of this Agreement by the Company. "Good Reason Process" shall mean that (i) you reasonably determine in good faith that a "Good Reason" condition has occurred; (ii) you notify the Company in writing of the first occurrence of the Good
+
+7
+
+
+
+
+
+Reason condition within 60 days of the first occurrence of such condition; (iii) you cooperate in good faith with the Company's efforts, for a period not less than 30 days following such notice (the "Cure Period"), to remedy the condition; (iv) notwithstanding such efforts, the Good Reason condition continues to exist; and (v) you terminate your employment (without notice) within 60 days after the end of the Cure Period. If the Company cures the Good Reason condition during the Cure Period, Good Reason shall be deemed not to have occurred.
+
+11.5 Your employment hereunder shall also terminate immediately upon your death.""" ;
+    ct:source_path "cuad/BICYCLETHERAPEUTICSPLC_03_10_2020-EX-10.11-SERVICE AGREEMENT.txt" ;
+    ct:source_sha256 "f8438559b293e8223834f2d6d9d3fd9d7e74c2356132851878b970d840db8d29" ;
+    ct:start_char 19078 .
+
+ex:H07R01 a ct:Rule ;
+    rdfs:label "Promotion distribution and redemption windows" ;
+    ct:applies_within ex:H07R01F0 ;
+    ct:description "Designated Sponsor Products with Pin Codes may be distributed from approximately October 1, 2009 to approximately  December 31, 2009 (the \"Promotion Period\"). Eligible Pin Codes may be entered on the www.charitytunes.com website and  corresponding music downloaded from October 1, 2009 to March 31, 2010. Pin Codes entered for redemption after 11:59:59  pm PT on March 31, 2010 may be rejected as ineligible. The contents of this section are to be reflected in the Sponsor's rules  for the Promotion." ;
+    ct:kind "INITIAL_TERM" ;
+    ct:subject_to ex:H07R01C ;
+    ct:supported_by ex:H07R01P .
+
+ex:H07R01P a ct:SourcePassage ;
+    ct:end_char 6639 ;
+    ct:exact_text "Designated Sponsor Products with Pin Codes may be distributed from approximately October 1, 2009 to approximately  December 31, 2009 (the \"Promotion Period\"). Eligible Pin Codes may be entered on the www.charitytunes.com website and  corresponding music downloaded from October 1, 2009 to March 31, 2010. Pin Codes entered for redemption after 11:59:59  pm PT on March 31, 2010 may be rejected as ineligible. The contents of this section are to be reflected in the Sponsor's rules  for the Promotion." ;
+    ct:source_path "cuad/ON4COMMUNICATIONSINC_07_02_2009-EX-10.1-PROMOTION AGREEMENT.txt" ;
+    ct:source_sha256 "50407bd2ecffca3bec8f81d066233d44f93eae4054b371ccdadae6a7cc8d2cd0" ;
+    ct:start_char 6139 .
+
+ex:H07R02P a ct:SourcePassage ;
+    ct:end_char 9249 ;
+    ct:exact_text "In consideration of the fees paid by Sponsor as set out herein, Charity Tunes agrees that during the period beginning October  1, 2009 and ending March 31, 2010, Charity Tunes shall not enable another program sponsorship for all competitive  products/product categories distributed/sold within the total Canadian consumer/retail/wholesale market place, inclusive of:     - Total Frozen Handhelds     - Total Corporation General Mills Handhelds     - Total Pizza Pops Handhelds / total Pillsbury Mini Pizzas     - Total Corporation McCain Foods Handhelds     - Total Pizza Pockets / total McCain Mini Pizzas     - Total Corporation Heinz Handhelds     - Total Heinz Hot bites (Bagel Bites and Taco Bites) / total Anchor Poppers     - Total Corporation Schneider Foods Handhelds     - Total Hot Stuffs / total Lean Stuffs     - Total Resers Burritos     - Total Corp les Plats du Chef Handhelds     - Total Hinsdale Farms Corndogs" ;
+    ct:source_path "cuad/ON4COMMUNICATIONSINC_07_02_2009-EX-10.1-PROMOTION AGREEMENT.txt" ;
+    ct:source_sha256 "50407bd2ecffca3bec8f81d066233d44f93eae4054b371ccdadae6a7cc8d2cd0" ;
+    ct:start_char 8321 .
+
+ex:H08R01P a ct:SourcePassage ;
+    ct:end_char 16593 ;
+    ct:exact_text """8. DURATION
+
+This JV Agreement shall become effective on the signing date and shall have a duration of * years, extendable for a further * years, unless notice of non- renewal is sent one year before the natural expiry date.
+
+This JV shall automatically cease to be effective on the date when the JV is wound-up or is the target of any kind of insolvency procedure.
+
+Termination of this JV Agreement shall not relieve the Parties of their obligations due at the time of such termination, nor shall such termination prejudice any claim of either Party accrued, or to accrue, on account of any default or breach by the other Party.""" ;
+    ct:source_path "cuad/KIROMICBIOPHARMA,INC_04_08_2020-EX-10.28-JOINT VENTURE AGREEMENT.txt" ;
+    ct:source_sha256 "5d49e97e8deb2ed6d588cdc8604572b6d70ffbe137f42be03a0548c1441e8d6b" ;
+    ct:start_char 15964 .
+
+ex:H08R02P a ct:SourcePassage ;
+    ct:end_char 18277 ;
+    ct:exact_text """9. WITHDRAWAL AND RESOLUTION
+
+The Parties may withdraw from this JV only for serious and justified reasons or by mutual consent. The withdrawal must be exercised by written notice, to be sent to the other Party by certified letter or PEC, with minimum notice of 30 days.
+
+Withdrawal or termination by mutual consent shall only have effect for the future and shall not affect the part of the Agreement already executed.
+
+In case of withdrawal according to the previous paragraph, Kiromic is obliged to cover Molipharma for the expenses incurred and for those committed, related to the research programs being developed, until receipt of the notice of withdrawal. -8-
+
+
+
+
+
+Pursuant to art. 1456 of the Italian Civil Code, this JV shall be terminated by right in the following cases: a. Breach of confidentiality obligations; b. Unilateral and unagreed variation of the Scope of the JV; c. Failure of each Party to comply with its obligations, including the economic commitments.
+
+The Party concerned must communicate by registered letter with return receipt, or PEC, its intention to avail itself of the termination clause.
+
+In the event of termination of the Agreement pursuant to this clause or, in any case, to termination due to Kiromic's default, the same is required; in addition, Kiromic undertakes to the reimbursement of expenses incurred and/or committed by Molipharma, and agrees to recognize financially the additional damage suffered by Molipharma by such a default.
+
+Upon termination of the contract, the agreement set forth in clause 5 ("Intellectual property rights and prohibition of transfer to third parties") and clause 6 ("Economic rights") will remain into force.""" ;
+    ct:source_path "cuad/KIROMICBIOPHARMA,INC_04_08_2020-EX-10.28-JOINT VENTURE AGREEMENT.txt" ;
+    ct:source_sha256 "5d49e97e8deb2ed6d588cdc8604572b6d70ffbe137f42be03a0548c1441e8d6b" ;
+    ct:start_char 16594 .
+
+ex:H08R03P a ct:SourcePassage ;
+    ct:end_char 19514 ;
+    ct:exact_text """10. TERMINATION
+
+Each Parties shall have the right to terminate its obligations, if one of the following events occurs: the Company (i) applies for or consents to the appointment of a receiver, trustee, custodian or liquidator of itself or substantially all of its property, (ii) becomes subject to the appointment of a receiver, trustee, custodian or liquidator of itself or substantially all of its property, (iii) makes an assignment for the benefit of creditors, (iv) institutes any proceedings under or state bankruptcy, reorganization, receivership, insolvency or other similar law affecting the rights of creditors generally, or files a petition or answer seeking reorganization or an arrangement with creditors to take advantage of any insolvency law, or files an answer admitting the material allegations of a bankruptcy, reorganization or insolvency petition filed against it, or (v) becomes subject to any involuntary proceedings under the state bankruptcy, reorganization, receivership, insolvency or other similar law affecting the rights of creditors generally, when proceeding is not dismissed within thirty (30) days of filing, or have an order for relief entered against it in any proceedings under Bankruptcy Code. -9-""" ;
+    ct:source_path "cuad/KIROMICBIOPHARMA,INC_04_08_2020-EX-10.28-JOINT VENTURE AGREEMENT.txt" ;
+    ct:source_sha256 "5d49e97e8deb2ed6d588cdc8604572b6d70ffbe137f42be03a0548c1441e8d6b" ;
+    ct:start_char 18278 .
+
+ex:H09R01 a ct:Rule ;
+    rdfs:label "Commences on registration approval; continues until termination" ;
+    ct:description "5.Term of this Agreement   The term of this Agreement will commence on the date that the Affiliate Registration Form is approved by Chase and will end when terminated by either party. Either Affiliate or Chase may terminate this Agreement at any time, with or without cause, by giving the other party written or e-mail notice of termination. At the time of termination, any links to Chase's Website must be removed immediately. Affiliate will continue to receive Commission payments for all Approved Accounts placed during the term of this Agreement. Notwithstanding the foregoing, Chase may   terminate this Agreement if Affiliate does not comply with the terms and conditions herein." ;
+    ct:ends_on_event ex:H09R01F1 ;
+    ct:kind "INITIAL_TERM" ;
+    ct:starts_from ex:H09R01F0 ;
+    ct:supported_by ex:H09R01P .
+
+ex:H09R02P a ct:SourcePassage ;
+    ct:end_char 3112 ;
+    ct:exact_text "Chase also reserves the right to terminate this Agreement in the event that any Restricted Content is incorporated on Affiliate's site after acceptance of your registration form and the commencement of the term of this Agreement. Chase may also terminate this Agreement if your site is deemed unsuitable based on the criteria below:" ;
+    ct:source_path "cuad/CreditcardscomInc_20070810_S-1_EX-10.33_362297_EX-10.33_Affiliate Agreement.txt" ;
+    ct:source_sha256 "29b719c456250aea65501b771c0dc859094c9a5d5b074a6af4fe4254bd5c4384" ;
+    ct:start_char 2780 .
+
+ex:H10R01P a ct:SourcePassage ;
+    ct:end_char 9621 ;
+    ct:exact_text "INITIAL TERM AND RENEWALS: This Agreement will become effective as of the last date of signature (Effective Date) and shall, unless sooner terminated as provided below or as otherwise agreed, remain effective for an initial term of 10 Years following the first date of public availability of the PACIFICAP ENTERTAINMENT Content within a THE HENRY FILM AND ENTERTAINMENT CORPORATION Property (the \"Initial Term\"). After the Initial Term, this Agreement will be automatically renewed for successive additional 3~year periods (\"Extension Terms\"), unless otherwise terminated by either party by giving notice to the other party not less than sixty (60) days prior to the end of a Term. As used herein, the \"Term\" means the Initial Term and any Extension Term(s)." ;
+    ct:source_path "cuad/PacificapEntertainmentHoldingsInc_20051115_8-KA_EX-1.01_4300894_EX-1.01_Content License Agreement.txt" ;
+    ct:source_sha256 "167674d1478745bdbd7be6c3195f3e0eb3e7d741dfa6ad27c56ab4152f2a9a62" ;
+    ct:start_char 8863 .
+
+ex:H10R02P a ct:SourcePassage ;
+    ct:end_char 10062 ;
+    ct:exact_text "TERMINATION FOR CAUSE: Notwithstanding the foregoing, this Agreement may be terminated by either party immediately upon notice if the other party: (w) becomes insolvent; (x) files a petition in bankruptcy; (y) makes an assignment for the benefit of its creditors; or (z) breach any of its obligations under this Agreement in any material respect, which breach is not remedied within thirty (30) days following written notice to such party." ;
+    ct:source_path "cuad/PacificapEntertainmentHoldingsInc_20051115_8-KA_EX-1.01_4300894_EX-1.01_Content License Agreement.txt" ;
+    ct:source_sha256 "167674d1478745bdbd7be6c3195f3e0eb3e7d741dfa6ad27c56ab4152f2a9a62" ;
+    ct:start_char 9623 .
+
+ex:H11R01P a ct:SourcePassage ;
+    ct:end_char 6206 ;
+    ct:exact_text """7) Term   The term of this Agreement is twelve (12) months from the date hereof, and will be automatically renewed for one (1) additional twelve month period unless either party shall notify the other in writing of its intention not to renew. Such notice must be given ninety (90) days prior to expiration of the original term. This Agreement may also be terminated by either party upon ninety (90) days written notice.
+
+ 3""" ;
+    ct:source_path "cuad/SIBANNAC,INC_12_04_2017-EX-2.1-Strategic Alliance Agreement.txt" ;
+    ct:source_sha256 "c0b6b7a59795c666d653f5bc73bddba2d852fc59c63b93b97d648a8c593c921f" ;
+    ct:start_char 5783 .
+
+ex:H12R01P a ct:SourcePassage ;
+    ct:end_char 59122 ;
+    ct:exact_text "15.1 Term. This Agreement is effective on the Effective Date. Unless earlier terminated as provided herein, this Agreement continues in effect for an initial term of seven (7) years (\"Initial Term\") and will automatically renew for one or more annual periods after the Initial Term (each a \"Renewal Term\") unless either party gives notice of non-renewal at least one hundred eighty (180) days prior to the beginning of any Renewal Term." ;
+    ct:source_path "cuad/ENERGOUSCORP_03_16_2017-EX-10.24-STRATEGIC ALLIANCE AGREEMENT.txt" ;
+    ct:source_sha256 "d2dcc7fa33b3143ae561025ba2e907e4c3d36a7ee3782f8b3d35744c7642a0f9" ;
+    ct:start_char 58686 .
+
+ex:H12R02P a ct:SourcePassage ;
+    ct:end_char 62766 ;
+    ct:exact_text """15.2 Termination.   (a) Mutual Termination Rights. Either party may, in addition to any other remedies available to it under this Agreement or at law or in equity, terminate this Agreement (or, in the event this Agreement has been previously terminated, the Wind Down Period, if any) immediately upon the issuance of written notice to the other party in the event that (i) the other party materially breaches a material provision of this Agreement, and fails to cure such breach within thirty (30) days, or (ii) the other party undergoes an Insolvency Event.   (b) Termination By ENERGOUS.   (i) If ENERGOUS is acquired by a third party, ENERGOUS' acquirer will have the right, for a period of [***] following closing of such acquisition, to terminate this Agreement upon written notice to DIALOG.   (ii)  ENERGOUS will have the right to terminate this Agreement immediately upon the issuance of written notice to DIALOG (A) if DIALOG undergoes a Change of Control involving a competitor of ENERGOUS (as reasonably determined by ENERGOUS), or (B) if DIALOG or any of its Affiliates acquires, whether directly or indirectly through a sale of assets or a Change of Control transaction or otherwise, any competitor of ENERGOUS. DIALOG will provide ENERGOUS with notice of any such Change of Control or acquisition within [***] after the closing thereof and ENERGOUS' right to terminate the Agreement will expire [***] after receipt of such notice.   (iii) ENERGOUS may, at any time after the third anniversary of the Effective Date, terminate this Agreement with or without cause upon not less than one hundred and eighty (180) days prior written notice to DIALOG.   (iv) ENERGOUS will have the right to terminate this Agreement, upon not less than [***] prior written notice to DIALOG, in the event that, following termination by the [***] of its agreement with ENERGOUS, DIALOG participates in or indicates its intention to participate in the development, design or manufacture of products incorporating Uncoupled Power Transfer Technology not provided by ENERGOUS to [***].   (c) Termination by DIALOG.   (i) If DIALOG is acquired by a third party, DIALOG's acquirer will have the right, for a period of [***] following closing of such acquisition, to terminate this Agreement upon written notice to ENERGOUS.   * Confidential Treatment Requested
+
+  Page 19
+
+
+
+
+
+
+
+  (ii) DIALOG may terminate this Agreement, immediately upon issuance of written notice to ENERGOUS in the event that: (A) DIALOG or its Affiliates fail to achieve a design-win pipeline with an annual projected sales value to DIALOG of at least [***] in the [***] after the availability of a Mass Production Qualified Product; or (B) the aggregate annual Net Sales of Products are below [***] by the [***] of the availability of a Mass Production Qualified Product, or below [***] by the [***] of the availability of a Mass Production Qualified Product, or below [***] by each [***] of the availability of a Mass Production Qualified Product during the remainder of the Term.   (iii)  DIALOG will have the right to terminate this Agreement immediately upon the issuance of written notice to ENERGOUS (A) if ENERGOUS undergoes a Change of Control involving a competitor of DIALOG, or (B) if ENERGOUS acquires, whether directly through a sale of assets or through a Change of Control transaction, any competitor of DIALOG (as reasonably determined by DIALOG). ENERGOUS will provide DIALOG with notice of any such Change of Control or acquisition within [***] after the closing thereof and DIALOG's right to terminate the Agreement will expire [***] after receipt of such notice.""" ;
+    ct:source_path "cuad/ENERGOUSCORP_03_16_2017-EX-10.24-STRATEGIC ALLIANCE AGREEMENT.txt" ;
+    ct:source_sha256 "d2dcc7fa33b3143ae561025ba2e907e4c3d36a7ee3782f8b3d35744c7642a0f9" ;
+    ct:start_char 59125 .
+
+ex:H12R03P a ct:SourcePassage ;
+    ct:end_char 66165 ;
+    ct:exact_text """15.3 Effect of Termination. Upon any termination or expiration of this Agreement, all rights, licenses (including any sublicenses granted by DIALOG) and obligations hereunder will cease, except that the provisions of Sections 6 (Intellectual Property Ownership), 9 (Royalties and Service Fees), 10 (Confidentiality), 11 (Representations and Warranties; Disclaimers), 12 (Indemnification), 13 (Limitation of Liability), 15.3 (Effect of Termination), 15.4 (Wind Down Period), 16 (Escrow), 18 (Non-Solicitation), 19 (Choice of Law and Dispute Resolution) and any provisions to give effect thereto, will survive such termination or expiration and remain in full force and effect in accordance with their terms.   15.4 Wind Down Period.   (a) Notwithstanding any statement in Section 15.3 to the contrary, upon any termination or expiration of this Agreement and until the later to occur of (i) [***] from the Effective Date or (ii) [***] following the effective date of termination or expiration of this Agreement (the "Wind Down Period"), the parties' respective rights and obligations under Sections 2 (License), 3 (Sourcing), 7 (Product Sales), 9 (Royalties and Service Fees), 11 (Representations and Warranties; Disclaimers), 12 (Indemnification), 13 (Limitation of Liability), 14 (Compliance with Laws), 15.2 (Termination), 16 (Escrow) and all Exhibits hereto which are associated with any of the foregoing listed sections will remain in full force and effect as to (A) any Products or repackaged Product Die with respect to which DIALOG or any of its Affiliates has secured a design win at a customer prior to or within one (1) month after the start of the Wind Down Period, or (B) the sale of any MCMs which have been released for production at a foundry, provided, however, that DIALOG's license rights under Section 2.1 (including any sublicenses granted by DIALOG pursuant to Section 2.4) will be non-exclusive during the Wind Down Period.   (b) If, at the time of notice of any termination of this Agreement, DIALOG or any of its Affiliates has a written supply contract with a customer that extends beyond the end of the Wind Down Period (a "Continuing Obligation"), DIALOG and/or its Affiliates may continue to Sell Licensed Products to such customer through the term of the Wind Down Period and for the remainder of the term of such Continuing Obligation, provided that in no event may DIALOG or its Affiliates Sell Licensed Products to such customer pursuant to this Section 15.4(b) for a period longer than [***] after the effective date of termination of this Agreement. In such event, the provisions of this Agreement that survive during the Wind Down Period will continue to survive for the remainder of the period of time that DIALOG is authorized to Sell Licensed Products to any customer in accordance with the foregoing sentence. The rights granted under this Section 15.4(b) will be conditioned upon DIALOG providing ENERGOUS a complete or redacted copy of the applicable supply contract demonstrating the existence of the Continuing Obligation as of the date of notice of termination or, if DIALOG or its Affiliate is prohibited from providing a copy of the contract by the confidentiality obligations set forth therein, a written certification from an officer of DIALOG attesting to the existence of the Continuing Obligation.   * Confidential Treatment Requested
+
+  Page 20""" ;
+    ct:source_path "cuad/ENERGOUSCORP_03_16_2017-EX-10.24-STRATEGIC ALLIANCE AGREEMENT.txt" ;
+    ct:source_sha256 "d2dcc7fa33b3143ae561025ba2e907e4c3d36a7ee3782f8b3d35744c7642a0f9" ;
+    ct:start_char 62769 .
+
+ex:H12R04P a ct:SourcePassage ;
+    ct:end_char 50110 ;
+    ct:exact_text "If none of the foregoing alternatives is available within a commercially reasonable time period, DIALOG may terminate this Agreement with immediate effect, provided that it will give ENERGOUS prompt prior written notice thereof. Nothing in this Section 11.3 is intended to limit DIALOG's rights to indemnification under Section 12 in connection with any such infringement claim." ;
+    ct:source_path "cuad/ENERGOUSCORP_03_16_2017-EX-10.24-STRATEGIC ALLIANCE AGREEMENT.txt" ;
+    ct:source_sha256 "d2dcc7fa33b3143ae561025ba2e907e4c3d36a7ee3782f8b3d35744c7642a0f9" ;
+    ct:start_char 49732 .
+
+ex:H14R01P a ct:SourcePassage ;
+    ct:end_char 125967 ;
+    ct:exact_text """SECTION 9. TERMINATION OF AGREEMENT.
+
+(a) The Agent may terminate this Agreement, by notice to the Company, at any time at or prior to Closing Time (i) if there has been, since the date of this Agreement or since the respective dates as of which information is given in the Registration Statement, any material adverse change in the financial condition, results of operations, business affairs or prospects of the Company, the MHCs or the Bank, considered as one enterprise, whether or not arising in the ordinary course of business, (ii) if there has occurred any material adverse change in the financial markets in the United States or elsewhere or any outbreak of hostilities or escalation thereof or other calamity or crisis the effect of which, in the judgment of the Agent, is so material and adverse as to make it impracticable to market the Securities or to enforce contracts, including subscriptions or orders, for the sale of the Securities, (iii) if trading generally on the Nasdaq Global Market, the American Stock Exchange or the New York Stock Exchange has been suspended, or minimum or maximum prices for trading have been fixed, or maximum ranges for prices for securities have been required, by either of said Exchanges or by order of the Commission or any other governmental authority, or if a banking moratorium has been declared by either Federal, Pennsylvania or New York authorities, (iv) if any condition specified in Section 5 shall not have been fulfilled when and as required to be fulfilled; (v) if there shall have been such material adverse changes in the condition or prospects of the Company, the MHCs or the Bank or the prospective market for the Company's Securities as in the Agent's
+
+38
+
+
+
+
+
+good faith opinion would make it inadvisable to proceed with the offering, sale or delivery of the Securities; (vi) if, in the Agent's good faith opinion, the price for the Securities established by the Appraiser is not reasonable or equitable under then prevailing market conditions, or (vii) if the Offerings are not consummated on or prior to June 30, 2007.
+
+(b) If this Agreement is terminated pursuant to this Section, such termination shall be without liability of any party to any other party except as provided in Sections 2 and 4 hereof relating to the reimbursement of expenses and except that the provisions of Sections 6 and 7 hereof shall survive any termination of this Agreement.""" ;
+    ct:source_path "cuad/ALLIANCEBANCORPINCOFPENNSYLVANIA_10_18_2006-EX-1.2-AGENCY AGREEMENT.txt" ;
+    ct:source_sha256 "d22c5d084ff7502d7c26a83a243846a710547c26b117ec82d3a0ec60f2f896c7" ;
+    ct:start_char 123546 .
+
+ex:H15R02P a ct:SourcePassage ;
+    ct:end_char 32299 ;
+    ct:exact_text """6.2 Termination for Cause or Bankruptcy. This Agreement may be terminated by a party in the event of:   (i) any material default in, or material breach of, any of the material terms and conditions of this Agreement by the other party, which default continues in effect after the defaulting party has been provided with written notice of default and sixty (60) days to cure such default;   (ii) the commencement of a voluntary case or other voluntary proceeding seeking liquidation, reorganization or other relief with respect to the other party of its debts under any bankruptcy, insolvency, or other similar law now or hereafter in effect, that authorizes the reorganization or liquidation of such other party or its debt or the appointment of a trustee, receiver, liquidator, custodian or other similar official of it or any substantial part of its property;   (iii) the other party's consent to any such relief or to the appointment of or taking possession by any such official in an involuntary case or other proceeding commenced against it; or   (iv) the other party's making a general assignment for the benefit of creditors; or the other party's being adjudicated insolvent; or the other party taking any corporate action to authorize any of the foregoing.   6.3 Effect of Termination. Upon the expiration or termination of this Agreement, HSWI shall pay World Book all amounts due and owing up to the date of termination, within [*] ([*]) days after such expiration or termination. In addition, upon the expiration or termination of the applicable license, HSWI shall cease to Display the applicable Content that is not licensed under a perpetual license, return or destroy such Content within [*] ([*]) days after such expiration or termination at the direction of World Book, and, upon request by World Book, certify completion of the return or destruction in writing. There shall be no effect upon the applicable Content that is licensed under a perpetual license.   [*] Confidential treatment requested; certain information omitted and filed separately with the SEC.
+
+Source: REMARK HOLDINGS, INC., 10-Q, 11/14/2008
+
+
+
+
+
+Source: REMARK HOLDINGS, INC., 10-Q, 11/14/2008""" ;
+    ct:source_path "cuad/RemarkHoldingsInc_20081114_10-Q_EX-10.24_2895649_EX-10.24_Content License Agreement.txt" ;
+    ct:source_sha256 "633730271ed5a6b43ae1f54c01d6760b01d3442f4802679c8dcfa08078e7d937" ;
+    ct:start_char 30119 .
+
+ex:H15R03P a ct:SourcePassage ;
+    ct:end_char 19812 ;
+    ct:exact_text "(ii) Scope of License. The term of the license for Translated Content shall be for a term of [*] ([*]) years from the time such Translated Content is first Displayed on an HSWI Website. In addition, such license for Translated Content shall be Exclusive for Display on the Open Free Web. At the end of such [*] ([*]) year period, HSWI shall have the right to renew the Agreement under materially the same terms or shall have an option to purchase the Translated Content outright to the extent rights permit and to the extent the parties mutually agree to terms for such sale." ;
+    ct:source_path "cuad/RemarkHoldingsInc_20081114_10-Q_EX-10.24_2895649_EX-10.24_Content License Agreement.txt" ;
+    ct:source_sha256 "633730271ed5a6b43ae1f54c01d6760b01d3442f4802679c8dcfa08078e7d937" ;
+    ct:start_char 19237 .
+
+ex:H16R02P a ct:SourcePassage ;
+    ct:end_char 17998 ;
+    ct:exact_text """B. Termination for breach will include:   1. Failure to purchase Product and distribute to End Users as called for in II D.   2. Failure of SCIEN achieving less than 50% achievement of the minimum Purchases as in III B.7. for two (2) consecutive years,   3. Insolvency, or the filing for protection under either Party's bankruptcy laws. Upon the filing of a petition in bankruptcy, insolvency or reorganization against or by either Party, or either Party becoming subject to a composition for creditors , whether by law or agreement, or either party going into receivership or otherwise becoming insolvent (such party hereinafter referred to as the "insolvent party"), this Agreement may be terminated by the other Party by giving written notice of termination to the insolvent Party, such termination immediately effective upon the giving of such notice of termination.
+
+{***} Confidential portions of this exhibit have been redacted and filed separately with the Commission pursuant to a confidential treatment request in accordance with Rule 24b-2 of the Securities Exchange Act of 1934, as amended.   Page 5 of 28
+
+
+
+
+
+
+
+  C. Upon the occurrence of a breach or default as to any obligation hereunder by either Party and the failure of the breaching Party to cure (within thirty (30) days after receiving written notice thereof from the non-breaching Party) such breach or default, this Agreement may be terminated by the non- breaching Party by giving written notice of termination to the breaching Party, such termination being immediately effective upon the giving of such notice of termination.   D. In the event this Agreement is terminated by either Party for any reason whatsoever, HEMISPHERX agrees to reasonable efforts to make Product available to SCIEN for a period of three (3) months after the termination date at the same Transfer Price and under the same terms of payment.   E. In the event of termination of this Agreement, SCIEN will have the right to complete all contracts for the sale or disposition of Product) under which SCIEN is obligated on the date of termination, provided SCIEN pays the associated Transfer Price and provided all such sales or dispositions are completed within three (3) months after the date of termination. Thereafter, HEMISPHERX shall purchase from the SCIEN all remaining stock of Product that is of merchantable quality at the same price as was paid by SCIEN.""" ;
+    ct:source_path "cuad/HEMISPHERX - Sales, Marketing, Distribution, and Supply Agreement.txt" ;
+    ct:source_sha256 "871238d0e146f01c49d2cccba73c8b8cbaee1d6e5181cdae8d241d0c897200d2" ;
+    ct:start_char 15586 .
+
+ex:H16R03P a ct:SourcePassage ;
+    ct:end_char 15167 ;
+    ct:exact_text "C. Price Increase: Beginning on the second year anniversary of the signing of this Agreement (\"Effective Date\") and on each succeeding anniversary of the Effective Date during the term of this agreement and in consideration of a varies of economic factors such as for example, costs of labour, costs of material and costs the price paid by SCIEN for Product(s) shall be renegotiated. Any price increase will need to be justified by HEMISPHERX. Both parties shall, in good faith, attempt to agree upon a reasonable price increase. In the event agreement cannot be reached the Agreement shall terminate." ;
+    ct:source_path "cuad/HEMISPHERX - Sales, Marketing, Distribution, and Supply Agreement.txt" ;
+    ct:source_sha256 "871238d0e146f01c49d2cccba73c8b8cbaee1d6e5181cdae8d241d0c897200d2" ;
+    ct:start_char 14566 .
+
+ex:H17R02P a ct:SourcePassage ;
+    ct:end_char 5825 ;
+    ct:exact_text "In the event the Company is unable to sell a minimum of 1,875,000 Shares on or before June 30, 2007, this Agreement shall terminate and the Company shall cause the Escrow Agent (as defined below) to refund to any persons who have subscribed for any of the Shares the full amount it received from them, without interest, as set forth in the Prospectus; and none of the parties to this Agreement shall have any obligation to the other parties hereunder, except as set forth in this Section 2 and in Sections 8, 10, and 11." ;
+    ct:source_path "cuad/BANUESTRAFINANCIALCORP_09_08_2006-EX-10.16-AGENCY AGREEMENT.txt" ;
+    ct:source_sha256 "8a409e55f61a647c258e02748912d68112b3a13fce72f17a060135157c73cd9c" ;
+    ct:start_char 5305 .
+
+ex:H18R01P a ct:SourcePassage ;
+    ct:end_char 35163 ;
+    ct:exact_text "Section 6.1 Term of Services. With respect to each of the Services, the term thereof will be for a period commencing as of the date hereof, unless a different date is specified as the commencement date for any applicable Service on Exhibit A or Exhibit B (either, a \"Commencement Date\"), and shall continue until 12 months following the Commencement Date unless (i) such other date as is specified as the termination date for any applicable Service in this Agreement or on Exhibit A or Exhibit B, as applicable (the \"Term\") or (ii) earlier terminated pursuant to this Agreement (a \"Termination Date\")." ;
+    ct:source_path "cuad/ReynoldsConsumerProductsInc_20200121_S-1A_EX-10.22_11948918_EX-10.22_Service Agreement.txt" ;
+    ct:source_sha256 "0ddc8b40e5ad7b4f6b1a9d2a921cc7ab2e5d4076a4dcd2575b10b59fc2e6f6d2" ;
+    ct:start_char 34562 .
+
+ex:H18R02P a ct:SourcePassage ;
+    ct:end_char 38109 ;
+    ct:exact_text """Section 6.3 Termination of Agreement. This Agreement shall terminate when the Termination Date has occurred for all Services. In addition, this Agreement may be terminated by either Party (the "Terminating Party") upon written notice to the other Party (which notice, in case of material breach, shall specify the basis for such claim for breach), if:
+
+(a) the other Party or its Affiliates materially breaches this Agreement and such breach is not cured, to the reasonable satisfaction of the Terminating Party, within thirty (30) days of written notice thereof, it being understood that a good-faith dispute over an invoice or Service shall not constitute a material breach of this Agreement; or
+
+(b) the other Party files for bankruptcy or similar proceeding, is the subject of an involuntary filing for bankruptcy or similar proceeding (not dismissed within sixty (60) days), makes a general assignment of all or substantially all of its assets for the benefit of creditors, becomes or is declared insolvent, becomes the subject of any proceedings (not dismissed within sixty (60) days) related to its liquidation, insolvency, bankruptcy or the appointment of a trustee or a receiver, takes any corporate action for its winding up or dissolution, or a court approves reorganization proceedings on such Party.""" ;
+    ct:source_path "cuad/ReynoldsConsumerProductsInc_20200121_S-1A_EX-10.22_11948918_EX-10.22_Service Agreement.txt" ;
+    ct:source_sha256 "0ddc8b40e5ad7b4f6b1a9d2a921cc7ab2e5d4076a4dcd2575b10b59fc2e6f6d2" ;
+    ct:start_char 36797 .
+
+ex:H18R03P a ct:SourcePassage ;
+    ct:end_char 36795 ;
+    ct:exact_text """Section 6.2 Termination of Services. Except as agreed by the Parties in writing or as otherwise stated in the Exhibits, Company may terminate for convenience any Transition Service, and RGHI may terminate for convenience any Reverse Transition Service, upon 30 days' prior written notice of such termination; provided, (a) that, with respect to the Services described in Section G1 of Exhibit A, unless otherwise indicated therein, those Services may not be terminated independently except in accordance with an agreed Migration Plan and, (b) any unamortized costs associated with Provider's purchase of any license or other costs incurred specifically for the purpose of providing the Services hereunder will be passed through to the Terminating Party. Upon termination of any Service pursuant to this Section 6.2, the Terminating Party's obligation
+
+Source: REYNOLDS CONSUMER PRODUCTS INC., S-1/A, 1/21/2020
+
+
+
+
+
+to pay for such Service will cease except any sums accrued or due as of the date of such early termination for Services rendered (which shall include (i) any amounts contemplated by 6.2(b), plus (ii) a pro rata portion of any fees applicable to the current period in which such Services are being performed if the applicable fee is determined on a period by period basis as set forth on Exhibit A or Exhibit B, as applicable). The provisions of this Section 6.2 shall apply mutatis mutandis with respect to any assignment of this Agreement subject to Section 10.10(b) and the Parties will negotiate in good faith regarding fee allocations and, if necessary, early termination or partial termination of any Services.""" ;
+    ct:source_path "cuad/ReynoldsConsumerProductsInc_20200121_S-1A_EX-10.22_11948918_EX-10.22_Service Agreement.txt" ;
+    ct:source_sha256 "0ddc8b40e5ad7b4f6b1a9d2a921cc7ab2e5d4076a4dcd2575b10b59fc2e6f6d2" ;
+    ct:start_char 35165 .
+
+ex:H19R02P a ct:SourcePassage ;
+    ct:end_char 23666 ;
+    ct:exact_text """TERMINATION
+
+Notwithstanding anything to the contrary in Attachments A, G or H, neither party can suspend its further performance, terminate this Agreement or require specific performance of the other party of this Agreement in whole or in part as a result of the other party's material breach of the terms and conditions of this Agreement without first providing notice to such party in writing and thirty (30) days' opportunity to cure the material breach (and then only if such party fails to cure such breach).""" ;
+    ct:source_path "cuad/WestPharmaceuticalServicesInc_20200116_8-K_EX-10.1_11947529_EX-10.1_Supply Agreement.txt" ;
+    ct:source_sha256 "7c991c9f55f81fd83a885f40cf89eb81f276897ee3ff068f0b7d689b6f88d495" ;
+    ct:start_char 23152 .
+
+ex:H19R03P a ct:SourcePassage ;
+    ct:end_char 18996 ;
+    ct:exact_text """CHANGE IN CIRCUMSTANCES
+
+Notwithstanding anything to the contrary in Attachments A, G or H, in connection with any Change in Circumstances (as defined below), and without limiting Seller's/ExxonMobil Selling Affiliate's other rights under this Agreement or applicable law, Seller/ExxonMobil Selling Affiliates shall have the right: (i) only if required to enable Seller/ExxonMobil Selling Affiliate to comply with applicable laws and regulations, to terminate this Agreement and accelerate all amounts due from Buyer hereunder, making them immediately payable (ii) to modify the payment terms hereunder; and/or (iii) to require that Buyer/Buyer Affiliates pay in advance for shipments hereunder.""" ;
+    ct:source_path "cuad/WestPharmaceuticalServicesInc_20200116_8-K_EX-10.1_11947529_EX-10.1_Supply Agreement.txt" ;
+    ct:source_sha256 "7c991c9f55f81fd83a885f40cf89eb81f276897ee3ff068f0b7d689b6f88d495" ;
+    ct:start_char 18301 .
+
+ex:H20R01 a ct:Rule ;
+    rdfs:label "Ends May 31, 2015 unless earlier terminated; optional two-year extension" ;
+    ct:description "6.01.  Term. The term of this Agreement shall terminate on May 31, 2015, unless sooner terminated. Termination shall not relieve either party of obligations incurred prior thereto.  The term of this Agreement may be extended for an additional two year period with the written consent of both parties." ;
+    ct:kind "INITIAL_TERM" ;
+    ct:stated_end_date "2015-05-31"^^xsd:date ;
+    ct:subject_to ex:H20R01C ;
+    ct:supported_by ex:H20R01P .
+
+ex:H20R01P a ct:SourcePassage ;
+    ct:end_char 7944 ;
+    ct:exact_text "6.01.  Term. The term of this Agreement shall terminate on May 31, 2015, unless sooner terminated. Termination shall not relieve either party of obligations incurred prior thereto.  The term of this Agreement may be extended for an additional two year period with the written consent of both parties." ;
+    ct:source_path "cuad/BLACKBOXSTOCKSINC_08_05_2014-EX-10.1-DISTRIBUTOR AGREEMENT.txt" ;
+    ct:source_sha256 "0d2edecafe20a5de97f47ed19b08e2df988b3471e3da810944017ec8675adba5" ;
+    ct:start_char 7644 .
+
+ex:H20R02P a ct:SourcePassage ;
+    ct:end_char 9190 ;
+    ct:exact_text """6.02.  Termination. This Agreement may be terminated only:
+
+(a)  By either party for substantial breach of any material provision of this Agreement by the other, provided due notice has been given to the other of the alleged breach and such other party has not cured the breach within (30) days] thereof; or
+
+(b)  By the Company if: there is an unacceptable change in the control or management of the Distributor; if the Distributor  makes an assignment for the benefit of creditors; if a petition in bankruptcy is filed by or against the Distributor, resulting in an adjudication of bankruptcy; or, if the Distributor fails to pay its debts as they become due and provided due notice has been given by the Company to the Distributor and the Distributor has not cured such breach within thirty (30) days thereof; or   (c)  By the written consent of both parties;
+
+                (d)  Upon termination of this Agreement all further rights and obligations of the parties shall cease, except that Distributor shall not be relieved of (i) its obligation to pay any monies due, or to become due, as of or after the date of termination, and (ii) any other obligation set forth in this Agreement which is to take effect after the date of termination.""" ;
+    ct:source_path "cuad/BLACKBOXSTOCKSINC_08_05_2014-EX-10.1-DISTRIBUTOR AGREEMENT.txt" ;
+    ct:source_sha256 "0d2edecafe20a5de97f47ed19b08e2df988b3471e3da810944017ec8675adba5" ;
+    ct:start_char 7946 .
+
+ex:H02R01 a ct:Rule ;
+    rdfs:label "Five-year term with automatic further five years" ;
+    ct:description """13. Renewal
+
+This Agreement shall be effective as of the date set forth above in this Agreement. The term of this Agreement shall be five (5) years. This Agreement shall be renewed automatically for another five (5) years upon the expiration unless the Parties confirm, in writing, the termination of this Agreement.""" ;
+    ct:duration "P5Y"^^xsd:duration ;
+    ct:kind "INITIAL_TERM" ;
+    ct:starts_from ex:H02R01F0 ;
+    ct:subject_to ex:H02R01C ;
+    ct:supported_by ex:H02R01P .
+
+ex:H03R01 a ct:Rule ;
+    rdfs:label "Standstill period ends at certification of 2018 annual-meeting vote" ;
+    ct:applies_within ex:H03R01F0 ;
+    ct:description "(f) For purposes of this Agreement, \"Standstill Period\" shall mean the period commencing on the date of this Agreement and ending at 11:59 p.m. Eastern Time on the date of the certification of the vote of stockholders at the 2018 Annual Meeting." ;
+    ct:ends_on_event ex:H03R01F1 ;
+    ct:kind "INITIAL_TERM" ;
+    ct:subject_to ex:H03R01C ;
+    ct:supported_by ex:H03R01P .
+
+ex:H05R01 a ct:Rule ;
+    rdfs:label "One year from Rig Release Date, subject to earlier ending and Sections 6.2-6.5" ;
+    ct:description "6.1  Except as provided in Sections 6.2, 6.3, 6.4, and 6.5, this Agreement shall terminate one (1) year from the Rig Release Date, if such has not been terminated sooner pursuant to the provisions hereof." ;
+    ct:duration "P1Y"^^xsd:duration ;
+    ct:kind "INITIAL_TERM" ;
+    ct:references_section ex:H05R01F1 ;
+    ct:starts_from ex:H05R01F0 ;
+    ct:supported_by ex:H05R01P .
+
+ex:H08R01 a ct:Rule ;
+    rdfs:label "Signing-date term and extension durations are redacted" ;
+    ct:description """8. DURATION
+
+This JV Agreement shall become effective on the signing date and shall have a duration of * years, extendable for a further * years, unless notice of non- renewal is sent one year before the natural expiry date.
+
+This JV shall automatically cease to be effective on the date when the JV is wound-up or is the target of any kind of insolvency procedure.
+
+Termination of this JV Agreement shall not relieve the Parties of their obligations due at the time of such termination, nor shall such termination prejudice any claim of either Party accrued, or to accrue, on account of any default or breach by the other Party.""" ;
+    ct:duration_status "REDACTED" ;
+    ct:kind "INITIAL_TERM" ;
+    ct:starts_from ex:H08R01F0 ;
+    ct:subject_to ex:H08R01C ;
+    ct:supported_by ex:H08R01P .
+
+ex:H10R01 a ct:Rule ;
+    rdfs:label "Ten years from first public content availability; automatic three-year renewals" ;
+    ct:description "INITIAL TERM AND RENEWALS: This Agreement will become effective as of the last date of signature (Effective Date) and shall, unless sooner terminated as provided below or as otherwise agreed, remain effective for an initial term of 10 Years following the first date of public availability of the PACIFICAP ENTERTAINMENT Content within a THE HENRY FILM AND ENTERTAINMENT CORPORATION Property (the \"Initial Term\"). After the Initial Term, this Agreement will be automatically renewed for successive additional 3~year periods (\"Extension Terms\"), unless otherwise terminated by either party by giving notice to the other party not less than sixty (60) days prior to the end of a Term. As used herein, the \"Term\" means the Initial Term and any Extension Term(s)." ;
+    ct:duration "P10Y"^^xsd:duration ;
+    ct:kind "INITIAL_TERM" ;
+    ct:starts_from ex:H10R01F0 ;
+    ct:subject_to ex:H10R01C ;
+    ct:supported_by ex:H10R01P .
+
+ex:H15R01 a ct:Rule ;
+    rdfs:label "Agreement through Delivery Period; certain licenses survive" ;
+    ct:description "6.1 Term.   (i) Term of Agreement. This Agreement shall commence on the Effective Date and, except as set forth in Subsection (ii), continue in full force and effect through the Delivery Period.   (ii) Term of Licenses. Notwithstanding Subsection (i), certain license grants for Content, Images and Affinities extend beyond the expiration or earlier termination of this Agreement as set forth herein. With respect to such Content, Images and Affinities, the terms and conditions of this Agreement shall continue to apply." ;
+    ct:ends_on_event ex:H15R01F1 ;
+    ct:kind "INITIAL_TERM" ;
+    ct:starts_from ex:H15R01F0 ;
+    ct:supported_by ex:H15R01P .
+
+ex:H16R01 a ct:Rule ;
+    rdfs:label "Three years with automatic two-year extensions unless advised otherwise" ;
+    ct:description "VI. TERM/TERMINATION   A. The Term will be 3 years from Effective Date with an automatic 2 year term extensions unless otherwise advised by one of the Parties." ;
+    ct:duration "P3Y"^^xsd:duration ;
+    ct:kind "INITIAL_TERM" ;
+    ct:starts_from ex:H16R01F0 ;
+    ct:supported_by ex:H16R01P .
+
+ex:H17R01 a ct:Rule ;
+    rdfs:label "Effective on date hereof, ends upon termination of Offering" ;
+    ct:description """13. Termination and Payment of Expenses. This Agreement shall become effective on the date hereof and shall terminate upon the termination of the Offering. If for any reason any Shares are not delivered by or on behalf of the Company as provided herein, the Company will reimburse the Agent for all actual and accountable out-of-pocket expenses, including fees and disbursements of counsel, reasonably incurred by the Agent in making preparations for the purchase, sale and delivery of the Shares not so delivered, but the Company shall then be under no further liability to the Agent except as provided in Section 8 and Section 10 hereof.
+
+10""" ;
+    ct:ends_on_event ex:H17R01F1 ;
+    ct:kind "INITIAL_TERM" ;
+    ct:starts_from ex:H17R01F0 ;
+    ct:supported_by ex:H17R01P .
+
+ex:H19R01 a ct:Rule ;
+    rdfs:label "Agreement period January 1, 2019 through December 31, 2023" ;
+    ct:description """AGREEMENT PERIOD
+
+Effective Date: January 1, 2019
+
+Termination Date: December 31, 2023""" ;
+    ct:kind "INITIAL_TERM" ;
+    ct:starts_from ex:H19R01F0 ;
+    ct:stated_end_date "2023-12-31"^^xsd:date ;
+    ct:supported_by ex:H19R01P .
+
+ex:H01R01 a ct:Rule ;
+    rdfs:label "24-month initial term, Appendix qualification and automatic half-year extension" ;
+    ct:description "7.1  Unless  otherwise  stated  in  the  Appendix  the  term of this letter           Agreement  shall  continue  for  twenty-four  (24)  months  with  the           effective  date  unless  terminated sooner or extended pursuant to the           terms hereof (\"Initial Term\"). The Initial Term shall automatically be           extended  for  an additional period of half a year unless either party           provides  the  other party with written notification of termination of           the  letter  Agreement  at  least 60 days prior to end of such period." ;
+    ct:duration "P2Y"^^xsd:duration ;
+    ct:kind "INITIAL_TERM" ;
+    ct:references_section ex:H01R01F1 ;
+    ct:starts_from ex:H01R01F0 ;
+    ct:subject_to ex:H01R01C ;
+    ct:supported_by ex:H01R01P .
+
+ex:H06R01 a ct:Rule ;
+    rdfs:label "Employment begins 26 September 2019 and continues until notice under paragraph 11" ;
+    ct:description """1.1 This Agreement shall take effect 26  September 2019 (the "Effective Date").
+
+1.2 Your employment shall commence on 26  September 2019 and shall continue unless and until either party gives notice to the other in accordance with paragraph 11 below. No employment with a previous employer is deemed to be continuous with your employment with the Company.""" ;
+    ct:kind "INITIAL_TERM" ;
+    ct:references_section ex:H06R01F1 ;
+    ct:starts_from ex:H06R01F0 ;
+    ct:supported_by ex:H06R01P .
+
+ex:H12R01 a ct:Rule ;
+    rdfs:label "Seven years plus automatic annual renewals" ;
+    ct:description "15.1 Term. This Agreement is effective on the Effective Date. Unless earlier terminated as provided herein, this Agreement continues in effect for an initial term of seven (7) years (\"Initial Term\") and will automatically renew for one or more annual periods after the Initial Term (each a \"Renewal Term\") unless either party gives notice of non-renewal at least one hundred eighty (180) days prior to the beginning of any Renewal Term." ;
+    ct:duration "P7Y"^^xsd:duration ;
+    ct:kind "INITIAL_TERM" ;
+    ct:starts_from ex:H12R01F0 ;
+    ct:subject_to ex:H12R01C ;
+    ct:supported_by ex:H12R01P .
+
+ex:H18R01 a ct:Rule ;
+    rdfs:label "Default twelve-month service terms with exhibit-specific dates" ;
+    ct:applies_within ex:H18R01F1 ;
+    ct:description "Section 6.1 Term of Services. With respect to each of the Services, the term thereof will be for a period commencing as of the date hereof, unless a different date is specified as the commencement date for any applicable Service on Exhibit A or Exhibit B (either, a \"Commencement Date\"), and shall continue until 12 months following the Commencement Date unless (i) such other date as is specified as the termination date for any applicable Service in this Agreement or on Exhibit A or Exhibit B, as applicable (the \"Term\") or (ii) earlier terminated pursuant to this Agreement (a \"Termination Date\")." ;
+    ct:duration "P1Y"^^xsd:duration ;
+    ct:kind "INITIAL_TERM" ;
+    ct:starts_from ex:H18R01F0 ;
+    ct:subject_to ex:H18R01C ;
+    ct:supported_by ex:H18R01P .
+
+ct:Agreement a owl:Class ;
+    rdfs:label "Agreement" .
+
+ct:Condition a owl:Class ;
+    rdfs:label "Condition" .
+
+ct:Reference a owl:Class ;
+    rdfs:label "Reference" .
+
+ct:SourcePassage a owl:Class ;
+    rdfs:label "SourcePassage" .
+
+ct:Rule a owl:Class ;
+    rdfs:label "Rule" .
+

@@ -1,0 +1,306 @@
+{
+  "seed": 20261112,
+  "candidate_count": 88,
+  "excluded_paths": [
+    "cuad/CoherusBiosciencesInc_20200227_10-K_EX-10.29_12021376_EX-10.29_Development Agreement.txt",
+    "cuad/EtonPharmaceuticalsInc_20191114_10-Q_EX-10.1_11893941_EX-10.1_Development Agreement.txt",
+    "cuad/EuromediaHoldingsCorp_20070215_10SB12G_EX-10.B(01)_525118_EX-10.B(01)_Content License Agreement.txt",
+    "cuad/GopageCorp_20140221_10-K_EX-10.1_8432966_EX-10.1_Content License Agreement.txt",
+    "cuad/IdeanomicsInc_20151124_8-K_EX-10.2_9354744_EX-10.2_Content License Agreement.txt",
+    "cuad/PareteumCorp_20081001_8-K_EX-99.1_2654808_EX-99.1_Hosting Agreement.txt",
+    "cuad/PhasebioPharmaceuticalsInc_20200330_10-K_EX-10.21_12086810_EX-10.21_Development Agreement.txt",
+    "cuad/VITAMINSHOPPECOMINC_09_13_1999-EX-10.26-SPONSORSHIP AGREEMENT.txt",
+    "cuad/VirtuosoSurgicalInc_20191227_1-A_EX1A-6 MAT CTRCT_11933379_EX1A-6 MAT CTRCT_License Agreement.txt",
+    "cuad/WebmdHealthCorp_20050908_S-1A_EX-10.7_1027007_EX-10.7_Content License Agreement.txt",
+    "cuad/XinhuaSportsEntertainmentLtd_20070221_F-1_EX-99.4_645553_EX-99.4_Content License Agreement.txt",
+    "cuad/ZEBRATECHNOLOGIESCORP_04_16_2014-EX-10.1-INTELLECTUAL PROPERTY AGREEMENT.txt"
+  ],
+  "exposure_audit": [
+    {
+      "path": "artifacts\\d891bfe3634a5bf21d97\\workbench\\20261106T023240741746Z.json",
+      "sha256": "018ba078890f3f7dbacded9468a3c90d31d579786c55d808a19dc926e9d29a2d"
+    },
+    {
+      "path": "artifacts\\d891bfe3634a5bf21d97\\workbench\\20261106T042122526751Z.json",
+      "sha256": "27f64622fa2d1c015f86691807cd542af55ac3369cbf74c4cbd6532b57daba73"
+    },
+    {
+      "path": "artifacts\\d891bfe3634a5bf21d97\\workbench\\20261106T045156534772Z.json",
+      "sha256": "68ce0a348a13a5946167f34a497fbf4e8e9eb22245b2e8630cbb886065ddd8e9"
+    },
+    {
+      "path": "artifacts\\d891bfe3634a5bf21d97\\workbench\\20261106T045224460774Z.json",
+      "sha256": "fac457347f8af98a4afb07a6a583d3a9bee1a4abd718997332590e130efdba6b"
+    },
+    {
+      "path": "artifacts\\d891bfe3634a5bf21d97\\workbench\\20261106T045340851938Z.json",
+      "sha256": "44ef4628556f9158bf75f8c776f6b20c9e13d2b02ffcef4d765bee4ca0725943"
+    },
+    {
+      "path": "artifacts\\d891bfe3634a5bf21d97\\workbench\\20261106T045443132482Z.json",
+      "sha256": "e3cf8f1a38e047268c3ccd1efa4eeb2444ffd749f50e81c2453a956e1ed0107c"
+    },
+    {
+      "path": "artifacts\\d891bfe3634a5bf21d97\\workbench\\20261106T045544250352Z.json",
+      "sha256": "f15c5574e0357d18d0fb43a8331adabe48cbf9ba01aeb9aa689e5616538fff0b"
+    },
+    {
+      "path": "artifacts\\d891bfe3634a5bf21d97\\workbench\\20261106T045555653057Z.json",
+      "sha256": "edaa6faf590702e84b20a89da0592b17af3b9602ccbcebc25a944d243faa95c7"
+    },
+    {
+      "path": "artifacts\\d891bfe3634a5bf21d97\\workbench\\20261106T045603265294Z.json",
+      "sha256": "0dfcff4527c836341286a7e701b67e0f99c058ff7158abaf9820e25a26281638"
+    },
+    {
+      "path": "artifacts\\d891bfe3634a5bf21d97\\workbench\\20261106T045839722949Z.json",
+      "sha256": "c4c91a82892f351184476d3e7e398f12e62a0aaee6514b7463abc4538bdbfac3"
+    },
+    {
+      "path": "artifacts\\d891bfe3634a5bf21d97\\workbench\\20261106T045904344274Z.json",
+      "sha256": "a7095cf47aaf9a8a7ad94be1911db5c02d36ae602aca37849a697c0f1eaa26e6"
+    },
+    {
+      "path": "artifacts\\d891bfe3634a5bf21d97\\workbench\\20261106T045954412632Z.json",
+      "sha256": "7d3811f6c55423896cd588c075f66a3738625300f7a8548dfee91331f8aedb95"
+    },
+    {
+      "path": "artifacts\\d891bfe3634a5bf21d97\\workbench\\20261106T050002661498Z.json",
+      "sha256": "6ccdb07a8204cff172854ee9cdf6db8ca10524ab4d6d1930d92d0eb09636afba"
+    },
+    {
+      "path": "artifacts\\d891bfe3634a5bf21d97\\workbench\\20261106T050036715975Z.json",
+      "sha256": "6c5ffba95adbff52e0e12833993ab862e8591232942d569b4cc74b47ac7c1d2e"
+    },
+    {
+      "path": "artifacts\\d891bfe3634a5bf21d97\\workbench\\20261106T050204823543Z.json",
+      "sha256": "c9d0edc3af5a726b93457141145c77d1ac5eb767903031218c9fe6aee1cb33f5"
+    },
+    {
+      "path": "artifacts\\d891bfe3634a5bf21d97\\workbench\\20261106T050226843402Z.json",
+      "sha256": "98a4487bd075a8025a6966060db8e04485682dea5c938c08f6ea7959d3a2ddd5"
+    },
+    {
+      "path": "artifacts\\d891bfe3634a5bf21d97\\workbench\\20261106T050254001474Z.json",
+      "sha256": "e9a1ceddc4a624299cc7cbe4349dd730736eb30fcb1e5d9e4511b9574b5f9dda"
+    },
+    {
+      "path": "artifacts\\d891bfe3634a5bf21d97\\workbench\\20261106T050345141552Z.json",
+      "sha256": "acd7b3dfbe668d729604affb44be2267d0615aeb118f42682993e91a2939198c"
+    },
+    {
+      "path": "artifacts\\d891bfe3634a5bf21d97\\workbench\\20261106T051011382279Z.json",
+      "sha256": "20aa7ebb1ed6fe82583ee0bb51430bbb7e022f2ea0e75fe752e424f902a62243"
+    },
+    {
+      "path": "artifacts\\d891bfe3634a5bf21d97\\workbench\\20261106T051331001558Z.json",
+      "sha256": "4191e0ddca65787a40a0d75eb13cc46fa14c9c00b9f8144c33ecfdec5c6be072"
+    },
+    {
+      "path": "artifacts\\d891bfe3634a5bf21d97\\workbench\\20261106T051500609926Z.json",
+      "sha256": "86f536776753aad7333a97a61006121a8cb14f007b7c1c7a714b97121ebb1d04"
+    },
+    {
+      "path": "artifacts\\d891bfe3634a5bf21d97\\workbench\\20261112T095325861191Z.json",
+      "sha256": "f3b3df8565512316344f2303dc6c675da1a1c4024c5f057e4c953456b3a39c4b"
+    },
+    {
+      "path": "artifacts\\d891bfe3634a5bf21d97\\workbench\\20261112T105228894724Z.json",
+      "sha256": "f1fc7ce1cba28fe7c43d511aa0863c4ab2feb5304a35c3e6ec388924f17366f9"
+    },
+    {
+      "path": "artifacts\\d891bfe3634a5bf21d97\\comparisons\\20261112T095229325740Z.json",
+      "sha256": "cde6d8740c836706afeddbf8cafaa6ca88eadcf402604a01650fc49dee158642"
+    },
+    {
+      "path": "artifacts\\d891bfe3634a5bf21d97\\comparisons\\20261112T104947518747Z.json",
+      "sha256": "35e514625b914047ab88814bdb74ec1793f0244314eed5e0a187c4f57be7a8a7"
+    },
+    {
+      "path": "artifacts\\d891bfe3634a5bf21d97\\comparisons\\20261112T105010380082Z.json",
+      "sha256": "a17e23bb5bb76ed299b1e12693dd98924bb31e1c9537f40567efe18e8f606e99"
+    },
+    {
+      "path": "artifacts\\d891bfe3634a5bf21d97\\comparisons\\20261112T105228727765Z.json",
+      "sha256": "3e876c37e9700c644ca58d3f73b4a20e45ed9dc8a1dc7a8add7b5dae29153a3e"
+    },
+    {
+      "path": "artifacts\\d891bfe3634a5bf21d97\\comparisons\\20261112T105321643400Z.json",
+      "sha256": "fa30ca91a96f9857844cde8a7b56914a6e72022c98ad8e836135e6e8d480d355"
+    },
+    {
+      "path": "artifacts\\d891bfe3634a5bf21d97\\comparisons\\20261112T105418324900Z.json",
+      "sha256": "98ae90958e64493e4e6546384d9bb91210c366e5dab1099154fbdee191b16ce6"
+    },
+    {
+      "path": "artifacts\\d891bfe3634a5bf21d97\\comparisons\\20261112T105428810905Z.json",
+      "sha256": "835dc79462e72530cd602fb436731ef92d1a0ac0787f93145eb33a52e8aa16c1"
+    },
+    {
+      "path": "artifacts\\d891bfe3634a5bf21d97\\comparisons\\20261112T105440309492Z.json",
+      "sha256": "18d389c7ec1ac2c490427236ca9768780a26edc976a3bcabc6c02ec082c261ee"
+    },
+    {
+      "path": "artifacts\\d891bfe3634a5bf21d97\\comparisons\\20261112T105456924239Z.json",
+      "sha256": "408579da9404d344c93dd5a33d95e396b9d9a664ca88659607cac1c1374951ed"
+    },
+    {
+      "path": "artifacts\\d891bfe3634a5bf21d97\\comparisons\\20261112T105459791209Z.json",
+      "sha256": "94dded96bec722b387d7ddbad80099ea58911e1388ce6258d466bbb635490320"
+    },
+    {
+      "path": "artifacts\\d891bfe3634a5bf21d97\\comparisons\\20261112T105523295638Z.json",
+      "sha256": "6e0d8b99e6d1ec6802fc8904609ffc1551a831111c55ff3f1a630234d543e3e6"
+    },
+    {
+      "path": "artifacts\\d891bfe3634a5bf21d97\\comparisons\\20261112T105532262679Z.json",
+      "sha256": "e340ae6a5c950ac97f1c0f283a37e684c8c6056908dd83ab34901c109d44a2ad"
+    },
+    {
+      "path": "artifacts\\d891bfe3634a5bf21d97\\evaluations\\20261105T125218480846Z\\results.json",
+      "sha256": "b73a5a861411eecd717dea795884d2055c74950126987599e9c7b6d18406bd36"
+    }
+  ],
+  "documents": [
+    {
+      "id": "H01",
+      "file_path": "cuad/DataCallTechnologies_20060918_SB-2A_EX-10.9_944510_EX-10.9_Content License Agreement.txt",
+      "local_file_path": "cuad/DataCallTechnologies_20060918_SB-2A_EX-10.9_944510_EX-10.9_Content License Agreement.txt",
+      "sha256": "20f0f1630d8ae7ba221fbbf9d0449a593605989dfa3c779cafdb9c233bb6ebe7",
+      "characters": 14171
+    },
+    {
+      "id": "H02",
+      "file_path": "cuad/RISEEDUCATIONCAYMANLTD_04_17_2020-EX-4.23-SERVICE AGREEMENT.txt",
+      "local_file_path": "cuad/RISEEDUCATIONCAYMANLTD_04_17_2020-EX-4.23-SERVICE AGREEMENT.txt",
+      "sha256": "4d9af82e13bc95c4459e66c7d19439753237bc89e6e4bf10819aedcc4018534f",
+      "characters": 16372
+    },
+    {
+      "id": "H03",
+      "file_path": "cuad/MEETGROUP,INC_06_29_2017-EX-10.1-COOPERATION AGREEMENT.txt",
+      "local_file_path": "cuad/MEETGROUP,INC_06_29_2017-EX-10.1-COOPERATION AGREEMENT.txt",
+      "sha256": "7aa6582007f2f953ed7f0fdc4418025054183c37386162db7ae073249cbadaec",
+      "characters": 59532
+    },
+    {
+      "id": "H04",
+      "file_path": "cuad/FEDERATEDGOVERNMENTINCOMESECURITIESINC_04_28_2020-EX-99.SERV AGREE-SERVICES AGREEMENT_POWEROF.txt",
+      "local_file_path": "cuad/FEDERATEDGOVERNMENTINCOMESECURITIESINC_04_28_2020-EX-99.SERV AGREE-SERVICES AGREEMENT_POWEROF.txt",
+      "sha256": "df60e354f88a3b0120135e0886e3c6ff141309d8a0c253c0ac4c5a5b9ed50ce6",
+      "characters": 14384
+    },
+    {
+      "id": "H05",
+      "file_path": "cuad/TRUENORTHENERGYCORP_02_08_2007-EX-10.1-DEVELOPMENT AGREEMENT.txt",
+      "local_file_path": "cuad/TRUENORTHENERGYCORP_02_08_2007-EX-10.1-DEVELOPMENT AGREEMENT.txt",
+      "sha256": "37104b954c35b7e787eebe9da39567d4025449a11167072c06e81ab4286eb0c3",
+      "characters": 43803
+    },
+    {
+      "id": "H06",
+      "file_path": "cuad/BICYCLETHERAPEUTICSPLC_03_10_2020-EX-10.11-SERVICE AGREEMENT.txt",
+      "local_file_path": "cuad/BICYCLETHERAPEUTICSPLC_03_10_2020-EX-10.11-SERVICE AGREEMENT.txt",
+      "sha256": "f8438559b293e8223834f2d6d9d3fd9d7e74c2356132851878b970d840db8d29",
+      "characters": 57041
+    },
+    {
+      "id": "H07",
+      "file_path": "cuad/ON4COMMUNICATIONSINC_07_02_2009-EX-10.1-PROMOTION AGREEMENT.txt",
+      "local_file_path": "cuad/ON4COMMUNICATIONSINC_07_02_2009-EX-10.1-PROMOTION AGREEMENT.txt",
+      "sha256": "50407bd2ecffca3bec8f81d066233d44f93eae4054b371ccdadae6a7cc8d2cd0",
+      "characters": 15103
+    },
+    {
+      "id": "H08",
+      "file_path": "cuad/KIROMICBIOPHARMA,INC_04_08_2020-EX-10.28-JOINT VENTURE AGREEMENT.txt",
+      "local_file_path": "cuad/KIROMICBIOPHARMA,INC_04_08_2020-EX-10.28-JOINT VENTURE AGREEMENT.txt",
+      "sha256": "5d49e97e8deb2ed6d588cdc8604572b6d70ffbe137f42be03a0548c1441e8d6b",
+      "characters": 36610
+    },
+    {
+      "id": "H09",
+      "file_path": "cuad/CreditcardscomInc_20070810_S-1_EX-10.33_362297_EX-10.33_Affiliate Agreement.txt",
+      "local_file_path": "cuad/CreditcardscomInc_20070810_S-1_EX-10.33_362297_EX-10.33_Affiliate Agreement.txt",
+      "sha256": "29b719c456250aea65501b771c0dc859094c9a5d5b074a6af4fe4254bd5c4384",
+      "characters": 28804
+    },
+    {
+      "id": "H10",
+      "file_path": "cuad/PacificapEntertainmentHoldingsInc_20051115_8-KA_EX-1.01_4300894_EX-1.01_Content License Agreement.txt",
+      "local_file_path": "cuad/PacificapEntertainmentHoldingsInc_20051115_8-KA_EX-1.01_4300894_EX-1.01_Content License Agreement.txt",
+      "sha256": "167674d1478745bdbd7be6c3195f3e0eb3e7d741dfa6ad27c56ab4152f2a9a62",
+      "characters": 18138
+    },
+    {
+      "id": "H11",
+      "file_path": "cuad/SIBANNAC,INC_12_04_2017-EX-2.1-Strategic Alliance Agreement.txt",
+      "local_file_path": "cuad/SIBANNAC,INC_12_04_2017-EX-2.1-Strategic Alliance Agreement.txt",
+      "sha256": "c0b6b7a59795c666d653f5bc73bddba2d852fc59c63b93b97d648a8c593c921f",
+      "characters": 8380
+    },
+    {
+      "id": "H12",
+      "file_path": "cuad/ENERGOUSCORP_03_16_2017-EX-10.24-STRATEGIC ALLIANCE AGREEMENT.txt",
+      "local_file_path": "cuad/ENERGOUSCORP_03_16_2017-EX-10.24-STRATEGIC ALLIANCE AGREEMENT.txt",
+      "sha256": "d2dcc7fa33b3143ae561025ba2e907e4c3d36a7ee3782f8b3d35744c7642a0f9",
+      "characters": 81926
+    },
+    {
+      "id": "H13",
+      "file_path": "cuad/PrudentialBancorpInc_20170606_8-K_EX-10.4_10474434_EX-10.4_Endorsement Agreement.txt",
+      "local_file_path": "cuad/PrudentialBancorpInc_20170606_8-K_EX-10.4_10474434_EX-10.4_Endorsement Agreement.txt",
+      "sha256": "fbd91f8673f9f240dbc62ccfe0665bec3490abb191df5cff64061b4c00ac71f3",
+      "characters": 14155
+    },
+    {
+      "id": "H14",
+      "file_path": "cuad/ALLIANCEBANCORPINCOFPENNSYLVANIA_10_18_2006-EX-1.2-AGENCY AGREEMENT.txt",
+      "local_file_path": "cuad/ALLIANCEBANCORPINCOFPENNSYLVANIA_10_18_2006-EX-1.2-AGENCY AGREEMENT.txt",
+      "sha256": "d22c5d084ff7502d7c26a83a243846a710547c26b117ec82d3a0ec60f2f896c7",
+      "characters": 130256
+    },
+    {
+      "id": "H15",
+      "file_path": "cuad/RemarkHoldingsInc_20081114_10-Q_EX-10.24_2895649_EX-10.24_Content License Agreement.txt",
+      "local_file_path": "cuad/RemarkHoldingsInc_20081114_10-Q_EX-10.24_2895649_EX-10.24_Content License Agreement.txt",
+      "sha256": "633730271ed5a6b43ae1f54c01d6760b01d3442f4802679c8dcfa08078e7d937",
+      "characters": 59089
+    },
+    {
+      "id": "H16",
+      "file_path": "cuad/HEMISPHERX - Sales, Marketing, Distribution, and Supply Agreement.txt",
+      "local_file_path": "cuad/HEMISPHERX - Sales, Marketing, Distribution, and Supply Agreement.txt",
+      "sha256": "871238d0e146f01c49d2cccba73c8b8cbaee1d6e5181cdae8d241d0c897200d2",
+      "characters": 73685
+    },
+    {
+      "id": "H17",
+      "file_path": "cuad/BANUESTRAFINANCIALCORP_09_08_2006-EX-10.16-AGENCY AGREEMENT.txt",
+      "local_file_path": "cuad/BANUESTRAFINANCIALCORP_09_08_2006-EX-10.16-AGENCY AGREEMENT.txt",
+      "sha256": "8a409e55f61a647c258e02748912d68112b3a13fce72f17a060135157c73cd9c",
+      "characters": 45214
+    },
+    {
+      "id": "H18",
+      "file_path": "cuad/ReynoldsConsumerProductsInc_20200121_S-1A_EX-10.22_11948918_EX-10.22_Service Agreement.txt",
+      "local_file_path": "cuad/ReynoldsConsumerProductsInc_20200121_S-1A_EX-10.22_11948918_EX-10.22_Service Agreement.txt",
+      "sha256": "0ddc8b40e5ad7b4f6b1a9d2a921cc7ab2e5d4076a4dcd2575b10b59fc2e6f6d2",
+      "characters": 112910
+    },
+    {
+      "id": "H19",
+      "file_path": "cuad/WestPharmaceuticalServicesInc_20200116_8-K_EX-10.1_11947529_EX-10.1_Supply Agreement.txt",
+      "local_file_path": "cuad/WestPharmaceuticalServicesInc_20200116_8-K_EX-10.1_11947529_EX-10.1_Supply Agreement.txt",
+      "sha256": "7c991c9f55f81fd83a885f40cf89eb81f276897ee3ff068f0b7d689b6f88d495",
+      "characters": 82898
+    },
+    {
+      "id": "H20",
+      "file_path": "cuad/BLACKBOXSTOCKSINC_08_05_2014-EX-10.1-DISTRIBUTOR AGREEMENT.txt",
+      "local_file_path": "cuad/BLACKBOXSTOCKSINC_08_05_2014-EX-10.1-DISTRIBUTOR AGREEMENT.txt",
+      "sha256": "0d2edecafe20a5de97f47ed19b08e2df988b3471e3da810944017ec8675adba5",
+      "characters": 17234
+    }
+  ]
+}

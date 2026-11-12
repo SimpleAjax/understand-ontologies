@@ -1,0 +1,21 @@
+{
+  "sealed_at": "2026-11-12T11:06:56.263149+00:00",
+  "files": {
+    "ontology/experiments/holdout20-v1/protocol.md": "c44265d7f3914f58ff430c4e54c17f0120cca47c43bd8344fe68c24b7f27b9d3",
+    "ontology/experiments/holdout20-v1/protocol-lock.json": "e1a55cb3333109ddd8bd91d268762d972d38a89d7e2414e9210c0e37d6145f1b",
+    "ontology/experiments/holdout20-v1/schema.ttl": "d58357bf0b68d7aef64304577dd31d1f1a1653baac732c84b2b231a9ee60f663",
+    "ontology/experiments/holdout20-v1/selection.json": "359df71a30fa672b971fb071733a6c950ee0642801d9613c2ab397b0bf90cb90",
+    "ontology/experiments/holdout20-v1/records.json": "5b5007c56f8ddfd99239af1968d3c008ec9226ef60201ed0462532e0cfe910b9",
+    "ontology/experiments/holdout20-v1/graph.ttl": "930427593b8b75fd9bbf18d145e3b263513bbc92437d85ea112bc563a14dc011",
+    "ontology/experiments/holdout20-v1/build-report.json": "fae97fab786742abf208f7be44e55baa3c12155ff2f8805986c796aa77754317",
+    "ontology/experiments/holdout20-v1/source-only-audit.json": "8b76eb16fe7118366ee0217cfde70726737d824bc62941dd839b506a2f2665aa",
+    "scripts/holdout20.py": "1363701d23bfc9bccfb028f73202c083d9f56cd81efcc70597a577f2738940bb",
+    "scripts/holdout20_records.py": "1ceb336ca7c5268cee161e01242feeec2501f4be8c74f640942071264d637a0a",
+    "scripts/compare_retrieval.py": "05e981cfe07b94cdde6411e7f21c84b798eae0dffc24957d9c4bb048b6ffb917",
+    "scripts/evaluate.py": "5f03bff6d1b75bc4dd0a5be933ffb8476d4b5f2be590b7c737605ac4efe6bc69",
+    "scripts/pipeline.py": "3a8b407fba947a39cf9dfb1d1033eb4c7858040faa6d4d208d2f62e2cb9bef19",
+    "scripts/build_sample_ontology.py": "e39afd1d5d8e87a88343083308422481d4c5f4a562293a4f2a6b55f40ad5a0df",
+    "requirements.txt": "26ba7a83d6ee3e485e451ba95e2c9650001a510b84c0fe1893d08690dd26dfa6"
+  },
+  "benchmark_unlocked": false
+}
