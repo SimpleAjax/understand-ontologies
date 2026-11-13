@@ -1,0 +1,277 @@
+@prefix ct: <https://cimulink.local/ontology/contract-terms/0.1#> .
+@prefix ex: <https://cimulink.local/ontology/llm100-v1/> .
+@prefix meta: <https://cimulink.local/ontology/extraction#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ct: a owl:Ontology ;
+    rdfs:comment "Partial five-contract development sample. No claim of complete contract coverage or legal correctness." .
+
+ct:agreement_effective_from a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:applies_within a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:calendar_date_status a owl:DatatypeProperty .
+
+ct:coverage a owl:DatatypeProperty .
+
+ct:description a owl:DatatypeProperty .
+
+ct:duration a owl:DatatypeProperty .
+
+ct:duration_status a owl:DatatypeProperty .
+
+ct:end_char a owl:DatatypeProperty .
+
+ct:end_date_status a owl:DatatypeProperty .
+
+ct:ends_on_event a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:exact_text a owl:DatatypeProperty .
+
+ct:has_party a owl:ObjectProperty ;
+    rdfs:domain ct:Agreement ;
+    rdfs:range ct:Party .
+
+ct:has_rule a owl:ObjectProperty ;
+    rdfs:domain ct:Agreement ;
+    rdfs:range ct:Rule .
+
+ct:kind a owl:DatatypeProperty .
+
+ct:notice_actor a owl:DatatypeProperty .
+
+ct:notice_form a owl:DatatypeProperty .
+
+ct:notice_period_status a owl:DatatypeProperty .
+
+ct:qualifies a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Rule .
+
+ct:references_section a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:renewal_count a owl:DatatypeProperty .
+
+ct:resolution_status a owl:DatatypeProperty .
+
+ct:resolved_to a owl:ObjectProperty ;
+    rdfs:domain ct:Reference ;
+    rdfs:range ct:SourcePassage .
+
+ct:source_path a owl:DatatypeProperty .
+
+ct:source_sha256 a owl:DatatypeProperty .
+
+ct:start_char a owl:DatatypeProperty .
+
+ct:starts_from a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:stated_end_date a owl:DatatypeProperty .
+
+ct:subject_to a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Condition .
+
+ct:supported_by a owl:ObjectProperty ;
+    rdfs:range ct:SourcePassage .
+
+ct:termination_notice a owl:DatatypeProperty .
+
+ex:C005 a ct:Agreement ;
+    rdfs:label "ALLISONTRANSMISSIONHOLDINGSINC_12_15_2014-EX-99.1-COOPERATION AGREEMENT.txt" ;
+    ct:coverage "LOCAL_LLM_PROPOSED_PARTIAL; NOT_HUMAN_REVIEWED" ;
+    ct:has_rule ex:C005R0001,
+        ex:C005R0002,
+        ex:C005R0003,
+        ex:C005R0004,
+        ex:C005R0005,
+        ex:C005R0006 ;
+    ct:source_path "cuad/ALLISONTRANSMISSIONHOLDINGSINC_12_15_2014-EX-99.1-COOPERATION AGREEMENT.txt" ;
+    ct:source_sha256 "cf7ccac86b58129ea6ba73b08f2482e87c61e9c228dd64b05291e3ee3601c104" ;
+    meta:model_digest "0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0" .
+
+ct:Party a owl:Class ;
+    rdfs:label "Party" .
+
+ex:C005P0037 a ct:SourcePassage ;
+    ct:end_char 18984 ;
+    ct:exact_text "5. Termination." ;
+    ct:source_path "cuad/ALLISONTRANSMISSIONHOLDINGSINC_12_15_2014-EX-99.1-COOPERATION AGREEMENT.txt" ;
+    ct:source_sha256 "cf7ccac86b58129ea6ba73b08f2482e87c61e9c228dd64b05291e3ee3601c104" ;
+    ct:start_char 18969 .
+
+ex:C005P0039 a ct:SourcePassage ;
+    ct:end_char 19963 ;
+    ct:exact_text "(b) The provisions of Section 1(d) this Section 5, Section 7 through Section 16 (and, for the avoidance of doubt, the Confidentiality Agreement) shall survive the termination of this Agreement. No termination pursuant to Section 5(a) shall relieve any party hereto from liability for any breach of this Agreement prior to such termination." ;
+    ct:source_path "cuad/ALLISONTRANSMISSIONHOLDINGSINC_12_15_2014-EX-99.1-COOPERATION AGREEMENT.txt" ;
+    ct:source_sha256 "cf7ccac86b58129ea6ba73b08f2482e87c61e9c228dd64b05291e3ee3601c104" ;
+    ct:start_char 19624 .
+
+ex:C005R0001 a ct:Rule ;
+    rdfs:label "Initial Term — source passage 9" ;
+    ct:kind "INITIAL_TERM" ;
+    ct:references_section ex:C005R0001Ref0 ;
+    ct:subject_to ex:C005R0001Condition9 ;
+    ct:supported_by ex:C005P0009 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C005R0001Condition9 a ct:Condition ;
+    ct:description "(a) Subject to the satisfactory completion of the Company's customary background check, the Board shall appoint the ValueAct Designee to serve as a director beginning within ten (10) calendar days following receipt of the ValueAct Group's written request to the Company to have the ValueAct Designee appointed to the Board; provided that, at such time, the Board does not conclude in good faith and based on the written opinion of outside legal counsel that such appointment would constitute a breach of the directors' fiduciary duties. If the ValueAct Designee is appointed to the Board pursuant to this Section 1(a), the Company shall include the ValueAct Designee as a Class I Director, which term expires at the Company's 2016 annual meeting of stockholders." ;
+    ct:supported_by ex:C005P0009 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C005R0001Ref0 a ct:Reference ;
+    rdfs:label "Section 1(a)" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C005R0002 a ct:Rule ;
+    rdfs:label "Termination — source passage 14" ;
+    ct:kind "TERMINATION" ;
+    ct:references_section ex:C005R0002Ref0,
+        ex:C005R0002Ref1 ;
+    ct:subject_to ex:C005R0002Condition14 ;
+    ct:supported_by ex:C005P0014 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C005R0002Condition14 a ct:Condition ;
+    ct:description "(f) The Company's obligations hereunder shall terminate immediately, and the ValueAct Designee shall promptly offer to resign from the Board, and any committee of the Board on which he then sits (and, if requested by the Company, promptly deliver his written resignation to the Board (which shall provide for his immediate resignation) it being understood that it shall be in the Board's sole discretion whether to accept or reject such resignation) if: (i) members of the ValueAct Group, collectively, cease to beneficially own at least 7.5% of the Company's outstanding Common Stock; (ii) the ValueAct Designee ceases to satisfy the conditions set forth in clauses (c)-(d) above; (iii) a member of the ValueAct Group, including the ValueAct Designee, otherwise ceases to comply or breaches any of the terms of this Agreement or the Confidentiality Agreement; or (iv) the employment of the ValueAct Designee with the ValueAct Group is terminated for any reason. The ValueAct Group agrees to cause the ValueAct Designee to resign from the Board if the ValueAct Designee fails to resign if and when requested pursuant to this Section 1(f). Notwithstanding the foregoing, in the event of the occurrence of an event set forth in subsection (ii) or (iv) above, the provisions of Section 1(e) must be complied with before the Company's obligations hereunder may terminate." ;
+    ct:supported_by ex:C005P0014 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C005R0002Ref0 a ct:Reference ;
+    rdfs:label "Section 1(f)" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C005R0002Ref1 a ct:Reference ;
+    rdfs:label "Section 1(e)" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C005R0003 a ct:Rule ;
+    rdfs:label "Conditional Referenced Term — source passage 14" ;
+    ct:kind "CONDITIONAL_REFERENCED_TERM" ;
+    ct:references_section ex:C005R0003Ref0,
+        ex:C005R0003Ref1 ;
+    ct:subject_to ex:C005R0003Condition14 ;
+    ct:supported_by ex:C005P0014 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C005R0003Condition14 a ct:Condition ;
+    ct:description "(f) The Company's obligations hereunder shall terminate immediately, and the ValueAct Designee shall promptly offer to resign from the Board, and any committee of the Board on which he then sits (and, if requested by the Company, promptly deliver his written resignation to the Board (which shall provide for his immediate resignation) it being understood that it shall be in the Board's sole discretion whether to accept or reject such resignation) if: (i) members of the ValueAct Group, collectively, cease to beneficially own at least 7.5% of the Company's outstanding Common Stock; (ii) the ValueAct Designee ceases to satisfy the conditions set forth in clauses (c)-(d) above; (iii) a member of the ValueAct Group, including the ValueAct Designee, otherwise ceases to comply or breaches any of the terms of this Agreement or the Confidentiality Agreement; or (iv) the employment of the ValueAct Designee with the ValueAct Group is terminated for any reason. The ValueAct Group agrees to cause the ValueAct Designee to resign from the Board if the ValueAct Designee fails to resign if and when requested pursuant to this Section 1(f). Notwithstanding the foregoing, in the event of the occurrence of an event set forth in subsection (ii) or (iv) above, the provisions of Section 1(e) must be complied with before the Company's obligations hereunder may terminate." ;
+    ct:supported_by ex:C005P0014 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C005R0003Ref0 a ct:Reference ;
+    rdfs:label "Section 1(f)" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C005R0003Ref1 a ct:Reference ;
+    rdfs:label "Section 1(e)" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C005R0004 a ct:Rule ;
+    rdfs:label "Termination — source passage 37" ;
+    ct:kind "TERMINATION" ;
+    ct:supported_by ex:C005P0037 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C005R0005 a ct:Rule ;
+    rdfs:label "Initial Term — source passage 38" ;
+    ct:kind "INITIAL_TERM" ;
+    ct:references_section ex:C005R0005Ref0,
+        ex:C005R0005Ref1 ;
+    ct:subject_to ex:C005R0005Condition38 ;
+    ct:supported_by ex:C005P0038 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C005R0005Condition38 a ct:Condition ;
+    ct:description "(a) This Agreement is effective as of the date hereof and shall remain in full force and effect for the period (the \"Covered Period\") commencing on the date hereof and ending on the date that is the earliest of: (i) the Company's failure to appoint the ValueAct Designee to the Board following the ValueAct Group's written request to the Company to have the ValueAct Designee appointed to the Board pursuant to Section 1(a) of this Agreement; (ii) the failure of the Company to comply in good faith with Section 1(e) of this Agreement; or (iii) the date which is the 60t h day prior to the Company's 2016 annual meeting of stockholders." ;
+    ct:supported_by ex:C005P0038 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C005R0005Ref0 a ct:Reference ;
+    rdfs:label "Section 1(a)" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C005R0005Ref1 a ct:Reference ;
+    rdfs:label "Section 1(e)" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C005R0006 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 39" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:references_section ex:C005R0006Ref0,
+        ex:C005R0006Ref1,
+        ex:C005R0006Ref2,
+        ex:C005R0006Ref3,
+        ex:C005R0006Ref4 ;
+    ct:supported_by ex:C005P0039 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C005R0006Ref0 a ct:Reference ;
+    rdfs:label "Section 1(d)" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C005R0006Ref1 a ct:Reference ;
+    rdfs:label "Section 5" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C005R0006Ref2 a ct:Reference ;
+    rdfs:label "Section 7" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C005R0006Ref3 a ct:Reference ;
+    rdfs:label "Section 16" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C005R0006Ref4 a ct:Reference ;
+    rdfs:label "Section 5(a)" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C005P0009 a ct:SourcePassage ;
+    ct:end_char 2136 ;
+    ct:exact_text "(a) Subject to the satisfactory completion of the Company's customary background check, the Board shall appoint the ValueAct Designee to serve as a director beginning within ten (10) calendar days following receipt of the ValueAct Group's written request to the Company to have the ValueAct Designee appointed to the Board; provided that, at such time, the Board does not conclude in good faith and based on the written opinion of outside legal counsel that such appointment would constitute a breach of the directors' fiduciary duties. If the ValueAct Designee is appointed to the Board pursuant to this Section 1(a), the Company shall include the ValueAct Designee as a Class I Director, which term expires at the Company's 2016 annual meeting of stockholders." ;
+    ct:source_path "cuad/ALLISONTRANSMISSIONHOLDINGSINC_12_15_2014-EX-99.1-COOPERATION AGREEMENT.txt" ;
+    ct:source_sha256 "cf7ccac86b58129ea6ba73b08f2482e87c61e9c228dd64b05291e3ee3601c104" ;
+    ct:start_char 1374 .
+
+ex:C005P0038 a ct:SourcePassage ;
+    ct:end_char 19622 ;
+    ct:exact_text "(a) This Agreement is effective as of the date hereof and shall remain in full force and effect for the period (the \"Covered Period\") commencing on the date hereof and ending on the date that is the earliest of: (i) the Company's failure to appoint the ValueAct Designee to the Board following the ValueAct Group's written request to the Company to have the ValueAct Designee appointed to the Board pursuant to Section 1(a) of this Agreement; (ii) the failure of the Company to comply in good faith with Section 1(e) of this Agreement; or (iii) the date which is the 60t h day prior to the Company's 2016 annual meeting of stockholders." ;
+    ct:source_path "cuad/ALLISONTRANSMISSIONHOLDINGSINC_12_15_2014-EX-99.1-COOPERATION AGREEMENT.txt" ;
+    ct:source_sha256 "cf7ccac86b58129ea6ba73b08f2482e87c61e9c228dd64b05291e3ee3601c104" ;
+    ct:start_char 18986 .
+
+ct:Agreement a owl:Class ;
+    rdfs:label "Agreement" .
+
+ex:C005P0014 a ct:SourcePassage ;
+    ct:end_char 6397 ;
+    ct:exact_text "(f) The Company's obligations hereunder shall terminate immediately, and the ValueAct Designee shall promptly offer to resign from the Board, and any committee of the Board on which he then sits (and, if requested by the Company, promptly deliver his written resignation to the Board (which shall provide for his immediate resignation) it being understood that it shall be in the Board's sole discretion whether to accept or reject such resignation) if: (i) members of the ValueAct Group, collectively, cease to beneficially own at least 7.5% of the Company's outstanding Common Stock; (ii) the ValueAct Designee ceases to satisfy the conditions set forth in clauses (c)-(d) above; (iii) a member of the ValueAct Group, including the ValueAct Designee, otherwise ceases to comply or breaches any of the terms of this Agreement or the Confidentiality Agreement; or (iv) the employment of the ValueAct Designee with the ValueAct Group is terminated for any reason. The ValueAct Group agrees to cause the ValueAct Designee to resign from the Board if the ValueAct Designee fails to resign if and when requested pursuant to this Section 1(f). Notwithstanding the foregoing, in the event of the occurrence of an event set forth in subsection (ii) or (iv) above, the provisions of Section 1(e) must be complied with before the Company's obligations hereunder may terminate." ;
+    ct:source_path "cuad/ALLISONTRANSMISSIONHOLDINGSINC_12_15_2014-EX-99.1-COOPERATION AGREEMENT.txt" ;
+    ct:source_sha256 "cf7ccac86b58129ea6ba73b08f2482e87c61e9c228dd64b05291e3ee3601c104" ;
+    ct:start_char 5030 .
+
+ct:Condition a owl:Class ;
+    rdfs:label "Condition" .
+
+ct:SourcePassage a owl:Class ;
+    rdfs:label "SourcePassage" .
+
+ct:Rule a owl:Class ;
+    rdfs:label "Rule" .
+
+ct:Reference a owl:Class ;
+    rdfs:label "Reference" .
+

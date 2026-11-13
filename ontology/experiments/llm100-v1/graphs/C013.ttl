@@ -1,0 +1,321 @@
+@prefix ct: <https://cimulink.local/ontology/contract-terms/0.1#> .
+@prefix ex: <https://cimulink.local/ontology/llm100-v1/> .
+@prefix meta: <https://cimulink.local/ontology/extraction#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ct: a owl:Ontology ;
+    rdfs:comment "Partial five-contract development sample. No claim of complete contract coverage or legal correctness." .
+
+ct:agreement_effective_from a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:applies_within a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:calendar_date_status a owl:DatatypeProperty .
+
+ct:coverage a owl:DatatypeProperty .
+
+ct:description a owl:DatatypeProperty .
+
+ct:duration a owl:DatatypeProperty .
+
+ct:duration_status a owl:DatatypeProperty .
+
+ct:end_char a owl:DatatypeProperty .
+
+ct:end_date_status a owl:DatatypeProperty .
+
+ct:ends_on_event a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:exact_text a owl:DatatypeProperty .
+
+ct:has_party a owl:ObjectProperty ;
+    rdfs:domain ct:Agreement ;
+    rdfs:range ct:Party .
+
+ct:has_rule a owl:ObjectProperty ;
+    rdfs:domain ct:Agreement ;
+    rdfs:range ct:Rule .
+
+ct:kind a owl:DatatypeProperty .
+
+ct:notice_actor a owl:DatatypeProperty .
+
+ct:notice_form a owl:DatatypeProperty .
+
+ct:notice_period_status a owl:DatatypeProperty .
+
+ct:qualifies a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Rule .
+
+ct:references_section a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:renewal_count a owl:DatatypeProperty .
+
+ct:resolution_status a owl:DatatypeProperty .
+
+ct:resolved_to a owl:ObjectProperty ;
+    rdfs:domain ct:Reference ;
+    rdfs:range ct:SourcePassage .
+
+ct:source_path a owl:DatatypeProperty .
+
+ct:source_sha256 a owl:DatatypeProperty .
+
+ct:start_char a owl:DatatypeProperty .
+
+ct:starts_from a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:stated_end_date a owl:DatatypeProperty .
+
+ct:subject_to a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Condition .
+
+ct:supported_by a owl:ObjectProperty ;
+    rdfs:range ct:SourcePassage .
+
+ct:termination_notice a owl:DatatypeProperty .
+
+ex:C013 a ct:Agreement ;
+    rdfs:label "BELLRINGBRANDS,INC_02_07_2020-EX-10.18-MASTER SUPPLY AGREEMENT.txt" ;
+    ct:coverage "LOCAL_LLM_PROPOSED_PARTIAL; NOT_HUMAN_REVIEWED" ;
+    ct:has_rule ex:C013R0001,
+        ex:C013R0002,
+        ex:C013R0003,
+        ex:C013R0004,
+        ex:C013R0005,
+        ex:C013R0006,
+        ex:C013R0007,
+        ex:C013R0008,
+        ex:C013R0009,
+        ex:C013R0010,
+        ex:C013R0011,
+        ex:C013R0012 ;
+    ct:source_path "cuad/BELLRINGBRANDS,INC_02_07_2020-EX-10.18-MASTER SUPPLY AGREEMENT.txt" ;
+    ct:source_sha256 "4db35cae428d32e800d78491fbda9306df3b93ae8bb5c4c48a899e4943eb21d8" ;
+    meta:model_digest "0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0" .
+
+ct:Party a owl:Class ;
+    rdfs:label "Party" .
+
+ex:C013P0054 a ct:SourcePassage ;
+    ct:end_char 21866 ;
+    ct:exact_text "Supplier that creates an immediate public food safety risk, PNC may terminate this Agreement immediately without regard to any period for correction." ;
+    ct:source_path "cuad/BELLRINGBRANDS,INC_02_07_2020-EX-10.18-MASTER SUPPLY AGREEMENT.txt" ;
+    ct:source_sha256 "4db35cae428d32e800d78491fbda9306df3b93ae8bb5c4c48a899e4943eb21d8" ;
+    ct:start_char 21717 .
+
+ex:C013P0056 a ct:SourcePassage ;
+    ct:end_char 22579 ;
+    ct:exact_text "6.4 On the termination of this Agreement for any reason, all rights granted to Supplier under this Agreement will immediately cease, and Supplier must deliver to PNC all written or recorded materials relating to the Confidential Information of PNC in the possession or control of Supplier or any of its related party, subject to Section 5.2." ;
+    ct:source_path "cuad/BELLRINGBRANDS,INC_02_07_2020-EX-10.18-MASTER SUPPLY AGREEMENT.txt" ;
+    ct:source_sha256 "4db35cae428d32e800d78491fbda9306df3b93ae8bb5c4c48a899e4943eb21d8" ;
+    ct:start_char 22238 .
+
+ex:C013R0001 a ct:Rule ;
+    rdfs:label "Termination — source passage 29" ;
+    ct:kind "TERMINATION" ;
+    ct:subject_to ex:C013R0001Condition29 ;
+    ct:supported_by ex:C013P0029 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C013R0001Condition29 a ct:Condition ;
+    ct:description "2.5 Subject to the occurring of a Force Majeure Event, if Supplier fails to deliver the Ingredients in accordance with the Specifications, including within the time specified on the Purchase Order, in addition to any other remedies available, PNC may terminate the Purchase Order in whole or in part. In the event of such a termination, Supplier shall continue performance of any nonterminated portion of the Purchase Order, or any nonterminated Purchase Orders, and the quantity of Ingredient ordered and so terminated shall be deducted against any relevant Master Purchase Commitment." ;
+    ct:supported_by ex:C013P0029 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C013R0002 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 29" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:subject_to ex:C013R0002Condition29 ;
+    ct:supported_by ex:C013P0029 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C013R0002Condition29 a ct:Condition ;
+    ct:description "2.5 Subject to the occurring of a Force Majeure Event, if Supplier fails to deliver the Ingredients in accordance with the Specifications, including within the time specified on the Purchase Order, in addition to any other remedies available, PNC may terminate the Purchase Order in whole or in part. In the event of such a termination, Supplier shall continue performance of any nonterminated portion of the Purchase Order, or any nonterminated Purchase Orders, and the quantity of Ingredient ordered and so terminated shall be deducted against any relevant Master Purchase Commitment." ;
+    ct:supported_by ex:C013P0029 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C013R0003 a ct:Rule ;
+    rdfs:label "Termination — source passage 33" ;
+    ct:kind "TERMINATION" ;
+    ct:subject_to ex:C013R0003Condition33 ;
+    ct:supported_by ex:C013P0033 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C013R0003Condition33 a ct:Condition ;
+    ct:description "In the event of an actual or suspected food safety concern, Supplier shall conduct sampling in all relevant areas and promptly provide results of such tests to PNC. If PNC or its representatives find that any of Supplier's facilities, processes, inventory, procedures or equipment are not in accordance or compliance with the requirements of this Agreement or applicable law or regulation, PNC will give notice to Supplier, and Supplier shall promptly take all reasonable steps to correct such deficiency as soon as possible. If correction of the deficiency cannot be affected within [***] of such notice, then Supplier shall promptly notify PNC with its plan to correct the deficiency including an estimated schedule. If the deficiency cannot be corrected within [***], unless otherwise agreed, then PNC shall have the right to terminate any Purchase Orders then outstanding, along with any Master Purchase Commitment related thereto." ;
+    ct:supported_by ex:C013P0033 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C013R0004 a ct:Rule ;
+    rdfs:label "Conditional Referenced Term — source passage 33" ;
+    ct:kind "CONDITIONAL_REFERENCED_TERM" ;
+    ct:subject_to ex:C013R0004Condition33 ;
+    ct:supported_by ex:C013P0033 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C013R0004Condition33 a ct:Condition ;
+    ct:description "In the event of an actual or suspected food safety concern, Supplier shall conduct sampling in all relevant areas and promptly provide results of such tests to PNC. If PNC or its representatives find that any of Supplier's facilities, processes, inventory, procedures or equipment are not in accordance or compliance with the requirements of this Agreement or applicable law or regulation, PNC will give notice to Supplier, and Supplier shall promptly take all reasonable steps to correct such deficiency as soon as possible. If correction of the deficiency cannot be affected within [***] of such notice, then Supplier shall promptly notify PNC with its plan to correct the deficiency including an estimated schedule. If the deficiency cannot be corrected within [***], unless otherwise agreed, then PNC shall have the right to terminate any Purchase Orders then outstanding, along with any Master Purchase Commitment related thereto." ;
+    ct:supported_by ex:C013P0033 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C013R0005 a ct:Rule ;
+    rdfs:label "Initial Term — source passage 51" ;
+    ct:kind "INITIAL_TERM" ;
+    ct:subject_to ex:C013R0005Condition51 ;
+    ct:supported_by ex:C013P0051 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C013R0005Condition51 a ct:Condition ;
+    ct:description "6.1 This Agreement will commence on the Effective Date and continue for an Initial Term of five (5) years, and will automatically renew for additional periods of five (5) years unless one Party notifies the other of its intention not to renew, no less than 12 months prior to the expiration of the then-current term, unless terminated as permitted under this Agreement." ;
+    ct:supported_by ex:C013P0051 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C013R0006 a ct:Rule ;
+    rdfs:label "Automatic Renewal — source passage 51" ;
+    ct:kind "AUTOMATIC_RENEWAL" ;
+    ct:subject_to ex:C013R0006Condition51 ;
+    ct:supported_by ex:C013P0051 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C013R0006Condition51 a ct:Condition ;
+    ct:description "6.1 This Agreement will commence on the Effective Date and continue for an Initial Term of five (5) years, and will automatically renew for additional periods of five (5) years unless one Party notifies the other of its intention not to renew, no less than 12 months prior to the expiration of the then-current term, unless terminated as permitted under this Agreement." ;
+    ct:supported_by ex:C013P0051 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C013R0007 a ct:Rule ;
+    rdfs:label "Termination — source passage 52" ;
+    ct:kind "TERMINATION" ;
+    ct:subject_to ex:C013R0007Condition52 ;
+    ct:supported_by ex:C013P0052 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C013R0007Condition52 a ct:Condition ;
+    ct:description "6.2 Either Party may terminate this Agreement for cause if the other Party fails to perform any material provision of this Agreement or commits a material breach of this Agreement which is not corrected within [***] after receiving written notice of the failure or breach. except that if the default is by" ;
+    ct:supported_by ex:C013P0052 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C013R0008 a ct:Rule ;
+    rdfs:label "Termination — source passage 54" ;
+    ct:kind "TERMINATION" ;
+    ct:supported_by ex:C013P0054 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C013R0009 a ct:Rule ;
+    rdfs:label "Termination — source passage 55" ;
+    ct:kind "TERMINATION" ;
+    ct:subject_to ex:C013R0009Condition55 ;
+    ct:supported_by ex:C013P0055 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C013R0009Condition55 a ct:Condition ;
+    ct:description "6.3 This Agreement will automatically terminate if either Party becomes insolvent or files a petition in bankruptcy, if a Party makes an assignment for the benefit of a creditor, if a receiver is appointed to take possession of any part of a Party's assets or if a Party becomes unable generally to pay its debts as they become due, or otherwise ceases to do business." ;
+    ct:supported_by ex:C013P0055 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C013R0010 a ct:Rule ;
+    rdfs:label "Termination — source passage 56" ;
+    ct:kind "TERMINATION" ;
+    ct:references_section ex:C013R0010Ref0 ;
+    ct:supported_by ex:C013P0056 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C013R0010Ref0 a ct:Reference ;
+    rdfs:label "Section 5.2" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C013R0011 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 73" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:subject_to ex:C013R0011Condition73 ;
+    ct:supported_by ex:C013P0073 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C013R0011Condition73 a ct:Condition ;
+    ct:description "10.2 Any obligation of either Party under this Agreement will be postponed until the cause underlying the Force Majeure Event has been eliminated, at which time the obligation will again be in effect. Any loss of time by the Force Majeure Event will not be held against the Party who was unable to comply with its obligations under this Agreement because of the Force Majeure Event. The Party unable to comply with its obligations under this Agreement will immediately notify the other Party in writing that a Force Majeure Event has delayed its performance and will state, to the best of its knowledge, the revised date for performance. If a Force Majeure Event persists for longer than [***], the Party not directly affected by the Force Majeure Event may terminate this Agreement with regard to any relevant Master Purchase Commitments or Purchase Orders." ;
+    ct:supported_by ex:C013P0073 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C013R0012 a ct:Rule ;
+    rdfs:label "Termination — source passage 73" ;
+    ct:kind "TERMINATION" ;
+    ct:subject_to ex:C013R0012Condition73 ;
+    ct:supported_by ex:C013P0073 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C013R0012Condition73 a ct:Condition ;
+    ct:description "10.2 Any obligation of either Party under this Agreement will be postponed until the cause underlying the Force Majeure Event has been eliminated, at which time the obligation will again be in effect. Any loss of time by the Force Majeure Event will not be held against the Party who was unable to comply with its obligations under this Agreement because of the Force Majeure Event. The Party unable to comply with its obligations under this Agreement will immediately notify the other Party in writing that a Force Majeure Event has delayed its performance and will state, to the best of its knowledge, the revised date for performance. If a Force Majeure Event persists for longer than [***], the Party not directly affected by the Force Majeure Event may terminate this Agreement with regard to any relevant Master Purchase Commitments or Purchase Orders." ;
+    ct:supported_by ex:C013P0073 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C013P0052 a ct:SourcePassage ;
+    ct:end_char 21708 ;
+    ct:exact_text "6.2 Either Party may terminate this Agreement for cause if the other Party fails to perform any material provision of this Agreement or commits a material breach of this Agreement which is not corrected within [***] after receiving written notice of the failure or breach. except that if the default is by" ;
+    ct:source_path "cuad/BELLRINGBRANDS,INC_02_07_2020-EX-10.18-MASTER SUPPLY AGREEMENT.txt" ;
+    ct:source_sha256 "4db35cae428d32e800d78491fbda9306df3b93ae8bb5c4c48a899e4943eb21d8" ;
+    ct:start_char 21403 .
+
+ex:C013P0055 a ct:SourcePassage ;
+    ct:end_char 22236 ;
+    ct:exact_text "6.3 This Agreement will automatically terminate if either Party becomes insolvent or files a petition in bankruptcy, if a Party makes an assignment for the benefit of a creditor, if a receiver is appointed to take possession of any part of a Party's assets or if a Party becomes unable generally to pay its debts as they become due, or otherwise ceases to do business." ;
+    ct:source_path "cuad/BELLRINGBRANDS,INC_02_07_2020-EX-10.18-MASTER SUPPLY AGREEMENT.txt" ;
+    ct:source_sha256 "4db35cae428d32e800d78491fbda9306df3b93ae8bb5c4c48a899e4943eb21d8" ;
+    ct:start_char 21868 .
+
+ct:Agreement a owl:Class ;
+    rdfs:label "Agreement" .
+
+ex:C013P0029 a ct:SourcePassage ;
+    ct:end_char 9863 ;
+    ct:exact_text "2.5 Subject to the occurring of a Force Majeure Event, if Supplier fails to deliver the Ingredients in accordance with the Specifications, including within the time specified on the Purchase Order, in addition to any other remedies available, PNC may terminate the Purchase Order in whole or in part. In the event of such a termination, Supplier shall continue performance of any nonterminated portion of the Purchase Order, or any nonterminated Purchase Orders, and the quantity of Ingredient ordered and so terminated shall be deducted against any relevant Master Purchase Commitment." ;
+    ct:source_path "cuad/BELLRINGBRANDS,INC_02_07_2020-EX-10.18-MASTER SUPPLY AGREEMENT.txt" ;
+    ct:source_sha256 "4db35cae428d32e800d78491fbda9306df3b93ae8bb5c4c48a899e4943eb21d8" ;
+    ct:start_char 9277 .
+
+ex:C013P0033 a ct:SourcePassage ;
+    ct:end_char 12505 ;
+    ct:exact_text "In the event of an actual or suspected food safety concern, Supplier shall conduct sampling in all relevant areas and promptly provide results of such tests to PNC. If PNC or its representatives find that any of Supplier's facilities, processes, inventory, procedures or equipment are not in accordance or compliance with the requirements of this Agreement or applicable law or regulation, PNC will give notice to Supplier, and Supplier shall promptly take all reasonable steps to correct such deficiency as soon as possible. If correction of the deficiency cannot be affected within [***] of such notice, then Supplier shall promptly notify PNC with its plan to correct the deficiency including an estimated schedule. If the deficiency cannot be corrected within [***], unless otherwise agreed, then PNC shall have the right to terminate any Purchase Orders then outstanding, along with any Master Purchase Commitment related thereto." ;
+    ct:source_path "cuad/BELLRINGBRANDS,INC_02_07_2020-EX-10.18-MASTER SUPPLY AGREEMENT.txt" ;
+    ct:source_sha256 "4db35cae428d32e800d78491fbda9306df3b93ae8bb5c4c48a899e4943eb21d8" ;
+    ct:start_char 11570 .
+
+ex:C013P0051 a ct:SourcePassage ;
+    ct:end_char 21401 ;
+    ct:exact_text "6.1 This Agreement will commence on the Effective Date and continue for an Initial Term of five (5) years, and will automatically renew for additional periods of five (5) years unless one Party notifies the other of its intention not to renew, no less than 12 months prior to the expiration of the then-current term, unless terminated as permitted under this Agreement." ;
+    ct:source_path "cuad/BELLRINGBRANDS,INC_02_07_2020-EX-10.18-MASTER SUPPLY AGREEMENT.txt" ;
+    ct:source_sha256 "4db35cae428d32e800d78491fbda9306df3b93ae8bb5c4c48a899e4943eb21d8" ;
+    ct:start_char 21032 .
+
+ex:C013P0073 a ct:SourcePassage ;
+    ct:end_char 30445 ;
+    ct:exact_text "10.2 Any obligation of either Party under this Agreement will be postponed until the cause underlying the Force Majeure Event has been eliminated, at which time the obligation will again be in effect. Any loss of time by the Force Majeure Event will not be held against the Party who was unable to comply with its obligations under this Agreement because of the Force Majeure Event. The Party unable to comply with its obligations under this Agreement will immediately notify the other Party in writing that a Force Majeure Event has delayed its performance and will state, to the best of its knowledge, the revised date for performance. If a Force Majeure Event persists for longer than [***], the Party not directly affected by the Force Majeure Event may terminate this Agreement with regard to any relevant Master Purchase Commitments or Purchase Orders." ;
+    ct:source_path "cuad/BELLRINGBRANDS,INC_02_07_2020-EX-10.18-MASTER SUPPLY AGREEMENT.txt" ;
+    ct:source_sha256 "4db35cae428d32e800d78491fbda9306df3b93ae8bb5c4c48a899e4943eb21d8" ;
+    ct:start_char 29587 .
+
+ct:Reference a owl:Class ;
+    rdfs:label "Reference" .
+
+ct:SourcePassage a owl:Class ;
+    rdfs:label "SourcePassage" .
+
+ct:Condition a owl:Class ;
+    rdfs:label "Condition" .
+
+ct:Rule a owl:Class ;
+    rdfs:label "Rule" .
+

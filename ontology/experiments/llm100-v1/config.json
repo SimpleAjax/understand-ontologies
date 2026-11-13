@@ -1,0 +1,23 @@
+{
+  "created_at": "2026-11-12T16:03:24.497826+00:00",
+  "model": "qwen3:4b-instruct-2507-q4_K_M",
+  "model_digest": "0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0",
+  "api": "http://127.0.0.1:18765",
+  "options": {
+    "temperature": 0,
+    "seed": 42,
+    "num_ctx": 4096,
+    "num_predict": 512
+  },
+  "unit_max_chars": 1400,
+  "focus_units_per_request": 1,
+  "neighbor_context": false,
+  "topic_cue_pattern": "\\b(?:term|renew\\w*|expir\\w*|terminat\\w*|duration|effective\\s+date|commenc\\w*|standstill|notice|contract\\s+(?:start|end)|cease|cessation|cancel\\w*|wind.?down|sell.?off|surviv\\w*|continu\\w*\\s+until)\\b",
+  "extraction_method": "Local LLM category/condition tagging; Python copies original text and detects explicit section-reference strings.",
+  "scope": "Term, renewal, termination and linked qualifications only; not full-contract semantics.",
+  "source_manifest_sha256": "d2ee0c32bdb33f5530869c6482af39ea49914d9e76ab44d66d4cca409a0c224e",
+  "code_sha256": "9c66a3602e3016953c59bfa681413256dcd41f559997358e957fd63107d448bb",
+  "prompt_sha256": "4b65c977b7425715d3a62f77c2edfefb8fbc5909d38725ed45c3061800efa4bc",
+  "schema_sha256": "d58357bf0b68d7aef64304577dd31d1f1a1653baac732c84b2b231a9ee60f663",
+  "response_schema_sha256": "9db4ba714962cf4c9d6ee325b0d79d03fe3d8f60a8fa967f6d6f8b589f75e715"
+}

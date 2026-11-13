@@ -1,0 +1,211 @@
+@prefix ct: <https://cimulink.local/ontology/contract-terms/0.1#> .
+@prefix ex: <https://cimulink.local/ontology/llm100-v1/> .
+@prefix meta: <https://cimulink.local/ontology/extraction#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ct: a owl:Ontology ;
+    rdfs:comment "Partial five-contract development sample. No claim of complete contract coverage or legal correctness." .
+
+ct:agreement_effective_from a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:applies_within a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:calendar_date_status a owl:DatatypeProperty .
+
+ct:coverage a owl:DatatypeProperty .
+
+ct:description a owl:DatatypeProperty .
+
+ct:duration a owl:DatatypeProperty .
+
+ct:duration_status a owl:DatatypeProperty .
+
+ct:end_char a owl:DatatypeProperty .
+
+ct:end_date_status a owl:DatatypeProperty .
+
+ct:ends_on_event a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:exact_text a owl:DatatypeProperty .
+
+ct:has_party a owl:ObjectProperty ;
+    rdfs:domain ct:Agreement ;
+    rdfs:range ct:Party .
+
+ct:has_rule a owl:ObjectProperty ;
+    rdfs:domain ct:Agreement ;
+    rdfs:range ct:Rule .
+
+ct:kind a owl:DatatypeProperty .
+
+ct:notice_actor a owl:DatatypeProperty .
+
+ct:notice_form a owl:DatatypeProperty .
+
+ct:notice_period_status a owl:DatatypeProperty .
+
+ct:qualifies a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Rule .
+
+ct:references_section a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:renewal_count a owl:DatatypeProperty .
+
+ct:resolution_status a owl:DatatypeProperty .
+
+ct:resolved_to a owl:ObjectProperty ;
+    rdfs:domain ct:Reference ;
+    rdfs:range ct:SourcePassage .
+
+ct:source_path a owl:DatatypeProperty .
+
+ct:source_sha256 a owl:DatatypeProperty .
+
+ct:start_char a owl:DatatypeProperty .
+
+ct:starts_from a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:stated_end_date a owl:DatatypeProperty .
+
+ct:subject_to a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Condition .
+
+ct:supported_by a owl:ObjectProperty ;
+    rdfs:range ct:SourcePassage .
+
+ct:termination_notice a owl:DatatypeProperty .
+
+ex:C091 a ct:Agreement ;
+    rdfs:label "VirtuosoSurgicalInc_20191227_1-A_EX1A-6 MAT CTRCT_11933379_EX1A-6 MAT CTRCT_License Agreement.txt" ;
+    ct:coverage "LOCAL_LLM_PROPOSED_PARTIAL; NOT_HUMAN_REVIEWED" ;
+    ct:has_rule ex:C091R0001,
+        ex:C091R0002,
+        ex:C091R0003,
+        ex:C091R0004,
+        ex:C091R0005 ;
+    ct:source_path "cuad/VirtuosoSurgicalInc_20191227_1-A_EX1A-6 MAT CTRCT_11933379_EX1A-6 MAT CTRCT_License Agreement.txt" ;
+    ct:source_sha256 "f430f627738934e99e4ef645a86b95ed73b39f8c586b3c754a56400783256792" ;
+    meta:model_digest "0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0" .
+
+ct:Party a owl:Class ;
+    rdfs:label "Party" .
+
+ex:C091P0022 a ct:SourcePassage ;
+    ct:end_char 11914 ;
+    ct:exact_text "May 3, 2016 Reference: JHU Tech Transfer (JHU Agreement A29889) Company shall be responsible for any and all costs associated with wire transfers. Company shall provide JHU with the date of wire transfer payment and ACH confirmation number upon completion of such payment. 4.10 Invoices. Any invoice for payment sent by JHU to Company may be electronically provided by e-mail service. JHU will send invoices to an e-mail address provided by Company. Company will provide JHU with any updates to this e-mail address. 5. PATENT MATTERS 5.1 Prosecution & Maintenance: JHU, at its sole option and discretion, shall file, prosecute and maintain all patents and patent applications specified under PATENT RIGHT(S). Title to all such patents and patent applications shall reside in JHU. JHU shall have full and complete control over all patent matters in connection therewith under the PATENT RIGHT(S). 5.2 Right to Enforce: JHU shall have the first right to enforce the PATENT RIGHTS against any infringement or alleged infringement thereof in the LICENSED FIELD OF USE. 6. TERM AND TERMINATION 6.1 Expiration: This term of this Agreement shall commence on the EFFECTIVE DATE and shall continue, in each country, until the date of expiration of the last to expire patent within PATENT RIGHT(S) in that country. " ;
+    ct:source_path "cuad/VirtuosoSurgicalInc_20191227_1-A_EX1A-6 MAT CTRCT_11933379_EX1A-6 MAT CTRCT_License Agreement.txt" ;
+    ct:source_sha256 "f430f627738934e99e4ef645a86b95ed73b39f8c586b3c754a56400783256792" ;
+    ct:start_char 10609 .
+
+ex:C091P0026 a ct:SourcePassage ;
+    ct:end_char 14410 ;
+    ct:exact_text "May 3, 2016 7. DEFAULT 7.1 Default & Termination: Upon breach or default of any term or condition of this Agreement by either party, the defaulting party shall be given written notice of such default in writing by the party not in default. The defaulting party shall have a period of sixty (60) days after receipt of such notice to correct the default or breach. If the default or breach is not corrected within said sixty (60) day period, the party not in default shall have the right to terminate this Agreement. 8. NOTICES 8.1 Notice Information: All notices and/or other communications pertaining to this Agreement shall be in writing and sent by registered mail or certified mail, return receipt requested, or sent by overnight courier, such as Federal Express, to the parties at the following addresses or such other address as such party shall have furnished in writing to the other party in accordance with this Paragraph 8.1: FOR JHU: Director Johns Hopkins Technology Ventures The Johns Hopkins University 100 N. Charles Street, 5t h Floor Baltimore, MD 21201 Reference: JHU Agreement A29889 FOR Company: VIRTUOSO SURGICAL, INC. 5701 Old Harding Pike; Suite 200 Nashville, TN 37205 9. MISCELLANEOUS 9.1 Audit: JHU shall have the right to audit any and all Company records related to this Agreement. " ;
+    ct:source_path "cuad/VirtuosoSurgicalInc_20191227_1-A_EX1A-6 MAT CTRCT_11933379_EX1A-6 MAT CTRCT_License Agreement.txt" ;
+    ct:source_sha256 "f430f627738934e99e4ef645a86b95ed73b39f8c586b3c754a56400783256792" ;
+    ct:start_char 13101 .
+
+ex:C091P0036 a ct:SourcePassage ;
+    ct:end_char 20188 ;
+    ct:exact_text "The Company shall indemnify, defend with counsel reasonably acceptable to JHU, and hold JHU, The Johns Hopkins Health Systems, their representatives including but not limited to present and former, trustees, officers, Inventors, agents, faculty, employees and students harmless as against any judgments, fees, expenses, or other costs arising from or incidental to any product liability or other lawsuit, claim, demand or other action brought as a consequence of the practice of said inventions by any of the foregoing entities, whether or not JHU or said Inventors, either jointly or severally, is/are named as a party defendant in any such lawsuit. Practice of the inventions covered by LICENSED PRODUCT(S) or LICENSED SERVICE(S) by an agent or a third party on behalf of or for the account of the Company, or by a third party who purchases LICENSED PRODUCT(S) or LICENSED SERVICE(S) from the Company, shall be considered the Company's practice of said inventions for purposes of this Paragraph 9.7. The obligation of the Company to defend and indemnify as set out in this Paragraph 9.7 shall survive the termination of this Agreement and shall not be limited by any other limitation of liability elsewhere in the Agreement. " ;
+    ct:source_path "cuad/VirtuosoSurgicalInc_20191227_1-A_EX1A-6 MAT CTRCT_11933379_EX1A-6 MAT CTRCT_License Agreement.txt" ;
+    ct:source_sha256 "f430f627738934e99e4ef645a86b95ed73b39f8c586b3c754a56400783256792" ;
+    ct:start_char 18961 .
+
+ex:C091R0001 a ct:Rule ;
+    rdfs:label "Initial Term — source passage 22" ;
+    ct:kind "INITIAL_TERM" ;
+    ct:supported_by ex:C091P0022 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C091R0002 a ct:Rule ;
+    rdfs:label "Termination — source passage 23" ;
+    ct:kind "TERMINATION" ;
+    ct:references_section ex:C091R0002Ref0 ;
+    ct:subject_to ex:C091R0002Condition23 ;
+    ct:supported_by ex:C091P0023 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C091R0002Condition23 a ct:Condition ;
+    ct:description "6.2 Termination by Company: Company may terminate this Agreement and the license granted herein, for any reason, upon giving JHU sixty (60) days written notice under Paragraph 8.1. 6.3 Termination by JHU: JHU, at its option, may terminate this Agreement and the license granted herein if Company has not made any sales of LICENSED PRODUCT(S) or LICENSED SERVICE(S) in any period of four consecutive quarters, after the initial commercial sale of the PRODUCT(S) or LICENSED SERVICE(S). 6.4 Unpaid Royalty/Reversion of Rights: Termination or expiration of this Agreement shall not affect JHU's right to recover unpaid royalties accrued prior to termination or expiration. Upon termination or expiration of this Agreement, all rights in and to the licensed technology shall revert to JHU at no cost to JHU. 6.5 Survival: All applicable provisions, including but not limited to Paragraphs 4.1 (License Fee), 9.3 (Severability), 9.4 (Use of Name), 9.6 (Disclaimer of Warranties), 9.7 (Indemnification), 9.8 (Product Liability), 9.13 (Binding Effect) and 9.14 (Governing Law) shall survive termination or expiration of this Agreement." ;
+    ct:supported_by ex:C091P0023 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C091R0002Ref0 a ct:Reference ;
+    rdfs:label "Paragraph 8.1" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C091R0003 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 23" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:references_section ex:C091R0003Ref0 ;
+    ct:subject_to ex:C091R0003Condition23 ;
+    ct:supported_by ex:C091P0023 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C091R0003Condition23 a ct:Condition ;
+    ct:description "6.2 Termination by Company: Company may terminate this Agreement and the license granted herein, for any reason, upon giving JHU sixty (60) days written notice under Paragraph 8.1. 6.3 Termination by JHU: JHU, at its option, may terminate this Agreement and the license granted herein if Company has not made any sales of LICENSED PRODUCT(S) or LICENSED SERVICE(S) in any period of four consecutive quarters, after the initial commercial sale of the PRODUCT(S) or LICENSED SERVICE(S). 6.4 Unpaid Royalty/Reversion of Rights: Termination or expiration of this Agreement shall not affect JHU's right to recover unpaid royalties accrued prior to termination or expiration. Upon termination or expiration of this Agreement, all rights in and to the licensed technology shall revert to JHU at no cost to JHU. 6.5 Survival: All applicable provisions, including but not limited to Paragraphs 4.1 (License Fee), 9.3 (Severability), 9.4 (Use of Name), 9.6 (Disclaimer of Warranties), 9.7 (Indemnification), 9.8 (Product Liability), 9.13 (Binding Effect) and 9.14 (Governing Law) shall survive termination or expiration of this Agreement." ;
+    ct:supported_by ex:C091P0023 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C091R0003Ref0 a ct:Reference ;
+    rdfs:label "Paragraph 8.1" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C091R0004 a ct:Rule ;
+    rdfs:label "Termination — source passage 26" ;
+    ct:kind "TERMINATION" ;
+    ct:references_section ex:C091R0004Ref0 ;
+    ct:supported_by ex:C091P0026 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C091R0004Ref0 a ct:Reference ;
+    rdfs:label "Paragraph 8.1" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C091R0005 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 36" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:references_section ex:C091R0005Ref0 ;
+    ct:supported_by ex:C091P0036 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C091R0005Ref0 a ct:Reference ;
+    rdfs:label "Paragraph 9.7" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ct:Agreement a owl:Class ;
+    rdfs:label "Agreement" .
+
+ct:Condition a owl:Class ;
+    rdfs:label "Condition" .
+
+ex:C091P0023 a ct:SourcePassage ;
+    ct:end_char 13042 ;
+    ct:exact_text "6.2 Termination by Company: Company may terminate this Agreement and the license granted herein, for any reason, upon giving JHU sixty (60) days written notice under Paragraph 8.1. 6.3 Termination by JHU: JHU, at its option, may terminate this Agreement and the license granted herein if Company has not made any sales of LICENSED PRODUCT(S) or LICENSED SERVICE(S) in any period of four consecutive quarters, after the initial commercial sale of the PRODUCT(S) or LICENSED SERVICE(S). 6.4 Unpaid Royalty/Reversion of Rights: Termination or expiration of this Agreement shall not affect JHU's right to recover unpaid royalties accrued prior to termination or expiration. Upon termination or expiration of this Agreement, all rights in and to the licensed technology shall revert to JHU at no cost to JHU. 6.5 Survival: All applicable provisions, including but not limited to Paragraphs 4.1 (License Fee), 9.3 (Severability), 9.4 (Use of Name), 9.6 (Disclaimer of Warranties), 9.7 (Indemnification), 9.8 (Product Liability), 9.13 (Binding Effect) and 9.14 (Governing Law) shall survive termination or expiration of this Agreement." ;
+    ct:source_path "cuad/VirtuosoSurgicalInc_20191227_1-A_EX1A-6 MAT CTRCT_11933379_EX1A-6 MAT CTRCT_License Agreement.txt" ;
+    ct:source_sha256 "f430f627738934e99e4ef645a86b95ed73b39f8c586b3c754a56400783256792" ;
+    ct:start_char 11914 .
+
+ct:SourcePassage a owl:Class ;
+    rdfs:label "SourcePassage" .
+
+ct:Reference a owl:Class ;
+    rdfs:label "Reference" .
+
+ct:Rule a owl:Class ;
+    rdfs:label "Rule" .
+

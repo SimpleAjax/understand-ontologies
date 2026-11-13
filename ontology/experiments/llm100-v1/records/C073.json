@@ -1,0 +1,212 @@
+{
+  "document_id": "C073",
+  "file_path": "cuad/RangeResourcesLouisianaInc_20150417_8-K_EX-10.5_9045501_EX-10.5_Transportation Agreement.txt",
+  "model_digest": "0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0",
+  "rules": [
+    {
+      "passage_id": 26,
+      "kind": "INITIAL_TERM",
+      "label": "Initial Term — source passage 26",
+      "condition_ids": [],
+      "reference_labels": [],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 70,
+      "kind": "INITIAL_TERM",
+      "label": "Initial Term — source passage 70",
+      "condition_ids": [
+        70
+      ],
+      "reference_labels": [],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 70,
+      "kind": "TERMINATION",
+      "label": "Termination — source passage 70",
+      "condition_ids": [
+        70
+      ],
+      "reference_labels": [],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 71,
+      "kind": "INITIAL_TERM",
+      "label": "Initial Term — source passage 71",
+      "condition_ids": [],
+      "reference_labels": [],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 86,
+      "kind": "TERMINATION",
+      "label": "Termination — source passage 86",
+      "condition_ids": [
+        86
+      ],
+      "reference_labels": [],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 86,
+      "kind": "CONDITIONAL_REFERENCED_TERM",
+      "label": "Conditional Referenced Term — source passage 86",
+      "condition_ids": [
+        86
+      ],
+      "reference_labels": [],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 87,
+      "kind": "CONDITIONAL_REFERENCED_TERM",
+      "label": "Conditional Referenced Term — source passage 87",
+      "condition_ids": [
+        87
+      ],
+      "reference_labels": [],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 103,
+      "kind": "TERMINATION",
+      "label": "Termination — source passage 103",
+      "condition_ids": [
+        103
+      ],
+      "reference_labels": [
+        "Section 8.1(a)",
+        "Section 8.1(b)"
+      ],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 105,
+      "kind": "TERMINATION",
+      "label": "Termination — source passage 105",
+      "condition_ids": [],
+      "reference_labels": [],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 111,
+      "kind": "TERMINATION",
+      "label": "Termination — source passage 111",
+      "condition_ids": [
+        111
+      ],
+      "reference_labels": [],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 111,
+      "kind": "CONDITIONAL_REFERENCED_TERM",
+      "label": "Conditional Referenced Term — source passage 111",
+      "condition_ids": [
+        111
+      ],
+      "reference_labels": [],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 112,
+      "kind": "TERMINATION",
+      "label": "Termination — source passage 112",
+      "condition_ids": [],
+      "reference_labels": [],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 128,
+      "kind": "TERMINATION",
+      "label": "Termination — source passage 128",
+      "condition_ids": [],
+      "reference_labels": [
+        "Section 11.3",
+        "Section 14.2"
+      ],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 173,
+      "kind": "POST_EXPIRY_CONTINUATION",
+      "label": "Post Expiry Continuation — source passage 173",
+      "condition_ids": [],
+      "reference_labels": [],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 195,
+      "kind": "POST_EXPIRY_CONTINUATION",
+      "label": "Post Expiry Continuation — source passage 195",
+      "condition_ids": [],
+      "reference_labels": [
+        "ARTICLE VI",
+        "ARTICLE VIII",
+        "ARTICLE IX",
+        "ARTICLE X",
+        "ARTICLE XII",
+        "ARTICLE XIV",
+        "ARTICLE XVII",
+        "ARTICLE XVIII",
+        "ARTICLE XIX"
+      ],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 388,
+      "kind": "POST_EXPIRY_CONTINUATION",
+      "label": "Post Expiry Continuation — source passage 388",
+      "condition_ids": [],
+      "reference_labels": [],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 406,
+      "kind": "INITIAL_TERM",
+      "label": "Initial Term — source passage 406",
+      "condition_ids": [],
+      "reference_labels": [],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    }
+  ],
+  "rejected_rules": [],
+  "review_status": "UNREVIEWED",
+  "coverage": "Lexically selected source windows; completeness not guaranteed."
+}

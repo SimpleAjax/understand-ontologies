@@ -1,0 +1,333 @@
+@prefix ct: <https://cimulink.local/ontology/contract-terms/0.1#> .
+@prefix ex: <https://cimulink.local/ontology/llm100-v1/> .
+@prefix meta: <https://cimulink.local/ontology/extraction#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ct: a owl:Ontology ;
+    rdfs:comment "Partial five-contract development sample. No claim of complete contract coverage or legal correctness." .
+
+ct:agreement_effective_from a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:applies_within a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:calendar_date_status a owl:DatatypeProperty .
+
+ct:coverage a owl:DatatypeProperty .
+
+ct:description a owl:DatatypeProperty .
+
+ct:duration a owl:DatatypeProperty .
+
+ct:duration_status a owl:DatatypeProperty .
+
+ct:end_char a owl:DatatypeProperty .
+
+ct:end_date_status a owl:DatatypeProperty .
+
+ct:ends_on_event a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:exact_text a owl:DatatypeProperty .
+
+ct:has_party a owl:ObjectProperty ;
+    rdfs:domain ct:Agreement ;
+    rdfs:range ct:Party .
+
+ct:has_rule a owl:ObjectProperty ;
+    rdfs:domain ct:Agreement ;
+    rdfs:range ct:Rule .
+
+ct:kind a owl:DatatypeProperty .
+
+ct:notice_actor a owl:DatatypeProperty .
+
+ct:notice_form a owl:DatatypeProperty .
+
+ct:notice_period_status a owl:DatatypeProperty .
+
+ct:qualifies a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Rule .
+
+ct:references_section a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:renewal_count a owl:DatatypeProperty .
+
+ct:resolution_status a owl:DatatypeProperty .
+
+ct:resolved_to a owl:ObjectProperty ;
+    rdfs:domain ct:Reference ;
+    rdfs:range ct:SourcePassage .
+
+ct:source_path a owl:DatatypeProperty .
+
+ct:source_sha256 a owl:DatatypeProperty .
+
+ct:start_char a owl:DatatypeProperty .
+
+ct:starts_from a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:stated_end_date a owl:DatatypeProperty .
+
+ct:subject_to a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Condition .
+
+ct:supported_by a owl:ObjectProperty ;
+    rdfs:range ct:SourcePassage .
+
+ct:termination_notice a owl:DatatypeProperty .
+
+ex:C090 a ct:Agreement ;
+    rdfs:label "VITAMINSHOPPECOMINC_09_13_1999-EX-10.26-SPONSORSHIP AGREEMENT.txt" ;
+    ct:coverage "LOCAL_LLM_PROPOSED_PARTIAL; NOT_HUMAN_REVIEWED" ;
+    ct:has_rule ex:C090R0001,
+        ex:C090R0002,
+        ex:C090R0003,
+        ex:C090R0004,
+        ex:C090R0005,
+        ex:C090R0006,
+        ex:C090R0007,
+        ex:C090R0008,
+        ex:C090R0009,
+        ex:C090R0010 ;
+    ct:source_path "cuad/VITAMINSHOPPECOMINC_09_13_1999-EX-10.26-SPONSORSHIP AGREEMENT.txt" ;
+    ct:source_sha256 "0df2116cdf74ca2842b3ae8fe77864e2bb350d05d9dc1d967485a95833402ad5" ;
+    meta:model_digest "0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0" .
+
+ct:Party a owl:Class ;
+    rdfs:label "Party" .
+
+ex:C090P0075 a ct:SourcePassage ;
+    ct:end_char 34766 ;
+    ct:exact_text "c)       All undisputed payments that have accrued prior to                           the termination or expiration of this Agreement will                           be payable in full within thirty (30) days thereof." ;
+    ct:source_path "cuad/VITAMINSHOPPECOMINC_09_13_1999-EX-10.26-SPONSORSHIP AGREEMENT.txt" ;
+    ct:source_sha256 "0df2116cdf74ca2842b3ae8fe77864e2bb350d05d9dc1d967485a95833402ad5" ;
+    ct:start_char 34550 .
+
+ex:C090P0076 a ct:SourcePassage ;
+    ct:end_char 35115 ;
+    ct:exact_text "d)       The provisions of Section 12 (Confidentiality and                           User Data), Section 13 (Indemnity), Section 14                           (Limitation of Liability) and Section 15 (Dispute                           Resolution) will survive any termination or                           expiration of this Agreement." ;
+    ct:source_path "cuad/VITAMINSHOPPECOMINC_09_13_1999-EX-10.26-SPONSORSHIP AGREEMENT.txt" ;
+    ct:source_sha256 "0df2116cdf74ca2842b3ae8fe77864e2bb350d05d9dc1d967485a95833402ad5" ;
+    ct:start_char 34782 .
+
+ex:C090P0078 a ct:SourcePassage ;
+    ct:end_char 37108 ;
+    ct:exact_text "Client's termination of the Agreement in                           accordance with the previous sentence will not                           relieve Excite of its obligation to deliver any                           previously paid for but undelivered impressions.  If                           Excite achieves the annual impression delivery goal                           at any time during the Make-Good Period, the term of                           this Agreement will continue and Client shall                           immediately resume payment of the sponsorship and                           advertising fees specified in Section 7." ;
+    ct:source_path "cuad/VITAMINSHOPPECOMINC_09_13_1999-EX-10.26-SPONSORSHIP AGREEMENT.txt" ;
+    ct:source_sha256 "0df2116cdf74ca2842b3ae8fe77864e2bb350d05d9dc1d967485a95833402ad5" ;
+    ct:start_char 36470 .
+
+ex:C090P0084 a ct:SourcePassage ;
+    ct:end_char 38885 ;
+    ct:exact_text "d)       Upon the expiration or termination of this Agreement,                           each party will cease using the trademarks, service                           marks and/or trade names of the other except:" ;
+    ct:source_path "cuad/VITAMINSHOPPECOMINC_09_13_1999-EX-10.26-SPONSORSHIP AGREEMENT.txt" ;
+    ct:source_sha256 "0df2116cdf74ca2842b3ae8fe77864e2bb350d05d9dc1d967485a95833402ad5" ;
+    ct:start_char 38673 .
+
+ex:C090R0001 a ct:Rule ;
+    rdfs:label "Termination — source passage 34" ;
+    ct:kind "TERMINATION" ;
+    ct:subject_to ex:C090R0001Condition34 ;
+    ct:supported_by ex:C090P0034 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C090R0001Condition34 a ct:Condition ;
+    ct:description "If the privacy                           policy changes in a manner that has a material                           adverse effect on the value, functionality or                           implementation of the DeliverE message campaign for                           Client, Excite will notify Client, which will then                           have the option to cancel future DeliverE campaigns                           and both parties will be relieved of their                           obligations related to those canceled DeliverE                           campaigns, if Client, in its sole but reasonable                           discretion, finds such changed privacy policy                           objectionable." ;
+    ct:supported_by ex:C090P0034 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C090R0002 a ct:Rule ;
+    rdfs:label "Initial Term — source passage 73" ;
+    ct:kind "INITIAL_TERM" ;
+    ct:references_section ex:C090R0002Ref0 ;
+    ct:subject_to ex:C090R0002Condition73 ;
+    ct:supported_by ex:C090P0073 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C090R0002Condition73 a ct:Condition ;
+    ct:description "a)       Unless terminated earlier in accordance with the                           specific terms of this Agreement, the term of this                           Agreement will begin on the Launch Date and will not                           end until Excite displays a total of [*****]                           impressions of the Client advertising banners and                           promotional placements on the Excite Network as                           described in this Agreement and pushes [*****]                           emails using the email vehicles specified in Exhibit                           B.  Regardless of Excite's actual delivery of                           impressions, the term of this Agreement will not be                           shorter than [*****]  after the Launch Date,                           unless the Agreement is terminated earlier in                           accordance with the specific terms of this Agreement." ;
+    ct:supported_by ex:C090P0073 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C090R0002Ref0 a ct:Reference ;
+    rdfs:label "Exhibit                           B" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C090R0003 a ct:Rule ;
+    rdfs:label "Conditional Referenced Term — source passage 73" ;
+    ct:kind "CONDITIONAL_REFERENCED_TERM" ;
+    ct:references_section ex:C090R0003Ref0 ;
+    ct:subject_to ex:C090R0003Condition73 ;
+    ct:supported_by ex:C090P0073 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C090R0003Condition73 a ct:Condition ;
+    ct:description "a)       Unless terminated earlier in accordance with the                           specific terms of this Agreement, the term of this                           Agreement will begin on the Launch Date and will not                           end until Excite displays a total of [*****]                           impressions of the Client advertising banners and                           promotional placements on the Excite Network as                           described in this Agreement and pushes [*****]                           emails using the email vehicles specified in Exhibit                           B.  Regardless of Excite's actual delivery of                           impressions, the term of this Agreement will not be                           shorter than [*****]  after the Launch Date,                           unless the Agreement is terminated earlier in                           accordance with the specific terms of this Agreement." ;
+    ct:supported_by ex:C090P0073 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C090R0003Ref0 a ct:Reference ;
+    rdfs:label "Exhibit                           B" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C090R0004 a ct:Rule ;
+    rdfs:label "Termination — source passage 74" ;
+    ct:kind "TERMINATION" ;
+    ct:subject_to ex:C090R0004Condition74 ;
+    ct:supported_by ex:C090P0074 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C090R0004Condition74 a ct:Condition ;
+    ct:description "b)       Either party may terminate this Agreement if the                           other party materially breaches its obligations                           hereunder and such breach remains uncured for thirty                           (30) days following the notice to the breaching party                           of the breach." ;
+    ct:supported_by ex:C090P0074 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C090R0005 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 75" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:supported_by ex:C090P0075 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C090R0006 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 76" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:references_section ex:C090R0006Ref0,
+        ex:C090R0006Ref1,
+        ex:C090R0006Ref2,
+        ex:C090R0006Ref3 ;
+    ct:supported_by ex:C090P0076 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C090R0006Ref0 a ct:Reference ;
+    rdfs:label "Section 12" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C090R0006Ref1 a ct:Reference ;
+    rdfs:label "Section 13 (Indemnity)" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C090R0006Ref2 a ct:Reference ;
+    rdfs:label "Section 14" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C090R0006Ref3 a ct:Reference ;
+    rdfs:label "Section 15" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C090R0007 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 77" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:references_section ex:C090R0007Ref0,
+        ex:C090R0007Ref1 ;
+    ct:subject_to ex:C090R0007Condition77 ;
+    ct:supported_by ex:C090P0077 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C090R0007Condition77 a ct:Condition ;
+    ct:description "e)       Excite guarantees to deliver the annual impressions                           totals set forth in Exhibit C hereto.  If Excite                           fails to deliver the indicated number of impressions                           required during any annual period, Client may suspend                           (but not eliminate) its payments specified in Section                           7 for a maximum of sixty (60) days (the \"Make-Good                           Period) during which Excite will deliver the                           shortfall of such impressions.  The parties agree to                           cooperate in good faith to evaluate the quality and                           performance of the placements used to deliver the                           impressions during the Make-Good Period.  Until such                           shortfall is delivered, no impressions will be deemed                           delivered for the next annual period.  If Excite has                           not achieved the required annual impression delivery                           by the end of the Make-Good Period, Client may then                           terminate this Agreement upon written notice within                           ten (10) days following the end of the Make-Good                           Period.  " ;
+    ct:supported_by ex:C090P0077 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C090R0007Ref0 a ct:Reference ;
+    rdfs:label "Exhibit C" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C090R0007Ref1 a ct:Reference ;
+    rdfs:label "Section                           7" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C090R0008 a ct:Rule ;
+    rdfs:label "Termination — source passage 77" ;
+    ct:kind "TERMINATION" ;
+    ct:references_section ex:C090R0008Ref0,
+        ex:C090R0008Ref1 ;
+    ct:subject_to ex:C090R0008Condition77 ;
+    ct:supported_by ex:C090P0077 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C090R0008Condition77 a ct:Condition ;
+    ct:description "e)       Excite guarantees to deliver the annual impressions                           totals set forth in Exhibit C hereto.  If Excite                           fails to deliver the indicated number of impressions                           required during any annual period, Client may suspend                           (but not eliminate) its payments specified in Section                           7 for a maximum of sixty (60) days (the \"Make-Good                           Period) during which Excite will deliver the                           shortfall of such impressions.  The parties agree to                           cooperate in good faith to evaluate the quality and                           performance of the placements used to deliver the                           impressions during the Make-Good Period.  Until such                           shortfall is delivered, no impressions will be deemed                           delivered for the next annual period.  If Excite has                           not achieved the required annual impression delivery                           by the end of the Make-Good Period, Client may then                           terminate this Agreement upon written notice within                           ten (10) days following the end of the Make-Good                           Period.  " ;
+    ct:supported_by ex:C090P0077 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C090R0008Ref0 a ct:Reference ;
+    rdfs:label "Exhibit C" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C090R0008Ref1 a ct:Reference ;
+    rdfs:label "Section                           7" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C090R0009 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 78" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:references_section ex:C090R0009Ref0 ;
+    ct:supported_by ex:C090P0078 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C090R0009Ref0 a ct:Reference ;
+    rdfs:label "Section 7" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C090R0010 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 84" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:supported_by ex:C090P0084 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C090P0034 a ct:SourcePassage ;
+    ct:end_char 16079 ;
+    ct:exact_text "If the privacy                           policy changes in a manner that has a material                           adverse effect on the value, functionality or                           implementation of the DeliverE message campaign for                           Client, Excite will notify Client, which will then                           have the option to cancel future DeliverE campaigns                           and both parties will be relieved of their                           obligations related to those canceled DeliverE                           campaigns, if Client, in its sole but reasonable                           discretion, finds such changed privacy policy                           objectionable." ;
+    ct:source_path "cuad/VITAMINSHOPPECOMINC_09_13_1999-EX-10.26-SPONSORSHIP AGREEMENT.txt" ;
+    ct:source_sha256 "0df2116cdf74ca2842b3ae8fe77864e2bb350d05d9dc1d967485a95833402ad5" ;
+    ct:start_char 15357 .
+
+ex:C090P0074 a ct:SourcePassage ;
+    ct:end_char 34534 ;
+    ct:exact_text "b)       Either party may terminate this Agreement if the                           other party materially breaches its obligations                           hereunder and such breach remains uncured for thirty                           (30) days following the notice to the breaching party                           of the breach." ;
+    ct:source_path "cuad/VITAMINSHOPPECOMINC_09_13_1999-EX-10.26-SPONSORSHIP AGREEMENT.txt" ;
+    ct:source_sha256 "0df2116cdf74ca2842b3ae8fe77864e2bb350d05d9dc1d967485a95833402ad5" ;
+    ct:start_char 34203 .
+
+ct:Agreement a owl:Class ;
+    rdfs:label "Agreement" .
+
+ex:C090P0073 a ct:SourcePassage ;
+    ct:end_char 34187 ;
+    ct:exact_text "a)       Unless terminated earlier in accordance with the                           specific terms of this Agreement, the term of this                           Agreement will begin on the Launch Date and will not                           end until Excite displays a total of [*****]                           impressions of the Client advertising banners and                           promotional placements on the Excite Network as                           described in this Agreement and pushes [*****]                           emails using the email vehicles specified in Exhibit                           B.  Regardless of Excite's actual delivery of                           impressions, the term of this Agreement will not be                           shorter than [*****]  after the Launch Date,                           unless the Agreement is terminated earlier in                           accordance with the specific terms of this Agreement." ;
+    ct:source_path "cuad/VITAMINSHOPPECOMINC_09_13_1999-EX-10.26-SPONSORSHIP AGREEMENT.txt" ;
+    ct:source_sha256 "0df2116cdf74ca2842b3ae8fe77864e2bb350d05d9dc1d967485a95833402ad5" ;
+    ct:start_char 33228 .
+
+ex:C090P0077 a ct:SourcePassage ;
+    ct:end_char 36470 ;
+    ct:exact_text "e)       Excite guarantees to deliver the annual impressions                           totals set forth in Exhibit C hereto.  If Excite                           fails to deliver the indicated number of impressions                           required during any annual period, Client may suspend                           (but not eliminate) its payments specified in Section                           7 for a maximum of sixty (60) days (the \"Make-Good                           Period) during which Excite will deliver the                           shortfall of such impressions.  The parties agree to                           cooperate in good faith to evaluate the quality and                           performance of the placements used to deliver the                           impressions during the Make-Good Period.  Until such                           shortfall is delivered, no impressions will be deemed                           delivered for the next annual period.  If Excite has                           not achieved the required annual impression delivery                           by the end of the Make-Good Period, Client may then                           terminate this Agreement upon written notice within                           ten (10) days following the end of the Make-Good                           Period.  " ;
+    ct:source_path "cuad/VITAMINSHOPPECOMINC_09_13_1999-EX-10.26-SPONSORSHIP AGREEMENT.txt" ;
+    ct:source_sha256 "0df2116cdf74ca2842b3ae8fe77864e2bb350d05d9dc1d967485a95833402ad5" ;
+    ct:start_char 35131 .
+
+ct:Condition a owl:Class ;
+    rdfs:label "Condition" .
+
+ct:SourcePassage a owl:Class ;
+    rdfs:label "SourcePassage" .
+
+ct:Reference a owl:Class ;
+    rdfs:label "Reference" .
+
+ct:Rule a owl:Class ;
+    rdfs:label "Rule" .
+

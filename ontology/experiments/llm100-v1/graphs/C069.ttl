@@ -1,0 +1,1917 @@
+@prefix ct: <https://cimulink.local/ontology/contract-terms/0.1#> .
+@prefix ex: <https://cimulink.local/ontology/llm100-v1/> .
+@prefix meta: <https://cimulink.local/ontology/extraction#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ct: a owl:Ontology ;
+    rdfs:comment "Partial five-contract development sample. No claim of complete contract coverage or legal correctness." .
+
+ct:agreement_effective_from a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:applies_within a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:calendar_date_status a owl:DatatypeProperty .
+
+ct:coverage a owl:DatatypeProperty .
+
+ct:description a owl:DatatypeProperty .
+
+ct:duration a owl:DatatypeProperty .
+
+ct:duration_status a owl:DatatypeProperty .
+
+ct:end_char a owl:DatatypeProperty .
+
+ct:end_date_status a owl:DatatypeProperty .
+
+ct:ends_on_event a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:exact_text a owl:DatatypeProperty .
+
+ct:has_party a owl:ObjectProperty ;
+    rdfs:domain ct:Agreement ;
+    rdfs:range ct:Party .
+
+ct:has_rule a owl:ObjectProperty ;
+    rdfs:domain ct:Agreement ;
+    rdfs:range ct:Rule .
+
+ct:kind a owl:DatatypeProperty .
+
+ct:notice_actor a owl:DatatypeProperty .
+
+ct:notice_form a owl:DatatypeProperty .
+
+ct:notice_period_status a owl:DatatypeProperty .
+
+ct:qualifies a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Rule .
+
+ct:references_section a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:renewal_count a owl:DatatypeProperty .
+
+ct:resolution_status a owl:DatatypeProperty .
+
+ct:resolved_to a owl:ObjectProperty ;
+    rdfs:domain ct:Reference ;
+    rdfs:range ct:SourcePassage .
+
+ct:source_path a owl:DatatypeProperty .
+
+ct:source_sha256 a owl:DatatypeProperty .
+
+ct:start_char a owl:DatatypeProperty .
+
+ct:starts_from a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:stated_end_date a owl:DatatypeProperty .
+
+ct:subject_to a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Condition .
+
+ct:supported_by a owl:ObjectProperty ;
+    rdfs:range ct:SourcePassage .
+
+ct:termination_notice a owl:DatatypeProperty .
+
+ex:C069 a ct:Agreement ;
+    rdfs:label "PhasebioPharmaceuticalsInc_20200330_10-K_EX-10.21_12086810_EX-10.21_Development Agreement.txt" ;
+    ct:coverage "LOCAL_LLM_PROPOSED_PARTIAL; NOT_HUMAN_REVIEWED" ;
+    ct:has_rule ex:C069R0001,
+        ex:C069R0002,
+        ex:C069R0003,
+        ex:C069R0004,
+        ex:C069R0005,
+        ex:C069R0006,
+        ex:C069R0007,
+        ex:C069R0008,
+        ex:C069R0009,
+        ex:C069R0010,
+        ex:C069R0011,
+        ex:C069R0012,
+        ex:C069R0013,
+        ex:C069R0014,
+        ex:C069R0015,
+        ex:C069R0016,
+        ex:C069R0017,
+        ex:C069R0018,
+        ex:C069R0019,
+        ex:C069R0020,
+        ex:C069R0021,
+        ex:C069R0022,
+        ex:C069R0023,
+        ex:C069R0024,
+        ex:C069R0025,
+        ex:C069R0026,
+        ex:C069R0027,
+        ex:C069R0028,
+        ex:C069R0029,
+        ex:C069R0030,
+        ex:C069R0031,
+        ex:C069R0032,
+        ex:C069R0033,
+        ex:C069R0034,
+        ex:C069R0035,
+        ex:C069R0036,
+        ex:C069R0037,
+        ex:C069R0038,
+        ex:C069R0039,
+        ex:C069R0040,
+        ex:C069R0041,
+        ex:C069R0042,
+        ex:C069R0043,
+        ex:C069R0044,
+        ex:C069R0045,
+        ex:C069R0046,
+        ex:C069R0047,
+        ex:C069R0048,
+        ex:C069R0049,
+        ex:C069R0050,
+        ex:C069R0051,
+        ex:C069R0052,
+        ex:C069R0053,
+        ex:C069R0054,
+        ex:C069R0055,
+        ex:C069R0056,
+        ex:C069R0057,
+        ex:C069R0058,
+        ex:C069R0059,
+        ex:C069R0060,
+        ex:C069R0061,
+        ex:C069R0062,
+        ex:C069R0063,
+        ex:C069R0064,
+        ex:C069R0065,
+        ex:C069R0066,
+        ex:C069R0067,
+        ex:C069R0068,
+        ex:C069R0069,
+        ex:C069R0070,
+        ex:C069R0071,
+        ex:C069R0072,
+        ex:C069R0073,
+        ex:C069R0074,
+        ex:C069R0075 ;
+    ct:source_path "cuad/PhasebioPharmaceuticalsInc_20200330_10-K_EX-10.21_12086810_EX-10.21_Development Agreement.txt" ;
+    ct:source_sha256 "d21fe55a3227fc7092016602c707544b6d66bbd5686d19402204d1cd92945517" ;
+    meta:model_digest "0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0" .
+
+ct:Party a owl:Class ;
+    rdfs:label "Party" .
+
+ex:C069P0082 a ct:SourcePassage ;
+    ct:end_char 18623 ;
+    ct:exact_text "1.1.60 \"Development Term\" means the period commencing on the Effective Date and ending on the later of (a) the latest of the Completion Dates of the Clinical Trials, and (b) the date on which all efforts in pursuit of Regulatory Approval of the Product for Indication have been concluded or terminated." ;
+    ct:source_path "cuad/PhasebioPharmaceuticalsInc_20200330_10-K_EX-10.21_12086810_EX-10.21_Development Agreement.txt" ;
+    ct:source_sha256 "d21fe55a3227fc7092016602c707544b6d66bbd5686d19402204d1cd92945517" ;
+    ct:start_char 18321 .
+
+ex:C069P0091 a ct:SourcePassage ;
+    ct:end_char 20372 ;
+    ct:exact_text "1.1.68 \"Exclusive Period\" means, subject to the earlier termination of the AZ License, (a) in the case of the conduct of human clinical trials with respect to a Competing Product, the period beginning on the Effective Date and ending on November 21, 2022, and (b) in the case of the sale or offer for sale of a Competing Product, the period beginning on the Effective Date and ending on November 21, 2024." ;
+    ct:source_path "cuad/PhasebioPharmaceuticalsInc_20200330_10-K_EX-10.21_12086810_EX-10.21_Development Agreement.txt" ;
+    ct:source_sha256 "d21fe55a3227fc7092016602c707544b6d66bbd5686d19402204d1cd92945517" ;
+    ct:start_char 19967 .
+
+ex:C069P0296 a ct:SourcePassage ;
+    ct:end_char 75086 ;
+    ct:exact_text "3.2.1.3 Each Party will enter, and will ensure that its Affiliates enter, and each Approved CRO will enter, into an agreement with each study site; such an agreement will be substantially in the form to be provided by PB and agreed upon by the Parties within [***] following the Effective Date (the \"Clinical Trial Agreement\") (upon execution of such Clinical Trial Agreement, such study site will be deemed a \"Site\"). If a study site requires any material changes to such form Clinical Trial Agreement, SFJ with regard to the European Clinical Trial Countries and the SFJ Territory and PB with regard to the US, will inform the JDC and seek JDC approval of such change, and the JDC will not unreasonably withhold such approval. For clarity, each Clinical Trial Agreement will be on commercially reasonable and customary terms, consistent with industry standards for similar agreements and sufficient to enable such Party to comply with its obligations hereunder with respect to such Clinical Trial, including, but not limited to, Section 2.2.2, the terms pertaining to ownership of Intellectual Property and publications, and treatment of Confidential Information." ;
+    ct:source_path "cuad/PhasebioPharmaceuticalsInc_20200330_10-K_EX-10.21_12086810_EX-10.21_Development Agreement.txt" ;
+    ct:source_sha256 "d21fe55a3227fc7092016602c707544b6d66bbd5686d19402204d1cd92945517" ;
+    ct:start_char 73921 .
+
+ex:C069P0303 a ct:SourcePassage ;
+    ct:end_char 76819 ;
+    ct:exact_text "3.2.2.3 If a Party terminates a Site, such Party will inform the JDC with the reason for such termination and if reasonably practicable, such notice will be provided reasonably in advance of such termination." ;
+    ct:source_path "cuad/PhasebioPharmaceuticalsInc_20200330_10-K_EX-10.21_12086810_EX-10.21_Development Agreement.txt" ;
+    ct:source_sha256 "d21fe55a3227fc7092016602c707544b6d66bbd5686d19402204d1cd92945517" ;
+    ct:start_char 76611 .
+
+ex:C069P0347 a ct:SourcePassage ;
+    ct:end_char 89952 ;
+    ct:exact_text "3.11.1 PB will use Commercially Reasonable Efforts to keep the Sites participating in the Phase 3 Trial in the US, and SFJ will use Commercially Reasonable Efforts to keep the Sites participating in each Clinical Trial in European Clinical Trial Countries and the SFJ Territory, operational, including continuing to dose Subjects with the Product in accordance with the Protocol and conducting any follow-up work required, until the Completion Date for such Clinical Trial. As a Clinical Trial is completed or otherwise terminated at each Site for which a Party is responsible, such Party will close out such Clinical Trial as specified in the Protocol, including performing all Subject follow-up and providing the other Party with all Clinical Trial data not provided as of such date. For clarity, copies of documents, including any CRFs and the Clinical Trials Master File will be made available and/or transferred to the other Party upon the other Party's request, or at the other Party's option, destroyed (provided that such destruction is in compliance with ICH guidelines). Notwithstanding the foregoing, neither Party will provide the other Party with any Personally Identifiable Information." ;
+    ct:source_path "cuad/PhasebioPharmaceuticalsInc_20200330_10-K_EX-10.21_12086810_EX-10.21_Development Agreement.txt" ;
+    ct:source_sha256 "d21fe55a3227fc7092016602c707544b6d66bbd5686d19402204d1cd92945517" ;
+    ct:start_char 88752 .
+
+ex:C069P0466 a ct:SourcePassage ;
+    ct:end_char 129557 ;
+    ct:exact_text "5.4.2 Chairperson. The JDC chairperson (\"JDC Chairperson\") shall be designated from the Parties' JDC Representatives and shall serve for a term of [***]. [***] shall" ;
+    ct:source_path "cuad/PhasebioPharmaceuticalsInc_20200330_10-K_EX-10.21_12086810_EX-10.21_Development Agreement.txt" ;
+    ct:source_sha256 "d21fe55a3227fc7092016602c707544b6d66bbd5686d19402204d1cd92945517" ;
+    ct:start_char 129392 .
+
+ex:C069P0564 a ct:SourcePassage ;
+    ct:end_char 156391 ;
+    ct:exact_text "is not effective or applicable, or such prohibition, breach, default or termination is no longer applicable or is waived, and to the extent severable, shall attach immediately to any portion of the SFJ Collateral that does not result in such consequences or (2) any of PB's rights, title or interest in any of the outstanding voting capital stock or other ownership interests of a CFC in excess of 65% of the voting power of all classes of capital stock or other ownership interests of CFC entitled to vote. This Agreement shall create a continuing security interest in the SFJ Collateral which shall remain in effect until all PB Obligations (other than contingent indemnity obligations) have been paid or otherwise satisfied in full in accordance with this Agreement and/or, if applicable, the Program Transfer Agreement. Upon payment or other satisfaction of all PB Obligations (other than contingent obligation), SFJ shall, at the sole cost and expense of PB, release its Liens in the SFJ Collateral and all rights therein shall revert to PB." ;
+    ct:source_path "cuad/PhasebioPharmaceuticalsInc_20200330_10-K_EX-10.21_12086810_EX-10.21_Development Agreement.txt" ;
+    ct:source_sha256 "d21fe55a3227fc7092016602c707544b6d66bbd5686d19402204d1cd92945517" ;
+    ct:start_char 155345 .
+
+ex:C069P0652 a ct:SourcePassage ;
+    ct:end_char 184264 ;
+    ct:exact_text "8.2 Form of Warrant. The Warrant shall in the form attached hereto as Exhibit H, shall have a term of ten (10) years, and shall contain \"net-exercise\" issuance provisions." ;
+    ct:source_path "cuad/PhasebioPharmaceuticalsInc_20200330_10-K_EX-10.21_12086810_EX-10.21_Development Agreement.txt" ;
+    ct:source_sha256 "d21fe55a3227fc7092016602c707544b6d66bbd5686d19402204d1cd92945517" ;
+    ct:start_char 184093 .
+
+ex:C069P0655 a ct:SourcePassage ;
+    ct:end_char 184547 ;
+    ct:exact_text "9.1 Accounting. Each Party will maintain materially complete and accurate accounting records related to this Agreement in accordance with GAAP. Each Party will retain such records for [***] after the earlier of expiration or early termination of this Agreement." ;
+    ct:source_path "cuad/PhasebioPharmaceuticalsInc_20200330_10-K_EX-10.21_12086810_EX-10.21_Development Agreement.txt" ;
+    ct:source_sha256 "d21fe55a3227fc7092016602c707544b6d66bbd5686d19402204d1cd92945517" ;
+    ct:start_char 184286 .
+
+ex:C069P0659 a ct:SourcePassage ;
+    ct:end_char 186545 ;
+    ct:exact_text "10.1 Confidentiality. Except to the extent expressly authorized by this Agreement or otherwise agreed in writing by the Parties (including, if applicable, in the Program Transfer Agreement), each Party (each, a \"Receiving Party\") agrees that, during the Term and for the [***] period following the expiration or termination of this Agreement (except that the obligations will survive thereafter with respect to any Confidential Information that constitutes a trade secret under Applicable Law) or such longer periods for which such Confidential Information may be maintained pursuant to ARTICLE 9, it will keep confidential and will not publish or otherwise disclose and will not use for any purpose other than as provided for in this Agreement or, if applicable, the Program Transfer Agreement (which includes the exercise of any rights or the performance of any obligations hereunder or thereunder) any Confidential Information furnished to it by or on behalf of the other Party (each, a \"Disclosing Party\") or its Affiliates in connection with this Agreement or, if applicable, the Program Transfer Agreement. The foregoing obligations will not apply to any portion of such information or materials that the Receiving Party can demonstrate:" ;
+    ct:source_path "cuad/PhasebioPharmaceuticalsInc_20200330_10-K_EX-10.21_12086810_EX-10.21_Development Agreement.txt" ;
+    ct:source_sha256 "d21fe55a3227fc7092016602c707544b6d66bbd5686d19402204d1cd92945517" ;
+    ct:start_char 185302 .
+
+ex:C069P0745 a ct:SourcePassage ;
+    ct:end_char 228824 ;
+    ct:exact_text "12.3.2.4 Professional Liability: Any subcontractor, including any Permitted Third Party, who provides professional services to such Party for the Clinical Trials, will obtain Professional Liability Insurance in lieu of Clinical Trial Insurance, with a minimum limit of [***] dollars ($[***]) per occurrence. Coverage must be maintained for at least [***] after the later of (i) expiration or early termination of this Agreement and (ii) release of the last Subject from the Clinical Trials." ;
+    ct:source_path "cuad/PhasebioPharmaceuticalsInc_20200330_10-K_EX-10.21_12086810_EX-10.21_Development Agreement.txt" ;
+    ct:source_sha256 "d21fe55a3227fc7092016602c707544b6d66bbd5686d19402204d1cd92945517" ;
+    ct:start_char 228334 .
+
+ex:C069P0781 a ct:SourcePassage ;
+    ct:end_char 240338 ;
+    ct:exact_text "14.1 Term. The term of this Agreement (the \"Term\") will commence on the Effective Date and will expire upon the earliest of (i) termination of this Agreement in accordance with Section 14.2, or (ii) the date of payment of the last Approval Payment due based on all applicable Regulatory Approvals which have been received." ;
+    ct:source_path "cuad/PhasebioPharmaceuticalsInc_20200330_10-K_EX-10.21_12086810_EX-10.21_Development Agreement.txt" ;
+    ct:source_sha256 "d21fe55a3227fc7092016602c707544b6d66bbd5686d19402204d1cd92945517" ;
+    ct:start_char 240016 .
+
+ex:C069P0782 a ct:SourcePassage ;
+    ct:end_char 240357 ;
+    ct:exact_text "14.2 Termination." ;
+    ct:source_path "cuad/PhasebioPharmaceuticalsInc_20200330_10-K_EX-10.21_12086810_EX-10.21_Development Agreement.txt" ;
+    ct:source_sha256 "d21fe55a3227fc7092016602c707544b6d66bbd5686d19402204d1cd92945517" ;
+    ct:start_char 240340 .
+
+ex:C069P0783 a ct:SourcePassage ;
+    ct:end_char 240389 ;
+    ct:exact_text "14.2.1 Termination for Breach." ;
+    ct:source_path "cuad/PhasebioPharmaceuticalsInc_20200330_10-K_EX-10.21_12086810_EX-10.21_Development Agreement.txt" ;
+    ct:source_sha256 "d21fe55a3227fc7092016602c707544b6d66bbd5686d19402204d1cd92945517" ;
+    ct:start_char 240359 .
+
+ex:C069P0791 a ct:SourcePassage ;
+    ct:end_char 245744 ;
+    ct:exact_text "14.2.3 Termination by SFJ for Material Adverse Event. SFJ may terminate this Agreement at any time in the event of a Material Adverse Event immediately upon written notice to PB. In the event that SFJ terminates this Agreement pursuant to this Section 14.2.3, then, if PB elects to continue development of the Product and obtains Regulatory Approval following such termination, in exchange for purchasing the Trial Data Package including the Research Results included therein as set forth in Section 11.1.1.4, PB shall remain obligated to pay SFJ an amount equal to fifty percent (50%) of the Approval Payments (as adjusted as set forth in Section 6.2, subject, to the extent applicable, to Sections 2.3.3 and 3.12.2) that become due and payable under ARTICLE 6 at such time as they become due and payable (if ever) pursuant to ARTICLE 6 (or, as applicable, 50% of any Buy-Out Payment that PB elects to pay pursuant to Section 6.7), provided that such Approval Payments (or Buy-Out Payment, as applicable) shall also be adjusted as set forth in Section 6.2." ;
+    ct:source_path "cuad/PhasebioPharmaceuticalsInc_20200330_10-K_EX-10.21_12086810_EX-10.21_Development Agreement.txt" ;
+    ct:source_sha256 "d21fe55a3227fc7092016602c707544b6d66bbd5686d19402204d1cd92945517" ;
+    ct:start_char 244687 .
+
+ex:C069P0793 a ct:SourcePassage ;
+    ct:end_char 245867 ;
+    ct:exact_text "14.2.4 Termination for Failure to Receive Regulatory Approval." ;
+    ct:source_path "cuad/PhasebioPharmaceuticalsInc_20200330_10-K_EX-10.21_12086810_EX-10.21_Development Agreement.txt" ;
+    ct:source_sha256 "d21fe55a3227fc7092016602c707544b6d66bbd5686d19402204d1cd92945517" ;
+    ct:start_char 245805 .
+
+ex:C069P0796 a ct:SourcePassage ;
+    ct:end_char 248004 ;
+    ct:exact_text "14.2.4.3 In the event that this Agreement is terminated pursuant to this Section 14.2.4, then, if PB elects to continue development of the Product and obtains Regulatory Approval following such termination, in exchange for purchasing the Trial Data Package including the Research Results included therein as set forth in Section 11.1.1.4, PB shall remain obligated to make any Approval Payments that become due and payable pursuant to ARTICLE 6 at such time that such payments become due and payable (if ever) pursuant to ARTICLE 6 (except to the extent of the amount of any Buy-Out Payment paid by PB pursuant to Section 6.7), provided that such Approval Payments (or Buy-Out Payment, as applicable) shall be adjusted as set forth in Section 6.2." ;
+    ct:source_path "cuad/PhasebioPharmaceuticalsInc_20200330_10-K_EX-10.21_12086810_EX-10.21_Development Agreement.txt" ;
+    ct:source_sha256 "d21fe55a3227fc7092016602c707544b6d66bbd5686d19402204d1cd92945517" ;
+    ct:start_char 247257 .
+
+ex:C069P0797 a ct:SourcePassage ;
+    ct:end_char 248645 ;
+    ct:exact_text "14.2.5 Termination for Bankruptcy. Either Party may terminate this Agreement upon written notice to the other Party if the other Party makes an assignment for the benefit of creditors, or commences a case or proceeding under any bankruptcy, reorganization, insolvency, or similar laws, has a trustee or receiver or similar officer of any court appointed for such Party, or for substantial part of the property of such Party, or bankruptcy, reorganization, insolvency, or liquidation proceedings are instituted by or against such Party without such proceedings being dismissed, in each of the foregoing cases for a period of at least [***]." ;
+    ct:source_path "cuad/PhasebioPharmaceuticalsInc_20200330_10-K_EX-10.21_12086810_EX-10.21_Development Agreement.txt" ;
+    ct:source_sha256 "d21fe55a3227fc7092016602c707544b6d66bbd5686d19402204d1cd92945517" ;
+    ct:start_char 248006 .
+
+ex:C069P0798 a ct:SourcePassage ;
+    ct:end_char 249270 ;
+    ct:exact_text "14.2.5.1 In the event that PB terminates this Agreement pursuant to this Section 14.2.5, then, if PB elects to continue development of the Product and obtains Regulatory Approval following such termination, in exchange for purchasing the Trial Data Package including the Research Results included therein as set forth in Section 11.1.1.4, PB shall remain obligated to pay to SFJ any Approval Payments that become due and payable pursuant to ARTICLE 6 at such time as such Approval Payments become due and payable (if ever) pursuant to ARTICLE 6 (except to the extent of the amount of any Buy-Out Payment paid by PB pursuant" ;
+    ct:source_path "cuad/PhasebioPharmaceuticalsInc_20200330_10-K_EX-10.21_12086810_EX-10.21_Development Agreement.txt" ;
+    ct:source_sha256 "d21fe55a3227fc7092016602c707544b6d66bbd5686d19402204d1cd92945517" ;
+    ct:start_char 248647 .
+
+ex:C069P0803 a ct:SourcePassage ;
+    ct:end_char 252055 ;
+    ct:exact_text "PB or its successor (whose performance shall be guaranteed by PB) shall be obligated to continue to exercise Commercially Reasonable Effort to develop the Product and seek Regulatory Approval as set forth herein following the date of such termination including the Trial Data Package including the Research Results included therein as set forth in Section 11.1.1.4, PB shall remain obligated to pay any Approval Payments that become due and payable pursuant to ARTICLE 6 at such time as such Approval Payments become due and payable (if ever) pursuant to ARTICLE 6 (except to the extent of the amount of any Buy-Out Payment paid by PB pursuant to Section 6.7), provided that such Approval Payments (or Buy-Out Payment, as applicable) shall be adjusted as set forth in Section 6.2, and shall be reduced by the amount previously paid to SFJ as set forth in this Section 14.2.6." ;
+    ct:source_path "cuad/PhasebioPharmaceuticalsInc_20200330_10-K_EX-10.21_12086810_EX-10.21_Development Agreement.txt" ;
+    ct:source_sha256 "d21fe55a3227fc7092016602c707544b6d66bbd5686d19402204d1cd92945517" ;
+    ct:start_char 251180 .
+
+ex:C069P0807 a ct:SourcePassage ;
+    ct:end_char 254441 ;
+    ct:exact_text "14.2.8 Termination for Certain Breaches/Actions." ;
+    ct:source_path "cuad/PhasebioPharmaceuticalsInc_20200330_10-K_EX-10.21_12086810_EX-10.21_Development Agreement.txt" ;
+    ct:source_sha256 "d21fe55a3227fc7092016602c707544b6d66bbd5686d19402204d1cd92945517" ;
+    ct:start_char 254393 .
+
+ex:C069P0809 a ct:SourcePassage ;
+    ct:end_char 256817 ;
+    ct:exact_text "In the event that SFJ terminates this Agreement pursuant to this Section 14.2.8.1, then (a) in exchange for purchasing the Trial Data Package including the Research Results included therein as set forth in Section 11.1.1.4, PB will pay SFJ, within [***] of the date of termination, an amount equal to one hundred fifty percent (150%) of Development Costs paid or incurred to PB by SFJ prior to such termination, and (b) if PB elects to continue development of the Product and obtains Regulatory Approval following such termination, PB shall remain obligated to pay to SFJ any Approval Payments that become due and payable pursuant to ARTICLE 6 at such time that such payments become due and payable (if ever) pursuant to ARTICLE 6 (except to the extent of the amount of any Buy-Out Payment paid by PB pursuant to Section 6.7), provided that such Approval Payments (or Buy-Out Payment, as applicable) shall be adjusted as set forth in Section 6.2, and reduced by the amount previously paid by PB to SFJ pursuant to this Section 14.2.8.1." ;
+    ct:source_path "cuad/PhasebioPharmaceuticalsInc_20200330_10-K_EX-10.21_12086810_EX-10.21_Development Agreement.txt" ;
+    ct:source_sha256 "d21fe55a3227fc7092016602c707544b6d66bbd5686d19402204d1cd92945517" ;
+    ct:start_char 255781 .
+
+ex:C069P0816 a ct:SourcePassage ;
+    ct:end_char 261337 ;
+    ct:exact_text "written notice to PB if PB does not cure such Adverse Patent Impact within a period of six (6) months from the date of SFJ's notice to PB of an Adverse Patent Impact. In the event that SFJ terminates this Agreement pursuant to this Section 14.2.9, then in exchange for purchasing the Trial Data Package including the Research Results included therein as set forth in Section 11.1.1.4, PB shall pay to SFJ, within [***] of the date of termination, an amount equal to all Development Costs paid or incurred by SFJ as of the date of termination." ;
+    ct:source_path "cuad/PhasebioPharmaceuticalsInc_20200330_10-K_EX-10.21_12086810_EX-10.21_Development Agreement.txt" ;
+    ct:source_sha256 "d21fe55a3227fc7092016602c707544b6d66bbd5686d19402204d1cd92945517" ;
+    ct:start_char 260795 .
+
+ex:C069P0819 a ct:SourcePassage ;
+    ct:end_char 263093 ;
+    ct:exact_text "14.3 Certain Additional Consequences of Termination. In the event of any termination of this Agreement pursuant to Section 14.2, then, if SFJ has not caused a Program Transfer to occur pursuant to Section 3.20:" ;
+    ct:source_path "cuad/PhasebioPharmaceuticalsInc_20200330_10-K_EX-10.21_12086810_EX-10.21_Development Agreement.txt" ;
+    ct:source_sha256 "d21fe55a3227fc7092016602c707544b6d66bbd5686d19402204d1cd92945517" ;
+    ct:start_char 262883 .
+
+ex:C069P0825 a ct:SourcePassage ;
+    ct:end_char 265851 ;
+    ct:exact_text "14.3.4 at PB's written request and election in PB's sole discretion, SFJ shall and hereby does, and shall cause its Affiliates to either: (i) wind down in accordance with Applicable Law and observing applicable ethical and regulatory guidelines any or all Clinical Trials being conducted by or on behalf of SFJ or its Affiliate as of the effective date of termination, at SFJ's cost and expense; or (ii) (x) transfer control to PB of any or all Clinical Trials being conducted by or on behalf of SFJ or its Affiliate as of the effective date of termination and (y) continue to conduct such Clinical Trials being conducted by or on behalf of SFJ or an Affiliate as of the effective date of termination for up to [***] to enable such transfer to be completed without interruption of any such Clinical Trial, in each case ((x) and (y)), at PB's cost and expense; and" ;
+    ct:source_path "cuad/PhasebioPharmaceuticalsInc_20200330_10-K_EX-10.21_12086810_EX-10.21_Development Agreement.txt" ;
+    ct:source_sha256 "d21fe55a3227fc7092016602c707544b6d66bbd5686d19402204d1cd92945517" ;
+    ct:start_char 264988 .
+
+ex:C069P0827 a ct:SourcePassage ;
+    ct:end_char 266451 ;
+    ct:exact_text "14.4 Surviving Obligations." ;
+    ct:source_path "cuad/PhasebioPharmaceuticalsInc_20200330_10-K_EX-10.21_12086810_EX-10.21_Development Agreement.txt" ;
+    ct:source_sha256 "d21fe55a3227fc7092016602c707544b6d66bbd5686d19402204d1cd92945517" ;
+    ct:start_char 266424 .
+
+ex:C069P0829 a ct:SourcePassage ;
+    ct:end_char 267375 ;
+    ct:exact_text "14.4.2 Exclusive Remedy. Notwithstanding anything herein to the contrary, termination of this Agreement by a Party will be without prejudice to other remedies such Party may have at law or equity; provided that the payment by PB to SFJ of the amounts specified as being payable upon a given termination in Section 14.2 shall be in lieu of any claim for damages that SFJ may have arising out of or in connection with the circumstances that formed the basis for such termination.." ;
+    ct:source_path "cuad/PhasebioPharmaceuticalsInc_20200330_10-K_EX-10.21_12086810_EX-10.21_Development Agreement.txt" ;
+    ct:source_sha256 "d21fe55a3227fc7092016602c707544b6d66bbd5686d19402204d1cd92945517" ;
+    ct:start_char 266897 .
+
+ex:C069P0830 a ct:SourcePassage ;
+    ct:end_char 267593 ;
+    ct:exact_text "14.4.3 Surviving Obligations. The following provisions of this Agreement, together with any other provisions that expressly specify that they survive, will survive expiration or earlier termination of this Agreement:" ;
+    ct:source_path "cuad/PhasebioPharmaceuticalsInc_20200330_10-K_EX-10.21_12086810_EX-10.21_Development Agreement.txt" ;
+    ct:source_sha256 "d21fe55a3227fc7092016602c707544b6d66bbd5686d19402204d1cd92945517" ;
+    ct:start_char 267377 .
+
+ex:C069P0833 a ct:SourcePassage ;
+    ct:end_char 268276 ;
+    ct:exact_text "14.4.3.2 solely in the case of termination of this Agreement after payment by SFJ to PB of the Initial Development Cost Payment on the Initial Funding Date, but not in the case of expiration of this Agreement, Sections 3.20, 6.1- 6.7, 7.1-7.7 (in the case of such Sections 7.1-7.7, such provisions shall terminate only after all PB Obligations, other than contingent indemnity obligations, have been paid to SFJ or otherwise satisfied in accordance with this Agreement in full), 14.2 and 14.3." ;
+    ct:source_path "cuad/PhasebioPharmaceuticalsInc_20200330_10-K_EX-10.21_12086810_EX-10.21_Development Agreement.txt" ;
+    ct:source_sha256 "d21fe55a3227fc7092016602c707544b6d66bbd5686d19402204d1cd92945517" ;
+    ct:start_char 267783 .
+
+ex:C069R0001 a ct:Rule ;
+    rdfs:label "Initial Term — source passage 35" ;
+    ct:kind "INITIAL_TERM" ;
+    ct:subject_to ex:C069R0001Condition35 ;
+    ct:supported_by ex:C069P0035 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C069R0001Condition35 a ct:Condition ;
+    ct:description "1.1.21 \"Calendar Quarter\" means each successive period of three (3) consecutive calendar months ending on March 31, June 30, September 30 and December 31; provided, that, the (a) the first Calendar Quarter shall begin on the Effective Date and end on the last day of the Calendar Quarter in which the Effective Date falls, and (b) the final Calendar Quarter shall end on the last day of the Term." ;
+    ct:supported_by ex:C069P0035 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C069R0002 a ct:Rule ;
+    rdfs:label "Conditional Referenced Term — source passage 41" ;
+    ct:kind "CONDITIONAL_REFERENCED_TERM" ;
+    ct:subject_to ex:C069R0002Condition41 ;
+    ct:supported_by ex:C069P0041 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C069R0002Condition41 a ct:Condition ;
+    ct:description "immediately prior thereto ceasing to represent, or being converted into or exchanged for voting securities that do not represent, at least fifty percent (50%) of the combined voting power of the voting securities of the surviving entity or the parent corporation of the surviving entity immediately after such merger, reorganization or consolidation, (b) a transaction in which a Third Party becomes the beneficial owner of fifty percent (50%) or more of the combined voting power of the outstanding securities of PB, other than through the issuance of voting securities for the purpose of raising financing to one or more financial or institutional investors that are not then controlled by an entity engaged in the development or commercialization of pharmaceutical or biotechnology products, or (c) the sale or other transfer of all or substantially all of PB's business or assets relating to the Product for use in the Indication. A Licensing Transaction shall not constitute a Change of Control, unless such Licensing Transaction includes the grant of US Commercialization Rights in which event such Licensing Transaction shall be deemed to be a Change in Control." ;
+    ct:supported_by ex:C069P0041 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C069R0003 a ct:Rule ;
+    rdfs:label "Conditional Referenced Term — source passage 62" ;
+    ct:kind "CONDITIONAL_REFERENCED_TERM" ;
+    ct:subject_to ex:C069R0003Condition62 ;
+    ct:supported_by ex:C069P0062 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C069R0003Condition62 a ct:Condition ;
+    ct:description "1.1.44 \"Completion Date\" means, as to a particular Clinical Trial, the earlier of (a) the date of final database lock for such Clinical Trial and (b) the date such Clinical Trial or this Agreement is terminated." ;
+    ct:supported_by ex:C069P0062 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C069R0004 a ct:Rule ;
+    rdfs:label "Conditional Referenced Term — source passage 82" ;
+    ct:kind "CONDITIONAL_REFERENCED_TERM" ;
+    ct:supported_by ex:C069P0082 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C069R0005 a ct:Rule ;
+    rdfs:label "Initial Term — source passage 91" ;
+    ct:kind "INITIAL_TERM" ;
+    ct:supported_by ex:C069P0091 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C069R0006 a ct:Rule ;
+    rdfs:label "Initial Term — source passage 296" ;
+    ct:kind "INITIAL_TERM" ;
+    ct:references_section ex:C069R0006Ref0 ;
+    ct:supported_by ex:C069P0296 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C069R0006Ref0 a ct:Reference ;
+    rdfs:label "Section 2.2.2" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C069R0007 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 303" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:supported_by ex:C069P0303 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C069R0008 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 345" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:subject_to ex:C069R0008Condition345 ;
+    ct:supported_by ex:C069P0345 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C069R0008Condition345 a ct:Condition ;
+    ct:description "3.10.2 Each Party will promptly notify the JDC, in writing, of any worker claims of suspected occupational illnesses related to working with the Product, regardless of whether such claims are received during the Development Term or any time thereafter. After termination of this Agreement for whatever reasons, or expiration of this Agreement, each Party will promptly notify the other Party of any worker claims of suspected occupational illnesses related to working with the Product during the Development Term, of which it has knowledge." ;
+    ct:supported_by ex:C069P0345 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C069R0009 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 347" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:supported_by ex:C069P0347 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C069R0010 a ct:Rule ;
+    rdfs:label "Termination — source passage 352" ;
+    ct:kind "TERMINATION" ;
+    ct:references_section ex:C069R0010Ref0,
+        ex:C069R0010Ref1 ;
+    ct:subject_to ex:C069R0010Condition352 ;
+    ct:supported_by ex:C069P0352 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C069R0010Condition352 a ct:Condition ;
+    ct:description "3.12.1 Timely performance of the Clinical Trials and receipt of Regulatory Approval is important to the success of this Agreement. Each Party will use Commercially Reasonable Efforts to complete the Clinical Trials according to the Timeline and, if the Clinical Trials is successful, to obtain Regulatory Approval, in such Party's Territory. In the event that either Party fails to complete the Clinical Trials in their respective Territory according to the Timeline and this failure is not cured as set forth in Section 14.2.1, the other Party may terminate this Agreement pursuant to Section 14.2.1, or following discussion by the JSC that such Party failed to use Commercially Reasonable Efforts, the other Party may assume the roles and responsibilities of such Party; provided that in the event of such failure by SFJ, SFJ will remain obligated to pay the costs under Section 4.2.2(ii)." ;
+    ct:supported_by ex:C069P0352 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C069R0010Ref0 a ct:Reference ;
+    rdfs:label "Section 14.2.1" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C069R0010Ref1 a ct:Reference ;
+    rdfs:label "Section 4.2.2(ii)" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C069R0011 a ct:Rule ;
+    rdfs:label "Conditional Referenced Term — source passage 352" ;
+    ct:kind "CONDITIONAL_REFERENCED_TERM" ;
+    ct:references_section ex:C069R0011Ref0,
+        ex:C069R0011Ref1 ;
+    ct:subject_to ex:C069R0011Condition352 ;
+    ct:supported_by ex:C069P0352 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C069R0011Condition352 a ct:Condition ;
+    ct:description "3.12.1 Timely performance of the Clinical Trials and receipt of Regulatory Approval is important to the success of this Agreement. Each Party will use Commercially Reasonable Efforts to complete the Clinical Trials according to the Timeline and, if the Clinical Trials is successful, to obtain Regulatory Approval, in such Party's Territory. In the event that either Party fails to complete the Clinical Trials in their respective Territory according to the Timeline and this failure is not cured as set forth in Section 14.2.1, the other Party may terminate this Agreement pursuant to Section 14.2.1, or following discussion by the JSC that such Party failed to use Commercially Reasonable Efforts, the other Party may assume the roles and responsibilities of such Party; provided that in the event of such failure by SFJ, SFJ will remain obligated to pay the costs under Section 4.2.2(ii)." ;
+    ct:supported_by ex:C069P0352 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C069R0011Ref0 a ct:Reference ;
+    rdfs:label "Section 14.2.1" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C069R0011Ref1 a ct:Reference ;
+    rdfs:label "Section 4.2.2(ii)" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C069R0012 a ct:Rule ;
+    rdfs:label "Termination — source passage 354" ;
+    ct:kind "TERMINATION" ;
+    ct:references_section ex:C069R0012Ref0,
+        ex:C069R0012Ref1 ;
+    ct:subject_to ex:C069R0012Condition354 ;
+    ct:supported_by ex:C069P0354 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C069R0012Condition354 a ct:Condition ;
+    ct:description "In the event that PB fails to use Commercially Reasonable Efforts to so obtain Regulatory Approval for the Product for the Indication, including the obligation to file a BLA for the Product for the Indication with each of the FDA and EMA (or the applicable national Regulatory Authorities in one or more Designated European Countries) by the dates set forth in this Section 3.12.2, and this failure is not cured within [***] after receipt of written notice from SFJ requesting such cure, SFJ may either terminate this Agreement pursuant to Section 14.2.1, or assume PB's regulatory filing activities (in which event SFJ's expenses in assuming such regulatory filing activities shall be deemed to be Development Costs)." ;
+    ct:supported_by ex:C069P0354 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C069R0012Ref0 a ct:Reference ;
+    rdfs:label "Section 3.12.2" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C069R0012Ref1 a ct:Reference ;
+    rdfs:label "Section 14.2.1" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C069R0013 a ct:Rule ;
+    rdfs:label "Conditional Referenced Term — source passage 354" ;
+    ct:kind "CONDITIONAL_REFERENCED_TERM" ;
+    ct:references_section ex:C069R0013Ref0,
+        ex:C069R0013Ref1 ;
+    ct:subject_to ex:C069R0013Condition354 ;
+    ct:supported_by ex:C069P0354 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C069R0013Condition354 a ct:Condition ;
+    ct:description "In the event that PB fails to use Commercially Reasonable Efforts to so obtain Regulatory Approval for the Product for the Indication, including the obligation to file a BLA for the Product for the Indication with each of the FDA and EMA (or the applicable national Regulatory Authorities in one or more Designated European Countries) by the dates set forth in this Section 3.12.2, and this failure is not cured within [***] after receipt of written notice from SFJ requesting such cure, SFJ may either terminate this Agreement pursuant to Section 14.2.1, or assume PB's regulatory filing activities (in which event SFJ's expenses in assuming such regulatory filing activities shall be deemed to be Development Costs)." ;
+    ct:supported_by ex:C069P0354 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C069R0013Ref0 a ct:Reference ;
+    rdfs:label "Section 3.12.2" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C069R0013Ref1 a ct:Reference ;
+    rdfs:label "Section 14.2.1" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C069R0014 a ct:Rule ;
+    rdfs:label "Termination — source passage 357" ;
+    ct:kind "TERMINATION" ;
+    ct:references_section ex:C069R0014Ref0 ;
+    ct:subject_to ex:C069R0014Condition357 ;
+    ct:supported_by ex:C069P0357 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C069R0014Condition357 a ct:Condition ;
+    ct:description "Designated European Countries) within [***] of the date of achievement of the Phase 3 Success Criteria, and this failure is not cured as set forth in Section 14.2.1, SFJ may either terminate this Agreement pursuant to Section 14.2.1, or assume PB's regulatory filing activities (in which event SFJ's expenses in doing so shall be deemed to be Development Costs)." ;
+    ct:supported_by ex:C069P0357 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C069R0014Ref0 a ct:Reference ;
+    rdfs:label "Section 14.2.1" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C069R0015 a ct:Rule ;
+    rdfs:label "Termination — source passage 359" ;
+    ct:kind "TERMINATION" ;
+    ct:references_section ex:C069R0015Ref0,
+        ex:C069R0015Ref1 ;
+    ct:subject_to ex:C069R0015Condition359 ;
+    ct:supported_by ex:C069P0359 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C069R0015Condition359 a ct:Condition ;
+    ct:description "In the event that SFJ fails to use Commercially Reasonable Efforts to so obtain Regulatory Approval for the Product for the Indication, including the obligation to file a BLA for the Product for the Indication with each of the PMDA and the NMPA within [***] of (a) the date of achievement of the Phase 3 Success Criteria or, (b) if later, achievement of the primary endpoint(s) of any other Japan-specific or China-specific Clinical Trial, as applicable, being conducted by SFJ in the applicable country that is necessary for filing of a BLA with PMDA or NMPA, respectively, or Successful Phase 3 Interim Analysis if conditional approval based on interim data is allowed by the relevant Regulatory Authority, and this failure is not (i) caused by PB's failure to perform its obligations hereunder or (ii) cured as set forth in Section 14.2.1, PB may either terminate this Agreement pursuant to Section 14.2.1, or assume SFJ's regulatory filing activities, in which event an amount equal to PB's expenses in doing so [***]. In no event will any such costs incurred by PB be included in actual Development Costs for purposes of Section 14.2." ;
+    ct:supported_by ex:C069P0359 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C069R0015Ref0 a ct:Reference ;
+    rdfs:label "Section 14.2.1" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C069R0015Ref1 a ct:Reference ;
+    rdfs:label "Section 14.2" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C069R0016 a ct:Rule ;
+    rdfs:label "Conditional Referenced Term — source passage 359" ;
+    ct:kind "CONDITIONAL_REFERENCED_TERM" ;
+    ct:references_section ex:C069R0016Ref0,
+        ex:C069R0016Ref1 ;
+    ct:subject_to ex:C069R0016Condition359 ;
+    ct:supported_by ex:C069P0359 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C069R0016Condition359 a ct:Condition ;
+    ct:description "In the event that SFJ fails to use Commercially Reasonable Efforts to so obtain Regulatory Approval for the Product for the Indication, including the obligation to file a BLA for the Product for the Indication with each of the PMDA and the NMPA within [***] of (a) the date of achievement of the Phase 3 Success Criteria or, (b) if later, achievement of the primary endpoint(s) of any other Japan-specific or China-specific Clinical Trial, as applicable, being conducted by SFJ in the applicable country that is necessary for filing of a BLA with PMDA or NMPA, respectively, or Successful Phase 3 Interim Analysis if conditional approval based on interim data is allowed by the relevant Regulatory Authority, and this failure is not (i) caused by PB's failure to perform its obligations hereunder or (ii) cured as set forth in Section 14.2.1, PB may either terminate this Agreement pursuant to Section 14.2.1, or assume SFJ's regulatory filing activities, in which event an amount equal to PB's expenses in doing so [***]. In no event will any such costs incurred by PB be included in actual Development Costs for purposes of Section 14.2." ;
+    ct:supported_by ex:C069P0359 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C069R0016Ref0 a ct:Reference ;
+    rdfs:label "Section 14.2.1" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C069R0016Ref1 a ct:Reference ;
+    rdfs:label "Section 14.2" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C069R0017 a ct:Rule ;
+    rdfs:label "Conditional Referenced Term — source passage 384" ;
+    ct:kind "CONDITIONAL_REFERENCED_TERM" ;
+    ct:references_section ex:C069R0017Ref0 ;
+    ct:subject_to ex:C069R0017Condition384 ;
+    ct:supported_by ex:C069P0384 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C069R0017Condition384 a ct:Condition ;
+    ct:description "\"Going Concern Cure Period\" shall mean the [***] period following delivery of a Going Concern Notice, provided that if SFJ does not offer and fund Going Concern Funding as set forth in Section 4.2.4 sufficient to remedy the Going Concern Condition within such [***] period, the Going Concern Cure Period shall be extended to [***] following delivery of such Going Concern Notice." ;
+    ct:supported_by ex:C069P0384 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C069R0017Ref0 a ct:Reference ;
+    rdfs:label "Section 4.2.4" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C069R0018 a ct:Rule ;
+    rdfs:label "Conditional Referenced Term — source passage 392" ;
+    ct:kind "CONDITIONAL_REFERENCED_TERM" ;
+    ct:references_section ex:C069R0018Ref0,
+        ex:C069R0018Ref1,
+        ex:C069R0018Ref2 ;
+    ct:subject_to ex:C069R0018Condition392 ;
+    ct:supported_by ex:C069P0392 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C069R0018Condition392 a ct:Condition ;
+    ct:description "3.20 Program Transfer. In the event that, at any time after payment to PB of the Initial Development Cost Payment on the Initial Funding Date, PB shall (a) fail to pay any amounts payable to SFJ hereunder within [***] of the date such payment is due, or (b) become in default of its obligations under the AZ License (excluding (x) any such default that would not entitle AZ to terminate the AZ License and (y) any such default that is caused by SFJ's breach of its obligations under this Agreement), or (c) (i) fail to remedy the Going Concern Condition within the Going Concern Cure Period as set forth in Section 3.18.3 or (ii) refuse to accept the Going Concern Funding if offered by SFJ as set forth in Section 4.2.4, then, SFJ may deliver written notice to PB electing to cause PB's business related to the Product to be transferred to SFJ (the \"Program Transfer Notice\"), and shall deliver a copy of the Program Transfer Notice to MedImmune concurrently with delivery to PB, and within [***] following the delivery of the Program Transfer Notice, PB and SFJ shall execute and deliver a Program Transfer Agreement in the form attached hereto as Exhibit O (the \"Program Transfer Agreement\") which shall effect the Program Transfer effective as of the date SFJ delivers the Program Transfer Notice to PB. " ;
+    ct:supported_by ex:C069P0392 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C069R0018Ref0 a ct:Reference ;
+    rdfs:label "Section 3.18.3" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C069R0018Ref1 a ct:Reference ;
+    rdfs:label "Section 4.2.4" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C069R0018Ref2 a ct:Reference ;
+    rdfs:label "Exhibit O" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C069R0019 a ct:Rule ;
+    rdfs:label "Initial Term — source passage 431" ;
+    ct:kind "INITIAL_TERM" ;
+    ct:subject_to ex:C069R0019Condition431 ;
+    ct:supported_by ex:C069P0431 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C069R0019Condition431 a ct:Condition ;
+    ct:description "5.1.2 Chairperson. The JSC chairperson (\"JSC Chairperson\") shall be designated from the Parties' JSC Representatives and shall serve for a term of one (1) year. SFJ shall appoint the first JSC Chairperson and subsequent appointments will rotate on an annual basis between PB and SFJ. The JSC Chairperson will be responsible for drafting and circulating the draft agenda and ensuring minutes are prepared." ;
+    ct:supported_by ex:C069P0431 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C069R0020 a ct:Rule ;
+    rdfs:label "Termination — source passage 461" ;
+    ct:kind "TERMINATION" ;
+    ct:references_section ex:C069R0020Ref0 ;
+    ct:subject_to ex:C069R0020Condition461 ;
+    ct:supported_by ex:C069P0461 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C069R0020Condition461 a ct:Condition ;
+    ct:description "If, notwithstanding such good faith negotiations, the Executive Officers fail to resolve such matter prior to expiration of such [***] negotiation period, and SFJ in good faith continues to disagree with such PB decision, then SFJ shall have the right to terminate this Agreement as provided in Section 14.2.10 upon written notice to PB delivered within [***] after expiration of such [***] negotiation period." ;
+    ct:supported_by ex:C069P0461 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C069R0020Ref0 a ct:Reference ;
+    rdfs:label "Section 14.2.10" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C069R0021 a ct:Rule ;
+    rdfs:label "Initial Term — source passage 466" ;
+    ct:kind "INITIAL_TERM" ;
+    ct:supported_by ex:C069P0466 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C069R0022 a ct:Rule ;
+    rdfs:label "Initial Term — source passage 471" ;
+    ct:kind "INITIAL_TERM" ;
+    ct:subject_to ex:C069R0022Condition471 ;
+    ct:supported_by ex:C069P0471 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C069R0022Condition471 a ct:Condition ;
+    ct:description "(i) From the Effective Date through the date of first Regulatory Approval, the JDC will meet at least once every [***] (and for clarity, such meetings are intended to be conducted via teleconference) unless the Parties mutually agree otherwise." ;
+    ct:supported_by ex:C069P0471 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C069R0023 a ct:Rule ;
+    rdfs:label "Initial Term — source passage 494" ;
+    ct:kind "INITIAL_TERM" ;
+    ct:subject_to ex:C069R0023Condition494 ;
+    ct:supported_by ex:C069P0494 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C069R0023Condition494 a ct:Condition ;
+    ct:description "5.5.4 Meetings. From the Effective Date through the date of the Final Approval Payment, the JCC will meet at least every two months (and for clarity, such meetings are intended to be conducted via teleconference), unless the Parties mutually agree otherwise. Either Party may call a special meeting of the JCC (by videoconference or teleconference) by providing at least five (5) Business Days' prior written notice to the other Party, which notice shall include a reasonably detailed description of the matter, in the event such Party reasonably believes that a significant matter must be addressed prior to the next scheduled meeting." ;
+    ct:supported_by ex:C069P0494 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C069R0024 a ct:Rule ;
+    rdfs:label "Optional Renewal — source passage 494" ;
+    ct:kind "OPTIONAL_RENEWAL" ;
+    ct:subject_to ex:C069R0024Condition494 ;
+    ct:supported_by ex:C069P0494 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C069R0024Condition494 a ct:Condition ;
+    ct:description "5.5.4 Meetings. From the Effective Date through the date of the Final Approval Payment, the JCC will meet at least every two months (and for clarity, such meetings are intended to be conducted via teleconference), unless the Parties mutually agree otherwise. Either Party may call a special meeting of the JCC (by videoconference or teleconference) by providing at least five (5) Business Days' prior written notice to the other Party, which notice shall include a reasonably detailed description of the matter, in the event such Party reasonably believes that a significant matter must be addressed prior to the next scheduled meeting." ;
+    ct:supported_by ex:C069P0494 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C069R0025 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 564" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:supported_by ex:C069P0564 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C069R0026 a ct:Rule ;
+    rdfs:label "Conditional Referenced Term — source passage 579" ;
+    ct:kind "CONDITIONAL_REFERENCED_TERM" ;
+    ct:subject_to ex:C069R0026Condition579 ;
+    ct:supported_by ex:C069P0579 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C069R0026Condition579 a ct:Condition ;
+    ct:description "7.5.5 Licensing Transactions. PB shall have the right, without SFJ's consent, to enter into any Excluded Licensing Transaction. PB shall not, without SFJ's prior written consent, enter into a Licensing Transaction unless such Licensing Transaction is an Excluded Licensing Transaction (in which case such prohibition shall not apply and no such consent of SFJ shall be required); provided that SFJ shall only be entitled to withhold such consent as to a Licensing Transaction other than an Excluded Licensing Transaction in the event SFJ reasonably determines, and provides PB with written notice of its determination within [***] of PB providing to SFJ a non-binding term sheet or comparable document summarizing the material terms of the proposed Licensing Transaction [***], that PB entering into such Licensing Transaction would [***] (\"Material Impact\"). " ;
+    ct:supported_by ex:C069P0579 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C069R0027 a ct:Rule ;
+    rdfs:label "Initial Term — source passage 652" ;
+    ct:kind "INITIAL_TERM" ;
+    ct:references_section ex:C069R0027Ref0 ;
+    ct:supported_by ex:C069P0652 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C069R0027Ref0 a ct:Reference ;
+    rdfs:label "Exhibit H" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C069R0028 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 655" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:supported_by ex:C069P0655 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C069R0029 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 659" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:references_section ex:C069R0029Ref0 ;
+    ct:supported_by ex:C069P0659 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C069R0029Ref0 a ct:Reference ;
+    rdfs:label "ARTICLE 9" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C069R0030 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 671" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:subject_to ex:C069R0030Condition671 ;
+    ct:supported_by ex:C069P0671 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C069R0030Condition671 a ct:Condition ;
+    ct:description "10.3 Return of Confidential Information. Except as otherwise provided herein, upon expiration or earlier termination of this Agreement, all Confidential Information (including any copies thereof) in written or other tangible form will, at the Disclosing Party's direction, be returned to the Disclosing Party or destroyed by the Receiving Party, and any Person(s) to whom the Receiving Party disclosed (with such destruction being certified in writing by an authorized officer of the Receiving Party), except (i) to the extent such Confidential Information is necessary to exercise any license and/or rights hereunder that survive such expiration or earlier termination; and (ii) one (1) copy of each document may be retained by the Receiving Party solely to the extent necessary to permit it to comply with any ongoing rights and responsibilities with respect to such Confidential Information." ;
+    ct:supported_by ex:C069P0671 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C069R0031 a ct:Rule ;
+    rdfs:label "Conditional Referenced Term — source passage 700" ;
+    ct:kind "CONDITIONAL_REFERENCED_TERM" ;
+    ct:references_section ex:C069R0031Ref0,
+        ex:C069R0031Ref1 ;
+    ct:subject_to ex:C069R0031Condition700 ;
+    ct:supported_by ex:C069P0700 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C069R0031Condition700 a ct:Condition ;
+    ct:description "11.1.1.4 Trial Data Package. SFJ shall be the sole and exclusive owner of the Trial Data Package including the Research Results included therein. In consideration of the Approval Payments to be made under this Agreement (if and to the extent applicable), and in further consideration of the payment by PB to SFJ of [***], SFJ shall sell and transfer to PB, and PB shall acquire from SFJ, the sole and exclusive ownership, even as to SFJ, of the Trial Data Package including all Research Results as set forth below in this Section 11.1.1.4. Upon the earliest of (A) receipt of Regulatory Approval of the Product for the Indication in at least one of the US, the EU, any Designated European Country, Japan or China or (B) termination of this Agreement in accordance with any termination clause or section of this Agreement, in each case, PB and SFJ will promptly enter into the Trial Data Package Purchase Agreement attached hereto as Exhibit K, and PB will purchase, and SFJ will sell to PB, sole and exclusive ownership of all Research Results, including the Trial Data Package." ;
+    ct:supported_by ex:C069P0700 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C069R0031Ref0 a ct:Reference ;
+    rdfs:label "Section 11.1.1.4" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C069R0031Ref1 a ct:Reference ;
+    rdfs:label "Exhibit K" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C069R0032 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 745" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:supported_by ex:C069P0745 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C069R0033 a ct:Rule ;
+    rdfs:label "Termination — source passage 763" ;
+    ct:kind "TERMINATION" ;
+    ct:references_section ex:C069R0033Ref0 ;
+    ct:subject_to ex:C069R0033Condition763 ;
+    ct:supported_by ex:C069P0763 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C069R0033Condition763 a ct:Condition ;
+    ct:description "In addition, during the Term, PB shall not take any action to terminate the AZ License without providing [***] prior written notice to SFJ of PB's intent to terminate so that SFJ may, in its sole discretion, elect to obtain the Program Transfer, and if SFJ elects in writing within such [***] period to obtain the Program Transfer, then PB shall not terminate the AZ License but shall assign it to SFJ in accordance with the Program Transfer Agreement and in such event PB shall not be entitled to any royalty payments as set forth in Section 3 of the Program Transfer Agreement." ;
+    ct:supported_by ex:C069P0763 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C069R0033Ref0 a ct:Reference ;
+    rdfs:label "Section 3" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C069R0034 a ct:Rule ;
+    rdfs:label "Initial Term — source passage 781" ;
+    ct:kind "INITIAL_TERM" ;
+    ct:references_section ex:C069R0034Ref0 ;
+    ct:supported_by ex:C069P0781 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C069R0034Ref0 a ct:Reference ;
+    rdfs:label "Section 14.2" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C069R0035 a ct:Rule ;
+    rdfs:label "Termination — source passage 782" ;
+    ct:kind "TERMINATION" ;
+    ct:supported_by ex:C069P0782 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C069R0036 a ct:Rule ;
+    rdfs:label "Termination — source passage 783" ;
+    ct:kind "TERMINATION" ;
+    ct:supported_by ex:C069P0783 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C069R0037 a ct:Rule ;
+    rdfs:label "Termination — source passage 784" ;
+    ct:kind "TERMINATION" ;
+    ct:references_section ex:C069R0037Ref0,
+        ex:C069R0037Ref1 ;
+    ct:subject_to ex:C069R0037Condition784 ;
+    ct:supported_by ex:C069P0784 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C069R0037Condition784 a ct:Condition ;
+    ct:description "Either Party may terminate this Agreement immediately in the event of a material breach of this Agreement by the other Party provided that the breaching Party has received written notice from the non-breaching Party of such breach, specifying in the reasonable detail the particulars of the alleged breach and such breach has not been cured within [***] after the date of the relevant notice. The non-breaching Party shall have the right to pursue remedies it may have at law or equity for such breach, including the right to seek damages from the breaching Party. In the event that SFJ terminates this Agreement pursuant to this Section 14.2.1 then in exchange for purchasing the Trial Data Package including the Research Results included therein as set forth in Section 11.1.1.4, PB will pay SFJ, within [***] of the date of termination, an amount equal to three hundred percent (300%) of Development Costs paid or incurred by SFJ prior to such termination. " ;
+    ct:supported_by ex:C069P0784 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C069R0037Ref0 a ct:Reference ;
+    rdfs:label "Section 14.2.1" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C069R0037Ref1 a ct:Reference ;
+    rdfs:label "Section 11.1.1.4" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C069R0038 a ct:Rule ;
+    rdfs:label "Conditional Referenced Term — source passage 784" ;
+    ct:kind "CONDITIONAL_REFERENCED_TERM" ;
+    ct:references_section ex:C069R0038Ref0,
+        ex:C069R0038Ref1 ;
+    ct:subject_to ex:C069R0038Condition784 ;
+    ct:supported_by ex:C069P0784 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C069R0038Condition784 a ct:Condition ;
+    ct:description "Either Party may terminate this Agreement immediately in the event of a material breach of this Agreement by the other Party provided that the breaching Party has received written notice from the non-breaching Party of such breach, specifying in the reasonable detail the particulars of the alleged breach and such breach has not been cured within [***] after the date of the relevant notice. The non-breaching Party shall have the right to pursue remedies it may have at law or equity for such breach, including the right to seek damages from the breaching Party. In the event that SFJ terminates this Agreement pursuant to this Section 14.2.1 then in exchange for purchasing the Trial Data Package including the Research Results included therein as set forth in Section 11.1.1.4, PB will pay SFJ, within [***] of the date of termination, an amount equal to three hundred percent (300%) of Development Costs paid or incurred by SFJ prior to such termination. " ;
+    ct:supported_by ex:C069P0784 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C069R0038Ref0 a ct:Reference ;
+    rdfs:label "Section 14.2.1" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C069R0038Ref1 a ct:Reference ;
+    rdfs:label "Section 11.1.1.4" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C069R0039 a ct:Rule ;
+    rdfs:label "Conditional Referenced Term — source passage 786" ;
+    ct:kind "CONDITIONAL_REFERENCED_TERM" ;
+    ct:references_section ex:C069R0039Ref0 ;
+    ct:subject_to ex:C069R0039Condition786 ;
+    ct:supported_by ex:C069P0786 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C069R0039Condition786 a ct:Condition ;
+    ct:description "In the event that PB terminates this Agreement pursuant to this Section 14.2.1 then, if PB elects to continue development of the Product and obtains Regulatory Approval following such termination, in exchange for purchasing the Trial Data Package including the Research Results" ;
+    ct:supported_by ex:C069P0786 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C069R0039Ref0 a ct:Reference ;
+    rdfs:label "Section 14.2.1" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C069R0040 a ct:Rule ;
+    rdfs:label "Conditional Referenced Term — source passage 789" ;
+    ct:kind "CONDITIONAL_REFERENCED_TERM" ;
+    ct:references_section ex:C069R0040Ref0,
+        ex:C069R0040Ref1,
+        ex:C069R0040Ref2,
+        ex:C069R0040Ref3,
+        ex:C069R0040Ref4 ;
+    ct:subject_to ex:C069R0040Condition789 ;
+    ct:supported_by ex:C069P0789 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C069R0040Condition789 a ct:Condition ;
+    ct:description "Notwithstanding the foregoing, if PB terminates this Agreement pursuant to this Section 14.2.1 above based on SFJ's failure to make any payment due to PB in accordance with ARTICLE 4, then, if PB elects to continue development of the Product and obtains Regulatory Approval following such termination, PB shall remain obligated to pay to SFJ fifty percent (50%) of any Approval Payments that become due and payable pursuant to ARTICLE 6 at such time that such payments become due and payable (if ever) pursuant to ARTICLE 6 (or, as applicable, fifty percent (50%) of any Buy-Out Payment that PB elects to pay pursuant to Section 6.7), provided that such Approval Payments (or Buy-Out Payment, as applicable) shall also be adjusted as set forth in Section 6.2." ;
+    ct:supported_by ex:C069P0789 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C069R0040Ref0 a ct:Reference ;
+    rdfs:label "Section 14.2.1" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C069R0040Ref1 a ct:Reference ;
+    rdfs:label "ARTICLE 4" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C069R0040Ref2 a ct:Reference ;
+    rdfs:label "ARTICLE 6" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C069R0040Ref3 a ct:Reference ;
+    rdfs:label "Section 6.7" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C069R0040Ref4 a ct:Reference ;
+    rdfs:label "Section 6.2" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C069R0041 a ct:Rule ;
+    rdfs:label "Termination — source passage 790" ;
+    ct:kind "TERMINATION" ;
+    ct:references_section ex:C069R0041Ref0,
+        ex:C069R0041Ref1,
+        ex:C069R0041Ref2,
+        ex:C069R0041Ref3,
+        ex:C069R0041Ref4 ;
+    ct:supported_by ex:C069P0790 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C069R0041Ref0 a ct:Reference ;
+    rdfs:label "Section 14.2.2" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C069R0041Ref1 a ct:Reference ;
+    rdfs:label "Section 11.1.1.4" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C069R0041Ref2 a ct:Reference ;
+    rdfs:label "ARTICLE 6" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C069R0041Ref3 a ct:Reference ;
+    rdfs:label "Section 6.7" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C069R0041Ref4 a ct:Reference ;
+    rdfs:label "Section 6.2" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C069R0042 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 790" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:references_section ex:C069R0042Ref0,
+        ex:C069R0042Ref1,
+        ex:C069R0042Ref2,
+        ex:C069R0042Ref3,
+        ex:C069R0042Ref4 ;
+    ct:supported_by ex:C069P0790 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C069R0042Ref0 a ct:Reference ;
+    rdfs:label "Section 14.2.2" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C069R0042Ref1 a ct:Reference ;
+    rdfs:label "Section 11.1.1.4" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C069R0042Ref2 a ct:Reference ;
+    rdfs:label "ARTICLE 6" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C069R0042Ref3 a ct:Reference ;
+    rdfs:label "Section 6.7" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C069R0042Ref4 a ct:Reference ;
+    rdfs:label "Section 6.2" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C069R0043 a ct:Rule ;
+    rdfs:label "Termination — source passage 791" ;
+    ct:kind "TERMINATION" ;
+    ct:references_section ex:C069R0043Ref0,
+        ex:C069R0043Ref1,
+        ex:C069R0043Ref2,
+        ex:C069R0043Ref3,
+        ex:C069R0043Ref4 ;
+    ct:supported_by ex:C069P0791 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C069R0043Ref0 a ct:Reference ;
+    rdfs:label "Section 14.2.3" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C069R0043Ref1 a ct:Reference ;
+    rdfs:label "Section 11.1.1.4" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C069R0043Ref2 a ct:Reference ;
+    rdfs:label "Section 6.2" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C069R0043Ref3 a ct:Reference ;
+    rdfs:label "ARTICLE 6" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C069R0043Ref4 a ct:Reference ;
+    rdfs:label "Section 6.7" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C069R0044 a ct:Rule ;
+    rdfs:label "Termination — source passage 793" ;
+    ct:kind "TERMINATION" ;
+    ct:supported_by ex:C069P0793 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C069R0045 a ct:Rule ;
+    rdfs:label "Termination — source passage 794" ;
+    ct:kind "TERMINATION" ;
+    ct:references_section ex:C069R0045Ref0 ;
+    ct:subject_to ex:C069R0045Condition794 ;
+    ct:supported_by ex:C069P0794 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C069R0045Condition794 a ct:Condition ;
+    ct:description "14.2.4.1 This Agreement will, upon written notice from either Party to the other Party, terminate with no further action from either Party if the Product has not received Regulatory Approval from at least one of (i) the FDA, (ii) EMA, (iii) PMDA, or (iv) NMPA after completion of the Clinical Trials, submission by PB of applications for Regulatory Approval to the FDA and EMA, and submission by SFJ of applications for Regulatory Approval to the PMDA and NMPA, and after Commercially Reasonable Efforts to obtain such Regulatory Approvals based on such submitted applications as may be amended from time to time. For the avoidance of doubt, if Regulatory Approval is received from any of the FDA, EMA, PMDA, or NMPA then this Agreement may not thereafter be terminated pursuant to this Section 14.2.4.1." ;
+    ct:supported_by ex:C069P0794 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C069R0045Ref0 a ct:Reference ;
+    rdfs:label "Section 14.2.4.1" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C069R0046 a ct:Rule ;
+    rdfs:label "Conditional Referenced Term — source passage 794" ;
+    ct:kind "CONDITIONAL_REFERENCED_TERM" ;
+    ct:references_section ex:C069R0046Ref0 ;
+    ct:subject_to ex:C069R0046Condition794 ;
+    ct:supported_by ex:C069P0794 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C069R0046Condition794 a ct:Condition ;
+    ct:description "14.2.4.1 This Agreement will, upon written notice from either Party to the other Party, terminate with no further action from either Party if the Product has not received Regulatory Approval from at least one of (i) the FDA, (ii) EMA, (iii) PMDA, or (iv) NMPA after completion of the Clinical Trials, submission by PB of applications for Regulatory Approval to the FDA and EMA, and submission by SFJ of applications for Regulatory Approval to the PMDA and NMPA, and after Commercially Reasonable Efforts to obtain such Regulatory Approvals based on such submitted applications as may be amended from time to time. For the avoidance of doubt, if Regulatory Approval is received from any of the FDA, EMA, PMDA, or NMPA then this Agreement may not thereafter be terminated pursuant to this Section 14.2.4.1." ;
+    ct:supported_by ex:C069P0794 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C069R0046Ref0 a ct:Reference ;
+    rdfs:label "Section 14.2.4.1" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C069R0047 a ct:Rule ;
+    rdfs:label "Termination — source passage 795" ;
+    ct:kind "TERMINATION" ;
+    ct:references_section ex:C069R0047Ref0 ;
+    ct:subject_to ex:C069R0047Condition795 ;
+    ct:supported_by ex:C069P0795 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C069R0047Condition795 a ct:Condition ;
+    ct:description "14.2.4.2 This Agreement will, upon written notice from either Party to the other Party, terminate with no further action from either Party, if the Phase 3 Trial is completed or terminated and either (a) the primary endpoint in the Phase 3 Trial is not achieved or (b) SFJ reasonably determines that the Research Results of the Phase 3 Trial do not support Regulatory Approval. For avoidance of doubt, if an application for Regulatory Approval is submitted to any of the FDA, EMA, PMDA or NMPA then this Agreement may not thereafter be terminated pursuant to this Section 14.2.4.2." ;
+    ct:supported_by ex:C069P0795 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C069R0047Ref0 a ct:Reference ;
+    rdfs:label "Section 14.2.4.2" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C069R0048 a ct:Rule ;
+    rdfs:label "Conditional Referenced Term — source passage 795" ;
+    ct:kind "CONDITIONAL_REFERENCED_TERM" ;
+    ct:references_section ex:C069R0048Ref0 ;
+    ct:subject_to ex:C069R0048Condition795 ;
+    ct:supported_by ex:C069P0795 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C069R0048Condition795 a ct:Condition ;
+    ct:description "14.2.4.2 This Agreement will, upon written notice from either Party to the other Party, terminate with no further action from either Party, if the Phase 3 Trial is completed or terminated and either (a) the primary endpoint in the Phase 3 Trial is not achieved or (b) SFJ reasonably determines that the Research Results of the Phase 3 Trial do not support Regulatory Approval. For avoidance of doubt, if an application for Regulatory Approval is submitted to any of the FDA, EMA, PMDA or NMPA then this Agreement may not thereafter be terminated pursuant to this Section 14.2.4.2." ;
+    ct:supported_by ex:C069P0795 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C069R0048Ref0 a ct:Reference ;
+    rdfs:label "Section 14.2.4.2" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C069R0049 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 796" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:references_section ex:C069R0049Ref0,
+        ex:C069R0049Ref1,
+        ex:C069R0049Ref2,
+        ex:C069R0049Ref3,
+        ex:C069R0049Ref4 ;
+    ct:supported_by ex:C069P0796 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C069R0049Ref0 a ct:Reference ;
+    rdfs:label "Section 14.2.4" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C069R0049Ref1 a ct:Reference ;
+    rdfs:label "Section 11.1.1.4" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C069R0049Ref2 a ct:Reference ;
+    rdfs:label "ARTICLE 6" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C069R0049Ref3 a ct:Reference ;
+    rdfs:label "Section 6.7" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C069R0049Ref4 a ct:Reference ;
+    rdfs:label "Section 6.2" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C069R0050 a ct:Rule ;
+    rdfs:label "Termination — source passage 797" ;
+    ct:kind "TERMINATION" ;
+    ct:supported_by ex:C069P0797 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C069R0051 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 798" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:references_section ex:C069R0051Ref0,
+        ex:C069R0051Ref1,
+        ex:C069R0051Ref2 ;
+    ct:supported_by ex:C069P0798 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C069R0051Ref0 a ct:Reference ;
+    rdfs:label "Section 14.2.5" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C069R0051Ref1 a ct:Reference ;
+    rdfs:label "Section 11.1.1.4" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C069R0051Ref2 a ct:Reference ;
+    rdfs:label "ARTICLE 6" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C069R0052 a ct:Rule ;
+    rdfs:label "Termination — source passage 802" ;
+    ct:kind "TERMINATION" ;
+    ct:references_section ex:C069R0052Ref0,
+        ex:C069R0052Ref1 ;
+    ct:subject_to ex:C069R0052Condition802 ;
+    ct:supported_by ex:C069P0802 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C069R0052Condition802 a ct:Condition ;
+    ct:description "14.2.6 Termination for Change of Control of PB. PB will notify SFJ in writing promptly (and in any event within [***]) following the entering into of a definitive agreement with respect to a Change of Control of PB. SFJ may, in its sole discretion, terminate this Agreement in its entirety at any time following a Change of Control of PB that occurs prior to the date of payment by PB of the final Approval Payment. In the event that SFJ terminates this Agreement pursuant to this Section 14.2.6, then, in exchange for purchasing the Trial Data Package including the Research Results included therein as set forth in Section 11.1.1.4, PB will pay to SFJ within [***] of the date of termination an amount equal to one hundred fifty percent (150%) of Development Costs which were paid or incurred by SFJ. " ;
+    ct:supported_by ex:C069P0802 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C069R0052Ref0 a ct:Reference ;
+    rdfs:label "Section 14.2.6" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C069R0052Ref1 a ct:Reference ;
+    rdfs:label "Section 11.1.1.4" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C069R0053 a ct:Rule ;
+    rdfs:label "Conditional Referenced Term — source passage 802" ;
+    ct:kind "CONDITIONAL_REFERENCED_TERM" ;
+    ct:references_section ex:C069R0053Ref0,
+        ex:C069R0053Ref1 ;
+    ct:subject_to ex:C069R0053Condition802 ;
+    ct:supported_by ex:C069P0802 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C069R0053Condition802 a ct:Condition ;
+    ct:description "14.2.6 Termination for Change of Control of PB. PB will notify SFJ in writing promptly (and in any event within [***]) following the entering into of a definitive agreement with respect to a Change of Control of PB. SFJ may, in its sole discretion, terminate this Agreement in its entirety at any time following a Change of Control of PB that occurs prior to the date of payment by PB of the final Approval Payment. In the event that SFJ terminates this Agreement pursuant to this Section 14.2.6, then, in exchange for purchasing the Trial Data Package including the Research Results included therein as set forth in Section 11.1.1.4, PB will pay to SFJ within [***] of the date of termination an amount equal to one hundred fifty percent (150%) of Development Costs which were paid or incurred by SFJ. " ;
+    ct:supported_by ex:C069P0802 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C069R0053Ref0 a ct:Reference ;
+    rdfs:label "Section 14.2.6" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C069R0053Ref1 a ct:Reference ;
+    rdfs:label "Section 11.1.1.4" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C069R0054 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 803" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:references_section ex:C069R0054Ref0,
+        ex:C069R0054Ref1,
+        ex:C069R0054Ref2,
+        ex:C069R0054Ref3,
+        ex:C069R0054Ref4 ;
+    ct:supported_by ex:C069P0803 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C069R0054Ref0 a ct:Reference ;
+    rdfs:label "Section 11.1.1.4" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C069R0054Ref1 a ct:Reference ;
+    rdfs:label "ARTICLE 6" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C069R0054Ref2 a ct:Reference ;
+    rdfs:label "Section 6.7" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C069R0054Ref3 a ct:Reference ;
+    rdfs:label "Section 6.2" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C069R0054Ref4 a ct:Reference ;
+    rdfs:label "Section 14.2.6" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C069R0055 a ct:Rule ;
+    rdfs:label "Termination — source passage 804" ;
+    ct:kind "TERMINATION" ;
+    ct:references_section ex:C069R0055Ref0 ;
+    ct:subject_to ex:C069R0055Condition804 ;
+    ct:supported_by ex:C069P0804 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C069R0055Condition804 a ct:Condition ;
+    ct:description "14.2.7 Termination for Safety Concerns. Either Party may terminate this Agreement upon written notice to the other Party if (a) the independent data monitoring committee for the Phase 3 Trial recommends termination of the Phase 3 Trial for reasons pertaining to the health or safety of the Subjects or for futility, or (b) the Parties mutually agree a material health or safety concern with respect to the Subjects exists. In the event that this Agreement terminates pursuant to this Section 14.2.7, then PB will not be obligated to pay to SFJ any Development Costs or Approval Payments. Notwithstanding the foregoing, (A) if this Agreement terminates pursuant to this Section 14.2.7 and such termination: (i) arises as a result of gross negligence on the part of PB; or (ii) is due to (x) the applicable independent data monitoring committee recommending termination of the Phase 3 Trial or (y) PB and SFJ" ;
+    ct:supported_by ex:C069P0804 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C069R0055Ref0 a ct:Reference ;
+    rdfs:label "Section 14.2.7" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C069R0056 a ct:Rule ;
+    rdfs:label "Conditional Referenced Term — source passage 804" ;
+    ct:kind "CONDITIONAL_REFERENCED_TERM" ;
+    ct:references_section ex:C069R0056Ref0 ;
+    ct:subject_to ex:C069R0056Condition804 ;
+    ct:supported_by ex:C069P0804 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C069R0056Condition804 a ct:Condition ;
+    ct:description "14.2.7 Termination for Safety Concerns. Either Party may terminate this Agreement upon written notice to the other Party if (a) the independent data monitoring committee for the Phase 3 Trial recommends termination of the Phase 3 Trial for reasons pertaining to the health or safety of the Subjects or for futility, or (b) the Parties mutually agree a material health or safety concern with respect to the Subjects exists. In the event that this Agreement terminates pursuant to this Section 14.2.7, then PB will not be obligated to pay to SFJ any Development Costs or Approval Payments. Notwithstanding the foregoing, (A) if this Agreement terminates pursuant to this Section 14.2.7 and such termination: (i) arises as a result of gross negligence on the part of PB; or (ii) is due to (x) the applicable independent data monitoring committee recommending termination of the Phase 3 Trial or (y) PB and SFJ" ;
+    ct:supported_by ex:C069P0804 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C069R0056Ref0 a ct:Reference ;
+    rdfs:label "Section 14.2.7" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C069R0057 a ct:Rule ;
+    rdfs:label "Termination — source passage 806" ;
+    ct:kind "TERMINATION" ;
+    ct:references_section ex:C069R0057Ref0,
+        ex:C069R0057Ref1,
+        ex:C069R0057Ref2,
+        ex:C069R0057Ref3,
+        ex:C069R0057Ref4 ;
+    ct:supported_by ex:C069P0806 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C069R0057Ref0 a ct:Reference ;
+    rdfs:label "Section 11.1.1.4" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C069R0057Ref1 a ct:Reference ;
+    rdfs:label "ARTICLE 6" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C069R0057Ref2 a ct:Reference ;
+    rdfs:label "Section 6.7" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C069R0057Ref3 a ct:Reference ;
+    rdfs:label "Section 6.2" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C069R0057Ref4 a ct:Reference ;
+    rdfs:label "Section 14.2.7" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C069R0058 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 806" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:references_section ex:C069R0058Ref0,
+        ex:C069R0058Ref1,
+        ex:C069R0058Ref2,
+        ex:C069R0058Ref3,
+        ex:C069R0058Ref4 ;
+    ct:supported_by ex:C069P0806 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C069R0058Ref0 a ct:Reference ;
+    rdfs:label "Section 11.1.1.4" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C069R0058Ref1 a ct:Reference ;
+    rdfs:label "ARTICLE 6" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C069R0058Ref2 a ct:Reference ;
+    rdfs:label "Section 6.7" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C069R0058Ref3 a ct:Reference ;
+    rdfs:label "Section 6.2" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C069R0058Ref4 a ct:Reference ;
+    rdfs:label "Section 14.2.7" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C069R0059 a ct:Rule ;
+    rdfs:label "Termination — source passage 807" ;
+    ct:kind "TERMINATION" ;
+    ct:supported_by ex:C069P0807 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C069R0060 a ct:Rule ;
+    rdfs:label "Termination — source passage 808" ;
+    ct:kind "TERMINATION" ;
+    ct:references_section ex:C069R0060Ref0,
+        ex:C069R0060Ref1,
+        ex:C069R0060Ref2,
+        ex:C069R0060Ref3 ;
+    ct:subject_to ex:C069R0060Condition808 ;
+    ct:supported_by ex:C069P0808 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C069R0060Condition808 a ct:Condition ;
+    ct:description "14.2.8.1 SFJ may terminate this Agreement if (i) PB has breached by its own actions, or by the actions of any of its Representatives, either of Section 13.1.3 or Section 13.1.4 in any material respect, (ii) a Representative of PB has breached the policy attached as Exhibit F‑1 in any material respect and such breach results in a Material Anti-Corruption Law Violation, or (iii) SFJ learns (a) that improper payments are being or have been made to Government Officials or any other person by PB or any of its Representatives on behalf of PB or (b) that PB or any of its Representatives with respect to services performed on behalf of PB has accepted any payment, item, or benefit, regardless of value, as an improper inducement to award, obtain or retain business or otherwise gain or grant an improper business advantage from or to any other person or entity (in any such case ((i), (ii) or (iii)), a \"PB Compliance Breach\"), unless such PB Compliance Breach can be cured without having a materially adverse impact on the probability of completing the Clinical Trials or obtaining Regulatory Approval for the Product. In the event of such termination, PB will not be entitled to any further payments under ARTICLE 4, regardless of any activities undertaken or agreements with additional Third Parties entered into prior to termination. " ;
+    ct:supported_by ex:C069P0808 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C069R0060Ref0 a ct:Reference ;
+    rdfs:label "Section 13.1.3" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C069R0060Ref1 a ct:Reference ;
+    rdfs:label "Section 13.1.4" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C069R0060Ref2 a ct:Reference ;
+    rdfs:label "Exhibit F" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C069R0060Ref3 a ct:Reference ;
+    rdfs:label "ARTICLE 4" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C069R0061 a ct:Rule ;
+    rdfs:label "Conditional Referenced Term — source passage 808" ;
+    ct:kind "CONDITIONAL_REFERENCED_TERM" ;
+    ct:references_section ex:C069R0061Ref0,
+        ex:C069R0061Ref1,
+        ex:C069R0061Ref2,
+        ex:C069R0061Ref3 ;
+    ct:subject_to ex:C069R0061Condition808 ;
+    ct:supported_by ex:C069P0808 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C069R0061Condition808 a ct:Condition ;
+    ct:description "14.2.8.1 SFJ may terminate this Agreement if (i) PB has breached by its own actions, or by the actions of any of its Representatives, either of Section 13.1.3 or Section 13.1.4 in any material respect, (ii) a Representative of PB has breached the policy attached as Exhibit F‑1 in any material respect and such breach results in a Material Anti-Corruption Law Violation, or (iii) SFJ learns (a) that improper payments are being or have been made to Government Officials or any other person by PB or any of its Representatives on behalf of PB or (b) that PB or any of its Representatives with respect to services performed on behalf of PB has accepted any payment, item, or benefit, regardless of value, as an improper inducement to award, obtain or retain business or otherwise gain or grant an improper business advantage from or to any other person or entity (in any such case ((i), (ii) or (iii)), a \"PB Compliance Breach\"), unless such PB Compliance Breach can be cured without having a materially adverse impact on the probability of completing the Clinical Trials or obtaining Regulatory Approval for the Product. In the event of such termination, PB will not be entitled to any further payments under ARTICLE 4, regardless of any activities undertaken or agreements with additional Third Parties entered into prior to termination. " ;
+    ct:supported_by ex:C069P0808 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C069R0061Ref0 a ct:Reference ;
+    rdfs:label "Section 13.1.3" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C069R0061Ref1 a ct:Reference ;
+    rdfs:label "Section 13.1.4" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C069R0061Ref2 a ct:Reference ;
+    rdfs:label "Exhibit F" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C069R0061Ref3 a ct:Reference ;
+    rdfs:label "ARTICLE 4" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C069R0062 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 809" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:references_section ex:C069R0062Ref0,
+        ex:C069R0062Ref1,
+        ex:C069R0062Ref2,
+        ex:C069R0062Ref3,
+        ex:C069R0062Ref4 ;
+    ct:supported_by ex:C069P0809 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C069R0062Ref0 a ct:Reference ;
+    rdfs:label "Section 14.2.8.1" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C069R0062Ref1 a ct:Reference ;
+    rdfs:label "Section 11.1.1.4" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C069R0062Ref2 a ct:Reference ;
+    rdfs:label "ARTICLE 6" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C069R0062Ref3 a ct:Reference ;
+    rdfs:label "Section 6.7" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C069R0062Ref4 a ct:Reference ;
+    rdfs:label "Section 6.2" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C069R0063 a ct:Rule ;
+    rdfs:label "Termination — source passage 811" ;
+    ct:kind "TERMINATION" ;
+    ct:references_section ex:C069R0063Ref0,
+        ex:C069R0063Ref1,
+        ex:C069R0063Ref2 ;
+    ct:subject_to ex:C069R0063Condition811 ;
+    ct:supported_by ex:C069P0811 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C069R0063Condition811 a ct:Condition ;
+    ct:description "14.2.8.2 PB may terminate this Agreement if (i) SFJ has breached by its own actions, or by the actions of any of its Representatives, either of Section 13.1.3 or Section 13.1.4 in any material respect, (ii) a Representative of SFJ has breached the policy attached as Exhibit F‑2 in any material respect and such breach results in a Material Anti-Corruption Law Violation, or (iii) PB learns (a) that improper payments are being or have been made to Government Officials or any other person by SFJ or any of its Representatives on behalf of SFJ or (b) that SFJ or any of its Representatives with respect to services performed on behalf of SFJ has accepted any payment, item, or benefit, regardless of value, as an improper inducement to award, obtain or retain business or otherwise gain or grant an improper business advantage from or to any other person or entity (in any such case ((i), (ii) or (iii)), an \"SFJ Compliance Breach\"), unless such SFJ Compliance Breach can be cured without having a materially adverse impact on the probability of completing the Clinical Trials or obtaining Regulatory Approval for the Product. In the event of such termination, SFJ will not be entitled to any further payments hereunder except as set forth below. " ;
+    ct:supported_by ex:C069P0811 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C069R0063Ref0 a ct:Reference ;
+    rdfs:label "Section 13.1.3" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C069R0063Ref1 a ct:Reference ;
+    rdfs:label "Section 13.1.4" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C069R0063Ref2 a ct:Reference ;
+    rdfs:label "Exhibit F" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C069R0064 a ct:Rule ;
+    rdfs:label "Conditional Referenced Term — source passage 811" ;
+    ct:kind "CONDITIONAL_REFERENCED_TERM" ;
+    ct:references_section ex:C069R0064Ref0,
+        ex:C069R0064Ref1,
+        ex:C069R0064Ref2 ;
+    ct:subject_to ex:C069R0064Condition811 ;
+    ct:supported_by ex:C069P0811 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C069R0064Condition811 a ct:Condition ;
+    ct:description "14.2.8.2 PB may terminate this Agreement if (i) SFJ has breached by its own actions, or by the actions of any of its Representatives, either of Section 13.1.3 or Section 13.1.4 in any material respect, (ii) a Representative of SFJ has breached the policy attached as Exhibit F‑2 in any material respect and such breach results in a Material Anti-Corruption Law Violation, or (iii) PB learns (a) that improper payments are being or have been made to Government Officials or any other person by SFJ or any of its Representatives on behalf of SFJ or (b) that SFJ or any of its Representatives with respect to services performed on behalf of SFJ has accepted any payment, item, or benefit, regardless of value, as an improper inducement to award, obtain or retain business or otherwise gain or grant an improper business advantage from or to any other person or entity (in any such case ((i), (ii) or (iii)), an \"SFJ Compliance Breach\"), unless such SFJ Compliance Breach can be cured without having a materially adverse impact on the probability of completing the Clinical Trials or obtaining Regulatory Approval for the Product. In the event of such termination, SFJ will not be entitled to any further payments hereunder except as set forth below. " ;
+    ct:supported_by ex:C069P0811 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C069R0064Ref0 a ct:Reference ;
+    rdfs:label "Section 13.1.3" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C069R0064Ref1 a ct:Reference ;
+    rdfs:label "Section 13.1.4" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C069R0064Ref2 a ct:Reference ;
+    rdfs:label "Exhibit F" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C069R0065 a ct:Rule ;
+    rdfs:label "Termination — source passage 813" ;
+    ct:kind "TERMINATION" ;
+    ct:references_section ex:C069R0065Ref0,
+        ex:C069R0065Ref1,
+        ex:C069R0065Ref2 ;
+    ct:subject_to ex:C069R0065Condition813 ;
+    ct:supported_by ex:C069P0813 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C069R0065Condition813 a ct:Condition ;
+    ct:description "14.2.8.3 If a Party learns that any of its Permitted Third Parties has materially breached Section 13.1.3 or Section 13.1.4, or Exhibit F‑1 or Exhibit F‑2, as applicable, or that improper payments are being or have been made to Government Officials by any of its Permitted Third Parties with respect to services performed on behalf of such Party or in connection with the Clinical Trials, such Party will notify the other Party and, at the other Party's option, such Party will terminate its relationship with such Permitted Third Party with respect to the Clinical Trials." ;
+    ct:supported_by ex:C069P0813 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C069R0065Ref0 a ct:Reference ;
+    rdfs:label "Section 13.1.3" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C069R0065Ref1 a ct:Reference ;
+    rdfs:label "Section 13.1.4" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C069R0065Ref2 a ct:Reference ;
+    rdfs:label "Exhibit F" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C069R0066 a ct:Rule ;
+    rdfs:label "Termination — source passage 814" ;
+    ct:kind "TERMINATION" ;
+    ct:subject_to ex:C069R0066Condition814 ;
+    ct:supported_by ex:C069P0814 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C069R0066Condition814 a ct:Condition ;
+    ct:description "14.2.9 Termination Because of Adverse Patent Impact. SFJ may terminate this Agreement if (a) PB is enjoined from further developing or commercializing the Product for the Indication in any of the US, the Designated European Countries or the Designated Asian Countries or (b) the future value of the Product is materially adversely affected due to (i) Third Party patents that were not publicly disclosed or known to SFJ at the Effective Date that would be infringed by the manufacture, use, sale, offer for sale or import of the Product for the Indication in any of the US, the Designated European Countries or the Designated Asian Countries or (ii) invalidity or unenforceability of all Patents within the PB Intellectual Property Covering the Product for the Indication in any of the US, the Designated European Countries or the Designated Asian Countries (in either case ((a) or (b)), \"Adverse Patent Impact\"), upon" ;
+    ct:supported_by ex:C069P0814 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C069R0067 a ct:Rule ;
+    rdfs:label "Termination — source passage 816" ;
+    ct:kind "TERMINATION" ;
+    ct:references_section ex:C069R0067Ref0,
+        ex:C069R0067Ref1 ;
+    ct:supported_by ex:C069P0816 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C069R0067Ref0 a ct:Reference ;
+    rdfs:label "Section 14.2.9" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C069R0067Ref1 a ct:Reference ;
+    rdfs:label "Section 11.1.1.4" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C069R0068 a ct:Rule ;
+    rdfs:label "Termination — source passage 817" ;
+    ct:kind "TERMINATION" ;
+    ct:references_section ex:C069R0068Ref0,
+        ex:C069R0068Ref1,
+        ex:C069R0068Ref2,
+        ex:C069R0068Ref3,
+        ex:C069R0068Ref4,
+        ex:C069R0068Ref5 ;
+    ct:subject_to ex:C069R0068Condition817 ;
+    ct:supported_by ex:C069P0817 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C069R0068Condition817 a ct:Condition ;
+    ct:description "14.2.10 Termination for JSC Decision. SFJ may, in its sole discretion, terminate this Agreement in its entirety at any time prior to the date of receipt of the first Regulatory Approval in the event PB exercises its decision-making authority under Section 5.2.4 to approve a matter set forth in Section 5.2.2 and, after escalation to the Executive Officers in accordance with Section 5.2.4, SFJ continues in good faith to disagree with such decision. In the event that SFJ terminates this Agreement pursuant to this Section 14.2.10, then in exchange for purchasing the Trial Data Package including the Research Results included therein as set forth in Section 11.1.1.4, PB will pay to SFJ, within [***] of the date of termination, an amount equal to the Development Costs paid or incurred by SFJ plus interest at the annual rate of twenty-five percent (25%) from the date such Development Costs were paid or incurred by SFJ and, if PB elects to continue development of the Product and obtains Regulatory Approval following such termination, PB shall remain obligated to pay any Approval Payments that become due and payable pursuant to ARTICLE 6 at such time as such Approval Payments become due and payable (if ever) pursuant to ARTICLE 6 (except to the extent of the amount of any Buy-Out Payment paid by PB pursuant to Section 6.7), provided that such Approval Payments (or Buy-Out Payment, as " ;
+    ct:supported_by ex:C069P0817 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C069R0068Ref0 a ct:Reference ;
+    rdfs:label "Section 5.2.4" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C069R0068Ref1 a ct:Reference ;
+    rdfs:label "Section 5.2.2" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C069R0068Ref2 a ct:Reference ;
+    rdfs:label "Section 14.2.10" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C069R0068Ref3 a ct:Reference ;
+    rdfs:label "Section 11.1.1.4" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C069R0068Ref4 a ct:Reference ;
+    rdfs:label "ARTICLE 6" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C069R0068Ref5 a ct:Reference ;
+    rdfs:label "Section 6.7" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C069R0069 a ct:Rule ;
+    rdfs:label "Termination — source passage 819" ;
+    ct:kind "TERMINATION" ;
+    ct:references_section ex:C069R0069Ref0,
+        ex:C069R0069Ref1 ;
+    ct:supported_by ex:C069P0819 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C069R0069Ref0 a ct:Reference ;
+    rdfs:label "Section 14.2" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C069R0069Ref1 a ct:Reference ;
+    rdfs:label "Section 3.20" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C069R0070 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 825" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:supported_by ex:C069P0825 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C069R0071 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 827" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:supported_by ex:C069P0827 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C069R0072 a ct:Rule ;
+    rdfs:label "Termination — source passage 829" ;
+    ct:kind "TERMINATION" ;
+    ct:references_section ex:C069R0072Ref0 ;
+    ct:supported_by ex:C069P0829 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C069R0072Ref0 a ct:Reference ;
+    rdfs:label "Section 14.2" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C069R0073 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 830" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:supported_by ex:C069P0830 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C069R0074 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 833" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:supported_by ex:C069P0833 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C069R0075 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 857" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:references_section ex:C069R0075Ref0,
+        ex:C069R0075Ref1 ;
+    ct:subject_to ex:C069R0075Condition857 ;
+    ct:supported_by ex:C069P0857 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C069R0075Condition857 a ct:Condition ;
+    ct:description "its entirety as permitted by the preceding provisions of this Section 15.6, provided that, following any assignment of this Agreement by SFJ to a Third Party pursuant to the foregoing clause (b) the JSC shall terminate, such assignee shall not have any further rights under ARTICLE 5, such assignee shall not have any further rights to approve or consent (and PB shall not have any further obligation to seek SFJ's approval or consent) as to any matter relating to PB's development and Commercialization of the Product, [***]. This Agreement is binding upon and will inure to the benefit of each of the Parties, its successors and permitted assigns." ;
+    ct:supported_by ex:C069P0857 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C069R0075Ref0 a ct:Reference ;
+    rdfs:label "Section 15.6" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C069R0075Ref1 a ct:Reference ;
+    rdfs:label "ARTICLE 5" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C069P0035 a ct:SourcePassage ;
+    ct:end_char 6456 ;
+    ct:exact_text "1.1.21 \"Calendar Quarter\" means each successive period of three (3) consecutive calendar months ending on March 31, June 30, September 30 and December 31; provided, that, the (a) the first Calendar Quarter shall begin on the Effective Date and end on the last day of the Calendar Quarter in which the Effective Date falls, and (b) the final Calendar Quarter shall end on the last day of the Term." ;
+    ct:source_path "cuad/PhasebioPharmaceuticalsInc_20200330_10-K_EX-10.21_12086810_EX-10.21_Development Agreement.txt" ;
+    ct:source_sha256 "d21fe55a3227fc7092016602c707544b6d66bbd5686d19402204d1cd92945517" ;
+    ct:start_char 6060 .
+
+ex:C069P0041 a ct:SourcePassage ;
+    ct:end_char 8646 ;
+    ct:exact_text "immediately prior thereto ceasing to represent, or being converted into or exchanged for voting securities that do not represent, at least fifty percent (50%) of the combined voting power of the voting securities of the surviving entity or the parent corporation of the surviving entity immediately after such merger, reorganization or consolidation, (b) a transaction in which a Third Party becomes the beneficial owner of fifty percent (50%) or more of the combined voting power of the outstanding securities of PB, other than through the issuance of voting securities for the purpose of raising financing to one or more financial or institutional investors that are not then controlled by an entity engaged in the development or commercialization of pharmaceutical or biotechnology products, or (c) the sale or other transfer of all or substantially all of PB's business or assets relating to the Product for use in the Indication. A Licensing Transaction shall not constitute a Change of Control, unless such Licensing Transaction includes the grant of US Commercialization Rights in which event such Licensing Transaction shall be deemed to be a Change in Control." ;
+    ct:source_path "cuad/PhasebioPharmaceuticalsInc_20200330_10-K_EX-10.21_12086810_EX-10.21_Development Agreement.txt" ;
+    ct:source_sha256 "d21fe55a3227fc7092016602c707544b6d66bbd5686d19402204d1cd92945517" ;
+    ct:start_char 7477 .
+
+ex:C069P0062 a ct:SourcePassage ;
+    ct:end_char 12724 ;
+    ct:exact_text "1.1.44 \"Completion Date\" means, as to a particular Clinical Trial, the earlier of (a) the date of final database lock for such Clinical Trial and (b) the date such Clinical Trial or this Agreement is terminated." ;
+    ct:source_path "cuad/PhasebioPharmaceuticalsInc_20200330_10-K_EX-10.21_12086810_EX-10.21_Development Agreement.txt" ;
+    ct:source_sha256 "d21fe55a3227fc7092016602c707544b6d66bbd5686d19402204d1cd92945517" ;
+    ct:start_char 12513 .
+
+ex:C069P0345 a ct:SourcePassage ;
+    ct:end_char 88709 ;
+    ct:exact_text "3.10.2 Each Party will promptly notify the JDC, in writing, of any worker claims of suspected occupational illnesses related to working with the Product, regardless of whether such claims are received during the Development Term or any time thereafter. After termination of this Agreement for whatever reasons, or expiration of this Agreement, each Party will promptly notify the other Party of any worker claims of suspected occupational illnesses related to working with the Product during the Development Term, of which it has knowledge." ;
+    ct:source_path "cuad/PhasebioPharmaceuticalsInc_20200330_10-K_EX-10.21_12086810_EX-10.21_Development Agreement.txt" ;
+    ct:source_sha256 "d21fe55a3227fc7092016602c707544b6d66bbd5686d19402204d1cd92945517" ;
+    ct:start_char 88169 .
+
+ex:C069P0357 a ct:SourcePassage ;
+    ct:end_char 95741 ;
+    ct:exact_text "Designated European Countries) within [***] of the date of achievement of the Phase 3 Success Criteria, and this failure is not cured as set forth in Section 14.2.1, SFJ may either terminate this Agreement pursuant to Section 14.2.1, or assume PB's regulatory filing activities (in which event SFJ's expenses in doing so shall be deemed to be Development Costs)." ;
+    ct:source_path "cuad/PhasebioPharmaceuticalsInc_20200330_10-K_EX-10.21_12086810_EX-10.21_Development Agreement.txt" ;
+    ct:source_sha256 "d21fe55a3227fc7092016602c707544b6d66bbd5686d19402204d1cd92945517" ;
+    ct:start_char 95379 .
+
+ex:C069P0384 a ct:SourcePassage ;
+    ct:end_char 109383 ;
+    ct:exact_text "\"Going Concern Cure Period\" shall mean the [***] period following delivery of a Going Concern Notice, provided that if SFJ does not offer and fund Going Concern Funding as set forth in Section 4.2.4 sufficient to remedy the Going Concern Condition within such [***] period, the Going Concern Cure Period shall be extended to [***] following delivery of such Going Concern Notice." ;
+    ct:source_path "cuad/PhasebioPharmaceuticalsInc_20200330_10-K_EX-10.21_12086810_EX-10.21_Development Agreement.txt" ;
+    ct:source_sha256 "d21fe55a3227fc7092016602c707544b6d66bbd5686d19402204d1cd92945517" ;
+    ct:start_char 109004 .
+
+ex:C069P0392 a ct:SourcePassage ;
+    ct:end_char 112045 ;
+    ct:exact_text "3.20 Program Transfer. In the event that, at any time after payment to PB of the Initial Development Cost Payment on the Initial Funding Date, PB shall (a) fail to pay any amounts payable to SFJ hereunder within [***] of the date such payment is due, or (b) become in default of its obligations under the AZ License (excluding (x) any such default that would not entitle AZ to terminate the AZ License and (y) any such default that is caused by SFJ's breach of its obligations under this Agreement), or (c) (i) fail to remedy the Going Concern Condition within the Going Concern Cure Period as set forth in Section 3.18.3 or (ii) refuse to accept the Going Concern Funding if offered by SFJ as set forth in Section 4.2.4, then, SFJ may deliver written notice to PB electing to cause PB's business related to the Product to be transferred to SFJ (the \"Program Transfer Notice\"), and shall deliver a copy of the Program Transfer Notice to MedImmune concurrently with delivery to PB, and within [***] following the delivery of the Program Transfer Notice, PB and SFJ shall execute and deliver a Program Transfer Agreement in the form attached hereto as Exhibit O (the \"Program Transfer Agreement\") which shall effect the Program Transfer effective as of the date SFJ delivers the Program Transfer Notice to PB. " ;
+    ct:source_path "cuad/PhasebioPharmaceuticalsInc_20200330_10-K_EX-10.21_12086810_EX-10.21_Development Agreement.txt" ;
+    ct:source_sha256 "d21fe55a3227fc7092016602c707544b6d66bbd5686d19402204d1cd92945517" ;
+    ct:start_char 110737 .
+
+ex:C069P0431 a ct:SourcePassage ;
+    ct:end_char 122203 ;
+    ct:exact_text "5.1.2 Chairperson. The JSC chairperson (\"JSC Chairperson\") shall be designated from the Parties' JSC Representatives and shall serve for a term of one (1) year. SFJ shall appoint the first JSC Chairperson and subsequent appointments will rotate on an annual basis between PB and SFJ. The JSC Chairperson will be responsible for drafting and circulating the draft agenda and ensuring minutes are prepared." ;
+    ct:source_path "cuad/PhasebioPharmaceuticalsInc_20200330_10-K_EX-10.21_12086810_EX-10.21_Development Agreement.txt" ;
+    ct:source_sha256 "d21fe55a3227fc7092016602c707544b6d66bbd5686d19402204d1cd92945517" ;
+    ct:start_char 121799 .
+
+ex:C069P0461 a ct:SourcePassage ;
+    ct:end_char 128311 ;
+    ct:exact_text "If, notwithstanding such good faith negotiations, the Executive Officers fail to resolve such matter prior to expiration of such [***] negotiation period, and SFJ in good faith continues to disagree with such PB decision, then SFJ shall have the right to terminate this Agreement as provided in Section 14.2.10 upon written notice to PB delivered within [***] after expiration of such [***] negotiation period." ;
+    ct:source_path "cuad/PhasebioPharmaceuticalsInc_20200330_10-K_EX-10.21_12086810_EX-10.21_Development Agreement.txt" ;
+    ct:source_sha256 "d21fe55a3227fc7092016602c707544b6d66bbd5686d19402204d1cd92945517" ;
+    ct:start_char 127901 .
+
+ex:C069P0471 a ct:SourcePassage ;
+    ct:end_char 130127 ;
+    ct:exact_text "(i) From the Effective Date through the date of first Regulatory Approval, the JDC will meet at least once every [***] (and for clarity, such meetings are intended to be conducted via teleconference) unless the Parties mutually agree otherwise." ;
+    ct:source_path "cuad/PhasebioPharmaceuticalsInc_20200330_10-K_EX-10.21_12086810_EX-10.21_Development Agreement.txt" ;
+    ct:source_sha256 "d21fe55a3227fc7092016602c707544b6d66bbd5686d19402204d1cd92945517" ;
+    ct:start_char 129883 .
+
+ex:C069P0579 a ct:SourcePassage ;
+    ct:end_char 164105 ;
+    ct:exact_text "7.5.5 Licensing Transactions. PB shall have the right, without SFJ's consent, to enter into any Excluded Licensing Transaction. PB shall not, without SFJ's prior written consent, enter into a Licensing Transaction unless such Licensing Transaction is an Excluded Licensing Transaction (in which case such prohibition shall not apply and no such consent of SFJ shall be required); provided that SFJ shall only be entitled to withhold such consent as to a Licensing Transaction other than an Excluded Licensing Transaction in the event SFJ reasonably determines, and provides PB with written notice of its determination within [***] of PB providing to SFJ a non-binding term sheet or comparable document summarizing the material terms of the proposed Licensing Transaction [***], that PB entering into such Licensing Transaction would [***] (\"Material Impact\"). " ;
+    ct:source_path "cuad/PhasebioPharmaceuticalsInc_20200330_10-K_EX-10.21_12086810_EX-10.21_Development Agreement.txt" ;
+    ct:source_sha256 "d21fe55a3227fc7092016602c707544b6d66bbd5686d19402204d1cd92945517" ;
+    ct:start_char 163245 .
+
+ex:C069P0671 a ct:SourcePassage ;
+    ct:end_char 191392 ;
+    ct:exact_text "10.3 Return of Confidential Information. Except as otherwise provided herein, upon expiration or earlier termination of this Agreement, all Confidential Information (including any copies thereof) in written or other tangible form will, at the Disclosing Party's direction, be returned to the Disclosing Party or destroyed by the Receiving Party, and any Person(s) to whom the Receiving Party disclosed (with such destruction being certified in writing by an authorized officer of the Receiving Party), except (i) to the extent such Confidential Information is necessary to exercise any license and/or rights hereunder that survive such expiration or earlier termination; and (ii) one (1) copy of each document may be retained by the Receiving Party solely to the extent necessary to permit it to comply with any ongoing rights and responsibilities with respect to such Confidential Information." ;
+    ct:source_path "cuad/PhasebioPharmaceuticalsInc_20200330_10-K_EX-10.21_12086810_EX-10.21_Development Agreement.txt" ;
+    ct:source_sha256 "d21fe55a3227fc7092016602c707544b6d66bbd5686d19402204d1cd92945517" ;
+    ct:start_char 190498 .
+
+ex:C069P0700 a ct:SourcePassage ;
+    ct:end_char 205982 ;
+    ct:exact_text "11.1.1.4 Trial Data Package. SFJ shall be the sole and exclusive owner of the Trial Data Package including the Research Results included therein. In consideration of the Approval Payments to be made under this Agreement (if and to the extent applicable), and in further consideration of the payment by PB to SFJ of [***], SFJ shall sell and transfer to PB, and PB shall acquire from SFJ, the sole and exclusive ownership, even as to SFJ, of the Trial Data Package including all Research Results as set forth below in this Section 11.1.1.4. Upon the earliest of (A) receipt of Regulatory Approval of the Product for the Indication in at least one of the US, the EU, any Designated European Country, Japan or China or (B) termination of this Agreement in accordance with any termination clause or section of this Agreement, in each case, PB and SFJ will promptly enter into the Trial Data Package Purchase Agreement attached hereto as Exhibit K, and PB will purchase, and SFJ will sell to PB, sole and exclusive ownership of all Research Results, including the Trial Data Package." ;
+    ct:source_path "cuad/PhasebioPharmaceuticalsInc_20200330_10-K_EX-10.21_12086810_EX-10.21_Development Agreement.txt" ;
+    ct:source_sha256 "d21fe55a3227fc7092016602c707544b6d66bbd5686d19402204d1cd92945517" ;
+    ct:start_char 204904 .
+
+ex:C069P0763 a ct:SourcePassage ;
+    ct:end_char 234696 ;
+    ct:exact_text "In addition, during the Term, PB shall not take any action to terminate the AZ License without providing [***] prior written notice to SFJ of PB's intent to terminate so that SFJ may, in its sole discretion, elect to obtain the Program Transfer, and if SFJ elects in writing within such [***] period to obtain the Program Transfer, then PB shall not terminate the AZ License but shall assign it to SFJ in accordance with the Program Transfer Agreement and in such event PB shall not be entitled to any royalty payments as set forth in Section 3 of the Program Transfer Agreement." ;
+    ct:source_path "cuad/PhasebioPharmaceuticalsInc_20200330_10-K_EX-10.21_12086810_EX-10.21_Development Agreement.txt" ;
+    ct:source_sha256 "d21fe55a3227fc7092016602c707544b6d66bbd5686d19402204d1cd92945517" ;
+    ct:start_char 234117 .
+
+ex:C069P0786 a ct:SourcePassage ;
+    ct:end_char 242208 ;
+    ct:exact_text "In the event that PB terminates this Agreement pursuant to this Section 14.2.1 then, if PB elects to continue development of the Product and obtains Regulatory Approval following such termination, in exchange for purchasing the Trial Data Package including the Research Results" ;
+    ct:source_path "cuad/PhasebioPharmaceuticalsInc_20200330_10-K_EX-10.21_12086810_EX-10.21_Development Agreement.txt" ;
+    ct:source_sha256 "d21fe55a3227fc7092016602c707544b6d66bbd5686d19402204d1cd92945517" ;
+    ct:start_char 241931 .
+
+ex:C069P0789 a ct:SourcePassage ;
+    ct:end_char 243409 ;
+    ct:exact_text "Notwithstanding the foregoing, if PB terminates this Agreement pursuant to this Section 14.2.1 above based on SFJ's failure to make any payment due to PB in accordance with ARTICLE 4, then, if PB elects to continue development of the Product and obtains Regulatory Approval following such termination, PB shall remain obligated to pay to SFJ fifty percent (50%) of any Approval Payments that become due and payable pursuant to ARTICLE 6 at such time that such payments become due and payable (if ever) pursuant to ARTICLE 6 (or, as applicable, fifty percent (50%) of any Buy-Out Payment that PB elects to pay pursuant to Section 6.7), provided that such Approval Payments (or Buy-Out Payment, as applicable) shall also be adjusted as set forth in Section 6.2." ;
+    ct:source_path "cuad/PhasebioPharmaceuticalsInc_20200330_10-K_EX-10.21_12086810_EX-10.21_Development Agreement.txt" ;
+    ct:source_sha256 "d21fe55a3227fc7092016602c707544b6d66bbd5686d19402204d1cd92945517" ;
+    ct:start_char 242650 .
+
+ex:C069P0790 a ct:SourcePassage ;
+    ct:end_char 244685 ;
+    ct:exact_text "14.2.2 At-Will Termination by PB. PB may terminate this Agreement at any time after SFJ has paid or incurred a total of $60 million of Development Costs and prior to the date of receipt of the first Regulatory Approval upon [***] prior written notice to SFJ. In the event that PB terminates this Agreement pursuant to this Section 14.2.2 then in exchange for purchasing the Trial Data Package including the Research Results included therein as set forth in Section 11.1.1.4, PB will pay SFJ, within [***] of the date of termination, an amount equal to three hundred percent (300%) of Development Costs paid or incurred by SFJ prior to such termination. Additionally, if PB elects to continue development of the Product and obtains Regulatory Approval following such termination, PB will remain obligated to pay any Approval Payments that become due and payable pursuant to ARTICLE 6 at such time as such payments become due and payable (if ever) pursuant to ARTICLE 6 (except to the extent of the amount of any Buy-Out Payment paid by PB pursuant to Section 6.7), provided that each Approval Payment (or the Buy-Out Payment, as applicable) shall be adjusted as set forth in Section 6.2, and reduced by the amount previously paid by PB to SFJ pursuant to this Section 14.2.2." ;
+    ct:source_path "cuad/PhasebioPharmaceuticalsInc_20200330_10-K_EX-10.21_12086810_EX-10.21_Development Agreement.txt" ;
+    ct:source_sha256 "d21fe55a3227fc7092016602c707544b6d66bbd5686d19402204d1cd92945517" ;
+    ct:start_char 243411 .
+
+ex:C069P0806 a ct:SourcePassage ;
+    ct:end_char 254391 ;
+    ct:exact_text "mutually agreeing to terminate the Phase 3 Trial, in either case ((x) or (y)), due to a Serious Safety Issue that was previously known, demonstrated or identified by PB as being material as of the Effective Date and the material data showing, demonstrating, or identifying such Serious Safety Issue were not included in the Data Room, disclosed in writing to SFJ or otherwise publicly known prior to the Effective Date; then, in either case ((i) or (ii)), PB will pay SFJ within [***] of the date of termination an amount equal to three hundred percent (300%) of Development Costs paid or incurred by SFJ, and (B) if PB elects to continue development of the Product and obtains Regulatory Approval following such termination, in exchange for purchasing the Trial Data Package including the Research Results included therein as set forth in Section 11.1.1.4, PB will remain obligated to pay any Approval Payments that become due and payable pursuant to ARTICLE 6 at such time as such Approval Payments become due and payable (if ever) pursuant to ARTICLE 6 (except to the extent of the amount of any Buy-Out Payment paid by PB pursuant to Section 6.7), provided that such Approval Payments (or Buy-Out Payment, as applicable) shall be adjusted as set forth in Section 6.2 and shall be reduced by the amount previously paid by PB to SFJ pursuant to this Section 14.2.7." ;
+    ct:source_path "cuad/PhasebioPharmaceuticalsInc_20200330_10-K_EX-10.21_12086810_EX-10.21_Development Agreement.txt" ;
+    ct:source_sha256 "d21fe55a3227fc7092016602c707544b6d66bbd5686d19402204d1cd92945517" ;
+    ct:start_char 253024 .
+
+ex:C069P0813 a ct:SourcePassage ;
+    ct:end_char 259814 ;
+    ct:exact_text "14.2.8.3 If a Party learns that any of its Permitted Third Parties has materially breached Section 13.1.3 or Section 13.1.4, or Exhibit F‑1 or Exhibit F‑2, as applicable, or that improper payments are being or have been made to Government Officials by any of its Permitted Third Parties with respect to services performed on behalf of such Party or in connection with the Clinical Trials, such Party will notify the other Party and, at the other Party's option, such Party will terminate its relationship with such Permitted Third Party with respect to the Clinical Trials." ;
+    ct:source_path "cuad/PhasebioPharmaceuticalsInc_20200330_10-K_EX-10.21_12086810_EX-10.21_Development Agreement.txt" ;
+    ct:source_sha256 "d21fe55a3227fc7092016602c707544b6d66bbd5686d19402204d1cd92945517" ;
+    ct:start_char 259241 .
+
+ex:C069P0814 a ct:SourcePassage ;
+    ct:end_char 260734 ;
+    ct:exact_text "14.2.9 Termination Because of Adverse Patent Impact. SFJ may terminate this Agreement if (a) PB is enjoined from further developing or commercializing the Product for the Indication in any of the US, the Designated European Countries or the Designated Asian Countries or (b) the future value of the Product is materially adversely affected due to (i) Third Party patents that were not publicly disclosed or known to SFJ at the Effective Date that would be infringed by the manufacture, use, sale, offer for sale or import of the Product for the Indication in any of the US, the Designated European Countries or the Designated Asian Countries or (ii) invalidity or unenforceability of all Patents within the PB Intellectual Property Covering the Product for the Indication in any of the US, the Designated European Countries or the Designated Asian Countries (in either case ((a) or (b)), \"Adverse Patent Impact\"), upon" ;
+    ct:source_path "cuad/PhasebioPharmaceuticalsInc_20200330_10-K_EX-10.21_12086810_EX-10.21_Development Agreement.txt" ;
+    ct:source_sha256 "d21fe55a3227fc7092016602c707544b6d66bbd5686d19402204d1cd92945517" ;
+    ct:start_char 259816 .
+
+ex:C069P0817 a ct:SourcePassage ;
+    ct:end_char 262736 ;
+    ct:exact_text "14.2.10 Termination for JSC Decision. SFJ may, in its sole discretion, terminate this Agreement in its entirety at any time prior to the date of receipt of the first Regulatory Approval in the event PB exercises its decision-making authority under Section 5.2.4 to approve a matter set forth in Section 5.2.2 and, after escalation to the Executive Officers in accordance with Section 5.2.4, SFJ continues in good faith to disagree with such decision. In the event that SFJ terminates this Agreement pursuant to this Section 14.2.10, then in exchange for purchasing the Trial Data Package including the Research Results included therein as set forth in Section 11.1.1.4, PB will pay to SFJ, within [***] of the date of termination, an amount equal to the Development Costs paid or incurred by SFJ plus interest at the annual rate of twenty-five percent (25%) from the date such Development Costs were paid or incurred by SFJ and, if PB elects to continue development of the Product and obtains Regulatory Approval following such termination, PB shall remain obligated to pay any Approval Payments that become due and payable pursuant to ARTICLE 6 at such time as such Approval Payments become due and payable (if ever) pursuant to ARTICLE 6 (except to the extent of the amount of any Buy-Out Payment paid by PB pursuant to Section 6.7), provided that such Approval Payments (or Buy-Out Payment, as " ;
+    ct:source_path "cuad/PhasebioPharmaceuticalsInc_20200330_10-K_EX-10.21_12086810_EX-10.21_Development Agreement.txt" ;
+    ct:source_sha256 "d21fe55a3227fc7092016602c707544b6d66bbd5686d19402204d1cd92945517" ;
+    ct:start_char 261339 .
+
+ex:C069P0857 a ct:SourcePassage ;
+    ct:end_char 275516 ;
+    ct:exact_text "its entirety as permitted by the preceding provisions of this Section 15.6, provided that, following any assignment of this Agreement by SFJ to a Third Party pursuant to the foregoing clause (b) the JSC shall terminate, such assignee shall not have any further rights under ARTICLE 5, such assignee shall not have any further rights to approve or consent (and PB shall not have any further obligation to seek SFJ's approval or consent) as to any matter relating to PB's development and Commercialization of the Product, [***]. This Agreement is binding upon and will inure to the benefit of each of the Parties, its successors and permitted assigns." ;
+    ct:source_path "cuad/PhasebioPharmaceuticalsInc_20200330_10-K_EX-10.21_12086810_EX-10.21_Development Agreement.txt" ;
+    ct:source_sha256 "d21fe55a3227fc7092016602c707544b6d66bbd5686d19402204d1cd92945517" ;
+    ct:start_char 274867 .
+
+ct:Agreement a owl:Class ;
+    rdfs:label "Agreement" .
+
+ex:C069P0352 a ct:SourcePassage ;
+    ct:end_char 92614 ;
+    ct:exact_text "3.12.1 Timely performance of the Clinical Trials and receipt of Regulatory Approval is important to the success of this Agreement. Each Party will use Commercially Reasonable Efforts to complete the Clinical Trials according to the Timeline and, if the Clinical Trials is successful, to obtain Regulatory Approval, in such Party's Territory. In the event that either Party fails to complete the Clinical Trials in their respective Territory according to the Timeline and this failure is not cured as set forth in Section 14.2.1, the other Party may terminate this Agreement pursuant to Section 14.2.1, or following discussion by the JSC that such Party failed to use Commercially Reasonable Efforts, the other Party may assume the roles and responsibilities of such Party; provided that in the event of such failure by SFJ, SFJ will remain obligated to pay the costs under Section 4.2.2(ii)." ;
+    ct:source_path "cuad/PhasebioPharmaceuticalsInc_20200330_10-K_EX-10.21_12086810_EX-10.21_Development Agreement.txt" ;
+    ct:source_sha256 "d21fe55a3227fc7092016602c707544b6d66bbd5686d19402204d1cd92945517" ;
+    ct:start_char 91723 .
+
+ex:C069P0354 a ct:SourcePassage ;
+    ct:end_char 94415 ;
+    ct:exact_text "In the event that PB fails to use Commercially Reasonable Efforts to so obtain Regulatory Approval for the Product for the Indication, including the obligation to file a BLA for the Product for the Indication with each of the FDA and EMA (or the applicable national Regulatory Authorities in one or more Designated European Countries) by the dates set forth in this Section 3.12.2, and this failure is not cured within [***] after receipt of written notice from SFJ requesting such cure, SFJ may either terminate this Agreement pursuant to Section 14.2.1, or assume PB's regulatory filing activities (in which event SFJ's expenses in assuming such regulatory filing activities shall be deemed to be Development Costs)." ;
+    ct:source_path "cuad/PhasebioPharmaceuticalsInc_20200330_10-K_EX-10.21_12086810_EX-10.21_Development Agreement.txt" ;
+    ct:source_sha256 "d21fe55a3227fc7092016602c707544b6d66bbd5686d19402204d1cd92945517" ;
+    ct:start_char 93697 .
+
+ex:C069P0359 a ct:SourcePassage ;
+    ct:end_char 98250 ;
+    ct:exact_text "In the event that SFJ fails to use Commercially Reasonable Efforts to so obtain Regulatory Approval for the Product for the Indication, including the obligation to file a BLA for the Product for the Indication with each of the PMDA and the NMPA within [***] of (a) the date of achievement of the Phase 3 Success Criteria or, (b) if later, achievement of the primary endpoint(s) of any other Japan-specific or China-specific Clinical Trial, as applicable, being conducted by SFJ in the applicable country that is necessary for filing of a BLA with PMDA or NMPA, respectively, or Successful Phase 3 Interim Analysis if conditional approval based on interim data is allowed by the relevant Regulatory Authority, and this failure is not (i) caused by PB's failure to perform its obligations hereunder or (ii) cured as set forth in Section 14.2.1, PB may either terminate this Agreement pursuant to Section 14.2.1, or assume SFJ's regulatory filing activities, in which event an amount equal to PB's expenses in doing so [***]. In no event will any such costs incurred by PB be included in actual Development Costs for purposes of Section 14.2." ;
+    ct:source_path "cuad/PhasebioPharmaceuticalsInc_20200330_10-K_EX-10.21_12086810_EX-10.21_Development Agreement.txt" ;
+    ct:source_sha256 "d21fe55a3227fc7092016602c707544b6d66bbd5686d19402204d1cd92945517" ;
+    ct:start_char 97111 .
+
+ex:C069P0494 a ct:SourcePassage ;
+    ct:end_char 138520 ;
+    ct:exact_text "5.5.4 Meetings. From the Effective Date through the date of the Final Approval Payment, the JCC will meet at least every two months (and for clarity, such meetings are intended to be conducted via teleconference), unless the Parties mutually agree otherwise. Either Party may call a special meeting of the JCC (by videoconference or teleconference) by providing at least five (5) Business Days' prior written notice to the other Party, which notice shall include a reasonably detailed description of the matter, in the event such Party reasonably believes that a significant matter must be addressed prior to the next scheduled meeting." ;
+    ct:source_path "cuad/PhasebioPharmaceuticalsInc_20200330_10-K_EX-10.21_12086810_EX-10.21_Development Agreement.txt" ;
+    ct:source_sha256 "d21fe55a3227fc7092016602c707544b6d66bbd5686d19402204d1cd92945517" ;
+    ct:start_char 137884 .
+
+ex:C069P0784 a ct:SourcePassage ;
+    ct:end_char 241351 ;
+    ct:exact_text "Either Party may terminate this Agreement immediately in the event of a material breach of this Agreement by the other Party provided that the breaching Party has received written notice from the non-breaching Party of such breach, specifying in the reasonable detail the particulars of the alleged breach and such breach has not been cured within [***] after the date of the relevant notice. The non-breaching Party shall have the right to pursue remedies it may have at law or equity for such breach, including the right to seek damages from the breaching Party. In the event that SFJ terminates this Agreement pursuant to this Section 14.2.1 then in exchange for purchasing the Trial Data Package including the Research Results included therein as set forth in Section 11.1.1.4, PB will pay SFJ, within [***] of the date of termination, an amount equal to three hundred percent (300%) of Development Costs paid or incurred by SFJ prior to such termination. " ;
+    ct:source_path "cuad/PhasebioPharmaceuticalsInc_20200330_10-K_EX-10.21_12086810_EX-10.21_Development Agreement.txt" ;
+    ct:source_sha256 "d21fe55a3227fc7092016602c707544b6d66bbd5686d19402204d1cd92945517" ;
+    ct:start_char 240391 .
+
+ex:C069P0794 a ct:SourcePassage ;
+    ct:end_char 246673 ;
+    ct:exact_text "14.2.4.1 This Agreement will, upon written notice from either Party to the other Party, terminate with no further action from either Party if the Product has not received Regulatory Approval from at least one of (i) the FDA, (ii) EMA, (iii) PMDA, or (iv) NMPA after completion of the Clinical Trials, submission by PB of applications for Regulatory Approval to the FDA and EMA, and submission by SFJ of applications for Regulatory Approval to the PMDA and NMPA, and after Commercially Reasonable Efforts to obtain such Regulatory Approvals based on such submitted applications as may be amended from time to time. For the avoidance of doubt, if Regulatory Approval is received from any of the FDA, EMA, PMDA, or NMPA then this Agreement may not thereafter be terminated pursuant to this Section 14.2.4.1." ;
+    ct:source_path "cuad/PhasebioPharmaceuticalsInc_20200330_10-K_EX-10.21_12086810_EX-10.21_Development Agreement.txt" ;
+    ct:source_sha256 "d21fe55a3227fc7092016602c707544b6d66bbd5686d19402204d1cd92945517" ;
+    ct:start_char 245869 .
+
+ex:C069P0795 a ct:SourcePassage ;
+    ct:end_char 247255 ;
+    ct:exact_text "14.2.4.2 This Agreement will, upon written notice from either Party to the other Party, terminate with no further action from either Party, if the Phase 3 Trial is completed or terminated and either (a) the primary endpoint in the Phase 3 Trial is not achieved or (b) SFJ reasonably determines that the Research Results of the Phase 3 Trial do not support Regulatory Approval. For avoidance of doubt, if an application for Regulatory Approval is submitted to any of the FDA, EMA, PMDA or NMPA then this Agreement may not thereafter be terminated pursuant to this Section 14.2.4.2." ;
+    ct:source_path "cuad/PhasebioPharmaceuticalsInc_20200330_10-K_EX-10.21_12086810_EX-10.21_Development Agreement.txt" ;
+    ct:source_sha256 "d21fe55a3227fc7092016602c707544b6d66bbd5686d19402204d1cd92945517" ;
+    ct:start_char 246675 .
+
+ex:C069P0802 a ct:SourcePassage ;
+    ct:end_char 251180 ;
+    ct:exact_text "14.2.6 Termination for Change of Control of PB. PB will notify SFJ in writing promptly (and in any event within [***]) following the entering into of a definitive agreement with respect to a Change of Control of PB. SFJ may, in its sole discretion, terminate this Agreement in its entirety at any time following a Change of Control of PB that occurs prior to the date of payment by PB of the final Approval Payment. In the event that SFJ terminates this Agreement pursuant to this Section 14.2.6, then, in exchange for purchasing the Trial Data Package including the Research Results included therein as set forth in Section 11.1.1.4, PB will pay to SFJ within [***] of the date of termination an amount equal to one hundred fifty percent (150%) of Development Costs which were paid or incurred by SFJ. " ;
+    ct:source_path "cuad/PhasebioPharmaceuticalsInc_20200330_10-K_EX-10.21_12086810_EX-10.21_Development Agreement.txt" ;
+    ct:source_sha256 "d21fe55a3227fc7092016602c707544b6d66bbd5686d19402204d1cd92945517" ;
+    ct:start_char 250377 .
+
+ex:C069P0804 a ct:SourcePassage ;
+    ct:end_char 252963 ;
+    ct:exact_text "14.2.7 Termination for Safety Concerns. Either Party may terminate this Agreement upon written notice to the other Party if (a) the independent data monitoring committee for the Phase 3 Trial recommends termination of the Phase 3 Trial for reasons pertaining to the health or safety of the Subjects or for futility, or (b) the Parties mutually agree a material health or safety concern with respect to the Subjects exists. In the event that this Agreement terminates pursuant to this Section 14.2.7, then PB will not be obligated to pay to SFJ any Development Costs or Approval Payments. Notwithstanding the foregoing, (A) if this Agreement terminates pursuant to this Section 14.2.7 and such termination: (i) arises as a result of gross negligence on the part of PB; or (ii) is due to (x) the applicable independent data monitoring committee recommending termination of the Phase 3 Trial or (y) PB and SFJ" ;
+    ct:source_path "cuad/PhasebioPharmaceuticalsInc_20200330_10-K_EX-10.21_12086810_EX-10.21_Development Agreement.txt" ;
+    ct:source_sha256 "d21fe55a3227fc7092016602c707544b6d66bbd5686d19402204d1cd92945517" ;
+    ct:start_char 252057 .
+
+ex:C069P0808 a ct:SourcePassage ;
+    ct:end_char 255781 ;
+    ct:exact_text "14.2.8.1 SFJ may terminate this Agreement if (i) PB has breached by its own actions, or by the actions of any of its Representatives, either of Section 13.1.3 or Section 13.1.4 in any material respect, (ii) a Representative of PB has breached the policy attached as Exhibit F‑1 in any material respect and such breach results in a Material Anti-Corruption Law Violation, or (iii) SFJ learns (a) that improper payments are being or have been made to Government Officials or any other person by PB or any of its Representatives on behalf of PB or (b) that PB or any of its Representatives with respect to services performed on behalf of PB has accepted any payment, item, or benefit, regardless of value, as an improper inducement to award, obtain or retain business or otherwise gain or grant an improper business advantage from or to any other person or entity (in any such case ((i), (ii) or (iii)), a \"PB Compliance Breach\"), unless such PB Compliance Breach can be cured without having a materially adverse impact on the probability of completing the Clinical Trials or obtaining Regulatory Approval for the Product. In the event of such termination, PB will not be entitled to any further payments under ARTICLE 4, regardless of any activities undertaken or agreements with additional Third Parties entered into prior to termination. " ;
+    ct:source_path "cuad/PhasebioPharmaceuticalsInc_20200330_10-K_EX-10.21_12086810_EX-10.21_Development Agreement.txt" ;
+    ct:source_sha256 "d21fe55a3227fc7092016602c707544b6d66bbd5686d19402204d1cd92945517" ;
+    ct:start_char 254443 .
+
+ex:C069P0811 a ct:SourcePassage ;
+    ct:end_char 258125 ;
+    ct:exact_text "14.2.8.2 PB may terminate this Agreement if (i) SFJ has breached by its own actions, or by the actions of any of its Representatives, either of Section 13.1.3 or Section 13.1.4 in any material respect, (ii) a Representative of SFJ has breached the policy attached as Exhibit F‑2 in any material respect and such breach results in a Material Anti-Corruption Law Violation, or (iii) PB learns (a) that improper payments are being or have been made to Government Officials or any other person by SFJ or any of its Representatives on behalf of SFJ or (b) that SFJ or any of its Representatives with respect to services performed on behalf of SFJ has accepted any payment, item, or benefit, regardless of value, as an improper inducement to award, obtain or retain business or otherwise gain or grant an improper business advantage from or to any other person or entity (in any such case ((i), (ii) or (iii)), an \"SFJ Compliance Breach\"), unless such SFJ Compliance Breach can be cured without having a materially adverse impact on the probability of completing the Clinical Trials or obtaining Regulatory Approval for the Product. In the event of such termination, SFJ will not be entitled to any further payments hereunder except as set forth below. " ;
+    ct:source_path "cuad/PhasebioPharmaceuticalsInc_20200330_10-K_EX-10.21_12086810_EX-10.21_Development Agreement.txt" ;
+    ct:source_sha256 "d21fe55a3227fc7092016602c707544b6d66bbd5686d19402204d1cd92945517" ;
+    ct:start_char 256878 .
+
+ct:Condition a owl:Class ;
+    rdfs:label "Condition" .
+
+ct:SourcePassage a owl:Class ;
+    rdfs:label "SourcePassage" .
+
+ct:Rule a owl:Class ;
+    rdfs:label "Rule" .
+
+ct:Reference a owl:Class ;
+    rdfs:label "Reference" .
+

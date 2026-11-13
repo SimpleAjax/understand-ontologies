@@ -1,0 +1,149 @@
+@prefix ct: <https://cimulink.local/ontology/contract-terms/0.1#> .
+@prefix ex: <https://cimulink.local/ontology/llm100-v1/> .
+@prefix meta: <https://cimulink.local/ontology/extraction#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ct: a owl:Ontology ;
+    rdfs:comment "Partial five-contract development sample. No claim of complete contract coverage or legal correctness." .
+
+ct:agreement_effective_from a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:applies_within a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:calendar_date_status a owl:DatatypeProperty .
+
+ct:coverage a owl:DatatypeProperty .
+
+ct:description a owl:DatatypeProperty .
+
+ct:duration a owl:DatatypeProperty .
+
+ct:duration_status a owl:DatatypeProperty .
+
+ct:end_char a owl:DatatypeProperty .
+
+ct:end_date_status a owl:DatatypeProperty .
+
+ct:ends_on_event a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:exact_text a owl:DatatypeProperty .
+
+ct:has_party a owl:ObjectProperty ;
+    rdfs:domain ct:Agreement ;
+    rdfs:range ct:Party .
+
+ct:has_rule a owl:ObjectProperty ;
+    rdfs:domain ct:Agreement ;
+    rdfs:range ct:Rule .
+
+ct:kind a owl:DatatypeProperty .
+
+ct:notice_actor a owl:DatatypeProperty .
+
+ct:notice_form a owl:DatatypeProperty .
+
+ct:notice_period_status a owl:DatatypeProperty .
+
+ct:qualifies a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Rule .
+
+ct:references_section a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:renewal_count a owl:DatatypeProperty .
+
+ct:resolution_status a owl:DatatypeProperty .
+
+ct:resolved_to a owl:ObjectProperty ;
+    rdfs:domain ct:Reference ;
+    rdfs:range ct:SourcePassage .
+
+ct:source_path a owl:DatatypeProperty .
+
+ct:source_sha256 a owl:DatatypeProperty .
+
+ct:start_char a owl:DatatypeProperty .
+
+ct:starts_from a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:stated_end_date a owl:DatatypeProperty .
+
+ct:subject_to a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Condition .
+
+ct:supported_by a owl:ObjectProperty ;
+    rdfs:range ct:SourcePassage .
+
+ct:termination_notice a owl:DatatypeProperty .
+
+ex:C070 a ct:Agreement ;
+    rdfs:label "PrecheckHealthServicesInc_20200320_8-K_EX-99.2_12070169_EX-99.2_Distributor Agreement.txt" ;
+    ct:coverage "LOCAL_LLM_PROPOSED_PARTIAL; NOT_HUMAN_REVIEWED" ;
+    ct:has_rule ex:C070R0001,
+        ex:C070R0002 ;
+    ct:source_path "cuad/PrecheckHealthServicesInc_20200320_8-K_EX-99.2_12070169_EX-99.2_Distributor Agreement.txt" ;
+    ct:source_sha256 "beee329d09f6bd58196158ac36e7a86ad2f6a85be51594d77cf766e979c214fc" ;
+    meta:model_digest "0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0" .
+
+ct:Party a owl:Class ;
+    rdfs:label "Party" .
+
+ex:C070R0001 a ct:Rule ;
+    rdfs:label "Termination — source passage 5" ;
+    ct:kind "TERMINATION" ;
+    ct:subject_to ex:C070R0001Condition5 ;
+    ct:supported_by ex:C070P0005 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C070R0001Condition5 a ct:Condition ;
+    ct:description "The Distributor represents and warrants that the Distributor shall conduct business in strict conformity with all local, state and federal laws, rules and regulations. 8. The Principal agrees that the Distributor may employ or engage representatives or sub-distributors in furtherance of this Agreement and the Distributor agrees that the Distributor shall be solely responsible for the payment of wages or commissions to those representatives and sub-distributors, and that under no circumstances shall Distributor's representatives be deemed employees of Principal for any purpose whatsoever. 9. Principal will grant Distributor a discount based on the Products and Prices. The proposed discount is expected to be ¨%. Discount may vary depending on product volume ordered or promotions. 10. This Agreement shall be in effect until March 18. 2021, unless sooner terminated by either party upon (30) days written notice, without cause. 11. In the event of termination, the Distributor shall be entitled to receive all orders accepted by the Principal prior to the date of termination and may sell the ordered Products in the Territory. Payment to be made upon shipment." ;
+    ct:supported_by ex:C070P0005 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C070R0002 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 5" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:subject_to ex:C070R0002Condition5 ;
+    ct:supported_by ex:C070P0005 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C070R0002Condition5 a ct:Condition ;
+    ct:description "The Distributor represents and warrants that the Distributor shall conduct business in strict conformity with all local, state and federal laws, rules and regulations. 8. The Principal agrees that the Distributor may employ or engage representatives or sub-distributors in furtherance of this Agreement and the Distributor agrees that the Distributor shall be solely responsible for the payment of wages or commissions to those representatives and sub-distributors, and that under no circumstances shall Distributor's representatives be deemed employees of Principal for any purpose whatsoever. 9. Principal will grant Distributor a discount based on the Products and Prices. The proposed discount is expected to be ¨%. Discount may vary depending on product volume ordered or promotions. 10. This Agreement shall be in effect until March 18. 2021, unless sooner terminated by either party upon (30) days written notice, without cause. 11. In the event of termination, the Distributor shall be entitled to receive all orders accepted by the Principal prior to the date of termination and may sell the ordered Products in the Territory. Payment to be made upon shipment." ;
+    ct:supported_by ex:C070P0005 ;
+    meta:review_status "UNREVIEWED" .
+
+ct:Agreement a owl:Class ;
+    rdfs:label "Agreement" .
+
+ct:Condition a owl:Class ;
+    rdfs:label "Condition" .
+
+ct:SourcePassage a owl:Class ;
+    rdfs:label "SourcePassage" .
+
+ex:C070P0005 a ct:SourcePassage ;
+    ct:end_char 4007 ;
+    ct:exact_text "The Distributor represents and warrants that the Distributor shall conduct business in strict conformity with all local, state and federal laws, rules and regulations. 8. The Principal agrees that the Distributor may employ or engage representatives or sub-distributors in furtherance of this Agreement and the Distributor agrees that the Distributor shall be solely responsible for the payment of wages or commissions to those representatives and sub-distributors, and that under no circumstances shall Distributor's representatives be deemed employees of Principal for any purpose whatsoever. 9. Principal will grant Distributor a discount based on the Products and Prices. The proposed discount is expected to be ¨%. Discount may vary depending on product volume ordered or promotions. 10. This Agreement shall be in effect until March 18. 2021, unless sooner terminated by either party upon (30) days written notice, without cause. 11. In the event of termination, the Distributor shall be entitled to receive all orders accepted by the Principal prior to the date of termination and may sell the ordered Products in the Territory. Payment to be made upon shipment." ;
+    ct:source_path "cuad/PrecheckHealthServicesInc_20200320_8-K_EX-99.2_12070169_EX-99.2_Distributor Agreement.txt" ;
+    ct:source_sha256 "beee329d09f6bd58196158ac36e7a86ad2f6a85be51594d77cf766e979c214fc" ;
+    ct:start_char 2838 .
+
+ct:Reference a owl:Class ;
+    rdfs:label "Reference" .
+
+ct:Rule a owl:Class ;
+    rdfs:label "Rule" .
+

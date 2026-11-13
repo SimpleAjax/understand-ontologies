@@ -1,0 +1,134 @@
+{
+  "document_id": "C085",
+  "file_path": "cuad/TRUENORTHENERGYCORP_02_08_2007-EX-10.1-DEVELOPMENT AGREEMENT.txt",
+  "model_digest": "0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0",
+  "rules": [
+    {
+      "passage_id": 52,
+      "kind": "CONDITIONAL_REFERENCED_TERM",
+      "label": "Conditional Referenced Term — source passage 52",
+      "condition_ids": [
+        52
+      ],
+      "reference_labels": [
+        "Section 2.3"
+      ],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 60,
+      "kind": "CONDITIONAL_REFERENCED_TERM",
+      "label": "Conditional Referenced Term — source passage 60",
+      "condition_ids": [
+        60
+      ],
+      "reference_labels": [],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 63,
+      "kind": "CONDITIONAL_REFERENCED_TERM",
+      "label": "Conditional Referenced Term — source passage 63",
+      "condition_ids": [
+        63
+      ],
+      "reference_labels": [],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 65,
+      "kind": "TERMINATION",
+      "label": "Termination — source passage 65",
+      "condition_ids": [],
+      "reference_labels": [],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 68,
+      "kind": "INITIAL_TERM",
+      "label": "Initial Term — source passage 68",
+      "condition_ids": [
+        68
+      ],
+      "reference_labels": [
+        "Section 4.1"
+      ],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 68,
+      "kind": "CONDITIONAL_REFERENCED_TERM",
+      "label": "Conditional Referenced Term — source passage 68",
+      "condition_ids": [
+        68
+      ],
+      "reference_labels": [
+        "Section 4.1"
+      ],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 80,
+      "kind": "TERMINATION",
+      "label": "Termination — source passage 80",
+      "condition_ids": [
+        80
+      ],
+      "reference_labels": [],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 83,
+      "kind": "CONDITIONAL_REFERENCED_TERM",
+      "label": "Conditional Referenced Term — source passage 83",
+      "condition_ids": [
+        83
+      ],
+      "reference_labels": [
+        "Section 4.2"
+      ],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 84,
+      "kind": "POST_EXPIRY_CONTINUATION",
+      "label": "Post Expiry Continuation — source passage 84",
+      "condition_ids": [],
+      "reference_labels": [],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 87,
+      "kind": "CONDITIONAL_REFERENCED_TERM",
+      "label": "Conditional Referenced Term — source passage 87",
+      "condition_ids": [
+        87
+      ],
+      "reference_labels": [],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    }
+  ],
+  "rejected_rules": [],
+  "review_status": "UNREVIEWED",
+  "coverage": "Lexically selected source windows; completeness not guaranteed."
+}

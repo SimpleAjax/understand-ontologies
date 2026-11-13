@@ -1,0 +1,791 @@
+@prefix ct: <https://cimulink.local/ontology/contract-terms/0.1#> .
+@prefix ex: <https://cimulink.local/ontology/llm100-v1/> .
+@prefix meta: <https://cimulink.local/ontology/extraction#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ct: a owl:Ontology ;
+    rdfs:comment "Partial five-contract development sample. No claim of complete contract coverage or legal correctness." .
+
+ct:agreement_effective_from a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:applies_within a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:calendar_date_status a owl:DatatypeProperty .
+
+ct:coverage a owl:DatatypeProperty .
+
+ct:description a owl:DatatypeProperty .
+
+ct:duration a owl:DatatypeProperty .
+
+ct:duration_status a owl:DatatypeProperty .
+
+ct:end_char a owl:DatatypeProperty .
+
+ct:end_date_status a owl:DatatypeProperty .
+
+ct:ends_on_event a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:exact_text a owl:DatatypeProperty .
+
+ct:has_party a owl:ObjectProperty ;
+    rdfs:domain ct:Agreement ;
+    rdfs:range ct:Party .
+
+ct:has_rule a owl:ObjectProperty ;
+    rdfs:domain ct:Agreement ;
+    rdfs:range ct:Rule .
+
+ct:kind a owl:DatatypeProperty .
+
+ct:notice_actor a owl:DatatypeProperty .
+
+ct:notice_form a owl:DatatypeProperty .
+
+ct:notice_period_status a owl:DatatypeProperty .
+
+ct:qualifies a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Rule .
+
+ct:references_section a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:renewal_count a owl:DatatypeProperty .
+
+ct:resolution_status a owl:DatatypeProperty .
+
+ct:resolved_to a owl:ObjectProperty ;
+    rdfs:domain ct:Reference ;
+    rdfs:range ct:SourcePassage .
+
+ct:source_path a owl:DatatypeProperty .
+
+ct:source_sha256 a owl:DatatypeProperty .
+
+ct:start_char a owl:DatatypeProperty .
+
+ct:starts_from a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:stated_end_date a owl:DatatypeProperty .
+
+ct:subject_to a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Condition .
+
+ct:supported_by a owl:ObjectProperty ;
+    rdfs:range ct:SourcePassage .
+
+ct:termination_notice a owl:DatatypeProperty .
+
+ex:C036 a ct:Agreement ;
+    rdfs:label "FIBROGENINC_10_01_2014-EX-10.11-COLLABORATION AGREEMENT.txt" ;
+    ct:coverage "LOCAL_LLM_PROPOSED_PARTIAL; NOT_HUMAN_REVIEWED" ;
+    ct:has_rule ex:C036R0001,
+        ex:C036R0002,
+        ex:C036R0003,
+        ex:C036R0004,
+        ex:C036R0005,
+        ex:C036R0006,
+        ex:C036R0007,
+        ex:C036R0008,
+        ex:C036R0009,
+        ex:C036R0010,
+        ex:C036R0011,
+        ex:C036R0012,
+        ex:C036R0013,
+        ex:C036R0014,
+        ex:C036R0015,
+        ex:C036R0016,
+        ex:C036R0017,
+        ex:C036R0018,
+        ex:C036R0019,
+        ex:C036R0020,
+        ex:C036R0021,
+        ex:C036R0022,
+        ex:C036R0023,
+        ex:C036R0024,
+        ex:C036R0025,
+        ex:C036R0026,
+        ex:C036R0027,
+        ex:C036R0028,
+        ex:C036R0029,
+        ex:C036R0030,
+        ex:C036R0031 ;
+    ct:source_path "cuad/FIBROGENINC_10_01_2014-EX-10.11-COLLABORATION AGREEMENT.txt" ;
+    ct:source_sha256 "b91c8e29f3002e983cfeb01ad86739f785fec1b6f7a5d934b61136725bf4d67a" ;
+    meta:model_digest "0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0" .
+
+ct:Party a owl:Class ;
+    rdfs:label "Party" .
+
+ex:C036P0049 a ct:SourcePassage ;
+    ct:end_char 7201 ;
+    ct:exact_text "TABLE OF CONTENTS (continued)           Page   18.7   Effect of Termination     39" ;
+    ct:source_path "cuad/FIBROGENINC_10_01_2014-EX-10.11-COLLABORATION AGREEMENT.txt" ;
+    ct:source_sha256 "b91c8e29f3002e983cfeb01ad86739f785fec1b6f7a5d934b61136725bf4d67a" ;
+    ct:start_char 7119 .
+
+ex:C036P0159 a ct:SourcePassage ;
+    ct:end_char 35060 ;
+    ct:exact_text "3.2.2 Other. Beginning upon the date of signing of this Agreement and by December 31 of each year thereafter until expiration or termination of this Agreement, Astellas shall submit to the JDC the proposed plan required under Section 3.1 above for the following fiscal year, including for regulatory activities within the Astellas Territory. The JDC shall review such proposals as soon as possible and shall approve the Development Plan for such following fiscal year, with such changes as the JDC may agree to the plan proposed by Astellas, no later than March 15 of the current fiscal year." ;
+    ct:source_path "cuad/FIBROGENINC_10_01_2014-EX-10.11-COLLABORATION AGREEMENT.txt" ;
+    ct:source_sha256 "b91c8e29f3002e983cfeb01ad86739f785fec1b6f7a5d934b61136725bf4d67a" ;
+    ct:start_char 34468 .
+
+ex:C036P0191 a ct:SourcePassage ;
+    ct:end_char 48299 ;
+    ct:exact_text "CONFIDENTIAL   EXECUTION COPY   5.1.1 Retention. Each of Astellas and FG shall retain its records for the minimum period of time required by applicable law in all cases, and for not less than [ * ] following the expiration or termination of this Agreement." ;
+    ct:source_path "cuad/FIBROGENINC_10_01_2014-EX-10.11-COLLABORATION AGREEMENT.txt" ;
+    ct:source_sha256 "b91c8e29f3002e983cfeb01ad86739f785fec1b6f7a5d934b61136725bf4d67a" ;
+    ct:start_char 48043 .
+
+ex:C036P0363 a ct:SourcePassage ;
+    ct:end_char 132395 ;
+    ct:exact_text "18.1 Term. This Agreement shall become effective as of the Effective Date and, shall continue in full force and effect until terminated pursuant to this Article 18." ;
+    ct:source_path "cuad/FIBROGENINC_10_01_2014-EX-10.11-COLLABORATION AGREEMENT.txt" ;
+    ct:source_sha256 "b91c8e29f3002e983cfeb01ad86739f785fec1b6f7a5d934b61136725bf4d67a" ;
+    ct:start_char 132231 .
+
+ex:C036P0364 a ct:SourcePassage ;
+    ct:end_char 132452 ;
+    ct:exact_text "18.2 Termination for Cause or Technical Product Failure" ;
+    ct:source_path "cuad/FIBROGENINC_10_01_2014-EX-10.11-COLLABORATION AGREEMENT.txt" ;
+    ct:source_sha256 "b91c8e29f3002e983cfeb01ad86739f785fec1b6f7a5d934b61136725bf4d67a" ;
+    ct:start_char 132397 .
+
+ex:C036P0372 a ct:SourcePassage ;
+    ct:end_char 136706 ;
+    ct:exact_text "18.3 Termination in case of Generic Competition. In the event generic equivalents has captured the [ * ] of the quantity of Lead Compound sold by Astellas during the [ * ] preceding such termination calculated on a annual basis; or in the event, after the entry into the market of generic equivalents, that Astellas' annual sales fall below $[ * ] for all Lead Compounds, Astellas may terminate this Agreement upon [ * ] written notice to FG; provided, that Astellas does not Commercialize any Lead Compound after such termination until the expiration of the last to expire FG Patents applicable to such Lead Compound.   -38-" ;
+    ct:source_path "cuad/FIBROGENINC_10_01_2014-EX-10.11-COLLABORATION AGREEMENT.txt" ;
+    ct:source_sha256 "b91c8e29f3002e983cfeb01ad86739f785fec1b6f7a5d934b61136725bf4d67a" ;
+    ct:start_char 136081 .
+
+ex:C036P0376 a ct:SourcePassage ;
+    ct:end_char 138373 ;
+    ct:exact_text "18.6 Termination upon Notice. Subject to Section 18.7.2, Astellas may terminate this Agreement upon six (6) months notice to FG for any reason or no reason." ;
+    ct:source_path "cuad/FIBROGENINC_10_01_2014-EX-10.11-COLLABORATION AGREEMENT.txt" ;
+    ct:source_sha256 "b91c8e29f3002e983cfeb01ad86739f785fec1b6f7a5d934b61136725bf4d67a" ;
+    ct:start_char 138217 .
+
+ex:C036P0377 a ct:SourcePassage ;
+    ct:end_char 138401 ;
+    ct:exact_text "18.7 Effect of Termination" ;
+    ct:source_path "cuad/FIBROGENINC_10_01_2014-EX-10.11-COLLABORATION AGREEMENT.txt" ;
+    ct:source_sha256 "b91c8e29f3002e983cfeb01ad86739f785fec1b6f7a5d934b61136725bf4d67a" ;
+    ct:start_char 138375 .
+
+ex:C036P0378 a ct:SourcePassage ;
+    ct:end_char 138829 ;
+    ct:exact_text "18.7.1 Accrued Obligations. Termination of this Agreement for any reason shall not release either party hereto from any liability which, at the time of such termination, has already accrued to the other party or which is attributable to a period prior to such termination nor preclude either party from pursuing all rights and remedies it may have hereunder or at law or in equity with respect to any breach of this Agreement." ;
+    ct:source_path "cuad/FIBROGENINC_10_01_2014-EX-10.11-COLLABORATION AGREEMENT.txt" ;
+    ct:source_sha256 "b91c8e29f3002e983cfeb01ad86739f785fec1b6f7a5d934b61136725bf4d67a" ;
+    ct:start_char 138403 .
+
+ex:C036P0380 a ct:SourcePassage ;
+    ct:end_char 140277 ;
+    ct:exact_text "18.7.3 Survival. Articles 1, 5, 14, 16, 17, 18, 19 and 20, and Sections 8.3.3 and 10.5, shall survive any termination of this Agreement, along with FG's rights and Astellas' obligations (but not Astellas' rights or FG's obligations, except to the extent required by the Japanese Ministry of Health, Labor and Welfare) under Section 5.1.1 and Article 7. In addition, the following provisions shall survive termination of this Agreement for any reason: Astellas shall assign or cause to be assigned to FG (or if not so assignable, Astellas shall take all reasonable actions to make available to FG) all regulatory filings and registrations (including MAAs and Marketing Approvals) with respect to the Lead Compounds that have been filed or made by or under authority of Astellas, and the rights in trademark with respect to each Lead Compound as provided for in Section 4.4.1, in each case such assignment (or availability)   -39-" ;
+    ct:source_path "cuad/FIBROGENINC_10_01_2014-EX-10.11-COLLABORATION AGREEMENT.txt" ;
+    ct:source_sha256 "b91c8e29f3002e983cfeb01ad86739f785fec1b6f7a5d934b61136725bf4d67a" ;
+    ct:start_char 139349 .
+
+ex:C036P0382 a ct:SourcePassage ;
+    ct:end_char 140822 ;
+    ct:exact_text "CONFIDENTIAL   EXECUTION COPY   shall be made within [ * ] after the notice of termination. From and after the date of a notice of termination, FG shall have no further obligations under this Agreement beyond those obligations that survive termination in such events as specified in this Section 18.7.3." ;
+    ct:source_path "cuad/FIBROGENINC_10_01_2014-EX-10.11-COLLABORATION AGREEMENT.txt" ;
+    ct:source_sha256 "b91c8e29f3002e983cfeb01ad86739f785fec1b6f7a5d934b61136725bf4d67a" ;
+    ct:start_char 140519 .
+
+ex:C036P0387 a ct:SourcePassage ;
+    ct:end_char 144079 ;
+    ct:exact_text "19.2 Full Arbitration. Any dispute, controversy or claim arising out of or relating to the breach, interpretation or enforcement of this Agreement, including disputes relating to termination of this Agreement, shall be settled by binding arbitration in the manner   -40-" ;
+    ct:source_path "cuad/FIBROGENINC_10_01_2014-EX-10.11-COLLABORATION AGREEMENT.txt" ;
+    ct:source_sha256 "b91c8e29f3002e983cfeb01ad86739f785fec1b6f7a5d934b61136725bf4d67a" ;
+    ct:start_char 143809 .
+
+ex:C036R0001 a ct:Rule ;
+    rdfs:label "Termination — source passage 47" ;
+    ct:kind "TERMINATION" ;
+    ct:subject_to ex:C036R0001Condition47 ;
+    ct:supported_by ex:C036P0047 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C036R0001Condition47 a ct:Condition ;
+    ct:description "18.1   Term     37  18.2   Termination for Cause or Technical Product Failure     37  18.3   Termination in case of Generic Competition     38  18.4   Negative Advice from Authorities     39  18.5   Admission of Invalidity or Unenforceability of FG Patent     39  18.6   Termination upon Notice     39    -iv-" ;
+    ct:supported_by ex:C036P0047 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C036R0002 a ct:Rule ;
+    rdfs:label "Termination — source passage 49" ;
+    ct:kind "TERMINATION" ;
+    ct:supported_by ex:C036P0049 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C036R0003 a ct:Rule ;
+    rdfs:label "Initial Term — source passage 158" ;
+    ct:kind "INITIAL_TERM" ;
+    ct:references_section ex:C036R0003Ref0 ;
+    ct:subject_to ex:C036R0003Condition158 ;
+    ct:supported_by ex:C036P0158 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C036R0003Condition158 a ct:Condition ;
+    ct:description "3.2.1 Initial Development Plan. The initial Development Plan is attached hereto as Exhibit C (the \"Initial Development Plan\"), and shall be fixed for the period from the Effective Date through March 31, 2006, unless otherwise agreed by the JDC." ;
+    ct:supported_by ex:C036P0158 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C036R0003Ref0 a ct:Reference ;
+    rdfs:label "Exhibit C" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C036R0004 a ct:Rule ;
+    rdfs:label "Initial Term — source passage 159" ;
+    ct:kind "INITIAL_TERM" ;
+    ct:references_section ex:C036R0004Ref0 ;
+    ct:supported_by ex:C036P0159 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C036R0004Ref0 a ct:Reference ;
+    rdfs:label "Section 3.1" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C036R0005 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 191" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:supported_by ex:C036P0191 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C036R0006 a ct:Rule ;
+    rdfs:label "Conditional Referenced Term — source passage 235" ;
+    ct:kind "CONDITIONAL_REFERENCED_TERM" ;
+    ct:references_section ex:C036R0006Ref0,
+        ex:C036R0006Ref1 ;
+    ct:subject_to ex:C036R0006Condition235 ;
+    ct:supported_by ex:C036P0235 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C036R0006Condition235 a ct:Condition ;
+    ct:description "8.3.2 Independent Activities by Astellas. During the term of this Agreement, in the event Astellas seeks to Commercialize any molecules for the Field or the Expanded Field, except for actions taken within the Field in the course of the exercise of the license granted under Section 13.1 hereof and expressly authorized under this Agreement, Astellas shall notify FG immediately upon the commencement of any such activities, and provided that [ * ] such activities are and will be in the future conducted completely independently of any of FG Technology and/or any other FG materials, confidential information, intellectual property or other related information provided by or on behalf of FG to Astellas under this Agreement or any other agreement between FG and Astellas relating to the subject matter hereof, Astellas may proceed with such Commercialization, subject at all times to the obligations contained in this Agreement with respect to any intellectual property in connection with or related to such activities and FG's right to terminate this Agreement pursuant to Section 18.2.1 hereof.   -19-" ;
+    ct:supported_by ex:C036P0235 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C036R0006Ref0 a ct:Reference ;
+    rdfs:label "Section 13.1" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C036R0006Ref1 a ct:Reference ;
+    rdfs:label "Section 18.2.1" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C036R0007 a ct:Rule ;
+    rdfs:label "Conditional Referenced Term — source passage 247" ;
+    ct:kind "CONDITIONAL_REFERENCED_TERM" ;
+    ct:subject_to ex:C036R0007Condition247 ;
+    ct:supported_by ex:C036P0247 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C036R0007Condition247 a ct:Condition ;
+    ct:description "(d) Upon the later of (i) the initial retail sale of a generic equivalent (as defined by the Japanese Ministry of Health, Labour and Welfare) of such Lead Compound in the Territory, and (ii) and the expiration of the last to expire of the FG Patents with respect to such Lead Compound effectively precluding third parties from selling said generic equivalent, for any quantities shipped by FG to Astellas, Astellas shall pay FG for such quantities [ * ] of the Sales Price; provided, however, that in the event that the payment of the [ * ] of the Sales Price would result in FG's [ * ] Percentage falling below [ * ], FG shall have the option to initiate a renegotiation of the transfer price upon notice to Astellas, in which case the parties shall use best efforts in good faith to renegotiate reasonable terms for the transfer price; provided, further, that in the event the transfer price is not renegotiated to FG's satisfaction or FG elects not to initiate a renegotiation, FG may elect to terminate its manufacturing obligations by written notice to Astellas, and FG and Astellas shall negotiate reasonable terms for transfer of manufacturing. During such period of renegotiation, FG shall transfer the Lead Compound to Astellas at a price   -21-" ;
+    ct:supported_by ex:C036P0247 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C036R0008 a ct:Rule ;
+    rdfs:label "Termination — source passage 247" ;
+    ct:kind "TERMINATION" ;
+    ct:subject_to ex:C036R0008Condition247 ;
+    ct:supported_by ex:C036P0247 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C036R0008Condition247 a ct:Condition ;
+    ct:description "(d) Upon the later of (i) the initial retail sale of a generic equivalent (as defined by the Japanese Ministry of Health, Labour and Welfare) of such Lead Compound in the Territory, and (ii) and the expiration of the last to expire of the FG Patents with respect to such Lead Compound effectively precluding third parties from selling said generic equivalent, for any quantities shipped by FG to Astellas, Astellas shall pay FG for such quantities [ * ] of the Sales Price; provided, however, that in the event that the payment of the [ * ] of the Sales Price would result in FG's [ * ] Percentage falling below [ * ], FG shall have the option to initiate a renegotiation of the transfer price upon notice to Astellas, in which case the parties shall use best efforts in good faith to renegotiate reasonable terms for the transfer price; provided, further, that in the event the transfer price is not renegotiated to FG's satisfaction or FG elects not to initiate a renegotiation, FG may elect to terminate its manufacturing obligations by written notice to Astellas, and FG and Astellas shall negotiate reasonable terms for transfer of manufacturing. During such period of renegotiation, FG shall transfer the Lead Compound to Astellas at a price   -21-" ;
+    ct:supported_by ex:C036P0247 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C036R0009 a ct:Rule ;
+    rdfs:label "Conditional Referenced Term — source passage 314" ;
+    ct:kind "CONDITIONAL_REFERENCED_TERM" ;
+    ct:references_section ex:C036R0009Ref0 ;
+    ct:subject_to ex:C036R0009Condition314 ;
+    ct:supported_by ex:C036P0314 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C036R0009Condition314 a ct:Condition ;
+    ct:description "14.2.1 FG Inventions. FG shall control all Prosecution and Interference Activities pertaining to FG Patents and patent applications and patents related to its, its Affiliate's or its Sublicensee's inventions in the Protected Field worldwide using counsel of its choice and shall bear the costs of such Prosecution and Interference Activities, provided, however, that; and Astellas shall reimburse to FG, within [ * ] of receipt by Astellas of invoice therefor, any such costs to the extent incurred in connection with or reasonably allocable to the FG Patents registered and/or to be registered in the Astellas Territory and related to the Field and the Lead Compounds, provided, further, that, with respect to patents or patent applications excluding those covering composition of matter claims and all patents listed on Exhibit A hereto as of the Effective Date, Astellas may postpone such reimbursement until the respective FG Patent will have been registered in the Astellas Territory if [ * ], on condition that once the respective FG Patent has been registered in the Astellas Territory, Astellas shall pay to FG such costs, plus interest to the extent permitted by applicable law at the U.S. " ;
+    ct:supported_by ex:C036P0314 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C036R0009Ref0 a ct:Reference ;
+    rdfs:label "Exhibit A" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C036R0010 a ct:Rule ;
+    rdfs:label "Initial Term — source passage 363" ;
+    ct:kind "INITIAL_TERM" ;
+    ct:references_section ex:C036R0010Ref0 ;
+    ct:supported_by ex:C036P0363 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C036R0010Ref0 a ct:Reference ;
+    rdfs:label "Article 18" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C036R0011 a ct:Rule ;
+    rdfs:label "Termination — source passage 364" ;
+    ct:kind "TERMINATION" ;
+    ct:supported_by ex:C036P0364 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C036R0012 a ct:Rule ;
+    rdfs:label "Termination — source passage 365" ;
+    ct:kind "TERMINATION" ;
+    ct:subject_to ex:C036R0012Condition365 ;
+    ct:supported_by ex:C036P0365 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C036R0012Condition365 a ct:Condition ;
+    ct:description "18.2.1 Material Breaches. FG may forthwith terminate this Agreement in the event Astellas fails to make any payment due under Articles 6, 9 or 14, within [ * ] following receipt of written notice of such default, or materially breaches its obligations under Articles 8 or 14, and fails to cure such breach within [ * ] following receipt of written notice of such default. Astellas may forthwith terminate this Agreement in the   -37-" ;
+    ct:supported_by ex:C036P0365 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C036R0013 a ct:Rule ;
+    rdfs:label "Termination — source passage 367" ;
+    ct:kind "TERMINATION" ;
+    ct:references_section ex:C036R0013Ref0,
+        ex:C036R0013Ref1 ;
+    ct:subject_to ex:C036R0013Condition367 ;
+    ct:supported_by ex:C036P0367 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C036R0013Condition367 a ct:Condition ;
+    ct:description "CONFIDENTIAL   EXECUTION COPY   event FG materially breaches its obligations under Article 7 or Article 12, and fails to cure such breach within [ * ] following receipt of written notice of such default. Any termination shall become effective at the end of such [ * ] or [ * ] period unless the defaulting or breaching party (or any other party on its behalf) has cured any such default prior to the expiration of the [ * ] or [ * ] period, as the case may be." ;
+    ct:supported_by ex:C036P0367 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C036R0013Ref0 a ct:Reference ;
+    rdfs:label "Article 7" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C036R0013Ref1 a ct:Reference ;
+    rdfs:label "Article 12" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C036R0014 a ct:Rule ;
+    rdfs:label "Conditional Referenced Term — source passage 367" ;
+    ct:kind "CONDITIONAL_REFERENCED_TERM" ;
+    ct:references_section ex:C036R0014Ref0,
+        ex:C036R0014Ref1 ;
+    ct:subject_to ex:C036R0014Condition367 ;
+    ct:supported_by ex:C036P0367 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C036R0014Condition367 a ct:Condition ;
+    ct:description "CONFIDENTIAL   EXECUTION COPY   event FG materially breaches its obligations under Article 7 or Article 12, and fails to cure such breach within [ * ] following receipt of written notice of such default. Any termination shall become effective at the end of such [ * ] or [ * ] period unless the defaulting or breaching party (or any other party on its behalf) has cured any such default prior to the expiration of the [ * ] or [ * ] period, as the case may be." ;
+    ct:supported_by ex:C036P0367 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C036R0014Ref0 a ct:Reference ;
+    rdfs:label "Article 7" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C036R0014Ref1 a ct:Reference ;
+    rdfs:label "Article 12" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C036R0015 a ct:Rule ;
+    rdfs:label "Termination — source passage 368" ;
+    ct:kind "TERMINATION" ;
+    ct:references_section ex:C036R0015Ref0,
+        ex:C036R0015Ref1 ;
+    ct:subject_to ex:C036R0015Condition368 ;
+    ct:supported_by ex:C036P0368 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C036R0015Condition368 a ct:Condition ;
+    ct:description "18.2.2 Independent Activities. Notwithstanding anything contained in Section 8.3.2 or Section 14.1.1, in the event that Astellas Commercializes any molecules for the Field or the Expanded Field, except for actions taken within the Field in the course of the exercise of the licenses granted under Sections 8.1 and 13.1 hereof and expressly authorized under this Agreement, even if FG determines that Astellas' activities are completely independent of any FG Technology and/or any other FG materials, confidential information, intellectual property or other related information provided by FG to Astellas under this Agreement or any other agreement between FG and Astellas relating to the subject matter hereof, FG shall have the right at its sole discretion to terminate this Agreement upon [ * ] notice to Astellas." ;
+    ct:supported_by ex:C036P0368 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C036R0015Ref0 a ct:Reference ;
+    rdfs:label "Section 8.3.2" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C036R0015Ref1 a ct:Reference ;
+    rdfs:label "Section 14.1.1" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C036R0016 a ct:Rule ;
+    rdfs:label "Termination — source passage 369" ;
+    ct:kind "TERMINATION" ;
+    ct:subject_to ex:C036R0016Condition369 ;
+    ct:supported_by ex:C036P0369 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C036R0016Condition369 a ct:Condition ;
+    ct:description "18.2.3 Technical Product Failure. Astellas may terminate this Agreement upon [ * ] notice to FG upon Technical Product Failure." ;
+    ct:supported_by ex:C036P0369 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C036R0017 a ct:Rule ;
+    rdfs:label "Termination — source passage 370" ;
+    ct:kind "TERMINATION" ;
+    ct:references_section ex:C036R0017Ref0,
+        ex:C036R0017Ref1,
+        ex:C036R0017Ref2,
+        ex:C036R0017Ref3 ;
+    ct:subject_to ex:C036R0017Condition370 ;
+    ct:supported_by ex:C036P0370 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C036R0017Condition370 a ct:Condition ;
+    ct:description "18.2.4 Development Diligence Failure. FG may terminate this Agreement upon thirty (30) days notice to Astellas in the event Astellas fails to meet any of its development diligence requirements as set forth in Article 11 hereof, provided, however, that with respect to the development diligence obligations set forth in Section 11.3.2, such termination right on behalf of FG shall be triggered only upon Astellas' failure to meet such development diligence obligations for a Major Indication (except those Major Indications set forth in Section 11.3.1(iv)), and Astellas may terminate this Agreement upon thirty (30) days notice to FG in the event FG fails to meet the development diligence requirement as set forth in Section 11.2 hereof." ;
+    ct:supported_by ex:C036P0370 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C036R0017Ref0 a ct:Reference ;
+    rdfs:label "Article 11" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C036R0017Ref1 a ct:Reference ;
+    rdfs:label "Section 11.3.2" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C036R0017Ref2 a ct:Reference ;
+    rdfs:label "Section 11.3.1(iv)" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C036R0017Ref3 a ct:Reference ;
+    rdfs:label "Section 11.2" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C036R0018 a ct:Rule ;
+    rdfs:label "Conditional Referenced Term — source passage 370" ;
+    ct:kind "CONDITIONAL_REFERENCED_TERM" ;
+    ct:references_section ex:C036R0018Ref0,
+        ex:C036R0018Ref1,
+        ex:C036R0018Ref2,
+        ex:C036R0018Ref3 ;
+    ct:subject_to ex:C036R0018Condition370 ;
+    ct:supported_by ex:C036P0370 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C036R0018Condition370 a ct:Condition ;
+    ct:description "18.2.4 Development Diligence Failure. FG may terminate this Agreement upon thirty (30) days notice to Astellas in the event Astellas fails to meet any of its development diligence requirements as set forth in Article 11 hereof, provided, however, that with respect to the development diligence obligations set forth in Section 11.3.2, such termination right on behalf of FG shall be triggered only upon Astellas' failure to meet such development diligence obligations for a Major Indication (except those Major Indications set forth in Section 11.3.1(iv)), and Astellas may terminate this Agreement upon thirty (30) days notice to FG in the event FG fails to meet the development diligence requirement as set forth in Section 11.2 hereof." ;
+    ct:supported_by ex:C036P0370 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C036R0018Ref0 a ct:Reference ;
+    rdfs:label "Article 11" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C036R0018Ref1 a ct:Reference ;
+    rdfs:label "Section 11.3.2" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C036R0018Ref2 a ct:Reference ;
+    rdfs:label "Section 11.3.1(iv)" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C036R0018Ref3 a ct:Reference ;
+    rdfs:label "Section 11.2" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C036R0019 a ct:Rule ;
+    rdfs:label "Termination — source passage 372" ;
+    ct:kind "TERMINATION" ;
+    ct:supported_by ex:C036P0372 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C036R0020 a ct:Rule ;
+    rdfs:label "Termination — source passage 374" ;
+    ct:kind "TERMINATION" ;
+    ct:subject_to ex:C036R0020Condition374 ;
+    ct:supported_by ex:C036P0374 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C036R0020Condition374 a ct:Condition ;
+    ct:description "CONFIDENTIAL   EXECUTION COPY   18.4 Negative Advice from Authorities. Astellas may terminate this Agreement upon [ * ] notice to FG in the event Astellas has commenced Phase III clinical studies in those of the following Indications that FG is developing: \"Treatment of anemia in patients with chronic kidney disease undergoing dialysis\", \"Treatment of anemia in patients with chronic kidney disease not undergoing dialysis\" and [ * ], and the Japanese Ministry of Health, Labor & Welfare has provided written notification that it will not approve the Lead Compounds in such Indications or the JDC determines, after the submission by Astellas of Marketing Approval Applications for such Indications, and the receipt of a response or request of the Japanese Ministry of Health, Labor & Welfare that contains development demands that are so onerous that it is not reasonable to continue with Development of the Lead Compounds in such Indications." ;
+    ct:supported_by ex:C036P0374 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C036R0021 a ct:Rule ;
+    rdfs:label "Conditional Referenced Term — source passage 374" ;
+    ct:kind "CONDITIONAL_REFERENCED_TERM" ;
+    ct:subject_to ex:C036R0021Condition374 ;
+    ct:supported_by ex:C036P0374 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C036R0021Condition374 a ct:Condition ;
+    ct:description "CONFIDENTIAL   EXECUTION COPY   18.4 Negative Advice from Authorities. Astellas may terminate this Agreement upon [ * ] notice to FG in the event Astellas has commenced Phase III clinical studies in those of the following Indications that FG is developing: \"Treatment of anemia in patients with chronic kidney disease undergoing dialysis\", \"Treatment of anemia in patients with chronic kidney disease not undergoing dialysis\" and [ * ], and the Japanese Ministry of Health, Labor & Welfare has provided written notification that it will not approve the Lead Compounds in such Indications or the JDC determines, after the submission by Astellas of Marketing Approval Applications for such Indications, and the receipt of a response or request of the Japanese Ministry of Health, Labor & Welfare that contains development demands that are so onerous that it is not reasonable to continue with Development of the Lead Compounds in such Indications." ;
+    ct:supported_by ex:C036P0374 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C036R0022 a ct:Rule ;
+    rdfs:label "Termination — source passage 375" ;
+    ct:kind "TERMINATION" ;
+    ct:references_section ex:C036R0022Ref0 ;
+    ct:subject_to ex:C036R0022Condition375 ;
+    ct:supported_by ex:C036P0375 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C036R0022Condition375 a ct:Condition ;
+    ct:description "18.5 Admission of Invalidity or Unenforceability of FG Patent. Astellas may terminate this Agreement upon [ * ] notice to FG in the event that FG enters into a settlement under Section 14.3 that admits the invalidity or unenforceability of all patents within the FG Technology, including patents covering Lead Compounds." ;
+    ct:supported_by ex:C036P0375 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C036R0022Ref0 a ct:Reference ;
+    rdfs:label "Section 14.3" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C036R0023 a ct:Rule ;
+    rdfs:label "Termination — source passage 376" ;
+    ct:kind "TERMINATION" ;
+    ct:references_section ex:C036R0023Ref0 ;
+    ct:supported_by ex:C036P0376 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C036R0023Ref0 a ct:Reference ;
+    rdfs:label "Section 18.7.2" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C036R0024 a ct:Rule ;
+    rdfs:label "Termination — source passage 377" ;
+    ct:kind "TERMINATION" ;
+    ct:supported_by ex:C036P0377 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C036R0025 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 378" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:supported_by ex:C036P0378 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C036R0026 a ct:Rule ;
+    rdfs:label "Termination — source passage 379" ;
+    ct:kind "TERMINATION" ;
+    ct:references_section ex:C036R0026Ref0,
+        ex:C036R0026Ref1 ;
+    ct:subject_to ex:C036R0026Condition379 ;
+    ct:supported_by ex:C036P0379 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C036R0026Condition379 a ct:Condition ;
+    ct:description "18.7.2 Termination. In the event of (a) a termination by Astellas under Section 18.6 during the period from the execution of this Agreement until the last to expire of the FG Patents, or (b) by FG under Section 18.2.1, 18.2.2, 18.2.4 or 18.2.5 hereof, Astellas shall, upon the effective date of such termination, pay to FG (i) a termination fee of $[ * ] U.S. dollars and (ii) any payments to which FG is otherwise entitled to receive hereunder in the period from the date of such termination notice until the [ * ]." ;
+    ct:supported_by ex:C036P0379 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C036R0026Ref0 a ct:Reference ;
+    rdfs:label "Section 18.6" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C036R0026Ref1 a ct:Reference ;
+    rdfs:label "Section 18.2.1" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C036R0027 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 380" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:references_section ex:C036R0027Ref0,
+        ex:C036R0027Ref1,
+        ex:C036R0027Ref2 ;
+    ct:supported_by ex:C036P0380 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C036R0027Ref0 a ct:Reference ;
+    rdfs:label "Section 5.1.1" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C036R0027Ref1 a ct:Reference ;
+    rdfs:label "Article 7" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C036R0027Ref2 a ct:Reference ;
+    rdfs:label "Section 4.4.1" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C036R0028 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 382" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:references_section ex:C036R0028Ref0 ;
+    ct:supported_by ex:C036P0382 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C036R0028Ref0 a ct:Reference ;
+    rdfs:label "Section 18.7.3" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C036R0029 a ct:Rule ;
+    rdfs:label "Termination — source passage 383" ;
+    ct:kind "TERMINATION" ;
+    ct:references_section ex:C036R0029Ref0 ;
+    ct:subject_to ex:C036R0029Condition383 ;
+    ct:supported_by ex:C036P0383 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C036R0029Condition383 a ct:Condition ;
+    ct:description "18.7.4 Material Non-Performance. In the event of any Material Non-Performance by a party, the other party shall, without reasonable delay following discovery of such Material Non-Performance notify the defaulting party in writing, and the parties shall consult with each other in good faith to endeavor to agree upon the most effective means to cure such Material Non-Performance and, if necessary, to effect a remedy in favor of the non-defaulting party for the consequences of such Material Non-Performance by the defaulting party (collectively, the \"Resolution\"). In the event (i) the parties are unable to agree upon Resolution, or (ii) the defaulting party, in the exercise of reasonable diligence shall have been unable to remedy such Material Non-Performance, then in either such event the remedy of the non-defaulting party with respect to the Material Non-Performance by the defaulting party shall be determined by arbitration pursuant to Section 19.2 hereof, and the arbitrators shall be authorized to fashion such remedy, including equitable relief, which may include termination of this Agreement in whole or in part, as the arbitrators shall determine appropriate, except that termination of this Agreement in whole shall only be the remedy of last resort." ;
+    ct:supported_by ex:C036P0383 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C036R0029Ref0 a ct:Reference ;
+    rdfs:label "Section 19.2" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C036R0030 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 384" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:references_section ex:C036R0030Ref0,
+        ex:C036R0030Ref1 ;
+    ct:subject_to ex:C036R0030Condition384 ;
+    ct:supported_by ex:C036P0384 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C036R0030Condition384 a ct:Condition ;
+    ct:description "18.7.5 License Upon Termination. In the event of a termination of this Agreement, FG shall have an irrevocable, exclusive, license, with the right to grant and authorize sublicenses, to any trademarks used by Astellas in association with the Lead Compounds hereunder to make, use, sell, import and otherwise exploit products within the Field in the Astellas Territory. Such license shall be royalty-free, provided, however, if such trademark is not a global trademark (i.e. materially different from the trademark used in the FG Territory) and either (i) if Astellas terminates this Agreement under Section 18.2.1 or 18.2.4, or (ii) if this Agreement is terminated in accordance with the procedure as provided for in Section 18.2.5 as a result of FG's Material Non-Performance, in which event FG and Astellas shall negotiate in good faith a reasonable fee for such license." ;
+    ct:supported_by ex:C036P0384 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C036R0030Ref0 a ct:Reference ;
+    rdfs:label "Section 18.2.1" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C036R0030Ref1 a ct:Reference ;
+    rdfs:label "Section 18.2.5" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C036R0031 a ct:Rule ;
+    rdfs:label "Termination — source passage 387" ;
+    ct:kind "TERMINATION" ;
+    ct:supported_by ex:C036P0387 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C036P0047 a ct:SourcePassage ;
+    ct:end_char 6877 ;
+    ct:exact_text "18.1   Term     37  18.2   Termination for Cause or Technical Product Failure     37  18.3   Termination in case of Generic Competition     38  18.4   Negative Advice from Authorities     39  18.5   Admission of Invalidity or Unenforceability of FG Patent     39  18.6   Termination upon Notice     39    -iv-" ;
+    ct:source_path "cuad/FIBROGENINC_10_01_2014-EX-10.11-COLLABORATION AGREEMENT.txt" ;
+    ct:source_sha256 "b91c8e29f3002e983cfeb01ad86739f785fec1b6f7a5d934b61136725bf4d67a" ;
+    ct:start_char 6568 .
+
+ex:C036P0158 a ct:SourcePassage ;
+    ct:end_char 34466 ;
+    ct:exact_text "3.2.1 Initial Development Plan. The initial Development Plan is attached hereto as Exhibit C (the \"Initial Development Plan\"), and shall be fixed for the period from the Effective Date through March 31, 2006, unless otherwise agreed by the JDC." ;
+    ct:source_path "cuad/FIBROGENINC_10_01_2014-EX-10.11-COLLABORATION AGREEMENT.txt" ;
+    ct:source_sha256 "b91c8e29f3002e983cfeb01ad86739f785fec1b6f7a5d934b61136725bf4d67a" ;
+    ct:start_char 34222 .
+
+ex:C036P0235 a ct:SourcePassage ;
+    ct:end_char 66137 ;
+    ct:exact_text "8.3.2 Independent Activities by Astellas. During the term of this Agreement, in the event Astellas seeks to Commercialize any molecules for the Field or the Expanded Field, except for actions taken within the Field in the course of the exercise of the license granted under Section 13.1 hereof and expressly authorized under this Agreement, Astellas shall notify FG immediately upon the commencement of any such activities, and provided that [ * ] such activities are and will be in the future conducted completely independently of any of FG Technology and/or any other FG materials, confidential information, intellectual property or other related information provided by or on behalf of FG to Astellas under this Agreement or any other agreement between FG and Astellas relating to the subject matter hereof, Astellas may proceed with such Commercialization, subject at all times to the obligations contained in this Agreement with respect to any intellectual property in connection with or related to such activities and FG's right to terminate this Agreement pursuant to Section 18.2.1 hereof.   -19-" ;
+    ct:source_path "cuad/FIBROGENINC_10_01_2014-EX-10.11-COLLABORATION AGREEMENT.txt" ;
+    ct:source_sha256 "b91c8e29f3002e983cfeb01ad86739f785fec1b6f7a5d934b61136725bf4d67a" ;
+    ct:start_char 65033 .
+
+ex:C036P0314 a ct:SourcePassage ;
+    ct:end_char 108225 ;
+    ct:exact_text "14.2.1 FG Inventions. FG shall control all Prosecution and Interference Activities pertaining to FG Patents and patent applications and patents related to its, its Affiliate's or its Sublicensee's inventions in the Protected Field worldwide using counsel of its choice and shall bear the costs of such Prosecution and Interference Activities, provided, however, that; and Astellas shall reimburse to FG, within [ * ] of receipt by Astellas of invoice therefor, any such costs to the extent incurred in connection with or reasonably allocable to the FG Patents registered and/or to be registered in the Astellas Territory and related to the Field and the Lead Compounds, provided, further, that, with respect to patents or patent applications excluding those covering composition of matter claims and all patents listed on Exhibit A hereto as of the Effective Date, Astellas may postpone such reimbursement until the respective FG Patent will have been registered in the Astellas Territory if [ * ], on condition that once the respective FG Patent has been registered in the Astellas Territory, Astellas shall pay to FG such costs, plus interest to the extent permitted by applicable law at the U.S. " ;
+    ct:source_path "cuad/FIBROGENINC_10_01_2014-EX-10.11-COLLABORATION AGREEMENT.txt" ;
+    ct:source_sha256 "b91c8e29f3002e983cfeb01ad86739f785fec1b6f7a5d934b61136725bf4d67a" ;
+    ct:start_char 107026 .
+
+ex:C036P0365 a ct:SourcePassage ;
+    ct:end_char 132887 ;
+    ct:exact_text "18.2.1 Material Breaches. FG may forthwith terminate this Agreement in the event Astellas fails to make any payment due under Articles 6, 9 or 14, within [ * ] following receipt of written notice of such default, or materially breaches its obligations under Articles 8 or 14, and fails to cure such breach within [ * ] following receipt of written notice of such default. Astellas may forthwith terminate this Agreement in the   -37-" ;
+    ct:source_path "cuad/FIBROGENINC_10_01_2014-EX-10.11-COLLABORATION AGREEMENT.txt" ;
+    ct:source_sha256 "b91c8e29f3002e983cfeb01ad86739f785fec1b6f7a5d934b61136725bf4d67a" ;
+    ct:start_char 132454 .
+
+ex:C036P0368 a ct:SourcePassage ;
+    ct:end_char 134407 ;
+    ct:exact_text "18.2.2 Independent Activities. Notwithstanding anything contained in Section 8.3.2 or Section 14.1.1, in the event that Astellas Commercializes any molecules for the Field or the Expanded Field, except for actions taken within the Field in the course of the exercise of the licenses granted under Sections 8.1 and 13.1 hereof and expressly authorized under this Agreement, even if FG determines that Astellas' activities are completely independent of any FG Technology and/or any other FG materials, confidential information, intellectual property or other related information provided by FG to Astellas under this Agreement or any other agreement between FG and Astellas relating to the subject matter hereof, FG shall have the right at its sole discretion to terminate this Agreement upon [ * ] notice to Astellas." ;
+    ct:source_path "cuad/FIBROGENINC_10_01_2014-EX-10.11-COLLABORATION AGREEMENT.txt" ;
+    ct:source_sha256 "b91c8e29f3002e983cfeb01ad86739f785fec1b6f7a5d934b61136725bf4d67a" ;
+    ct:start_char 133591 .
+
+ex:C036P0369 a ct:SourcePassage ;
+    ct:end_char 134536 ;
+    ct:exact_text "18.2.3 Technical Product Failure. Astellas may terminate this Agreement upon [ * ] notice to FG upon Technical Product Failure." ;
+    ct:source_path "cuad/FIBROGENINC_10_01_2014-EX-10.11-COLLABORATION AGREEMENT.txt" ;
+    ct:source_sha256 "b91c8e29f3002e983cfeb01ad86739f785fec1b6f7a5d934b61136725bf4d67a" ;
+    ct:start_char 134409 .
+
+ex:C036P0375 a ct:SourcePassage ;
+    ct:end_char 138215 ;
+    ct:exact_text "18.5 Admission of Invalidity or Unenforceability of FG Patent. Astellas may terminate this Agreement upon [ * ] notice to FG in the event that FG enters into a settlement under Section 14.3 that admits the invalidity or unenforceability of all patents within the FG Technology, including patents covering Lead Compounds." ;
+    ct:source_path "cuad/FIBROGENINC_10_01_2014-EX-10.11-COLLABORATION AGREEMENT.txt" ;
+    ct:source_sha256 "b91c8e29f3002e983cfeb01ad86739f785fec1b6f7a5d934b61136725bf4d67a" ;
+    ct:start_char 137895 .
+
+ex:C036P0379 a ct:SourcePassage ;
+    ct:end_char 139347 ;
+    ct:exact_text "18.7.2 Termination. In the event of (a) a termination by Astellas under Section 18.6 during the period from the execution of this Agreement until the last to expire of the FG Patents, or (b) by FG under Section 18.2.1, 18.2.2, 18.2.4 or 18.2.5 hereof, Astellas shall, upon the effective date of such termination, pay to FG (i) a termination fee of $[ * ] U.S. dollars and (ii) any payments to which FG is otherwise entitled to receive hereunder in the period from the date of such termination notice until the [ * ]." ;
+    ct:source_path "cuad/FIBROGENINC_10_01_2014-EX-10.11-COLLABORATION AGREEMENT.txt" ;
+    ct:source_sha256 "b91c8e29f3002e983cfeb01ad86739f785fec1b6f7a5d934b61136725bf4d67a" ;
+    ct:start_char 138831 .
+
+ex:C036P0383 a ct:SourcePassage ;
+    ct:end_char 142093 ;
+    ct:exact_text "18.7.4 Material Non-Performance. In the event of any Material Non-Performance by a party, the other party shall, without reasonable delay following discovery of such Material Non-Performance notify the defaulting party in writing, and the parties shall consult with each other in good faith to endeavor to agree upon the most effective means to cure such Material Non-Performance and, if necessary, to effect a remedy in favor of the non-defaulting party for the consequences of such Material Non-Performance by the defaulting party (collectively, the \"Resolution\"). In the event (i) the parties are unable to agree upon Resolution, or (ii) the defaulting party, in the exercise of reasonable diligence shall have been unable to remedy such Material Non-Performance, then in either such event the remedy of the non-defaulting party with respect to the Material Non-Performance by the defaulting party shall be determined by arbitration pursuant to Section 19.2 hereof, and the arbitrators shall be authorized to fashion such remedy, including equitable relief, which may include termination of this Agreement in whole or in part, as the arbitrators shall determine appropriate, except that termination of this Agreement in whole shall only be the remedy of last resort." ;
+    ct:source_path "cuad/FIBROGENINC_10_01_2014-EX-10.11-COLLABORATION AGREEMENT.txt" ;
+    ct:source_sha256 "b91c8e29f3002e983cfeb01ad86739f785fec1b6f7a5d934b61136725bf4d67a" ;
+    ct:start_char 140824 .
+
+ex:C036P0384 a ct:SourcePassage ;
+    ct:end_char 142968 ;
+    ct:exact_text "18.7.5 License Upon Termination. In the event of a termination of this Agreement, FG shall have an irrevocable, exclusive, license, with the right to grant and authorize sublicenses, to any trademarks used by Astellas in association with the Lead Compounds hereunder to make, use, sell, import and otherwise exploit products within the Field in the Astellas Territory. Such license shall be royalty-free, provided, however, if such trademark is not a global trademark (i.e. materially different from the trademark used in the FG Territory) and either (i) if Astellas terminates this Agreement under Section 18.2.1 or 18.2.4, or (ii) if this Agreement is terminated in accordance with the procedure as provided for in Section 18.2.5 as a result of FG's Material Non-Performance, in which event FG and Astellas shall negotiate in good faith a reasonable fee for such license." ;
+    ct:source_path "cuad/FIBROGENINC_10_01_2014-EX-10.11-COLLABORATION AGREEMENT.txt" ;
+    ct:source_sha256 "b91c8e29f3002e983cfeb01ad86739f785fec1b6f7a5d934b61136725bf4d67a" ;
+    ct:start_char 142095 .
+
+ct:Agreement a owl:Class ;
+    rdfs:label "Agreement" .
+
+ex:C036P0247 a ct:SourcePassage ;
+    ct:end_char 73801 ;
+    ct:exact_text "(d) Upon the later of (i) the initial retail sale of a generic equivalent (as defined by the Japanese Ministry of Health, Labour and Welfare) of such Lead Compound in the Territory, and (ii) and the expiration of the last to expire of the FG Patents with respect to such Lead Compound effectively precluding third parties from selling said generic equivalent, for any quantities shipped by FG to Astellas, Astellas shall pay FG for such quantities [ * ] of the Sales Price; provided, however, that in the event that the payment of the [ * ] of the Sales Price would result in FG's [ * ] Percentage falling below [ * ], FG shall have the option to initiate a renegotiation of the transfer price upon notice to Astellas, in which case the parties shall use best efforts in good faith to renegotiate reasonable terms for the transfer price; provided, further, that in the event the transfer price is not renegotiated to FG's satisfaction or FG elects not to initiate a renegotiation, FG may elect to terminate its manufacturing obligations by written notice to Astellas, and FG and Astellas shall negotiate reasonable terms for transfer of manufacturing. During such period of renegotiation, FG shall transfer the Lead Compound to Astellas at a price   -21-" ;
+    ct:source_path "cuad/FIBROGENINC_10_01_2014-EX-10.11-COLLABORATION AGREEMENT.txt" ;
+    ct:source_sha256 "b91c8e29f3002e983cfeb01ad86739f785fec1b6f7a5d934b61136725bf4d67a" ;
+    ct:start_char 72547 .
+
+ex:C036P0367 a ct:SourcePassage ;
+    ct:end_char 133589 ;
+    ct:exact_text "CONFIDENTIAL   EXECUTION COPY   event FG materially breaches its obligations under Article 7 or Article 12, and fails to cure such breach within [ * ] following receipt of written notice of such default. Any termination shall become effective at the end of such [ * ] or [ * ] period unless the defaulting or breaching party (or any other party on its behalf) has cured any such default prior to the expiration of the [ * ] or [ * ] period, as the case may be." ;
+    ct:source_path "cuad/FIBROGENINC_10_01_2014-EX-10.11-COLLABORATION AGREEMENT.txt" ;
+    ct:source_sha256 "b91c8e29f3002e983cfeb01ad86739f785fec1b6f7a5d934b61136725bf4d67a" ;
+    ct:start_char 133129 .
+
+ex:C036P0370 a ct:SourcePassage ;
+    ct:end_char 135276 ;
+    ct:exact_text "18.2.4 Development Diligence Failure. FG may terminate this Agreement upon thirty (30) days notice to Astellas in the event Astellas fails to meet any of its development diligence requirements as set forth in Article 11 hereof, provided, however, that with respect to the development diligence obligations set forth in Section 11.3.2, such termination right on behalf of FG shall be triggered only upon Astellas' failure to meet such development diligence obligations for a Major Indication (except those Major Indications set forth in Section 11.3.1(iv)), and Astellas may terminate this Agreement upon thirty (30) days notice to FG in the event FG fails to meet the development diligence requirement as set forth in Section 11.2 hereof." ;
+    ct:source_path "cuad/FIBROGENINC_10_01_2014-EX-10.11-COLLABORATION AGREEMENT.txt" ;
+    ct:source_sha256 "b91c8e29f3002e983cfeb01ad86739f785fec1b6f7a5d934b61136725bf4d67a" ;
+    ct:start_char 134538 .
+
+ex:C036P0374 a ct:SourcePassage ;
+    ct:end_char 137893 ;
+    ct:exact_text "CONFIDENTIAL   EXECUTION COPY   18.4 Negative Advice from Authorities. Astellas may terminate this Agreement upon [ * ] notice to FG in the event Astellas has commenced Phase III clinical studies in those of the following Indications that FG is developing: \"Treatment of anemia in patients with chronic kidney disease undergoing dialysis\", \"Treatment of anemia in patients with chronic kidney disease not undergoing dialysis\" and [ * ], and the Japanese Ministry of Health, Labor & Welfare has provided written notification that it will not approve the Lead Compounds in such Indications or the JDC determines, after the submission by Astellas of Marketing Approval Applications for such Indications, and the receipt of a response or request of the Japanese Ministry of Health, Labor & Welfare that contains development demands that are so onerous that it is not reasonable to continue with Development of the Lead Compounds in such Indications." ;
+    ct:source_path "cuad/FIBROGENINC_10_01_2014-EX-10.11-COLLABORATION AGREEMENT.txt" ;
+    ct:source_sha256 "b91c8e29f3002e983cfeb01ad86739f785fec1b6f7a5d934b61136725bf4d67a" ;
+    ct:start_char 136948 .
+
+ct:Condition a owl:Class ;
+    rdfs:label "Condition" .
+
+ct:SourcePassage a owl:Class ;
+    rdfs:label "SourcePassage" .
+
+ct:Reference a owl:Class ;
+    rdfs:label "Reference" .
+
+ct:Rule a owl:Class ;
+    rdfs:label "Rule" .
+

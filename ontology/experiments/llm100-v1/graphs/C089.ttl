@@ -1,0 +1,384 @@
+@prefix ct: <https://cimulink.local/ontology/contract-terms/0.1#> .
+@prefix ex: <https://cimulink.local/ontology/llm100-v1/> .
+@prefix meta: <https://cimulink.local/ontology/extraction#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ct: a owl:Ontology ;
+    rdfs:comment "Partial five-contract development sample. No claim of complete contract coverage or legal correctness." .
+
+ct:agreement_effective_from a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:applies_within a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:calendar_date_status a owl:DatatypeProperty .
+
+ct:coverage a owl:DatatypeProperty .
+
+ct:description a owl:DatatypeProperty .
+
+ct:duration a owl:DatatypeProperty .
+
+ct:duration_status a owl:DatatypeProperty .
+
+ct:end_char a owl:DatatypeProperty .
+
+ct:end_date_status a owl:DatatypeProperty .
+
+ct:ends_on_event a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:exact_text a owl:DatatypeProperty .
+
+ct:has_party a owl:ObjectProperty ;
+    rdfs:domain ct:Agreement ;
+    rdfs:range ct:Party .
+
+ct:has_rule a owl:ObjectProperty ;
+    rdfs:domain ct:Agreement ;
+    rdfs:range ct:Rule .
+
+ct:kind a owl:DatatypeProperty .
+
+ct:notice_actor a owl:DatatypeProperty .
+
+ct:notice_form a owl:DatatypeProperty .
+
+ct:notice_period_status a owl:DatatypeProperty .
+
+ct:qualifies a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Rule .
+
+ct:references_section a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:renewal_count a owl:DatatypeProperty .
+
+ct:resolution_status a owl:DatatypeProperty .
+
+ct:resolved_to a owl:ObjectProperty ;
+    rdfs:domain ct:Reference ;
+    rdfs:range ct:SourcePassage .
+
+ct:source_path a owl:DatatypeProperty .
+
+ct:source_sha256 a owl:DatatypeProperty .
+
+ct:start_char a owl:DatatypeProperty .
+
+ct:starts_from a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:stated_end_date a owl:DatatypeProperty .
+
+ct:subject_to a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Condition .
+
+ct:supported_by a owl:ObjectProperty ;
+    rdfs:range ct:SourcePassage .
+
+ct:termination_notice a owl:DatatypeProperty .
+
+ex:C089 a ct:Agreement ;
+    rdfs:label "VAXCYTE,INC_05_22_2020-EX-10.19-SUPPLY AGREEMENT.txt" ;
+    ct:coverage "LOCAL_LLM_PROPOSED_PARTIAL; NOT_HUMAN_REVIEWED" ;
+    ct:has_rule ex:C089R0001,
+        ex:C089R0002,
+        ex:C089R0003,
+        ex:C089R0004,
+        ex:C089R0005,
+        ex:C089R0006,
+        ex:C089R0007,
+        ex:C089R0008,
+        ex:C089R0009,
+        ex:C089R0010,
+        ex:C089R0011,
+        ex:C089R0012,
+        ex:C089R0013 ;
+    ct:source_path "cuad/VAXCYTE,INC_05_22_2020-EX-10.19-SUPPLY AGREEMENT.txt" ;
+    ct:source_sha256 "5aa9d49ff424aa455a94f3d3c9503bc79a3f8bbbbc088cc82a39f76a3ff557b9" ;
+    meta:model_digest "0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0" .
+
+ct:Party a owl:Class ;
+    rdfs:label "Party" .
+
+ex:C089P0052 a ct:SourcePassage ;
+    ct:end_char 17723 ;
+    ct:exact_text "2.5 Cancellation. Notwithstanding anything herein to the contrary, SutroVax may not modify or cancel purchase orders with respect to the amounts of Product to be purchased under the applicable Work Order, however SutroVax may modify or cancel other purchase orders (including amounts in a purchase order in excess of the amounts of Product to be purchased under the applicable Work Order) for the Products provided that such modification or change is made further in advance of the originally requested delivery date than the required lead time, where the agreed required lead time for the applicable purchase order has been evidenced in writing (including, for example, by email) between the Parties." ;
+    ct:source_path "cuad/VAXCYTE,INC_05_22_2020-EX-10.19-SUPPLY AGREEMENT.txt" ;
+    ct:source_sha256 "5aa9d49ff424aa455a94f3d3c9503bc79a3f8bbbbc088cc82a39f76a3ff557b9" ;
+    ct:start_char 17022 .
+
+ex:C089P0076 a ct:SourcePassage ;
+    ct:end_char 29569 ;
+    ct:exact_text "(vii) provide a right for SutroVax to modify the timing of or terminate the Process Transfer, Capacity or specified aspects thereof on reasonable notice, subject to SutroVax' agreement to bear any resulting termination or cancellation fees charged by the Alternative Supplier; and" ;
+    ct:source_path "cuad/VAXCYTE,INC_05_22_2020-EX-10.19-SUPPLY AGREEMENT.txt" ;
+    ct:source_sha256 "5aa9d49ff424aa455a94f3d3c9503bc79a3f8bbbbc088cc82a39f76a3ff557b9" ;
+    ct:start_char 29289 .
+
+ex:C089P0169 a ct:SourcePassage ;
+    ct:end_char 81246 ;
+    ct:exact_text "10.1 Term. The term of this Supply Agreement shall begin on the Effective Date first set forth above and shall remain in effect until the later of (a) July 31, 2021 or (b) the date that the Parties enter into the Phase 3/Commercial Supply Agreement and Sutro is supplying to SutroVax each Product under the Phase 3/Commercial Supply Agreement (the \"Term\"), unless it is terminated earlier in accordance with Section 10.2." ;
+    ct:source_path "cuad/VAXCYTE,INC_05_22_2020-EX-10.19-SUPPLY AGREEMENT.txt" ;
+    ct:source_sha256 "5aa9d49ff424aa455a94f3d3c9503bc79a3f8bbbbc088cc82a39f76a3ff557b9" ;
+    ct:start_char 80825 .
+
+ex:C089P0170 a ct:SourcePassage ;
+    ct:end_char 81373 ;
+    ct:exact_text "10.2 Termination. Notwithstanding anything to the contrary in this Supply Agreement, this Supply Agreement may be terminated:" ;
+    ct:source_path "cuad/VAXCYTE,INC_05_22_2020-EX-10.19-SUPPLY AGREEMENT.txt" ;
+    ct:source_sha256 "5aa9d49ff424aa455a94f3d3c9503bc79a3f8bbbbc088cc82a39f76a3ff557b9" ;
+    ct:start_char 81248 .
+
+ex:C089P0175 a ct:SourcePassage ;
+    ct:end_char 83670 ;
+    ct:exact_text "and (b) if this Supply Agreement is terminated with respect to one or more Products, but not all Products, then this Supply Agreement shall continue in full force and effect with respect to the applicable Product(s) for which it is not terminated." ;
+    ct:source_path "cuad/VAXCYTE,INC_05_22_2020-EX-10.19-SUPPLY AGREEMENT.txt" ;
+    ct:source_sha256 "5aa9d49ff424aa455a94f3d3c9503bc79a3f8bbbbc088cc82a39f76a3ff557b9" ;
+    ct:start_char 83423 .
+
+ex:C089P0176 a ct:SourcePassage ;
+    ct:end_char 84134 ;
+    ct:exact_text "10.4 Nonexclusive Remedy. Exercise of any right of termination afforded to either Party under this Supply Agreement (i) shall not prejudice any other legal rights or remedies either Party have against the other in respect of any breach of the terms and conditions of this Supply Agreement, and (ii) shall be without any obligation or liability arising from such termination other than such obligations expressly arising from termination of this Supply Agreement." ;
+    ct:source_path "cuad/VAXCYTE,INC_05_22_2020-EX-10.19-SUPPLY AGREEMENT.txt" ;
+    ct:source_sha256 "5aa9d49ff424aa455a94f3d3c9503bc79a3f8bbbbc088cc82a39f76a3ff557b9" ;
+    ct:start_char 83672 .
+
+ex:C089P0177 a ct:SourcePassage ;
+    ct:end_char 85026 ;
+    ct:exact_text "10.5 Survival. Expiration of the Term or termination of this Supply Agreement (for any reason) shall not affect any accrued rights or liabilities of either Party. Article 4 (Product Testing), Article 5 (Inspection), Article 8 (Confidentiality), Article 9 (Indemnification and Insurance), Article 11 (Disputes), Article 12 (Miscellaneous), and Sections 2.2 (Transfer of Product), 2.14 (Phase 3/Commercial Supply Agreement), 2.15 (Qualification of Alternate Supplier), 2.17 (Manufacture of Custom Reagents), 3.3 (Recordkeeping), 3.4 (Taxes), 6.2 (Right of Reference; Drug Master Files), 6.3 (Recalls), 6.4 (Retention of Samples), 6.5 Regulatory Authority Inspections and Correspondence), 7.3 (Product Warranties), 7.4 (Disclaimer), 10.3 (Effects of Termination), 10.4 (Nonexclusive Remedy), and 10.5 (Survival) shall survive any expiration of the Term or termination of this Supply Agreement." ;
+    ct:source_path "cuad/VAXCYTE,INC_05_22_2020-EX-10.19-SUPPLY AGREEMENT.txt" ;
+    ct:source_sha256 "5aa9d49ff424aa455a94f3d3c9503bc79a3f8bbbbc088cc82a39f76a3ff557b9" ;
+    ct:start_char 84136 .
+
+ex:C089R0001 a ct:Rule ;
+    rdfs:label "Termination — source passage 52" ;
+    ct:kind "TERMINATION" ;
+    ct:supported_by ex:C089P0052 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C089R0002 a ct:Rule ;
+    rdfs:label "Termination — source passage 66" ;
+    ct:kind "TERMINATION" ;
+    ct:subject_to ex:C089R0002Condition66 ;
+    ct:supported_by ex:C089P0066 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C089R0002Condition66 a ct:Condition ;
+    ct:description "Agreement by written notice thereof to Sutro within [***] days after such selection, the Parties shall execute the definitive Phase 3/Commercial Supply Agreement selected by the arbitrator (but excluding, for clarity, any provision granting to SutroVax or its Affiliates or Sublicensees any right to obtain or use any Sutro Core Know-How); and if SutroVax elects to not enter into the Phase 3/Commercial Supply Agreement selected by the arbitrator by providing notice thereof within such [***] day period, then neither Party shall be obligated to enter into the Phase 3/Commercial Supply Agreement." ;
+    ct:supported_by ex:C089P0066 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C089R0003 a ct:Rule ;
+    rdfs:label "Termination — source passage 76" ;
+    ct:kind "TERMINATION" ;
+    ct:supported_by ex:C089P0076 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C089R0004 a ct:Rule ;
+    rdfs:label "Conditional Referenced Term — source passage 106" ;
+    ct:kind "CONDITIONAL_REFERENCED_TERM" ;
+    ct:subject_to ex:C089R0004Condition106 ;
+    ct:supported_by ex:C089P0106 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C089R0004Condition106 a ct:Condition ;
+    ct:description "SutroVax's failure to notify Sutro of the non-conformity within the Acceptance Period will be deemed for purposes of this Supply Agreement to constitute SutroVax's acceptance of such shipment, provided, however, that such acceptance shall be subject to SutroVax's right to reject Product(s) until [***] days from the delivery date of the applicable Product, in each case, due to discovery by SutroVax or SutroVax's Affiliates or designees that the applicable Product does not conform to the Required Standards and such non-conformance could not reasonably be discovered within the Acceptance Period (\"Latent Defects\") provided that SutroVax gives Sutro with written notice of such Latent Defect within [***] days of SutroVax or any SutroVax Affiliate or designee becoming aware of such defect." ;
+    ct:supported_by ex:C089P0106 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C089R0005 a ct:Rule ;
+    rdfs:label "Initial Term — source passage 169" ;
+    ct:kind "INITIAL_TERM" ;
+    ct:references_section ex:C089R0005Ref0 ;
+    ct:supported_by ex:C089P0169 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C089R0005Ref0 a ct:Reference ;
+    rdfs:label "Section 10.2" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C089R0006 a ct:Rule ;
+    rdfs:label "Termination — source passage 170" ;
+    ct:kind "TERMINATION" ;
+    ct:supported_by ex:C089P0170 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C089R0007 a ct:Rule ;
+    rdfs:label "Termination — source passage 172" ;
+    ct:kind "TERMINATION" ;
+    ct:subject_to ex:C089R0007Condition172 ;
+    ct:supported_by ex:C089P0172 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C089R0007Condition172 a ct:Condition ;
+    ct:description "10.2.2 in its entirety by a Party if the other Party materially breaches any of the material terms, conditions or agreements contained in this Supply Agreement to be kept, observed or performed by the other Party, by giving the Party who committed the breach [***] days' prior written notice, unless the notified Party shall have cured the breach within such [***]-day period; and" ;
+    ct:supported_by ex:C089P0172 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C089R0008 a ct:Rule ;
+    rdfs:label "Termination — source passage 173" ;
+    ct:kind "TERMINATION" ;
+    ct:subject_to ex:C089R0008Condition173 ;
+    ct:supported_by ex:C089P0173 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C089R0008Condition173 a ct:Condition ;
+    ct:description "10.2.3 in its entirety or with respect to one or more Products, on a Product-by-Product basis, by SutroVax upon [***] days' prior written notice to Sutro for any reason." ;
+    ct:supported_by ex:C089P0173 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C089R0009 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 174" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:references_section ex:C089R0009Ref0,
+        ex:C089R0009Ref1,
+        ex:C089R0009Ref2 ;
+    ct:subject_to ex:C089R0009Condition174 ;
+    ct:supported_by ex:C089P0174 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C089R0009Condition174 a ct:Condition ;
+    ct:description "10.3 Effects of Termination. Upon the expiration of the Term or termination of this Supply Agreement, in its entirety or with respect to one or more Products, this Supply Agreement shall, except as otherwise provided in this Section 10.3 or Section 10.5, be of no further force or effect; provided, however, that (a) in the event this Supply Agreement is terminated by SutroVax pursuant to Section 10.2.3 and there are outstanding Work Orders or other purchase orders accepted by Sutro that would not be fulfilled as a result of such termination, SutroVax shall reimburse Sutro for all supplies and materials purchased by Sutro and time incurred by Sutro personnel (to the extent incurred solely for manufacture of Product for SutroVax) for the manufacture, or preparation for the manufacture, of Products for any Work Orders placed by SutroVax and any other purchase orders accepted by Sutro prior to such expiration or termination, in each case to the extent Sutro cannot otherwise reasonably mitigate such the costs and expenses of such supplies, materials and time (e.g., by use of resulting supplies, materials and work-in-progress Product for other purposes); provided that to the extent SutroVax pays for any supplies or materials, upon SutroVax's request Sutro shall promptly transfer and deliver such supplies and materials to SutroVax; " ;
+    ct:supported_by ex:C089P0174 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C089R0009Ref0 a ct:Reference ;
+    rdfs:label "Section 10.3" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C089R0009Ref1 a ct:Reference ;
+    rdfs:label "Section 10.5" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C089R0009Ref2 a ct:Reference ;
+    rdfs:label "Section 10.2.3" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C089R0010 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 175" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:supported_by ex:C089P0175 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C089R0011 a ct:Rule ;
+    rdfs:label "Termination — source passage 176" ;
+    ct:kind "TERMINATION" ;
+    ct:supported_by ex:C089P0176 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C089R0012 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 177" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:references_section ex:C089R0012Ref0,
+        ex:C089R0012Ref1,
+        ex:C089R0012Ref2,
+        ex:C089R0012Ref3,
+        ex:C089R0012Ref4,
+        ex:C089R0012Ref5 ;
+    ct:supported_by ex:C089P0177 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C089R0012Ref0 a ct:Reference ;
+    rdfs:label "Article 4" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C089R0012Ref1 a ct:Reference ;
+    rdfs:label "Article 5 (Inspection)" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C089R0012Ref2 a ct:Reference ;
+    rdfs:label "Article 8 (Confidentiality)" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C089R0012Ref3 a ct:Reference ;
+    rdfs:label "Article 9" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C089R0012Ref4 a ct:Reference ;
+    rdfs:label "Article 11 (Disputes)" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C089R0012Ref5 a ct:Reference ;
+    rdfs:label "Article 12 (Miscellaneous)" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C089R0013 a ct:Rule ;
+    rdfs:label "Termination — source passage 190" ;
+    ct:kind "TERMINATION" ;
+    ct:subject_to ex:C089R0013Condition190 ;
+    ct:supported_by ex:C089P0190 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C089R0013Condition190 a ct:Condition ;
+    ct:description "12.3 Force Majeure. No Party shall be liable for a failure or delay in performing any of its obligations under this Supply Agreement if, but only to the extent that such failure or delay is due to causes beyond the reasonable control of the affected Party, including: (a) acts of God; (b) fire, explosion, or unusually severe weather; (c) war, invasion, riot, terrorism, or other civil unrest; (d) governmental laws, orders, restrictions, actions, embargo or blockages; (e) national or regional emergency; (f) strikes or industrial disputes at a national level which directly impact the affected Party's performance under this Supply Agreement; or (g) other similar cause outside of the reasonable control of such Party (\"Force Majeure\"); provided that the Party affected shall promptly notify the other of the Force Majeure condition and shall use reasonable efforts to eliminate, cure or overcome any such causes and resume performance of its obligations as soon as possible. If the performance of any obligation of a Party under this Supply Agreement is delayed owing to such a Force Majeure for any continuous period of more than [***] days, the other Party shall have the right to terminate this Supply Agreement." ;
+    ct:supported_by ex:C089P0190 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C089P0066 a ct:SourcePassage ;
+    ct:end_char 26205 ;
+    ct:exact_text "Agreement by written notice thereof to Sutro within [***] days after such selection, the Parties shall execute the definitive Phase 3/Commercial Supply Agreement selected by the arbitrator (but excluding, for clarity, any provision granting to SutroVax or its Affiliates or Sublicensees any right to obtain or use any Sutro Core Know-How); and if SutroVax elects to not enter into the Phase 3/Commercial Supply Agreement selected by the arbitrator by providing notice thereof within such [***] day period, then neither Party shall be obligated to enter into the Phase 3/Commercial Supply Agreement." ;
+    ct:source_path "cuad/VAXCYTE,INC_05_22_2020-EX-10.19-SUPPLY AGREEMENT.txt" ;
+    ct:source_sha256 "5aa9d49ff424aa455a94f3d3c9503bc79a3f8bbbbc088cc82a39f76a3ff557b9" ;
+    ct:start_char 25607 .
+
+ex:C089P0106 a ct:SourcePassage ;
+    ct:end_char 50861 ;
+    ct:exact_text "SutroVax's failure to notify Sutro of the non-conformity within the Acceptance Period will be deemed for purposes of this Supply Agreement to constitute SutroVax's acceptance of such shipment, provided, however, that such acceptance shall be subject to SutroVax's right to reject Product(s) until [***] days from the delivery date of the applicable Product, in each case, due to discovery by SutroVax or SutroVax's Affiliates or designees that the applicable Product does not conform to the Required Standards and such non-conformance could not reasonably be discovered within the Acceptance Period (\"Latent Defects\") provided that SutroVax gives Sutro with written notice of such Latent Defect within [***] days of SutroVax or any SutroVax Affiliate or designee becoming aware of such defect." ;
+    ct:source_path "cuad/VAXCYTE,INC_05_22_2020-EX-10.19-SUPPLY AGREEMENT.txt" ;
+    ct:source_sha256 "5aa9d49ff424aa455a94f3d3c9503bc79a3f8bbbbc088cc82a39f76a3ff557b9" ;
+    ct:start_char 50068 .
+
+ex:C089P0172 a ct:SourcePassage ;
+    ct:end_char 81904 ;
+    ct:exact_text "10.2.2 in its entirety by a Party if the other Party materially breaches any of the material terms, conditions or agreements contained in this Supply Agreement to be kept, observed or performed by the other Party, by giving the Party who committed the breach [***] days' prior written notice, unless the notified Party shall have cured the breach within such [***]-day period; and" ;
+    ct:source_path "cuad/VAXCYTE,INC_05_22_2020-EX-10.19-SUPPLY AGREEMENT.txt" ;
+    ct:source_sha256 "5aa9d49ff424aa455a94f3d3c9503bc79a3f8bbbbc088cc82a39f76a3ff557b9" ;
+    ct:start_char 81524 .
+
+ex:C089P0173 a ct:SourcePassage ;
+    ct:end_char 82075 ;
+    ct:exact_text "10.2.3 in its entirety or with respect to one or more Products, on a Product-by-Product basis, by SutroVax upon [***] days' prior written notice to Sutro for any reason." ;
+    ct:source_path "cuad/VAXCYTE,INC_05_22_2020-EX-10.19-SUPPLY AGREEMENT.txt" ;
+    ct:source_sha256 "5aa9d49ff424aa455a94f3d3c9503bc79a3f8bbbbc088cc82a39f76a3ff557b9" ;
+    ct:start_char 81906 .
+
+ex:C089P0174 a ct:SourcePassage ;
+    ct:end_char 83423 ;
+    ct:exact_text "10.3 Effects of Termination. Upon the expiration of the Term or termination of this Supply Agreement, in its entirety or with respect to one or more Products, this Supply Agreement shall, except as otherwise provided in this Section 10.3 or Section 10.5, be of no further force or effect; provided, however, that (a) in the event this Supply Agreement is terminated by SutroVax pursuant to Section 10.2.3 and there are outstanding Work Orders or other purchase orders accepted by Sutro that would not be fulfilled as a result of such termination, SutroVax shall reimburse Sutro for all supplies and materials purchased by Sutro and time incurred by Sutro personnel (to the extent incurred solely for manufacture of Product for SutroVax) for the manufacture, or preparation for the manufacture, of Products for any Work Orders placed by SutroVax and any other purchase orders accepted by Sutro prior to such expiration or termination, in each case to the extent Sutro cannot otherwise reasonably mitigate such the costs and expenses of such supplies, materials and time (e.g., by use of resulting supplies, materials and work-in-progress Product for other purposes); provided that to the extent SutroVax pays for any supplies or materials, upon SutroVax's request Sutro shall promptly transfer and deliver such supplies and materials to SutroVax; " ;
+    ct:source_path "cuad/VAXCYTE,INC_05_22_2020-EX-10.19-SUPPLY AGREEMENT.txt" ;
+    ct:source_sha256 "5aa9d49ff424aa455a94f3d3c9503bc79a3f8bbbbc088cc82a39f76a3ff557b9" ;
+    ct:start_char 82077 .
+
+ex:C089P0190 a ct:SourcePassage ;
+    ct:end_char 93815 ;
+    ct:exact_text "12.3 Force Majeure. No Party shall be liable for a failure or delay in performing any of its obligations under this Supply Agreement if, but only to the extent that such failure or delay is due to causes beyond the reasonable control of the affected Party, including: (a) acts of God; (b) fire, explosion, or unusually severe weather; (c) war, invasion, riot, terrorism, or other civil unrest; (d) governmental laws, orders, restrictions, actions, embargo or blockages; (e) national or regional emergency; (f) strikes or industrial disputes at a national level which directly impact the affected Party's performance under this Supply Agreement; or (g) other similar cause outside of the reasonable control of such Party (\"Force Majeure\"); provided that the Party affected shall promptly notify the other of the Force Majeure condition and shall use reasonable efforts to eliminate, cure or overcome any such causes and resume performance of its obligations as soon as possible. If the performance of any obligation of a Party under this Supply Agreement is delayed owing to such a Force Majeure for any continuous period of more than [***] days, the other Party shall have the right to terminate this Supply Agreement." ;
+    ct:source_path "cuad/VAXCYTE,INC_05_22_2020-EX-10.19-SUPPLY AGREEMENT.txt" ;
+    ct:source_sha256 "5aa9d49ff424aa455a94f3d3c9503bc79a3f8bbbbc088cc82a39f76a3ff557b9" ;
+    ct:start_char 92597 .
+
+ct:Agreement a owl:Class ;
+    rdfs:label "Agreement" .
+
+ct:Condition a owl:Class ;
+    rdfs:label "Condition" .
+
+ct:SourcePassage a owl:Class ;
+    rdfs:label "SourcePassage" .
+
+ct:Reference a owl:Class ;
+    rdfs:label "Reference" .
+
+ct:Rule a owl:Class ;
+    rdfs:label "Rule" .
+

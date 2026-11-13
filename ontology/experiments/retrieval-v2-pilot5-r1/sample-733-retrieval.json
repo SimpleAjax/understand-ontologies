@@ -1,0 +1,552 @@
+{
+  "sample": {
+    "source_index": 733,
+    "question": "Consider the Global Master Supply Agreement between ExxonMobil Chemical Company and West Pharmaceutical Services, Inc.; What is the expiration date of this contract?",
+    "topic": "expiry",
+    "document_id": "C096",
+    "file_path": "cuad/WestPharmaceuticalServicesInc_20200116_8-K_EX-10.1_11947529_EX-10.1_Supply Agreement.txt"
+  },
+  "retrieval": {
+    "stages": {
+      "soft_candidates": [
+        {
+          "id": "045550eaa204",
+          "file_path": "cuad/WestPharmaceuticalServicesInc_20200116_8-K_EX-10.1_11947529_EX-10.1_Supply Agreement.txt",
+          "span": [
+            25176,
+            26749
+          ],
+          "text": "designated as an amendment hereto and signed by the parties' duly authorized representatives; and no modification shall be effected by the acknowledgment or acceptance of purchase order forms containing terms or conditions at variance with those set forth herein.\n\nNone of the parties shall be legally bound by anything contained in this instrument, or any negotiations pursuant thereto, unless and until the companies have agreed to all terms and this instrument has been signed by authorized representatives of each company.\n\nORDER OF PRECEDENCE\n\nIn the event of conflict between this Agreement (including the Failure in Performance and Change in Circumstances clauses herein) and the Attachments hereto, this Agreement shall prevail, except with respect to the governing law specified in Attachments A, G and H, respectively, and as applicable to the appropriate ExxonMobil Selling Affiliate.\n\nSource: WEST PHARMACEUTICAL SERVICES INC, 8-K, 1/16/2020\n\n\n\n\n\nBUYER SELLER ACCEPTED AND AGREED TO BY BUYER ExxonMobil Chemical Company, a division of DATE OF: Exxon Mobil Corporation January 10, 2020 Date: December 11, 2018\n\n/s/ Eric M. Green /s/ Kurt Aerts BY: Eric M. Green BY: Kurt Aerts Title: President and CEO Title: Vice President, SERI\n\nSource: WEST PHARMACEUTICAL SERVICES INC, 8-K, 1/16/2020\n\n\n\n\n\nATTACHMENT A\n\nWest Pharmaceutical Services and ExxonMobil Chemical Company 2019-2023 Global Master Supply Agreement\n\nExxonMobil Chemical Company (EMCC) & ExxonMobil Chemical Services Americas Inc. (EMCSA) Standard Terms and Conditions of Sales and Acceptance of Order\n\n",
+          "categories": [],
+          "origin": "original_chunk",
+          "fusion_score": 0.03252247488101534
+        },
+        {
+          "id": "8857439ba866",
+          "file_path": "cuad/WestPharmaceuticalServicesInc_20200116_8-K_EX-10.1_11947529_EX-10.1_Supply Agreement.txt",
+          "span": [
+            0,
+            1382
+          ],
+          "text": "Exhibit 10.1\n\n[*****] Text omitted for confidential treatment. The redacted information has been excluded because it is both (i) not material and (ii) would be competitively harmful if publicly disclosed.\n\nGLOBAL MASTER SUPPLY AGREEMENT\n\nThis Global Master Supply Agreement (\"Agreement\" or \"Contract\") is between ExxonMobil Chemical Company, a division of Exxon Mobil Corporation (\"Seller\"),on behalf of itself and in the interest of the ExxonMobil affiliates listed on Attachment B (each an \"ExxonMobil Selling Affiliate\" or \"EMCC/A\" or collectively, \"ExxonMobil Selling Affiliates\"), and West Pharmaceutical Services, Inc. (\"Buyer\"), on behalf of itself and the Buyer affiliates listed on Attachment C (each a \"Buyer Affiliate\" or \"West/A\" or collectively, \"Buyer Affiliates\").\n\nPRODUCTS, QUANTITY, PRICE\n\nIn accordance with the provisions of this Agreement, ExxonMobil Selling Affiliates agree to sell to Buyer Affiliates, and Buyer Affiliates agree to purchase from ExxonMobil Selling Affiliates, the following product(s) (collectively, \"Product\"):\n\nProducts Quantity [Metric Tons / Year] Container PackageYear 2019 2020 2021 2022 2023 [*****] [*****] Minimum Maximum [*****] [*****] [*****] [*****] [*****] [*****] [*****] [*****] [*****] [*****] Leased metal crates\n\n[*****] [*****] [*****] [*****] [*****] [*****] Leased metal crates [*****] not defined Leased metal crates\n\n",
+          "categories": [],
+          "origin": "original_chunk",
+          "fusion_score": 0.03252247488101534
+        },
+        {
+          "id": "d7f07d7412dd",
+          "file_path": "cuad/WestPharmaceuticalServicesInc_20200116_8-K_EX-10.1_11947529_EX-10.1_Supply Agreement.txt",
+          "span": [
+            43692,
+            45697
+          ],
+          "text": "or other governing body.\n\nSource: WEST PHARMACEUTICAL SERVICES INC, 8-K, 1/16/2020\n\n\n\n\n\nATTACHMENT B\n\nWest Pharmaceutical Services and ExxonMobil Chemical Company 2019-2023 Global Master Supply Agreement\n\nList of ExxonMobil Affiliates / Divisions\n\nAt its sole discretion and with prior written notice to Buyer, Seller may designate a different selling entity from the ones listed in this Attachment.\n\nFor Product purchases made by Buyer Affiliates in: U.S.A., Brazil, Mexico ExxonMobil Chemical Company, a division of Exxon Mobil Corporation (\"EMCC\") and/or ExxonMobil Chemical Services Americas, Inc. 22777 Springwoods Village Pkwy Spring, TX 77389\n\nFor Product purchases made by Buyer Affiliates i n: Denmark, France, Germany, United Kingdom, Serbia and Ireland ExxonMobil Petroleum & Chemical BVBA (EMPC) Polderdijkweg B - 2030 Antwerpen, Belgium\n\nFor Product purchases made by Buyer Affiliates i n: Singapore, China, India ExxonMobil Affiliate: ExxonMobil Chemical Asia Pacific, a division of ExxonMobil Asia Pacific Pte Ltd (EMCAP) 1 Harbour Front Place #06-00HarbourFront Tower One Singapore 098633\n\nSource: WEST PHARMACEUTICAL SERVICES INC, 8-K, 1/16/2020\n\n\n\n\n\nATTACHMENT C\n\nWest Pharmaceutical Services and ExxonMobil Chemical Company 2019-2023 Global Master Supply Agreement List of West Pharmaceutical Affiliates\n\nBuyer may update this list from time to time with written notice to Seller.\n\nBrazil West Pharmaceutical Services Brasil Ltda AV Nossa Senhora Das Gracas, 115 Diadema, Sao Paulo, Brazil 09980-000\n\nChina West Pharmaceutical Packaging (China) Co., Ltd No. 111 Tianchen Road Qingpu, Shanghai 201707 China\n\nDenmark West Pharmaceutical Services Denmark A/S Fuglevangsvej 51 Horsens, Denmark\n\nFrance West Pharmaceutical Services France,S.A. 38, Rue Robert Degon Le Nouvion EN Thierache 02170\n\nGermany West Pharmaceutical Services Deutschland GmbH & Co. KG Stalberger Str. 21-41 Eschweiler 52249\n\nIreland West Pharmaceutical Products Ireland, Ltd. Carrickpherish Road Waterford, X91 R9V6\n\n",
+          "categories": [],
+          "origin": "original_chunk",
+          "fusion_score": 0.03149801587301587
+        },
+        {
+          "id": "f1c6f4443f24",
+          "file_path": "cuad/WestPharmaceuticalServicesInc_20200116_8-K_EX-10.1_11947529_EX-10.1_Supply Agreement.txt",
+          "span": [
+            47085,
+            48125
+          ],
+          "text": "written notice to the other party.\n\nExxonMobil Chemical Company West Pharmaceutical Services, Inc. 22777 Springwoods Village Pkwy 530 W. Herman O. Drive Spring, TX 77389 Exton, PA 19341-1147\n\nAttn: Gerd Merhof Attn: Oliver Steven ExxonMobil Chemical Central Europe West Pharmaceutical Services Deutschland GmbH & Co. KG Im Mediapark 2 Kiefernweg 5 50670 Köln 52249 Eschweiler Germany Germany\n\nSource: WEST PHARMACEUTICAL SERVICES INC, 8-K, 1/16/2020\n\n\n\n\n\nATTACHMENT E\n\nWest Pharmaceutical Services and ExxonMobil Chemical Company 2019-2023 Global Supply Master Agreement\n\nPayment Terms\n\nBuyer Affiliates shall pay ExxonMobil Selling Affiliates' invoice(s) in full within the days set forth below:\n\nLocation Payment Terms Delivery Terms - lncoterms 2010 Brazil [*****] [*****] China [*****] [*****] Denmark [*****] [*****] France [*****] [*****] Germany [*****] [*****] India [*****] [*****] Mexico [*****] [*****] Serbia [*****] [*****] Singapore [*****] [*****] U.S.A. [*****] [*****] Ireland [*****] [*****]\n\n* For Product sold and/or sou",
+          "categories": [],
+          "origin": "original_chunk",
+          "fusion_score": 0.03125763125763126
+        }
+      ],
+      "llm_reranked": [
+        {
+          "id": "f1c6f4443f24",
+          "file_path": "cuad/WestPharmaceuticalServicesInc_20200116_8-K_EX-10.1_11947529_EX-10.1_Supply Agreement.txt",
+          "span": [
+            47085,
+            48726
+          ],
+          "text": "written notice to the other party.\n\nExxonMobil Chemical Company West Pharmaceutical Services, Inc. 22777 Springwoods Village Pkwy 530 W. Herman O. Drive Spring, TX 77389 Exton, PA 19341-1147\n\nAttn: Gerd Merhof Attn: Oliver Steven ExxonMobil Chemical Central Europe West Pharmaceutical Services Deutschland GmbH & Co. KG Im Mediapark 2 Kiefernweg 5 50670 Köln 52249 Eschweiler Germany Germany\n\nSource: WEST PHARMACEUTICAL SERVICES INC, 8-K, 1/16/2020\n\n\n\n\n\nATTACHMENT E\n\nWest Pharmaceutical Services and ExxonMobil Chemical Company 2019-2023 Global Supply Master Agreement\n\nPayment Terms\n\nBuyer Affiliates shall pay ExxonMobil Selling Affiliates' invoice(s) in full within the days set forth below:\n\nLocation Payment Terms Delivery Terms - lncoterms 2010 Brazil [*****] [*****] China [*****] [*****] Denmark [*****] [*****] France [*****] [*****] Germany [*****] [*****] India [*****] [*****] Mexico [*****] [*****] Serbia [*****] [*****] Singapore [*****] [*****] U.S.A. [*****] [*****] Ireland [*****] [*****]\n\n* For Product sold and/or sourced from the US that is shipped overseas to a non-US location, title and risk of loss of Product shall transfer from ExxonMobil Chemical Company or any other ExxonMobil Seller to Buyer at the first point upon which the delivering marine vessel crosses the outer boundary of the United States Exclusive Economic Zone (EEZ). The EEZ extends 200 nautical miles beyond the coastal baseline defined in the United Nations Convention on the Law of the Sea.\n\nFor U.S. sales to Brazil or Mexico, Seller shall constitute the U.S. Principal Party in interest or Exporter for all purposes under applicable law.\n\n",
+          "categories": [],
+          "origin": "original_chunk",
+          "fusion_score": 0.03125763125763126
+        },
+        {
+          "id": "ce57815e44da",
+          "file_path": "cuad/WestPharmaceuticalServicesInc_20200116_8-K_EX-10.1_11947529_EX-10.1_Supply Agreement.txt",
+          "span": [
+            1281,
+            3360
+          ],
+          "text": "[*****] [*****] [*****] [*****] [*****] Leased metal crates [*****] not defined Leased metal crates\n\nSubject to this Agreement's terms and conditions, Buyer Affiliates shall purchase and ExxonMobil Selling Affiliates shall sell the yearly minimum amount of Product amounts (in the aggregate) listed above. Buyer or Buyer Affiliates may request to purchase amounts over the Product maximum amounts per year, however, it shall be solely within Seller or any ExxonMobil Selling Affiliate's discretion whether and under which conditions to accommodate Buyer's request.\n\nBuyer Affiliates shall issue a purchase order(s), or call off order(s) when purchasing Product from ExxonMobil Selling Affiliates in writing pursuant to this Contract (\"Purchase Order\"). Such Purchase Order(s) shall specify (a) the quantity of Product, and (b) general date of delivery. All Purchase Orders agreed to be filled by an ExxonMobil Selling affiliate shall be deemed to be a separate agreement between the relevant ExxonMobil Selling Affiliate and the relevant Buyer Affiliate, incorporating the terms of this Contract. Notwithstanding anything to the contrary in the attachments ExxonMobil and the ExxonMobil Selling Affiliates shall not unreasonably reject any Purchase Order that otherwise complies with the terms of this Agreement.\n\nPurchase Order(s), order acknowledgements and similar form documents evidencing the purchase or sale of Products, including any terms and conditions contained or referenced therein, shall not supersede, add to or amend in any way this Contract. In the event of any conflict between the terms of this Contract and the terms of any Purchase Order, order acknowledgement or similar document the terms of this Contract shall prevail.\n\n[*****]\n\nPRICING\n\nFor calendar years 2019, 2020, 2021, 2022 and 2023, the price of Products sold by Seller/ExxonMobil Selling Affiliates to Buyer/Buyer Affiliates will comprise the Base Price, the crude adjustment and the freight cost depending on Incoterms.\n\nSource: WEST PHARMACEUTICAL SERVICES INC, 8-K, 1/16/2020\n\n\n\n\n\nBase price\n\n",
+          "categories": [],
+          "origin": "original_chunk",
+          "fusion_score": 0.027031963470319637
+        },
+        {
+          "id": "c435c6958590",
+          "file_path": "cuad/WestPharmaceuticalServicesInc_20200116_8-K_EX-10.1_11947529_EX-10.1_Supply Agreement.txt",
+          "span": [
+            30102,
+            32190
+          ],
+          "text": "made to Buyer/Buyer Affiliates by Seller/ExxonMobil Selling Affiliates. For purposes hereof, any and all agreements between Buyer and Seller, whether written or oral, shall be deemed to be part of an integrated agreement set forth herein.\n\n6. CHANGE IN CIRCUMSTANCES In connection with any Change in Circumstances (as defined below), and without limiting Seller's other rights under this Agreement or applicable law, Seller shall have the right: (i) to terminate this Agreement and accelerate all amounts due from Buyer hereunder, making them immediately payable; (ii) to modify the payment terms hereunder; and/or (iii) to require Buyer to pay in advance for shipments hereunder.\n\nPromptly after any public announcement regarding any proposed transaction that would result in a Change in Circumstances, Buyer shall notify Seller, in writing, of the nature of such transaction, the parties thereto and the proposed date of consummation. If Seller elects to exercise any of its rights under the preceding paragraph, Seller shall so notify Buyer, in writing, within forty-five (45) days after receipt of Buyer's notice. As used above, \"Change in Circumstances\" means any of the following: (i) any transaction, or series of transactions, that would result in the transfer of at least twenty-five percent (25%) of the equity interest\n\nSource: WEST PHARMACEUTICAL SERVICES INC, 8-K, 1/16/2020\n\n\n\n\n\nin Buyer (or of at least twenty-five percent 25%) of the equity interest in any business entity that owns or controls, directly or indirectly, at least fifty percent (50%) of the equity interest in Buyer (\"Buyer's Parent\") to a single transferee or multiple transferees under common control; (ii) any transaction that would result in Buyer's (or Buyer's Parent's) merging with one or more other entities; or (iii) any transaction not in the ordinary course of Buyer's (or Buyer's Parent's) business that calls for the sale, purchase or other transfer of one or more significant assets, including (without limitation) manufacturing facilities and ownership interests in other business entities.\n\n",
+          "categories": [
+            "CONDITIONAL_REFERENCED_TERM",
+            "TERMINATION"
+          ],
+          "origin": "original_chunk",
+          "fusion_score": 0.015000000000000001
+        },
+        {
+          "id": "90b1bbbf4cd4",
+          "file_path": "cuad/WestPharmaceuticalServicesInc_20200116_8-K_EX-10.1_11947529_EX-10.1_Supply Agreement.txt",
+          "span": [
+            18063,
+            18255
+          ],
+          "text": "Mobil Selling\n\nSource: WEST PHARMACEUTICAL SERVICES INC, 8-K, 1/16/2020\n\n\n\n\n\nAffiliates shall not be obligated to purchase or obtain Product, or feedstock to make Product, to replace deliverie",
+          "categories": [
+            "CONDITIONAL_REFERENCED_TERM",
+            "TERMINATION"
+          ],
+          "origin": "original_chunk",
+          "fusion_score": 0.01532051282051282
+        }
+      ],
+      "section_links": [
+        {
+          "id": "f1c6f4443f24",
+          "file_path": "cuad/WestPharmaceuticalServicesInc_20200116_8-K_EX-10.1_11947529_EX-10.1_Supply Agreement.txt",
+          "span": [
+            47085,
+            48726
+          ],
+          "text": "written notice to the other party.\n\nExxonMobil Chemical Company West Pharmaceutical Services, Inc. 22777 Springwoods Village Pkwy 530 W. Herman O. Drive Spring, TX 77389 Exton, PA 19341-1147\n\nAttn: Gerd Merhof Attn: Oliver Steven ExxonMobil Chemical Central Europe West Pharmaceutical Services Deutschland GmbH & Co. KG Im Mediapark 2 Kiefernweg 5 50670 Köln 52249 Eschweiler Germany Germany\n\nSource: WEST PHARMACEUTICAL SERVICES INC, 8-K, 1/16/2020\n\n\n\n\n\nATTACHMENT E\n\nWest Pharmaceutical Services and ExxonMobil Chemical Company 2019-2023 Global Supply Master Agreement\n\nPayment Terms\n\nBuyer Affiliates shall pay ExxonMobil Selling Affiliates' invoice(s) in full within the days set forth below:\n\nLocation Payment Terms Delivery Terms - lncoterms 2010 Brazil [*****] [*****] China [*****] [*****] Denmark [*****] [*****] France [*****] [*****] Germany [*****] [*****] India [*****] [*****] Mexico [*****] [*****] Serbia [*****] [*****] Singapore [*****] [*****] U.S.A. [*****] [*****] Ireland [*****] [*****]\n\n* For Product sold and/or sourced from the US that is shipped overseas to a non-US location, title and risk of loss of Product shall transfer from ExxonMobil Chemical Company or any other ExxonMobil Seller to Buyer at the first point upon which the delivering marine vessel crosses the outer boundary of the United States Exclusive Economic Zone (EEZ). The EEZ extends 200 nautical miles beyond the coastal baseline defined in the United Nations Convention on the Law of the Sea.\n\nFor U.S. sales to Brazil or Mexico, Seller shall constitute the U.S. Principal Party in interest or Exporter for all purposes under applicable law.\n\n",
+          "categories": [],
+          "origin": "original_chunk",
+          "fusion_score": 0.03125763125763126
+        },
+        {
+          "id": "ce57815e44da",
+          "file_path": "cuad/WestPharmaceuticalServicesInc_20200116_8-K_EX-10.1_11947529_EX-10.1_Supply Agreement.txt",
+          "span": [
+            1281,
+            3360
+          ],
+          "text": "[*****] [*****] [*****] [*****] [*****] Leased metal crates [*****] not defined Leased metal crates\n\nSubject to this Agreement's terms and conditions, Buyer Affiliates shall purchase and ExxonMobil Selling Affiliates shall sell the yearly minimum amount of Product amounts (in the aggregate) listed above. Buyer or Buyer Affiliates may request to purchase amounts over the Product maximum amounts per year, however, it shall be solely within Seller or any ExxonMobil Selling Affiliate's discretion whether and under which conditions to accommodate Buyer's request.\n\nBuyer Affiliates shall issue a purchase order(s), or call off order(s) when purchasing Product from ExxonMobil Selling Affiliates in writing pursuant to this Contract (\"Purchase Order\"). Such Purchase Order(s) shall specify (a) the quantity of Product, and (b) general date of delivery. All Purchase Orders agreed to be filled by an ExxonMobil Selling affiliate shall be deemed to be a separate agreement between the relevant ExxonMobil Selling Affiliate and the relevant Buyer Affiliate, incorporating the terms of this Contract. Notwithstanding anything to the contrary in the attachments ExxonMobil and the ExxonMobil Selling Affiliates shall not unreasonably reject any Purchase Order that otherwise complies with the terms of this Agreement.\n\nPurchase Order(s), order acknowledgements and similar form documents evidencing the purchase or sale of Products, including any terms and conditions contained or referenced therein, shall not supersede, add to or amend in any way this Contract. In the event of any conflict between the terms of this Contract and the terms of any Purchase Order, order acknowledgement or similar document the terms of this Contract shall prevail.\n\n[*****]\n\nPRICING\n\nFor calendar years 2019, 2020, 2021, 2022 and 2023, the price of Products sold by Seller/ExxonMobil Selling Affiliates to Buyer/Buyer Affiliates will comprise the Base Price, the crude adjustment and the freight cost depending on Incoterms.\n\nSource: WEST PHARMACEUTICAL SERVICES INC, 8-K, 1/16/2020\n\n\n\n\n\nBase price\n\n",
+          "categories": [],
+          "origin": "original_chunk",
+          "fusion_score": 0.027031963470319637
+        },
+        {
+          "id": "c435c6958590",
+          "file_path": "cuad/WestPharmaceuticalServicesInc_20200116_8-K_EX-10.1_11947529_EX-10.1_Supply Agreement.txt",
+          "span": [
+            30102,
+            32190
+          ],
+          "text": "made to Buyer/Buyer Affiliates by Seller/ExxonMobil Selling Affiliates. For purposes hereof, any and all agreements between Buyer and Seller, whether written or oral, shall be deemed to be part of an integrated agreement set forth herein.\n\n6. CHANGE IN CIRCUMSTANCES In connection with any Change in Circumstances (as defined below), and without limiting Seller's other rights under this Agreement or applicable law, Seller shall have the right: (i) to terminate this Agreement and accelerate all amounts due from Buyer hereunder, making them immediately payable; (ii) to modify the payment terms hereunder; and/or (iii) to require Buyer to pay in advance for shipments hereunder.\n\nPromptly after any public announcement regarding any proposed transaction that would result in a Change in Circumstances, Buyer shall notify Seller, in writing, of the nature of such transaction, the parties thereto and the proposed date of consummation. If Seller elects to exercise any of its rights under the preceding paragraph, Seller shall so notify Buyer, in writing, within forty-five (45) days after receipt of Buyer's notice. As used above, \"Change in Circumstances\" means any of the following: (i) any transaction, or series of transactions, that would result in the transfer of at least twenty-five percent (25%) of the equity interest\n\nSource: WEST PHARMACEUTICAL SERVICES INC, 8-K, 1/16/2020\n\n\n\n\n\nin Buyer (or of at least twenty-five percent 25%) of the equity interest in any business entity that owns or controls, directly or indirectly, at least fifty percent (50%) of the equity interest in Buyer (\"Buyer's Parent\") to a single transferee or multiple transferees under common control; (ii) any transaction that would result in Buyer's (or Buyer's Parent's) merging with one or more other entities; or (iii) any transaction not in the ordinary course of Buyer's (or Buyer's Parent's) business that calls for the sale, purchase or other transfer of one or more significant assets, including (without limitation) manufacturing facilities and ownership interests in other business entities.\n\n",
+          "categories": [
+            "CONDITIONAL_REFERENCED_TERM",
+            "TERMINATION"
+          ],
+          "origin": "original_chunk",
+          "fusion_score": 0.015000000000000001
+        },
+        {
+          "id": "90b1bbbf4cd4",
+          "file_path": "cuad/WestPharmaceuticalServicesInc_20200116_8-K_EX-10.1_11947529_EX-10.1_Supply Agreement.txt",
+          "span": [
+            18063,
+            18255
+          ],
+          "text": "Mobil Selling\n\nSource: WEST PHARMACEUTICAL SERVICES INC, 8-K, 1/16/2020\n\n\n\n\n\nAffiliates shall not be obligated to purchase or obtain Product, or feedstock to make Product, to replace deliverie",
+          "categories": [
+            "CONDITIONAL_REFERENCED_TERM",
+            "TERMINATION"
+          ],
+          "origin": "original_chunk",
+          "fusion_score": 0.01532051282051282
+        }
+      ],
+      "iterative": [
+        {
+          "evidence_id": "https://cimulink.local/ontology/llm100-v1/C096P0054",
+          "file_path": "cuad/WestPharmaceuticalServicesInc_20200116_8-K_EX-10.1_11947529_EX-10.1_Supply Agreement.txt",
+          "span": [
+            10310,
+            10345
+          ],
+          "text": "Termination Date: December 31, 2023",
+          "id": "fbfc35baf83f",
+          "categories": [
+            "TERMINATION"
+          ],
+          "origin": "extracted_passage",
+          "fusion_score": 0.016129032258064516
+        },
+        {
+          "id": "d7f07d7412dd",
+          "file_path": "cuad/WestPharmaceuticalServicesInc_20200116_8-K_EX-10.1_11947529_EX-10.1_Supply Agreement.txt",
+          "span": [
+            43692,
+            45697
+          ],
+          "text": "or other governing body.\n\nSource: WEST PHARMACEUTICAL SERVICES INC, 8-K, 1/16/2020\n\n\n\n\n\nATTACHMENT B\n\nWest Pharmaceutical Services and ExxonMobil Chemical Company 2019-2023 Global Master Supply Agreement\n\nList of ExxonMobil Affiliates / Divisions\n\nAt its sole discretion and with prior written notice to Buyer, Seller may designate a different selling entity from the ones listed in this Attachment.\n\nFor Product purchases made by Buyer Affiliates in: U.S.A., Brazil, Mexico ExxonMobil Chemical Company, a division of Exxon Mobil Corporation (\"EMCC\") and/or ExxonMobil Chemical Services Americas, Inc. 22777 Springwoods Village Pkwy Spring, TX 77389\n\nFor Product purchases made by Buyer Affiliates i n: Denmark, France, Germany, United Kingdom, Serbia and Ireland ExxonMobil Petroleum & Chemical BVBA (EMPC) Polderdijkweg B - 2030 Antwerpen, Belgium\n\nFor Product purchases made by Buyer Affiliates i n: Singapore, China, India ExxonMobil Affiliate: ExxonMobil Chemical Asia Pacific, a division of ExxonMobil Asia Pacific Pte Ltd (EMCAP) 1 Harbour Front Place #06-00HarbourFront Tower One Singapore 098633\n\nSource: WEST PHARMACEUTICAL SERVICES INC, 8-K, 1/16/2020\n\n\n\n\n\nATTACHMENT C\n\nWest Pharmaceutical Services and ExxonMobil Chemical Company 2019-2023 Global Master Supply Agreement List of West Pharmaceutical Affiliates\n\nBuyer may update this list from time to time with written notice to Seller.\n\nBrazil West Pharmaceutical Services Brasil Ltda AV Nossa Senhora Das Gracas, 115 Diadema, Sao Paulo, Brazil 09980-000\n\nChina West Pharmaceutical Packaging (China) Co., Ltd No. 111 Tianchen Road Qingpu, Shanghai 201707 China\n\nDenmark West Pharmaceutical Services Denmark A/S Fuglevangsvej 51 Horsens, Denmark\n\nFrance West Pharmaceutical Services France,S.A. 38, Rue Robert Degon Le Nouvion EN Thierache 02170\n\nGermany West Pharmaceutical Services Deutschland GmbH & Co. KG Stalberger Str. 21-41 Eschweiler 52249\n\nIreland West Pharmaceutical Products Ireland, Ltd. Carrickpherish Road Waterford, X91 R9V6\n\n",
+          "categories": [],
+          "origin": "original_chunk",
+          "fusion_score": 0.030536130536130537
+        },
+        {
+          "id": "ac74bc849275",
+          "file_path": "cuad/WestPharmaceuticalServicesInc_20200116_8-K_EX-10.1_11947529_EX-10.1_Supply Agreement.txt",
+          "span": [
+            41657,
+            43692
+          ],
+          "text": "or acceptance of purchase order forms containing terms or conditions at variance with those set forth herein. Except as explicitly set forth in this Agreement, this Agreement and the transaction(s) specified herein can be cancelled only with both parties' written consent.\n\n18. GOVERNING LAW AND DISPUTE RESOLUTION The parties' rights and obligations hereunder shall be construed and enforced under the laws of the State of Texas, U.S.A., without regard to conflict of laws principles. Incoterms 2010 (or any subsequent revision thereof) (\"Incoterms\") shall also apply; provided, however, that Incoterms shall apply only to the extent specified in the agreement hereof, and provided, further, that in the event of a conflict between Incoterms and the laws of the State of Texas, U.S.A., the latter shall govern. The parties specifically exclude\n\nSource: WEST PHARMACEUTICAL SERVICES INC, 8-K, 1/16/2020\n\n\n\n\n\napplication of the U.N. Convention on Contracts for the International Sale of Goods. For any dispute regarding this Agreement, the Parties agree to exclusive jurisdiction and venue in the district courts of Harris County, Texas, or the United States District Court for the Southern District of Texas (Houston Division).\n\n19. MISCELLANEOUS No waiver by either party of a right, default or breach of any of the terms and conditions herein shall be effective unless in writing. No such waiver shall be deemed a waiver of any subsequent right, default or breach (whether similar or dissimilar) except as expressly stated therein.\n\n20. ASSIGNMENT This Agreement shall not be assigned in whole or in part by Buyer or Seller without the written consent of the other party and any attempted assignment without such consent shall be void and of no effect, except that Seller may assign all of its rights and obligations hereunder to any entity of which Exxon Mobil Corporation owns, directly or indirectly, at least fifty percent (50%) of the shares or other indicia of equity having the right to elect such entity's board of directors ",
+          "categories": [],
+          "origin": "original_chunk",
+          "fusion_score": 0.02631578947368421
+        },
+        {
+          "id": "ebf65b41e137",
+          "file_path": "cuad/WestPharmaceuticalServicesInc_20200116_8-K_EX-10.1_11947529_EX-10.1_Supply Agreement.txt",
+          "span": [
+            6671,
+            8596
+          ],
+          "text": "AMERICAS INC.\n\nTitle to the Product(s) to be sold and delivered hereunder will transfer simultaneously with the risks upon delivery as per the applicable lncoterm (lncoterms 2010) in Attachment E with the exception of the following:\n\nFor Product sold and/or sourced by ExxonMobil Chemical Company or ExxonMobil Chemical Services Americas Inc. that is shipped overseas to a non-U.S. location, title and risk of loss of Product shall transfer from ExxonMobil Chemical Company or ExxonMobil Chemical Services Americas Inc. to Buyer Affiliates at the first point upon which the delivering marine vessel crosses the outer boundary of the United States Exclusive Economic Zone (EEZ). The EEZ extends 200 nautical miles beyond the coastal baseline defined in the United Nations Convention on the Law of the Sea.\n\nFor Product sold by ExxonMobil Chemical Company that is transported by land to Mexico, title and risk of loss of Product shall transfer from ExxonMobil Chemical Company to Buyer Affiliates at the frontier between Laredo, Texas, U.S.A. and Mexico (not unloaded), but prior to the customs border of Mexico.\n\nLOCATIONS OF SUPPLY\n\nBuyer/Buyer Affiliates that may purchase Product from ExxonMobil Selling Affiliates are listed in Attachment C. Other products and locations may be added upon mutual agreement in writing.\n\nAny and all sales of Product between ExxonMobil Chemical Company and/or ExxonMobil Chemical Services Americas, Inc. and Buyer Affiliates in the U.S., Mexico and Brazil shall be subject to the terms and conditions set forth in Attachment A hereto.\n\nAny and all sales of Product between ExxonMobil Petroleum & Chemical and Buyer Affiliates in France, Germany, Denmark, Serbia, Ireland and the United Kingdom shall be subject to the terms and conditions set forth in Attachment H hereto.\n\nAny and all sales of Product between ExxonMobil Chemical Asia Pacific and Buyer Affiliates in Singapore, China and In",
+          "categories": [],
+          "origin": "original_chunk",
+          "fusion_score": 0.026153846153846153
+        }
+      ]
+    },
+    "rounds": [
+      {
+        "round": 0,
+        "decision": {
+          "evidence_sufficient": false,
+          "missing_queries": [
+            "What is the expiration date or term duration of the Global Master Supply Agreement as stated in the contract's title or introductory section?",
+            "Is there a specific clause in the agreement that defines the end date or term period of the contract, such as in an attachment or section referencing a time frame like 2019-2023?"
+          ],
+          "ranked_ids": [
+            "f1c6f4443f24",
+            "ce57815e44da",
+            "c435c6958590",
+            "90b1bbbf4cd4",
+            "a3e333fe4473",
+            "d7f07d7412dd",
+            "ac74bc849275",
+            "26706b785df3",
+            "1485b6de92dd",
+            "8b4ef924c666"
+          ]
+        },
+        "references": [],
+        "returned_spans": [
+          [
+            47085,
+            48726
+          ],
+          [
+            1281,
+            3360
+          ],
+          [
+            30102,
+            32190
+          ],
+          [
+            18063,
+            18255
+          ]
+        ]
+      },
+      {
+        "round": 1,
+        "queries": [
+          "What is the specific expiration date or term end year mentioned in the Global Master Supply Agreement between ExxonMobil Chemical Company and West Pharmaceutical Services, Inc.?",
+          "Is there a defined term or period in the contract that specifies the end date of the 2019-2023 Global Master Supply Agreement?"
+        ],
+        "decision": {
+          "evidence_sufficient": false,
+          "missing_queries": [
+            "What is the specific expiration date or term end year mentioned in the Global Master Supply Agreement between ExxonMobil Chemical Company and West Pharmaceutical Services, Inc.?",
+            "Is there a defined term or period in the contract that specifies the end date of the 2019-2023 Global Master Supply Agreement?"
+          ],
+          "ranked_ids": [
+            "fbfc35baf83f",
+            "d7f07d7412dd",
+            "ac74bc849275",
+            "ebf65b41e137",
+            "c435c6958590",
+            "90b1bbbf4cd4",
+            "2db3d4d6f82f",
+            "045550eaa204",
+            "26706b785df3",
+            "8857439ba866"
+          ]
+        },
+        "references": [],
+        "returned_spans": [
+          [
+            10310,
+            10345
+          ],
+          [
+            43692,
+            45697
+          ],
+          [
+            41657,
+            43692
+          ],
+          [
+            6671,
+            8596
+          ]
+        ]
+      }
+    ],
+    "queries": [
+      {
+        "query": "Consider the Global Master Supply Agreement between ExxonMobil Chemical Company and West Pharmaceutical Services, Inc.; What is the expiration date of this contract?",
+        "candidate_ids": [
+          "045550eaa204",
+          "8857439ba866",
+          "d7f07d7412dd",
+          "f1c6f4443f24",
+          "a3e333fe4473",
+          "f3e500d1bf23",
+          "fc358c4dd2dc",
+          "1485b6de92dd",
+          "aa9b2c7eafd8",
+          "ac74bc849275",
+          "26706b785df3",
+          "7ee5a571fa4b",
+          "8b4ef924c666",
+          "ce57815e44da",
+          "90b1bbbf4cd4",
+          "c435c6958590",
+          "3e4bc52ce20a",
+          "40697ef3d4c5",
+          "ebf65b41e137",
+          "0b96beca13b2"
+        ]
+      },
+      {
+        "query": "What is the specific expiration date or term end year mentioned in the Global Master Supply Agreement between ExxonMobil Chemical Company and West Pharmaceutical Services, Inc.?",
+        "candidate_ids": [
+          "8857439ba866",
+          "f1c6f4443f24",
+          "d7f07d7412dd",
+          "045550eaa204",
+          "f3e500d1bf23",
+          "a3e333fe4473",
+          "fc358c4dd2dc",
+          "1485b6de92dd",
+          "7ee5a571fa4b",
+          "aa9b2c7eafd8",
+          "ac74bc849275",
+          "26706b785df3",
+          "8b4ef924c666",
+          "ce57815e44da",
+          "ebf65b41e137",
+          "90b1bbbf4cd4",
+          "322fea467218",
+          "3e4bc52ce20a",
+          "d42b0c95ddea",
+          "40697ef3d4c5"
+        ]
+      },
+      {
+        "query": "Is there a defined term or period in the contract that specifies the end date of the 2019-2023 Global Master Supply Agreement?",
+        "candidate_ids": [
+          "8857439ba866",
+          "fc358c4dd2dc",
+          "045550eaa204",
+          "f3e500d1bf23",
+          "d7f07d7412dd",
+          "aa9b2c7eafd8",
+          "f1c6f4443f24",
+          "2db3d4d6f82f",
+          "26706b785df3",
+          "96a1d1823aa2",
+          "d42b0c95ddea",
+          "ac74bc849275",
+          "c435c6958590",
+          "fbfc35baf83f",
+          "c4c22c5adae8",
+          "7ee5a571fa4b",
+          "3e4bc52ce20a",
+          "40697ef3d4c5",
+          "a3e333fe4473",
+          "ce57815e44da"
+        ]
+      }
+    ],
+    "stop_reason": "no_new_queries",
+    "seconds": 52.683315799804404,
+    "llm_calls": [
+      {
+        "cache_key": "05402a3e09e86fe3b192b3dd51b46cd0778f8842c75028dfa4f3dcf5c4e22780",
+        "cached": false,
+        "seconds": 24.63551849988289,
+        "prompt_tokens": 7189,
+        "output_tokens": 239,
+        "model_total_duration_ns": 24630733900,
+        "response": {
+          "evidence_sufficient": false,
+          "missing_queries": [
+            "What is the expiration date or term duration of the Global Master Supply Agreement as stated in the contract's title or introductory section?",
+            "Is there a specific clause in the agreement that defines the end date or term period of the contract, such as in an attachment or section referencing a time frame like 2019-2023?"
+          ],
+          "ranked_ids": [
+            "f1c6f4443f24",
+            "ce57815e44da",
+            "c435c6958590",
+            "90b1bbbf4cd4",
+            "a3e333fe4473",
+            "d7f07d7412dd",
+            "ac74bc849275",
+            "26706b785df3",
+            "1485b6de92dd",
+            "8b4ef924c666"
+          ]
+        },
+        "candidate_ids": [
+          "045550eaa204",
+          "8857439ba866",
+          "d7f07d7412dd",
+          "f1c6f4443f24",
+          "a3e333fe4473",
+          "f3e500d1bf23",
+          "fc358c4dd2dc",
+          "1485b6de92dd",
+          "aa9b2c7eafd8",
+          "ac74bc849275",
+          "26706b785df3",
+          "7ee5a571fa4b",
+          "8b4ef924c666",
+          "ce57815e44da",
+          "90b1bbbf4cd4",
+          "c435c6958590",
+          "3e4bc52ce20a",
+          "40697ef3d4c5",
+          "ebf65b41e137",
+          "0b96beca13b2"
+        ],
+        "preview_truncated_count": 20
+      },
+      {
+        "cache_key": "e784d72eb2f4b7f812bf104dddc7c603b40cc5c4685711c0650e47fbcc9354fe",
+        "cached": false,
+        "seconds": 11.365396999986842,
+        "prompt_tokens": 8677,
+        "output_tokens": 233,
+        "model_total_duration_ns": 11355836100,
+        "response": {
+          "evidence_sufficient": false,
+          "missing_queries": [
+            "What is the specific expiration date or term end year mentioned in the Global Master Supply Agreement between ExxonMobil Chemical Company and West Pharmaceutical Services, Inc.?",
+            "Is there a defined term or period in the contract that specifies the end date of the 2019-2023 Global Master Supply Agreement?"
+          ],
+          "ranked_ids": [
+            "f1c6f4443f24",
+            "ce57815e44da",
+            "c435c6958590",
+            "90b1bbbf4cd4",
+            "26706b785df3",
+            "aa9b2c7eafd8",
+            "ac74bc849275",
+            "a3e333fe4473",
+            "d7f07d7412dd",
+            "045550eaa204"
+          ]
+        },
+        "candidate_ids": [
+          "045550eaa204",
+          "8857439ba866",
+          "d7f07d7412dd",
+          "f1c6f4443f24",
+          "a3e333fe4473",
+          "f3e500d1bf23",
+          "fc358c4dd2dc",
+          "1485b6de92dd",
+          "aa9b2c7eafd8",
+          "ac74bc849275",
+          "26706b785df3",
+          "7ee5a571fa4b",
+          "8b4ef924c666",
+          "ce57815e44da",
+          "90b1bbbf4cd4",
+          "c435c6958590",
+          "3e4bc52ce20a",
+          "40697ef3d4c5",
+          "ebf65b41e137",
+          "0b96beca13b2"
+        ],
+        "preview_truncated_count": 20
+      },
+      {
+        "cache_key": "ab5d6344e50a292612ba2e092633aec55be39d13fb34b0a24fc784b54814394f",
+        "cached": false,
+        "seconds": 16.553853400051594,
+        "prompt_tokens": 7976,
+        "output_tokens": 233,
+        "model_total_duration_ns": 16549950400,
+        "response": {
+          "evidence_sufficient": false,
+          "missing_queries": [
+            "What is the specific expiration date or term end year mentioned in the Global Master Supply Agreement between ExxonMobil Chemical Company and West Pharmaceutical Services, Inc.?",
+            "Is there a defined term or period in the contract that specifies the end date of the 2019-2023 Global Master Supply Agreement?"
+          ],
+          "ranked_ids": [
+            "fbfc35baf83f",
+            "d7f07d7412dd",
+            "ac74bc849275",
+            "ebf65b41e137",
+            "c435c6958590",
+            "90b1bbbf4cd4",
+            "2db3d4d6f82f",
+            "045550eaa204",
+            "26706b785df3",
+            "8857439ba866"
+          ]
+        },
+        "candidate_ids": [
+          "f1c6f4443f24",
+          "ce57815e44da",
+          "c435c6958590",
+          "90b1bbbf4cd4",
+          "8857439ba866",
+          "fc358c4dd2dc",
+          "045550eaa204",
+          "f3e500d1bf23",
+          "d7f07d7412dd",
+          "aa9b2c7eafd8",
+          "1485b6de92dd",
+          "8b4ef924c666",
+          "2db3d4d6f82f",
+          "26706b785df3",
+          "96a1d1823aa2",
+          "d42b0c95ddea",
+          "ac74bc849275",
+          "ebf65b41e137",
+          "fbfc35baf83f",
+          "c4c22c5adae8"
+        ],
+        "preview_truncated_count": 18
+      }
+    ],
+    "caveat": "Model evidence sufficiency is unverified; unknown exceptions can remain. No final answer is generated."
+  },
+  "source_sha256": "7c991c9f55f81fd83a885f40cf89eb81f276897ee3ff068f0b7d689b6f88d495",
+  "model_digest": "0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0",
+  "embedding_revision": "5c38ec7c405ec4b44b94cc5a9bb96e735b38267a",
+  "finished_at": "2026-11-13T07:15:38.573311+00:00"
+}

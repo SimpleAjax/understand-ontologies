@@ -1,0 +1,163 @@
+@prefix ct: <https://cimulink.local/ontology/contract-terms/0.1#> .
+@prefix ex: <https://cimulink.local/ontology/llm100-v1/> .
+@prefix meta: <https://cimulink.local/ontology/extraction#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ct: a owl:Ontology ;
+    rdfs:comment "Partial five-contract development sample. No claim of complete contract coverage or legal correctness." .
+
+ct:agreement_effective_from a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:applies_within a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:calendar_date_status a owl:DatatypeProperty .
+
+ct:coverage a owl:DatatypeProperty .
+
+ct:description a owl:DatatypeProperty .
+
+ct:duration a owl:DatatypeProperty .
+
+ct:duration_status a owl:DatatypeProperty .
+
+ct:end_char a owl:DatatypeProperty .
+
+ct:end_date_status a owl:DatatypeProperty .
+
+ct:ends_on_event a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:exact_text a owl:DatatypeProperty .
+
+ct:has_party a owl:ObjectProperty ;
+    rdfs:domain ct:Agreement ;
+    rdfs:range ct:Party .
+
+ct:has_rule a owl:ObjectProperty ;
+    rdfs:domain ct:Agreement ;
+    rdfs:range ct:Rule .
+
+ct:kind a owl:DatatypeProperty .
+
+ct:notice_actor a owl:DatatypeProperty .
+
+ct:notice_form a owl:DatatypeProperty .
+
+ct:notice_period_status a owl:DatatypeProperty .
+
+ct:qualifies a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Rule .
+
+ct:references_section a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:renewal_count a owl:DatatypeProperty .
+
+ct:resolution_status a owl:DatatypeProperty .
+
+ct:resolved_to a owl:ObjectProperty ;
+    rdfs:domain ct:Reference ;
+    rdfs:range ct:SourcePassage .
+
+ct:source_path a owl:DatatypeProperty .
+
+ct:source_sha256 a owl:DatatypeProperty .
+
+ct:start_char a owl:DatatypeProperty .
+
+ct:starts_from a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:stated_end_date a owl:DatatypeProperty .
+
+ct:subject_to a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Condition .
+
+ct:supported_by a owl:ObjectProperty ;
+    rdfs:range ct:SourcePassage .
+
+ct:termination_notice a owl:DatatypeProperty .
+
+ex:C062 a ct:Agreement ;
+    rdfs:label "OPERALTD_04_30_2020-EX-4.14-SERVICE AGREEMENT.txt" ;
+    ct:coverage "LOCAL_LLM_PROPOSED_PARTIAL; NOT_HUMAN_REVIEWED" ;
+    ct:has_rule ex:C062R0001,
+        ex:C062R0002,
+        ex:C062R0003 ;
+    ct:source_path "cuad/OPERALTD_04_30_2020-EX-4.14-SERVICE AGREEMENT.txt" ;
+    ct:source_sha256 "579818d20eb50a9cb9893ff4dea109b70d2e74094c06489a994506b2079414fa" ;
+    meta:model_digest "0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0" .
+
+ct:Party a owl:Class ;
+    rdfs:label "Party" .
+
+ex:C062P0017 a ct:SourcePassage ;
+    ct:end_char 18388 ;
+    ct:exact_text "9.4 Upon termination or expiration of this Agreement (i) Each Party shall return to the other Party or destroy (If so authorized in writing by the other Party) any Confidential information in the Party's possession or control, and cause an officer to certify in writing to the other Party that it has done so; (ii) Each Party's rights to be paid and each Party's obligations to pay all amounts due hereunder, as well as Sections 3 through 10 shall survive termination of this Agreement. 10. MISCELLANEOUS 10.1 The Parties to this Agreement are independent contractors. Nothing in this Agreement is intended or should be construed to create an agency, partnership, Joint venture, or employer-employee relationship between PC Financial and Mobimagic. Either Party will represent itself to be an employee or agent of the other Party or enter into any agreement on the other Party's behalf or in the other Party's name. Each Party will retain full control over the manner and means by which it conducts its business and neither Party will be entitled to waive any entitlement to workers' compensation, disability, retirement, insurance, stock options or any other benefits afforded to its employees. 10.2 IN NO EVENT WILL EITHER PARTY BE LIABLE FOR ANY CONSEQUENTIAL, INDIRECT, EXEMPLARY, SPECIAL, OR INCIDENTAL DAMAGES ARISING FROM OR RELATING TO THIS AGREEMENT. " ;
+    ct:source_path "cuad/OPERALTD_04_30_2020-EX-4.14-SERVICE AGREEMENT.txt" ;
+    ct:source_sha256 "579818d20eb50a9cb9893ff4dea109b70d2e74094c06489a994506b2079414fa" ;
+    ct:start_char 17028 .
+
+ex:C062R0001 a ct:Rule ;
+    rdfs:label "Termination — source passage 16" ;
+    ct:kind "TERMINATION" ;
+    ct:subject_to ex:C062R0001Condition16 ;
+    ct:supported_by ex:C062P0016 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C062R0001Condition16 a ct:Condition ;
+    ct:description "8.3 Neither Party shall be liable to the other Party in contract, tort or otherwise, whatever the cause, for any loss of profit, business or goodwill or any indirect, incidental or consequential costs, damages or expenses of any kind, except for such loss attributable to breach of confidentiality. 9. TERM & TERMINATION 9.1 The Agreement shall commence on the Effective Date and continue in effect for the Service Period, unless terminated earlier as provided in this Section. This Agreement is a memorialization of an earlier oral Agreement and shall be deemed to apply for the entire Service Period. The Agreement may be extended or renewed by the Parties in a writing executed by authorized representatives of each of the Parties. 9.2 This Agreement may be terminated by either Party prior to the end of the Service Period if the other Party is in material breach of any tem, or condition of this Agreement and such breach la not remedied for a period of thirty (30) days after the Party in breach has been notified In writing of such breach by the other Party. 9.3 This Agreement terminates automatically, with no further act or action of either Party, if: (a) so required by applicable law or regulations; or (b) a receiver is appointed for a Party or its property, a Party makes an assignment for the benefit of its creditors, goes bankrupt or is liquidated or dissolved. 5" ;
+    ct:supported_by ex:C062P0016 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C062R0002 a ct:Rule ;
+    rdfs:label "Conditional Referenced Term — source passage 16" ;
+    ct:kind "CONDITIONAL_REFERENCED_TERM" ;
+    ct:subject_to ex:C062R0002Condition16 ;
+    ct:supported_by ex:C062P0016 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C062R0002Condition16 a ct:Condition ;
+    ct:description "8.3 Neither Party shall be liable to the other Party in contract, tort or otherwise, whatever the cause, for any loss of profit, business or goodwill or any indirect, incidental or consequential costs, damages or expenses of any kind, except for such loss attributable to breach of confidentiality. 9. TERM & TERMINATION 9.1 The Agreement shall commence on the Effective Date and continue in effect for the Service Period, unless terminated earlier as provided in this Section. This Agreement is a memorialization of an earlier oral Agreement and shall be deemed to apply for the entire Service Period. The Agreement may be extended or renewed by the Parties in a writing executed by authorized representatives of each of the Parties. 9.2 This Agreement may be terminated by either Party prior to the end of the Service Period if the other Party is in material breach of any tem, or condition of this Agreement and such breach la not remedied for a period of thirty (30) days after the Party in breach has been notified In writing of such breach by the other Party. 9.3 This Agreement terminates automatically, with no further act or action of either Party, if: (a) so required by applicable law or regulations; or (b) a receiver is appointed for a Party or its property, a Party makes an assignment for the benefit of its creditors, goes bankrupt or is liquidated or dissolved. 5" ;
+    ct:supported_by ex:C062P0016 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C062R0003 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 17" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:supported_by ex:C062P0017 ;
+    meta:review_status "UNREVIEWED" .
+
+ct:Agreement a owl:Class ;
+    rdfs:label "Agreement" .
+
+ct:Condition a owl:Class ;
+    rdfs:label "Condition" .
+
+ct:SourcePassage a owl:Class ;
+    rdfs:label "SourcePassage" .
+
+ex:C062P0016 a ct:SourcePassage ;
+    ct:end_char 17022 ;
+    ct:exact_text "8.3 Neither Party shall be liable to the other Party in contract, tort or otherwise, whatever the cause, for any loss of profit, business or goodwill or any indirect, incidental or consequential costs, damages or expenses of any kind, except for such loss attributable to breach of confidentiality. 9. TERM & TERMINATION 9.1 The Agreement shall commence on the Effective Date and continue in effect for the Service Period, unless terminated earlier as provided in this Section. This Agreement is a memorialization of an earlier oral Agreement and shall be deemed to apply for the entire Service Period. The Agreement may be extended or renewed by the Parties in a writing executed by authorized representatives of each of the Parties. 9.2 This Agreement may be terminated by either Party prior to the end of the Service Period if the other Party is in material breach of any tem, or condition of this Agreement and such breach la not remedied for a period of thirty (30) days after the Party in breach has been notified In writing of such breach by the other Party. 9.3 This Agreement terminates automatically, with no further act or action of either Party, if: (a) so required by applicable law or regulations; or (b) a receiver is appointed for a Party or its property, a Party makes an assignment for the benefit of its creditors, goes bankrupt or is liquidated or dissolved. 5" ;
+    ct:source_path "cuad/OPERALTD_04_30_2020-EX-4.14-SERVICE AGREEMENT.txt" ;
+    ct:source_sha256 "579818d20eb50a9cb9893ff4dea109b70d2e74094c06489a994506b2079414fa" ;
+    ct:start_char 15642 .
+
+ct:Reference a owl:Class ;
+    rdfs:label "Reference" .
+
+ct:Rule a owl:Class ;
+    rdfs:label "Rule" .
+

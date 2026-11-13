@@ -1,0 +1,13 @@
+{
+  "completed_at": "2026-11-13T04:46:54.674947+00:00",
+  "files": {
+    "code-snapshot.py": "b0ab9fc0c8cc6dda8338aeacbdb0684b5a16ee76a52240331c65b5f491c41cb4",
+    "evaluation-unlock.json": "40cc618bcf8deccb66f8e95372cc8943b0fb34ef418a7352f0a70e88cb2288ea",
+    "protocol.json": "b1a65b7a4f5be2e9b55e4473faf69fd5719dd68b05a6c45d6cf3411241390772",
+    "results.csv": "f2735d9a491b9f483681d5548966134f4b7d04b88ed499df47d40bcbbf83f87e",
+    "results.json": "d6e350689969ee079663ec3d2d163423f61164c95aa5bef2dfcc3ae772f48d4b",
+    "results.md": "c87fd491976a5f5cb8bd619ed19a413619c9819ee168ca0455e1ea8628796ab0",
+    "score-audit.json": "b2f0d116a801380f4aff9b8aa0abb4e3a2df37d367b008fb3bf12d9688529261",
+    "score-audit.md": "36fb22f921a3f7b8c50162fce3a77a0b704213a9e169b64fd9dbc70e6678ee78"
+  }
+}

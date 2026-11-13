@@ -1,0 +1,473 @@
+@prefix ct: <https://cimulink.local/ontology/contract-terms/0.1#> .
+@prefix ex: <https://cimulink.local/ontology/llm100-v1/> .
+@prefix meta: <https://cimulink.local/ontology/extraction#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ct: a owl:Ontology ;
+    rdfs:comment "Partial five-contract development sample. No claim of complete contract coverage or legal correctness." .
+
+ct:agreement_effective_from a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:applies_within a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:calendar_date_status a owl:DatatypeProperty .
+
+ct:coverage a owl:DatatypeProperty .
+
+ct:description a owl:DatatypeProperty .
+
+ct:duration a owl:DatatypeProperty .
+
+ct:duration_status a owl:DatatypeProperty .
+
+ct:end_char a owl:DatatypeProperty .
+
+ct:end_date_status a owl:DatatypeProperty .
+
+ct:ends_on_event a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:exact_text a owl:DatatypeProperty .
+
+ct:has_party a owl:ObjectProperty ;
+    rdfs:domain ct:Agreement ;
+    rdfs:range ct:Party .
+
+ct:has_rule a owl:ObjectProperty ;
+    rdfs:domain ct:Agreement ;
+    rdfs:range ct:Rule .
+
+ct:kind a owl:DatatypeProperty .
+
+ct:notice_actor a owl:DatatypeProperty .
+
+ct:notice_form a owl:DatatypeProperty .
+
+ct:notice_period_status a owl:DatatypeProperty .
+
+ct:qualifies a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Rule .
+
+ct:references_section a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:renewal_count a owl:DatatypeProperty .
+
+ct:resolution_status a owl:DatatypeProperty .
+
+ct:resolved_to a owl:ObjectProperty ;
+    rdfs:domain ct:Reference ;
+    rdfs:range ct:SourcePassage .
+
+ct:source_path a owl:DatatypeProperty .
+
+ct:source_sha256 a owl:DatatypeProperty .
+
+ct:start_char a owl:DatatypeProperty .
+
+ct:starts_from a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:stated_end_date a owl:DatatypeProperty .
+
+ct:subject_to a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Condition .
+
+ct:supported_by a owl:ObjectProperty ;
+    rdfs:range ct:SourcePassage .
+
+ct:termination_notice a owl:DatatypeProperty .
+
+ex:C002 a ct:Agreement ;
+    rdfs:label "AIRTECHINTERNATIONALGROUPINC_05_08_2000-EX-10.4-FRANCHISE AGREEMENT.txt" ;
+    ct:coverage "LOCAL_LLM_PROPOSED_PARTIAL; NOT_HUMAN_REVIEWED" ;
+    ct:has_rule ex:C002R0001,
+        ex:C002R0002,
+        ex:C002R0003,
+        ex:C002R0004,
+        ex:C002R0005,
+        ex:C002R0006,
+        ex:C002R0007,
+        ex:C002R0008,
+        ex:C002R0009,
+        ex:C002R0010,
+        ex:C002R0011,
+        ex:C002R0012,
+        ex:C002R0013,
+        ex:C002R0014,
+        ex:C002R0015,
+        ex:C002R0016,
+        ex:C002R0017,
+        ex:C002R0018,
+        ex:C002R0019,
+        ex:C002R0020,
+        ex:C002R0021,
+        ex:C002R0022 ;
+    ct:source_path "cuad/AIRTECHINTERNATIONALGROUPINC_05_08_2000-EX-10.4-FRANCHISE AGREEMENT.txt" ;
+    ct:source_sha256 "c9a4d1006bce3890bb04151d0bf1f791b43012e7322ac550813e855461ba3da8" ;
+    meta:model_digest "0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0" .
+
+ct:Party a owl:Class ;
+    rdfs:label "Party" .
+
+ex:C002P0021 a ct:SourcePassage ;
+    ct:end_char 4138 ;
+    ct:exact_text "2.01. The term of this Agreement shall be for 10 years commencing on the date of execution of this Agreement by AIRSOPURE." ;
+    ct:source_path "cuad/AIRTECHINTERNATIONALGROUPINC_05_08_2000-EX-10.4-FRANCHISE AGREEMENT.txt" ;
+    ct:source_sha256 "c9a4d1006bce3890bb04151d0bf1f791b43012e7322ac550813e855461ba3da8" ;
+    ct:start_char 4016 .
+
+ex:C002P0022 a ct:SourcePassage ;
+    ct:end_char 4344 ;
+    ct:exact_text "2.02. At the expiration of the term or any renewal term hereof, You may, at its option, renew the Franchise granted hereunder for 2 additional terms of 10 years each on the following terms and conditions:" ;
+    ct:source_path "cuad/AIRTECHINTERNATIONALGROUPINC_05_08_2000-EX-10.4-FRANCHISE AGREEMENT.txt" ;
+    ct:source_sha256 "c9a4d1006bce3890bb04151d0bf1f791b43012e7322ac550813e855461ba3da8" ;
+    ct:start_char 4140 .
+
+ex:C002P0023 a ct:SourcePassage ;
+    ct:end_char 4504 ;
+    ct:exact_text "A. You shall give AIRSOPURE notice in writing of Your election to renew this Agreement at least 3 months prior to the expiration of the then-current term." ;
+    ct:source_path "cuad/AIRTECHINTERNATIONALGROUPINC_05_08_2000-EX-10.4-FRANCHISE AGREEMENT.txt" ;
+    ct:source_sha256 "c9a4d1006bce3890bb04151d0bf1f791b43012e7322ac550813e855461ba3da8" ;
+    ct:start_char 4350 .
+
+ex:C002P0025 a ct:SourcePassage ;
+    ct:end_char 5194 ;
+    ct:exact_text "C. As a condition of renewal of the Franchise, You agree to execute AIRSOPURE's then-current form of franchise agreement and to comply fully with all terms and conditions thereof, and to pay AIRSOPURE the then-current renewal fee, which is presently $1,000.00. You understand that AIRSOPURE may revise its franchise agreement for any renewal term, at AIRSOPURE's sole discretion, including without limitation to increase the royalty fees or other fees payable by You or to require other obligations of franchisees." ;
+    ct:source_path "cuad/AIRTECHINTERNATIONALGROUPINC_05_08_2000-EX-10.4-FRANCHISE AGREEMENT.txt" ;
+    ct:source_sha256 "c9a4d1006bce3890bb04151d0bf1f791b43012e7322ac550813e855461ba3da8" ;
+    ct:start_char 4680 .
+
+ex:C002P0112 a ct:SourcePassage ;
+    ct:end_char 22294 ;
+    ct:exact_text "D. Any and all goodwill arising from Your use of the Licensed Marks in the Franchise under AIRSOPURE's system shall inure solely and exclusively to the benefit of AIRSOPURE, and upon expiration or termination of this Agreement and the Franchise herein granted, no monetary amount shall be assigned as attributable to any goodwill associated with Your use of the Licensed Marks." ;
+    ct:source_path "cuad/AIRTECHINTERNATIONALGROUPINC_05_08_2000-EX-10.4-FRANCHISE AGREEMENT.txt" ;
+    ct:source_sha256 "c9a4d1006bce3890bb04151d0bf1f791b43012e7322ac550813e855461ba3da8" ;
+    ct:start_char 21917 .
+
+ex:C002P0138 a ct:SourcePassage ;
+    ct:end_char 30652 ;
+    ct:exact_text "C. AIRSOPURE shall have the right to terminate the Fund at any time. However, the Fund will not be terminated until all moneys in the Fund have been expended for the purposes stated in Paragraph 10.02 above." ;
+    ct:source_path "cuad/AIRTECHINTERNATIONALGROUPINC_05_08_2000-EX-10.4-FRANCHISE AGREEMENT.txt" ;
+    ct:source_sha256 "c9a4d1006bce3890bb04151d0bf1f791b43012e7322ac550813e855461ba3da8" ;
+    ct:start_char 30445 .
+
+ex:C002P0166 a ct:SourcePassage ;
+    ct:end_char 36132 ;
+    ct:exact_text "7. The transferee shall execute for a term ending on the expiration date of this Agreement the standard form franchise agreement then being offered to new franchisees and such other ancillary agreements and documents as AIRSOPURE may then require for the Franchise, which may include changes in required fee payments or other terms;" ;
+    ct:source_path "cuad/AIRTECHINTERNATIONALGROUPINC_05_08_2000-EX-10.4-FRANCHISE AGREEMENT.txt" ;
+    ct:source_sha256 "c9a4d1006bce3890bb04151d0bf1f791b43012e7322ac550813e855461ba3da8" ;
+    ct:start_char 35800 .
+
+ex:C002P0181 a ct:SourcePassage ;
+    ct:end_char 42094 ;
+    ct:exact_text "14.  DEFAULT AND TERMINATION" ;
+    ct:source_path "cuad/AIRTECHINTERNATIONALGROUPINC_05_08_2000-EX-10.4-FRANCHISE AGREEMENT.txt" ;
+    ct:source_sha256 "c9a4d1006bce3890bb04151d0bf1f791b43012e7322ac550813e855461ba3da8" ;
+    ct:start_char 42066 .
+
+ex:C002P0196 a ct:SourcePassage ;
+    ct:end_char 44946 ;
+    ct:exact_text "14.02. Except for violations of this Agreement listed in Section 13.01 above, or violations specifically provided for elsewhere in this Agreement, You shall have 30 days from receipt from AIRSOPURE of a written Notice of Termination (citing the reason(s) therefor) within which to remedy any default listed in this Section 13.02, or any other violation of this Agreement." ;
+    ct:source_path "cuad/AIRTECHINTERNATIONALGROUPINC_05_08_2000-EX-10.4-FRANCHISE AGREEMENT.txt" ;
+    ct:source_sha256 "c9a4d1006bce3890bb04151d0bf1f791b43012e7322ac550813e855461ba3da8" ;
+    ct:start_char 44575 .
+
+ex:C002P0206 a ct:SourcePassage ;
+    ct:end_char 46600 ;
+    ct:exact_text "14.04. In the event this Agreement is terminated by AIRSOPURE for violation of this Agreement by You, AIRSOPURE shall have the right, at its option, to purchase Your interest in the tangible assets of the Franchise at their fair market value." ;
+    ct:source_path "cuad/AIRTECHINTERNATIONALGROUPINC_05_08_2000-EX-10.4-FRANCHISE AGREEMENT.txt" ;
+    ct:source_sha256 "c9a4d1006bce3890bb04151d0bf1f791b43012e7322ac550813e855461ba3da8" ;
+    ct:start_char 46358 .
+
+ex:C002P0211 a ct:SourcePassage ;
+    ct:end_char 47654 ;
+    ct:exact_text "C. You shall take such action as may be necessary to cancel any assumed name or equivalent registrations or listings in telephone or other directories which contain the names or Licensed Marks of AIRSOPURE, and You shall furnish AIRSOPURE with evidence satisfactory to AIRSOPURE of compliance with this obligation within 30 days after termination or expiration of this Agreement." ;
+    ct:source_path "cuad/AIRTECHINTERNATIONALGROUPINC_05_08_2000-EX-10.4-FRANCHISE AGREEMENT.txt" ;
+    ct:source_sha256 "c9a4d1006bce3890bb04151d0bf1f791b43012e7322ac550813e855461ba3da8" ;
+    ct:start_char 47275 .
+
+ex:C002P0213 a ct:SourcePassage ;
+    ct:end_char 48174 ;
+    ct:exact_text "E. You shall pay to AIRSOPURE all damages, costs and expenses, including reasonable attorneys' fees, incurred by AIRSOPURE subsequent to the termination or expiration of the Franchise herein granted in obtaining injunctive or other relief for the enforcement of any provisions of this Agreement." ;
+    ct:source_path "cuad/AIRTECHINTERNATIONALGROUPINC_05_08_2000-EX-10.4-FRANCHISE AGREEMENT.txt" ;
+    ct:source_sha256 "c9a4d1006bce3890bb04151d0bf1f791b43012e7322ac550813e855461ba3da8" ;
+    ct:start_char 47879 .
+
+ex:C002P0215 a ct:SourcePassage ;
+    ct:end_char 49387 ;
+    ct:exact_text "G. AIRSOPURE shall have the right, but not the duty, to be exercised by notice of intent to do so within 30 days after termination or expiration, to purchase any or all signs, advertising materials, supplies and inventory and any other items bearing AIRSOPURE's Licensed Marks, at Your cost or at fair market value, whichever is less. If the Parties cannot agree on the fair market value of such items, the Parties will select and share the expense of an independent appraiser to determine fair market value. With respect to any purchase by AIRSOPURE as provided herein, AIRSOPURE shall have the right to set off against the purchase price all amounts due from" ;
+    ct:source_path "cuad/AIRTECHINTERNATIONALGROUPINC_05_08_2000-EX-10.4-FRANCHISE AGREEMENT.txt" ;
+    ct:source_sha256 "c9a4d1006bce3890bb04151d0bf1f791b43012e7322ac550813e855461ba3da8" ;
+    ct:start_char 48727 .
+
+ex:C002P0224 a ct:SourcePassage ;
+    ct:end_char 52083 ;
+    ct:exact_text "16.03. You covenant and agree that You (or any shareholder if Your Franchise is a corporation) shall not, for a period of two years following termination of this Agreement for any reason, either directly or indirectly own, maintain, engage in, be employed by, advise, consult, assist, invest in or have any interest whatsoever in any business or entity which competes with or offers products or services which are the same or similar to those of AIRSOPURE or the Franchise within a radius of 25 miles of Your Exclusive Territory. In the event a court of competent jurisdiction should hold this covenant to be unreasonable or overly broad, the Parties agree to reduce the scope of such covenant to the maximum restriction permitted by law, and You agree to be bound by such less restrictive terms of this covenant. If requested by AIRSOPURE, You agree to obtain and provide to AIRSOPURE executed covenants containing terms equivalent to those contained herein from any employee of Yours who has received training from AIRSOPURE, and, if Your Franchise is a corporation, from any director or shareholder of Your corporation." ;
+    ct:source_path "cuad/AIRTECHINTERNATIONALGROUPINC_05_08_2000-EX-10.4-FRANCHISE AGREEMENT.txt" ;
+    ct:source_sha256 "c9a4d1006bce3890bb04151d0bf1f791b43012e7322ac550813e855461ba3da8" ;
+    ct:start_char 50961 .
+
+ex:C002R0001 a ct:Rule ;
+    rdfs:label "Initial Term — source passage 21" ;
+    ct:kind "INITIAL_TERM" ;
+    ct:supported_by ex:C002P0021 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C002R0002 a ct:Rule ;
+    rdfs:label "Optional Renewal — source passage 22" ;
+    ct:kind "OPTIONAL_RENEWAL" ;
+    ct:supported_by ex:C002P0022 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C002R0003 a ct:Rule ;
+    rdfs:label "Optional Renewal — source passage 23" ;
+    ct:kind "OPTIONAL_RENEWAL" ;
+    ct:supported_by ex:C002P0023 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C002R0004 a ct:Rule ;
+    rdfs:label "Optional Renewal — source passage 25" ;
+    ct:kind "OPTIONAL_RENEWAL" ;
+    ct:supported_by ex:C002P0025 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C002R0005 a ct:Rule ;
+    rdfs:label "Initial Term — source passage 31" ;
+    ct:kind "INITIAL_TERM" ;
+    ct:subject_to ex:C002R0005Condition31 ;
+    ct:supported_by ex:C002P0031 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C002R0005Condition31 a ct:Condition ;
+    ct:description "A. You shall pay to AIRSOPURE an initial franchise fee of $25,000.00 upon execution of this Agreement. You agree that the initial franchise fee represents payment for the initial grant of the Franchise rights and license granted herein, shall be fully earned upon execution of this Agreement, and the said fee will not be refunded under any circumstances unless otherwise specifically set forth herein. You must find a suitable Center site within 90 days of signing the Franchise Agreement, unless we mutually agree otherwise. If we cannot agree on a Center location, within 4 months, we may a) extend your search time, b) exchange your territory, or c) terminate your Franchise and refund up to 70% of your Franchise Fee, at our sole discretion. There are no refunds under any other circumstances." ;
+    ct:supported_by ex:C002P0031 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C002R0006 a ct:Rule ;
+    rdfs:label "Conditional Referenced Term — source passage 31" ;
+    ct:kind "CONDITIONAL_REFERENCED_TERM" ;
+    ct:subject_to ex:C002R0006Condition31 ;
+    ct:supported_by ex:C002P0031 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C002R0006Condition31 a ct:Condition ;
+    ct:description "A. You shall pay to AIRSOPURE an initial franchise fee of $25,000.00 upon execution of this Agreement. You agree that the initial franchise fee represents payment for the initial grant of the Franchise rights and license granted herein, shall be fully earned upon execution of this Agreement, and the said fee will not be refunded under any circumstances unless otherwise specifically set forth herein. You must find a suitable Center site within 90 days of signing the Franchise Agreement, unless we mutually agree otherwise. If we cannot agree on a Center location, within 4 months, we may a) extend your search time, b) exchange your territory, or c) terminate your Franchise and refund up to 70% of your Franchise Fee, at our sole discretion. There are no refunds under any other circumstances." ;
+    ct:supported_by ex:C002P0031 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C002R0007 a ct:Rule ;
+    rdfs:label "Termination — source passage 31" ;
+    ct:kind "TERMINATION" ;
+    ct:subject_to ex:C002R0007Condition31 ;
+    ct:supported_by ex:C002P0031 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C002R0007Condition31 a ct:Condition ;
+    ct:description "A. You shall pay to AIRSOPURE an initial franchise fee of $25,000.00 upon execution of this Agreement. You agree that the initial franchise fee represents payment for the initial grant of the Franchise rights and license granted herein, shall be fully earned upon execution of this Agreement, and the said fee will not be refunded under any circumstances unless otherwise specifically set forth herein. You must find a suitable Center site within 90 days of signing the Franchise Agreement, unless we mutually agree otherwise. If we cannot agree on a Center location, within 4 months, we may a) extend your search time, b) exchange your territory, or c) terminate your Franchise and refund up to 70% of your Franchise Fee, at our sole discretion. There are no refunds under any other circumstances." ;
+    ct:supported_by ex:C002P0031 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C002R0008 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 112" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:supported_by ex:C002P0112 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C002R0009 a ct:Rule ;
+    rdfs:label "Termination — source passage 138" ;
+    ct:kind "TERMINATION" ;
+    ct:references_section ex:C002R0009Ref0 ;
+    ct:supported_by ex:C002P0138 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C002R0009Ref0 a ct:Reference ;
+    rdfs:label "Paragraph 10.02" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C002R0010 a ct:Rule ;
+    rdfs:label "Initial Term — source passage 166" ;
+    ct:kind "INITIAL_TERM" ;
+    ct:supported_by ex:C002P0166 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C002R0011 a ct:Rule ;
+    rdfs:label "Conditional Referenced Term — source passage 172" ;
+    ct:kind "CONDITIONAL_REFERENCED_TERM" ;
+    ct:subject_to ex:C002R0011Condition172 ;
+    ct:supported_by ex:C002P0172 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C002R0011Condition172 a ct:Condition ;
+    ct:description "If You fail to consummate the transaction within 30 days from the earlier of: (a) receipt of notice from AIRSOPURE that it elects not to exercise its right of first refusal, or (b) expiration of the 15 day period referred to herein, then You must resubmit the proposed transaction to AIRSOPURE, and AIRSOPURE shall have a new 15 day review period and right of first refusal." ;
+    ct:supported_by ex:C002P0172 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C002R0012 a ct:Rule ;
+    rdfs:label "Termination — source passage 175" ;
+    ct:kind "TERMINATION" ;
+    ct:subject_to ex:C002R0012Condition175 ;
+    ct:supported_by ex:C002P0175 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C002R0012Condition175 a ct:Condition ;
+    ct:description "shall not be approved by AIRSOPURE, Your executor, administrator or personal representative shall transfer Your interest to a third Party approved by AIRSOPURE within 6 months after Your death or the determination of Your mental incapacity. If Your interest is not disposed of within 6 months after such death or mental incapacity, AIRSOPURE may terminate this Agreement." ;
+    ct:supported_by ex:C002P0175 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C002R0013 a ct:Rule ;
+    rdfs:label "Termination — source passage 181" ;
+    ct:kind "TERMINATION" ;
+    ct:supported_by ex:C002P0181 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C002R0014 a ct:Rule ;
+    rdfs:label "Termination — source passage 182" ;
+    ct:kind "TERMINATION" ;
+    ct:subject_to ex:C002R0014Condition182 ;
+    ct:supported_by ex:C002P0182 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C002R0014Condition182 a ct:Condition ;
+    ct:description "14.01. AIRSOPURE may, at its option, terminate this Agreement and all rights granted hereunder, without affording You any opportunity to cure the defaults, effective immediately upon receipt of notice by You, upon the occurrence of any of the following:" ;
+    ct:supported_by ex:C002P0182 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C002R0015 a ct:Rule ;
+    rdfs:label "Termination — source passage 192" ;
+    ct:kind "TERMINATION" ;
+    ct:subject_to ex:C002R0015Condition192 ;
+    ct:supported_by ex:C002P0192 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C002R0015Condition192 a ct:Condition ;
+    ct:description "G. You fail to commence business within 4 months following the execution of this Agreement." ;
+    ct:supported_by ex:C002P0192 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C002R0016 a ct:Rule ;
+    rdfs:label "Termination — source passage 196" ;
+    ct:kind "TERMINATION" ;
+    ct:references_section ex:C002R0016Ref0,
+        ex:C002R0016Ref1 ;
+    ct:supported_by ex:C002P0196 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C002R0016Ref0 a ct:Reference ;
+    rdfs:label "Section 13.01" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C002R0016Ref1 a ct:Reference ;
+    rdfs:label "Section 13.02" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C002R0017 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 206" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:supported_by ex:C002P0206 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C002R0018 a ct:Rule ;
+    rdfs:label "Termination — source passage 208" ;
+    ct:kind "TERMINATION" ;
+    ct:subject_to ex:C002R0018Condition208 ;
+    ct:supported_by ex:C002P0208 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C002R0018Condition208 a ct:Condition ;
+    ct:description "15.01. Upon termination or expiration of this Agreement, this Agreement and all rights granted hereunder to You shall immediately terminate, and:" ;
+    ct:supported_by ex:C002P0208 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C002R0019 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 211" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:supported_by ex:C002P0211 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C002R0020 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 213" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:supported_by ex:C002P0213 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C002R0021 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 215" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:supported_by ex:C002P0215 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C002R0022 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 224" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:supported_by ex:C002P0224 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C002P0172 a ct:SourcePassage ;
+    ct:end_char 38164 ;
+    ct:exact_text "If You fail to consummate the transaction within 30 days from the earlier of: (a) receipt of notice from AIRSOPURE that it elects not to exercise its right of first refusal, or (b) expiration of the 15 day period referred to herein, then You must resubmit the proposed transaction to AIRSOPURE, and AIRSOPURE shall have a new 15 day review period and right of first refusal." ;
+    ct:source_path "cuad/AIRTECHINTERNATIONALGROUPINC_05_08_2000-EX-10.4-FRANCHISE AGREEMENT.txt" ;
+    ct:source_sha256 "c9a4d1006bce3890bb04151d0bf1f791b43012e7322ac550813e855461ba3da8" ;
+    ct:start_char 37790 .
+
+ex:C002P0175 a ct:SourcePassage ;
+    ct:end_char 39008 ;
+    ct:exact_text "shall not be approved by AIRSOPURE, Your executor, administrator or personal representative shall transfer Your interest to a third Party approved by AIRSOPURE within 6 months after Your death or the determination of Your mental incapacity. If Your interest is not disposed of within 6 months after such death or mental incapacity, AIRSOPURE may terminate this Agreement." ;
+    ct:source_path "cuad/AIRTECHINTERNATIONALGROUPINC_05_08_2000-EX-10.4-FRANCHISE AGREEMENT.txt" ;
+    ct:source_sha256 "c9a4d1006bce3890bb04151d0bf1f791b43012e7322ac550813e855461ba3da8" ;
+    ct:start_char 38637 .
+
+ex:C002P0182 a ct:SourcePassage ;
+    ct:end_char 42349 ;
+    ct:exact_text "14.01. AIRSOPURE may, at its option, terminate this Agreement and all rights granted hereunder, without affording You any opportunity to cure the defaults, effective immediately upon receipt of notice by You, upon the occurrence of any of the following:" ;
+    ct:source_path "cuad/AIRTECHINTERNATIONALGROUPINC_05_08_2000-EX-10.4-FRANCHISE AGREEMENT.txt" ;
+    ct:source_sha256 "c9a4d1006bce3890bb04151d0bf1f791b43012e7322ac550813e855461ba3da8" ;
+    ct:start_char 42096 .
+
+ex:C002P0192 a ct:SourcePassage ;
+    ct:end_char 44228 ;
+    ct:exact_text "G. You fail to commence business within 4 months following the execution of this Agreement." ;
+    ct:source_path "cuad/AIRTECHINTERNATIONALGROUPINC_05_08_2000-EX-10.4-FRANCHISE AGREEMENT.txt" ;
+    ct:source_sha256 "c9a4d1006bce3890bb04151d0bf1f791b43012e7322ac550813e855461ba3da8" ;
+    ct:start_char 44137 .
+
+ex:C002P0208 a ct:SourcePassage ;
+    ct:end_char 46781 ;
+    ct:exact_text "15.01. Upon termination or expiration of this Agreement, this Agreement and all rights granted hereunder to You shall immediately terminate, and:" ;
+    ct:source_path "cuad/AIRTECHINTERNATIONALGROUPINC_05_08_2000-EX-10.4-FRANCHISE AGREEMENT.txt" ;
+    ct:source_sha256 "c9a4d1006bce3890bb04151d0bf1f791b43012e7322ac550813e855461ba3da8" ;
+    ct:start_char 46636 .
+
+ct:Agreement a owl:Class ;
+    rdfs:label "Agreement" .
+
+ex:C002P0031 a ct:SourcePassage ;
+    ct:end_char 6804 ;
+    ct:exact_text "A. You shall pay to AIRSOPURE an initial franchise fee of $25,000.00 upon execution of this Agreement. You agree that the initial franchise fee represents payment for the initial grant of the Franchise rights and license granted herein, shall be fully earned upon execution of this Agreement, and the said fee will not be refunded under any circumstances unless otherwise specifically set forth herein. You must find a suitable Center site within 90 days of signing the Franchise Agreement, unless we mutually agree otherwise. If we cannot agree on a Center location, within 4 months, we may a) extend your search time, b) exchange your territory, or c) terminate your Franchise and refund up to 70% of your Franchise Fee, at our sole discretion. There are no refunds under any other circumstances." ;
+    ct:source_path "cuad/AIRTECHINTERNATIONALGROUPINC_05_08_2000-EX-10.4-FRANCHISE AGREEMENT.txt" ;
+    ct:source_sha256 "c9a4d1006bce3890bb04151d0bf1f791b43012e7322ac550813e855461ba3da8" ;
+    ct:start_char 6006 .
+
+ct:Condition a owl:Class ;
+    rdfs:label "Condition" .
+
+ct:Reference a owl:Class ;
+    rdfs:label "Reference" .
+
+ct:SourcePassage a owl:Class ;
+    rdfs:label "SourcePassage" .
+
+ct:Rule a owl:Class ;
+    rdfs:label "Rule" .
+

@@ -1,0 +1,116 @@
+{
+  "document_id": "C080",
+  "file_path": "cuad/SUCAMPOPHARMACEUTICALS,INC_11_04_2015-EX-10.2-STRATEGIC ALLIANCE AGREEMENT.txt",
+  "model_digest": "0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0",
+  "rules": [
+    {
+      "passage_id": 14,
+      "kind": "TERMINATION",
+      "label": "Termination — source passage 14",
+      "condition_ids": [],
+      "reference_labels": [
+        "ARTICLE VI"
+      ],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 15,
+      "kind": "TERMINATION",
+      "label": "Termination — source passage 15",
+      "condition_ids": [],
+      "reference_labels": [
+        "Section 6.01",
+        "Section 6.02",
+        "Section 6.03"
+      ],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 51,
+      "kind": "CONDITIONAL_REFERENCED_TERM",
+      "label": "Conditional Referenced Term — source passage 51",
+      "condition_ids": [
+        51
+      ],
+      "reference_labels": [
+        "Section 3.01"
+      ],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 54,
+      "kind": "CONDITIONAL_REFERENCED_TERM",
+      "label": "Conditional Referenced Term — source passage 54",
+      "condition_ids": [
+        54
+      ],
+      "reference_labels": [],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 54,
+      "kind": "TERMINATION",
+      "label": "Termination — source passage 54",
+      "condition_ids": [
+        54
+      ],
+      "reference_labels": [],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 90,
+      "kind": "TERMINATION",
+      "label": "Termination — source passage 90",
+      "condition_ids": [
+        90
+      ],
+      "reference_labels": [
+        "Section 6.01",
+        "Section 6.02",
+        "Section 6.03",
+        "Article V",
+        "Section 4.07",
+        "Section 4.09",
+        "Article VIII",
+        "ARTICLE VII"
+      ],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 90,
+      "kind": "POST_EXPIRY_CONTINUATION",
+      "label": "Post Expiry Continuation — source passage 90",
+      "condition_ids": [
+        90
+      ],
+      "reference_labels": [
+        "Section 6.01",
+        "Section 6.02",
+        "Section 6.03",
+        "Article V",
+        "Section 4.07",
+        "Section 4.09",
+        "Article VIII",
+        "ARTICLE VII"
+      ],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    }
+  ],
+  "rejected_rules": [],
+  "review_status": "UNREVIEWED",
+  "coverage": "Lexically selected source windows; completeness not guaranteed."
+}

@@ -1,0 +1,188 @@
+{
+  "document_id": "C053",
+  "file_path": "cuad/LEJUHOLDINGSLTD_03_12_2014-EX-10.34-INTERNET CHANNEL COOPERATION AGREEMENT.txt",
+  "model_digest": "0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0",
+  "rules": [
+    {
+      "passage_id": 20,
+      "kind": "INITIAL_TERM",
+      "label": "Initial Term — source passage 20",
+      "condition_ids": [
+        20
+      ],
+      "reference_labels": [
+        "ARTICLE III"
+      ],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 20,
+      "kind": "OPTIONAL_RENEWAL",
+      "label": "Optional Renewal — source passage 20",
+      "condition_ids": [
+        20
+      ],
+      "reference_labels": [
+        "ARTICLE III"
+      ],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 21,
+      "kind": "INITIAL_TERM",
+      "label": "Initial Term — source passage 21",
+      "condition_ids": [],
+      "reference_labels": [
+        "ARTICLE IV"
+      ],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 34,
+      "kind": "OPTIONAL_RENEWAL",
+      "label": "Optional Renewal — source passage 34",
+      "condition_ids": [
+        34
+      ],
+      "reference_labels": [],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 40,
+      "kind": "POST_EXPIRY_CONTINUATION",
+      "label": "Post Expiry Continuation — source passage 40",
+      "condition_ids": [
+        40
+      ],
+      "reference_labels": [
+        "Article VIII",
+        "ARTICLE IX"
+      ],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 40,
+      "kind": "TERMINATION",
+      "label": "Termination — source passage 40",
+      "condition_ids": [
+        40
+      ],
+      "reference_labels": [
+        "Article VIII",
+        "ARTICLE IX"
+      ],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 41,
+      "kind": "TERMINATION",
+      "label": "Termination — source passage 41",
+      "condition_ids": [
+        41
+      ],
+      "reference_labels": [
+        "ARTICLE X",
+        "Article IX",
+        "Article XI"
+      ],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 41,
+      "kind": "CONDITIONAL_REFERENCED_TERM",
+      "label": "Conditional Referenced Term — source passage 41",
+      "condition_ids": [
+        41
+      ],
+      "reference_labels": [
+        "ARTICLE X",
+        "Article IX",
+        "Article XI"
+      ],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 42,
+      "kind": "TERMINATION",
+      "label": "Termination — source passage 42",
+      "condition_ids": [
+        42
+      ],
+      "reference_labels": [
+        "Article XIII",
+        "Section 10.1"
+      ],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 42,
+      "kind": "CONDITIONAL_REFERENCED_TERM",
+      "label": "Conditional Referenced Term — source passage 42",
+      "condition_ids": [
+        42
+      ],
+      "reference_labels": [
+        "Article XIII",
+        "Section 10.1"
+      ],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 43,
+      "kind": "POST_EXPIRY_CONTINUATION",
+      "label": "Post Expiry Continuation — source passage 43",
+      "condition_ids": [],
+      "reference_labels": [],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 48,
+      "kind": "TERMINATION",
+      "label": "Termination — source passage 48",
+      "condition_ids": [
+        48
+      ],
+      "reference_labels": [],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 48,
+      "kind": "CONDITIONAL_REFERENCED_TERM",
+      "label": "Conditional Referenced Term — source passage 48",
+      "condition_ids": [
+        48
+      ],
+      "reference_labels": [],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    }
+  ],
+  "rejected_rules": [],
+  "review_status": "UNREVIEWED",
+  "coverage": "Lexically selected source windows; completeness not guaranteed."
+}

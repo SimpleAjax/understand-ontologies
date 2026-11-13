@@ -1,0 +1,1010 @@
+{
+  "sample": {
+    "source_index": 269,
+    "question": "Consider the Hosting Agreement between T-Mobile Netherlands B.V. and Elephant Talk Communication Holding AG; What is the renewal term for this contract?",
+    "topic": "renewal",
+    "document_id": "C067",
+    "file_path": "cuad/PareteumCorp_20081001_8-K_EX-99.1_2654808_EX-99.1_Hosting Agreement.txt"
+  },
+  "retrieval": {
+    "stages": {
+      "soft_candidates": [
+        {
+          "id": "5abf60020084",
+          "file_path": "cuad/PareteumCorp_20081001_8-K_EX-99.1_2654808_EX-99.1_Hosting Agreement.txt",
+          "span": [
+            65328,
+            66253
+          ],
+          "text": ": PARETEUM CORP, 8-K, 10/1/2008\n\n\n\n\n\n  CONFIDENTIAL TREATMENT REQUESTED WITH RESPECT TO CERTAIN PORTIONS HEREOF DENOTED WITH \"***\"   Hosting Agreement between ELEPHANT TALK and T-Mobile, 18/9/2008\n\n  23.  COUNTERPART\n\nThe Agreement is written in the English language in two (2) copies, each Party receiving one (1) duly signed copy. Both copies are authentic.\n\nSigned in September 17, 2008\n\n            For T-Mobile Netherlands B.V. /s/ Niek Jan van Damme Name: Mr. Niek Jan van Damme Title: Managing Director\n\n  For Elephant Talk Communication Holding AG  /s/ Steven van der Velden Name: Mr. Steven van der Velden Title: CEO\n\n\n\n                For T-Mobile Netherlands B.V. /s/ Hans van Leeuwen Name: Hans van Leeuwen Title: Financieel Directeur\n\n    For Elephant Talk Communication Holding AG  /s/ Martin Zuurbier Name: Mr. Martin Zuurbier Title: CTO/COO\n\n____________________________\n\nSource: PARETEUM CORP, 8-K, 10/1/2008",
+          "categories": [],
+          "origin": "original_chunk",
+          "fusion_score": 0.03252247488101534
+        },
+        {
+          "id": "3b229e55dcad",
+          "file_path": "cuad/PareteumCorp_20081001_8-K_EX-99.1_2654808_EX-99.1_Hosting Agreement.txt",
+          "span": [
+            0,
+            2218
+          ],
+          "text": "Exhibit 99.1   CONFIDENTIAL TREATMENT REQUESTED WITH RESPECT TO CERTAIN PORTIONS HEREOF DENOTED WITH \"***\"\n\nMOBILE VIRTUAL NETWORK ENABLER HOSTING AGREEMENT\n\nBETWEEN\n\nT-MOBILE NETHERLANDS B.V.\n\n&\n\nElephant Talk Communication Holding AG\n\nSource: PARETEUM CORP, 8-K, 10/1/2008\n\n\n\n\n\nCONFIDENTIAL TREATMENT REQUESTED WITH RESPECT TO CERTAIN PORTIONS HEREOF DENOTED WITH \"***\"   Hosting Agreement between ELEPHANT TALK and T-Mobile, 18/9/2008\n\n  TABLE OF CONTENT 1. Definitions 2. Purpose and Scope of the Agreement 3. Hosting Services 4. Implementation 5. Forecast & Commitments 6. Service level 7. Data Protection & Privacy 8. The co-operation relationship 9. Prices, Charging, Billing & Accounting 10. Customer Care Support 11. Confidentiality 12. Limitation of Liability 13. Suspension and termination of Hosting Services 14. Force Majeure 15. Intellectual Property Rights 16. SIM cards and Calling Credit 17. Duration of the Agreement 18. Termination of the Agreement 19. Modifications 20. Miscellaneous 21. Governing Law 22. Dispute resolution 23. Counterpart\n\nSource: PARETEUM CORP, 8-K, 10/1/2008\n\n\n\n\n\nCONFIDENTIAL TREATMENT REQUESTED WITH RESPECT TO CERTAIN PORTIONS HEREOF DENOTED WITH \"***\"   Hosting Agreement between ELEPHANT TALK and T-Mobile, 18/9/2008\n\n  MOBILE VIRTUALNETWORK ENABLER HOSTING AGREEMENT by and between ELEPHANT TALK and T-Mobile\n\n(T-Mobile hosting ELEPHANT TALK)\n\nThis Agreement is made between \"Elephant Talk Communication Holding AG\", a company incorporated under the laws of Switzerland, having its registered office at Baarerstrasse 135, CH-6301 Zug, Switzerland, legally and duly represented by its Chief Executive Officer Steven van der Velden and its Chief Operations Officer and Chief Technology Officer Martin Zuurbier, hereinafter referred to as: \"ELEPHANT TALK\"\n\nand\n\nT-Mobile Netherlands B.V., a company incorporated under the laws of the Netherlands, having its registered office at the Waldorpstraat 60, 2521 CC Den Haag, the Netherlands, legally and duly represented by its Managing Director Niek Jan van Damme and its Marketing Director, Bart Weijermars, hereinafter referred to as: \"T-Mobile\"\n\neach individually referred to as \"Party\" and together as \"Parties\".   WHEREAS:\n\n",
+          "categories": [
+            "CONDITIONAL_REFERENCED_TERM",
+            "INITIAL_TERM",
+            "TERMINATION"
+          ],
+          "origin": "original_chunk",
+          "fusion_score": 0.0315136476426799
+        },
+        {
+          "id": "ce01c6204d8b",
+          "file_path": "cuad/PareteumCorp_20081001_8-K_EX-99.1_2654808_EX-99.1_Hosting Agreement.txt",
+          "span": [
+            11866,
+            14211
+          ],
+          "text": "35 \"T-Mobile Network\" shall mean the T-Mobile DCS 1800 and UMTS/HSDPA mobile telecommunications network, including all network elements, in the Netherlands, as described in Appendix 1.   2.  PURPOSE AND SCOPE OF THE AGREEMENT\n\n2.1 The purpose of this Agreement is to lay down the general terms and conditions between the Parties under which T-Mobile shall provide the Hosting Services and ELEPHANT TALK shall purchase the Hosting Services from T-Mobile, whereby T-Mobile shall enable ELEPHANT TALK to market, sell and provide mobile telecommunication services to the ELEPHANT TALK Customers via the T-Mobile Network. For the avoidance of doubt, ELEPHANT TALK is not entitled to provide (retail) telecommunication services based on the Hosting Service to others than ELEPHANT TALK Customers, such as but not limited to mobile end-users or business companies with their own end-users.\n\nIn the event that *** Parties shall negotiate the terms and conditions under which T-Mobile shall provide and ELEPHANT TALK shall purchase the services from T-Mobile. These terms and conditions shall be laid down in a separate document and shall therefore not be part of this Agreement.\n\n2.2 T-Mobile is entitled without limitations, to *** related services to any other party.\n\n2.3 ELEPHANT TALK will not enter into any discussions or agreement on the provisioning of (similar) Hosting Services as defined in Appendix 1 with any *** in the Netherlands for the duration of the Initial Term of the Agreement. In case ELEPHANT TALK has provided to T-Mobile the twelve month termination notice in accordance with article 17.2, ELEPHANT TALK ***.\n\n2.4 The co-operation between Parties shall regard ***. The Hosting Services are intended for ***. ELEPHANT TALK is allowed to provide SIM cards to ELEPHANT TALK Customers under the terms and conditions as mentioned in this Agreement.     2.5  For the scope of this Agreement, ELEPHANT TALK (including its Affiliated Companies) shall not provide the Hosting Services to ***. Excluded from this provision is the situation wherein ELEPHANT TALK provides *** under the terms and conditions as set out in this article.\n\nSource: PARETEUM CORP, 8-K, 10/1/2008\n\n\n\n\n\nCONFIDENTIAL TREATMENT REQUESTED WITH RESPECT TO CERTAIN PORTIONS HEREOF DENOTED WITH \"***\"   Hosting Agreement between ELEPHANT TALK and T-Mobile, 18/9/2008\n\n",
+          "categories": [],
+          "origin": "original_chunk",
+          "fusion_score": 0.03131881575727918
+        },
+        {
+          "id": "f0ee04c04238",
+          "file_path": "cuad/PareteumCorp_20081001_8-K_EX-99.1_2654808_EX-99.1_Hosting Agreement.txt",
+          "span": [
+            56221,
+            56733
+          ],
+          "text": "or,\n\nSource: PARETEUM CORP, 8-K, 10/1/2008\n\n\n\n\n\nCONFIDENTIAL TREATMENT REQUESTED WITH RESPECT TO CERTAIN PORTIONS HEREOF DENOTED WITH \"***\"   Hosting Agreement between ELEPHANT TALK and T-Mobile, 18/9/2008\n\n  18.2  In case the number of frequencies or the use of the frequencies allocated to the T-Mobile Network is reduced pursuant to Regulatory Provisions the Parties shall renegotiate in good faith the commercial conditions of this Agreement in order to comply with Regulatory Provisions.     18.3 In the eve",
+          "categories": [
+            "TERMINATION"
+          ],
+          "origin": "original_chunk",
+          "fusion_score": 0.029957522915269395
+        }
+      ],
+      "llm_reranked": [
+        {
+          "id": "7bb6e61657e8",
+          "file_path": "cuad/PareteumCorp_20081001_8-K_EX-99.1_2654808_EX-99.1_Hosting Agreement.txt",
+          "span": [
+            52861,
+            54870
+          ],
+          "text": "TALK Customers, only to be used by end users of ELEPHANT TALK Customers for normal end user purposes. Parties shall use their reasonable endeavors to co-operate in order to prevent and clarify any misuse of *** or use of ***. In the event that T-Mobile discovers such improper use or forbidden acts of ELEPHANT TALK Customers, Parties shall contact each other's fraud manager immediately, in order to stipulate details and take appropriate measures. In addition, ELEPHANT TALK shall do its best to stop these actions immediately on first request of T-Mobile. Should ELEPHANT TALK wilfully or negligently fail to comply with an T-Mobile request, ELEPHANT TALK shall bear full responsibility and indemnify T- Mobile for all damages and losses T-Mobile suffers resulting from actions as mentioned in this article by ELEPHANT TALK's Customers.   17.  DURATION OF THE AGREEMENT   17.1 This Agreement shall come into force on the Date of the Agreement, and shall, subject to article 18, remain in full force and effect for an initial period of *** from the Commercial Launch Date.\n\n17.2 The Agreement may be terminated by both Parties with a notification period of *** before the end of the Initial Term of the Agreement. If no termination notice is provided, the Agreement will be automatically extended for consecutive *** periods until such time as *** termination notice is provided. At the end of *** Parties will negotiate in good faith regarding a possible extension of the Initial Term.\n\n  Parties can mutually agree in writing to deviate from an automatic extension of *** by extending this Agreement for a longer period than ***.\n\nSource: PARETEUM CORP, 8-K, 10/1/2008\n\n\n\n\n\nCONFIDENTIAL TREATMENT REQUESTED WITH RESPECT TO CERTAIN PORTIONS HEREOF DENOTED WITH \"***\"   Hosting Agreement between ELEPHANT TALK and T-Mobile, 18/9/2008\n\n18.  TERMINATION OF AGREEMENT\n\n18.1 In addition to the conditions of Article 17, this Agreement may be terminated as follows:\n\n  a. by mutual agreement of the Parties; or\n\n",
+          "categories": [
+            "AUTOMATIC_RENEWAL",
+            "INITIAL_TERM",
+            "TERMINATION"
+          ],
+          "origin": "original_chunk",
+          "fusion_score": 0.0161986301369863
+        },
+        {
+          "id": "683b2005b753",
+          "file_path": "cuad/PareteumCorp_20081001_8-K_EX-99.1_2654808_EX-99.1_Hosting Agreement.txt",
+          "span": [
+            8109,
+            10358
+          ],
+          "text": "Customers in accordance with its terms and conditions of the Agreement.\n\n1.16 \"Implementation Plan\" shall have the meaning as described to it in Appendix 3.\n\n1.17 \"IMSI\" means the International Mobile Subscriber Identity, ***\n\n1.18 \"Initial Term\" means the initial duration of the Agreement as agreed upon between the Parties and defined in article 17.1\n\n1.19 \"IN platform\" (the intelligent network platform) shall mean the technical architecture and telecommunications systems of ELEPHANT TALK for routing calls and charging real-time the outgoing calls of ELEPHANT TALK Customers. 1.20 \"Location Areas\" (LAs) shall mean the individual geographic areas into which the T-Mobile Network is divided at any time.\n\n1.21 \"MSISDN\" shall mean Mobile Station Integrated Services Digital Network Number.\n\n1.22 \"NAP\" shall mean Network Access Point, as described in Appendix 11.\n\nSource: PARETEUM CORP, 8-K, 10/1/2008\n\n\n\n\n\nCONFIDENTIAL TREATMENT REQUESTED WITH RESPECT TO CERTAIN PORTIONS HEREOF DENOTED WITH \"***\"   Hosting Agreement between ELEPHANT TALK and T-Mobile, 18/9/2008\n\n  1.23 \"Operational Manual\" shall mean the working document in which Parties agree upon (dynamic) activities and procedures as described in the Agreement in more detail for the duration of the Agreement. The Operational Manual is a dynamic document. The latest valid and binding version shall be the one agreed in writing between the Parties in accordance with article 19.3.\n\n1.24 \"***\" means the company formerly known as ***. formed under the laws of the Netherlands, *** in The Hague, The Netherlands.\n\n1.25 \"Protocol of Delivery\" (also referred to as \"PoD\") shall mean the document, as attached in Appendix 10, provided by T-Mobile to ELEPHANT TALK following the Soft Launch for the purpose of accepting the Hosting Services by ELEPHANT TALK.\n\n1.26 \"Quarter\" and \"Quarterly\" shall mean a quarter of a year, being three consecutive months starting every January, April, July and/or October of every calendar year.\n\n1.27 \"Ready for Service Date\" shall mean the date, following the Soft Launch, upon which the Hosting Services agreed between the Parties - in accordance with article 3 - meet the agreed specification as evidenced by the signing of the Protocol for Delivery.\n\n",
+          "categories": [
+            "INITIAL_TERM"
+          ],
+          "origin": "original_chunk",
+          "fusion_score": 0.027526395173453996
+        },
+        {
+          "id": "a961a77fe935",
+          "file_path": "cuad/PareteumCorp_20081001_8-K_EX-99.1_2654808_EX-99.1_Hosting Agreement.txt",
+          "span": [
+            19175,
+            20917
+          ],
+          "text": "in the GSM Association, the GSM Specifications, the GSM Association Permanent Reference Documents and mobile telecommunications services available at the market not offered by T-Mobile under this Agreement In such case Parties shall agree upon a workable solution and act accordingly.\n\n2.12 The Appendices shall form an integral part of the Agreement and shall be fully binding on and enforceable by and against the Parties as applicable in accordance with this Agreement. In case that the Agreement contains contradictory provisions, the documents constituting the Agreement shall have the following priority for the purpose of interpretation: a)  the Agreement; b)  the Appendices in order of their number;\n\nSource: PARETEUM CORP, 8-K, 10/1/2008\n\n\n\n\n\nCONFIDENTIAL TREATMENT REQUESTED WITH RESPECT TO CERTAIN PORTIONS HEREOF DENOTED WITH \"***\"   Hosting Agreement between ELEPHANT TALK and T-Mobile, 18/9/2008\n\n\n\nSource: PARETEUM CORP, 8-K, 10/1/2008\n\n\n\n\n\nAppendix No. Appendix Name Appendix 1 Service Description Appendix 2 Financials Appendix 3 Implementation plan Appendix 4 Forecasting Appendix 5 Lawful Intercept Appendix 6 Service Level Agreement Appendix 7 Accounting and Billing Appendix 8 Roaming Appendix 9 Bank guarantee Appendix10 Protocol of Delivery Appendix 11 Technical Specification Appendix 12 *** Appendix 13 ***   3.  HOSTING SERVICES\n\n3.1 T-Mobile shall provide the Hosting Services, as described in Appendix 1, during the term of this Agreement from the Ready for Service Date.\n\n3.2 T-Mobile shall ensure that all *** from ELEPHANT TALK Customers and other telecommunication end users in the Netherlands and in the relevant roaming countries, as further specified in the Agreement.\n\n3.3 ELEPHANT TALK is responsible and",
+          "categories": [
+            "INITIAL_TERM"
+          ],
+          "origin": "original_chunk",
+          "fusion_score": 0.0288981288981289
+        }
+      ],
+      "section_links": [
+        {
+          "id": "7bb6e61657e8",
+          "file_path": "cuad/PareteumCorp_20081001_8-K_EX-99.1_2654808_EX-99.1_Hosting Agreement.txt",
+          "span": [
+            52861,
+            54870
+          ],
+          "text": "TALK Customers, only to be used by end users of ELEPHANT TALK Customers for normal end user purposes. Parties shall use their reasonable endeavors to co-operate in order to prevent and clarify any misuse of *** or use of ***. In the event that T-Mobile discovers such improper use or forbidden acts of ELEPHANT TALK Customers, Parties shall contact each other's fraud manager immediately, in order to stipulate details and take appropriate measures. In addition, ELEPHANT TALK shall do its best to stop these actions immediately on first request of T-Mobile. Should ELEPHANT TALK wilfully or negligently fail to comply with an T-Mobile request, ELEPHANT TALK shall bear full responsibility and indemnify T- Mobile for all damages and losses T-Mobile suffers resulting from actions as mentioned in this article by ELEPHANT TALK's Customers.   17.  DURATION OF THE AGREEMENT   17.1 This Agreement shall come into force on the Date of the Agreement, and shall, subject to article 18, remain in full force and effect for an initial period of *** from the Commercial Launch Date.\n\n17.2 The Agreement may be terminated by both Parties with a notification period of *** before the end of the Initial Term of the Agreement. If no termination notice is provided, the Agreement will be automatically extended for consecutive *** periods until such time as *** termination notice is provided. At the end of *** Parties will negotiate in good faith regarding a possible extension of the Initial Term.\n\n  Parties can mutually agree in writing to deviate from an automatic extension of *** by extending this Agreement for a longer period than ***.\n\nSource: PARETEUM CORP, 8-K, 10/1/2008\n\n\n\n\n\nCONFIDENTIAL TREATMENT REQUESTED WITH RESPECT TO CERTAIN PORTIONS HEREOF DENOTED WITH \"***\"   Hosting Agreement between ELEPHANT TALK and T-Mobile, 18/9/2008\n\n18.  TERMINATION OF AGREEMENT\n\n18.1 In addition to the conditions of Article 17, this Agreement may be terminated as follows:\n\n  a. by mutual agreement of the Parties; or\n\n",
+          "categories": [
+            "AUTOMATIC_RENEWAL",
+            "INITIAL_TERM",
+            "TERMINATION"
+          ],
+          "origin": "original_chunk",
+          "fusion_score": 0.0161986301369863
+        },
+        {
+          "id": "683b2005b753",
+          "file_path": "cuad/PareteumCorp_20081001_8-K_EX-99.1_2654808_EX-99.1_Hosting Agreement.txt",
+          "span": [
+            8109,
+            10358
+          ],
+          "text": "Customers in accordance with its terms and conditions of the Agreement.\n\n1.16 \"Implementation Plan\" shall have the meaning as described to it in Appendix 3.\n\n1.17 \"IMSI\" means the International Mobile Subscriber Identity, ***\n\n1.18 \"Initial Term\" means the initial duration of the Agreement as agreed upon between the Parties and defined in article 17.1\n\n1.19 \"IN platform\" (the intelligent network platform) shall mean the technical architecture and telecommunications systems of ELEPHANT TALK for routing calls and charging real-time the outgoing calls of ELEPHANT TALK Customers. 1.20 \"Location Areas\" (LAs) shall mean the individual geographic areas into which the T-Mobile Network is divided at any time.\n\n1.21 \"MSISDN\" shall mean Mobile Station Integrated Services Digital Network Number.\n\n1.22 \"NAP\" shall mean Network Access Point, as described in Appendix 11.\n\nSource: PARETEUM CORP, 8-K, 10/1/2008\n\n\n\n\n\nCONFIDENTIAL TREATMENT REQUESTED WITH RESPECT TO CERTAIN PORTIONS HEREOF DENOTED WITH \"***\"   Hosting Agreement between ELEPHANT TALK and T-Mobile, 18/9/2008\n\n  1.23 \"Operational Manual\" shall mean the working document in which Parties agree upon (dynamic) activities and procedures as described in the Agreement in more detail for the duration of the Agreement. The Operational Manual is a dynamic document. The latest valid and binding version shall be the one agreed in writing between the Parties in accordance with article 19.3.\n\n1.24 \"***\" means the company formerly known as ***. formed under the laws of the Netherlands, *** in The Hague, The Netherlands.\n\n1.25 \"Protocol of Delivery\" (also referred to as \"PoD\") shall mean the document, as attached in Appendix 10, provided by T-Mobile to ELEPHANT TALK following the Soft Launch for the purpose of accepting the Hosting Services by ELEPHANT TALK.\n\n1.26 \"Quarter\" and \"Quarterly\" shall mean a quarter of a year, being three consecutive months starting every January, April, July and/or October of every calendar year.\n\n1.27 \"Ready for Service Date\" shall mean the date, following the Soft Launch, upon which the Hosting Services agreed between the Parties - in accordance with article 3 - meet the agreed specification as evidenced by the signing of the Protocol for Delivery.\n\n",
+          "categories": [
+            "INITIAL_TERM"
+          ],
+          "origin": "original_chunk",
+          "fusion_score": 0.027526395173453996
+        },
+        {
+          "file_path": "cuad/PareteumCorp_20081001_8-K_EX-99.1_2654808_EX-99.1_Hosting Agreement.txt",
+          "span": [
+            58023,
+            59623
+          ],
+          "text": "19.3 Parties agree that the Operational Manual can only be modified by T-Mobile's account manager upon consultation with ELEPHANT TALK's authorized account manager and with the subsequent written agreement of ELEPHANT TALK and T-Mobile.   20.  MISCELLANEOUS   20.1  Successors, Assigns   This Agreement and the rights and obligations specified herein shall be binding upon the Parties and their respective legal successors and neither Party shall sell, transfer or assign this Agreement or any part, interest, right or obligation hereunder except that a Party shall have the right to transfer or assign this Agreement in whole (but not in part) to an Affiliated Company provided that:\n\nSource: PARETEUM CORP, 8-K, 10/1/2008\n\n\n\n\n\nCONFIDENTIAL TREATMENT REQUESTED WITH RESPECT TO CERTAIN PORTIONS HEREOF DENOTED WITH \"***\"   Hosting Agreement between ELEPHANT TALK and T-Mobile, 18/9/2008\n\n    a) such Affiliated Company expressly assumes, by written instrument, all of the obligations of the Party under this Agreement and thereby becomes a Party to this Agreement, and   b) such Affiliated Company has adequate financial strength, resources and experience in the reasonable opinion of the other Party (such opinion to be obtained in writing in advance of any assignment), to comply with its obligations under this Agreement. Such assignment shall not release the assigning Party of its obligations under article 11 of this Agreement.\n\nNo person other than a Party to this Agreement shall acquire any rights hereunder as a third-Party beneficiary or otherwise by virtue of this Agreement.\n\nBoth Partie",
+          "id": "33eb512e3706",
+          "categories": [],
+          "origin": "resolved_section"
+        },
+        {
+          "id": "a961a77fe935",
+          "file_path": "cuad/PareteumCorp_20081001_8-K_EX-99.1_2654808_EX-99.1_Hosting Agreement.txt",
+          "span": [
+            19175,
+            19317
+          ],
+          "text": "in the GSM Association, the GSM Specifications, the GSM Association Permanent Reference Documents and mobile telecommunications services avail",
+          "categories": [
+            "INITIAL_TERM"
+          ],
+          "origin": "original_chunk",
+          "fusion_score": 0.0288981288981289
+        }
+      ],
+      "iterative": [
+        {
+          "evidence_id": "https://cimulink.local/ontology/llm100-v1/C067P0183",
+          "file_path": "cuad/PareteumCorp_20081001_8-K_EX-99.1_2654808_EX-99.1_Hosting Agreement.txt",
+          "span": [
+            53937,
+            54349
+          ],
+          "text": "17.2 The Agreement may be terminated by both Parties with a notification period of *** before the end of the Initial Term of the Agreement. If no termination notice is provided, the Agreement will be automatically extended for consecutive *** periods until such time as *** termination notice is provided. At the end of *** Parties will negotiate in good faith regarding a possible extension of the Initial Term.",
+          "id": "57674a160f38",
+          "categories": [
+            "AUTOMATIC_RENEWAL",
+            "TERMINATION"
+          ],
+          "origin": "extracted_passage",
+          "fusion_score": 0.0340136476426799
+        },
+        {
+          "id": "7bb6e61657e8",
+          "file_path": "cuad/PareteumCorp_20081001_8-K_EX-99.1_2654808_EX-99.1_Hosting Agreement.txt",
+          "span": [
+            52861,
+            53937
+          ],
+          "text": "TALK Customers, only to be used by end users of ELEPHANT TALK Customers for normal end user purposes. Parties shall use their reasonable endeavors to co-operate in order to prevent and clarify any misuse of *** or use of ***. In the event that T-Mobile discovers such improper use or forbidden acts of ELEPHANT TALK Customers, Parties shall contact each other's fraud manager immediately, in order to stipulate details and take appropriate measures. In addition, ELEPHANT TALK shall do its best to stop these actions immediately on first request of T-Mobile. Should ELEPHANT TALK wilfully or negligently fail to comply with an T-Mobile request, ELEPHANT TALK shall bear full responsibility and indemnify T- Mobile for all damages and losses T-Mobile suffers resulting from actions as mentioned in this article by ELEPHANT TALK's Customers.   17.  DURATION OF THE AGREEMENT   17.1 This Agreement shall come into force on the Date of the Agreement, and shall, subject to article 18, remain in full force and effect for an initial period of *** from the Commercial Launch Date.\n\n",
+          "categories": [
+            "AUTOMATIC_RENEWAL",
+            "INITIAL_TERM",
+            "TERMINATION"
+          ],
+          "origin": "original_chunk",
+          "fusion_score": 0.031112012987012987
+        },
+        {
+          "id": "7bb6e61657e8",
+          "file_path": "cuad/PareteumCorp_20081001_8-K_EX-99.1_2654808_EX-99.1_Hosting Agreement.txt",
+          "span": [
+            54349,
+            54870
+          ],
+          "text": "\n\n  Parties can mutually agree in writing to deviate from an automatic extension of *** by extending this Agreement for a longer period than ***.\n\nSource: PARETEUM CORP, 8-K, 10/1/2008\n\n\n\n\n\nCONFIDENTIAL TREATMENT REQUESTED WITH RESPECT TO CERTAIN PORTIONS HEREOF DENOTED WITH \"***\"   Hosting Agreement between ELEPHANT TALK and T-Mobile, 18/9/2008\n\n18.  TERMINATION OF AGREEMENT\n\n18.1 In addition to the conditions of Article 17, this Agreement may be terminated as follows:\n\n  a. by mutual agreement of the Parties; or\n\n",
+          "categories": [
+            "AUTOMATIC_RENEWAL",
+            "INITIAL_TERM",
+            "TERMINATION"
+          ],
+          "origin": "original_chunk",
+          "fusion_score": 0.031112012987012987
+        },
+        {
+          "id": "c8cce8564396",
+          "file_path": "cuad/PareteumCorp_20081001_8-K_EX-99.1_2654808_EX-99.1_Hosting Agreement.txt",
+          "span": [
+            31016,
+            32582
+          ],
+          "text": "of Agreement between the Parties dated ***. The second installment of *** shall be charged to ELEPHANT TALK right after signing of the Agreement and shall be paid by ELEPHANT TALK within fifteen (15) Calendar Days of the invoice date.\n\n9.2.2 Whenever an ELEPHANT TALK Customer uses the ELEPHANT TALK Wholesale Services, ELEPHANT TALK shall be fully responsible for timely payment of the appropriate price(s) established under article 9.1.2 for the Hosting Services used. ELEPHANT TALK shall pay to T-Mobile the charges for the Hosting Services as from the Ready for Service Date, including the charges mentioned under article 4.5.\n\n9.2.3 In addition to the invoice mentioned under article 9.2.1., T-Mobile shall on a monthly arrear basis submit invoices to ELEPHANT TALK detailing the prices payable by ELEPHANT TALK under article 9.2.2. T-Mobile will send the following invoices for: a)  network hosting services***; a)  costs of authorized lawful intercept (to the extent provided for under Appendix 5); b)  costs for other services agreed upon.\n\nSource: PARETEUM CORP, 8-K, 10/1/2008\n\n\n\n\n\nCONFIDENTIAL TREATMENT REQUESTED WITH RESPECT TO CERTAIN PORTIONS HEREOF DENOTED WITH \"***\"   Hosting Agreement between ELEPHANT TALK and T-Mobile, 18/9/2008\n\n9.2.4 ELEPHANT TALK shall pay all invoices no later than *** after the invoice date. ELEPHANT TALK ***, in the event that ELEPHANT TALK fails to meet ***\n\n9.2.5 ***\n\n9.2.6 Invoices submitted to ELEPHANT TALK by T-Mobile shall be itemized in accordance with Dutch acknowledged principles of billing and accounting.\n\n",
+          "categories": [],
+          "origin": "original_chunk",
+          "fusion_score": 0.02819138376017471
+        },
+        {
+          "file_path": "cuad/PareteumCorp_20081001_8-K_EX-99.1_2654808_EX-99.1_Hosting Agreement.txt",
+          "span": [
+            30038,
+            30324
+          ],
+          "text": "9.1.2 The prices to be paid by ELEPHANT TALK to T-Mobile for the Hosting Services rendered are stated in Appendix 2. Such prices may be amended in accordance with the terms of this Agreement and Appendix 2 and shall be paid by ELEPHANT TALK to T-Mobile in accordance with article 9.2.\n\n",
+          "id": "27da1df25b80",
+          "categories": [],
+          "origin": "resolved_section"
+        },
+        {
+          "file_path": "cuad/PareteumCorp_20081001_8-K_EX-99.1_2654808_EX-99.1_Hosting Agreement.txt",
+          "span": [
+            24205,
+            25164
+          ],
+          "text": "4.5 Subject to article 4.4., ELEPHANT TALK shall commence the Soft Launch on or after the ***. From the *** ELEPHANT TALK shall be permitted to (technically) test the Hosting Services for the duration of five (5) calendar weeks, with a limited number of users (***). The traffic generated during the Soft Launch shall be free of charge for up to *** - based on the tariffs T-Mobile will charge ELEPHANT TALK according to Appendix 2. For all other users and costs above the ***,- per user, ELEPHANT TALK has to pay the fees for the Hosting Services as defined in Appendix 2. The Soft Launch is not part of the forecasts pursuant to Appendix 4. ELEPHANT TALK will finalize the Soft Launch by signing the Protocol of Delivery, according to Appendix 3 and 11.\n\nSource: PARETEUM CORP, 8-K, 10/1/2008\n\n\n\n\n\nCONFIDENTIAL TREATMENT REQUESTED WITH RESPECT TO CERTAIN PORTIONS HEREOF DENOTED WITH \"***\"   Hosting Agreement between ELEPHANT TALK and T-Mobile, 18/9/2008\n\n",
+          "id": "a18e9b3a9b9e",
+          "categories": [],
+          "origin": "resolved_section"
+        },
+        {
+          "evidence_id": "https://cimulink.local/ontology/llm100-v1/C067P0041",
+          "file_path": "cuad/PareteumCorp_20081001_8-K_EX-99.1_2654808_EX-99.1_Hosting Agreement.txt",
+          "span": [
+            8336,
+            8462
+          ],
+          "text": "1.18 \"Initial Term\" means the initial duration of the Agreement as agreed upon between the Parties and defined in article 17.1",
+          "id": "86e3b803fc1b",
+          "categories": [
+            "INITIAL_TERM"
+          ],
+          "origin": "extracted_passage",
+          "fusion_score": 0.029083245521601686
+        }
+      ]
+    },
+    "rounds": [
+      {
+        "round": 0,
+        "decision": {
+          "evidence_sufficient": false,
+          "missing_queries": [
+            "What is the specific clause in the Hosting Agreement that defines the initial term and renewal period for the contract between T-Mobile Netherlands B.V. and Elephant Talk Communication Holding AG?",
+            "Does the Hosting Agreement contain a clause specifying the automatic renewal term or the duration of the initial term as defined in article 17.1 or any related section?"
+          ],
+          "ranked_ids": [
+            "7bb6e61657e8",
+            "683b2005b753",
+            "a961a77fe935",
+            "ba894bec9ccb",
+            "f0ee04c04238",
+            "3939d65f1897",
+            "045d988dc94d",
+            "e69b982582df",
+            "3b229e55dcad",
+            "ce01c6204d8b"
+          ]
+        },
+        "references": [
+          {
+            "from_id": "7bb6e61657e8",
+            "depth": 1,
+            "reference": "18",
+            "status": "resolved",
+            "span": [
+              54698,
+              54729
+            ],
+            "heading": "18.  TERMINATION OF AGREEMENT",
+            "selected_span": [
+              54698,
+              54729
+            ],
+            "selected_id": "ed4636859a54"
+          },
+          {
+            "from_id": "7bb6e61657e8",
+            "depth": 1,
+            "reference": "17",
+            "status": "unresolved"
+          },
+          {
+            "from_id": "683b2005b753",
+            "depth": 1,
+            "reference": "17.1",
+            "status": "unresolved"
+          },
+          {
+            "from_id": "683b2005b753",
+            "depth": 1,
+            "reference": "19.3",
+            "status": "resolved",
+            "span": [
+              58023,
+              61598
+            ],
+            "heading": "19.3 Parties agree that the Operational Manual can only be modified by T-Mobile's account manager upon consultation with ELEPHANT TALK's authorized account manager and with the sub",
+            "selected_span": [
+              58023,
+              59623
+            ],
+            "selected_id": "33eb512e3706"
+          },
+          {
+            "from_id": "683b2005b753",
+            "depth": 1,
+            "reference": "3",
+            "status": "unresolved"
+          },
+          {
+            "from_id": "ba894bec9ccb",
+            "depth": 1,
+            "reference": "11",
+            "status": "unresolved"
+          },
+          {
+            "from_id": "ba894bec9ccb",
+            "depth": 1,
+            "reference": "15",
+            "status": "resolved",
+            "span": [
+              48049,
+              48086
+            ],
+            "heading": "  15.  INTELLECTUAL PROPERTY RIGHTS",
+            "selected_span": [
+              48049,
+              48086
+            ],
+            "selected_id": "f4b336620ad7"
+          },
+          {
+            "from_id": "f0ee04c04238",
+            "depth": 1,
+            "reference": "18.1",
+            "status": "resolved",
+            "span": [
+              54729,
+              55338
+            ],
+            "heading": "18.1 In addition to the conditions of Article 17, this Agreement may be terminated as follows:",
+            "selected_span": [
+              54729,
+              55338
+            ],
+            "selected_id": "9a7980bce486"
+          },
+          {
+            "from_id": "33eb512e3706",
+            "depth": 2,
+            "reference": "11",
+            "status": "unresolved"
+          },
+          {
+            "from_id": "9a7980bce486",
+            "depth": 2,
+            "reference": "17",
+            "status": "unresolved"
+          },
+          {
+            "from_id": "9a7980bce486",
+            "depth": 2,
+            "reference": "9.2",
+            "status": "unresolved"
+          }
+        ],
+        "returned_spans": [
+          [
+            52861,
+            54870
+          ],
+          [
+            8109,
+            10358
+          ],
+          [
+            58023,
+            59623
+          ],
+          [
+            19175,
+            19317
+          ]
+        ]
+      },
+      {
+        "round": 1,
+        "queries": [
+          "What is the duration of the initial term as defined in article 17.1 of the Hosting Agreement between T-Mobile Netherlands B.V. and Elephant Talk Communication Holding AG?",
+          "What is the length of the automatic extension period specified in the renewal clause of article 17.2 of the Hosting Agreement?"
+        ],
+        "decision": {
+          "evidence_sufficient": false,
+          "missing_queries": [
+            "What is the specific duration of the automatic extension periods mentioned in article 17.2 of the Hosting Agreement between T-Mobile Netherlands B.V. and Elephant Talk Communication Holding AG?",
+            "What is the definition of the initial term as referenced in article 17.1 of the Hosting Agreement between T-Mobile Netherlands B.V. and Elephant Talk Communication Holding AG?"
+          ],
+          "ranked_ids": [
+            "57674a160f38",
+            "8f26515de7d2",
+            "683b2005b753",
+            "86e3b803fc1b",
+            "33eb512e3706"
+          ]
+        },
+        "references": [
+          {
+            "from_id": "8f26515de7d2",
+            "depth": 1,
+            "reference": "11",
+            "status": "unresolved"
+          },
+          {
+            "from_id": "683b2005b753",
+            "depth": 1,
+            "reference": "17.1",
+            "status": "unresolved"
+          },
+          {
+            "from_id": "683b2005b753",
+            "depth": 1,
+            "reference": "19.3",
+            "status": "resolved",
+            "span": [
+              58023,
+              61598
+            ],
+            "heading": "19.3 Parties agree that the Operational Manual can only be modified by T-Mobile's account manager upon consultation with ELEPHANT TALK's authorized account manager and with the sub",
+            "selected_span": [
+              58023,
+              59623
+            ],
+            "selected_id": "33eb512e3706"
+          },
+          {
+            "from_id": "683b2005b753",
+            "depth": 1,
+            "reference": "3",
+            "status": "unresolved"
+          },
+          {
+            "from_id": "86e3b803fc1b",
+            "depth": 1,
+            "reference": "17.1",
+            "status": "unresolved"
+          },
+          {
+            "from_id": "33eb512e3706",
+            "depth": 1,
+            "reference": "11",
+            "status": "unresolved"
+          },
+          {
+            "from_id": "33eb512e3706",
+            "depth": 2,
+            "reference": "11",
+            "status": "unresolved"
+          }
+        ],
+        "returned_spans": [
+          [
+            53937,
+            54349
+          ],
+          [
+            40785,
+            41051
+          ],
+          [
+            8109,
+            10358
+          ],
+          [
+            58023,
+            59623
+          ]
+        ]
+      },
+      {
+        "round": 2,
+        "queries": [
+          "What is the specific duration of the automatic extension periods mentioned in article 17.2 of the Hosting Agreement between T-Mobile Netherlands B.V. and Elephant Talk Communication Holding AG?",
+          "What is the definition of the initial term as referenced in article 17.1 of the Hosting Agreement between T-Mobile Netherlands B.V. and Elephant Talk Communication Holding AG?"
+        ],
+        "decision": {
+          "evidence_sufficient": false,
+          "missing_queries": [
+            "What is the specific duration of the automatic extension periods mentioned in article 17.2 of the Hosting Agreement between T-Mobile Netherlands B.V. and Elephant Talk Communication Holding AG?",
+            "What is the definition of the initial term as referenced in article 17.1 of the Hosting Agreement between T-Mobile Netherlands B.V. and Elephant Talk Communication Holding AG?"
+          ],
+          "ranked_ids": [
+            "57674a160f38",
+            "7bb6e61657e8",
+            "ba2b5a91eef8",
+            "c8cce8564396",
+            "86e3b803fc1b"
+          ]
+        },
+        "references": [
+          {
+            "from_id": "7bb6e61657e8",
+            "depth": 1,
+            "reference": "18",
+            "status": "resolved",
+            "span": [
+              54698,
+              54729
+            ],
+            "heading": "18.  TERMINATION OF AGREEMENT",
+            "selected_span": [
+              54698,
+              54729
+            ],
+            "selected_id": "ed4636859a54"
+          },
+          {
+            "from_id": "7bb6e61657e8",
+            "depth": 1,
+            "reference": "17",
+            "status": "unresolved"
+          },
+          {
+            "from_id": "ba2b5a91eef8",
+            "depth": 1,
+            "reference": "17",
+            "status": "unresolved"
+          },
+          {
+            "from_id": "c8cce8564396",
+            "depth": 1,
+            "reference": "9.1.2",
+            "status": "resolved",
+            "span": [
+              30038,
+              30324
+            ],
+            "heading": "9.1.2 The prices to be paid by ELEPHANT TALK to T-Mobile for the Hosting Services rendered are stated in Appendix 2. Such prices may be amended in accordance with the terms of this",
+            "selected_span": [
+              30038,
+              30324
+            ],
+            "selected_id": "27da1df25b80"
+          },
+          {
+            "from_id": "c8cce8564396",
+            "depth": 1,
+            "reference": "4.5",
+            "status": "resolved",
+            "span": [
+              24205,
+              25164
+            ],
+            "heading": "4.5 Subject to article 4.4., ELEPHANT TALK shall commence the Soft Launch on or after the ***. From the *** ELEPHANT TALK shall be permitted to (technically) test the Hosting Servi",
+            "selected_span": [
+              24205,
+              25164
+            ],
+            "selected_id": "a18e9b3a9b9e"
+          },
+          {
+            "from_id": "c8cce8564396",
+            "depth": 1,
+            "reference": "9.2.1",
+            "status": "unresolved"
+          },
+          {
+            "from_id": "c8cce8564396",
+            "depth": 1,
+            "reference": "9.2.2",
+            "status": "resolved",
+            "span": [
+              31252,
+              31648
+            ],
+            "heading": "9.2.2 Whenever an ELEPHANT TALK Customer uses the ELEPHANT TALK Wholesale Services, ELEPHANT TALK shall be fully responsible for timely payment of the appropriate price(s) establis",
+            "selected_span": [
+              31252,
+              31648
+            ],
+            "selected_id": "f3d622a683ee"
+          },
+          {
+            "from_id": "86e3b803fc1b",
+            "depth": 1,
+            "reference": "17.1",
+            "status": "unresolved"
+          },
+          {
+            "from_id": "27da1df25b80",
+            "depth": 2,
+            "reference": "9.2",
+            "status": "unresolved"
+          },
+          {
+            "from_id": "a18e9b3a9b9e",
+            "depth": 2,
+            "reference": "4.4",
+            "status": "unresolved"
+          },
+          {
+            "from_id": "f3d622a683ee",
+            "depth": 2,
+            "reference": "9.1.2",
+            "status": "resolved",
+            "span": [
+              30038,
+              30324
+            ],
+            "heading": "9.1.2 The prices to be paid by ELEPHANT TALK to T-Mobile for the Hosting Services rendered are stated in Appendix 2. Such prices may be amended in accordance with the terms of this"
+          },
+          {
+            "from_id": "f3d622a683ee",
+            "depth": 2,
+            "reference": "4.5",
+            "status": "resolved",
+            "span": [
+              24205,
+              25164
+            ],
+            "heading": "4.5 Subject to article 4.4., ELEPHANT TALK shall commence the Soft Launch on or after the ***. From the *** ELEPHANT TALK shall be permitted to (technically) test the Hosting Servi"
+          }
+        ],
+        "returned_spans": [
+          [
+            53937,
+            54349
+          ],
+          [
+            52861,
+            53937
+          ],
+          [
+            54349,
+            54870
+          ],
+          [
+            31016,
+            32582
+          ],
+          [
+            30038,
+            30324
+          ],
+          [
+            24205,
+            25164
+          ],
+          [
+            8336,
+            8462
+          ]
+        ]
+      }
+    ],
+    "queries": [
+      {
+        "query": "Consider the Hosting Agreement between T-Mobile Netherlands B.V. and Elephant Talk Communication Holding AG; What is the renewal term for this contract?",
+        "candidate_ids": [
+          "5abf60020084",
+          "3b229e55dcad",
+          "ce01c6204d8b",
+          "f0ee04c04238",
+          "ed35a6f5efb9",
+          "236f2ff7eb19",
+          "a961a77fe935",
+          "ba894bec9ccb",
+          "caf85b077592",
+          "683b2005b753",
+          "b134147ca169",
+          "a11a1461e953",
+          "045d988dc94d",
+          "3939d65f1897",
+          "8c8879f03127",
+          "7bb6e61657e8",
+          "e69b982582df",
+          "6e0623e1353d",
+          "0a8cf4509e90",
+          "69e7dcdc0b90"
+        ]
+      },
+      {
+        "query": "What is the duration of the initial term as defined in article 17.1 of the Hosting Agreement between T-Mobile Netherlands B.V. and Elephant Talk Communication Holding AG?",
+        "candidate_ids": [
+          "7bb6e61657e8",
+          "3b229e55dcad",
+          "ce01c6204d8b",
+          "5abf60020084",
+          "683b2005b753",
+          "86e3b803fc1b",
+          "3939d65f1897",
+          "56c6d4e6a0ab",
+          "e2abc28a7fc3",
+          "ed35a6f5efb9",
+          "a961a77fe935",
+          "1d7fa89ffb68",
+          "fdb1388802d3",
+          "30e3bb3b6f38",
+          "57674a160f38",
+          "e69b982582df",
+          "236f2ff7eb19",
+          "17296cfb9f57",
+          "c92c787aa1b4",
+          "be142ab57be3"
+        ]
+      },
+      {
+        "query": "What is the length of the automatic extension period specified in the renewal clause of article 17.2 of the Hosting Agreement?",
+        "candidate_ids": [
+          "8f26515de7d2",
+          "57674a160f38",
+          "86e3b803fc1b",
+          "0a8cf4509e90",
+          "e2abc28a7fc3",
+          "ba2b5a91eef8",
+          "20bf5a90d670",
+          "a961a77fe935",
+          "683b2005b753",
+          "ce01c6204d8b",
+          "4e5b03b78a10",
+          "7bb6e61657e8",
+          "236f2ff7eb19",
+          "65268c626173",
+          "56c6d4e6a0ab",
+          "8c8879f03127",
+          "f0ee04c04238",
+          "1e6ef9736bc2",
+          "fb925a6d2b46",
+          "e69b982582df"
+        ]
+      },
+      {
+        "query": "What is the specific duration of the automatic extension periods mentioned in article 17.2 of the Hosting Agreement between T-Mobile Netherlands B.V. and Elephant Talk Communication Holding AG?",
+        "candidate_ids": [
+          "7bb6e61657e8",
+          "3b229e55dcad",
+          "ce01c6204d8b",
+          "5abf60020084",
+          "e2abc28a7fc3",
+          "c8cce8564396",
+          "683b2005b753",
+          "56c6d4e6a0ab",
+          "c92c787aa1b4",
+          "f0ee04c04238",
+          "ed35a6f5efb9",
+          "a961a77fe935",
+          "57674a160f38",
+          "3939d65f1897",
+          "65268c626173",
+          "e69b982582df",
+          "236f2ff7eb19",
+          "0a311f520382",
+          "fdb1388802d3",
+          "86e3b803fc1b"
+        ]
+      },
+      {
+        "query": "What is the definition of the initial term as referenced in article 17.1 of the Hosting Agreement between T-Mobile Netherlands B.V. and Elephant Talk Communication Holding AG?",
+        "candidate_ids": [
+          "5abf60020084",
+          "3b229e55dcad",
+          "683b2005b753",
+          "ce01c6204d8b",
+          "7bb6e61657e8",
+          "86e3b803fc1b",
+          "30e3bb3b6f38",
+          "a961a77fe935",
+          "ed35a6f5efb9",
+          "e2abc28a7fc3",
+          "f0ee04c04238",
+          "a11a1461e953",
+          "57674a160f38",
+          "e69b982582df",
+          "236f2ff7eb19",
+          "3939d65f1897",
+          "65268c626173",
+          "56c6d4e6a0ab",
+          "fdb1388802d3",
+          "6e0623e1353d"
+        ]
+      }
+    ],
+    "stop_reason": "round_limit",
+    "seconds": 53.34058959991671,
+    "llm_calls": [
+      {
+        "cache_key": "ad904122672d4bf55773677dcff1f98ea90f1628b9889e6f0385e8a8c13a0e74",
+        "cached": false,
+        "seconds": 15.402960799867287,
+        "prompt_tokens": 6891,
+        "output_tokens": 238,
+        "model_total_duration_ns": 15396268700,
+        "response": {
+          "evidence_sufficient": false,
+          "missing_queries": [
+            "What is the specific clause in the Hosting Agreement that defines the initial term and renewal period for the contract between T-Mobile Netherlands B.V. and Elephant Talk Communication Holding AG?",
+            "Does the Hosting Agreement contain a clause specifying the automatic renewal term or the duration of the initial term as defined in article 17.1 or any related section?"
+          ],
+          "ranked_ids": [
+            "7bb6e61657e8",
+            "683b2005b753",
+            "a961a77fe935",
+            "ba894bec9ccb",
+            "f0ee04c04238",
+            "3939d65f1897",
+            "045d988dc94d",
+            "e69b982582df",
+            "3b229e55dcad",
+            "ce01c6204d8b"
+          ]
+        },
+        "candidate_ids": [
+          "5abf60020084",
+          "3b229e55dcad",
+          "ce01c6204d8b",
+          "f0ee04c04238",
+          "ed35a6f5efb9",
+          "236f2ff7eb19",
+          "a961a77fe935",
+          "ba894bec9ccb",
+          "caf85b077592",
+          "683b2005b753",
+          "b134147ca169",
+          "a11a1461e953",
+          "045d988dc94d",
+          "3939d65f1897",
+          "8c8879f03127",
+          "7bb6e61657e8",
+          "e69b982582df",
+          "6e0623e1353d",
+          "0a8cf4509e90",
+          "69e7dcdc0b90"
+        ],
+        "preview_truncated_count": 19
+      },
+      {
+        "cache_key": "9b8265671009db45c9b1a0f3c5af7b3b097aed3a5b0c86f88eb262ed480a3c8f",
+        "cached": false,
+        "seconds": 8.636383599834517,
+        "prompt_tokens": 8351,
+        "output_tokens": 167,
+        "model_total_duration_ns": 8633696500,
+        "response": {
+          "evidence_sufficient": false,
+          "missing_queries": [
+            "What is the duration of the initial term as defined in article 17.1 of the Hosting Agreement between T-Mobile Netherlands B.V. and Elephant Talk Communication Holding AG?",
+            "What is the length of the automatic extension period specified in the renewal clause of article 17.2 of the Hosting Agreement?"
+          ],
+          "ranked_ids": [
+            "7bb6e61657e8",
+            "6e0623e1353d",
+            "e69b982582df",
+            "0a8cf4509e90",
+            "3939d65f1897"
+          ]
+        },
+        "candidate_ids": [
+          "5abf60020084",
+          "3b229e55dcad",
+          "ce01c6204d8b",
+          "f0ee04c04238",
+          "ed35a6f5efb9",
+          "236f2ff7eb19",
+          "a961a77fe935",
+          "ba894bec9ccb",
+          "caf85b077592",
+          "683b2005b753",
+          "b134147ca169",
+          "a11a1461e953",
+          "045d988dc94d",
+          "3939d65f1897",
+          "8c8879f03127",
+          "7bb6e61657e8",
+          "e69b982582df",
+          "6e0623e1353d",
+          "0a8cf4509e90",
+          "69e7dcdc0b90"
+        ],
+        "preview_truncated_count": 19
+      },
+      {
+        "cache_key": "85057146cc614687c20f7f0da6fb7be30e2320b86524e1e15f7c83504b1f27c9",
+        "cached": false,
+        "seconds": 14.409387900028378,
+        "prompt_tokens": 7992,
+        "output_tokens": 177,
+        "model_total_duration_ns": 14405822100,
+        "response": {
+          "evidence_sufficient": false,
+          "missing_queries": [
+            "What is the specific duration of the automatic extension periods mentioned in article 17.2 of the Hosting Agreement between T-Mobile Netherlands B.V. and Elephant Talk Communication Holding AG?",
+            "What is the definition of the initial term as referenced in article 17.1 of the Hosting Agreement between T-Mobile Netherlands B.V. and Elephant Talk Communication Holding AG?"
+          ],
+          "ranked_ids": [
+            "57674a160f38",
+            "8f26515de7d2",
+            "683b2005b753",
+            "86e3b803fc1b",
+            "33eb512e3706"
+          ]
+        },
+        "candidate_ids": [
+          "7bb6e61657e8",
+          "683b2005b753",
+          "33eb512e3706",
+          "a961a77fe935",
+          "8f26515de7d2",
+          "57674a160f38",
+          "3b229e55dcad",
+          "5abf60020084",
+          "86e3b803fc1b",
+          "0a8cf4509e90",
+          "e2abc28a7fc3",
+          "ba2b5a91eef8",
+          "20bf5a90d670",
+          "ba894bec9ccb",
+          "3939d65f1897",
+          "ed35a6f5efb9",
+          "caf85b077592",
+          "b134147ca169",
+          "1d7fa89ffb68",
+          "fdb1388802d3"
+        ],
+        "preview_truncated_count": 13
+      },
+      {
+        "cache_key": "e22ab6171dbe0b2d54f75be0ed77dea6d9c651cdc5290989153a8c7ab43a630c",
+        "cached": false,
+        "seconds": 14.670056900009513,
+        "prompt_tokens": 7738,
+        "output_tokens": 174,
+        "model_total_duration_ns": 14663974200,
+        "response": {
+          "evidence_sufficient": false,
+          "missing_queries": [
+            "What is the specific duration of the automatic extension periods mentioned in article 17.2 of the Hosting Agreement between T-Mobile Netherlands B.V. and Elephant Talk Communication Holding AG?",
+            "What is the definition of the initial term as referenced in article 17.1 of the Hosting Agreement between T-Mobile Netherlands B.V. and Elephant Talk Communication Holding AG?"
+          ],
+          "ranked_ids": [
+            "57674a160f38",
+            "7bb6e61657e8",
+            "ba2b5a91eef8",
+            "c8cce8564396",
+            "86e3b803fc1b"
+          ]
+        },
+        "candidate_ids": [
+          "57674a160f38",
+          "8f26515de7d2",
+          "683b2005b753",
+          "33eb512e3706",
+          "5abf60020084",
+          "3b229e55dcad",
+          "ce01c6204d8b",
+          "7bb6e61657e8",
+          "0a8cf4509e90",
+          "ba2b5a91eef8",
+          "20bf5a90d670",
+          "86e3b803fc1b",
+          "ba894bec9ccb",
+          "30e3bb3b6f38",
+          "a961a77fe935",
+          "ed35a6f5efb9",
+          "c8cce8564396",
+          "c92c787aa1b4",
+          "caf85b077592",
+          "b134147ca169"
+        ],
+        "preview_truncated_count": 14
+      }
+    ],
+    "caveat": "Model evidence sufficiency is unverified; unknown exceptions can remain. No final answer is generated."
+  },
+  "source_sha256": "9c66eef9725257be89d3735e03bde9a00c307f60d1668d177cc88b42c35d4edc",
+  "model_digest": "0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0",
+  "embedding_revision": "5c38ec7c405ec4b44b94cc5a9bb96e735b38267a",
+  "finished_at": "2026-11-13T07:16:32.548025+00:00"
+}

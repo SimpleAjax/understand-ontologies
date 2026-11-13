@@ -1,0 +1,794 @@
+@prefix ct: <https://cimulink.local/ontology/contract-terms/0.1#> .
+@prefix ex: <https://cimulink.local/ontology/llm100-v1/> .
+@prefix meta: <https://cimulink.local/ontology/extraction#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ct: a owl:Ontology ;
+    rdfs:comment "Partial five-contract development sample. No claim of complete contract coverage or legal correctness." .
+
+ct:agreement_effective_from a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:applies_within a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:calendar_date_status a owl:DatatypeProperty .
+
+ct:coverage a owl:DatatypeProperty .
+
+ct:description a owl:DatatypeProperty .
+
+ct:duration a owl:DatatypeProperty .
+
+ct:duration_status a owl:DatatypeProperty .
+
+ct:end_char a owl:DatatypeProperty .
+
+ct:end_date_status a owl:DatatypeProperty .
+
+ct:ends_on_event a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:exact_text a owl:DatatypeProperty .
+
+ct:has_party a owl:ObjectProperty ;
+    rdfs:domain ct:Agreement ;
+    rdfs:range ct:Party .
+
+ct:has_rule a owl:ObjectProperty ;
+    rdfs:domain ct:Agreement ;
+    rdfs:range ct:Rule .
+
+ct:kind a owl:DatatypeProperty .
+
+ct:notice_actor a owl:DatatypeProperty .
+
+ct:notice_form a owl:DatatypeProperty .
+
+ct:notice_period_status a owl:DatatypeProperty .
+
+ct:qualifies a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Rule .
+
+ct:references_section a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:renewal_count a owl:DatatypeProperty .
+
+ct:resolution_status a owl:DatatypeProperty .
+
+ct:resolved_to a owl:ObjectProperty ;
+    rdfs:domain ct:Reference ;
+    rdfs:range ct:SourcePassage .
+
+ct:source_path a owl:DatatypeProperty .
+
+ct:source_sha256 a owl:DatatypeProperty .
+
+ct:start_char a owl:DatatypeProperty .
+
+ct:starts_from a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:stated_end_date a owl:DatatypeProperty .
+
+ct:subject_to a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Condition .
+
+ct:supported_by a owl:ObjectProperty ;
+    rdfs:range ct:SourcePassage .
+
+ct:termination_notice a owl:DatatypeProperty .
+
+ex:C015 a ct:Agreement ;
+    rdfs:label "BICYCLETHERAPEUTICSPLC_03_10_2020-EX-10.11-SERVICE AGREEMENT.txt" ;
+    ct:coverage "LOCAL_LLM_PROPOSED_PARTIAL; NOT_HUMAN_REVIEWED" ;
+    ct:has_rule ex:C015R0001,
+        ex:C015R0002,
+        ex:C015R0003,
+        ex:C015R0004,
+        ex:C015R0005,
+        ex:C015R0006,
+        ex:C015R0007,
+        ex:C015R0008,
+        ex:C015R0009,
+        ex:C015R0010,
+        ex:C015R0011,
+        ex:C015R0012,
+        ex:C015R0013,
+        ex:C015R0014,
+        ex:C015R0015,
+        ex:C015R0016,
+        ex:C015R0017,
+        ex:C015R0018,
+        ex:C015R0019,
+        ex:C015R0020,
+        ex:C015R0021,
+        ex:C015R0022,
+        ex:C015R0023,
+        ex:C015R0024,
+        ex:C015R0025,
+        ex:C015R0026,
+        ex:C015R0027,
+        ex:C015R0028,
+        ex:C015R0029,
+        ex:C015R0030,
+        ex:C015R0031,
+        ex:C015R0032,
+        ex:C015R0033,
+        ex:C015R0034,
+        ex:C015R0035 ;
+    ct:source_path "cuad/BICYCLETHERAPEUTICSPLC_03_10_2020-EX-10.11-SERVICE AGREEMENT.txt" ;
+    ct:source_sha256 "f8438559b293e8223834f2d6d9d3fd9d7e74c2356132851878b970d840db8d29" ;
+    meta:model_digest "0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0" .
+
+ct:Party a owl:Class ;
+    rdfs:label "Party" .
+
+ex:C015P0014 a ct:SourcePassage ;
+    ct:end_char 606 ;
+    ct:exact_text "1. COMMENCEMENT OF EMPLOYMENT" ;
+    ct:source_path "cuad/BICYCLETHERAPEUTICSPLC_03_10_2020-EX-10.11-SERVICE AGREEMENT.txt" ;
+    ct:source_sha256 "f8438559b293e8223834f2d6d9d3fd9d7e74c2356132851878b970d840db8d29" ;
+    ct:start_char 577 .
+
+ex:C015P0015 a ct:SourcePassage ;
+    ct:end_char 687 ;
+    ct:exact_text "1.1 This Agreement shall take effect 26  September 2019 (the \"Effective Date\")." ;
+    ct:source_path "cuad/BICYCLETHERAPEUTICSPLC_03_10_2020-EX-10.11-SERVICE AGREEMENT.txt" ;
+    ct:source_sha256 "f8438559b293e8223834f2d6d9d3fd9d7e74c2356132851878b970d840db8d29" ;
+    ct:start_char 608 .
+
+ex:C015P0060 a ct:SourcePassage ;
+    ct:end_char 11927 ;
+    ct:exact_text "8.4 Upon termination of your employment you will receive pay in lieu of accrued but untaken holiday. The Company may deduct an appropriate sum in respect of days taken in excess of your pro rata entitlement from your final remuneration on the basis that one day's holiday will be calculated as 1/260ths of your basic annual salary." ;
+    ct:source_path "cuad/BICYCLETHERAPEUTICSPLC_03_10_2020-EX-10.11-SERVICE AGREEMENT.txt" ;
+    ct:source_sha256 "f8438559b293e8223834f2d6d9d3fd9d7e74c2356132851878b970d840db8d29" ;
+    ct:start_char 11596 .
+
+ex:C015P0061 a ct:SourcePassage ;
+    ct:end_char 12104 ;
+    ct:exact_text "8.5 In the event that notice of termination of this Agreement is served by either party, the Company may require you to take any outstanding holiday during this notice period." ;
+    ct:source_path "cuad/BICYCLETHERAPEUTICSPLC_03_10_2020-EX-10.11-SERVICE AGREEMENT.txt" ;
+    ct:source_sha256 "f8438559b293e8223834f2d6d9d3fd9d7e74c2356132851878b970d840db8d29" ;
+    ct:start_char 11929 .
+
+ex:C015P0068 a ct:SourcePassage ;
+    ct:end_char 14628 ;
+    ct:exact_text "9.5 The payment of sick pay in accordance with this paragraph 9 is without prejudice to the Company's right to terminate this Agreement prior to the expiry of your right to payments." ;
+    ct:source_path "cuad/BICYCLETHERAPEUTICSPLC_03_10_2020-EX-10.11-SERVICE AGREEMENT.txt" ;
+    ct:source_sha256 "f8438559b293e8223834f2d6d9d3fd9d7e74c2356132851878b970d840db8d29" ;
+    ct:start_char 14446 .
+
+ex:C015P0071 a ct:SourcePassage ;
+    ct:end_char 15294 ;
+    ct:exact_text "10.1 After notice of termination has been given by you or the Company, the Company may at its discretion require you, for all or part of your notice period, to comply with any or all of the following instructions:" ;
+    ct:source_path "cuad/BICYCLETHERAPEUTICSPLC_03_10_2020-EX-10.11-SERVICE AGREEMENT.txt" ;
+    ct:source_sha256 "f8438559b293e8223834f2d6d9d3fd9d7e74c2356132851878b970d840db8d29" ;
+    ct:start_char 15081 .
+
+ex:C015P0091 a ct:SourcePassage ;
+    ct:end_char 19076 ;
+    ct:exact_text "terminate your employment forthwith and to make a payment to you in lieu of salary and the benefits set out in paragraph 5 of this Agreement for all or any unexpired part of the notice period. For the avoidance of doubt, any payment in lieu made pursuant to this paragraph 11.2 will not include any element in relation to any payment in respect of (i) any Annual Performance Bonus or (ii) any holiday entitlement that would have otherwise accrued during the period for which the payment in lieu is made. For the further avoidance of doubt, if the Company elects to make a Payment in Lieu after notice of termination has been given by you, this will not constitute a termination by the Company without Cause for the purposes of paragraphs 11.7 and 11.8 below." ;
+    ct:source_path "cuad/BICYCLETHERAPEUTICSPLC_03_10_2020-EX-10.11-SERVICE AGREEMENT.txt" ;
+    ct:source_sha256 "f8438559b293e8223834f2d6d9d3fd9d7e74c2356132851878b970d840db8d29" ;
+    ct:start_char 18318 .
+
+ex:C015P0103 a ct:SourcePassage ;
+    ct:end_char 22291 ;
+    ct:exact_text "11.5 Your employment hereunder shall also terminate immediately upon your death." ;
+    ct:source_path "cuad/BICYCLETHERAPEUTICSPLC_03_10_2020-EX-10.11-SERVICE AGREEMENT.txt" ;
+    ct:source_sha256 "f8438559b293e8223834f2d6d9d3fd9d7e74c2356132851878b970d840db8d29" ;
+    ct:start_char 22211 .
+
+ex:C015P0105 a ct:SourcePassage ;
+    ct:end_char 23047 ;
+    ct:exact_text "Severance Pay and Benefits Upon Termination by the Company without Cause or by the Executive for Good Reason outside the Change in Control Period." ;
+    ct:source_path "cuad/BICYCLETHERAPEUTICSPLC_03_10_2020-EX-10.11-SERVICE AGREEMENT.txt" ;
+    ct:source_sha256 "f8438559b293e8223834f2d6d9d3fd9d7e74c2356132851878b970d840db8d29" ;
+    ct:start_char 22901 .
+
+ex:C015P0107 a ct:SourcePassage ;
+    ct:end_char 24904 ;
+    ct:exact_text "and (ii) the separation agreement and release becoming irrevocable, all within 60 days after the Termination Date (or such shorter period as set forth in the Settlement Agreements), the Company shall: (A) pay you (or your authorised representative or estate if the termination is due to your death) an amount equal to nine (9) months of your salary as of the Termination Date (which payment shall not be reduced by either the value of any salary paid to you during your notice period or by any payment in lieu of notice made pursuant to paragraph 11.2); and (B) pay you (or your authorised representative or estate if the termination is due to your death) an amount equal to the cost to the Company of providing you with the contractual benefits under paragraph 5 for nine (9) months or, at the Company's option, continue to provide you with such benefits for nine (9) months." ;
+    ct:source_path "cuad/BICYCLETHERAPEUTICSPLC_03_10_2020-EX-10.11-SERVICE AGREEMENT.txt" ;
+    ct:source_sha256 "f8438559b293e8223834f2d6d9d3fd9d7e74c2356132851878b970d840db8d29" ;
+    ct:start_char 24028 .
+
+ex:C015P0108 a ct:SourcePassage ;
+    ct:end_char 25050 ;
+    ct:exact_text "Severance Pay and Benefits Upon Termination by the Company without Cause or by the Executive for Good Reason Within the Change in Control Period" ;
+    ct:source_path "cuad/BICYCLETHERAPEUTICSPLC_03_10_2020-EX-10.11-SERVICE AGREEMENT.txt" ;
+    ct:source_sha256 "f8438559b293e8223834f2d6d9d3fd9d7e74c2356132851878b970d840db8d29" ;
+    ct:start_char 24906 .
+
+ex:C015P0113 a ct:SourcePassage ;
+    ct:end_char 27306 ;
+    ct:exact_text "(i) the Company shall pay you (or your authorised representative or estate if the termination is due to your death) an amount equal to the sum of (A) your annual salary as of the Termination Date (or your annual salary in effect immediately prior to the Change in Control, if higher) plus (B) your target annual performance bonus amount under the Annual Bonus Plan for the then-current year (the \"Change in Control Payment\"), which payment shall not be reduced by either the value of any salary paid to you during your notice period or by the value of any payment made to you in lieu of notice pursuant to paragraph 11.2;" ;
+    ct:source_path "cuad/BICYCLETHERAPEUTICSPLC_03_10_2020-EX-10.11-SERVICE AGREEMENT.txt" ;
+    ct:source_sha256 "f8438559b293e8223834f2d6d9d3fd9d7e74c2356132851878b970d840db8d29" ;
+    ct:start_char 26685 .
+
+ex:C015P0114 a ct:SourcePassage ;
+    ct:end_char 27656 ;
+    ct:exact_text "(ii) the Company shall: pay you (or your authorised representative or estate if the termination is due to your death) an amount equal to the cost to the Company of providing you with the contractual benefits under paragraph 5 for twelve (12) months or, at the Company's option, continue to provide you with such benefits for twelve (12) months; and" ;
+    ct:source_path "cuad/BICYCLETHERAPEUTICSPLC_03_10_2020-EX-10.11-SERVICE AGREEMENT.txt" ;
+    ct:source_sha256 "f8438559b293e8223834f2d6d9d3fd9d7e74c2356132851878b970d840db8d29" ;
+    ct:start_char 27308 .
+
+ex:C015P0119 a ct:SourcePassage ;
+    ct:end_char 29057 ;
+    ct:exact_text "\"Termination Date\" means the date on which your employment hereunder terminates." ;
+    ct:source_path "cuad/BICYCLETHERAPEUTICSPLC_03_10_2020-EX-10.11-SERVICE AGREEMENT.txt" ;
+    ct:source_sha256 "f8438559b293e8223834f2d6d9d3fd9d7e74c2356132851878b970d840db8d29" ;
+    ct:start_char 28977 .
+
+ex:C015P0136 a ct:SourcePassage ;
+    ct:end_char 35858 ;
+    ct:exact_text "13.4 Upon termination of your employment for any reason by either party, you must immediately return to the Company all Company property including but not limited to documents, papers, records, keys, credit cards, mobile telephones, computer and related equipment, PDA or similar device, security passes, accounts, specifications, drawings, lists, correspondence, catalogues or the like relating to the Company's business which is in your possession or under your control and you must not take copies of the same without the Company's express written authority." ;
+    ct:source_path "cuad/BICYCLETHERAPEUTICSPLC_03_10_2020-EX-10.11-SERVICE AGREEMENT.txt" ;
+    ct:source_sha256 "f8438559b293e8223834f2d6d9d3fd9d7e74c2356132851878b970d840db8d29" ;
+    ct:start_char 35297 .
+
+ex:C015P0143 a ct:SourcePassage ;
+    ct:end_char 37029 ;
+    ct:exact_text "\"Restricted Period\" shall mean the period of twelve (12) months from the Termination Date;" ;
+    ct:source_path "cuad/BICYCLETHERAPEUTICSPLC_03_10_2020-EX-10.11-SERVICE AGREEMENT.txt" ;
+    ct:source_sha256 "f8438559b293e8223834f2d6d9d3fd9d7e74c2356132851878b970d840db8d29" ;
+    ct:start_char 36939 .
+
+ex:C015P0145 a ct:SourcePassage ;
+    ct:end_char 37529 ;
+    ct:exact_text "\"Termination Date\" shall mean the date on which your employment under this Agreement terminates either due to you or the Company terminating it in accordance with the terms of the Agreement or in breach of the terms of this Agreement." ;
+    ct:source_path "cuad/BICYCLETHERAPEUTICSPLC_03_10_2020-EX-10.11-SERVICE AGREEMENT.txt" ;
+    ct:source_sha256 "f8438559b293e8223834f2d6d9d3fd9d7e74c2356132851878b970d840db8d29" ;
+    ct:start_char 37295 .
+
+ex:C015P0175 a ct:SourcePassage ;
+    ct:end_char 47754 ;
+    ct:exact_text "15.9 Whenever requested to do so by the Company and in any event on the termination or expiry of this Agreement, you shall promptly deliver to the Company all correspondence, documents, papers and records on all media (and all copies or abstracts of them), recording or relating to any part of the Works and the process of their creation which are in your possession, custody or power." ;
+    ct:source_path "cuad/BICYCLETHERAPEUTICSPLC_03_10_2020-EX-10.11-SERVICE AGREEMENT.txt" ;
+    ct:source_sha256 "f8438559b293e8223834f2d6d9d3fd9d7e74c2356132851878b970d840db8d29" ;
+    ct:start_char 47369 .
+
+ex:C015P0181 a ct:SourcePassage ;
+    ct:end_char 49820 ;
+    ct:exact_text "assistance shall not require you to provide assistance for more than 5 days in any calendar month. For the avoidance of doubt the obligations under this paragraph 16 shall continue notwithstanding the termination of your employment with the Company." ;
+    ct:source_path "cuad/BICYCLETHERAPEUTICSPLC_03_10_2020-EX-10.11-SERVICE AGREEMENT.txt" ;
+    ct:source_sha256 "f8438559b293e8223834f2d6d9d3fd9d7e74c2356132851878b970d840db8d29" ;
+    ct:start_char 49571 .
+
+ex:C015R0001 a ct:Rule ;
+    rdfs:label "Initial Term — source passage 14" ;
+    ct:kind "INITIAL_TERM" ;
+    ct:supported_by ex:C015P0014 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C015R0002 a ct:Rule ;
+    rdfs:label "Initial Term — source passage 15" ;
+    ct:kind "INITIAL_TERM" ;
+    ct:supported_by ex:C015P0015 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C015R0003 a ct:Rule ;
+    rdfs:label "Initial Term — source passage 16" ;
+    ct:kind "INITIAL_TERM" ;
+    ct:references_section ex:C015R0003Ref0 ;
+    ct:subject_to ex:C015R0003Condition16 ;
+    ct:supported_by ex:C015P0016 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C015R0003Condition16 a ct:Condition ;
+    ct:description "1.2 Your employment shall commence on 26  September 2019 and shall continue unless and until either party gives notice to the other in accordance with paragraph 11 below. No employment with a previous employer is deemed to be continuous with your employment with the Company." ;
+    ct:supported_by ex:C015P0016 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C015R0003Ref0 a ct:Reference ;
+    rdfs:label "paragraph 11" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C015R0004 a ct:Rule ;
+    rdfs:label "Termination — source passage 16" ;
+    ct:kind "TERMINATION" ;
+    ct:references_section ex:C015R0004Ref0 ;
+    ct:subject_to ex:C015R0004Condition16 ;
+    ct:supported_by ex:C015P0016 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C015R0004Condition16 a ct:Condition ;
+    ct:description "1.2 Your employment shall commence on 26  September 2019 and shall continue unless and until either party gives notice to the other in accordance with paragraph 11 below. No employment with a previous employer is deemed to be continuous with your employment with the Company." ;
+    ct:supported_by ex:C015P0016 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C015R0004Ref0 a ct:Reference ;
+    rdfs:label "paragraph 11" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C015R0005 a ct:Rule ;
+    rdfs:label "Termination — source passage 18" ;
+    ct:kind "TERMINATION" ;
+    ct:subject_to ex:C015R0005Condition18 ;
+    ct:supported_by ex:C015P0018 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C015R0005Condition18 a ct:Condition ;
+    ct:description "1.4 You warrant that you have the right to work in the United Kingdom and you agree to provide to the Company copies of all relevant documents in this respect at the request of the Company. If at any time during the course of this Agreement you cease to have the right to work in the United Kingdom the Company may immediately terminate your employment without payment of compensation." ;
+    ct:supported_by ex:C015P0018 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C015R0006 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 60" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:supported_by ex:C015P0060 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C015R0007 a ct:Rule ;
+    rdfs:label "Termination — source passage 61" ;
+    ct:kind "TERMINATION" ;
+    ct:supported_by ex:C015P0061 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C015R0008 a ct:Rule ;
+    rdfs:label "Termination — source passage 68" ;
+    ct:kind "TERMINATION" ;
+    ct:references_section ex:C015R0008Ref0 ;
+    ct:supported_by ex:C015P0068 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C015R0008Ref0 a ct:Reference ;
+    rdfs:label "paragraph 9" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C015R0009 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 71" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:supported_by ex:C015P0071 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C015R0010 a ct:Rule ;
+    rdfs:label "Termination — source passage 88" ;
+    ct:kind "TERMINATION" ;
+    ct:references_section ex:C015R0010Ref0,
+        ex:C015R0010Ref1 ;
+    ct:subject_to ex:C015R0010Condition88 ;
+    ct:supported_by ex:C015P0088 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C015R0010Condition88 a ct:Condition ;
+    ct:description "11.1 Without prejudice to the Company's right to summarily terminate your employment in accordance with paragraph 11.3 below and your right to summarily terminate your employment for Good Reason in accordance with paragraph 11.4 below, either you or the Company may terminate your employment by giving to the other not less than six months' notice in writing." ;
+    ct:supported_by ex:C015P0088 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C015R0010Ref0 a ct:Reference ;
+    rdfs:label "paragraph 11.3" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C015R0010Ref1 a ct:Reference ;
+    rdfs:label "paragraph 11.4" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C015R0011 a ct:Rule ;
+    rdfs:label "Termination — source passage 91" ;
+    ct:kind "TERMINATION" ;
+    ct:references_section ex:C015R0011Ref0,
+        ex:C015R0011Ref1 ;
+    ct:supported_by ex:C015P0091 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C015R0011Ref0 a ct:Reference ;
+    rdfs:label "paragraph 5" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C015R0011Ref1 a ct:Reference ;
+    rdfs:label "paragraph 11.2" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C015R0012 a ct:Rule ;
+    rdfs:label "Termination — source passage 92" ;
+    ct:kind "TERMINATION" ;
+    ct:subject_to ex:C015R0012Condition92 ;
+    ct:supported_by ex:C015P0092 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C015R0012Condition92 a ct:Condition ;
+    ct:description "11.3 The Company may summarily terminate your employment hereunder (without notice) for Cause. For purposes of this Agreement, \"Cause\" shall mean where you:" ;
+    ct:supported_by ex:C015P0092 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C015R0013 a ct:Rule ;
+    rdfs:label "Termination — source passage 100" ;
+    ct:kind "TERMINATION" ;
+    ct:subject_to ex:C015R0013Condition100 ;
+    ct:supported_by ex:C015P0100 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C015R0013Condition100 a ct:Condition ;
+    ct:description "11.4 You may summarily terminate your employment hereunder at any time (without notice) for Good Reason after complying with the Good Reason Process. For purposes of this Agreement, \"Good Reason\" shall mean that you have complied with the \"Good Reason Process\" (hereinafter defined) following the occurrence of any of the following events: (i) a material diminution in your responsibilities, authority or duties; (ii) a material diminution in your Salary; (iii) a material change in the geographic location at which you provides services to the Company; or (iv) the material breach of this Agreement by the Company. \"Good Reason Process\" shall mean that (i) you reasonably determine in good faith that a \"Good Reason\" condition has occurred; (ii) you notify the Company in writing of the first occurrence of the Good" ;
+    ct:supported_by ex:C015P0100 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C015R0014 a ct:Rule ;
+    rdfs:label "Termination — source passage 102" ;
+    ct:kind "TERMINATION" ;
+    ct:subject_to ex:C015R0014Condition102 ;
+    ct:supported_by ex:C015P0102 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C015R0014Condition102 a ct:Condition ;
+    ct:description "Reason condition within 60 days of the first occurrence of such condition; (iii) you cooperate in good faith with the Company's efforts, for a period not less than 30 days following such notice (the \"Cure Period\"), to remedy the condition; (iv) notwithstanding such efforts, the Good Reason condition continues to exist; and (v) you terminate your employment (without notice) within 60 days after the end of the Cure Period. If the Company cures the Good Reason condition during the Cure Period, Good Reason shall be deemed not to have occurred." ;
+    ct:supported_by ex:C015P0102 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C015R0015 a ct:Rule ;
+    rdfs:label "Conditional Referenced Term — source passage 102" ;
+    ct:kind "CONDITIONAL_REFERENCED_TERM" ;
+    ct:subject_to ex:C015R0015Condition102 ;
+    ct:supported_by ex:C015P0102 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C015R0015Condition102 a ct:Condition ;
+    ct:description "Reason condition within 60 days of the first occurrence of such condition; (iii) you cooperate in good faith with the Company's efforts, for a period not less than 30 days following such notice (the \"Cure Period\"), to remedy the condition; (iv) notwithstanding such efforts, the Good Reason condition continues to exist; and (v) you terminate your employment (without notice) within 60 days after the end of the Cure Period. If the Company cures the Good Reason condition during the Cure Period, Good Reason shall be deemed not to have occurred." ;
+    ct:supported_by ex:C015P0102 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C015R0016 a ct:Rule ;
+    rdfs:label "Termination — source passage 103" ;
+    ct:kind "TERMINATION" ;
+    ct:supported_by ex:C015P0103 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C015R0017 a ct:Rule ;
+    rdfs:label "Termination — source passage 104" ;
+    ct:kind "TERMINATION" ;
+    ct:references_section ex:C015R0017Ref0 ;
+    ct:subject_to ex:C015R0017Condition104 ;
+    ct:supported_by ex:C015P0104 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C015R0017Condition104 a ct:Condition ;
+    ct:description "11.6 If your employment with the Company is terminated for any reason, the Company shall pay or provide to you (or to your authorised representative or estate) (i) any Salary earned through the Termination Date (as defined below); (ii) unpaid expense reimbursements (subject to, and in accordance with, paragraph 6 of this Agreement); and (iii) any vested benefits you may have under any employee benefit plan of the Company through the Termination Date, which vested benefits shall be paid and/or provided in accordance with the terms of such employee benefit plans (collectively, the \"Accrued Benefits\")." ;
+    ct:supported_by ex:C015P0104 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C015R0017Ref0 a ct:Reference ;
+    rdfs:label "paragraph 6" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C015R0018 a ct:Rule ;
+    rdfs:label "Termination — source passage 105" ;
+    ct:kind "TERMINATION" ;
+    ct:supported_by ex:C015P0105 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C015R0019 a ct:Rule ;
+    rdfs:label "Termination — source passage 106" ;
+    ct:kind "TERMINATION" ;
+    ct:references_section ex:C015R0019Ref0,
+        ex:C015R0019Ref1 ;
+    ct:subject_to ex:C015R0019Condition106 ;
+    ct:supported_by ex:C015P0106 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C015R0019Condition106 a ct:Condition ;
+    ct:description "11.7 If your employment is terminated on account of your death or by the Company without Cause (being for any reason not covered by paragraph 11.3), or you terminate your employment for Good Reason (as provided in paragraph 11.4), in either case outside of the Change in Control Period, then the Company shall pay you the Accrued Benefits. In addition, subject to (i) your (or your authorised representative or estate signing, if the termination is due to your death) signing a settlement agreement and a separation agreement and release (together the \"Settlement Agreements\") in a form and manner satisfactory to the Company, which shall include, without limitation, a general release of claims against the Company and all related persons and entities, a reaffirmation of all of your continuing obligations to the Company, including those set forth in paragraphs 13 - 15, and (in the case of the separation agreement and release) and a seven (7) business day revocation period; " ;
+    ct:supported_by ex:C015P0106 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C015R0019Ref0 a ct:Reference ;
+    rdfs:label "paragraph 11.3" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C015R0019Ref1 a ct:Reference ;
+    rdfs:label "paragraph 11.4" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C015R0020 a ct:Rule ;
+    rdfs:label "Conditional Referenced Term — source passage 106" ;
+    ct:kind "CONDITIONAL_REFERENCED_TERM" ;
+    ct:references_section ex:C015R0020Ref0,
+        ex:C015R0020Ref1 ;
+    ct:subject_to ex:C015R0020Condition106 ;
+    ct:supported_by ex:C015P0106 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C015R0020Condition106 a ct:Condition ;
+    ct:description "11.7 If your employment is terminated on account of your death or by the Company without Cause (being for any reason not covered by paragraph 11.3), or you terminate your employment for Good Reason (as provided in paragraph 11.4), in either case outside of the Change in Control Period, then the Company shall pay you the Accrued Benefits. In addition, subject to (i) your (or your authorised representative or estate signing, if the termination is due to your death) signing a settlement agreement and a separation agreement and release (together the \"Settlement Agreements\") in a form and manner satisfactory to the Company, which shall include, without limitation, a general release of claims against the Company and all related persons and entities, a reaffirmation of all of your continuing obligations to the Company, including those set forth in paragraphs 13 - 15, and (in the case of the separation agreement and release) and a seven (7) business day revocation period; " ;
+    ct:supported_by ex:C015P0106 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C015R0020Ref0 a ct:Reference ;
+    rdfs:label "paragraph 11.3" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C015R0020Ref1 a ct:Reference ;
+    rdfs:label "paragraph 11.4" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C015R0021 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 107" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:references_section ex:C015R0021Ref0,
+        ex:C015R0021Ref1 ;
+    ct:supported_by ex:C015P0107 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C015R0021Ref0 a ct:Reference ;
+    rdfs:label "paragraph 11.2" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C015R0021Ref1 a ct:Reference ;
+    rdfs:label "paragraph 5" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C015R0022 a ct:Rule ;
+    rdfs:label "Termination — source passage 108" ;
+    ct:kind "TERMINATION" ;
+    ct:supported_by ex:C015P0108 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C015R0023 a ct:Rule ;
+    rdfs:label "Termination — source passage 109" ;
+    ct:kind "TERMINATION" ;
+    ct:references_section ex:C015R0023Ref0,
+        ex:C015R0023Ref1 ;
+    ct:subject_to ex:C015R0023Condition109 ;
+    ct:supported_by ex:C015P0109 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C015R0023Condition109 a ct:Condition ;
+    ct:description "11.8 The provisions of this paragraph 11.8 shall apply in lieu of, and expressly supersede, the provisions of paragraph 11.7 regarding severance pay and benefits upon a termination by the Company without Cause or by you for Good Reason if such termination of employment occurs within 12 months after the occurrence of the first event constituting a Change in Control (such period, the \"Change in Control Period\"). These provisions shall terminate and be of no further" ;
+    ct:supported_by ex:C015P0109 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C015R0023Ref0 a ct:Reference ;
+    rdfs:label "paragraph 11.8" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C015R0023Ref1 a ct:Reference ;
+    rdfs:label "paragraph 11.7" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C015R0024 a ct:Rule ;
+    rdfs:label "Termination — source passage 112" ;
+    ct:kind "TERMINATION" ;
+    ct:references_section ex:C015R0024Ref0,
+        ex:C015R0024Ref1 ;
+    ct:subject_to ex:C015R0024Condition112 ;
+    ct:supported_by ex:C015P0112 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C015R0024Condition112 a ct:Condition ;
+    ct:description "(a) Change in Control Period. If during the Change in Control Period your employment is terminated on account of your death or by the Company without Cause (being for any reason not covered by paragraph 11.3) or you terminate your employment for Good Reason (as provided in paragraph 11.4), then, subject to (i) your signing (or your authorised representative or estate signing, if the termination is due to your death) a settlement agreement and a separation agreement and release (together the Settlement Agreements) in a form and manner satisfactory to the Company, which shall include, without limitation, a general release of claims against the Company and all related persons and entities, a reaffirmation of all of your continuing obligations to the Company, including those set forth in paragraphs 13 - 15, and (in the case of the separation agreement and release) and a seven (7) business day revocation period; and (ii) the separation agreement and release becoming irrevocable, all within 60 days after the Termination Date (or such shorter period as set forth in the Settlement Agreements):" ;
+    ct:supported_by ex:C015P0112 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C015R0024Ref0 a ct:Reference ;
+    rdfs:label "paragraph 11.3" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C015R0024Ref1 a ct:Reference ;
+    rdfs:label "paragraph 11.4" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C015R0025 a ct:Rule ;
+    rdfs:label "Conditional Referenced Term — source passage 112" ;
+    ct:kind "CONDITIONAL_REFERENCED_TERM" ;
+    ct:references_section ex:C015R0025Ref0,
+        ex:C015R0025Ref1 ;
+    ct:subject_to ex:C015R0025Condition112 ;
+    ct:supported_by ex:C015P0112 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C015R0025Condition112 a ct:Condition ;
+    ct:description "(a) Change in Control Period. If during the Change in Control Period your employment is terminated on account of your death or by the Company without Cause (being for any reason not covered by paragraph 11.3) or you terminate your employment for Good Reason (as provided in paragraph 11.4), then, subject to (i) your signing (or your authorised representative or estate signing, if the termination is due to your death) a settlement agreement and a separation agreement and release (together the Settlement Agreements) in a form and manner satisfactory to the Company, which shall include, without limitation, a general release of claims against the Company and all related persons and entities, a reaffirmation of all of your continuing obligations to the Company, including those set forth in paragraphs 13 - 15, and (in the case of the separation agreement and release) and a seven (7) business day revocation period; and (ii) the separation agreement and release becoming irrevocable, all within 60 days after the Termination Date (or such shorter period as set forth in the Settlement Agreements):" ;
+    ct:supported_by ex:C015P0112 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C015R0025Ref0 a ct:Reference ;
+    rdfs:label "paragraph 11.3" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C015R0025Ref1 a ct:Reference ;
+    rdfs:label "paragraph 11.4" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C015R0026 a ct:Rule ;
+    rdfs:label "Termination — source passage 113" ;
+    ct:kind "TERMINATION" ;
+    ct:references_section ex:C015R0026Ref0 ;
+    ct:supported_by ex:C015P0113 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C015R0026Ref0 a ct:Reference ;
+    rdfs:label "paragraph 11.2" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C015R0027 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 114" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:references_section ex:C015R0027Ref0 ;
+    ct:supported_by ex:C015P0114 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C015R0027Ref0 a ct:Reference ;
+    rdfs:label "paragraph 5" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C015R0028 a ct:Rule ;
+    rdfs:label "Conditional Referenced Term — source passage 115" ;
+    ct:kind "CONDITIONAL_REFERENCED_TERM" ;
+    ct:subject_to ex:C015R0028Condition115 ;
+    ct:supported_by ex:C015P0115 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C015R0028Condition115 a ct:Condition ;
+    ct:description "(iii) notwithstanding anything to the contrary in any applicable option agreement or other stock-based award agreement, all Time-Based Equity Awards shall immediately accelerate and become fully exercisable (for a period determined in accordance with the rules of the applicable equity plan) or nonforfeitable as of the later of (A) the Termination Date or (B) the Accelerated Vesting Date; provided that any termination or forfeiture of the unvested portion of such Time-Based Equity Awards that would otherwise occur on the Termination Date in the absence of this Agreement will be delayed until the Effective Date of the Settlement Agreements and will only occur if the vesting pursuant to this subsection does not occur due to the absence of the Settlement Agreements becoming fully effective within the time period set forth therein. Notwithstanding the foregoing, no additional vesting of the Time-Based Equity Awards shall occur during the period between your Termination Date and the Accelerated Vesting Date." ;
+    ct:supported_by ex:C015P0115 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C015R0029 a ct:Rule ;
+    rdfs:label "Termination — source passage 119" ;
+    ct:kind "TERMINATION" ;
+    ct:supported_by ex:C015P0119 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C015R0030 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 136" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:supported_by ex:C015P0136 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C015R0031 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 143" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:supported_by ex:C015P0143 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C015R0032 a ct:Rule ;
+    rdfs:label "Termination — source passage 145" ;
+    ct:kind "TERMINATION" ;
+    ct:supported_by ex:C015P0145 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C015R0033 a ct:Rule ;
+    rdfs:label "Conditional Referenced Term — source passage 157" ;
+    ct:kind "CONDITIONAL_REFERENCED_TERM" ;
+    ct:references_section ex:C015R0033Ref0 ;
+    ct:subject_to ex:C015R0033Condition157 ;
+    ct:supported_by ex:C015P0157 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C015R0033Condition157 a ct:Condition ;
+    ct:description "14.6 In the event that the Company exercises its rights and places you on Garden Leave under paragraph 10 above then the Restricted Period shall be reduced by any period/s spent by you on Garden Leave prior to the Termination Date." ;
+    ct:supported_by ex:C015P0157 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C015R0033Ref0 a ct:Reference ;
+    rdfs:label "paragraph 10" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C015R0034 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 175" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:supported_by ex:C015P0175 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C015R0035 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 181" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:references_section ex:C015R0035Ref0 ;
+    ct:supported_by ex:C015P0181 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C015R0035Ref0 a ct:Reference ;
+    rdfs:label "paragraph 16" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C015P0018 a ct:SourcePassage ;
+    ct:end_char 1799 ;
+    ct:exact_text "1.4 You warrant that you have the right to work in the United Kingdom and you agree to provide to the Company copies of all relevant documents in this respect at the request of the Company. If at any time during the course of this Agreement you cease to have the right to work in the United Kingdom the Company may immediately terminate your employment without payment of compensation." ;
+    ct:source_path "cuad/BICYCLETHERAPEUTICSPLC_03_10_2020-EX-10.11-SERVICE AGREEMENT.txt" ;
+    ct:source_sha256 "f8438559b293e8223834f2d6d9d3fd9d7e74c2356132851878b970d840db8d29" ;
+    ct:start_char 1414 .
+
+ex:C015P0088 a ct:SourcePassage ;
+    ct:end_char 18210 ;
+    ct:exact_text "11.1 Without prejudice to the Company's right to summarily terminate your employment in accordance with paragraph 11.3 below and your right to summarily terminate your employment for Good Reason in accordance with paragraph 11.4 below, either you or the Company may terminate your employment by giving to the other not less than six months' notice in writing." ;
+    ct:source_path "cuad/BICYCLETHERAPEUTICSPLC_03_10_2020-EX-10.11-SERVICE AGREEMENT.txt" ;
+    ct:source_sha256 "f8438559b293e8223834f2d6d9d3fd9d7e74c2356132851878b970d840db8d29" ;
+    ct:start_char 17851 .
+
+ex:C015P0092 a ct:SourcePassage ;
+    ct:end_char 19234 ;
+    ct:exact_text "11.3 The Company may summarily terminate your employment hereunder (without notice) for Cause. For purposes of this Agreement, \"Cause\" shall mean where you:" ;
+    ct:source_path "cuad/BICYCLETHERAPEUTICSPLC_03_10_2020-EX-10.11-SERVICE AGREEMENT.txt" ;
+    ct:source_sha256 "f8438559b293e8223834f2d6d9d3fd9d7e74c2356132851878b970d840db8d29" ;
+    ct:start_char 19078 .
+
+ex:C015P0100 a ct:SourcePassage ;
+    ct:end_char 21655 ;
+    ct:exact_text "11.4 You may summarily terminate your employment hereunder at any time (without notice) for Good Reason after complying with the Good Reason Process. For purposes of this Agreement, \"Good Reason\" shall mean that you have complied with the \"Good Reason Process\" (hereinafter defined) following the occurrence of any of the following events: (i) a material diminution in your responsibilities, authority or duties; (ii) a material diminution in your Salary; (iii) a material change in the geographic location at which you provides services to the Company; or (iv) the material breach of this Agreement by the Company. \"Good Reason Process\" shall mean that (i) you reasonably determine in good faith that a \"Good Reason\" condition has occurred; (ii) you notify the Company in writing of the first occurrence of the Good" ;
+    ct:source_path "cuad/BICYCLETHERAPEUTICSPLC_03_10_2020-EX-10.11-SERVICE AGREEMENT.txt" ;
+    ct:source_sha256 "f8438559b293e8223834f2d6d9d3fd9d7e74c2356132851878b970d840db8d29" ;
+    ct:start_char 20839 .
+
+ex:C015P0104 a ct:SourcePassage ;
+    ct:end_char 22899 ;
+    ct:exact_text "11.6 If your employment with the Company is terminated for any reason, the Company shall pay or provide to you (or to your authorised representative or estate) (i) any Salary earned through the Termination Date (as defined below); (ii) unpaid expense reimbursements (subject to, and in accordance with, paragraph 6 of this Agreement); and (iii) any vested benefits you may have under any employee benefit plan of the Company through the Termination Date, which vested benefits shall be paid and/or provided in accordance with the terms of such employee benefit plans (collectively, the \"Accrued Benefits\")." ;
+    ct:source_path "cuad/BICYCLETHERAPEUTICSPLC_03_10_2020-EX-10.11-SERVICE AGREEMENT.txt" ;
+    ct:source_sha256 "f8438559b293e8223834f2d6d9d3fd9d7e74c2356132851878b970d840db8d29" ;
+    ct:start_char 22293 .
+
+ex:C015P0109 a ct:SourcePassage ;
+    ct:end_char 25519 ;
+    ct:exact_text "11.8 The provisions of this paragraph 11.8 shall apply in lieu of, and expressly supersede, the provisions of paragraph 11.7 regarding severance pay and benefits upon a termination by the Company without Cause or by you for Good Reason if such termination of employment occurs within 12 months after the occurrence of the first event constituting a Change in Control (such period, the \"Change in Control Period\"). These provisions shall terminate and be of no further" ;
+    ct:source_path "cuad/BICYCLETHERAPEUTICSPLC_03_10_2020-EX-10.11-SERVICE AGREEMENT.txt" ;
+    ct:source_sha256 "f8438559b293e8223834f2d6d9d3fd9d7e74c2356132851878b970d840db8d29" ;
+    ct:start_char 25052 .
+
+ex:C015P0115 a ct:SourcePassage ;
+    ct:end_char 28675 ;
+    ct:exact_text "(iii) notwithstanding anything to the contrary in any applicable option agreement or other stock-based award agreement, all Time-Based Equity Awards shall immediately accelerate and become fully exercisable (for a period determined in accordance with the rules of the applicable equity plan) or nonforfeitable as of the later of (A) the Termination Date or (B) the Accelerated Vesting Date; provided that any termination or forfeiture of the unvested portion of such Time-Based Equity Awards that would otherwise occur on the Termination Date in the absence of this Agreement will be delayed until the Effective Date of the Settlement Agreements and will only occur if the vesting pursuant to this subsection does not occur due to the absence of the Settlement Agreements becoming fully effective within the time period set forth therein. Notwithstanding the foregoing, no additional vesting of the Time-Based Equity Awards shall occur during the period between your Termination Date and the Accelerated Vesting Date." ;
+    ct:source_path "cuad/BICYCLETHERAPEUTICSPLC_03_10_2020-EX-10.11-SERVICE AGREEMENT.txt" ;
+    ct:source_sha256 "f8438559b293e8223834f2d6d9d3fd9d7e74c2356132851878b970d840db8d29" ;
+    ct:start_char 27658 .
+
+ex:C015P0157 a ct:SourcePassage ;
+    ct:end_char 42246 ;
+    ct:exact_text "14.6 In the event that the Company exercises its rights and places you on Garden Leave under paragraph 10 above then the Restricted Period shall be reduced by any period/s spent by you on Garden Leave prior to the Termination Date." ;
+    ct:source_path "cuad/BICYCLETHERAPEUTICSPLC_03_10_2020-EX-10.11-SERVICE AGREEMENT.txt" ;
+    ct:source_sha256 "f8438559b293e8223834f2d6d9d3fd9d7e74c2356132851878b970d840db8d29" ;
+    ct:start_char 42015 .
+
+ct:Agreement a owl:Class ;
+    rdfs:label "Agreement" .
+
+ex:C015P0016 a ct:SourcePassage ;
+    ct:end_char 964 ;
+    ct:exact_text "1.2 Your employment shall commence on 26  September 2019 and shall continue unless and until either party gives notice to the other in accordance with paragraph 11 below. No employment with a previous employer is deemed to be continuous with your employment with the Company." ;
+    ct:source_path "cuad/BICYCLETHERAPEUTICSPLC_03_10_2020-EX-10.11-SERVICE AGREEMENT.txt" ;
+    ct:source_sha256 "f8438559b293e8223834f2d6d9d3fd9d7e74c2356132851878b970d840db8d29" ;
+    ct:start_char 689 .
+
+ex:C015P0102 a ct:SourcePassage ;
+    ct:end_char 22209 ;
+    ct:exact_text "Reason condition within 60 days of the first occurrence of such condition; (iii) you cooperate in good faith with the Company's efforts, for a period not less than 30 days following such notice (the \"Cure Period\"), to remedy the condition; (iv) notwithstanding such efforts, the Good Reason condition continues to exist; and (v) you terminate your employment (without notice) within 60 days after the end of the Cure Period. If the Company cures the Good Reason condition during the Cure Period, Good Reason shall be deemed not to have occurred." ;
+    ct:source_path "cuad/BICYCLETHERAPEUTICSPLC_03_10_2020-EX-10.11-SERVICE AGREEMENT.txt" ;
+    ct:source_sha256 "f8438559b293e8223834f2d6d9d3fd9d7e74c2356132851878b970d840db8d29" ;
+    ct:start_char 21664 .
+
+ex:C015P0106 a ct:SourcePassage ;
+    ct:end_char 24028 ;
+    ct:exact_text "11.7 If your employment is terminated on account of your death or by the Company without Cause (being for any reason not covered by paragraph 11.3), or you terminate your employment for Good Reason (as provided in paragraph 11.4), in either case outside of the Change in Control Period, then the Company shall pay you the Accrued Benefits. In addition, subject to (i) your (or your authorised representative or estate signing, if the termination is due to your death) signing a settlement agreement and a separation agreement and release (together the \"Settlement Agreements\") in a form and manner satisfactory to the Company, which shall include, without limitation, a general release of claims against the Company and all related persons and entities, a reaffirmation of all of your continuing obligations to the Company, including those set forth in paragraphs 13 - 15, and (in the case of the separation agreement and release) and a seven (7) business day revocation period; " ;
+    ct:source_path "cuad/BICYCLETHERAPEUTICSPLC_03_10_2020-EX-10.11-SERVICE AGREEMENT.txt" ;
+    ct:source_sha256 "f8438559b293e8223834f2d6d9d3fd9d7e74c2356132851878b970d840db8d29" ;
+    ct:start_char 23049 .
+
+ex:C015P0112 a ct:SourcePassage ;
+    ct:end_char 26683 ;
+    ct:exact_text "(a) Change in Control Period. If during the Change in Control Period your employment is terminated on account of your death or by the Company without Cause (being for any reason not covered by paragraph 11.3) or you terminate your employment for Good Reason (as provided in paragraph 11.4), then, subject to (i) your signing (or your authorised representative or estate signing, if the termination is due to your death) a settlement agreement and a separation agreement and release (together the Settlement Agreements) in a form and manner satisfactory to the Company, which shall include, without limitation, a general release of claims against the Company and all related persons and entities, a reaffirmation of all of your continuing obligations to the Company, including those set forth in paragraphs 13 - 15, and (in the case of the separation agreement and release) and a seven (7) business day revocation period; and (ii) the separation agreement and release becoming irrevocable, all within 60 days after the Termination Date (or such shorter period as set forth in the Settlement Agreements):" ;
+    ct:source_path "cuad/BICYCLETHERAPEUTICSPLC_03_10_2020-EX-10.11-SERVICE AGREEMENT.txt" ;
+    ct:source_sha256 "f8438559b293e8223834f2d6d9d3fd9d7e74c2356132851878b970d840db8d29" ;
+    ct:start_char 25581 .
+
+ct:Condition a owl:Class ;
+    rdfs:label "Condition" .
+
+ct:Reference a owl:Class ;
+    rdfs:label "Reference" .
+
+ct:SourcePassage a owl:Class ;
+    rdfs:label "SourcePassage" .
+
+ct:Rule a owl:Class ;
+    rdfs:label "Rule" .
+

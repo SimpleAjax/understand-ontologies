@@ -1,0 +1,119 @@
+{
+  "document_id": "C012",
+  "file_path": "cuad/BANUESTRAFINANCIALCORP_09_08_2006-EX-10.16-AGENCY AGREEMENT.txt",
+  "model_digest": "0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0",
+  "rules": [
+    {
+      "passage_id": 18,
+      "kind": "CONDITIONAL_REFERENCED_TERM",
+      "label": "Conditional Referenced Term — source passage 18",
+      "condition_ids": [
+        18
+      ],
+      "reference_labels": [],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 19,
+      "kind": "TERMINATION",
+      "label": "Termination — source passage 19",
+      "condition_ids": [],
+      "reference_labels": [
+        "Section 2"
+      ],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 19,
+      "kind": "CONDITIONAL_REFERENCED_TERM",
+      "label": "Conditional Referenced Term — source passage 19",
+      "condition_ids": [],
+      "reference_labels": [
+        "Section 2"
+      ],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 20,
+      "kind": "POST_EXPIRY_CONTINUATION",
+      "label": "Post Expiry Continuation — source passage 20",
+      "condition_ids": [],
+      "reference_labels": [],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 21,
+      "kind": "INITIAL_TERM",
+      "label": "Initial Term — source passage 21",
+      "condition_ids": [
+        21
+      ],
+      "reference_labels": [
+        "Section 9"
+      ],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 21,
+      "kind": "OPTIONAL_RENEWAL",
+      "label": "Optional Renewal — source passage 21",
+      "condition_ids": [
+        21
+      ],
+      "reference_labels": [
+        "Section 9"
+      ],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 26,
+      "kind": "POST_EXPIRY_CONTINUATION",
+      "label": "Post Expiry Continuation — source passage 26",
+      "condition_ids": [],
+      "reference_labels": [
+        "Section 8"
+      ],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 93,
+      "kind": "POST_EXPIRY_CONTINUATION",
+      "label": "Post Expiry Continuation — source passage 93",
+      "condition_ids": [],
+      "reference_labels": [],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 94,
+      "kind": "TERMINATION",
+      "label": "Termination — source passage 94",
+      "condition_ids": [],
+      "reference_labels": [
+        "Section 8",
+        "Section 10"
+      ],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    }
+  ],
+  "rejected_rules": [],
+  "review_status": "UNREVIEWED",
+  "coverage": "Lexically selected source windows; completeness not guaranteed."
+}

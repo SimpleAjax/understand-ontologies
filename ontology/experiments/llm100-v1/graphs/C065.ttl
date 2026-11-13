@@ -1,0 +1,506 @@
+@prefix ct: <https://cimulink.local/ontology/contract-terms/0.1#> .
+@prefix ex: <https://cimulink.local/ontology/llm100-v1/> .
+@prefix meta: <https://cimulink.local/ontology/extraction#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ct: a owl:Ontology ;
+    rdfs:comment "Partial five-contract development sample. No claim of complete contract coverage or legal correctness." .
+
+ct:agreement_effective_from a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:applies_within a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:calendar_date_status a owl:DatatypeProperty .
+
+ct:coverage a owl:DatatypeProperty .
+
+ct:description a owl:DatatypeProperty .
+
+ct:duration a owl:DatatypeProperty .
+
+ct:duration_status a owl:DatatypeProperty .
+
+ct:end_char a owl:DatatypeProperty .
+
+ct:end_date_status a owl:DatatypeProperty .
+
+ct:ends_on_event a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:exact_text a owl:DatatypeProperty .
+
+ct:has_party a owl:ObjectProperty ;
+    rdfs:domain ct:Agreement ;
+    rdfs:range ct:Party .
+
+ct:has_rule a owl:ObjectProperty ;
+    rdfs:domain ct:Agreement ;
+    rdfs:range ct:Rule .
+
+ct:kind a owl:DatatypeProperty .
+
+ct:notice_actor a owl:DatatypeProperty .
+
+ct:notice_form a owl:DatatypeProperty .
+
+ct:notice_period_status a owl:DatatypeProperty .
+
+ct:qualifies a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Rule .
+
+ct:references_section a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:renewal_count a owl:DatatypeProperty .
+
+ct:resolution_status a owl:DatatypeProperty .
+
+ct:resolved_to a owl:ObjectProperty ;
+    rdfs:domain ct:Reference ;
+    rdfs:range ct:SourcePassage .
+
+ct:source_path a owl:DatatypeProperty .
+
+ct:source_sha256 a owl:DatatypeProperty .
+
+ct:start_char a owl:DatatypeProperty .
+
+ct:starts_from a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:stated_end_date a owl:DatatypeProperty .
+
+ct:subject_to a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Condition .
+
+ct:supported_by a owl:ObjectProperty ;
+    rdfs:range ct:SourcePassage .
+
+ct:termination_notice a owl:DatatypeProperty .
+
+ex:C065 a ct:Agreement ;
+    rdfs:label "PHREESIA,INC_05_28_2019-EX-10.18-STRATEGIC ALLIANCE AGREEMENT.txt" ;
+    ct:coverage "LOCAL_LLM_PROPOSED_PARTIAL; NOT_HUMAN_REVIEWED" ;
+    ct:has_rule ex:C065R0001,
+        ex:C065R0002,
+        ex:C065R0003,
+        ex:C065R0004,
+        ex:C065R0005,
+        ex:C065R0006,
+        ex:C065R0007,
+        ex:C065R0008,
+        ex:C065R0009,
+        ex:C065R0010,
+        ex:C065R0011,
+        ex:C065R0012,
+        ex:C065R0013,
+        ex:C065R0014,
+        ex:C065R0015,
+        ex:C065R0016,
+        ex:C065R0017,
+        ex:C065R0018,
+        ex:C065R0019,
+        ex:C065R0020 ;
+    ct:source_path "cuad/PHREESIA,INC_05_28_2019-EX-10.18-STRATEGIC ALLIANCE AGREEMENT.txt" ;
+    ct:source_sha256 "cdfb3869104f6d5ef5250203a5e085f58446e73916ed2aad9a504ac253e8c888" ;
+    meta:model_digest "0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0" .
+
+ct:Party a owl:Class ;
+    rdfs:label "Party" .
+
+ex:C065P0227 a ct:SourcePassage ;
+    ct:end_char 81252 ;
+    ct:exact_text "19.4 Effect of Expiration or Termination. Subject to Section 25.7, upon expiration or termination of this Agreement, at the Disclosing Party's request, the Receiving Party will, and will cause its Representatives (and, if applicable, its Affiliates, Allscripts Resellers, and Partnering Organizations) to, promptly return or destroy all Confidential Information received from the Disclosing Party in tangible form, together with all copies thereof, in such Person's possession; provided, however, that the Receiving Party may keep one (1) copy of the Disclosing Party's Confidential Information (a) to the extent necessary to exercise its surviving rights and perform its surviving obligations hereunder and (b) in accordance with its corporate security and/or disaster recovery procedures, to the extent such Confidential Information is in electronic form. The Receiving Party will, upon request, promptly certify in writing that it has complied with the obligations of this Section 19.4." ;
+    ct:source_path "cuad/PHREESIA,INC_05_28_2019-EX-10.18-STRATEGIC ALLIANCE AGREEMENT.txt" ;
+    ct:source_sha256 "cdfb3869104f6d5ef5250203a5e085f58446e73916ed2aad9a504ac253e8c888" ;
+    ct:start_char 80263 .
+
+ex:C065P0292 a ct:SourcePassage ;
+    ct:end_char 101574 ;
+    ct:exact_text "25.1 Termination for Convenience. [***]." ;
+    ct:source_path "cuad/PHREESIA,INC_05_28_2019-EX-10.18-STRATEGIC ALLIANCE AGREEMENT.txt" ;
+    ct:source_sha256 "cdfb3869104f6d5ef5250203a5e085f58446e73916ed2aad9a504ac253e8c888" ;
+    ct:start_char 101534 .
+
+ex:C065P0294 a ct:SourcePassage ;
+    ct:end_char 102778 ;
+    ct:exact_text "25.3 Termination for Insolvency. Either Party may terminate this Agreement, immediately upon written notice to the other Party, if the other Party (a) becomes insolvent or admits inability to pay its debts generally as they become due; (b) becomes subject, voluntarily or involuntarily, to any proceeding under any domestic or foreign bankruptcy or insolvency Law, which is not fully stayed within [***] or is not dismissed or vacated within [***] after filing; (c) is dissolved or liquidated or takes any action for such purpose; (d) makes a general assignment for the benefit of creditors; or (e) has a receiver, trustee, custodian, or similar agent appointed by order of any court of competent jurisdiction to take charge of or sell any portion of its property or business (and such appointment is not discontinued within [***] thereafter)." ;
+    ct:source_path "cuad/PHREESIA,INC_05_28_2019-EX-10.18-STRATEGIC ALLIANCE AGREEMENT.txt" ;
+    ct:source_sha256 "cdfb3869104f6d5ef5250203a5e085f58446e73916ed2aad9a504ac253e8c888" ;
+    ct:start_char 101935 .
+
+ex:C065P0296 a ct:SourcePassage ;
+    ct:end_char 103182 ;
+    ct:exact_text "25.5 Termination for Exclusion/Termination of Merchant Processing Services. [***]." ;
+    ct:source_path "cuad/PHREESIA,INC_05_28_2019-EX-10.18-STRATEGIC ALLIANCE AGREEMENT.txt" ;
+    ct:source_sha256 "cdfb3869104f6d5ef5250203a5e085f58446e73916ed2aad9a504ac253e8c888" ;
+    ct:start_char 103100 .
+
+ex:C065P0297 a ct:SourcePassage ;
+    ct:end_char 103230 ;
+    ct:exact_text "25.6 Termination for Change of Control. [***]." ;
+    ct:source_path "cuad/PHREESIA,INC_05_28_2019-EX-10.18-STRATEGIC ALLIANCE AGREEMENT.txt" ;
+    ct:source_sha256 "cdfb3869104f6d5ef5250203a5e085f58446e73916ed2aad9a504ac253e8c888" ;
+    ct:start_char 103184 .
+
+ex:C065P0299 a ct:SourcePassage ;
+    ct:end_char 103547 ;
+    ct:exact_text "(a) The expiration or termination of this Agreement will not have the effect of terminating any Customer Agreement, Merchant Agreement (or the licenses to the Installed Software or Subscription Software Services distributed thereunder) or agreement directly between [***]." ;
+    ct:source_path "cuad/PHREESIA,INC_05_28_2019-EX-10.18-STRATEGIC ALLIANCE AGREEMENT.txt" ;
+    ct:source_sha256 "cdfb3869104f6d5ef5250203a5e085f58446e73916ed2aad9a504ac253e8c888" ;
+    ct:start_char 103275 .
+
+ex:C065P0301 a ct:SourcePassage ;
+    ct:end_char 104902 ;
+    ct:exact_text "(c) Upon expiration or termination of this Agreement, the Company will (i) provide reasonable cooperation and assistance to Allscripts, at Allscripts' written request and to the extent necessary to fulfill any continuing obligations under this Agreement, in transitioning the terminated Support Services to an alternative service provider; and [***]." ;
+    ct:source_path "cuad/PHREESIA,INC_05_28_2019-EX-10.18-STRATEGIC ALLIANCE AGREEMENT.txt" ;
+    ct:source_sha256 "cdfb3869104f6d5ef5250203a5e085f58446e73916ed2aad9a504ac253e8c888" ;
+    ct:start_char 104552 .
+
+ex:C065P0302 a ct:SourcePassage ;
+    ct:end_char 105045 ;
+    ct:exact_text "(d) Subject to the foregoing paragraphs of this Section 25.7, upon expiration or termination of this Agreement, [***]. 26. Change of Control." ;
+    ct:source_path "cuad/PHREESIA,INC_05_28_2019-EX-10.18-STRATEGIC ALLIANCE AGREEMENT.txt" ;
+    ct:source_sha256 "cdfb3869104f6d5ef5250203a5e085f58446e73916ed2aad9a504ac253e8c888" ;
+    ct:start_char 104904 .
+
+ex:C065P0308 a ct:SourcePassage ;
+    ct:end_char 107483 ;
+    ct:exact_text "27.1 Survival. The provisions of Sections 1, 2.5-2.7, 8.4-8.6, 8.8, 16.8, 18-25, 27, and 28 and Exhibit E (Business Associate Agreement), Exhibit F (Buy Rates and Revenue Share) and Exhibit H (List of Legacy Customers) will survive and continue after the expiration or termination of this Agreement indefinitely. The provisions of the Restated Developer Agreement set forth in its \"Survival\" provision will survive the expiration or termination of the Restated Developer Agreement or this Agreement indefinitely. The provisions of Sections 2.1(c)-(d), 2.3, 4.2, 4.3, 8.1-8.3, 8.7, 10, 11.3, and 12-17 (excluding Sections 14.4 and 17.4, each of which will survive for the duration set forth therein; and Sections 14.6, 16.1 and 16.8), Exhibit C (Services) and Exhibit D (Service Level Agreement) will survive and continue after the expiration or termination of this Agreement for the full duration of any Customer Agreement. In addition, the rights and obligations of any Party which, by their nature, extend beyond the expiration or termination of this Agreement will continue in full force and effect notwithstanding the termination of this Agreement. 30" ;
+    ct:source_path "cuad/PHREESIA,INC_05_28_2019-EX-10.18-STRATEGIC ALLIANCE AGREEMENT.txt" ;
+    ct:source_sha256 "cdfb3869104f6d5ef5250203a5e085f58446e73916ed2aad9a504ac253e8c888" ;
+    ct:start_char 106328 .
+
+ex:C065R0001 a ct:Rule ;
+    rdfs:label "Termination — source passage 67" ;
+    ct:kind "TERMINATION" ;
+    ct:subject_to ex:C065R0001Condition67 ;
+    ct:supported_by ex:C065P0067 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C065R0001Condition67 a ct:Condition ;
+    ct:description "2.3 Merchant Agreements; Pre-approval. All proposed Sublicensed Customers who wish to purchase Merchant Processing Services must complete a Merchant Application, execute a Merchant Agreement and be Pre-approved by the Company. \"Pre-approved\" shall mean that the Company has determined based on a proposed Customer's Merchant Application that the proposed Customer meets OFAC and Member Bank criteria and the Company's credit standards (collectively, the \"Criteria\"). \"Rejection\" shall mean the Company has not Pre-approved the proposed Merchant Processing Services Customer. [***]. Allscripts shall not represent to any prospective Sublicensed Customer that a Merchant Application will be approved. Company may terminate any Merchant Agreement pursuant to the terms of such Merchant Agreement. All Merchant Processing Services shall be marketed under Company's Marks. For avoidance of doubt, Allscripts may market the Subscription Software Services, including without limitation, the electronic cashiering features and functionality of the Subscription Software Services under the Allscripts name." ;
+    ct:supported_by ex:C065P0067 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C065R0002 a ct:Rule ;
+    rdfs:label "Initial Term — source passage 88" ;
+    ct:kind "INITIAL_TERM" ;
+    ct:references_section ex:C065R0002Ref0 ;
+    ct:subject_to ex:C065R0002Condition88 ;
+    ct:supported_by ex:C065P0088 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C065R0002Condition88 a ct:Condition ;
+    ct:description "4.1 Order Process. In order to activate Merchant Processing Services for a Merchant Processing Services Customer, the proposed Merchant Processing Services Customer must submit (directly or indirectly through Allscripts) a completed Merchant Application and executed Merchant Agreement to the Company within [***] from the execution by such Merchant Processing Services Customer of a Customer Agreement. Within [***] of the modification or termination (other than sublicenses that expire at the end of a term previously specified in a Purchase Order) of any Customer Agreement, Allscripts will provide the Company with written notice of such modification or termination. This Section 4.1 shall not be applicable to situations where the Allscripts Customer is purchasing Merchant Processing Services in connection with its purchase of PIMS. 9" ;
+    ct:supported_by ex:C065P0088 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C065R0002Ref0 a ct:Reference ;
+    rdfs:label "Section 4.1" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C065R0003 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 88" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:references_section ex:C065R0003Ref0 ;
+    ct:subject_to ex:C065R0003Condition88 ;
+    ct:supported_by ex:C065P0088 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C065R0003Condition88 a ct:Condition ;
+    ct:description "4.1 Order Process. In order to activate Merchant Processing Services for a Merchant Processing Services Customer, the proposed Merchant Processing Services Customer must submit (directly or indirectly through Allscripts) a completed Merchant Application and executed Merchant Agreement to the Company within [***] from the execution by such Merchant Processing Services Customer of a Customer Agreement. Within [***] of the modification or termination (other than sublicenses that expire at the end of a term previously specified in a Purchase Order) of any Customer Agreement, Allscripts will provide the Company with written notice of such modification or termination. This Section 4.1 shall not be applicable to situations where the Allscripts Customer is purchasing Merchant Processing Services in connection with its purchase of PIMS. 9" ;
+    ct:supported_by ex:C065P0088 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C065R0003Ref0 a ct:Reference ;
+    rdfs:label "Section 4.1" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C065R0004 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 169" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:subject_to ex:C065R0004Condition169 ;
+    ct:supported_by ex:C065P0169 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C065R0004Condition169 a ct:Condition ;
+    ct:description "(b) Allscripts will be named as an additional insured under the foregoing policies, each of which will be primary and non-contributory. [***] The Company will give Allscripts [***] notice prior to any alteration, cancellation, or non-renewal of the policies required pursuant to this Agreement; provided, however, that the Company will not be obligated to provide such notice if, concurrently with such alternation, cancellation, or non-renewal, the Company obtains similar or better coverage from the same or another qualified insurer, without a lapse in coverage." ;
+    ct:supported_by ex:C065P0169 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C065R0005 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 227" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:references_section ex:C065R0005Ref0,
+        ex:C065R0005Ref1 ;
+    ct:supported_by ex:C065P0227 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C065R0005Ref0 a ct:Reference ;
+    rdfs:label "Section 25.7" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C065R0005Ref1 a ct:Reference ;
+    rdfs:label "Section 19.4" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C065R0006 a ct:Rule ;
+    rdfs:label "Initial Term — source passage 290" ;
+    ct:kind "INITIAL_TERM" ;
+    ct:references_section ex:C065R0006Ref0 ;
+    ct:subject_to ex:C065R0006Condition290 ;
+    ct:supported_by ex:C065P0290 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C065R0006Condition290 a ct:Condition ;
+    ct:description "24.1 Term. The initial term of this Agreement commences on the Effective Date and will continue in effect until five (5) year(s) from such date (the \"Initial Term\") unless terminated earlier pursuant to Section 25." ;
+    ct:supported_by ex:C065P0290 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C065R0006Ref0 a ct:Reference ;
+    rdfs:label "Section 25" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C065R0007 a ct:Rule ;
+    rdfs:label "Automatic Renewal — source passage 291" ;
+    ct:kind "AUTOMATIC_RENEWAL" ;
+    ct:references_section ex:C065R0007Ref0 ;
+    ct:subject_to ex:C065R0007Condition291 ;
+    ct:supported_by ex:C065P0291 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C065R0007Condition291 a ct:Condition ;
+    ct:description "24.2 Renewal. Unless this Agreement is terminated pursuant to Section 25, this Agreement will automatically renew for additional successive [***] terms (each a \"Renewal Term\" and together with the Initial Term, the \"Term\") unless and until either Party provides written notice of non-renewal to the other Party at least [***] prior to the end of the then-current Term. 25. Termination." ;
+    ct:supported_by ex:C065P0291 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C065R0007Ref0 a ct:Reference ;
+    rdfs:label "Section 25" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C065R0008 a ct:Rule ;
+    rdfs:label "Termination — source passage 292" ;
+    ct:kind "TERMINATION" ;
+    ct:supported_by ex:C065P0292 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C065R0009 a ct:Rule ;
+    rdfs:label "Termination — source passage 293" ;
+    ct:kind "TERMINATION" ;
+    ct:subject_to ex:C065R0009Condition293 ;
+    ct:supported_by ex:C065P0293 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C065R0009Condition293 a ct:Condition ;
+    ct:description "25.2 Termination for Cause. Either Party may terminate this Agreement, immediately upon written notice to the other Party, if the other Party materially breaches this Agreement and such breach (a) is incapable of cure or (b) being capable of cure, remains uncured [***] after the breaching Party receives written notice from the non-breaching Party thereof." ;
+    ct:supported_by ex:C065P0293 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C065R0010 a ct:Rule ;
+    rdfs:label "Termination — source passage 294" ;
+    ct:kind "TERMINATION" ;
+    ct:supported_by ex:C065P0294 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C065R0011 a ct:Rule ;
+    rdfs:label "Termination — source passage 295" ;
+    ct:kind "TERMINATION" ;
+    ct:references_section ex:C065R0011Ref0 ;
+    ct:subject_to ex:C065R0011Condition295 ;
+    ct:supported_by ex:C065P0295 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C065R0011Condition295 a ct:Condition ;
+    ct:description "25.4 Termination for Force Majeure. Subject to Section 15.2, either Party may terminate this Agreement, immediately upon written notice to the other Party, if a Force Majeure Event affecting the other Party's performance of its obligations hereunder continues substantially uninterrupted for a period of [***] or more." ;
+    ct:supported_by ex:C065P0295 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C065R0011Ref0 a ct:Reference ;
+    rdfs:label "Section 15.2" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C065R0012 a ct:Rule ;
+    rdfs:label "Termination — source passage 296" ;
+    ct:kind "TERMINATION" ;
+    ct:supported_by ex:C065P0296 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C065R0013 a ct:Rule ;
+    rdfs:label "Termination — source passage 297" ;
+    ct:kind "TERMINATION" ;
+    ct:supported_by ex:C065P0297 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C065R0014 a ct:Rule ;
+    rdfs:label "Termination — source passage 298" ;
+    ct:kind "TERMINATION" ;
+    ct:supported_by ex:C065P0298 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C065R0015 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 298" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:supported_by ex:C065P0298 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C065R0016 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 299" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:supported_by ex:C065P0299 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C065R0017 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 300" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:references_section ex:C065R0017Ref0 ;
+    ct:subject_to ex:C065R0017Condition300 ;
+    ct:supported_by ex:C065P0300 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C065R0017Condition300 a ct:Condition ;
+    ct:description "(b) Upon expiration or termination of this Agreement, except in connection with the rights and obligations set forth in this Section 25.7, Allscripts will immediately (i) cease all use of the Company Marks and all marketing and sales-related efforts with respect to the Installed Software, Subscription Software Services or Merchant Processing Services and the Services; (ii) discontinue all representations or statements from which it might be inferred that any relationship exists between the Parties; (iii) cease to solicit or procure orders for the Subscription Software Services or Merchant Processing Services, Installed Software, Merchant Processing Services or the Services; and (iv) return all copies of the Documentation, and related materials and copies thereof, to the Company; provided, however, that Allscripts may retain a reasonable number of copies of the Documentation and related materials in order to fulfill its obligations under this Agreement and the Customer Agreements. 29" ;
+    ct:supported_by ex:C065P0300 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C065R0017Ref0 a ct:Reference ;
+    rdfs:label "Section 25.7" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C065R0018 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 301" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:supported_by ex:C065P0301 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C065R0019 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 302" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:references_section ex:C065R0019Ref0 ;
+    ct:supported_by ex:C065P0302 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C065R0019Ref0 a ct:Reference ;
+    rdfs:label "Section 25.7" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C065R0020 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 308" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:references_section ex:C065R0020Ref0,
+        ex:C065R0020Ref1,
+        ex:C065R0020Ref2,
+        ex:C065R0020Ref3,
+        ex:C065R0020Ref4 ;
+    ct:supported_by ex:C065P0308 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C065R0020Ref0 a ct:Reference ;
+    rdfs:label "Exhibit E" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C065R0020Ref1 a ct:Reference ;
+    rdfs:label "Exhibit F" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C065R0020Ref2 a ct:Reference ;
+    rdfs:label "Exhibit H" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C065R0020Ref3 a ct:Reference ;
+    rdfs:label "Exhibit C" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C065R0020Ref4 a ct:Reference ;
+    rdfs:label "Exhibit D" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C065P0067 a ct:SourcePassage ;
+    ct:end_char 24336 ;
+    ct:exact_text "2.3 Merchant Agreements; Pre-approval. All proposed Sublicensed Customers who wish to purchase Merchant Processing Services must complete a Merchant Application, execute a Merchant Agreement and be Pre-approved by the Company. \"Pre-approved\" shall mean that the Company has determined based on a proposed Customer's Merchant Application that the proposed Customer meets OFAC and Member Bank criteria and the Company's credit standards (collectively, the \"Criteria\"). \"Rejection\" shall mean the Company has not Pre-approved the proposed Merchant Processing Services Customer. [***]. Allscripts shall not represent to any prospective Sublicensed Customer that a Merchant Application will be approved. Company may terminate any Merchant Agreement pursuant to the terms of such Merchant Agreement. All Merchant Processing Services shall be marketed under Company's Marks. For avoidance of doubt, Allscripts may market the Subscription Software Services, including without limitation, the electronic cashiering features and functionality of the Subscription Software Services under the Allscripts name." ;
+    ct:source_path "cuad/PHREESIA,INC_05_28_2019-EX-10.18-STRATEGIC ALLIANCE AGREEMENT.txt" ;
+    ct:source_sha256 "cdfb3869104f6d5ef5250203a5e085f58446e73916ed2aad9a504ac253e8c888" ;
+    ct:start_char 23239 .
+
+ex:C065P0169 a ct:SourcePassage ;
+    ct:end_char 61443 ;
+    ct:exact_text "(b) Allscripts will be named as an additional insured under the foregoing policies, each of which will be primary and non-contributory. [***] The Company will give Allscripts [***] notice prior to any alteration, cancellation, or non-renewal of the policies required pursuant to this Agreement; provided, however, that the Company will not be obligated to provide such notice if, concurrently with such alternation, cancellation, or non-renewal, the Company obtains similar or better coverage from the same or another qualified insurer, without a lapse in coverage." ;
+    ct:source_path "cuad/PHREESIA,INC_05_28_2019-EX-10.18-STRATEGIC ALLIANCE AGREEMENT.txt" ;
+    ct:source_sha256 "cdfb3869104f6d5ef5250203a5e085f58446e73916ed2aad9a504ac253e8c888" ;
+    ct:start_char 60878 .
+
+ex:C065P0290 a ct:SourcePassage ;
+    ct:end_char 101145 ;
+    ct:exact_text "24.1 Term. The initial term of this Agreement commences on the Effective Date and will continue in effect until five (5) year(s) from such date (the \"Initial Term\") unless terminated earlier pursuant to Section 25." ;
+    ct:source_path "cuad/PHREESIA,INC_05_28_2019-EX-10.18-STRATEGIC ALLIANCE AGREEMENT.txt" ;
+    ct:source_sha256 "cdfb3869104f6d5ef5250203a5e085f58446e73916ed2aad9a504ac253e8c888" ;
+    ct:start_char 100931 .
+
+ex:C065P0291 a ct:SourcePassage ;
+    ct:end_char 101532 ;
+    ct:exact_text "24.2 Renewal. Unless this Agreement is terminated pursuant to Section 25, this Agreement will automatically renew for additional successive [***] terms (each a \"Renewal Term\" and together with the Initial Term, the \"Term\") unless and until either Party provides written notice of non-renewal to the other Party at least [***] prior to the end of the then-current Term. 25. Termination." ;
+    ct:source_path "cuad/PHREESIA,INC_05_28_2019-EX-10.18-STRATEGIC ALLIANCE AGREEMENT.txt" ;
+    ct:source_sha256 "cdfb3869104f6d5ef5250203a5e085f58446e73916ed2aad9a504ac253e8c888" ;
+    ct:start_char 101147 .
+
+ex:C065P0293 a ct:SourcePassage ;
+    ct:end_char 101933 ;
+    ct:exact_text "25.2 Termination for Cause. Either Party may terminate this Agreement, immediately upon written notice to the other Party, if the other Party materially breaches this Agreement and such breach (a) is incapable of cure or (b) being capable of cure, remains uncured [***] after the breaching Party receives written notice from the non-breaching Party thereof." ;
+    ct:source_path "cuad/PHREESIA,INC_05_28_2019-EX-10.18-STRATEGIC ALLIANCE AGREEMENT.txt" ;
+    ct:source_sha256 "cdfb3869104f6d5ef5250203a5e085f58446e73916ed2aad9a504ac253e8c888" ;
+    ct:start_char 101576 .
+
+ex:C065P0295 a ct:SourcePassage ;
+    ct:end_char 103098 ;
+    ct:exact_text "25.4 Termination for Force Majeure. Subject to Section 15.2, either Party may terminate this Agreement, immediately upon written notice to the other Party, if a Force Majeure Event affecting the other Party's performance of its obligations hereunder continues substantially uninterrupted for a period of [***] or more." ;
+    ct:source_path "cuad/PHREESIA,INC_05_28_2019-EX-10.18-STRATEGIC ALLIANCE AGREEMENT.txt" ;
+    ct:source_sha256 "cdfb3869104f6d5ef5250203a5e085f58446e73916ed2aad9a504ac253e8c888" ;
+    ct:start_char 102780 .
+
+ex:C065P0298 a ct:SourcePassage ;
+    ct:end_char 103273 ;
+    ct:exact_text "25.7 Effect of Expiration or Termination." ;
+    ct:source_path "cuad/PHREESIA,INC_05_28_2019-EX-10.18-STRATEGIC ALLIANCE AGREEMENT.txt" ;
+    ct:source_sha256 "cdfb3869104f6d5ef5250203a5e085f58446e73916ed2aad9a504ac253e8c888" ;
+    ct:start_char 103232 .
+
+ex:C065P0300 a ct:SourcePassage ;
+    ct:end_char 104546 ;
+    ct:exact_text "(b) Upon expiration or termination of this Agreement, except in connection with the rights and obligations set forth in this Section 25.7, Allscripts will immediately (i) cease all use of the Company Marks and all marketing and sales-related efforts with respect to the Installed Software, Subscription Software Services or Merchant Processing Services and the Services; (ii) discontinue all representations or statements from which it might be inferred that any relationship exists between the Parties; (iii) cease to solicit or procure orders for the Subscription Software Services or Merchant Processing Services, Installed Software, Merchant Processing Services or the Services; and (iv) return all copies of the Documentation, and related materials and copies thereof, to the Company; provided, however, that Allscripts may retain a reasonable number of copies of the Documentation and related materials in order to fulfill its obligations under this Agreement and the Customer Agreements. 29" ;
+    ct:source_path "cuad/PHREESIA,INC_05_28_2019-EX-10.18-STRATEGIC ALLIANCE AGREEMENT.txt" ;
+    ct:source_sha256 "cdfb3869104f6d5ef5250203a5e085f58446e73916ed2aad9a504ac253e8c888" ;
+    ct:start_char 103549 .
+
+ct:Agreement a owl:Class ;
+    rdfs:label "Agreement" .
+
+ex:C065P0088 a ct:SourcePassage ;
+    ct:end_char 34116 ;
+    ct:exact_text "4.1 Order Process. In order to activate Merchant Processing Services for a Merchant Processing Services Customer, the proposed Merchant Processing Services Customer must submit (directly or indirectly through Allscripts) a completed Merchant Application and executed Merchant Agreement to the Company within [***] from the execution by such Merchant Processing Services Customer of a Customer Agreement. Within [***] of the modification or termination (other than sublicenses that expire at the end of a term previously specified in a Purchase Order) of any Customer Agreement, Allscripts will provide the Company with written notice of such modification or termination. This Section 4.1 shall not be applicable to situations where the Allscripts Customer is purchasing Merchant Processing Services in connection with its purchase of PIMS. 9" ;
+    ct:source_path "cuad/PHREESIA,INC_05_28_2019-EX-10.18-STRATEGIC ALLIANCE AGREEMENT.txt" ;
+    ct:source_sha256 "cdfb3869104f6d5ef5250203a5e085f58446e73916ed2aad9a504ac253e8c888" ;
+    ct:start_char 33275 .
+
+ct:Condition a owl:Class ;
+    rdfs:label "Condition" .
+
+ct:Reference a owl:Class ;
+    rdfs:label "Reference" .
+
+ct:SourcePassage a owl:Class ;
+    rdfs:label "SourcePassage" .
+
+ct:Rule a owl:Class ;
+    rdfs:label "Rule" .
+

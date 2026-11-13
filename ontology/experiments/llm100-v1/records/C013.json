@@ -1,0 +1,152 @@
+{
+  "document_id": "C013",
+  "file_path": "cuad/BELLRINGBRANDS,INC_02_07_2020-EX-10.18-MASTER SUPPLY AGREEMENT.txt",
+  "model_digest": "0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0",
+  "rules": [
+    {
+      "passage_id": 29,
+      "kind": "TERMINATION",
+      "label": "Termination — source passage 29",
+      "condition_ids": [
+        29
+      ],
+      "reference_labels": [],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 29,
+      "kind": "POST_EXPIRY_CONTINUATION",
+      "label": "Post Expiry Continuation — source passage 29",
+      "condition_ids": [
+        29
+      ],
+      "reference_labels": [],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 33,
+      "kind": "TERMINATION",
+      "label": "Termination — source passage 33",
+      "condition_ids": [
+        33
+      ],
+      "reference_labels": [],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 33,
+      "kind": "CONDITIONAL_REFERENCED_TERM",
+      "label": "Conditional Referenced Term — source passage 33",
+      "condition_ids": [
+        33
+      ],
+      "reference_labels": [],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 51,
+      "kind": "INITIAL_TERM",
+      "label": "Initial Term — source passage 51",
+      "condition_ids": [
+        51
+      ],
+      "reference_labels": [],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 51,
+      "kind": "AUTOMATIC_RENEWAL",
+      "label": "Automatic Renewal — source passage 51",
+      "condition_ids": [
+        51
+      ],
+      "reference_labels": [],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 52,
+      "kind": "TERMINATION",
+      "label": "Termination — source passage 52",
+      "condition_ids": [
+        52
+      ],
+      "reference_labels": [],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 54,
+      "kind": "TERMINATION",
+      "label": "Termination — source passage 54",
+      "condition_ids": [],
+      "reference_labels": [],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 55,
+      "kind": "TERMINATION",
+      "label": "Termination — source passage 55",
+      "condition_ids": [
+        55
+      ],
+      "reference_labels": [],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 56,
+      "kind": "TERMINATION",
+      "label": "Termination — source passage 56",
+      "condition_ids": [],
+      "reference_labels": [
+        "Section 5.2"
+      ],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 73,
+      "kind": "POST_EXPIRY_CONTINUATION",
+      "label": "Post Expiry Continuation — source passage 73",
+      "condition_ids": [
+        73
+      ],
+      "reference_labels": [],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 73,
+      "kind": "TERMINATION",
+      "label": "Termination — source passage 73",
+      "condition_ids": [
+        73
+      ],
+      "reference_labels": [],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    }
+  ],
+  "rejected_rules": [],
+  "review_status": "UNREVIEWED",
+  "coverage": "Lexically selected source windows; completeness not guaranteed."
+}

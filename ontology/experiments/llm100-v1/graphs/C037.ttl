@@ -1,0 +1,252 @@
+@prefix ct: <https://cimulink.local/ontology/contract-terms/0.1#> .
+@prefix ex: <https://cimulink.local/ontology/llm100-v1/> .
+@prefix meta: <https://cimulink.local/ontology/extraction#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ct: a owl:Ontology ;
+    rdfs:comment "Partial five-contract development sample. No claim of complete contract coverage or legal correctness." .
+
+ct:agreement_effective_from a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:applies_within a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:calendar_date_status a owl:DatatypeProperty .
+
+ct:coverage a owl:DatatypeProperty .
+
+ct:description a owl:DatatypeProperty .
+
+ct:duration a owl:DatatypeProperty .
+
+ct:duration_status a owl:DatatypeProperty .
+
+ct:end_char a owl:DatatypeProperty .
+
+ct:end_date_status a owl:DatatypeProperty .
+
+ct:ends_on_event a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:exact_text a owl:DatatypeProperty .
+
+ct:has_party a owl:ObjectProperty ;
+    rdfs:domain ct:Agreement ;
+    rdfs:range ct:Party .
+
+ct:has_rule a owl:ObjectProperty ;
+    rdfs:domain ct:Agreement ;
+    rdfs:range ct:Rule .
+
+ct:kind a owl:DatatypeProperty .
+
+ct:notice_actor a owl:DatatypeProperty .
+
+ct:notice_form a owl:DatatypeProperty .
+
+ct:notice_period_status a owl:DatatypeProperty .
+
+ct:qualifies a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Rule .
+
+ct:references_section a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:renewal_count a owl:DatatypeProperty .
+
+ct:resolution_status a owl:DatatypeProperty .
+
+ct:resolved_to a owl:ObjectProperty ;
+    rdfs:domain ct:Reference ;
+    rdfs:range ct:SourcePassage .
+
+ct:source_path a owl:DatatypeProperty .
+
+ct:source_sha256 a owl:DatatypeProperty .
+
+ct:start_char a owl:DatatypeProperty .
+
+ct:starts_from a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:stated_end_date a owl:DatatypeProperty .
+
+ct:subject_to a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Condition .
+
+ct:supported_by a owl:ObjectProperty ;
+    rdfs:range ct:SourcePassage .
+
+ct:termination_notice a owl:DatatypeProperty .
+
+ex:C037 a ct:Agreement ;
+    rdfs:label "FerroglobePlc_20150624_F-4A_EX-10.20_9154746_EX-10.20_Outsourcing Agreement.txt" ;
+    ct:coverage "LOCAL_LLM_PROPOSED_PARTIAL; NOT_HUMAN_REVIEWED" ;
+    ct:has_rule ex:C037R0001,
+        ex:C037R0002,
+        ex:C037R0003,
+        ex:C037R0004,
+        ex:C037R0005,
+        ex:C037R0006,
+        ex:C037R0007,
+        ex:C037R0008,
+        ex:C037R0009 ;
+    ct:source_path "cuad/FerroglobePlc_20150624_F-4A_EX-10.20_9154746_EX-10.20_Outsourcing Agreement.txt" ;
+    ct:source_sha256 "64d989b896faeaaf5faa295dff3acce9ce13bf3b8a223b39ec2da903240b25da" ;
+    meta:model_digest "0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0" .
+
+ct:Party a owl:Class ;
+    rdfs:label "Party" .
+
+ex:C037P0152 a ct:SourcePassage ;
+    ct:end_char 19410 ;
+    ct:exact_text "11.1.5. Except as provided hereinafter, for a period of five years after termination or expiration of this Agreement, each party shall not disclose, publish or disseminate information received from the other party which may be required to carry out this Agreement and which the disclosing party deems proprietary and confidential." ;
+    ct:source_path "cuad/FerroglobePlc_20150624_F-4A_EX-10.20_9154746_EX-10.20_Outsourcing Agreement.txt" ;
+    ct:source_sha256 "64d989b896faeaaf5faa295dff3acce9ce13bf3b8a223b39ec2da903240b25da" ;
+    ct:start_char 19080 .
+
+ex:C037P0153 a ct:SourcePassage ;
+    ct:end_char 19705 ;
+    ct:exact_text "11.1.6. Once this Agreement has expired, each party must, depending on the choice of the other party, destroy or hand over all technical, economic, financial or commercial information, confidential or not, in its possession, directly or indirectly, as convened in the present Agreement.   11" ;
+    ct:source_path "cuad/FerroglobePlc_20150624_F-4A_EX-10.20_9154746_EX-10.20_Outsourcing Agreement.txt" ;
+    ct:source_sha256 "64d989b896faeaaf5faa295dff3acce9ce13bf3b8a223b39ec2da903240b25da" ;
+    ct:start_char 19414 .
+
+ex:C037P0171 a ct:SourcePassage ;
+    ct:end_char 21905 ;
+    ct:exact_text "14.1. The Customer can cancel, on its own accord, the present Agreement upon certified notice to EIT, in the following cases:" ;
+    ct:source_path "cuad/FerroglobePlc_20150624_F-4A_EX-10.20_9154746_EX-10.20_Outsourcing Agreement.txt" ;
+    ct:source_sha256 "64d989b896faeaaf5faa295dff3acce9ce13bf3b8a223b39ec2da903240b25da" ;
+    ct:start_char 21780 .
+
+ex:C037P0180 a ct:SourcePassage ;
+    ct:end_char 23462 ;
+    ct:exact_text "15.1. In case of expiration or termination of the present Agreement, the Customer and EIT will cooperate, in good faith, to make possible a transfer, in due form to the Customer or to a third party, chosen by the Customer, for the provision of the services defined in this Agreement. For that purpose, the parties will develop, with enough time in advance and with the necessary haste, a Transition Plan where the actions and measures to be taken will be defined.   13" ;
+    ct:source_path "cuad/FerroglobePlc_20150624_F-4A_EX-10.20_9154746_EX-10.20_Outsourcing Agreement.txt" ;
+    ct:source_sha256 "64d989b896faeaaf5faa295dff3acce9ce13bf3b8a223b39ec2da903240b25da" ;
+    ct:start_char 22994 .
+
+ex:C037P0182 a ct:SourcePassage ;
+    ct:end_char 23750 ;
+    ct:exact_text "15.2. EIT will continue to provide the services defined in this Agreement between the date it receives from the Customer a notice ofexpiration or termination of this Agreement and the date this expiration or termination becomes effective." ;
+    ct:source_path "cuad/FerroglobePlc_20150624_F-4A_EX-10.20_9154746_EX-10.20_Outsourcing Agreement.txt" ;
+    ct:source_sha256 "64d989b896faeaaf5faa295dff3acce9ce13bf3b8a223b39ec2da903240b25da" ;
+    ct:start_char 23512 .
+
+ex:C037R0001 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 152" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:supported_by ex:C037P0152 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C037R0002 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 153" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:supported_by ex:C037P0153 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C037R0003 a ct:Rule ;
+    rdfs:label "Initial Term — source passage 168" ;
+    ct:kind "INITIAL_TERM" ;
+    ct:supported_by ex:C037P0168 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C037R0004 a ct:Rule ;
+    rdfs:label "Automatic Renewal — source passage 168" ;
+    ct:kind "AUTOMATIC_RENEWAL" ;
+    ct:supported_by ex:C037P0168 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C037R0005 a ct:Rule ;
+    rdfs:label "Termination — source passage 169" ;
+    ct:kind "TERMINATION" ;
+    ct:subject_to ex:C037R0005Condition169 ;
+    ct:supported_by ex:C037P0169 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C037R0005Condition169 a ct:Condition ;
+    ct:description "13.2. The Agreement rests, for all that, cancellable at any time by any of the parties before the expiry date of the Agreement or any of itsrenewals, upon three months prior written notice." ;
+    ct:supported_by ex:C037P0169 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C037R0006 a ct:Rule ;
+    rdfs:label "Termination — source passage 171" ;
+    ct:kind "TERMINATION" ;
+    ct:supported_by ex:C037P0171 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C037R0007 a ct:Rule ;
+    rdfs:label "Termination — source passage 178" ;
+    ct:kind "TERMINATION" ;
+    ct:references_section ex:C037R0007Ref0 ;
+    ct:subject_to ex:C037R0007Condition178 ;
+    ct:supported_by ex:C037P0178 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C037R0007Condition178 a ct:Condition ;
+    ct:description "14.2.2. In case of termination of this Agreement by the Customer according to Article 13.5, the Customer will pay EIT the amountof 3.000 €." ;
+    ct:supported_by ex:C037P0178 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C037R0007Ref0 a ct:Reference ;
+    rdfs:label "Article 13.5" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C037R0008 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 180" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:supported_by ex:C037P0180 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C037R0009 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 182" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:supported_by ex:C037P0182 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C037P0168 a ct:SourcePassage ;
+    ct:end_char 21560 ;
+    ct:exact_text "13.1. The present Agreement is effective as from 1 January 2009. It is established by calendar year and renewed tacitly every year." ;
+    ct:source_path "cuad/FerroglobePlc_20150624_F-4A_EX-10.20_9154746_EX-10.20_Outsourcing Agreement.txt" ;
+    ct:source_sha256 "64d989b896faeaaf5faa295dff3acce9ce13bf3b8a223b39ec2da903240b25da" ;
+    ct:start_char 21429 .
+
+ex:C037P0169 a ct:SourcePassage ;
+    ct:end_char 21753 ;
+    ct:exact_text "13.2. The Agreement rests, for all that, cancellable at any time by any of the parties before the expiry date of the Agreement or any of itsrenewals, upon three months prior written notice." ;
+    ct:source_path "cuad/FerroglobePlc_20150624_F-4A_EX-10.20_9154746_EX-10.20_Outsourcing Agreement.txt" ;
+    ct:source_sha256 "64d989b896faeaaf5faa295dff3acce9ce13bf3b8a223b39ec2da903240b25da" ;
+    ct:start_char 21564 .
+
+ex:C037P0178 a ct:SourcePassage ;
+    ct:end_char 22962 ;
+    ct:exact_text "14.2.2. In case of termination of this Agreement by the Customer according to Article 13.5, the Customer will pay EIT the amountof 3.000 €." ;
+    ct:source_path "cuad/FerroglobePlc_20150624_F-4A_EX-10.20_9154746_EX-10.20_Outsourcing Agreement.txt" ;
+    ct:source_sha256 "64d989b896faeaaf5faa295dff3acce9ce13bf3b8a223b39ec2da903240b25da" ;
+    ct:start_char 22823 .
+
+ct:Agreement a owl:Class ;
+    rdfs:label "Agreement" .
+
+ct:Condition a owl:Class ;
+    rdfs:label "Condition" .
+
+ct:Reference a owl:Class ;
+    rdfs:label "Reference" .
+
+ct:SourcePassage a owl:Class ;
+    rdfs:label "SourcePassage" .
+
+ct:Rule a owl:Class ;
+    rdfs:label "Rule" .
+

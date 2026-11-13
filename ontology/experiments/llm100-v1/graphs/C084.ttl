@@ -1,0 +1,288 @@
+@prefix ct: <https://cimulink.local/ontology/contract-terms/0.1#> .
+@prefix ex: <https://cimulink.local/ontology/llm100-v1/> .
+@prefix meta: <https://cimulink.local/ontology/extraction#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ct: a owl:Ontology ;
+    rdfs:comment "Partial five-contract development sample. No claim of complete contract coverage or legal correctness." .
+
+ct:agreement_effective_from a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:applies_within a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:calendar_date_status a owl:DatatypeProperty .
+
+ct:coverage a owl:DatatypeProperty .
+
+ct:description a owl:DatatypeProperty .
+
+ct:duration a owl:DatatypeProperty .
+
+ct:duration_status a owl:DatatypeProperty .
+
+ct:end_char a owl:DatatypeProperty .
+
+ct:end_date_status a owl:DatatypeProperty .
+
+ct:ends_on_event a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:exact_text a owl:DatatypeProperty .
+
+ct:has_party a owl:ObjectProperty ;
+    rdfs:domain ct:Agreement ;
+    rdfs:range ct:Party .
+
+ct:has_rule a owl:ObjectProperty ;
+    rdfs:domain ct:Agreement ;
+    rdfs:range ct:Rule .
+
+ct:kind a owl:DatatypeProperty .
+
+ct:notice_actor a owl:DatatypeProperty .
+
+ct:notice_form a owl:DatatypeProperty .
+
+ct:notice_period_status a owl:DatatypeProperty .
+
+ct:qualifies a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Rule .
+
+ct:references_section a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:renewal_count a owl:DatatypeProperty .
+
+ct:resolution_status a owl:DatatypeProperty .
+
+ct:resolved_to a owl:ObjectProperty ;
+    rdfs:domain ct:Reference ;
+    rdfs:range ct:SourcePassage .
+
+ct:source_path a owl:DatatypeProperty .
+
+ct:source_sha256 a owl:DatatypeProperty .
+
+ct:start_char a owl:DatatypeProperty .
+
+ct:starts_from a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:stated_end_date a owl:DatatypeProperty .
+
+ct:subject_to a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Condition .
+
+ct:supported_by a owl:ObjectProperty ;
+    rdfs:range ct:SourcePassage .
+
+ct:termination_notice a owl:DatatypeProperty .
+
+ex:C084 a ct:Agreement ;
+    rdfs:label "TEARDROPGOLFCO_10_23_1996-EX-10.12-ENDORSEMENT AGREEMENT.txt" ;
+    ct:coverage "LOCAL_LLM_PROPOSED_PARTIAL; NOT_HUMAN_REVIEWED" ;
+    ct:has_rule ex:C084R0001,
+        ex:C084R0002,
+        ex:C084R0003,
+        ex:C084R0004,
+        ex:C084R0005,
+        ex:C084R0006,
+        ex:C084R0007,
+        ex:C084R0008,
+        ex:C084R0009,
+        ex:C084R0010 ;
+    ct:source_path "cuad/TEARDROPGOLFCO_10_23_1996-EX-10.12-ENDORSEMENT AGREEMENT.txt" ;
+    ct:source_sha256 "3310cdd1e51609025da7bd6bfc11d72087bde2b2bdfdf2b8f371f2e159abf3b2" ;
+    meta:model_digest "0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0" .
+
+ct:Party a owl:Class ;
+    rdfs:label "Party" .
+
+ex:C084P0018 a ct:SourcePassage ;
+    ct:end_char 2633 ;
+    ct:exact_text "(e)  \"Contract Year\" shall mean that twelve (12)month period of time               commencing each first (1st) day of January throughout the               Contract Period." ;
+    ct:source_path "cuad/TEARDROPGOLFCO_10_23_1996-EX-10.12-ENDORSEMENT AGREEMENT.txt" ;
+    ct:source_sha256 "3310cdd1e51609025da7bd6bfc11d72087bde2b2bdfdf2b8f371f2e159abf3b2" ;
+    ct:start_char 2462 .
+
+ex:C084P0075 a ct:SourcePassage ;
+    ct:end_char 18303 ;
+    ct:exact_text "20. TERM OF AGREEMENT. The term of this Agreement shall commence January 1, 1996, and shall continue for a period of three (3) years, concluding December 31, 1998." ;
+    ct:source_path "cuad/TEARDROPGOLFCO_10_23_1996-EX-10.12-ENDORSEMENT AGREEMENT.txt" ;
+    ct:source_sha256 "3310cdd1e51609025da7bd6bfc11d72087bde2b2bdfdf2b8f371f2e159abf3b2" ;
+    ct:start_char 18140 .
+
+ex:C084P0081 a ct:SourcePassage ;
+    ct:end_char 19630 ;
+    ct:exact_text "22. SPECIAL RIGHT OF TERMINATION BY TPC. TPC shall have the right to terminate this Agreement upon thirty (30) days prior written notice to Consolidated Artists or Advantage in the event of the occurrence of any of the following contingencies:" ;
+    ct:source_path "cuad/TEARDROPGOLFCO_10_23_1996-EX-10.12-ENDORSEMENT AGREEMENT.txt" ;
+    ct:source_sha256 "3310cdd1e51609025da7bd6bfc11d72087bde2b2bdfdf2b8f371f2e159abf3b2" ;
+    ct:start_char 19387 .
+
+ex:C084P0085 a ct:SourcePassage ;
+    ct:end_char 20234 ;
+    ct:exact_text "In the event of such termination above, the parties agree that the Retainer Fee due Consolidated Artists shall be prorated to the effective date of termination. Furthermore, TPC agrees that any Tournament Bonuses, Money List Bonuses and any Royalty Compensation earned by Ogle prior to the effective date of termination shall be paid in full within thirty (30) days of such effective date of termination." ;
+    ct:source_path "cuad/TEARDROPGOLFCO_10_23_1996-EX-10.12-ENDORSEMENT AGREEMENT.txt" ;
+    ct:source_sha256 "3310cdd1e51609025da7bd6bfc11d72087bde2b2bdfdf2b8f371f2e159abf3b2" ;
+    ct:start_char 19830 .
+
+ex:C084R0001 a ct:Rule ;
+    rdfs:label "Initial Term — source passage 17" ;
+    ct:kind "INITIAL_TERM" ;
+    ct:subject_to ex:C084R0001Condition17 ;
+    ct:supported_by ex:C084P0017 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C084R0001Condition17 a ct:Condition ;
+    ct:description "(d)  \"Contract Period\" shall mean that period of time commencing               January 1, 1996, and concluding December 31, 1998, unless sooner               terminated in accordance with the terms and conditions hereof." ;
+    ct:supported_by ex:C084P0017 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C084R0002 a ct:Rule ;
+    rdfs:label "Initial Term — source passage 18" ;
+    ct:kind "INITIAL_TERM" ;
+    ct:supported_by ex:C084P0018 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C084R0003 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 28" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:references_section ex:C084R0003Ref0 ;
+    ct:subject_to ex:C084R0003Condition28 ;
+    ct:supported_by ex:C084P0028 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C084R0003Condition28 a ct:Condition ;
+    ct:description "5.    RETENTION OF ENDORSEMENT RIGHTS. Subject to the provisions of Paragraphs 2, 3 and 4 above, TPC agrees that Consolidated Artists shall retain all rights in and to the Ogle Endorsement and shall not be prevented from using or permitting or licensing others to use his name or endorsement in connection with the promotion, advertisement, or sale of any product or service other than a golf putter in the Contract Territory during the Contract Period. TPC further agrees that upon the termination of this Endorsement Agreement for any cause whatsoever, it will cease using the Ogle Endorsement, the name \"Brett Ogle,\" or any facsimile thereof, for any promotional or advertising purposes; provided, however, that TPC shall have the right to use the Ogle Endorsement in advertisements for ad space purchased by TPC prior to the termination of this Agreement for a period of up to six (6) months following such termination. In this connection, TPC shall provide Consolidated Artists with a list of such previously purchased ad space within seven (7) days of the effective date of termination and all such advertisements released after the effective date of termination shall be subject to Consolidated Artists' prior approval pursuant to the terms of Paragraph 7 below." ;
+    ct:supported_by ex:C084P0028 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C084R0003Ref0 a ct:Reference ;
+    rdfs:label "Paragraph 7" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C084R0004 a ct:Rule ;
+    rdfs:label "Termination — source passage 28" ;
+    ct:kind "TERMINATION" ;
+    ct:references_section ex:C084R0004Ref0 ;
+    ct:subject_to ex:C084R0004Condition28 ;
+    ct:supported_by ex:C084P0028 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C084R0004Condition28 a ct:Condition ;
+    ct:description "5.    RETENTION OF ENDORSEMENT RIGHTS. Subject to the provisions of Paragraphs 2, 3 and 4 above, TPC agrees that Consolidated Artists shall retain all rights in and to the Ogle Endorsement and shall not be prevented from using or permitting or licensing others to use his name or endorsement in connection with the promotion, advertisement, or sale of any product or service other than a golf putter in the Contract Territory during the Contract Period. TPC further agrees that upon the termination of this Endorsement Agreement for any cause whatsoever, it will cease using the Ogle Endorsement, the name \"Brett Ogle,\" or any facsimile thereof, for any promotional or advertising purposes; provided, however, that TPC shall have the right to use the Ogle Endorsement in advertisements for ad space purchased by TPC prior to the termination of this Agreement for a period of up to six (6) months following such termination. In this connection, TPC shall provide Consolidated Artists with a list of such previously purchased ad space within seven (7) days of the effective date of termination and all such advertisements released after the effective date of termination shall be subject to Consolidated Artists' prior approval pursuant to the terms of Paragraph 7 below." ;
+    ct:supported_by ex:C084P0028 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C084R0004Ref0 a ct:Reference ;
+    rdfs:label "Paragraph 7" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C084R0005 a ct:Rule ;
+    rdfs:label "Termination — source passage 70" ;
+    ct:kind "TERMINATION" ;
+    ct:subject_to ex:C084R0005Condition70 ;
+    ct:supported_by ex:C084P0070 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C084R0005Condition70 a ct:Condition ;
+    ct:description "17. SPECIAL RIGHT OF NEGOTIATION AND TERMINATION. If at any time during the Contract Period Ogle determines that he no longer desires to use the Endorsed Product Consolidated Artists shall so notify TPC in writing and the parties shall meet and negotiate in good faith an amicable solution. Such discussion shall take place within fourteen (14) days of Consolidated Artists' notice and shall include such issues as Ogle's continued use of the Endorsed Product, the continued use of the Ogle Endorsement and the termination of this Agreement. If no solution is reached within fourteen (14) days of such negotiation, the parties agree that this Agreement shall automatically terminate and that TPC will cease" ;
+    ct:supported_by ex:C084P0070 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C084R0006 a ct:Rule ;
+    rdfs:label "Conditional Referenced Term — source passage 70" ;
+    ct:kind "CONDITIONAL_REFERENCED_TERM" ;
+    ct:subject_to ex:C084R0006Condition70 ;
+    ct:supported_by ex:C084P0070 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C084R0006Condition70 a ct:Condition ;
+    ct:description "17. SPECIAL RIGHT OF NEGOTIATION AND TERMINATION. If at any time during the Contract Period Ogle determines that he no longer desires to use the Endorsed Product Consolidated Artists shall so notify TPC in writing and the parties shall meet and negotiate in good faith an amicable solution. Such discussion shall take place within fourteen (14) days of Consolidated Artists' notice and shall include such issues as Ogle's continued use of the Endorsed Product, the continued use of the Ogle Endorsement and the termination of this Agreement. If no solution is reached within fourteen (14) days of such negotiation, the parties agree that this Agreement shall automatically terminate and that TPC will cease" ;
+    ct:supported_by ex:C084P0070 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C084R0007 a ct:Rule ;
+    rdfs:label "Initial Term — source passage 75" ;
+    ct:kind "INITIAL_TERM" ;
+    ct:supported_by ex:C084P0075 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C084R0008 a ct:Rule ;
+    rdfs:label "Termination — source passage 77" ;
+    ct:kind "TERMINATION" ;
+    ct:subject_to ex:C084R0008Condition77 ;
+    ct:supported_by ex:C084P0077 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C084R0008Condition77 a ct:Condition ;
+    ct:description "21. SPECIAL RIGHT OF TERMINATION BY CONSOLIDATED ARTISTS. Consolidated Artists shall have the right to terminate this Agreement upon thirty (30) days prior written notice to TPC in the event of the occurrence of any of the following contingencies:" ;
+    ct:supported_by ex:C084P0077 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C084R0009 a ct:Rule ;
+    rdfs:label "Termination — source passage 81" ;
+    ct:kind "TERMINATION" ;
+    ct:supported_by ex:C084P0081 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C084R0010 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 85" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:supported_by ex:C084P0085 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C084P0017 a ct:SourcePassage ;
+    ct:end_char 2451 ;
+    ct:exact_text "(d)  \"Contract Period\" shall mean that period of time commencing               January 1, 1996, and concluding December 31, 1998, unless sooner               terminated in accordance with the terms and conditions hereof." ;
+    ct:source_path "cuad/TEARDROPGOLFCO_10_23_1996-EX-10.12-ENDORSEMENT AGREEMENT.txt" ;
+    ct:source_sha256 "3310cdd1e51609025da7bd6bfc11d72087bde2b2bdfdf2b8f371f2e159abf3b2" ;
+    ct:start_char 2231 .
+
+ex:C084P0077 a ct:SourcePassage ;
+    ct:end_char 18604 ;
+    ct:exact_text "21. SPECIAL RIGHT OF TERMINATION BY CONSOLIDATED ARTISTS. Consolidated Artists shall have the right to terminate this Agreement upon thirty (30) days prior written notice to TPC in the event of the occurrence of any of the following contingencies:" ;
+    ct:source_path "cuad/TEARDROPGOLFCO_10_23_1996-EX-10.12-ENDORSEMENT AGREEMENT.txt" ;
+    ct:source_sha256 "3310cdd1e51609025da7bd6bfc11d72087bde2b2bdfdf2b8f371f2e159abf3b2" ;
+    ct:start_char 18357 .
+
+ct:Agreement a owl:Class ;
+    rdfs:label "Agreement" .
+
+ex:C084P0028 a ct:SourcePassage ;
+    ct:end_char 5885 ;
+    ct:exact_text "5.    RETENTION OF ENDORSEMENT RIGHTS. Subject to the provisions of Paragraphs 2, 3 and 4 above, TPC agrees that Consolidated Artists shall retain all rights in and to the Ogle Endorsement and shall not be prevented from using or permitting or licensing others to use his name or endorsement in connection with the promotion, advertisement, or sale of any product or service other than a golf putter in the Contract Territory during the Contract Period. TPC further agrees that upon the termination of this Endorsement Agreement for any cause whatsoever, it will cease using the Ogle Endorsement, the name \"Brett Ogle,\" or any facsimile thereof, for any promotional or advertising purposes; provided, however, that TPC shall have the right to use the Ogle Endorsement in advertisements for ad space purchased by TPC prior to the termination of this Agreement for a period of up to six (6) months following such termination. In this connection, TPC shall provide Consolidated Artists with a list of such previously purchased ad space within seven (7) days of the effective date of termination and all such advertisements released after the effective date of termination shall be subject to Consolidated Artists' prior approval pursuant to the terms of Paragraph 7 below." ;
+    ct:source_path "cuad/TEARDROPGOLFCO_10_23_1996-EX-10.12-ENDORSEMENT AGREEMENT.txt" ;
+    ct:source_sha256 "3310cdd1e51609025da7bd6bfc11d72087bde2b2bdfdf2b8f371f2e159abf3b2" ;
+    ct:start_char 4616 .
+
+ex:C084P0070 a ct:SourcePassage ;
+    ct:end_char 16830 ;
+    ct:exact_text "17. SPECIAL RIGHT OF NEGOTIATION AND TERMINATION. If at any time during the Contract Period Ogle determines that he no longer desires to use the Endorsed Product Consolidated Artists shall so notify TPC in writing and the parties shall meet and negotiate in good faith an amicable solution. Such discussion shall take place within fourteen (14) days of Consolidated Artists' notice and shall include such issues as Ogle's continued use of the Endorsed Product, the continued use of the Ogle Endorsement and the termination of this Agreement. If no solution is reached within fourteen (14) days of such negotiation, the parties agree that this Agreement shall automatically terminate and that TPC will cease" ;
+    ct:source_path "cuad/TEARDROPGOLFCO_10_23_1996-EX-10.12-ENDORSEMENT AGREEMENT.txt" ;
+    ct:source_sha256 "3310cdd1e51609025da7bd6bfc11d72087bde2b2bdfdf2b8f371f2e159abf3b2" ;
+    ct:start_char 16124 .
+
+ct:Condition a owl:Class ;
+    rdfs:label "Condition" .
+
+ct:Reference a owl:Class ;
+    rdfs:label "Reference" .
+
+ct:SourcePassage a owl:Class ;
+    rdfs:label "SourcePassage" .
+
+ct:Rule a owl:Class ;
+    rdfs:label "Rule" .
+

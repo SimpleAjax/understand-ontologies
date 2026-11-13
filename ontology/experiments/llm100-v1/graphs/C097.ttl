@@ -1,0 +1,703 @@
+@prefix ct: <https://cimulink.local/ontology/contract-terms/0.1#> .
+@prefix ex: <https://cimulink.local/ontology/llm100-v1/> .
+@prefix meta: <https://cimulink.local/ontology/extraction#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ct: a owl:Ontology ;
+    rdfs:comment "Partial five-contract development sample. No claim of complete contract coverage or legal correctness." .
+
+ct:agreement_effective_from a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:applies_within a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:calendar_date_status a owl:DatatypeProperty .
+
+ct:coverage a owl:DatatypeProperty .
+
+ct:description a owl:DatatypeProperty .
+
+ct:duration a owl:DatatypeProperty .
+
+ct:duration_status a owl:DatatypeProperty .
+
+ct:end_char a owl:DatatypeProperty .
+
+ct:end_date_status a owl:DatatypeProperty .
+
+ct:ends_on_event a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:exact_text a owl:DatatypeProperty .
+
+ct:has_party a owl:ObjectProperty ;
+    rdfs:domain ct:Agreement ;
+    rdfs:range ct:Party .
+
+ct:has_rule a owl:ObjectProperty ;
+    rdfs:domain ct:Agreement ;
+    rdfs:range ct:Rule .
+
+ct:kind a owl:DatatypeProperty .
+
+ct:notice_actor a owl:DatatypeProperty .
+
+ct:notice_form a owl:DatatypeProperty .
+
+ct:notice_period_status a owl:DatatypeProperty .
+
+ct:qualifies a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Rule .
+
+ct:references_section a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:renewal_count a owl:DatatypeProperty .
+
+ct:resolution_status a owl:DatatypeProperty .
+
+ct:resolved_to a owl:ObjectProperty ;
+    rdfs:domain ct:Reference ;
+    rdfs:range ct:SourcePassage .
+
+ct:source_path a owl:DatatypeProperty .
+
+ct:source_sha256 a owl:DatatypeProperty .
+
+ct:start_char a owl:DatatypeProperty .
+
+ct:starts_from a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:stated_end_date a owl:DatatypeProperty .
+
+ct:subject_to a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Condition .
+
+ct:supported_by a owl:ObjectProperty ;
+    rdfs:range ct:SourcePassage .
+
+ct:termination_notice a owl:DatatypeProperty .
+
+ex:C097 a ct:Agreement ;
+    rdfs:label "XENCORINC_10_25_2013-EX-10.24-COLLABORATION AGREEMENT (3).txt" ;
+    ct:coverage "LOCAL_LLM_PROPOSED_PARTIAL; NOT_HUMAN_REVIEWED" ;
+    ct:has_rule ex:C097R0001,
+        ex:C097R0002,
+        ex:C097R0003,
+        ex:C097R0004,
+        ex:C097R0005,
+        ex:C097R0006,
+        ex:C097R0007,
+        ex:C097R0008,
+        ex:C097R0009,
+        ex:C097R0010,
+        ex:C097R0011,
+        ex:C097R0012,
+        ex:C097R0013,
+        ex:C097R0014,
+        ex:C097R0015,
+        ex:C097R0016,
+        ex:C097R0017,
+        ex:C097R0018,
+        ex:C097R0019 ;
+    ct:source_path "cuad/XENCORINC_10_25_2013-EX-10.24-COLLABORATION AGREEMENT (3).txt" ;
+    ct:source_sha256 "afa8a94a1c6252861882320a9d28516ea5b4b8a4e0215e9b2213f442a2528540" ;
+    meta:model_digest "0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0" .
+
+ct:Party a owl:Class ;
+    rdfs:label "Party" .
+
+ex:C097P0275 a ct:SourcePassage ;
+    ct:end_char 5340 ;
+    ct:exact_text "Termination of this Agreement" ;
+    ct:source_path "cuad/XENCORINC_10_25_2013-EX-10.24-COLLABORATION AGREEMENT (3).txt" ;
+    ct:source_sha256 "afa8a94a1c6252861882320a9d28516ea5b4b8a4e0215e9b2213f442a2528540" ;
+    ct:start_char 5311 .
+
+ex:C097P0282 a ct:SourcePassage ;
+    ct:end_char 5446 ;
+    ct:exact_text "Effects of Termination of this Agreement" ;
+    ct:source_path "cuad/XENCORINC_10_25_2013-EX-10.24-COLLABORATION AGREEMENT (3).txt" ;
+    ct:source_sha256 "afa8a94a1c6252861882320a9d28516ea5b4b8a4e0215e9b2213f442a2528540" ;
+    ct:start_char 5406 .
+
+ex:C097P0289 a ct:SourcePassage ;
+    ct:end_char 5538 ;
+    ct:exact_text "Surviving Provisions" ;
+    ct:source_path "cuad/XENCORINC_10_25_2013-EX-10.24-COLLABORATION AGREEMENT (3).txt" ;
+    ct:source_sha256 "afa8a94a1c6252861882320a9d28516ea5b4b8a4e0215e9b2213f442a2528540" ;
+    ct:start_char 5518 .
+
+ex:C097P0443 a ct:SourcePassage ;
+    ct:end_char 98033 ;
+    ct:exact_text "10.2.2 Termination for Material Breach: This Agreement may be terminated at once by written notice by either Party, if the other Party breaches this Agreement in any material manner and shall have failed to remedy such default within thirty (30) days after written notice thereof from the terminating Party.   10.3 Effects of Termination of this Agreement   30" ;
+    ct:source_path "cuad/XENCORINC_10_25_2013-EX-10.24-COLLABORATION AGREEMENT (3).txt" ;
+    ct:source_sha256 "afa8a94a1c6252861882320a9d28516ea5b4b8a4e0215e9b2213f442a2528540" ;
+    ct:start_char 97673 .
+
+ex:C097P0445 a ct:SourcePassage ;
+    ct:end_char 100763 ;
+    ct:exact_text "In the event of termination by BII according to Section 10.2.1 prior to completion of the Phase 1 clinical trial with the Product, XENCOR shall have no obligation to pay BII any or all of the Total Amount. The use of the Process is subject to Section 5.2.3, 5.2.4 and 5.2.5.   d. In all of the foregoing cases a.-c., at the request of XENCOR and to the extent available at BII, BII shall destroy the Material or deliver the Material to XENCOR at XENCOR's cost and shall promptly return all XENCOR Confidential Information and Know­How to XENCOR; except for a copy and/or sample of each material for documentation purposes only, which shall remain to the confidentiality and non­use provisions in Section 9, and shall refrain from using the Material. Except for the foregoing, BII's responsibility to keep and store the Material and any other materials shall terminate one hundred eighty (180) days after expiration or termination of the respective Project or this Agreement.   In the foregoing cases a.-c., XENCOR shall promptly return all BII Confidential Information and Know-How to BII, except for a single copy and/or sample for documentation purposes only, which shall remain to the confidentiality and non-use provisions in Section 9, and shall refrain from using the Process, except as contemplated in Section 10.3.1.c or 10.3.1.d.   " ;
+    ct:source_path "cuad/XENCORINC_10_25_2013-EX-10.24-COLLABORATION AGREEMENT (3).txt" ;
+    ct:source_sha256 "afa8a94a1c6252861882320a9d28516ea5b4b8a4e0215e9b2213f442a2528540" ;
+    ct:start_char 99422 .
+
+ex:C097P0449 a ct:SourcePassage ;
+    ct:end_char 105805 ;
+    ct:exact_text "The expiration or termination of this Agreement for any reason shall not release either Party from any liability that, at the time of such expiration or termination, has already accrued to the other Party or that is attributable to a period prior to such expiration or termination. The following provisions of this Agreement shall survive expiration or termination of this Agreement for any reason: Section 1 (Definitions), Section 3 (Payments) except as expressly set forth in Section 10.3; Section 5 (Ownership and Use of Project Data), Section 6.4 (Process for Defense of Infringement of Third Party Intellectual Property); Section 6.5 (Disclaimer of Warranties); Section 7 (Liability, Indemnification, Limitations and Insurance); Section 8 (Intellectual Property), but excluding the last sentence of the first paragraph of Section 8.2.3 (Other Improvements) referring to Sections 5.2.3, 5.2.4 and 5.2.4 except to the extent that those sections are expressly stated to survive termination as set forth in Section 10.3, and excluding Section 8.2.5b; Section 9 (Confidentiality); Section 10.3 (Effects of Termination of this Agreement), including the provisions referenced in Section 10.3 as continuing after termination, as applicable; Section 10.4 (Surviving Provisions); and Section 11 (Miscellaneous).   " ;
+    ct:source_path "cuad/XENCORINC_10_25_2013-EX-10.24-COLLABORATION AGREEMENT (3).txt" ;
+    ct:source_sha256 "afa8a94a1c6252861882320a9d28516ea5b4b8a4e0215e9b2213f442a2528540" ;
+    ct:start_char 104496 .
+
+ex:C097R0001 a ct:Rule ;
+    rdfs:label "Termination — source passage 269" ;
+    ct:kind "TERMINATION" ;
+    ct:supported_by ex:C097P0269 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C097R0002 a ct:Rule ;
+    rdfs:label "Conditional Referenced Term — source passage 269" ;
+    ct:kind "CONDITIONAL_REFERENCED_TERM" ;
+    ct:supported_by ex:C097P0269 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C097R0003 a ct:Rule ;
+    rdfs:label "Termination — source passage 275" ;
+    ct:kind "TERMINATION" ;
+    ct:supported_by ex:C097P0275 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C097R0004 a ct:Rule ;
+    rdfs:label "Termination — source passage 282" ;
+    ct:kind "TERMINATION" ;
+    ct:supported_by ex:C097P0282 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C097R0005 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 289" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:supported_by ex:C097P0289 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C097R0006 a ct:Rule ;
+    rdfs:label "Conditional Referenced Term — source passage 369" ;
+    ct:kind "CONDITIONAL_REFERENCED_TERM" ;
+    ct:references_section ex:C097R0006Ref0,
+        ex:C097R0006Ref1 ;
+    ct:subject_to ex:C097R0006Condition369 ;
+    ct:supported_by ex:C097P0369 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C097R0006Condition369 a ct:Condition ;
+    ct:description "b. In case XENCOR decides to proceed with the further development of the Product without a Business Partner, XENCOR will pay BII the Total Amount in one or more lump sum payments within five (5) calendar years from the Due Date.   c. As long as XENCOR, notwithstanding its commercially reasonable efforts after the completion of the Phase 1 clinical trial either (i) is not able to further develop the Product for technical and/or scientific reasons or (ii) does not decide to proceed with the further development of the Product without a Business Partner and does not enter into an agreement with a Business Partner within two (2) calendar years from the Due Date, then XENCOR shall have no obligation to pay BII any or all of the Total Amount. For the avoidance of doubt, such obligations will become due as described in this Section 3.1.2, at any time XENCOR enters into an agreement with at least one Business Partner or further develops the Product within ten (10) calendar years following the Effective Date, as provided in Section 10.3.   3.1.3 Invoicing   XENCOR shall notify BII in writing of any of the circumstances listed in Section 3.1.2.a to 3.1.2.c. BII shall issue an invoice for the payments of the Total Amount agreed upon with XENCOR according to the payment schedule in Section 3.1.2 and payment of the Technology Access Fee, as applicable. " ;
+    ct:supported_by ex:C097P0369 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C097R0006Ref0 a ct:Reference ;
+    rdfs:label "Section 3.1.2" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C097R0006Ref1 a ct:Reference ;
+    rdfs:label "Section 10.3" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C097R0007 a ct:Rule ;
+    rdfs:label "Termination — source passage 400" ;
+    ct:kind "TERMINATION" ;
+    ct:references_section ex:C097R0007Ref0 ;
+    ct:subject_to ex:C097R0007Condition400 ;
+    ct:supported_by ex:C097P0400 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C097R0007Condition400 a ct:Condition ;
+    ct:description "provided that, if BII does not agree to enter into such contract manufacturing agreement within [...***...] after such written notice, XENCOR (or its Business Partner) shall be free to enter into an agreement with a third party (which may include an agreement for any Business Partner or its affiliate to manufacture and supply Product).   c. The right set forth in Section 5.2.2.b shall automatically terminate if BII does not exercise the first right of negotiation set forth in Section 5.2.2.a. The rights set forth in Section 5.2.2.a and b shall automatically terminate if BII does not produce a viable Process for manufacture of Product as evidenced by failure to produce cGMP Product within a timeframe reasonably and customary in the biopharmaceutical industry for companies of comparable size and the respective activities.   d. In both cases set forth above, in Section 5.2.2.a. and b., if BII exercises its first right of negotiation, BII and XENCOR (and/or its Business Partner, as applicable) will negotiate in good faith a respective contract manufacturing agreement based on the market rate" ;
+    ct:supported_by ex:C097P0400 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C097R0007Ref0 a ct:Reference ;
+    rdfs:label "Section 5.2.2" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C097R0008 a ct:Rule ;
+    rdfs:label "Conditional Referenced Term — source passage 400" ;
+    ct:kind "CONDITIONAL_REFERENCED_TERM" ;
+    ct:references_section ex:C097R0008Ref0 ;
+    ct:subject_to ex:C097R0008Condition400 ;
+    ct:supported_by ex:C097P0400 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C097R0008Condition400 a ct:Condition ;
+    ct:description "provided that, if BII does not agree to enter into such contract manufacturing agreement within [...***...] after such written notice, XENCOR (or its Business Partner) shall be free to enter into an agreement with a third party (which may include an agreement for any Business Partner or its affiliate to manufacture and supply Product).   c. The right set forth in Section 5.2.2.b shall automatically terminate if BII does not exercise the first right of negotiation set forth in Section 5.2.2.a. The rights set forth in Section 5.2.2.a and b shall automatically terminate if BII does not produce a viable Process for manufacture of Product as evidenced by failure to produce cGMP Product within a timeframe reasonably and customary in the biopharmaceutical industry for companies of comparable size and the respective activities.   d. In both cases set forth above, in Section 5.2.2.a. and b., if BII exercises its first right of negotiation, BII and XENCOR (and/or its Business Partner, as applicable) will negotiate in good faith a respective contract manufacturing agreement based on the market rate" ;
+    ct:supported_by ex:C097P0400 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C097R0008Ref0 a ct:Reference ;
+    rdfs:label "Section 5.2.2" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C097R0009 a ct:Rule ;
+    rdfs:label "Initial Term — source passage 442" ;
+    ct:kind "INITIAL_TERM" ;
+    ct:subject_to ex:C097R0009Condition442 ;
+    ct:supported_by ex:C097P0442 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C097R0009Condition442 a ct:Condition ;
+    ct:description "inform BII, to the extent known to XENCOR, where the Controlled Technology is listed on the Commerce Control List or the Chemical Weapons Convention Schedules of Chemicals and what restrictions apply to the export or disclosure of the Controlled Technology under U.S. law.   XENCOR further agrees to cooperate with BII by providing upon request information and other assistance necessary for the export classification, export documentation and export licensing, if required, for the Controlled Technology under U.S. export laws.   In any event, XENCOR hereby agrees that it will not disclose Controlled Technology to BII or its Affiliated Companies without the express prior consent of BII.   10 Term and Termination   10.1 Term   This Agreement shall take effect as of the Effective Date and shall expire upon completion of the Project as set forth in the Project Plan and after payment of all payments due and payable according to this Agreement, unless terminated earlier in accordance with this Agreement.   10.2 Termination of this Agreement   10.2.1 If it is apparent to either Party at any stage of the Project that it will not be possible to carry out the Project for scientific, technical or business reasons, such Party may terminate this Agreement upon one hundred eighty (180) days prior written notice to the other Party.   " ;
+    ct:supported_by ex:C097P0442 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C097R0010 a ct:Rule ;
+    rdfs:label "Termination — source passage 442" ;
+    ct:kind "TERMINATION" ;
+    ct:subject_to ex:C097R0010Condition442 ;
+    ct:supported_by ex:C097P0442 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C097R0010Condition442 a ct:Condition ;
+    ct:description "inform BII, to the extent known to XENCOR, where the Controlled Technology is listed on the Commerce Control List or the Chemical Weapons Convention Schedules of Chemicals and what restrictions apply to the export or disclosure of the Controlled Technology under U.S. law.   XENCOR further agrees to cooperate with BII by providing upon request information and other assistance necessary for the export classification, export documentation and export licensing, if required, for the Controlled Technology under U.S. export laws.   In any event, XENCOR hereby agrees that it will not disclose Controlled Technology to BII or its Affiliated Companies without the express prior consent of BII.   10 Term and Termination   10.1 Term   This Agreement shall take effect as of the Effective Date and shall expire upon completion of the Project as set forth in the Project Plan and after payment of all payments due and payable according to this Agreement, unless terminated earlier in accordance with this Agreement.   10.2 Termination of this Agreement   10.2.1 If it is apparent to either Party at any stage of the Project that it will not be possible to carry out the Project for scientific, technical or business reasons, such Party may terminate this Agreement upon one hundred eighty (180) days prior written notice to the other Party.   " ;
+    ct:supported_by ex:C097P0442 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C097R0011 a ct:Rule ;
+    rdfs:label "Termination — source passage 443" ;
+    ct:kind "TERMINATION" ;
+    ct:supported_by ex:C097P0443 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C097R0012 a ct:Rule ;
+    rdfs:label "Termination — source passage 444" ;
+    ct:kind "TERMINATION" ;
+    ct:references_section ex:C097R0012Ref0,
+        ex:C097R0012Ref1,
+        ex:C097R0012Ref2,
+        ex:C097R0012Ref3 ;
+    ct:subject_to ex:C097R0012Condition444 ;
+    ct:supported_by ex:C097P0444 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C097R0012Condition444 a ct:Condition ;
+    ct:description "10.3.1 Effect of Termination prior to completion of the Phase 1 clinical trial with the Product as described in Section 2.8.3.   a. In the event of termination by XENCOR according to Section 10.2.1 prior to completion of the Phase 1 clinical trial with the Product as described in Section 2.8.3 for technical and/or scientific reasons, XENCOR shall have no obligation to pay BII any or all of the Total Amount. For the avoidance of doubt, in such case, XENCOR may not use the Process outside BII, except as otherwise agreed in writing by XENCOR and BII.   b. In the event of termination by XENCOR according to Section 10.2.1 prior to completion of the Phase 1 clinical trial with the Product as described in Section 2.8.3. for any other reason than the reasons set forth under Section 10.3.1.a the Total Amount shall be limited to all non-cancellable expenses reasonably incurred by BII in accordance with the Project Plan prior to such termination in respect of the purchase of supplies or raw materials, and reasonable wind-down costs not to exceed sixty (60) days. BII shall mitigate all wind-down costs and non-cancellable expenses to the extent possible. Campaigns cancelled shall be paid as provided for in Section 4.2 above. For the avoidance of doubt, in such case, XENCOR many not use the Process outside BII, except as otherwise agreed in writing by XENCOR and BII.   c. " ;
+    ct:supported_by ex:C097P0444 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C097R0012Ref0 a ct:Reference ;
+    rdfs:label "Section 2.8.3" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C097R0012Ref1 a ct:Reference ;
+    rdfs:label "Section 10.2.1" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C097R0012Ref2 a ct:Reference ;
+    rdfs:label "Section 10.3.1" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C097R0012Ref3 a ct:Reference ;
+    rdfs:label "Section 4.2" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C097R0013 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 445" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:references_section ex:C097R0013Ref0,
+        ex:C097R0013Ref1,
+        ex:C097R0013Ref2,
+        ex:C097R0013Ref3 ;
+    ct:supported_by ex:C097P0445 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C097R0013Ref0 a ct:Reference ;
+    rdfs:label "Section 10.2.1" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C097R0013Ref1 a ct:Reference ;
+    rdfs:label "Section 5.2.3" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C097R0013Ref2 a ct:Reference ;
+    rdfs:label "Section 9" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C097R0013Ref3 a ct:Reference ;
+    rdfs:label "Section 10.3.1" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C097R0014 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 446" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:references_section ex:C097R0014Ref0,
+        ex:C097R0014Ref1,
+        ex:C097R0014Ref2,
+        ex:C097R0014Ref3,
+        ex:C097R0014Ref4,
+        ex:C097R0014Ref5,
+        ex:C097R0014Ref6 ;
+    ct:subject_to ex:C097R0014Condition446 ;
+    ct:supported_by ex:C097P0446 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C097R0014Condition446 a ct:Condition ;
+    ct:description "For the a voidance of doubt, in the event of a termination by XENCOR as contemplated in clause b of this Section 10.3.1, Section 3.1.2.c shall continue in effect, but Section 3.1.2 shall not survive in the event of any termination described in clause a. and c.   10.3.2 Effect of Termination after completion of the Phase 1 clinical trial with the Product as described in Section 2.8.3.   a. In the event of termination by XENCOR according to Section 10.2.1 after completion of the Phase 1 clinical trial with the Product as described in Section 2.8.3 for technical and/or scientific reasons, XENCOR shall have no obligation to pay BII any or all of the Total Amount. For the avoidance of doubt, in such case, XENCOR may not use the Process outside BII, except as otherwise agreed in writing by XENCOR and BII. For the avoidance of doubt, in the event of a termination as contemplated in this Section 10.3.2a, Section 3.1.2 c shall survive.   b. In the event of termination by XENCOR according to Section 10.2.1 after completion of the Phase 1 clinical trial with the Product as described in Section 2.8.3 for a reason not listed in Section 10.3.2.a, the Total Amount shall be limited to all non-cancellable expenses reasonably incurred by BII in accordance with the Project Plan prior to such   31" ;
+    ct:supported_by ex:C097P0446 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C097R0014Ref0 a ct:Reference ;
+    rdfs:label "clause b" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C097R0014Ref1 a ct:Reference ;
+    rdfs:label "Section 10.3.1" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C097R0014Ref2 a ct:Reference ;
+    rdfs:label "Section 3.1.2" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C097R0014Ref3 a ct:Reference ;
+    rdfs:label "clause a" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C097R0014Ref4 a ct:Reference ;
+    rdfs:label "Section 2.8.3" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C097R0014Ref5 a ct:Reference ;
+    rdfs:label "Section 10.2.1" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C097R0014Ref6 a ct:Reference ;
+    rdfs:label "Section 10.3.2" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C097R0015 a ct:Rule ;
+    rdfs:label "Termination — source passage 447" ;
+    ct:kind "TERMINATION" ;
+    ct:references_section ex:C097R0015Ref0,
+        ex:C097R0015Ref1,
+        ex:C097R0015Ref2,
+        ex:C097R0015Ref3,
+        ex:C097R0015Ref4,
+        ex:C097R0015Ref5 ;
+    ct:subject_to ex:C097R0015Condition447 ;
+    ct:supported_by ex:C097P0447 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C097R0015Condition447 a ct:Condition ;
+    ct:description "termination in respect of the purchase of supplies or raw materials, and reasonable wind-down costs not to exceed sixty (60) days. BII shall mitigate all wind-down costs and non-cancellable expenses to the extent possible. Campaigns cancelled shall be paid as provided for in Section 4.2 above. For the avoidance of doubt, in the event of a termination as contemplated in this Section 10.3.2b, Section 3.1.2.c shall continue in effect. The use of the Process is subject to Sections 5.2.3, 5.2.4 and 5.2.5.   c. In the event of termination by BII according to Section 10.2.1 after completion of the Phase 1 clinical trial with the Product, XENCOR shall have no obligation to pay BII any or all of the Total Amount. The use of the Process is subject to Sections 5.2.3, 5.2.4 and 5.2.5. For the avoidance of doubt, in the event of a termination as contemplated in this Section 10.3.2c, Section 3.1.2 shall not survive.   10.3.3 Effect of Termination due to Material Breach   a. In case of a termination by BII according to Section 10.2.2, the Total Amount shall become immediately due and BII shall be free to claim for damages according to the applicable law and, subject to Section 7.4 above. All licenses granted by either Party to the other Party hereunder shall be null and void. " ;
+    ct:supported_by ex:C097P0447 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C097R0015Ref0 a ct:Reference ;
+    rdfs:label "Section 4.2" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C097R0015Ref1 a ct:Reference ;
+    rdfs:label "Section 10.3.2" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C097R0015Ref2 a ct:Reference ;
+    rdfs:label "Section 3.1.2" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C097R0015Ref3 a ct:Reference ;
+    rdfs:label "Section 10.2.1" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C097R0015Ref4 a ct:Reference ;
+    rdfs:label "Section 10.2.2" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C097R0015Ref5 a ct:Reference ;
+    rdfs:label "Section 7.4" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C097R0016 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 447" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:references_section ex:C097R0016Ref0,
+        ex:C097R0016Ref1,
+        ex:C097R0016Ref2,
+        ex:C097R0016Ref3,
+        ex:C097R0016Ref4,
+        ex:C097R0016Ref5 ;
+    ct:subject_to ex:C097R0016Condition447 ;
+    ct:supported_by ex:C097P0447 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C097R0016Condition447 a ct:Condition ;
+    ct:description "termination in respect of the purchase of supplies or raw materials, and reasonable wind-down costs not to exceed sixty (60) days. BII shall mitigate all wind-down costs and non-cancellable expenses to the extent possible. Campaigns cancelled shall be paid as provided for in Section 4.2 above. For the avoidance of doubt, in the event of a termination as contemplated in this Section 10.3.2b, Section 3.1.2.c shall continue in effect. The use of the Process is subject to Sections 5.2.3, 5.2.4 and 5.2.5.   c. In the event of termination by BII according to Section 10.2.1 after completion of the Phase 1 clinical trial with the Product, XENCOR shall have no obligation to pay BII any or all of the Total Amount. The use of the Process is subject to Sections 5.2.3, 5.2.4 and 5.2.5. For the avoidance of doubt, in the event of a termination as contemplated in this Section 10.3.2c, Section 3.1.2 shall not survive.   10.3.3 Effect of Termination due to Material Breach   a. In case of a termination by BII according to Section 10.2.2, the Total Amount shall become immediately due and BII shall be free to claim for damages according to the applicable law and, subject to Section 7.4 above. All licenses granted by either Party to the other Party hereunder shall be null and void. " ;
+    ct:supported_by ex:C097P0447 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C097R0016Ref0 a ct:Reference ;
+    rdfs:label "Section 4.2" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C097R0016Ref1 a ct:Reference ;
+    rdfs:label "Section 10.3.2" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C097R0016Ref2 a ct:Reference ;
+    rdfs:label "Section 3.1.2" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C097R0016Ref3 a ct:Reference ;
+    rdfs:label "Section 10.2.1" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C097R0016Ref4 a ct:Reference ;
+    rdfs:label "Section 10.2.2" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C097R0016Ref5 a ct:Reference ;
+    rdfs:label "Section 7.4" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C097R0017 a ct:Rule ;
+    rdfs:label "Termination — source passage 448" ;
+    ct:kind "TERMINATION" ;
+    ct:references_section ex:C097R0017Ref0,
+        ex:C097R0017Ref1,
+        ex:C097R0017Ref2,
+        ex:C097R0017Ref3,
+        ex:C097R0017Ref4,
+        ex:C097R0017Ref5,
+        ex:C097R0017Ref6 ;
+    ct:subject_to ex:C097R0017Condition448 ;
+    ct:supported_by ex:C097P0448 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C097R0017Condition448 a ct:Condition ;
+    ct:description "For the avoidance of doubt, XENCOR may not use the Process outside BII, except as otherwise agreed in writing by XENCOR and BII; except that, if XENCOR has already exercised its rights under Sections 5.2.3, 5.2.4 and 5.2.5, all such rights granted prior to termination shall remain in effect.   b. In case of a termination by XENCOR according to Section 10.2.2, XENCOR shall have no obligation to pay BII any or all of the Total Amount, and subject to Section 7.4 above, XENCOR shall be free to claim for damages according to the applicable law. All licenses granted by XENCOR to BII hereunder shall be null and void. For the avoidance of doubt, Section 3.1.2 shall not survive in the event of termination as described in this Section 10.3.3.b. The use of the Process is subject to Sections 5.2.3, 5.2.4 and 5.2.5.   10.4 Surviving Provisions   Upon any expiration or termination of this Agreement by either Party pursuant to Section 10.2, all rights and obligations of the Parties under this Agreement shall terminate and be of no further force or effect, except as otherwise expressly set forth below in this Section 10.4 and in Section 10.3. " ;
+    ct:supported_by ex:C097P0448 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C097R0017Ref0 a ct:Reference ;
+    rdfs:label "Section 10.2.2" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C097R0017Ref1 a ct:Reference ;
+    rdfs:label "Section 7.4" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C097R0017Ref2 a ct:Reference ;
+    rdfs:label "Section 3.1.2" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C097R0017Ref3 a ct:Reference ;
+    rdfs:label "Section 10.3.3" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C097R0017Ref4 a ct:Reference ;
+    rdfs:label "Section 10.2" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C097R0017Ref5 a ct:Reference ;
+    rdfs:label "Section 10.4" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C097R0017Ref6 a ct:Reference ;
+    rdfs:label "Section 10.3" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C097R0018 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 448" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:references_section ex:C097R0018Ref0,
+        ex:C097R0018Ref1,
+        ex:C097R0018Ref2,
+        ex:C097R0018Ref3,
+        ex:C097R0018Ref4,
+        ex:C097R0018Ref5,
+        ex:C097R0018Ref6 ;
+    ct:subject_to ex:C097R0018Condition448 ;
+    ct:supported_by ex:C097P0448 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C097R0018Condition448 a ct:Condition ;
+    ct:description "For the avoidance of doubt, XENCOR may not use the Process outside BII, except as otherwise agreed in writing by XENCOR and BII; except that, if XENCOR has already exercised its rights under Sections 5.2.3, 5.2.4 and 5.2.5, all such rights granted prior to termination shall remain in effect.   b. In case of a termination by XENCOR according to Section 10.2.2, XENCOR shall have no obligation to pay BII any or all of the Total Amount, and subject to Section 7.4 above, XENCOR shall be free to claim for damages according to the applicable law. All licenses granted by XENCOR to BII hereunder shall be null and void. For the avoidance of doubt, Section 3.1.2 shall not survive in the event of termination as described in this Section 10.3.3.b. The use of the Process is subject to Sections 5.2.3, 5.2.4 and 5.2.5.   10.4 Surviving Provisions   Upon any expiration or termination of this Agreement by either Party pursuant to Section 10.2, all rights and obligations of the Parties under this Agreement shall terminate and be of no further force or effect, except as otherwise expressly set forth below in this Section 10.4 and in Section 10.3. " ;
+    ct:supported_by ex:C097P0448 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C097R0018Ref0 a ct:Reference ;
+    rdfs:label "Section 10.2.2" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C097R0018Ref1 a ct:Reference ;
+    rdfs:label "Section 7.4" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C097R0018Ref2 a ct:Reference ;
+    rdfs:label "Section 3.1.2" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C097R0018Ref3 a ct:Reference ;
+    rdfs:label "Section 10.3.3" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C097R0018Ref4 a ct:Reference ;
+    rdfs:label "Section 10.2" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C097R0018Ref5 a ct:Reference ;
+    rdfs:label "Section 10.4" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C097R0018Ref6 a ct:Reference ;
+    rdfs:label "Section 10.3" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C097R0019 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 449" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:references_section ex:C097R0019Ref0,
+        ex:C097R0019Ref1,
+        ex:C097R0019Ref10,
+        ex:C097R0019Ref11,
+        ex:C097R0019Ref12,
+        ex:C097R0019Ref2,
+        ex:C097R0019Ref3,
+        ex:C097R0019Ref4,
+        ex:C097R0019Ref5,
+        ex:C097R0019Ref6,
+        ex:C097R0019Ref7,
+        ex:C097R0019Ref8,
+        ex:C097R0019Ref9 ;
+    ct:supported_by ex:C097P0449 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C097R0019Ref0 a ct:Reference ;
+    rdfs:label "Section 1 (Definitions)" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C097R0019Ref1 a ct:Reference ;
+    rdfs:label "Section 3 (Payments)" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C097R0019Ref10 a ct:Reference ;
+    rdfs:label "Section 9 (Confidentiality)" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C097R0019Ref11 a ct:Reference ;
+    rdfs:label "Section 10.4" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C097R0019Ref12 a ct:Reference ;
+    rdfs:label "Section 11 (Miscellaneous)" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C097R0019Ref2 a ct:Reference ;
+    rdfs:label "Section 10.3" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C097R0019Ref3 a ct:Reference ;
+    rdfs:label "Section 5" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C097R0019Ref4 a ct:Reference ;
+    rdfs:label "Section 6.4" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C097R0019Ref5 a ct:Reference ;
+    rdfs:label "Section 6.5" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C097R0019Ref6 a ct:Reference ;
+    rdfs:label "Section 7" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C097R0019Ref7 a ct:Reference ;
+    rdfs:label "Section 8" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C097R0019Ref8 a ct:Reference ;
+    rdfs:label "Section 8.2.3" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C097R0019Ref9 a ct:Reference ;
+    rdfs:label "Section 8.2.5" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C097P0269 a ct:SourcePassage ;
+    ct:end_char 5271 ;
+    ct:exact_text "Term and Termination" ;
+    ct:source_path "cuad/XENCORINC_10_25_2013-EX-10.24-COLLABORATION AGREEMENT (3).txt" ;
+    ct:source_sha256 "afa8a94a1c6252861882320a9d28516ea5b4b8a4e0215e9b2213f442a2528540" ;
+    ct:start_char 5251 .
+
+ex:C097P0369 a ct:SourcePassage ;
+    ct:end_char 39225 ;
+    ct:exact_text "b. In case XENCOR decides to proceed with the further development of the Product without a Business Partner, XENCOR will pay BII the Total Amount in one or more lump sum payments within five (5) calendar years from the Due Date.   c. As long as XENCOR, notwithstanding its commercially reasonable efforts after the completion of the Phase 1 clinical trial either (i) is not able to further develop the Product for technical and/or scientific reasons or (ii) does not decide to proceed with the further development of the Product without a Business Partner and does not enter into an agreement with a Business Partner within two (2) calendar years from the Due Date, then XENCOR shall have no obligation to pay BII any or all of the Total Amount. For the avoidance of doubt, such obligations will become due as described in this Section 3.1.2, at any time XENCOR enters into an agreement with at least one Business Partner or further develops the Product within ten (10) calendar years following the Effective Date, as provided in Section 10.3.   3.1.3 Invoicing   XENCOR shall notify BII in writing of any of the circumstances listed in Section 3.1.2.a to 3.1.2.c. BII shall issue an invoice for the payments of the Total Amount agreed upon with XENCOR according to the payment schedule in Section 3.1.2 and payment of the Technology Access Fee, as applicable. " ;
+    ct:source_path "cuad/XENCORINC_10_25_2013-EX-10.24-COLLABORATION AGREEMENT (3).txt" ;
+    ct:source_sha256 "afa8a94a1c6252861882320a9d28516ea5b4b8a4e0215e9b2213f442a2528540" ;
+    ct:start_char 37864 .
+
+ex:C097P0444 a ct:SourcePassage ;
+    ct:end_char 99422 ;
+    ct:exact_text "10.3.1 Effect of Termination prior to completion of the Phase 1 clinical trial with the Product as described in Section 2.8.3.   a. In the event of termination by XENCOR according to Section 10.2.1 prior to completion of the Phase 1 clinical trial with the Product as described in Section 2.8.3 for technical and/or scientific reasons, XENCOR shall have no obligation to pay BII any or all of the Total Amount. For the avoidance of doubt, in such case, XENCOR may not use the Process outside BII, except as otherwise agreed in writing by XENCOR and BII.   b. In the event of termination by XENCOR according to Section 10.2.1 prior to completion of the Phase 1 clinical trial with the Product as described in Section 2.8.3. for any other reason than the reasons set forth under Section 10.3.1.a the Total Amount shall be limited to all non-cancellable expenses reasonably incurred by BII in accordance with the Project Plan prior to such termination in respect of the purchase of supplies or raw materials, and reasonable wind-down costs not to exceed sixty (60) days. BII shall mitigate all wind-down costs and non-cancellable expenses to the extent possible. Campaigns cancelled shall be paid as provided for in Section 4.2 above. For the avoidance of doubt, in such case, XENCOR many not use the Process outside BII, except as otherwise agreed in writing by XENCOR and BII.   c. " ;
+    ct:source_path "cuad/XENCORINC_10_25_2013-EX-10.24-COLLABORATION AGREEMENT (3).txt" ;
+    ct:source_sha256 "afa8a94a1c6252861882320a9d28516ea5b4b8a4e0215e9b2213f442a2528540" ;
+    ct:start_char 98041 .
+
+ex:C097P0446 a ct:SourcePassage ;
+    ct:end_char 102061 ;
+    ct:exact_text "For the a voidance of doubt, in the event of a termination by XENCOR as contemplated in clause b of this Section 10.3.1, Section 3.1.2.c shall continue in effect, but Section 3.1.2 shall not survive in the event of any termination described in clause a. and c.   10.3.2 Effect of Termination after completion of the Phase 1 clinical trial with the Product as described in Section 2.8.3.   a. In the event of termination by XENCOR according to Section 10.2.1 after completion of the Phase 1 clinical trial with the Product as described in Section 2.8.3 for technical and/or scientific reasons, XENCOR shall have no obligation to pay BII any or all of the Total Amount. For the avoidance of doubt, in such case, XENCOR may not use the Process outside BII, except as otherwise agreed in writing by XENCOR and BII. For the avoidance of doubt, in the event of a termination as contemplated in this Section 10.3.2a, Section 3.1.2 c shall survive.   b. In the event of termination by XENCOR according to Section 10.2.1 after completion of the Phase 1 clinical trial with the Product as described in Section 2.8.3 for a reason not listed in Section 10.3.2.a, the Total Amount shall be limited to all non-cancellable expenses reasonably incurred by BII in accordance with the Project Plan prior to such   31" ;
+    ct:source_path "cuad/XENCORINC_10_25_2013-EX-10.24-COLLABORATION AGREEMENT (3).txt" ;
+    ct:source_sha256 "afa8a94a1c6252861882320a9d28516ea5b4b8a4e0215e9b2213f442a2528540" ;
+    ct:start_char 100763 .
+
+ct:Agreement a owl:Class ;
+    rdfs:label "Agreement" .
+
+ex:C097P0400 a ct:SourcePassage ;
+    ct:end_char 57841 ;
+    ct:exact_text "provided that, if BII does not agree to enter into such contract manufacturing agreement within [...***...] after such written notice, XENCOR (or its Business Partner) shall be free to enter into an agreement with a third party (which may include an agreement for any Business Partner or its affiliate to manufacture and supply Product).   c. The right set forth in Section 5.2.2.b shall automatically terminate if BII does not exercise the first right of negotiation set forth in Section 5.2.2.a. The rights set forth in Section 5.2.2.a and b shall automatically terminate if BII does not produce a viable Process for manufacture of Product as evidenced by failure to produce cGMP Product within a timeframe reasonably and customary in the biopharmaceutical industry for companies of comparable size and the respective activities.   d. In both cases set forth above, in Section 5.2.2.a. and b., if BII exercises its first right of negotiation, BII and XENCOR (and/or its Business Partner, as applicable) will negotiate in good faith a respective contract manufacturing agreement based on the market rate" ;
+    ct:source_path "cuad/XENCORINC_10_25_2013-EX-10.24-COLLABORATION AGREEMENT (3).txt" ;
+    ct:source_sha256 "afa8a94a1c6252861882320a9d28516ea5b4b8a4e0215e9b2213f442a2528540" ;
+    ct:start_char 56737 .
+
+ex:C097P0442 a ct:SourcePassage ;
+    ct:end_char 97673 ;
+    ct:exact_text "inform BII, to the extent known to XENCOR, where the Controlled Technology is listed on the Commerce Control List or the Chemical Weapons Convention Schedules of Chemicals and what restrictions apply to the export or disclosure of the Controlled Technology under U.S. law.   XENCOR further agrees to cooperate with BII by providing upon request information and other assistance necessary for the export classification, export documentation and export licensing, if required, for the Controlled Technology under U.S. export laws.   In any event, XENCOR hereby agrees that it will not disclose Controlled Technology to BII or its Affiliated Companies without the express prior consent of BII.   10 Term and Termination   10.1 Term   This Agreement shall take effect as of the Effective Date and shall expire upon completion of the Project as set forth in the Project Plan and after payment of all payments due and payable according to this Agreement, unless terminated earlier in accordance with this Agreement.   10.2 Termination of this Agreement   10.2.1 If it is apparent to either Party at any stage of the Project that it will not be possible to carry out the Project for scientific, technical or business reasons, such Party may terminate this Agreement upon one hundred eighty (180) days prior written notice to the other Party.   " ;
+    ct:source_path "cuad/XENCORINC_10_25_2013-EX-10.24-COLLABORATION AGREEMENT (3).txt" ;
+    ct:source_sha256 "afa8a94a1c6252861882320a9d28516ea5b4b8a4e0215e9b2213f442a2528540" ;
+    ct:start_char 96336 .
+
+ex:C097P0447 a ct:SourcePassage ;
+    ct:end_char 103351 ;
+    ct:exact_text "termination in respect of the purchase of supplies or raw materials, and reasonable wind-down costs not to exceed sixty (60) days. BII shall mitigate all wind-down costs and non-cancellable expenses to the extent possible. Campaigns cancelled shall be paid as provided for in Section 4.2 above. For the avoidance of doubt, in the event of a termination as contemplated in this Section 10.3.2b, Section 3.1.2.c shall continue in effect. The use of the Process is subject to Sections 5.2.3, 5.2.4 and 5.2.5.   c. In the event of termination by BII according to Section 10.2.1 after completion of the Phase 1 clinical trial with the Product, XENCOR shall have no obligation to pay BII any or all of the Total Amount. The use of the Process is subject to Sections 5.2.3, 5.2.4 and 5.2.5. For the avoidance of doubt, in the event of a termination as contemplated in this Section 10.3.2c, Section 3.1.2 shall not survive.   10.3.3 Effect of Termination due to Material Breach   a. In case of a termination by BII according to Section 10.2.2, the Total Amount shall become immediately due and BII shall be free to claim for damages according to the applicable law and, subject to Section 7.4 above. All licenses granted by either Party to the other Party hereunder shall be null and void. " ;
+    ct:source_path "cuad/XENCORINC_10_25_2013-EX-10.24-COLLABORATION AGREEMENT (3).txt" ;
+    ct:source_sha256 "afa8a94a1c6252861882320a9d28516ea5b4b8a4e0215e9b2213f442a2528540" ;
+    ct:start_char 102069 .
+
+ex:C097P0448 a ct:SourcePassage ;
+    ct:end_char 104496 ;
+    ct:exact_text "For the avoidance of doubt, XENCOR may not use the Process outside BII, except as otherwise agreed in writing by XENCOR and BII; except that, if XENCOR has already exercised its rights under Sections 5.2.3, 5.2.4 and 5.2.5, all such rights granted prior to termination shall remain in effect.   b. In case of a termination by XENCOR according to Section 10.2.2, XENCOR shall have no obligation to pay BII any or all of the Total Amount, and subject to Section 7.4 above, XENCOR shall be free to claim for damages according to the applicable law. All licenses granted by XENCOR to BII hereunder shall be null and void. For the avoidance of doubt, Section 3.1.2 shall not survive in the event of termination as described in this Section 10.3.3.b. The use of the Process is subject to Sections 5.2.3, 5.2.4 and 5.2.5.   10.4 Surviving Provisions   Upon any expiration or termination of this Agreement by either Party pursuant to Section 10.2, all rights and obligations of the Parties under this Agreement shall terminate and be of no further force or effect, except as otherwise expressly set forth below in this Section 10.4 and in Section 10.3. " ;
+    ct:source_path "cuad/XENCORINC_10_25_2013-EX-10.24-COLLABORATION AGREEMENT (3).txt" ;
+    ct:source_sha256 "afa8a94a1c6252861882320a9d28516ea5b4b8a4e0215e9b2213f442a2528540" ;
+    ct:start_char 103351 .
+
+ct:Condition a owl:Class ;
+    rdfs:label "Condition" .
+
+ct:SourcePassage a owl:Class ;
+    rdfs:label "SourcePassage" .
+
+ct:Rule a owl:Class ;
+    rdfs:label "Rule" .
+
+ct:Reference a owl:Class ;
+    rdfs:label "Reference" .
+

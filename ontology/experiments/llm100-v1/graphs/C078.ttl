@@ -1,0 +1,378 @@
+@prefix ct: <https://cimulink.local/ontology/contract-terms/0.1#> .
+@prefix ex: <https://cimulink.local/ontology/llm100-v1/> .
+@prefix meta: <https://cimulink.local/ontology/extraction#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ct: a owl:Ontology ;
+    rdfs:comment "Partial five-contract development sample. No claim of complete contract coverage or legal correctness." .
+
+ct:agreement_effective_from a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:applies_within a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:calendar_date_status a owl:DatatypeProperty .
+
+ct:coverage a owl:DatatypeProperty .
+
+ct:description a owl:DatatypeProperty .
+
+ct:duration a owl:DatatypeProperty .
+
+ct:duration_status a owl:DatatypeProperty .
+
+ct:end_char a owl:DatatypeProperty .
+
+ct:end_date_status a owl:DatatypeProperty .
+
+ct:ends_on_event a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:exact_text a owl:DatatypeProperty .
+
+ct:has_party a owl:ObjectProperty ;
+    rdfs:domain ct:Agreement ;
+    rdfs:range ct:Party .
+
+ct:has_rule a owl:ObjectProperty ;
+    rdfs:domain ct:Agreement ;
+    rdfs:range ct:Rule .
+
+ct:kind a owl:DatatypeProperty .
+
+ct:notice_actor a owl:DatatypeProperty .
+
+ct:notice_form a owl:DatatypeProperty .
+
+ct:notice_period_status a owl:DatatypeProperty .
+
+ct:qualifies a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Rule .
+
+ct:references_section a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:renewal_count a owl:DatatypeProperty .
+
+ct:resolution_status a owl:DatatypeProperty .
+
+ct:resolved_to a owl:ObjectProperty ;
+    rdfs:domain ct:Reference ;
+    rdfs:range ct:SourcePassage .
+
+ct:source_path a owl:DatatypeProperty .
+
+ct:source_sha256 a owl:DatatypeProperty .
+
+ct:start_char a owl:DatatypeProperty .
+
+ct:starts_from a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:stated_end_date a owl:DatatypeProperty .
+
+ct:subject_to a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Condition .
+
+ct:supported_by a owl:ObjectProperty ;
+    rdfs:range ct:SourcePassage .
+
+ct:termination_notice a owl:DatatypeProperty .
+
+ex:C078 a ct:Agreement ;
+    rdfs:label "SLINGERBAGINC_05_27_2020-EX-10.7-CONSULTING AGREEMENT.txt" ;
+    ct:coverage "LOCAL_LLM_PROPOSED_PARTIAL; NOT_HUMAN_REVIEWED" ;
+    ct:has_rule ex:C078R0001,
+        ex:C078R0002,
+        ex:C078R0003,
+        ex:C078R0004,
+        ex:C078R0005,
+        ex:C078R0006,
+        ex:C078R0007,
+        ex:C078R0008,
+        ex:C078R0009,
+        ex:C078R0010,
+        ex:C078R0011 ;
+    ct:source_path "cuad/SLINGERBAGINC_05_27_2020-EX-10.7-CONSULTING AGREEMENT.txt" ;
+    ct:source_sha256 "2ab2f2c768a8cd5dab726a17b764a96b49d227350e3a534ae2a1adff914eb38a" ;
+    meta:model_digest "0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0" .
+
+ct:Party a owl:Class ;
+    rdfs:label "Party" .
+
+ex:C078P0001 a ct:SourcePassage ;
+    ct:end_char 1229 ;
+    ct:exact_text "Exhibit 10.7 CONSULTING AGREEMENT THIS AGREEMENT made this 30th day of April (the \"Effective Date\") between Slinger Bag Inc., a Nevada company (the \"Company\") and Aitan Zacharin, an individual residing in Bet Shemesh, Israel (the \"Consultant\") A. The Company is engaging Consultant as a consultant in respect of investor relations, corporate structure, public relations and commercial development. B. The Company and the Consultant wish to formally record the terms and conditions of such engagement. C. Each of the Company and the Consultant has agreed to the terms and conditions set forth in this Agreement, as evidenced by their respective execution hereof. NOW THEREFORE THIS AGREEMENT WITNESSES that, in consideration of the premises and the mutual covenants and agreements herein contained, the parties hereto covenant and agree as follows: ARTICLE 1 CONTRACT FOR SERVICES 1.1 Engagement of Consultant. The Company hereby agrees to engage the Consultant in accordance with the terms and provisions hereof. (a) Term. Unless terminated earlier in accordance with the provisions hereof, this Agreement will commence on the Effective Date and will continue for a period of three (3) years therefrom (the \"Term\"). (b) Service. " ;
+    ct:source_path "cuad/SLINGERBAGINC_05_27_2020-EX-10.7-CONSULTING AGREEMENT.txt" ;
+    ct:source_sha256 "2ab2f2c768a8cd5dab726a17b764a96b49d227350e3a534ae2a1adff914eb38a" ;
+    ct:start_char 0 .
+
+ex:C078P0010 a ct:SourcePassage ;
+    ct:end_char 8937 ;
+    ct:exact_text "4 ARTICLE 4 TERMINATION 4.1 Termination of Engagement. The Consultant's engagement may be terminated only as follows: (a) Termination by the Company (i) For Cause. The Company may terminate the Consultant's engagement for Cause. (ii) Without Cause. The Company may terminate Consultant's engagement at any time by giving Consultant 60 days prior written Notice of the termination. In such case, 100% of the Consultant's unvested stock and, if applicable, option or warrant compensation of any nature will vest without any further action required on the part of the Consultant or the Company and the Company will deliver to the order of the Consultant promptly upon receipt of a written demand of the Consultant such shares of common stock or options at its sole expense as become due to Consultant hereunder. The Consultant's right to receive compensation whether in cash or securities shall survive any termination of this Agreement Without Cause. (b) Termination by the Consultant (i) For Good Reason. The Consultant may terminate the Consultant's engagement with the Company for Good Reason. (ii) Without Good Reason. The Consultant may voluntarily terminate the Consultant's engagement with the Company at any time by giving the Company 120 days prior written Notice of the termination. (c) Termination Upon Death or Disability (i) Death. " ;
+    ct:source_path "cuad/SLINGERBAGINC_05_27_2020-EX-10.7-CONSULTING AGREEMENT.txt" ;
+    ct:source_sha256 "2ab2f2c768a8cd5dab726a17b764a96b49d227350e3a534ae2a1adff914eb38a" ;
+    ct:start_char 7594 .
+
+ex:C078P0030 a ct:SourcePassage ;
+    ct:end_char 29775 ;
+    ct:exact_text "The Company will at no time close its transfer books against the transfer of this Warrant or of any Shares issued or issuable upon the exercise of this Warrant in any manner which interferes with the timely exercise of this Warrant. ARTICLE 4. MISCELLANEOUS. 4.1 Term. This Warrant is exercisable in whole or in part at any time and from time to time on or before the earlier of 5:00 pm GMT on the tenth (10th) anniversary of the Issue Date. 4.2 Legends. This Warrant and the Shares (and the securities issuable, directly or indirectly, upon conversion of the Shares, if any) shall be imprinted with a legend in substantially the following form: THIS WARRANT AND THE SHARES ISSUABLE HEREUNDER HAVE NOT BEEN REGISTERED UNDER THE SECURITIES ACT OF 1933, AS AMENDED (THE \"ACT\"), OR THE SECURITIES LAWS OF ANY STATE AND MAY NOT BE OFFERED, SOLD OR OTHERWISE TRANSFERRED, PLEDGED OR HYPOTHECATED UNLESS AND UNTIL REGISTERED UNDER SAID ACT AND APPLICABLE STATE SECURITIES LAW OR, IN THE OPINION OF LEGAL COUNSEL IN FORM AND SUBSTANCE SATISFACTORY TO THE ISSUER OF THESE SECURITIES, SUCH OFFER, SALE OR TRANSFER, PLEDGE OR HYPOTHECATION IS EXEMPT FROM REGISTRATION." ;
+    ct:source_path "cuad/SLINGERBAGINC_05_27_2020-EX-10.7-CONSULTING AGREEMENT.txt" ;
+    ct:source_sha256 "2ab2f2c768a8cd5dab726a17b764a96b49d227350e3a534ae2a1adff914eb38a" ;
+    ct:start_char 28617 .
+
+ex:C078R0001 a ct:Rule ;
+    rdfs:label "Initial Term — source passage 1" ;
+    ct:kind "INITIAL_TERM" ;
+    ct:references_section ex:C078R0001Ref0,
+        ex:C078R0001Ref1 ;
+    ct:supported_by ex:C078P0001 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C078R0001Ref0 a ct:Reference ;
+    rdfs:label "Exhibit 10.7" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C078R0001Ref1 a ct:Reference ;
+    rdfs:label "ARTICLE 1" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C078R0002 a ct:Rule ;
+    rdfs:label "Termination — source passage 10" ;
+    ct:kind "TERMINATION" ;
+    ct:references_section ex:C078R0002Ref0 ;
+    ct:supported_by ex:C078P0010 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C078R0002Ref0 a ct:Reference ;
+    rdfs:label "ARTICLE 4" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C078R0003 a ct:Rule ;
+    rdfs:label "Termination — source passage 11" ;
+    ct:kind "TERMINATION" ;
+    ct:references_section ex:C078R0003Ref0 ;
+    ct:subject_to ex:C078R0003Condition11 ;
+    ct:supported_by ex:C078P0011 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C078R0003Condition11 a ct:Condition ;
+    ct:description "The Consultant's engagement shall terminate upon the Consultant's death. (ii) Disability. The Company may terminate the Consultant's engagement upon the Consultant's Disability. (d) For the purpose of this Article 3, \"Cause\" means: (i) Breach of Agreement. Consultant's material breach of Consultant's obligations of this Agreement, not cured after 30 days' Notice from the Company." ;
+    ct:supported_by ex:C078P0011 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C078R0003Ref0 a ct:Reference ;
+    rdfs:label "Article 3" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C078R0004 a ct:Rule ;
+    rdfs:label "Conditional Referenced Term — source passage 11" ;
+    ct:kind "CONDITIONAL_REFERENCED_TERM" ;
+    ct:references_section ex:C078R0004Ref0 ;
+    ct:subject_to ex:C078R0004Condition11 ;
+    ct:supported_by ex:C078P0011 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C078R0004Condition11 a ct:Condition ;
+    ct:description "The Consultant's engagement shall terminate upon the Consultant's death. (ii) Disability. The Company may terminate the Consultant's engagement upon the Consultant's Disability. (d) For the purpose of this Article 3, \"Cause\" means: (i) Breach of Agreement. Consultant's material breach of Consultant's obligations of this Agreement, not cured after 30 days' Notice from the Company." ;
+    ct:supported_by ex:C078P0011 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C078R0004Ref0 a ct:Reference ;
+    rdfs:label "Article 3" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C078R0005 a ct:Rule ;
+    rdfs:label "Termination — source passage 12" ;
+    ct:kind "TERMINATION" ;
+    ct:references_section ex:C078R0005Ref0 ;
+    ct:subject_to ex:C078R0005Condition12 ;
+    ct:supported_by ex:C078P0012 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C078R0005Condition12 a ct:Condition ;
+    ct:description "5 (ii) Gross Negligence. Consultant's gross negligence in the performance of Consultant's duties. (iii) Crimes and Dishonesty. Consultant's conviction of or plea guilty to any crime involving, dishonesty, fraud or moral turpitude. (iv) In the event of termination of this agreement for Cause, the Company may terminate the Consultant's engagement after 30 days' Notice. (e) For the purpose of this Article 5, \"Good Reason\" means: (i) Breach of Agreement. The Company's material breach of this Agreement, which breach has not been cured by the Company within 30 days after receipt of written notice specifying, in reasonable detail, the nature of such breach or failure from Consultant. (ii) Non Payment. The failure of the Company to pay any amount due to Consultant hereunder, which failure persists for 30 days after written notice of such failure has been received by the Company. (iii) Change of Responsibilities/Compensation. Any material reduction in Consultant's title or a material reduction in Consultant's duties or responsibilities or any material adverse change in Consultant's Base Consulting Fee or any material adverse change in Consultant's benefits. " ;
+    ct:supported_by ex:C078P0012 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C078R0005Ref0 a ct:Reference ;
+    rdfs:label "Article 5" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C078R0006 a ct:Rule ;
+    rdfs:label "Conditional Referenced Term — source passage 12" ;
+    ct:kind "CONDITIONAL_REFERENCED_TERM" ;
+    ct:references_section ex:C078R0006Ref0 ;
+    ct:subject_to ex:C078R0006Condition12 ;
+    ct:supported_by ex:C078P0012 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C078R0006Condition12 a ct:Condition ;
+    ct:description "5 (ii) Gross Negligence. Consultant's gross negligence in the performance of Consultant's duties. (iii) Crimes and Dishonesty. Consultant's conviction of or plea guilty to any crime involving, dishonesty, fraud or moral turpitude. (iv) In the event of termination of this agreement for Cause, the Company may terminate the Consultant's engagement after 30 days' Notice. (e) For the purpose of this Article 5, \"Good Reason\" means: (i) Breach of Agreement. The Company's material breach of this Agreement, which breach has not been cured by the Company within 30 days after receipt of written notice specifying, in reasonable detail, the nature of such breach or failure from Consultant. (ii) Non Payment. The failure of the Company to pay any amount due to Consultant hereunder, which failure persists for 30 days after written notice of such failure has been received by the Company. (iii) Change of Responsibilities/Compensation. Any material reduction in Consultant's title or a material reduction in Consultant's duties or responsibilities or any material adverse change in Consultant's Base Consulting Fee or any material adverse change in Consultant's benefits. " ;
+    ct:supported_by ex:C078P0012 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C078R0006Ref0 a ct:Reference ;
+    rdfs:label "Article 5" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C078R0007 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 13" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:references_section ex:C078R0007Ref0,
+        ex:C078R0007Ref1,
+        ex:C078R0007Ref2,
+        ex:C078R0007Ref3 ;
+    ct:subject_to ex:C078R0007Condition13 ;
+    ct:supported_by ex:C078P0013 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C078R0007Condition13 a ct:Condition ;
+    ct:description "(f) It is agreed that in the event of termination of this agreement if the Company decides that the Consultant's services are not needed during the termination period, the Company will continue to be responsible for paying cash and equity compensation as defined in Article 2 of this Agreement for the entire termination period. Neither the Company, nor the Consultant will be entitled to any notice or payment in excess of that specified in this Article 5. (g) Upon the termination (whether for cause, disability, death, without cause, or by way of change of control), the Company shall pay to Consultant on the date required under applicable law: (i) any accrued but unpaid Base Consulting Fee for services rendered as of the date of termination, (ii) (if applicable) any accrued but unpaid vacation pay, and (iii) the business expenses reasonably incurred by the Consultant up to the date of termination or resignation and properly reimbursable, in each case less any applicable deductions or withholdings required by law. Section 4.2 Termination for Cause, Disability or Death (a) In the event that this Agreement and the Consultant's engagement with the Company is terminated for Cause, the Company shall provide the Consultant written notice thereof and Consultant or Consultants surviving next of kin shall be entitled only to the amounts specified in Section 3.1. " ;
+    ct:supported_by ex:C078P0013 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C078R0007Ref0 a ct:Reference ;
+    rdfs:label "Article 2" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C078R0007Ref1 a ct:Reference ;
+    rdfs:label "Article 5" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C078R0007Ref2 a ct:Reference ;
+    rdfs:label "Section 4.2" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C078R0007Ref3 a ct:Reference ;
+    rdfs:label "Section 3.1" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C078R0008 a ct:Rule ;
+    rdfs:label "Termination — source passage 13" ;
+    ct:kind "TERMINATION" ;
+    ct:references_section ex:C078R0008Ref0,
+        ex:C078R0008Ref1,
+        ex:C078R0008Ref2,
+        ex:C078R0008Ref3 ;
+    ct:subject_to ex:C078R0008Condition13 ;
+    ct:supported_by ex:C078P0013 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C078R0008Condition13 a ct:Condition ;
+    ct:description "(f) It is agreed that in the event of termination of this agreement if the Company decides that the Consultant's services are not needed during the termination period, the Company will continue to be responsible for paying cash and equity compensation as defined in Article 2 of this Agreement for the entire termination period. Neither the Company, nor the Consultant will be entitled to any notice or payment in excess of that specified in this Article 5. (g) Upon the termination (whether for cause, disability, death, without cause, or by way of change of control), the Company shall pay to Consultant on the date required under applicable law: (i) any accrued but unpaid Base Consulting Fee for services rendered as of the date of termination, (ii) (if applicable) any accrued but unpaid vacation pay, and (iii) the business expenses reasonably incurred by the Consultant up to the date of termination or resignation and properly reimbursable, in each case less any applicable deductions or withholdings required by law. Section 4.2 Termination for Cause, Disability or Death (a) In the event that this Agreement and the Consultant's engagement with the Company is terminated for Cause, the Company shall provide the Consultant written notice thereof and Consultant or Consultants surviving next of kin shall be entitled only to the amounts specified in Section 3.1. " ;
+    ct:supported_by ex:C078P0013 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C078R0008Ref0 a ct:Reference ;
+    rdfs:label "Article 2" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C078R0008Ref1 a ct:Reference ;
+    rdfs:label "Article 5" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C078R0008Ref2 a ct:Reference ;
+    rdfs:label "Section 4.2" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C078R0008Ref3 a ct:Reference ;
+    rdfs:label "Section 3.1" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C078R0009 a ct:Rule ;
+    rdfs:label "Termination — source passage 15" ;
+    ct:kind "TERMINATION" ;
+    ct:references_section ex:C078R0009Ref0,
+        ex:C078R0009Ref1 ;
+    ct:supported_by ex:C078P0015 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C078R0009Ref0 a ct:Reference ;
+    rdfs:label "Section 4.3" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C078R0009Ref1 a ct:Reference ;
+    rdfs:label "Section 4.1" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C078R0010 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 15" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:references_section ex:C078R0010Ref0,
+        ex:C078R0010Ref1 ;
+    ct:supported_by ex:C078P0015 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C078R0010Ref0 a ct:Reference ;
+    rdfs:label "Section 4.3" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C078R0010Ref1 a ct:Reference ;
+    rdfs:label "Section 4.1" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C078R0011 a ct:Rule ;
+    rdfs:label "Initial Term — source passage 30" ;
+    ct:kind "INITIAL_TERM" ;
+    ct:references_section ex:C078R0011Ref0 ;
+    ct:supported_by ex:C078P0030 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C078R0011Ref0 a ct:Reference ;
+    rdfs:label "ARTICLE 4" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C078P0015 a ct:SourcePassage ;
+    ct:end_char 13231 ;
+    ct:exact_text "6 (b) In the event of the Consultants service terminates by reason of the Consultants disability or death, the accrued salary may be paid, and options and warrants may be exercised by the by the Consultant or the Consultant's legal representatives, executors or assigns, as the case may be, for a period of one (1) year from the date of death or disability. Section 4.3 Termination without Cause In the event this Agreement and the Consultant's engagement with the Company is terminated by the Company without Cause (other than for death or Disability or in connection with a change of control), then in addition to the amounts specified in Section 4.1 and subject to the Consultant's execution and non-revocation of a separation agreement containing a general release and waiver of liability against the Company and anyone connected with it in form acceptable to the Company, the Consultant shall be entitled to receive, and the Company shall pay the Consultant, two (2) years Base Consulting Fee (less statutory deductions and withholdings) in a single lump sum, paid in full within 30 days of termination. Further, Consultant shall be entitled to all vested common shares and, if applicable, options and warrants with vesting continuing for 12 months following termination as applicable. " ;
+    ct:source_path "cuad/SLINGERBAGINC_05_27_2020-EX-10.7-CONSULTING AGREEMENT.txt" ;
+    ct:source_sha256 "2ab2f2c768a8cd5dab726a17b764a96b49d227350e3a534ae2a1adff914eb38a" ;
+    ct:start_char 11940 .
+
+ct:Agreement a owl:Class ;
+    rdfs:label "Agreement" .
+
+ex:C078P0011 a ct:SourcePassage ;
+    ct:end_char 9319 ;
+    ct:exact_text "The Consultant's engagement shall terminate upon the Consultant's death. (ii) Disability. The Company may terminate the Consultant's engagement upon the Consultant's Disability. (d) For the purpose of this Article 3, \"Cause\" means: (i) Breach of Agreement. Consultant's material breach of Consultant's obligations of this Agreement, not cured after 30 days' Notice from the Company." ;
+    ct:source_path "cuad/SLINGERBAGINC_05_27_2020-EX-10.7-CONSULTING AGREEMENT.txt" ;
+    ct:source_sha256 "2ab2f2c768a8cd5dab726a17b764a96b49d227350e3a534ae2a1adff914eb38a" ;
+    ct:start_char 8937 .
+
+ex:C078P0012 a ct:SourcePassage ;
+    ct:end_char 10492 ;
+    ct:exact_text "5 (ii) Gross Negligence. Consultant's gross negligence in the performance of Consultant's duties. (iii) Crimes and Dishonesty. Consultant's conviction of or plea guilty to any crime involving, dishonesty, fraud or moral turpitude. (iv) In the event of termination of this agreement for Cause, the Company may terminate the Consultant's engagement after 30 days' Notice. (e) For the purpose of this Article 5, \"Good Reason\" means: (i) Breach of Agreement. The Company's material breach of this Agreement, which breach has not been cured by the Company within 30 days after receipt of written notice specifying, in reasonable detail, the nature of such breach or failure from Consultant. (ii) Non Payment. The failure of the Company to pay any amount due to Consultant hereunder, which failure persists for 30 days after written notice of such failure has been received by the Company. (iii) Change of Responsibilities/Compensation. Any material reduction in Consultant's title or a material reduction in Consultant's duties or responsibilities or any material adverse change in Consultant's Base Consulting Fee or any material adverse change in Consultant's benefits. " ;
+    ct:source_path "cuad/SLINGERBAGINC_05_27_2020-EX-10.7-CONSULTING AGREEMENT.txt" ;
+    ct:source_sha256 "2ab2f2c768a8cd5dab726a17b764a96b49d227350e3a534ae2a1adff914eb38a" ;
+    ct:start_char 9325 .
+
+ex:C078P0013 a ct:SourcePassage ;
+    ct:end_char 11864 ;
+    ct:exact_text "(f) It is agreed that in the event of termination of this agreement if the Company decides that the Consultant's services are not needed during the termination period, the Company will continue to be responsible for paying cash and equity compensation as defined in Article 2 of this Agreement for the entire termination period. Neither the Company, nor the Consultant will be entitled to any notice or payment in excess of that specified in this Article 5. (g) Upon the termination (whether for cause, disability, death, without cause, or by way of change of control), the Company shall pay to Consultant on the date required under applicable law: (i) any accrued but unpaid Base Consulting Fee for services rendered as of the date of termination, (ii) (if applicable) any accrued but unpaid vacation pay, and (iii) the business expenses reasonably incurred by the Consultant up to the date of termination or resignation and properly reimbursable, in each case less any applicable deductions or withholdings required by law. Section 4.2 Termination for Cause, Disability or Death (a) In the event that this Agreement and the Consultant's engagement with the Company is terminated for Cause, the Company shall provide the Consultant written notice thereof and Consultant or Consultants surviving next of kin shall be entitled only to the amounts specified in Section 3.1. " ;
+    ct:source_path "cuad/SLINGERBAGINC_05_27_2020-EX-10.7-CONSULTING AGREEMENT.txt" ;
+    ct:source_sha256 "2ab2f2c768a8cd5dab726a17b764a96b49d227350e3a534ae2a1adff914eb38a" ;
+    ct:start_char 10492 .
+
+ct:Condition a owl:Class ;
+    rdfs:label "Condition" .
+
+ct:SourcePassage a owl:Class ;
+    rdfs:label "SourcePassage" .
+
+ct:Rule a owl:Class ;
+    rdfs:label "Rule" .
+
+ct:Reference a owl:Class ;
+    rdfs:label "Reference" .
+

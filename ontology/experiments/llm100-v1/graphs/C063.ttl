@@ -1,0 +1,192 @@
+@prefix ct: <https://cimulink.local/ontology/contract-terms/0.1#> .
+@prefix ex: <https://cimulink.local/ontology/llm100-v1/> .
+@prefix meta: <https://cimulink.local/ontology/extraction#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ct: a owl:Ontology ;
+    rdfs:comment "Partial five-contract development sample. No claim of complete contract coverage or legal correctness." .
+
+ct:agreement_effective_from a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:applies_within a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:calendar_date_status a owl:DatatypeProperty .
+
+ct:coverage a owl:DatatypeProperty .
+
+ct:description a owl:DatatypeProperty .
+
+ct:duration a owl:DatatypeProperty .
+
+ct:duration_status a owl:DatatypeProperty .
+
+ct:end_char a owl:DatatypeProperty .
+
+ct:end_date_status a owl:DatatypeProperty .
+
+ct:ends_on_event a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:exact_text a owl:DatatypeProperty .
+
+ct:has_party a owl:ObjectProperty ;
+    rdfs:domain ct:Agreement ;
+    rdfs:range ct:Party .
+
+ct:has_rule a owl:ObjectProperty ;
+    rdfs:domain ct:Agreement ;
+    rdfs:range ct:Rule .
+
+ct:kind a owl:DatatypeProperty .
+
+ct:notice_actor a owl:DatatypeProperty .
+
+ct:notice_form a owl:DatatypeProperty .
+
+ct:notice_period_status a owl:DatatypeProperty .
+
+ct:qualifies a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Rule .
+
+ct:references_section a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:renewal_count a owl:DatatypeProperty .
+
+ct:resolution_status a owl:DatatypeProperty .
+
+ct:resolved_to a owl:ObjectProperty ;
+    rdfs:domain ct:Reference ;
+    rdfs:range ct:SourcePassage .
+
+ct:source_path a owl:DatatypeProperty .
+
+ct:source_sha256 a owl:DatatypeProperty .
+
+ct:start_char a owl:DatatypeProperty .
+
+ct:starts_from a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:stated_end_date a owl:DatatypeProperty .
+
+ct:subject_to a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Condition .
+
+ct:supported_by a owl:ObjectProperty ;
+    rdfs:range ct:SourcePassage .
+
+ct:termination_notice a owl:DatatypeProperty .
+
+ex:C063 a ct:Agreement ;
+    rdfs:label "PAXMEDICA,INC_07_02_2020-EX-10.12-Master Service Agreement.txt" ;
+    ct:coverage "LOCAL_LLM_PROPOSED_PARTIAL; NOT_HUMAN_REVIEWED" ;
+    ct:has_rule ex:C063R0001,
+        ex:C063R0002,
+        ex:C063R0003,
+        ex:C063R0004 ;
+    ct:source_path "cuad/PAXMEDICA,INC_07_02_2020-EX-10.12-Master Service Agreement.txt" ;
+    ct:source_sha256 "874eb07ae3632c67eb5eacb3f51e5927d112f8d6e7e0ba3c1a39d9614fb14f45" ;
+    meta:model_digest "0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0" .
+
+ct:Party a owl:Class ;
+    rdfs:label "Party" .
+
+ex:C063R0001 a ct:Rule ;
+    rdfs:label "Termination — source passage 4" ;
+    ct:kind "TERMINATION" ;
+    ct:references_section ex:C063R0001Ref0 ;
+    ct:subject_to ex:C063R0001Condition4 ;
+    ct:supported_by ex:C063P0004 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C063R0001Condition4 a ct:Condition ;
+    ct:description "Certain identified information has been excluded because it is both not material and would likely cause competitive harm if publicly disclosed. 2.2 Routine telephone calls, mobile calls, faxes and photocopying will be included in the rate provided by CRO. For clarity, there shall be no payment obligations other than as agreed in each Project-specific Addendum. 2.4 CRO will provide a detailed account of all time and tasks, as against project specific task and time addenda, and will be payable within 30 days of receipt of invoice by Client. 2.5. Changes in scope may be incorporated into this Agreement or the Project-specific Addenda upon the written consent of both parties. 2.6. In the event of a conflict between the terms of this Agreement and the Project-specific Addenda the terms of this Agreement shall prevail unless specifically stated in the Project-specific Addenda. 3.0 Period of the Agreement 3.1. This Agreement shall take effect on the date of signature of the Agreement by both parties and shall terminate when all obligations required of both parties hereunder are performed unless either terminated earlier or extended by the parties pursuant to the terms of this Agreement subject to clause 4.0. 4.0 Termination 4.1. Either party may terminate this Agreement on thirty (30) days written notice if the other materially breaches this Agreement; " ;
+    ct:supported_by ex:C063P0004 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C063R0001Ref0 a ct:Reference ;
+    rdfs:label "clause 4.0" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C063R0002 a ct:Rule ;
+    rdfs:label "Conditional Referenced Term — source passage 4" ;
+    ct:kind "CONDITIONAL_REFERENCED_TERM" ;
+    ct:references_section ex:C063R0002Ref0 ;
+    ct:subject_to ex:C063R0002Condition4 ;
+    ct:supported_by ex:C063P0004 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C063R0002Condition4 a ct:Condition ;
+    ct:description "Certain identified information has been excluded because it is both not material and would likely cause competitive harm if publicly disclosed. 2.2 Routine telephone calls, mobile calls, faxes and photocopying will be included in the rate provided by CRO. For clarity, there shall be no payment obligations other than as agreed in each Project-specific Addendum. 2.4 CRO will provide a detailed account of all time and tasks, as against project specific task and time addenda, and will be payable within 30 days of receipt of invoice by Client. 2.5. Changes in scope may be incorporated into this Agreement or the Project-specific Addenda upon the written consent of both parties. 2.6. In the event of a conflict between the terms of this Agreement and the Project-specific Addenda the terms of this Agreement shall prevail unless specifically stated in the Project-specific Addenda. 3.0 Period of the Agreement 3.1. This Agreement shall take effect on the date of signature of the Agreement by both parties and shall terminate when all obligations required of both parties hereunder are performed unless either terminated earlier or extended by the parties pursuant to the terms of this Agreement subject to clause 4.0. 4.0 Termination 4.1. Either party may terminate this Agreement on thirty (30) days written notice if the other materially breaches this Agreement; " ;
+    ct:supported_by ex:C063P0004 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C063R0002Ref0 a ct:Reference ;
+    rdfs:label "clause 4.0" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C063R0003 a ct:Rule ;
+    rdfs:label "Termination — source passage 5" ;
+    ct:kind "TERMINATION" ;
+    ct:subject_to ex:C063R0003Condition5 ;
+    ct:supported_by ex:C063P0005 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C063R0003Condition5 a ct:Condition ;
+    ct:description "provided, however that the party in breach shall have the right to cure such breach within thirty (30) days after receipt of written notice of the other party's intention to terminate. 4.2. Client may terminate this Agreement on thirty (30) days written notice without cause. In the event of termination by Client for reasons other than default by CRO, Client shall pay all sums owing to CRO, but unpaid, for work performed to date of receipt of termination notice, and all reasonable and necessary costs associated with the termination itself or to which CRO is committed to pay. In the event of termination by Client, CRO shall use all efforts to minimize any such costs, including cancelling orders and services to the extent possible. 4.3. In the event of early termination under 4.1. above where CRO is in material breach, any credit held in favour of CRO shall be returned to Client within thirty (30) days following such termination, provided that the Client will then be liable for all outstanding third party costs lawfully incurred hereunder by CRO prior to the termination. 4.4. Either party shall be entitled forthwith to terminate this Agreement with immediate effect by written notice to the other if that other is adjudged insolvent or goes into liquidation (other than for bona fide reconstruction) or has a receiver appointed over any of its property or assets. " ;
+    ct:supported_by ex:C063P0005 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C063R0004 a ct:Rule ;
+    rdfs:label "Conditional Referenced Term — source passage 5" ;
+    ct:kind "CONDITIONAL_REFERENCED_TERM" ;
+    ct:subject_to ex:C063R0004Condition5 ;
+    ct:supported_by ex:C063P0005 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C063R0004Condition5 a ct:Condition ;
+    ct:description "provided, however that the party in breach shall have the right to cure such breach within thirty (30) days after receipt of written notice of the other party's intention to terminate. 4.2. Client may terminate this Agreement on thirty (30) days written notice without cause. In the event of termination by Client for reasons other than default by CRO, Client shall pay all sums owing to CRO, but unpaid, for work performed to date of receipt of termination notice, and all reasonable and necessary costs associated with the termination itself or to which CRO is committed to pay. In the event of termination by Client, CRO shall use all efforts to minimize any such costs, including cancelling orders and services to the extent possible. 4.3. In the event of early termination under 4.1. above where CRO is in material breach, any credit held in favour of CRO shall be returned to Client within thirty (30) days following such termination, provided that the Client will then be liable for all outstanding third party costs lawfully incurred hereunder by CRO prior to the termination. 4.4. Either party shall be entitled forthwith to terminate this Agreement with immediate effect by written notice to the other if that other is adjudged insolvent or goes into liquidation (other than for bona fide reconstruction) or has a receiver appointed over any of its property or assets. " ;
+    ct:supported_by ex:C063P0005 ;
+    meta:review_status "UNREVIEWED" .
+
+ct:Agreement a owl:Class ;
+    rdfs:label "Agreement" .
+
+ct:SourcePassage a owl:Class ;
+    rdfs:label "SourcePassage" .
+
+ex:C063P0004 a ct:SourcePassage ;
+    ct:end_char 3947 ;
+    ct:exact_text "Certain identified information has been excluded because it is both not material and would likely cause competitive harm if publicly disclosed. 2.2 Routine telephone calls, mobile calls, faxes and photocopying will be included in the rate provided by CRO. For clarity, there shall be no payment obligations other than as agreed in each Project-specific Addendum. 2.4 CRO will provide a detailed account of all time and tasks, as against project specific task and time addenda, and will be payable within 30 days of receipt of invoice by Client. 2.5. Changes in scope may be incorporated into this Agreement or the Project-specific Addenda upon the written consent of both parties. 2.6. In the event of a conflict between the terms of this Agreement and the Project-specific Addenda the terms of this Agreement shall prevail unless specifically stated in the Project-specific Addenda. 3.0 Period of the Agreement 3.1. This Agreement shall take effect on the date of signature of the Agreement by both parties and shall terminate when all obligations required of both parties hereunder are performed unless either terminated earlier or extended by the parties pursuant to the terms of this Agreement subject to clause 4.0. 4.0 Termination 4.1. Either party may terminate this Agreement on thirty (30) days written notice if the other materially breaches this Agreement; " ;
+    ct:source_path "cuad/PAXMEDICA,INC_07_02_2020-EX-10.12-Master Service Agreement.txt" ;
+    ct:source_sha256 "874eb07ae3632c67eb5eacb3f51e5927d112f8d6e7e0ba3c1a39d9614fb14f45" ;
+    ct:start_char 2579 .
+
+ex:C063P0005 a ct:SourcePassage ;
+    ct:end_char 5326 ;
+    ct:exact_text "provided, however that the party in breach shall have the right to cure such breach within thirty (30) days after receipt of written notice of the other party's intention to terminate. 4.2. Client may terminate this Agreement on thirty (30) days written notice without cause. In the event of termination by Client for reasons other than default by CRO, Client shall pay all sums owing to CRO, but unpaid, for work performed to date of receipt of termination notice, and all reasonable and necessary costs associated with the termination itself or to which CRO is committed to pay. In the event of termination by Client, CRO shall use all efforts to minimize any such costs, including cancelling orders and services to the extent possible. 4.3. In the event of early termination under 4.1. above where CRO is in material breach, any credit held in favour of CRO shall be returned to Client within thirty (30) days following such termination, provided that the Client will then be liable for all outstanding third party costs lawfully incurred hereunder by CRO prior to the termination. 4.4. Either party shall be entitled forthwith to terminate this Agreement with immediate effect by written notice to the other if that other is adjudged insolvent or goes into liquidation (other than for bona fide reconstruction) or has a receiver appointed over any of its property or assets. " ;
+    ct:source_path "cuad/PAXMEDICA,INC_07_02_2020-EX-10.12-Master Service Agreement.txt" ;
+    ct:source_sha256 "874eb07ae3632c67eb5eacb3f51e5927d112f8d6e7e0ba3c1a39d9614fb14f45" ;
+    ct:start_char 3947 .
+
+ct:Condition a owl:Class ;
+    rdfs:label "Condition" .
+
+ct:Reference a owl:Class ;
+    rdfs:label "Reference" .
+
+ct:Rule a owl:Class ;
+    rdfs:label "Rule" .
+

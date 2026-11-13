@@ -1,0 +1,284 @@
+@prefix ct: <https://cimulink.local/ontology/contract-terms/0.1#> .
+@prefix ex: <https://cimulink.local/ontology/llm100-v1/> .
+@prefix meta: <https://cimulink.local/ontology/extraction#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ct: a owl:Ontology ;
+    rdfs:comment "Partial five-contract development sample. No claim of complete contract coverage or legal correctness." .
+
+ct:agreement_effective_from a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:applies_within a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:calendar_date_status a owl:DatatypeProperty .
+
+ct:coverage a owl:DatatypeProperty .
+
+ct:description a owl:DatatypeProperty .
+
+ct:duration a owl:DatatypeProperty .
+
+ct:duration_status a owl:DatatypeProperty .
+
+ct:end_char a owl:DatatypeProperty .
+
+ct:end_date_status a owl:DatatypeProperty .
+
+ct:ends_on_event a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:exact_text a owl:DatatypeProperty .
+
+ct:has_party a owl:ObjectProperty ;
+    rdfs:domain ct:Agreement ;
+    rdfs:range ct:Party .
+
+ct:has_rule a owl:ObjectProperty ;
+    rdfs:domain ct:Agreement ;
+    rdfs:range ct:Rule .
+
+ct:kind a owl:DatatypeProperty .
+
+ct:notice_actor a owl:DatatypeProperty .
+
+ct:notice_form a owl:DatatypeProperty .
+
+ct:notice_period_status a owl:DatatypeProperty .
+
+ct:qualifies a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Rule .
+
+ct:references_section a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:renewal_count a owl:DatatypeProperty .
+
+ct:resolution_status a owl:DatatypeProperty .
+
+ct:resolved_to a owl:ObjectProperty ;
+    rdfs:domain ct:Reference ;
+    rdfs:range ct:SourcePassage .
+
+ct:source_path a owl:DatatypeProperty .
+
+ct:source_sha256 a owl:DatatypeProperty .
+
+ct:start_char a owl:DatatypeProperty .
+
+ct:starts_from a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:stated_end_date a owl:DatatypeProperty .
+
+ct:subject_to a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Condition .
+
+ct:supported_by a owl:ObjectProperty ;
+    rdfs:range ct:SourcePassage .
+
+ct:termination_notice a owl:DatatypeProperty .
+
+ex:C074 a ct:Agreement ;
+    rdfs:label "RemarkHoldingsInc_20081114_10-Q_EX-10.24_2895649_EX-10.24_Content License Agreement.txt" ;
+    ct:coverage "LOCAL_LLM_PROPOSED_PARTIAL; NOT_HUMAN_REVIEWED" ;
+    ct:has_rule ex:C074R0001,
+        ex:C074R0002,
+        ex:C074R0003,
+        ex:C074R0004,
+        ex:C074R0005,
+        ex:C074R0006,
+        ex:C074R0007,
+        ex:C074R0008,
+        ex:C074R0009,
+        ex:C074R0010,
+        ex:C074R0011 ;
+    ct:source_path "cuad/RemarkHoldingsInc_20081114_10-Q_EX-10.24_2895649_EX-10.24_Content License Agreement.txt" ;
+    ct:source_sha256 "633730271ed5a6b43ae1f54c01d6760b01d3442f4802679c8dcfa08078e7d937" ;
+    meta:model_digest "0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0" .
+
+ct:Party a owl:Class ;
+    rdfs:label "Party" .
+
+ex:C074P0028 a ct:SourcePassage ;
+    ct:end_char 22403 ;
+    ct:exact_text "2.6 Updating Services. World Book shall provide Updating Services to HSWI until the later of: (a) such time as World Book's cessation of providing Updating Services to HowStuffWorks, Inc. or its successor, but such Updating Services shall be only for the same Content under this Agreement for which World Book is obligated to provide Updating Services to HowStuffWorks, Inc. or its successor; (b) such time as the Royalties paid in a given year are less than $[*]; or (c) [*] years from the Effective Date. World Book shall provide the updates in the manner and form as set forth in Schedule D. HSWI acknowledges that the Updating Services will not be automated and may require review and editing by HSWI. Notwithstanding anything to the contrary, HSWI shall have the right to update the Content, Affinity and Images to correct errors or alleged errors (including, without limitation, errors of omission) in such or in response to third party claims related to the Content, Images or Affinity, and may use World Book content and data in connection with such updates. World Book shall provide the Updating Services in English, and HSWI may translate any such updates into Chinese only. " ;
+    ct:source_path "cuad/RemarkHoldingsInc_20081114_10-Q_EX-10.24_2895649_EX-10.24_Content License Agreement.txt" ;
+    ct:source_sha256 "633730271ed5a6b43ae1f54c01d6760b01d3442f4802679c8dcfa08078e7d937" ;
+    ct:start_char 21218 .
+
+ex:C074P0037 a ct:SourcePassage ;
+    ct:end_char 29499 ;
+    ct:exact_text "and which is not compensated in any manner of contingency arrangements on the basis of its findings. HSWI further agrees that until the expiration of [*] ([*]) year after the termination of this Agreement, HSWI will make available upon written request to World Book or any of its duly authorized representatives, this Agreement and books, documents, and records of HSWI that are necessary to verify the nature and extent of the revenue derived by HSWI from advertising related to the Content hereunder. No more than [*] audit may be conducted in any [*] month period, unless the then-most-recent audit reveals a discrepancy of more than [*] percent ([*]%) in the total applicable amount reported by HSWI.   [*] Confidential treatment requested; certain information omitted and filed separately with the SEC." ;
+    ct:source_path "cuad/RemarkHoldingsInc_20081114_10-Q_EX-10.24_2895649_EX-10.24_Content License Agreement.txt" ;
+    ct:source_sha256 "633730271ed5a6b43ae1f54c01d6760b01d3442f4802679c8dcfa08078e7d937" ;
+    ct:start_char 28692 .
+
+ex:C074P0040 a ct:SourcePassage ;
+    ct:end_char 31609 ;
+    ct:exact_text "(ii) the commencement of a voluntary case or other voluntary proceeding seeking liquidation, reorganization or other relief with respect to the other party of its debts under any bankruptcy, insolvency, or other similar law now or hereafter in effect, that authorizes the reorganization or liquidation of such other party or its debt or the appointment of a trustee, receiver, liquidator, custodian or other similar official of it or any substantial part of its property;   (iii) the other party's consent to any such relief or to the appointment of or taking possession by any such official in an involuntary case or other proceeding commenced against it; or   (iv) the other party's making a general assignment for the benefit of creditors; or the other party's being adjudicated insolvent; or the other party taking any corporate action to authorize any of the foregoing.   6.3 Effect of Termination. Upon the expiration or termination of this Agreement, HSWI shall pay World Book all amounts due and owing up to the date of termination, within [*] ([*]) days after such expiration or termination. " ;
+    ct:source_path "cuad/RemarkHoldingsInc_20081114_10-Q_EX-10.24_2895649_EX-10.24_Content License Agreement.txt" ;
+    ct:source_sha256 "633730271ed5a6b43ae1f54c01d6760b01d3442f4802679c8dcfa08078e7d937" ;
+    ct:start_char 30508 .
+
+ex:C074P0041 a ct:SourcePassage ;
+    ct:end_char 32197 ;
+    ct:exact_text "In addition, upon the expiration or termination of the applicable license, HSWI shall cease to Display the applicable Content that is not licensed under a perpetual license, return or destroy such Content within [*] ([*]) days after such expiration or termination at the direction of World Book, and, upon request by World Book, certify completion of the return or destruction in writing. There shall be no effect upon the applicable Content that is licensed under a perpetual license.   [*] Confidential treatment requested; certain information omitted and filed separately with the SEC." ;
+    ct:source_path "cuad/RemarkHoldingsInc_20081114_10-Q_EX-10.24_2895649_EX-10.24_Content License Agreement.txt" ;
+    ct:source_sha256 "633730271ed5a6b43ae1f54c01d6760b01d3442f4802679c8dcfa08078e7d937" ;
+    ct:start_char 31609 .
+
+ex:C074P0046 a ct:SourcePassage ;
+    ct:end_char 35597 ;
+    ct:exact_text "All of the Confidential Information, and all copies, extracts, summaries and other reproductions thereof, shall be and remain the property of the respective disclosing party. Upon written request or upon the expiration of this Agreement, all Confidential Information (and all copies thereof) will be returned to the party disclosing such or destroyed, with written certification thereof, except that one archival copy of written material to be kept confidential and segregated from the parties' regular files may be retained by each party's legal counsel solely for purposes of verifying compliance with this Agreement." ;
+    ct:source_path "cuad/RemarkHoldingsInc_20081114_10-Q_EX-10.24_2895649_EX-10.24_Content License Agreement.txt" ;
+    ct:source_sha256 "633730271ed5a6b43ae1f54c01d6760b01d3442f4802679c8dcfa08078e7d937" ;
+    ct:start_char 34978 .
+
+ex:C074P0071 a ct:SourcePassage ;
+    ct:end_char 55733 ;
+    ct:exact_text "Each of the parties hereto hereby agrees to take or cause to be taken such further actions, to execute, deliver and file or cause to be executed, delivered and filed such further documents, and will obtain such consents, as may be necessary or as may be reasonably requested in order to fully effectuate the purposes, terms and conditions of this Agreement. However, in no case will World Book be required to execute any lien UCC documentation for public filing.   11.10 Headings. Section headings contained in this Agreement are inserted for convenience or reference only, shall not in no way affect the interpretation of any of the provisions herein.   11.11 Independent Contractors. Notwithstanding any provision hereof, for purposes of this Agreement, each party shall be and act as an independent contractor and not as a partner, a joint venturer, or an agent of the other party, and shall not bind nor attempt to bind the other party in any way without prior written consent.   11.12 Survival. Sections 1, 2, 3, 4, 6.1(ii), 6.3, 6.4, 6.5, 7, 8, 9, 10 and 11 shall survive the expiration or termination of this Agreement for any reason.   11.13 Entire Agreement. " ;
+    ct:source_path "cuad/RemarkHoldingsInc_20081114_10-Q_EX-10.24_2895649_EX-10.24_Content License Agreement.txt" ;
+    ct:source_sha256 "633730271ed5a6b43ae1f54c01d6760b01d3442f4802679c8dcfa08078e7d937" ;
+    ct:start_char 54565 .
+
+ex:C074R0001 a ct:Rule ;
+    rdfs:label "Initial Term — source passage 25" ;
+    ct:kind "INITIAL_TERM" ;
+    ct:subject_to ex:C074R0001Condition25 ;
+    ct:supported_by ex:C074P0025 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C074R0001Condition25 a ct:Condition ;
+    ct:description "The term of the license for Translated Content shall be for a term of [*] ([*]) years from the time such Translated Content is first Displayed on an HSWI Website. In addition, such license for Translated Content shall be Exclusive for Display on the Open Free Web. At the end of such [*] ([*]) year period, HSWI shall have the right to renew the Agreement under materially the same terms or shall have an option to purchase the Translated Content outright to the extent rights permit and to the extent the parties mutually agree to terms for such sale.   2.4 Non-Display. HSWI may, in its sole discretion, decide not to Display Content obtained from World Book. If HSWI elects in a written notice to World Book that HSWI will not Display any such Content, notwithstanding anything to the contrary herein, the license to such Content shall be non-Exclusive.   2.5 Exclusivity. Commencing on the Effective Date and continuing for eighteen (18) months, World Book shall work exclusively with HSWI to publish Chinese language Content for the Open Free Web and shall not itself, directly or indirectly, publish Chinese language Content for the Open Free Web. " ;
+    ct:supported_by ex:C074P0025 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C074R0002 a ct:Rule ;
+    rdfs:label "Optional Renewal — source passage 25" ;
+    ct:kind "OPTIONAL_RENEWAL" ;
+    ct:subject_to ex:C074R0002Condition25 ;
+    ct:supported_by ex:C074P0025 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C074R0002Condition25 a ct:Condition ;
+    ct:description "The term of the license for Translated Content shall be for a term of [*] ([*]) years from the time such Translated Content is first Displayed on an HSWI Website. In addition, such license for Translated Content shall be Exclusive for Display on the Open Free Web. At the end of such [*] ([*]) year period, HSWI shall have the right to renew the Agreement under materially the same terms or shall have an option to purchase the Translated Content outright to the extent rights permit and to the extent the parties mutually agree to terms for such sale.   2.4 Non-Display. HSWI may, in its sole discretion, decide not to Display Content obtained from World Book. If HSWI elects in a written notice to World Book that HSWI will not Display any such Content, notwithstanding anything to the contrary herein, the license to such Content shall be non-Exclusive.   2.5 Exclusivity. Commencing on the Effective Date and continuing for eighteen (18) months, World Book shall work exclusively with HSWI to publish Chinese language Content for the Open Free Web and shall not itself, directly or indirectly, publish Chinese language Content for the Open Free Web. " ;
+    ct:supported_by ex:C074P0025 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C074R0003 a ct:Rule ;
+    rdfs:label "Conditional Referenced Term — source passage 25" ;
+    ct:kind "CONDITIONAL_REFERENCED_TERM" ;
+    ct:subject_to ex:C074R0003Condition25 ;
+    ct:supported_by ex:C074P0025 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C074R0003Condition25 a ct:Condition ;
+    ct:description "The term of the license for Translated Content shall be for a term of [*] ([*]) years from the time such Translated Content is first Displayed on an HSWI Website. In addition, such license for Translated Content shall be Exclusive for Display on the Open Free Web. At the end of such [*] ([*]) year period, HSWI shall have the right to renew the Agreement under materially the same terms or shall have an option to purchase the Translated Content outright to the extent rights permit and to the extent the parties mutually agree to terms for such sale.   2.4 Non-Display. HSWI may, in its sole discretion, decide not to Display Content obtained from World Book. If HSWI elects in a written notice to World Book that HSWI will not Display any such Content, notwithstanding anything to the contrary herein, the license to such Content shall be non-Exclusive.   2.5 Exclusivity. Commencing on the Effective Date and continuing for eighteen (18) months, World Book shall work exclusively with HSWI to publish Chinese language Content for the Open Free Web and shall not itself, directly or indirectly, publish Chinese language Content for the Open Free Web. " ;
+    ct:supported_by ex:C074P0025 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C074R0004 a ct:Rule ;
+    rdfs:label "Initial Term — source passage 28" ;
+    ct:kind "INITIAL_TERM" ;
+    ct:references_section ex:C074R0004Ref0 ;
+    ct:supported_by ex:C074P0028 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C074R0004Ref0 a ct:Reference ;
+    rdfs:label "Schedule D" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C074R0005 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 37" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:supported_by ex:C074P0037 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C074R0006 a ct:Rule ;
+    rdfs:label "Initial Term — source passage 39" ;
+    ct:kind "INITIAL_TERM" ;
+    ct:subject_to ex:C074R0006Condition39 ;
+    ct:supported_by ex:C074P0039 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C074R0006Condition39 a ct:Condition ;
+    ct:description "6. TERM, EXTENSION, AND TERMINATION.   6.1 Term.   (i) Term of Agreement. This Agreement shall commence on the Effective Date and, except as set forth in Subsection (ii), continue in full force and effect through the Delivery Period.   (ii) Term of Licenses. Notwithstanding Subsection (i), certain license grants for Content, Images and Affinities extend beyond the expiration or earlier termination of this Agreement as set forth herein. With respect to such Content, Images and Affinities, the terms and conditions of this Agreement shall continue to apply.   6.2 Termination for Cause or Bankruptcy. This Agreement may be terminated by a party in the event of:   (i) any material default in, or material breach of, any of the material terms and conditions of this Agreement by the other party, which default continues in effect after the defaulting party has been provided with written notice of default and sixty (60) days to cure such default;   " ;
+    ct:supported_by ex:C074P0039 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C074R0007 a ct:Rule ;
+    rdfs:label "Conditional Referenced Term — source passage 39" ;
+    ct:kind "CONDITIONAL_REFERENCED_TERM" ;
+    ct:subject_to ex:C074R0007Condition39 ;
+    ct:supported_by ex:C074P0039 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C074R0007Condition39 a ct:Condition ;
+    ct:description "6. TERM, EXTENSION, AND TERMINATION.   6.1 Term.   (i) Term of Agreement. This Agreement shall commence on the Effective Date and, except as set forth in Subsection (ii), continue in full force and effect through the Delivery Period.   (ii) Term of Licenses. Notwithstanding Subsection (i), certain license grants for Content, Images and Affinities extend beyond the expiration or earlier termination of this Agreement as set forth herein. With respect to such Content, Images and Affinities, the terms and conditions of this Agreement shall continue to apply.   6.2 Termination for Cause or Bankruptcy. This Agreement may be terminated by a party in the event of:   (i) any material default in, or material breach of, any of the material terms and conditions of this Agreement by the other party, which default continues in effect after the defaulting party has been provided with written notice of default and sixty (60) days to cure such default;   " ;
+    ct:supported_by ex:C074P0039 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C074R0008 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 40" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:supported_by ex:C074P0040 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C074R0009 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 41" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:supported_by ex:C074P0041 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C074R0010 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 46" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:supported_by ex:C074P0046 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C074R0011 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 71" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:supported_by ex:C074P0071 ;
+    meta:review_status "UNREVIEWED" .
+
+ct:Agreement a owl:Class ;
+    rdfs:label "Agreement" .
+
+ex:C074P0039 a ct:SourcePassage ;
+    ct:end_char 30508 ;
+    ct:exact_text "6. TERM, EXTENSION, AND TERMINATION.   6.1 Term.   (i) Term of Agreement. This Agreement shall commence on the Effective Date and, except as set forth in Subsection (ii), continue in full force and effect through the Delivery Period.   (ii) Term of Licenses. Notwithstanding Subsection (i), certain license grants for Content, Images and Affinities extend beyond the expiration or earlier termination of this Agreement as set forth herein. With respect to such Content, Images and Affinities, the terms and conditions of this Agreement shall continue to apply.   6.2 Termination for Cause or Bankruptcy. This Agreement may be terminated by a party in the event of:   (i) any material default in, or material breach of, any of the material terms and conditions of this Agreement by the other party, which default continues in effect after the defaulting party has been provided with written notice of default and sixty (60) days to cure such default;   " ;
+    ct:source_path "cuad/RemarkHoldingsInc_20081114_10-Q_EX-10.24_2895649_EX-10.24_Content License Agreement.txt" ;
+    ct:source_sha256 "633730271ed5a6b43ae1f54c01d6760b01d3442f4802679c8dcfa08078e7d937" ;
+    ct:start_char 29556 .
+
+ct:Condition a owl:Class ;
+    rdfs:label "Condition" .
+
+ex:C074P0025 a ct:SourcePassage ;
+    ct:end_char 20414 ;
+    ct:exact_text "The term of the license for Translated Content shall be for a term of [*] ([*]) years from the time such Translated Content is first Displayed on an HSWI Website. In addition, such license for Translated Content shall be Exclusive for Display on the Open Free Web. At the end of such [*] ([*]) year period, HSWI shall have the right to renew the Agreement under materially the same terms or shall have an option to purchase the Translated Content outright to the extent rights permit and to the extent the parties mutually agree to terms for such sale.   2.4 Non-Display. HSWI may, in its sole discretion, decide not to Display Content obtained from World Book. If HSWI elects in a written notice to World Book that HSWI will not Display any such Content, notwithstanding anything to the contrary herein, the license to such Content shall be non-Exclusive.   2.5 Exclusivity. Commencing on the Effective Date and continuing for eighteen (18) months, World Book shall work exclusively with HSWI to publish Chinese language Content for the Open Free Web and shall not itself, directly or indirectly, publish Chinese language Content for the Open Free Web. " ;
+    ct:source_path "cuad/RemarkHoldingsInc_20081114_10-Q_EX-10.24_2895649_EX-10.24_Content License Agreement.txt" ;
+    ct:source_sha256 "633730271ed5a6b43ae1f54c01d6760b01d3442f4802679c8dcfa08078e7d937" ;
+    ct:start_char 19260 .
+
+ct:Reference a owl:Class ;
+    rdfs:label "Reference" .
+
+ct:SourcePassage a owl:Class ;
+    rdfs:label "SourcePassage" .
+
+ct:Rule a owl:Class ;
+    rdfs:label "Rule" .
+

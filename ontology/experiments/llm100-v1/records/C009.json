@@ -1,0 +1,106 @@
+{
+  "document_id": "C009",
+  "file_path": "cuad/ArcaUsTreasuryFund_20200207_N-2_EX-99.K5_11971930_EX-99.K5_Development Agreement.txt",
+  "model_digest": "0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0",
+  "rules": [
+    {
+      "passage_id": 8,
+      "kind": "POST_EXPIRY_CONTINUATION",
+      "label": "Post Expiry Continuation — source passage 8",
+      "condition_ids": [],
+      "reference_labels": [],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 15,
+      "kind": "TERMINATION",
+      "label": "Termination — source passage 15",
+      "condition_ids": [
+        15
+      ],
+      "reference_labels": [
+        "Section 5"
+      ],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 15,
+      "kind": "CONDITIONAL_REFERENCED_TERM",
+      "label": "Conditional Referenced Term — source passage 15",
+      "condition_ids": [
+        15
+      ],
+      "reference_labels": [
+        "Section 5"
+      ],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 16,
+      "kind": "POST_EXPIRY_CONTINUATION",
+      "label": "Post Expiry Continuation — source passage 16",
+      "condition_ids": [],
+      "reference_labels": [
+        "Section 4",
+        "Section 5"
+      ],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 19,
+      "kind": "INITIAL_TERM",
+      "label": "Initial Term — source passage 19",
+      "condition_ids": [
+        19
+      ],
+      "reference_labels": [
+        "Section 2(a)(19)",
+        "Section 15(a) (4)"
+      ],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 19,
+      "kind": "AUTOMATIC_RENEWAL",
+      "label": "Automatic Renewal — source passage 19",
+      "condition_ids": [
+        19
+      ],
+      "reference_labels": [
+        "Section 2(a)(19)",
+        "Section 15(a) (4)"
+      ],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 19,
+      "kind": "CONDITIONAL_REFERENCED_TERM",
+      "label": "Conditional Referenced Term — source passage 19",
+      "condition_ids": [
+        19
+      ],
+      "reference_labels": [
+        "Section 2(a)(19)",
+        "Section 15(a) (4)"
+      ],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    }
+  ],
+  "rejected_rules": [],
+  "review_status": "UNREVIEWED",
+  "coverage": "Lexically selected source windows; completeness not guaranteed."
+}

@@ -1,0 +1,37 @@
+[
+  {
+    "source_index": 733,
+    "question": "Consider the Global Master Supply Agreement between ExxonMobil Chemical Company and West Pharmaceutical Services, Inc.; What is the expiration date of this contract?",
+    "topic": "expiry",
+    "document_id": "C096",
+    "file_path": "cuad/WestPharmaceuticalServicesInc_20200116_8-K_EX-10.1_11947529_EX-10.1_Supply Agreement.txt"
+  },
+  {
+    "source_index": 269,
+    "question": "Consider the Hosting Agreement between T-Mobile Netherlands B.V. and Elephant Talk Communication Holding AG; What is the renewal term for this contract?",
+    "topic": "renewal",
+    "document_id": "C067",
+    "file_path": "cuad/PareteumCorp_20081001_8-K_EX-99.1_2654808_EX-99.1_Hosting Agreement.txt"
+  },
+  {
+    "source_index": 1375,
+    "question": "Consider the Content Licensing Agreement between Data Call Technologies, Inc. and PLAN_B MEDIA AG; What is the expiration date of this contract?",
+    "topic": "expiry",
+    "document_id": "C028",
+    "file_path": "cuad/DataCallTechnologies_20060918_SB-2A_EX-10.9_944510_EX-10.9_Content License Agreement.txt"
+  },
+  {
+    "source_index": 2316,
+    "question": "Consider the Transportation Contract between JSC NOC KazakhOil and JSC Karakudukmunay for Crude Oil Export; What is the expiration date of this contract?",
+    "topic": "expiry",
+    "document_id": "C020",
+    "file_path": "cuad/CHAPARRALRESOURCESINC_03_30_2000-EX-10.66-TRANSPORTATION CONTRACT.txt"
+  },
+  {
+    "source_index": 10,
+    "question": "Consider the Video-on-Demand Content License Agreement between Rogers Cable Communications Inc. and EuroMedia Holdings Corp.; What is the expiration date of this contract?",
+    "topic": "expiry",
+    "document_id": "C034",
+    "file_path": "cuad/EuromediaHoldingsCorp_20070215_10SB12G_EX-10.B(01)_525118_EX-10.B(01)_Content License Agreement.txt"
+  }
+]

@@ -1,0 +1,1393 @@
+@prefix ct: <https://cimulink.local/ontology/contract-terms/0.1#> .
+@prefix ex: <https://cimulink.local/ontology/llm100-v1/> .
+@prefix meta: <https://cimulink.local/ontology/extraction#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ct: a owl:Ontology ;
+    rdfs:comment "Partial five-contract development sample. No claim of complete contract coverage or legal correctness." .
+
+ct:agreement_effective_from a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:applies_within a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:calendar_date_status a owl:DatatypeProperty .
+
+ct:coverage a owl:DatatypeProperty .
+
+ct:description a owl:DatatypeProperty .
+
+ct:duration a owl:DatatypeProperty .
+
+ct:duration_status a owl:DatatypeProperty .
+
+ct:end_char a owl:DatatypeProperty .
+
+ct:end_date_status a owl:DatatypeProperty .
+
+ct:ends_on_event a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:exact_text a owl:DatatypeProperty .
+
+ct:has_party a owl:ObjectProperty ;
+    rdfs:domain ct:Agreement ;
+    rdfs:range ct:Party .
+
+ct:has_rule a owl:ObjectProperty ;
+    rdfs:domain ct:Agreement ;
+    rdfs:range ct:Rule .
+
+ct:kind a owl:DatatypeProperty .
+
+ct:notice_actor a owl:DatatypeProperty .
+
+ct:notice_form a owl:DatatypeProperty .
+
+ct:notice_period_status a owl:DatatypeProperty .
+
+ct:qualifies a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Rule .
+
+ct:references_section a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:renewal_count a owl:DatatypeProperty .
+
+ct:resolution_status a owl:DatatypeProperty .
+
+ct:resolved_to a owl:ObjectProperty ;
+    rdfs:domain ct:Reference ;
+    rdfs:range ct:SourcePassage .
+
+ct:source_path a owl:DatatypeProperty .
+
+ct:source_sha256 a owl:DatatypeProperty .
+
+ct:start_char a owl:DatatypeProperty .
+
+ct:starts_from a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:stated_end_date a owl:DatatypeProperty .
+
+ct:subject_to a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Condition .
+
+ct:supported_by a owl:ObjectProperty ;
+    rdfs:range ct:SourcePassage .
+
+ct:termination_notice a owl:DatatypeProperty .
+
+ex:C019 a ct:Agreement ;
+    rdfs:label "CERES,INC_01_25_2012-EX-10.20-Collaboration Agreement.txt" ;
+    ct:coverage "LOCAL_LLM_PROPOSED_PARTIAL; NOT_HUMAN_REVIEWED" ;
+    ct:has_rule ex:C019R0001,
+        ex:C019R0002,
+        ex:C019R0003,
+        ex:C019R0004,
+        ex:C019R0005,
+        ex:C019R0006,
+        ex:C019R0007,
+        ex:C019R0008,
+        ex:C019R0009,
+        ex:C019R0010,
+        ex:C019R0011,
+        ex:C019R0012,
+        ex:C019R0013,
+        ex:C019R0014,
+        ex:C019R0015,
+        ex:C019R0016,
+        ex:C019R0017,
+        ex:C019R0018,
+        ex:C019R0019,
+        ex:C019R0020,
+        ex:C019R0021,
+        ex:C019R0022,
+        ex:C019R0023,
+        ex:C019R0024,
+        ex:C019R0025,
+        ex:C019R0026,
+        ex:C019R0027,
+        ex:C019R0028,
+        ex:C019R0029,
+        ex:C019R0030,
+        ex:C019R0031,
+        ex:C019R0032,
+        ex:C019R0033,
+        ex:C019R0034,
+        ex:C019R0035,
+        ex:C019R0036,
+        ex:C019R0037,
+        ex:C019R0038,
+        ex:C019R0039,
+        ex:C019R0040,
+        ex:C019R0041,
+        ex:C019R0042,
+        ex:C019R0043,
+        ex:C019R0044,
+        ex:C019R0045,
+        ex:C019R0046,
+        ex:C019R0047,
+        ex:C019R0048,
+        ex:C019R0049,
+        ex:C019R0050,
+        ex:C019R0051,
+        ex:C019R0052,
+        ex:C019R0053,
+        ex:C019R0054,
+        ex:C019R0055,
+        ex:C019R0056,
+        ex:C019R0057,
+        ex:C019R0058,
+        ex:C019R0059,
+        ex:C019R0060,
+        ex:C019R0061,
+        ex:C019R0062,
+        ex:C019R0063,
+        ex:C019R0064,
+        ex:C019R0065,
+        ex:C019R0066,
+        ex:C019R0067,
+        ex:C019R0068,
+        ex:C019R0069,
+        ex:C019R0070 ;
+    ct:source_path "cuad/CERES,INC_01_25_2012-EX-10.20-Collaboration Agreement.txt" ;
+    ct:source_sha256 "83b3bd9444f56aeb9d1d4e5191c6f717356bca0b5d8c8da05e910aa49ec0af7b" ;
+    meta:model_digest "0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0" .
+
+ct:Party a owl:Class ;
+    rdfs:label "Party" .
+
+ex:C019P0008 a ct:SourcePassage ;
+    ct:end_char 1352 ;
+    ct:exact_text "TABLE OF CONTENTS             1. RESEARCH PROJECTS      3   2. MANAGEMENT COMMITTEE      7   3. EXCLUSIVITY      8   4. INTELLECTUAL PROPERTY     11   5. USE AND COMMERCIALIZATION RIGHTS     14   6. ENFORCEMENT OF JOINT INTELLECTUAL PROPERTY RIGHTS     16   7. CONFIDENTIALITY     16   8. PUBLICATIONS     18   9. PUBLICITY     18   10. RECORDS AND AUDITS     19   11. INDEPENDENT CONTRACTOR     19   12. CONVENTION ON BIOLOGICAL DIVERSITY     19   13. WARRANTIES     20   14. TERM AND TERMINATION     23   15. DISPUTE RESOLUTION AND APPLICABLE LAW     25   16. NOTICES     26   17. GENERAL     27   18. SPECIAL CONDITIONS IN CONNECTION WITH DEFRA AGREEMENT NF 0426     28   EXHIBIT A     30   DEFINITION OF COLLABORATION CROPS     30   EXHIBIT B     31   PREFERRED FORM OF RECEIPT FORM     31   EXHIBIT C     32   PREFERRED FORMS OF VARIETY EVALUATION AGREEMENT     32   EXHIBIT D     50   EXTERNAL FUNDING   EXHIBIT E     50 51" ;
+    ct:source_path "cuad/CERES,INC_01_25_2012-EX-10.20-Collaboration Agreement.txt" ;
+    ct:source_sha256 "83b3bd9444f56aeb9d1d4e5191c6f717356bca0b5d8c8da05e910aa49ec0af7b" ;
+    ct:start_char 423 .
+
+ex:C019P0141 a ct:SourcePassage ;
+    ct:end_char 47768 ;
+    ct:exact_text "7.2 Subject to Article 7.3, for a period of five (5) years after the termination of the related RESEARCH PROJECT, the receiving Party shall not use,  except (a) for the benefit of the Parties' collaboration or (b) such use as is expressly allowed by this Agreement and/or disclose any Confidential  Information to any third party (i) without the prior written consent of the disclosing Party if the Confidential Information was received from the  other Party, or (ii) the prior written consent of both Parties if the Confidential Information was generated during a RESEARCH PROJECT, provided  however that CERES shall have no restrictions regarding CERES INTELLECTUAL PROPERTY or regarding any information of material resulting  from RESEARCH PROJECT activities in which IGER does not participate. Confidential Information shall only be made accessible to each Party's  employees or students on a need-to-know basis and not to any third party, subject to Articles 7.3 and 7.4. Manuscripts and papers published in  scientific journals and presentations made at public meetings that include Confidential Information are exempt from the confidentiality obligations  of this Article, provided the Parties followed the procedure set forth in Article 8." ;
+    ct:source_path "cuad/CERES,INC_01_25_2012-EX-10.20-Collaboration Agreement.txt" ;
+    ct:source_sha256 "83b3bd9444f56aeb9d1d4e5191c6f717356bca0b5d8c8da05e910aa49ec0af7b" ;
+    ct:start_char 46521 .
+
+ex:C019P0200 a ct:SourcePassage ;
+    ct:end_char 65413 ;
+    ct:exact_text "14.1 The term of this Agreement shall be fifteen (15) years from the Effective Date, unless sooner terminated in accordance with the following  provisions of this Article:" ;
+    ct:source_path "cuad/CERES,INC_01_25_2012-EX-10.20-Collaboration Agreement.txt" ;
+    ct:source_sha256 "83b3bd9444f56aeb9d1d4e5191c6f717356bca0b5d8c8da05e910aa49ec0af7b" ;
+    ct:start_char 65242 .
+
+ex:C019P0202 a ct:SourcePassage ;
+    ct:end_char 65853 ;
+    ct:exact_text "(b) failure of one Party to satisfy its material obligations under this Agreement, and such Party subsequently fails to cure such failure(s) within  (i) thirty (30) days for failures to remit payment for amounts due under this Agreement and (ii) ninety (90) days for all other obligations in each  case after receipt of written notice from the non-breaching Party specifying such failure(s);" ;
+    ct:source_path "cuad/CERES,INC_01_25_2012-EX-10.20-Collaboration Agreement.txt" ;
+    ct:source_sha256 "83b3bd9444f56aeb9d1d4e5191c6f717356bca0b5d8c8da05e910aa49ec0af7b" ;
+    ct:start_char 65462 .
+
+ex:C019P0206 a ct:SourcePassage ;
+    ct:end_char 68435 ;
+    ct:exact_text "14.  TERM AND TERMINATION." ;
+    ct:source_path "cuad/CERES,INC_01_25_2012-EX-10.20-Collaboration Agreement.txt" ;
+    ct:source_sha256 "83b3bd9444f56aeb9d1d4e5191c6f717356bca0b5d8c8da05e910aa49ec0af7b" ;
+    ct:start_char 68409 .
+
+ex:C019P0210 a ct:SourcePassage ;
+    ct:end_char 70186 ;
+    ct:exact_text "14.2 Promptly upon the delivery of a notice of termination of this Agreement, the Parties will meet to discuss the ongoing RESEARCH PROJECTS,  and each Party will provide to the other Party any data, information and germplasm that constitutes or is covered by JOINT INTELLECTUAL  PROPERTY and which has not been provided prior to the notice of termination, without prejudice to additional on-going delivery obligations set  forth in any SCHEDULES." ;
+    ct:source_path "cuad/CERES,INC_01_25_2012-EX-10.20-Collaboration Agreement.txt" ;
+    ct:source_sha256 "83b3bd9444f56aeb9d1d4e5191c6f717356bca0b5d8c8da05e910aa49ec0af7b" ;
+    ct:start_char 69739 .
+
+ex:C019P0211 a ct:SourcePassage ;
+    ct:end_char 70636 ;
+    ct:exact_text "14.3 Termination of this Agreement shall not affect the rights and obligations of the Parties accrued prior to termination hereof nor any license  grants then in existence, nor either Party's non-exclusive rights to commercialize then existing RELEASED VARIETIES in the United Kingdom,  subject to payment of remuneration as set forth in any relevant license/commercialization agreements. Further, the provisions set forth hereinafter  shall apply." ;
+    ct:source_path "cuad/CERES,INC_01_25_2012-EX-10.20-Collaboration Agreement.txt" ;
+    ct:source_sha256 "83b3bd9444f56aeb9d1d4e5191c6f717356bca0b5d8c8da05e910aa49ec0af7b" ;
+    ct:start_char 70188 .
+
+ex:C019P0212 a ct:SourcePassage ;
+    ct:end_char 71786 ;
+    ct:exact_text "14.3.1 In case of termination on the basis of Article 14.1 (b) if CERES is the breaching Party, Article 14.1 (c) if CERES ceases substantially all  activities in the COLLABORATION CROPS, Article 14.1 (d) (i), (ii) or (iii) or Article 14.1. (e) (iii), at or about the effective date of termination, the  Parties will negotiate in good faith to reach agreement as to the rights to use and commercially exploit JOINT INTELLECTUAL PROPERTY not  covered by any relevant license/commercialization agreement between the Parties, which rights will be addressed in one or more written  agreements. If the Parties fail to reach agreement within ninety (90) days after the start of such negotiations, which shall be evidenced by  written notice from one Party to the other initiating such negotiations, each Party shall have the non-exclusive right to use and commercially  exploit JOINT INTELLECTUAL PROPERTY for any and all purposes, with the right to grant sublicenses, subject to the obligations of the first  sentence of Article 14.3, provided that no licenses on any transgenes or transgenic technologies of the other Party shall be included or implied." ;
+    ct:source_path "cuad/CERES,INC_01_25_2012-EX-10.20-Collaboration Agreement.txt" ;
+    ct:source_sha256 "83b3bd9444f56aeb9d1d4e5191c6f717356bca0b5d8c8da05e910aa49ec0af7b" ;
+    ct:start_char 70638 .
+
+ex:C019P0215 a ct:SourcePassage ;
+    ct:end_char 73344 ;
+    ct:exact_text "14.4 Termination of this Agreement for any reason will not relieve either Party of any obligation or liability accrued under this Agreement before  termination or rescind any payments made or due before termination. Articles 4, 5 (subject to Article 14.3), 6, 7, 8, 9.1, 9.2, 10, 12.3, 13, 14.2, 14.3,  14.4, 14.5, 15, 16 and 18 will survive any termination of this Agreement." ;
+    ct:source_path "cuad/CERES,INC_01_25_2012-EX-10.20-Collaboration Agreement.txt" ;
+    ct:source_sha256 "83b3bd9444f56aeb9d1d4e5191c6f717356bca0b5d8c8da05e910aa49ec0af7b" ;
+    ct:start_char 72968 .
+
+ex:C019P0216 a ct:SourcePassage ;
+    ct:end_char 73822 ;
+    ct:exact_text "14.5 Termination of this Agreement shall not automatically terminate any existing RESEARCH PROJECT, which can only be terminated according  to the specific terms of the related SCHEDULE. The terms and provisions of this Agreement shall continue to apply to the activities and outcomes  of any such RESEARCH PROJECTS, notwithstanding the termination of this Agreement, unless provided otherwise in the relevant SCHEDULE or  by written agreement of the Parties upon termination." ;
+    ct:source_path "cuad/CERES,INC_01_25_2012-EX-10.20-Collaboration Agreement.txt" ;
+    ct:source_sha256 "83b3bd9444f56aeb9d1d4e5191c6f717356bca0b5d8c8da05e910aa49ec0af7b" ;
+    ct:start_char 73346 .
+
+ex:C019P0289 a ct:SourcePassage ;
+    ct:end_char 87237 ;
+    ct:exact_text "This Agreement is made effective on [date] (\"Effective Date\") by and between [Ceres, Inc., a Delaware corporation with principal offices at  1535 Rancho Conejo Blvd., Thousand Oaks, CA 91320, United States of America] or [Institute of Grassland and Environmental Research,  a company limited by guarantee, registered in England No. 473456 and a registered Charity No. 272150, having an office at Plas  Gogerddan, Aberystwyth, Ceredigion, SY23 3EB, United Kingdom] hereinafter \"[CERES/IGER],\" and [Party information to be completed],  hereinafter \"[Party].\"" ;
+    ct:source_path "cuad/CERES,INC_01_25_2012-EX-10.20-Collaboration Agreement.txt" ;
+    ct:source_sha256 "83b3bd9444f56aeb9d1d4e5191c6f717356bca0b5d8c8da05e910aa49ec0af7b" ;
+    ct:start_char 86681 .
+
+ex:C019P0297 a ct:SourcePassage ;
+    ct:end_char 90090 ;
+    ct:exact_text "2.6   Upon termination of the Program, [Party] will, at the option of [CERES/IGER], (i) allow [CERES/IGER] to remove any Plant Material  and any progeny, plants, plant material, seeds or products obtained in the Program or (ii) destroy any remaining CERES/IGER Plant  Material and any plants, plant material and seeds obtained under the Program within fifteen (15) days from [CERES/IGER]'s request to  destroy, and will send [CERES/IGER] forthwith an attestation of such destruction." ;
+    ct:source_path "cuad/CERES,INC_01_25_2012-EX-10.20-Collaboration Agreement.txt" ;
+    ct:source_sha256 "83b3bd9444f56aeb9d1d4e5191c6f717356bca0b5d8c8da05e910aa49ec0af7b" ;
+    ct:start_char 89607 .
+
+ex:C019P0331 a ct:SourcePassage ;
+    ct:end_char 99419 ;
+    ct:exact_text "9.1   This Agreement will enter into force on the Effective Date and will remain in full force and effect until the latest of the following dates:  (i) the [third] anniversary of the Effective Date, (ii) the date of delivery by [Party] of the last report provided for in this Agreement, or  (iii) the dates on which the last payment due by [CERES/IGER] pursuant to this Agreement is made." ;
+    ct:source_path "cuad/CERES,INC_01_25_2012-EX-10.20-Collaboration Agreement.txt" ;
+    ct:source_sha256 "83b3bd9444f56aeb9d1d4e5191c6f717356bca0b5d8c8da05e910aa49ec0af7b" ;
+    ct:start_char 99031 .
+
+ex:C019P0334 a ct:SourcePassage ;
+    ct:end_char 100380 ;
+    ct:exact_text "9.4   The provisions of Articles 2.6, 5, 6, 7.3, 7.4, 8.5 and 8.6 will survive the expiration or termination of this Agreement." ;
+    ct:source_path "cuad/CERES,INC_01_25_2012-EX-10.20-Collaboration Agreement.txt" ;
+    ct:source_sha256 "83b3bd9444f56aeb9d1d4e5191c6f717356bca0b5d8c8da05e910aa49ec0af7b" ;
+    ct:start_char 100253 .
+
+ex:C019P0361 a ct:SourcePassage ;
+    ct:end_char 102727 ;
+    ct:exact_text "This Agreement is made effective on [date] (\"Effective Date\") by and between [Ceres, Inc., a Delaware corporation with principal offices at  1535 Rancho Conejo Blvd., Thousand Oaks, CA 91320, United States of America] or [Institute of Grassland and Environmental Research,  a company limited by guarantee, registered in England No. 473456 and a registered Charity No. 272150, having an office at Plas  Gogerddan, Aberystwyth, Ceredigion, SY23 3EB, United Kingdom] hereinafter \"[CERES/IGER],\" and [Party information to be completed],  hereinafter \"[Party].\"" ;
+    ct:source_path "cuad/CERES,INC_01_25_2012-EX-10.20-Collaboration Agreement.txt" ;
+    ct:source_sha256 "83b3bd9444f56aeb9d1d4e5191c6f717356bca0b5d8c8da05e910aa49ec0af7b" ;
+    ct:start_char 102171 .
+
+ex:C019P0372 a ct:SourcePassage ;
+    ct:end_char 106079 ;
+    ct:exact_text "2.6   Upon termination of the Program, [Party] will, at the option of [CERES/IGER], (i) allow [CERES/IGER] to remove any Plant Material  and any progeny, plants, plant material, seeds or products obtained in the Program or (ii) destroy any remaining CERES/IGER Plant  Material and any plants, plant material and seeds obtained under the Program within fifteen (15) days from [CERES/IGER]'s request to  destroy, and will send [CERES/IGER] forthwith an attestation of such destruction." ;
+    ct:source_path "cuad/CERES,INC_01_25_2012-EX-10.20-Collaboration Agreement.txt" ;
+    ct:source_sha256 "83b3bd9444f56aeb9d1d4e5191c6f717356bca0b5d8c8da05e910aa49ec0af7b" ;
+    ct:start_char 105596 .
+
+ex:C019P0405 a ct:SourcePassage ;
+    ct:end_char 114905 ;
+    ct:exact_text "9.1   This Agreement will enter into force on the Effective Date and will remain in full force and effect until the latest of the following dates:  (i) the [third] anniversary of the Effective Date, (ii) the date of delivery by [Party] of the last report provided for in this Agreement, or  (iii) the dates on which the last payment due by [CERES/IGER] pursuant to this Agreement is made." ;
+    ct:source_path "cuad/CERES,INC_01_25_2012-EX-10.20-Collaboration Agreement.txt" ;
+    ct:source_sha256 "83b3bd9444f56aeb9d1d4e5191c6f717356bca0b5d8c8da05e910aa49ec0af7b" ;
+    ct:start_char 114517 .
+
+ex:C019P0406 a ct:SourcePassage ;
+    ct:end_char 115087 ;
+    ct:exact_text "9.2   Notwithstanding Article 9.3., [CERES/IGER] will have the right to terminate this Agreement including the Program at any time with  [three (3)] months' prior written notice." ;
+    ct:source_path "cuad/CERES,INC_01_25_2012-EX-10.20-Collaboration Agreement.txt" ;
+    ct:source_sha256 "83b3bd9444f56aeb9d1d4e5191c6f717356bca0b5d8c8da05e910aa49ec0af7b" ;
+    ct:start_char 114909 .
+
+ex:C019P0408 a ct:SourcePassage ;
+    ct:end_char 115573 ;
+    ct:exact_text "9.4   The provisions of Articles 2.6, 5, 6, 7.3, 7.4, 8.5 and 8.6 will survive the expiration or termination of this Agreement." ;
+    ct:source_path "cuad/CERES,INC_01_25_2012-EX-10.20-Collaboration Agreement.txt" ;
+    ct:source_sha256 "83b3bd9444f56aeb9d1d4e5191c6f717356bca0b5d8c8da05e910aa49ec0af7b" ;
+    ct:start_char 115446 .
+
+ex:C019P0479 a ct:SourcePassage ;
+    ct:end_char 123922 ;
+    ct:exact_text "Duration: 1/4/04 — 31/3/09" ;
+    ct:source_path "cuad/CERES,INC_01_25_2012-EX-10.20-Collaboration Agreement.txt" ;
+    ct:source_sha256 "83b3bd9444f56aeb9d1d4e5191c6f717356bca0b5d8c8da05e910aa49ec0af7b" ;
+    ct:start_char 123896 .
+
+ex:C019P0498 a ct:SourcePassage ;
+    ct:end_char 125836 ;
+    ct:exact_text "Duration: 1/1/04 — 31/12/07" ;
+    ct:source_path "cuad/CERES,INC_01_25_2012-EX-10.20-Collaboration Agreement.txt" ;
+    ct:source_sha256 "83b3bd9444f56aeb9d1d4e5191c6f717356bca0b5d8c8da05e910aa49ec0af7b" ;
+    ct:start_char 125809 .
+
+ex:C019P0519 a ct:SourcePassage ;
+    ct:end_char 127426 ;
+    ct:exact_text "Duration: 1/4/03 — 31.3.07" ;
+    ct:source_path "cuad/CERES,INC_01_25_2012-EX-10.20-Collaboration Agreement.txt" ;
+    ct:source_sha256 "83b3bd9444f56aeb9d1d4e5191c6f717356bca0b5d8c8da05e910aa49ec0af7b" ;
+    ct:start_char 127400 .
+
+ex:C019P0546 a ct:SourcePassage ;
+    ct:end_char 129946 ;
+    ct:exact_text "Duration: 1/4/07 — 31/3/11" ;
+    ct:source_path "cuad/CERES,INC_01_25_2012-EX-10.20-Collaboration Agreement.txt" ;
+    ct:source_sha256 "83b3bd9444f56aeb9d1d4e5191c6f717356bca0b5d8c8da05e910aa49ec0af7b" ;
+    ct:start_char 129920 .
+
+ex:C019P0697 a ct:SourcePassage ;
+    ct:end_char 166244 ;
+    ct:exact_text "16.1 Subject to any other rights of termination under this Article, this Agreement shall remain in full force and effect until:" ;
+    ct:source_path "cuad/CERES,INC_01_25_2012-EX-10.20-Collaboration Agreement.txt" ;
+    ct:source_sha256 "83b3bd9444f56aeb9d1d4e5191c6f717356bca0b5d8c8da05e910aa49ec0af7b" ;
+    ct:start_char 166117 .
+
+ex:C019P0699 a ct:SourcePassage ;
+    ct:end_char 166439 ;
+    ct:exact_text "(a)   on a jurisdiction-by-jurisdiction basis, the expiration of the INTELLECTUAL PROPERTY RIGHTS in the respective jurisdiction  covering the LICENSED VARIETY; or" ;
+    ct:source_path "cuad/CERES,INC_01_25_2012-EX-10.20-Collaboration Agreement.txt" ;
+    ct:source_sha256 "83b3bd9444f56aeb9d1d4e5191c6f717356bca0b5d8c8da05e910aa49ec0af7b" ;
+    ct:start_char 166276 .
+
+ex:C019P0704 a ct:SourcePassage ;
+    ct:end_char 168478 ;
+    ct:exact_text "16.5 The Parties may terminate this Agreement at any time by mutual, written agreement." ;
+    ct:source_path "cuad/CERES,INC_01_25_2012-EX-10.20-Collaboration Agreement.txt" ;
+    ct:source_sha256 "83b3bd9444f56aeb9d1d4e5191c6f717356bca0b5d8c8da05e910aa49ec0af7b" ;
+    ct:start_char 168391 .
+
+ex:C019P0705 a ct:SourcePassage ;
+    ct:end_char 168787 ;
+    ct:exact_text "16.6 Termination of this Agreement for any reason will not relieve either Party of any obligation or liability accrued under this Agreement before  termination or rescind any payments made or due before termination. Articles 8, 10, 11, 12, 13, 14, 15, and 17 will survive any termination of this  Agreement." ;
+    ct:source_path "cuad/CERES,INC_01_25_2012-EX-10.20-Collaboration Agreement.txt" ;
+    ct:source_sha256 "83b3bd9444f56aeb9d1d4e5191c6f717356bca0b5d8c8da05e910aa49ec0af7b" ;
+    ct:start_char 168480 .
+
+ex:C019P0706 a ct:SourcePassage ;
+    ct:end_char 168919 ;
+    ct:exact_text "16.7 Termination of this Agreement shall not affect the rights and obligations of the Parties accrued prior to termination hereof." ;
+    ct:source_path "cuad/CERES,INC_01_25_2012-EX-10.20-Collaboration Agreement.txt" ;
+    ct:source_sha256 "83b3bd9444f56aeb9d1d4e5191c6f717356bca0b5d8c8da05e910aa49ec0af7b" ;
+    ct:start_char 168789 .
+
+ex:C019P0707 a ct:SourcePassage ;
+    ct:end_char 169330 ;
+    ct:exact_text "16.8 Upon termination of this Agreement, no existing SUBLICENSES granted by CERES or AFFILIATED COMPANIES to third parties shall be  affected by such termination, and all such sublicenses shall remain in effect according to their terms, pursuant to the election of each  SUBLICENSEE. IGER shall continue to be entitled to payments relating to such SUBLICENSES pursuant to this Agreement and such  SUBLICENSES." ;
+    ct:source_path "cuad/CERES,INC_01_25_2012-EX-10.20-Collaboration Agreement.txt" ;
+    ct:source_sha256 "83b3bd9444f56aeb9d1d4e5191c6f717356bca0b5d8c8da05e910aa49ec0af7b" ;
+    ct:start_char 168921 .
+
+ex:C019P0957 a ct:SourcePassage ;
+    ct:end_char 201438 ;
+    ct:exact_text "16.  COMMENCEMENT/TERM:" ;
+    ct:source_path "cuad/CERES,INC_01_25_2012-EX-10.20-Collaboration Agreement.txt" ;
+    ct:source_sha256 "83b3bd9444f56aeb9d1d4e5191c6f717356bca0b5d8c8da05e910aa49ec0af7b" ;
+    ct:start_char 201415 .
+
+ex:C019P0958 a ct:SourcePassage ;
+    ct:end_char 201471 ;
+    ct:exact_text "Commencement: April 1, 2007" ;
+    ct:source_path "cuad/CERES,INC_01_25_2012-EX-10.20-Collaboration Agreement.txt" ;
+    ct:source_sha256 "83b3bd9444f56aeb9d1d4e5191c6f717356bca0b5d8c8da05e910aa49ec0af7b" ;
+    ct:start_char 201444 .
+
+ex:C019P1952 a ct:SourcePassage ;
+    ct:end_char 324513 ;
+    ct:exact_text "WHEREAS, the initial term of Schedule 1 was for three (3) years;" ;
+    ct:source_path "cuad/CERES,INC_01_25_2012-EX-10.20-Collaboration Agreement.txt" ;
+    ct:source_sha256 "83b3bd9444f56aeb9d1d4e5191c6f717356bca0b5d8c8da05e910aa49ec0af7b" ;
+    ct:start_char 324449 .
+
+ex:C019R0001 a ct:Rule ;
+    rdfs:label "Termination — source passage 8" ;
+    ct:kind "TERMINATION" ;
+    ct:references_section ex:C019R0001Ref0,
+        ex:C019R0001Ref1,
+        ex:C019R0001Ref2,
+        ex:C019R0001Ref3,
+        ex:C019R0001Ref4 ;
+    ct:supported_by ex:C019P0008 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C019R0001Ref0 a ct:Reference ;
+    rdfs:label "EXHIBIT A" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C019R0001Ref1 a ct:Reference ;
+    rdfs:label "EXHIBIT B" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C019R0001Ref2 a ct:Reference ;
+    rdfs:label "EXHIBIT C" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C019R0001Ref3 a ct:Reference ;
+    rdfs:label "EXHIBIT D" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C019R0001Ref4 a ct:Reference ;
+    rdfs:label "EXHIBIT E" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C019R0002 a ct:Rule ;
+    rdfs:label "Termination — source passage 37" ;
+    ct:kind "TERMINATION" ;
+    ct:supported_by ex:C019P0037 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C019R0003 a ct:Rule ;
+    rdfs:label "Conditional Referenced Term — source passage 37" ;
+    ct:kind "CONDITIONAL_REFERENCED_TERM" ;
+    ct:supported_by ex:C019P0037 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C019R0004 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 141" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:references_section ex:C019R0004Ref0,
+        ex:C019R0004Ref1 ;
+    ct:supported_by ex:C019P0141 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C019R0004Ref0 a ct:Reference ;
+    rdfs:label "Article 7.3" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C019R0004Ref1 a ct:Reference ;
+    rdfs:label "Article 8" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C019R0005 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 157" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:subject_to ex:C019R0005Condition157 ;
+    ct:supported_by ex:C019P0157 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C019R0005Condition157 a ct:Condition ;
+    ct:description "IGER shall keep accurate and detailed records in accordance with good accounting practices of all expenses and extramural income, if any, relating  to the RESEARCH PROJECTS. All such records shall be subject to inspection by an independent auditor designated by CERES and reasonably  acceptable to IGER within normal business hours with at least fourteen (14) days notice. Such inspection rights shall terminate, with respect to  each RESEARCH PROJECT, on the third anniversary of the expiration or termination of such RESEARCH PROJECT." ;
+    ct:supported_by ex:C019P0157 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C019R0006 a ct:Rule ;
+    rdfs:label "Initial Term — source passage 200" ;
+    ct:kind "INITIAL_TERM" ;
+    ct:supported_by ex:C019P0200 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C019R0007 a ct:Rule ;
+    rdfs:label "Termination — source passage 202" ;
+    ct:kind "TERMINATION" ;
+    ct:supported_by ex:C019P0202 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C019R0008 a ct:Rule ;
+    rdfs:label "Termination — source passage 203" ;
+    ct:kind "TERMINATION" ;
+    ct:subject_to ex:C019R0008Condition203 ;
+    ct:supported_by ex:C019P0203 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C019R0008Condition203 a ct:Condition ;
+    ct:description "(c) one (1) year's written notice of termination by either CERES or IGER to the other Party in case either the terminating Party or the other Party  ceases substantially all activities in the COLLABORATION CROPS;" ;
+    ct:supported_by ex:C019P0203 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C019R0009 a ct:Rule ;
+    rdfs:label "Termination — source passage 204" ;
+    ct:kind "TERMINATION" ;
+    ct:references_section ex:C019R0009Ref0 ;
+    ct:subject_to ex:C019R0009Condition204 ;
+    ct:supported_by ex:C019P0204 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C019R0009Condition204 a ct:Condition ;
+    ct:description "(d) IGER will have the right to terminate this Agreement unilaterally with thirty (30) days' written notice to CERES, (i) if CERES seeks protection  under any bankruptcy, insolvency, receivership, trust, deed, creditors arrangement or comparable proceeding or if any such proceeding is  instituted against CERES (and not dismissed within one hundred twenty (120) days); (ii) in case of dissolution or winding up of CERES  (excluding any situation where all or substantially all of CERES' assets, stock or business to which this Agreement relates are acquired by a  third party (whether by sale, acquisition, merger, operation of law or otherwise)); or (iii) with written notice to CERES, if CERES has failed in a  substantial manner, three (3) years after either Party or the Parties jointly have developed a propagation method for Miscanthus that results in  the crop being commercially competitive in the United States or in Europe as compared to other energy crops being grown at that time in the  relevant geography, to implement the activities set forth in EXHIBIT F, and does not remedy such failure or offer a remediation plan which is  reasonably acceptable to IGER within ninety (90) days after receipt of a written notice from IGER specifying such failure;" ;
+    ct:supported_by ex:C019P0204 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C019R0009Ref0 a ct:Reference ;
+    rdfs:label "EXHIBIT F" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C019R0010 a ct:Rule ;
+    rdfs:label "Conditional Referenced Term — source passage 204" ;
+    ct:kind "CONDITIONAL_REFERENCED_TERM" ;
+    ct:references_section ex:C019R0010Ref0 ;
+    ct:subject_to ex:C019R0010Condition204 ;
+    ct:supported_by ex:C019P0204 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C019R0010Condition204 a ct:Condition ;
+    ct:description "(d) IGER will have the right to terminate this Agreement unilaterally with thirty (30) days' written notice to CERES, (i) if CERES seeks protection  under any bankruptcy, insolvency, receivership, trust, deed, creditors arrangement or comparable proceeding or if any such proceeding is  instituted against CERES (and not dismissed within one hundred twenty (120) days); (ii) in case of dissolution or winding up of CERES  (excluding any situation where all or substantially all of CERES' assets, stock or business to which this Agreement relates are acquired by a  third party (whether by sale, acquisition, merger, operation of law or otherwise)); or (iii) with written notice to CERES, if CERES has failed in a  substantial manner, three (3) years after either Party or the Parties jointly have developed a propagation method for Miscanthus that results in  the crop being commercially competitive in the United States or in Europe as compared to other energy crops being grown at that time in the  relevant geography, to implement the activities set forth in EXHIBIT F, and does not remedy such failure or offer a remediation plan which is  reasonably acceptable to IGER within ninety (90) days after receipt of a written notice from IGER specifying such failure;" ;
+    ct:supported_by ex:C019P0204 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C019R0010Ref0 a ct:Reference ;
+    rdfs:label "EXHIBIT F" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C019R0011 a ct:Rule ;
+    rdfs:label "Termination — source passage 205" ;
+    ct:kind "TERMINATION" ;
+    ct:subject_to ex:C019R0011Condition205 ;
+    ct:supported_by ex:C019P0205 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C019R0011Condition205 a ct:Condition ;
+    ct:description "(e) CERES will have the right to terminate this Agreement unilaterally: (i) with thirty (30) days' written notice to IGER if John Clifton-Brown or  Iain Donnison cease(s) to be associated with IGER and the RESEARCH PROJECTS contemplated by this Agreement, and IGER has not  replaced such person(s) within one hundred twenty (120) days by (a) person(s) reasonably acceptable to CERES; (ii) with ninety (90) days'  written notice to IGER, if the institutional mission, purpose, structure or funding of IGER would change substantially and adversely affect  IGER's ability to satisfy its obligations hereunder; (iii) with one (1) years' written notice to IGER, if CERES has a documented compelling  business reason to cease the collaboration, (for example, without limitation, lack of sufficient processing capacity for COLLABORATION  CROPS within the expected timeframe in the United States; COLLABORATION CROPS are non-competitive with other biomass sources); (iv)  with three (3) months' prior written notice to IGER, such notice to be given no earlier than eighteen (18)" ;
+    ct:supported_by ex:C019P0205 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C019R0012 a ct:Rule ;
+    rdfs:label "Termination — source passage 206" ;
+    ct:kind "TERMINATION" ;
+    ct:supported_by ex:C019P0206 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C019R0013 a ct:Rule ;
+    rdfs:label "Conditional Referenced Term — source passage 208" ;
+    ct:kind "CONDITIONAL_REFERENCED_TERM" ;
+    ct:subject_to ex:C019R0013Condition208 ;
+    ct:supported_by ex:C019P0208 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C019R0013Condition208 a ct:Condition ;
+    ct:description "months after the Effective Date, if no rights to commercialize (including determination of the compensation due upon commercialization)  COLLABORATION CROPS germplasm provided by IGER which is included in a RESEARCH PROJECT have been secured to CERES'  reasonable satisfaction in compliance with the CBD; or (v) with thirty (30) days' written notice to IGER if Defra has not assigned to IGER, or  granted to IGER an exclusive license reasonably satisfactory to CERES on, the Intellectual Property vested in Defra or the Crown or the  Secretary of State pursuant to the DEFRA agreement NF 0426 within sixty (60) days from the Effective Date (the \"Assignment/License\")." ;
+    ct:supported_by ex:C019P0208 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C019R0014 a ct:Rule ;
+    rdfs:label "Termination — source passage 209" ;
+    ct:kind "TERMINATION" ;
+    ct:subject_to ex:C019R0014Condition209 ;
+    ct:supported_by ex:C019P0209 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C019R0014Condition209 a ct:Condition ;
+    ct:description "(f) either Party will have the right to terminate this Agreement if no active RESEARCH PROJECTS exist for more than two (2) years, provided  that on or after the second anniversary of the expiration or termination of the last SCHEDULE to expire or terminate, the Parties have not agreed  on any new SCHEDULE despite (i) negotiations in good faith by both Parties or (ii) diligent, documented attempts by the terminating Party to  conduct negotiations in good faith with respect to one or more new SCHEDULES, to which attempts the other Party has not been responsive." ;
+    ct:supported_by ex:C019P0209 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C019R0015 a ct:Rule ;
+    rdfs:label "Conditional Referenced Term — source passage 209" ;
+    ct:kind "CONDITIONAL_REFERENCED_TERM" ;
+    ct:subject_to ex:C019R0015Condition209 ;
+    ct:supported_by ex:C019P0209 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C019R0015Condition209 a ct:Condition ;
+    ct:description "(f) either Party will have the right to terminate this Agreement if no active RESEARCH PROJECTS exist for more than two (2) years, provided  that on or after the second anniversary of the expiration or termination of the last SCHEDULE to expire or terminate, the Parties have not agreed  on any new SCHEDULE despite (i) negotiations in good faith by both Parties or (ii) diligent, documented attempts by the terminating Party to  conduct negotiations in good faith with respect to one or more new SCHEDULES, to which attempts the other Party has not been responsive." ;
+    ct:supported_by ex:C019P0209 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C019R0016 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 210" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:supported_by ex:C019P0210 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C019R0017 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 211" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:supported_by ex:C019P0211 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C019R0018 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 212" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:references_section ex:C019R0018Ref0,
+        ex:C019R0018Ref1,
+        ex:C019R0018Ref2,
+        ex:C019R0018Ref3,
+        ex:C019R0018Ref4 ;
+    ct:supported_by ex:C019P0212 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C019R0018Ref0 a ct:Reference ;
+    rdfs:label "Article 14.1 (b)" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C019R0018Ref1 a ct:Reference ;
+    rdfs:label "Article 14.1 (c)" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C019R0018Ref2 a ct:Reference ;
+    rdfs:label "Article 14.1 (d) (i)" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C019R0018Ref3 a ct:Reference ;
+    rdfs:label "Article 14.1" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C019R0018Ref4 a ct:Reference ;
+    rdfs:label "Article 14.3" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C019R0019 a ct:Rule ;
+    rdfs:label "Termination — source passage 213" ;
+    ct:kind "TERMINATION" ;
+    ct:references_section ex:C019R0019Ref0,
+        ex:C019R0019Ref1,
+        ex:C019R0019Ref2,
+        ex:C019R0019Ref3,
+        ex:C019R0019Ref4 ;
+    ct:subject_to ex:C019R0019Condition213 ;
+    ct:supported_by ex:C019P0213 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C019R0019Condition213 a ct:Condition ;
+    ct:description "14.3.2 In case of termination on the basis of Article 14.1 (b) if IGER is the breaching Party, Article 14.1 (c) if IGER ceases substantially all  activities in the COLLABORATION CROPS, Article 14.1 (e) (i) or (ii) or Article 14.1 (f), subject to the obligations of the first sentence of Article  14.3, CERES shall have the exclusive right to use and commercially exploit any JOINT INTELLECTUAL PROPERTY to the extent such JOINT         CERES-IGER Collaboration Agreement    Page 24 of 75" ;
+    ct:supported_by ex:C019P0213 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C019R0019Ref0 a ct:Reference ;
+    rdfs:label "Article 14.1 (b)" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C019R0019Ref1 a ct:Reference ;
+    rdfs:label "Article 14.1 (c)" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C019R0019Ref2 a ct:Reference ;
+    rdfs:label "Article 14.1 (e) (i)" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C019R0019Ref3 a ct:Reference ;
+    rdfs:label "Article 14.1 (f)" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C019R0019Ref4 a ct:Reference ;
+    rdfs:label "Article  14.3" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C019R0020 a ct:Rule ;
+    rdfs:label "Conditional Referenced Term — source passage 213" ;
+    ct:kind "CONDITIONAL_REFERENCED_TERM" ;
+    ct:references_section ex:C019R0020Ref0,
+        ex:C019R0020Ref1,
+        ex:C019R0020Ref2,
+        ex:C019R0020Ref3,
+        ex:C019R0020Ref4 ;
+    ct:subject_to ex:C019R0020Condition213 ;
+    ct:supported_by ex:C019P0213 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C019R0020Condition213 a ct:Condition ;
+    ct:description "14.3.2 In case of termination on the basis of Article 14.1 (b) if IGER is the breaching Party, Article 14.1 (c) if IGER ceases substantially all  activities in the COLLABORATION CROPS, Article 14.1 (e) (i) or (ii) or Article 14.1 (f), subject to the obligations of the first sentence of Article  14.3, CERES shall have the exclusive right to use and commercially exploit any JOINT INTELLECTUAL PROPERTY to the extent such JOINT         CERES-IGER Collaboration Agreement    Page 24 of 75" ;
+    ct:supported_by ex:C019P0213 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C019R0020Ref0 a ct:Reference ;
+    rdfs:label "Article 14.1 (b)" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C019R0020Ref1 a ct:Reference ;
+    rdfs:label "Article 14.1 (c)" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C019R0020Ref2 a ct:Reference ;
+    rdfs:label "Article 14.1 (e) (i)" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C019R0020Ref3 a ct:Reference ;
+    rdfs:label "Article 14.1 (f)" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C019R0020Ref4 a ct:Reference ;
+    rdfs:label "Article  14.3" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C019R0021 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 215" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:references_section ex:C019R0021Ref0 ;
+    ct:supported_by ex:C019P0215 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C019R0021Ref0 a ct:Reference ;
+    rdfs:label "Article 14.3" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C019R0022 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 216" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:supported_by ex:C019P0216 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C019R0023 a ct:Rule ;
+    rdfs:label "Termination — source passage 217" ;
+    ct:kind "TERMINATION" ;
+    ct:references_section ex:C019R0023Ref0 ;
+    ct:subject_to ex:C019R0023Condition217 ;
+    ct:supported_by ex:C019P0217 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C019R0023Condition217 a ct:Condition ;
+    ct:description "15.1 All disputes, differences or questions arising out of or in connection with this Agreement or its SCHEDULES, or related to the alleged breach,  termination, validity, interpretation or violation thereof, shall be submitted to the MANAGEMENT COMMITTEE for resolution, which shall  convene, whether in person or otherwise, to resolve such dispute in a timely manner. Either Party may initiate a resolution procedure by providing  written notice (\"Dispute Notice\") to the other Party, and any such Dispute Notice must set forth the subject matter of the dispute, difference or  question. If after sixty (60) days the dispute remains unresolved, the Chief Scientific Officer of CERES and the Director of IGER shall seek to  resolve the dispute through negotiation. The Parties agree that at least eight (8) cumulative hours of negotiations will be undertaken. If the dispute  still remains unresolved ninety (90) days after the Dispute Notice, either Party may initiate proceedings pursuant to Article 15.2." ;
+    ct:supported_by ex:C019P0217 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C019R0023Ref0 a ct:Reference ;
+    rdfs:label "Article 15.2" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C019R0024 a ct:Rule ;
+    rdfs:label "Initial Term — source passage 289" ;
+    ct:kind "INITIAL_TERM" ;
+    ct:supported_by ex:C019P0289 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C019R0025 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 297" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:supported_by ex:C019P0297 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C019R0026 a ct:Rule ;
+    rdfs:label "Initial Term — source passage 331" ;
+    ct:kind "INITIAL_TERM" ;
+    ct:supported_by ex:C019P0331 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C019R0027 a ct:Rule ;
+    rdfs:label "Termination — source passage 332" ;
+    ct:kind "TERMINATION" ;
+    ct:references_section ex:C019R0027Ref0 ;
+    ct:subject_to ex:C019R0027Condition332 ;
+    ct:supported_by ex:C019P0332 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C019R0027Condition332 a ct:Condition ;
+    ct:description "9.2   Notwithstanding Article 9.3., [CERES/IGER] will have the right to terminate this Agreement including the Program at any time with  [three (3)] months' prior written notice. In case of such early termination, [CERES/IGER] will pay the remuneration provided in this  Agreement up to the effective date of termination, and all costs relating to the implementation of this Agreement which [Party]  irrevocably committed to prior to receipt of the notice of termination." ;
+    ct:supported_by ex:C019P0332 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C019R0027Ref0 a ct:Reference ;
+    rdfs:label "Article 9.3" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C019R0028 a ct:Rule ;
+    rdfs:label "Termination — source passage 333" ;
+    ct:kind "TERMINATION" ;
+    ct:subject_to ex:C019R0028Condition333 ;
+    ct:supported_by ex:C019P0333 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C019R0028Condition333 a ct:Condition ;
+    ct:description "9.3   Either Party will have the rights to terminate this Agreement unilaterally by registered letter addressed to the other Party in case such  other Party has committed a breach of any of its obligations under this Agreement and has failed to remedy such breach within thirty  (30) days from the receipt of a registered letter specifying the breach." ;
+    ct:supported_by ex:C019P0333 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C019R0029 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 334" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:supported_by ex:C019P0334 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C019R0030 a ct:Rule ;
+    rdfs:label "Initial Term — source passage 361" ;
+    ct:kind "INITIAL_TERM" ;
+    ct:supported_by ex:C019P0361 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C019R0031 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 372" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:supported_by ex:C019P0372 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C019R0032 a ct:Rule ;
+    rdfs:label "Initial Term — source passage 405" ;
+    ct:kind "INITIAL_TERM" ;
+    ct:supported_by ex:C019P0405 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C019R0033 a ct:Rule ;
+    rdfs:label "Termination — source passage 406" ;
+    ct:kind "TERMINATION" ;
+    ct:references_section ex:C019R0033Ref0 ;
+    ct:supported_by ex:C019P0406 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C019R0033Ref0 a ct:Reference ;
+    rdfs:label "Article 9.3" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C019R0034 a ct:Rule ;
+    rdfs:label "Termination — source passage 407" ;
+    ct:kind "TERMINATION" ;
+    ct:subject_to ex:C019R0034Condition407 ;
+    ct:supported_by ex:C019P0407 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C019R0034Condition407 a ct:Condition ;
+    ct:description "9.3   Either Party will have the rights to terminate this Agreement unilaterally by registered letter addressed to the other Party in case such  other Party has committed a breach of any of its obligations under this Agreement and has failed to remedy such breach within thirty  (30) days from the receipt of a registered letter specifying the breach." ;
+    ct:supported_by ex:C019P0407 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C019R0035 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 408" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:supported_by ex:C019P0408 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C019R0036 a ct:Rule ;
+    rdfs:label "Initial Term — source passage 479" ;
+    ct:kind "INITIAL_TERM" ;
+    ct:supported_by ex:C019P0479 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C019R0037 a ct:Rule ;
+    rdfs:label "Initial Term — source passage 498" ;
+    ct:kind "INITIAL_TERM" ;
+    ct:supported_by ex:C019P0498 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C019R0038 a ct:Rule ;
+    rdfs:label "Initial Term — source passage 519" ;
+    ct:kind "INITIAL_TERM" ;
+    ct:supported_by ex:C019P0519 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C019R0039 a ct:Rule ;
+    rdfs:label "Initial Term — source passage 546" ;
+    ct:kind "INITIAL_TERM" ;
+    ct:supported_by ex:C019P0546 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C019R0040 a ct:Rule ;
+    rdfs:label "Termination — source passage 686" ;
+    ct:kind "TERMINATION" ;
+    ct:references_section ex:C019R0040Ref0 ;
+    ct:subject_to ex:C019R0040Condition686 ;
+    ct:supported_by ex:C019P0686 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C019R0040Condition686 a ct:Condition ;
+    ct:description "15.1 All disputes, differences or questions arising out of or in connection with this Agreement, or related to the alleged breach, termination,  validity, interpretation or violation thereof, shall be submitted for resolution to the Chief Executive Officer of CERES and the Director of IGER, who  shall convene, whether in person or otherwise, to resolve such dispute through negotiation in a timely manner. Either Party may initiate a  resolution procedure by providing written notice (\"Dispute Notice\") to the other Party, and any such Dispute Notice must set forth the subject  matter of the dispute, difference or question. If the dispute remains unresolved sixty (60) days after the Dispute Notice, either Party may initiate  proceedings pursuant to Article 15.2." ;
+    ct:supported_by ex:C019P0686 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C019R0040Ref0 a ct:Reference ;
+    rdfs:label "Article 15.2" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C019R0041 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 697" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:supported_by ex:C019P0697 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C019R0042 a ct:Rule ;
+    rdfs:label "Initial Term — source passage 698" ;
+    ct:kind "INITIAL_TERM" ;
+    ct:supported_by ex:C019P0698 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C019R0043 a ct:Rule ;
+    rdfs:label "Termination — source passage 698" ;
+    ct:kind "TERMINATION" ;
+    ct:supported_by ex:C019P0698 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C019R0044 a ct:Rule ;
+    rdfs:label "Conditional Referenced Term — source passage 699" ;
+    ct:kind "CONDITIONAL_REFERENCED_TERM" ;
+    ct:supported_by ex:C019P0699 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C019R0045 a ct:Rule ;
+    rdfs:label "Termination — source passage 701" ;
+    ct:kind "TERMINATION" ;
+    ct:subject_to ex:C019R0045Condition701 ;
+    ct:supported_by ex:C019P0701 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C019R0045Condition701 a ct:Condition ;
+    ct:description "16.2 Each Party shall have the right to terminate this Agreement unilaterally by giving written notice of termination to the other Party if such other  Party fails to satisfy its material obligations, which shall include but are not limited to, making required reports and making required payments,  under this Agreement, and such Party subsequently fails to cure such failure(s) within (a) thirty (30) days for failures to remit payment for amounts  due under this Agreement and (b) ninety (90) days for all other obligations after receipt of written notice from the non-breaching Party specifying  such failure." ;
+    ct:supported_by ex:C019P0701 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C019R0046 a ct:Rule ;
+    rdfs:label "Termination — source passage 702" ;
+    ct:kind "TERMINATION" ;
+    ct:subject_to ex:C019R0046Condition702 ;
+    ct:supported_by ex:C019P0702 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C019R0046Condition702 a ct:Condition ;
+    ct:description "16.3 IGER will have the right to terminate this Agreement unilaterally with thirty (30) days' written notice to CERES, (a) if CERES seeks protection  under any bankruptcy, insolvency, receivership, trust, deed, creditors arrangement or comparable proceeding or if any such proceeding is  instituted against CERES (and not dismissed within one hundred twenty (120) days) or (b) in case of dissolution or winding up of CERES  (excluding any situation where all or substantially all of CERES' assets, stock or business to which this Agreement relates are acquired by a third  party (whether by sale, acquisition, merger, operation of law or otherwise))." ;
+    ct:supported_by ex:C019P0702 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C019R0047 a ct:Rule ;
+    rdfs:label "Termination — source passage 703" ;
+    ct:kind "TERMINATION" ;
+    ct:subject_to ex:C019R0047Condition703 ;
+    ct:supported_by ex:C019P0703 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C019R0047Condition703 a ct:Condition ;
+    ct:description "16.4 CERES may after consultation with IGER terminate this Agreement by written notice if in the commercially reasonable opinion of CERES the  markets for the LICENSED VARIETY change or do not develop as anticipated, so as to render the production, promotion and sale of the  LICENSED VARIETY uneconomical or impractical or if CERES decides to cease substantially all activities in MISCANTHUS." ;
+    ct:supported_by ex:C019P0703 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C019R0048 a ct:Rule ;
+    rdfs:label "Termination — source passage 704" ;
+    ct:kind "TERMINATION" ;
+    ct:supported_by ex:C019P0704 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C019R0049 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 705" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:supported_by ex:C019P0705 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C019R0050 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 706" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:supported_by ex:C019P0706 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C019R0051 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 707" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:supported_by ex:C019P0707 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C019R0052 a ct:Rule ;
+    rdfs:label "Conditional Referenced Term — source passage 796" ;
+    ct:kind "CONDITIONAL_REFERENCED_TERM" ;
+    ct:subject_to ex:C019R0052Condition796 ;
+    ct:supported_by ex:C019P0796 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C019R0052Condition796 a ct:Condition ;
+    ct:description "\"(v) with thirty (30) days' written notice to AU if Defra has not assigned to AU, or granted to AU a license reasonably satisfactory to  CERES on, the Intellectual Property vested in Defra or the Crown or the Secretary of State pursuant to the DEFRA agreement NF 0426  within three (3) years from the Effective Date (the \"Assignment/License\"); provided however that Ceres will not unreasonably refuse to  extend such three (3) year term by six (6) months if so requested by AU by December 31, 2009.\"" ;
+    ct:supported_by ex:C019P0796 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C019R0053 a ct:Rule ;
+    rdfs:label "Initial Term — source passage 957" ;
+    ct:kind "INITIAL_TERM" ;
+    ct:supported_by ex:C019P0957 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C019R0054 a ct:Rule ;
+    rdfs:label "Initial Term — source passage 958" ;
+    ct:kind "INITIAL_TERM" ;
+    ct:supported_by ex:C019P0958 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C019R0055 a ct:Rule ;
+    rdfs:label "Initial Term — source passage 959" ;
+    ct:kind "INITIAL_TERM" ;
+    ct:references_section ex:C019R0055Ref0 ;
+    ct:subject_to ex:C019R0055Condition959 ;
+    ct:supported_by ex:C019P0959 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C019R0055Condition959 a ct:Condition ;
+    ct:description "Term: Three (3) years provided however, at least one (1) year before the end of the term of this SCHEDULE, the Parties shall decide whether to  extend it for one (1) or more years, with appropriate updates to the RESEARCH AND DEVELOPMENT PLAN (Attachment A), and FUNDING  (Article 6 of this SCHEDULE)." ;
+    ct:supported_by ex:C019P0959 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C019R0055Ref0 a ct:Reference ;
+    rdfs:label "Article 6" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C019R0056 a ct:Rule ;
+    rdfs:label "Optional Renewal — source passage 959" ;
+    ct:kind "OPTIONAL_RENEWAL" ;
+    ct:references_section ex:C019R0056Ref0 ;
+    ct:subject_to ex:C019R0056Condition959 ;
+    ct:supported_by ex:C019P0959 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C019R0056Condition959 a ct:Condition ;
+    ct:description "Term: Three (3) years provided however, at least one (1) year before the end of the term of this SCHEDULE, the Parties shall decide whether to  extend it for one (1) or more years, with appropriate updates to the RESEARCH AND DEVELOPMENT PLAN (Attachment A), and FUNDING  (Article 6 of this SCHEDULE)." ;
+    ct:supported_by ex:C019P0959 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C019R0056Ref0 a ct:Reference ;
+    rdfs:label "Article 6" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C019R0057 a ct:Rule ;
+    rdfs:label "Initial Term — source passage 965" ;
+    ct:kind "INITIAL_TERM" ;
+    ct:subject_to ex:C019R0057Condition965 ;
+    ct:supported_by ex:C019P0965 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C019R0057Condition965 a ct:Condition ;
+    ct:description "This SCHEDULE shall expire pursuant to the terms set forth in this SCHEDULE, unless extended by the mutual agreement of the Parties, or  unless sooner terminated in accordance with the following provisions of this Article:" ;
+    ct:supported_by ex:C019P0965 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C019R0058 a ct:Rule ;
+    rdfs:label "Optional Renewal — source passage 965" ;
+    ct:kind "OPTIONAL_RENEWAL" ;
+    ct:subject_to ex:C019R0058Condition965 ;
+    ct:supported_by ex:C019P0965 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C019R0058Condition965 a ct:Condition ;
+    ct:description "This SCHEDULE shall expire pursuant to the terms set forth in this SCHEDULE, unless extended by the mutual agreement of the Parties, or  unless sooner terminated in accordance with the following provisions of this Article:" ;
+    ct:supported_by ex:C019P0965 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C019R0059 a ct:Rule ;
+    rdfs:label "Conditional Referenced Term — source passage 965" ;
+    ct:kind "CONDITIONAL_REFERENCED_TERM" ;
+    ct:subject_to ex:C019R0059Condition965 ;
+    ct:supported_by ex:C019P0965 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C019R0059Condition965 a ct:Condition ;
+    ct:description "This SCHEDULE shall expire pursuant to the terms set forth in this SCHEDULE, unless extended by the mutual agreement of the Parties, or  unless sooner terminated in accordance with the following provisions of this Article:" ;
+    ct:supported_by ex:C019P0965 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C019R0060 a ct:Rule ;
+    rdfs:label "Termination — source passage 967" ;
+    ct:kind "TERMINATION" ;
+    ct:subject_to ex:C019R0060Condition967 ;
+    ct:supported_by ex:C019P0967 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C019R0060Condition967 a ct:Condition ;
+    ct:description "(b) failure of one Party to satisfy its material obligations under this SCHEDULE, and such Party subsequently fails to cure such failure(s)  within (i) thirty (30) days for failures to remit payment for amounts due under this SCHEDULE and (ii) ninety (90) days for all other  obligations in each case after receipt of written notice from the non-breaching Party specifying such failure(s);" ;
+    ct:supported_by ex:C019P0967 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C019R0061 a ct:Rule ;
+    rdfs:label "Termination — source passage 968" ;
+    ct:kind "TERMINATION" ;
+    ct:subject_to ex:C019R0061Condition968 ;
+    ct:supported_by ex:C019P0968 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C019R0061Condition968 a ct:Condition ;
+    ct:description "(c) one (1) year's written notice of termination by either CERES or IGER to the other Party in case either the terminating Party or the other  Party ceases substantially all activities in the COLLABORATION CROPS;" ;
+    ct:supported_by ex:C019P0968 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C019R0062 a ct:Rule ;
+    rdfs:label "Termination — source passage 969" ;
+    ct:kind "TERMINATION" ;
+    ct:references_section ex:C019R0062Ref0 ;
+    ct:subject_to ex:C019R0062Condition969 ;
+    ct:supported_by ex:C019P0969 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C019R0062Condition969 a ct:Condition ;
+    ct:description "(d) IGER will have the right to terminate this SCHEDULE unilaterally with thirty (30) days' written notice to CERES, (i) if CERES seeks  protection under any bankruptcy, insolvency, receivership, trust, deed, creditors arrangement or comparable proceeding or if any such  proceeding is instituted against CERES (and not dismissed within one hundred twenty (120) days); (ii) in case of dissolution or winding up  of CERES (excluding any situation where all or substantially all of CERES' assets, stock or business to which the CA relates are acquired by  a third party (whether by sale, acquisition, merger, operation of law or otherwise)); (iii) with written notice to CERES, if CERES has failed in a  substantial manner, three (3) years after either Party or the Parties jointly have developed a [***] method for Miscanthus that results in the  crop being commercially competitive in the United States or in Europe as compared to other energy crops being grown at that time in the  relevant geography, to implement the activities set forth in EXHIBIT F to the CA, and does not remedy such failure or offer a remediation  plan which is reasonably acceptable to IGER within ninety (90) days after receipt of a written notice from IGER specifying such failure;" ;
+    ct:supported_by ex:C019P0969 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C019R0062Ref0 a ct:Reference ;
+    rdfs:label "EXHIBIT F" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C019R0063 a ct:Rule ;
+    rdfs:label "Conditional Referenced Term — source passage 969" ;
+    ct:kind "CONDITIONAL_REFERENCED_TERM" ;
+    ct:references_section ex:C019R0063Ref0 ;
+    ct:subject_to ex:C019R0063Condition969 ;
+    ct:supported_by ex:C019P0969 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C019R0063Condition969 a ct:Condition ;
+    ct:description "(d) IGER will have the right to terminate this SCHEDULE unilaterally with thirty (30) days' written notice to CERES, (i) if CERES seeks  protection under any bankruptcy, insolvency, receivership, trust, deed, creditors arrangement or comparable proceeding or if any such  proceeding is instituted against CERES (and not dismissed within one hundred twenty (120) days); (ii) in case of dissolution or winding up  of CERES (excluding any situation where all or substantially all of CERES' assets, stock or business to which the CA relates are acquired by  a third party (whether by sale, acquisition, merger, operation of law or otherwise)); (iii) with written notice to CERES, if CERES has failed in a  substantial manner, three (3) years after either Party or the Parties jointly have developed a [***] method for Miscanthus that results in the  crop being commercially competitive in the United States or in Europe as compared to other energy crops being grown at that time in the  relevant geography, to implement the activities set forth in EXHIBIT F to the CA, and does not remedy such failure or offer a remediation  plan which is reasonably acceptable to IGER within ninety (90) days after receipt of a written notice from IGER specifying such failure;" ;
+    ct:supported_by ex:C019P0969 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C019R0063Ref0 a ct:Reference ;
+    rdfs:label "EXHIBIT F" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C019R0064 a ct:Rule ;
+    rdfs:label "Termination — source passage 970" ;
+    ct:kind "TERMINATION" ;
+    ct:subject_to ex:C019R0064Condition970 ;
+    ct:supported_by ex:C019P0970 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C019R0064Condition970 a ct:Condition ;
+    ct:description "(e) CERES will have the right to terminate this SCHEDULE unilaterally: (i) with thirty (30) days' written notice to IGER if John Clifton-Brown  or Iain Donnison cease(s) to be associated with IGER and the research activities associated with this SCHEDULE, and IGER has not  replaced such person(s) within one hundred twenty (120) days by (a) person(s) reasonably acceptable to CERES; (ii) with ninety (90) days'  written notice to IGER, if the institutional mission, purpose, structure or funding of IGER would change substantially and adversely affect  IGER's ability to satisfy its obligations hereunder; (iii) with one (1) years' written notice to IGER, if CERES has a documented compelling  business reason to cease the collaboration, (for example, without limitation, lack of sufficient processing capacity for COLLABORATION  CROPS within the expected timeframe in the United States; COLLABORATION CROPS are non-competitive with other biomass sources);  (iv) with three (3) months' prior written notice to IGER, such notice to be given no earlier than eighteen (18) months after the Effective Date  of the CA, if no rights to commercialize (including determination of the compensation due upon commercialization) COLLABORATION  CROPS germplasm provided by IGER which is included in the RESEARCH PROJECT covered by this SCHEDULE have been" ;
+    ct:supported_by ex:C019P0970 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C019R0065 a ct:Rule ;
+    rdfs:label "Conditional Referenced Term — source passage 970" ;
+    ct:kind "CONDITIONAL_REFERENCED_TERM" ;
+    ct:subject_to ex:C019R0065Condition970 ;
+    ct:supported_by ex:C019P0970 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C019R0065Condition970 a ct:Condition ;
+    ct:description "(e) CERES will have the right to terminate this SCHEDULE unilaterally: (i) with thirty (30) days' written notice to IGER if John Clifton-Brown  or Iain Donnison cease(s) to be associated with IGER and the research activities associated with this SCHEDULE, and IGER has not  replaced such person(s) within one hundred twenty (120) days by (a) person(s) reasonably acceptable to CERES; (ii) with ninety (90) days'  written notice to IGER, if the institutional mission, purpose, structure or funding of IGER would change substantially and adversely affect  IGER's ability to satisfy its obligations hereunder; (iii) with one (1) years' written notice to IGER, if CERES has a documented compelling  business reason to cease the collaboration, (for example, without limitation, lack of sufficient processing capacity for COLLABORATION  CROPS within the expected timeframe in the United States; COLLABORATION CROPS are non-competitive with other biomass sources);  (iv) with three (3) months' prior written notice to IGER, such notice to be given no earlier than eighteen (18) months after the Effective Date  of the CA, if no rights to commercialize (including determination of the compensation due upon commercialization) COLLABORATION  CROPS germplasm provided by IGER which is included in the RESEARCH PROJECT covered by this SCHEDULE have been" ;
+    ct:supported_by ex:C019P0970 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C019R0066 a ct:Rule ;
+    rdfs:label "Termination — source passage 974" ;
+    ct:kind "TERMINATION" ;
+    ct:subject_to ex:C019R0066Condition974 ;
+    ct:supported_by ex:C019P0974 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C019R0066Condition974 a ct:Condition ;
+    ct:description "secured to CERES' reasonable satisfaction in compliance with the CBD; or (v) with thirty (30) days' written notice to IGER if Defra has not  assigned to IGER, or granted to IGER an exclusive license reasonably satisfactory to CERES on, the Intellectual Property vested in Defra or  the Crown or the Secretary of State pursuant to the DEFRA agreement NF 0426 within sixty (60) days from the Effective Date (the  \"Assignment/License\"), provided however that such termination may be for the entirety of this SCHEDULE or only for certain parts of the  RESEARCH PROJECT covered by this SCHEDULE." ;
+    ct:supported_by ex:C019P0974 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C019R0067 a ct:Rule ;
+    rdfs:label "Conditional Referenced Term — source passage 1936" ;
+    ct:kind "CONDITIONAL_REFERENCED_TERM" ;
+    ct:subject_to ex:C019R0067Condition1936 ;
+    ct:supported_by ex:C019P1936 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C019R0067Condition1936 a ct:Condition ;
+    ct:description "\"(v) with thirty (30) days' written notice to AU if Defra has not assigned to AU, or granted to AU a license reasonably satisfactory to  CERES on, the Intellectual Property vested in Defra or the Crown or the Secretary of State pursuant to the DEFRA agreement NF 0426  within three (3) years from the Effective Date (the \"Assignment/License\"); provided however that Ceres will not unreasonably refuse to  extend such three (3) year term by six (6) months if so requested by AU by December 31, 2009.\"" ;
+    ct:supported_by ex:C019P1936 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C019R0068 a ct:Rule ;
+    rdfs:label "Initial Term — source passage 1952" ;
+    ct:kind "INITIAL_TERM" ;
+    ct:references_section ex:C019R0068Ref0 ;
+    ct:supported_by ex:C019P1952 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C019R0068Ref0 a ct:Reference ;
+    rdfs:label "Schedule 1" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C019R0069 a ct:Rule ;
+    rdfs:label "Initial Term — source passage 1962" ;
+    ct:kind "INITIAL_TERM" ;
+    ct:subject_to ex:C019R0069Condition1962 ;
+    ct:supported_by ex:C019P1962 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C019R0069Condition1962 a ct:Condition ;
+    ct:description "\"Term: Five (5) years provided however, at least one (1) year before the end of the term of this SCHEDULE, the Parties shall decide  whether to extend it for one (1) or more years, with appropriate updates to the RESEARCH AND DEVELOPMENT" ;
+    ct:supported_by ex:C019P1962 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C019R0070 a ct:Rule ;
+    rdfs:label "Optional Renewal — source passage 1962" ;
+    ct:kind "OPTIONAL_RENEWAL" ;
+    ct:subject_to ex:C019R0070Condition1962 ;
+    ct:supported_by ex:C019P1962 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C019R0070Condition1962 a ct:Condition ;
+    ct:description "\"Term: Five (5) years provided however, at least one (1) year before the end of the term of this SCHEDULE, the Parties shall decide  whether to extend it for one (1) or more years, with appropriate updates to the RESEARCH AND DEVELOPMENT" ;
+    ct:supported_by ex:C019P1962 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C019P0037 a ct:SourcePassage ;
+    ct:end_char 7200 ;
+    ct:exact_text "•   provisions on expiration and early termination" ;
+    ct:source_path "cuad/CERES,INC_01_25_2012-EX-10.20-Collaboration Agreement.txt" ;
+    ct:source_sha256 "83b3bd9444f56aeb9d1d4e5191c6f717356bca0b5d8c8da05e910aa49ec0af7b" ;
+    ct:start_char 7150 .
+
+ex:C019P0157 a ct:SourcePassage ;
+    ct:end_char 55414 ;
+    ct:exact_text "IGER shall keep accurate and detailed records in accordance with good accounting practices of all expenses and extramural income, if any, relating  to the RESEARCH PROJECTS. All such records shall be subject to inspection by an independent auditor designated by CERES and reasonably  acceptable to IGER within normal business hours with at least fourteen (14) days notice. Such inspection rights shall terminate, with respect to  each RESEARCH PROJECT, on the third anniversary of the expiration or termination of such RESEARCH PROJECT." ;
+    ct:source_path "cuad/CERES,INC_01_25_2012-EX-10.20-Collaboration Agreement.txt" ;
+    ct:source_sha256 "83b3bd9444f56aeb9d1d4e5191c6f717356bca0b5d8c8da05e910aa49ec0af7b" ;
+    ct:start_char 54878 .
+
+ex:C019P0203 a ct:SourcePassage ;
+    ct:end_char 66067 ;
+    ct:exact_text "(c) one (1) year's written notice of termination by either CERES or IGER to the other Party in case either the terminating Party or the other Party  ceases substantially all activities in the COLLABORATION CROPS;" ;
+    ct:source_path "cuad/CERES,INC_01_25_2012-EX-10.20-Collaboration Agreement.txt" ;
+    ct:source_sha256 "83b3bd9444f56aeb9d1d4e5191c6f717356bca0b5d8c8da05e910aa49ec0af7b" ;
+    ct:start_char 65855 .
+
+ex:C019P0205 a ct:SourcePassage ;
+    ct:end_char 68407 ;
+    ct:exact_text "(e) CERES will have the right to terminate this Agreement unilaterally: (i) with thirty (30) days' written notice to IGER if John Clifton-Brown or  Iain Donnison cease(s) to be associated with IGER and the RESEARCH PROJECTS contemplated by this Agreement, and IGER has not  replaced such person(s) within one hundred twenty (120) days by (a) person(s) reasonably acceptable to CERES; (ii) with ninety (90) days'  written notice to IGER, if the institutional mission, purpose, structure or funding of IGER would change substantially and adversely affect  IGER's ability to satisfy its obligations hereunder; (iii) with one (1) years' written notice to IGER, if CERES has a documented compelling  business reason to cease the collaboration, (for example, without limitation, lack of sufficient processing capacity for COLLABORATION  CROPS within the expected timeframe in the United States; COLLABORATION CROPS are non-competitive with other biomass sources); (iv)  with three (3) months' prior written notice to IGER, such notice to be given no earlier than eighteen (18)" ;
+    ct:source_path "cuad/CERES,INC_01_25_2012-EX-10.20-Collaboration Agreement.txt" ;
+    ct:source_sha256 "83b3bd9444f56aeb9d1d4e5191c6f717356bca0b5d8c8da05e910aa49ec0af7b" ;
+    ct:start_char 67337 .
+
+ex:C019P0208 a ct:SourcePassage ;
+    ct:end_char 69169 ;
+    ct:exact_text "months after the Effective Date, if no rights to commercialize (including determination of the compensation due upon commercialization)  COLLABORATION CROPS germplasm provided by IGER which is included in a RESEARCH PROJECT have been secured to CERES'  reasonable satisfaction in compliance with the CBD; or (v) with thirty (30) days' written notice to IGER if Defra has not assigned to IGER, or  granted to IGER an exclusive license reasonably satisfactory to CERES on, the Intellectual Property vested in Defra or the Crown or the  Secretary of State pursuant to the DEFRA agreement NF 0426 within sixty (60) days from the Effective Date (the \"Assignment/License\")." ;
+    ct:source_path "cuad/CERES,INC_01_25_2012-EX-10.20-Collaboration Agreement.txt" ;
+    ct:source_sha256 "83b3bd9444f56aeb9d1d4e5191c6f717356bca0b5d8c8da05e910aa49ec0af7b" ;
+    ct:start_char 68502 .
+
+ex:C019P0217 a ct:SourcePassage ;
+    ct:end_char 74832 ;
+    ct:exact_text "15.1 All disputes, differences or questions arising out of or in connection with this Agreement or its SCHEDULES, or related to the alleged breach,  termination, validity, interpretation or violation thereof, shall be submitted to the MANAGEMENT COMMITTEE for resolution, which shall  convene, whether in person or otherwise, to resolve such dispute in a timely manner. Either Party may initiate a resolution procedure by providing  written notice (\"Dispute Notice\") to the other Party, and any such Dispute Notice must set forth the subject matter of the dispute, difference or  question. If after sixty (60) days the dispute remains unresolved, the Chief Scientific Officer of CERES and the Director of IGER shall seek to  resolve the dispute through negotiation. The Parties agree that at least eight (8) cumulative hours of negotiations will be undertaken. If the dispute  still remains unresolved ninety (90) days after the Dispute Notice, either Party may initiate proceedings pursuant to Article 15.2." ;
+    ct:source_path "cuad/CERES,INC_01_25_2012-EX-10.20-Collaboration Agreement.txt" ;
+    ct:source_sha256 "83b3bd9444f56aeb9d1d4e5191c6f717356bca0b5d8c8da05e910aa49ec0af7b" ;
+    ct:start_char 73824 .
+
+ex:C019P0332 a ct:SourcePassage ;
+    ct:end_char 99894 ;
+    ct:exact_text "9.2   Notwithstanding Article 9.3., [CERES/IGER] will have the right to terminate this Agreement including the Program at any time with  [three (3)] months' prior written notice. In case of such early termination, [CERES/IGER] will pay the remuneration provided in this  Agreement up to the effective date of termination, and all costs relating to the implementation of this Agreement which [Party]  irrevocably committed to prior to receipt of the notice of termination." ;
+    ct:source_path "cuad/CERES,INC_01_25_2012-EX-10.20-Collaboration Agreement.txt" ;
+    ct:source_sha256 "83b3bd9444f56aeb9d1d4e5191c6f717356bca0b5d8c8da05e910aa49ec0af7b" ;
+    ct:start_char 99423 .
+
+ex:C019P0333 a ct:SourcePassage ;
+    ct:end_char 100249 ;
+    ct:exact_text "9.3   Either Party will have the rights to terminate this Agreement unilaterally by registered letter addressed to the other Party in case such  other Party has committed a breach of any of its obligations under this Agreement and has failed to remedy such breach within thirty  (30) days from the receipt of a registered letter specifying the breach." ;
+    ct:source_path "cuad/CERES,INC_01_25_2012-EX-10.20-Collaboration Agreement.txt" ;
+    ct:source_sha256 "83b3bd9444f56aeb9d1d4e5191c6f717356bca0b5d8c8da05e910aa49ec0af7b" ;
+    ct:start_char 99898 .
+
+ex:C019P0407 a ct:SourcePassage ;
+    ct:end_char 115442 ;
+    ct:exact_text "9.3   Either Party will have the rights to terminate this Agreement unilaterally by registered letter addressed to the other Party in case such  other Party has committed a breach of any of its obligations under this Agreement and has failed to remedy such breach within thirty  (30) days from the receipt of a registered letter specifying the breach." ;
+    ct:source_path "cuad/CERES,INC_01_25_2012-EX-10.20-Collaboration Agreement.txt" ;
+    ct:source_sha256 "83b3bd9444f56aeb9d1d4e5191c6f717356bca0b5d8c8da05e910aa49ec0af7b" ;
+    ct:start_char 115091 .
+
+ex:C019P0686 a ct:SourcePassage ;
+    ct:end_char 163680 ;
+    ct:exact_text "15.1 All disputes, differences or questions arising out of or in connection with this Agreement, or related to the alleged breach, termination,  validity, interpretation or violation thereof, shall be submitted for resolution to the Chief Executive Officer of CERES and the Director of IGER, who  shall convene, whether in person or otherwise, to resolve such dispute through negotiation in a timely manner. Either Party may initiate a  resolution procedure by providing written notice (\"Dispute Notice\") to the other Party, and any such Dispute Notice must set forth the subject  matter of the dispute, difference or question. If the dispute remains unresolved sixty (60) days after the Dispute Notice, either Party may initiate  proceedings pursuant to Article 15.2." ;
+    ct:source_path "cuad/CERES,INC_01_25_2012-EX-10.20-Collaboration Agreement.txt" ;
+    ct:source_sha256 "83b3bd9444f56aeb9d1d4e5191c6f717356bca0b5d8c8da05e910aa49ec0af7b" ;
+    ct:start_char 162912 .
+
+ex:C019P0698 a ct:SourcePassage ;
+    ct:end_char 166272 ;
+    ct:exact_text "16.  TERM AND TERMINATION." ;
+    ct:source_path "cuad/CERES,INC_01_25_2012-EX-10.20-Collaboration Agreement.txt" ;
+    ct:source_sha256 "83b3bd9444f56aeb9d1d4e5191c6f717356bca0b5d8c8da05e910aa49ec0af7b" ;
+    ct:start_char 166246 .
+
+ex:C019P0701 a ct:SourcePassage ;
+    ct:end_char 167342 ;
+    ct:exact_text "16.2 Each Party shall have the right to terminate this Agreement unilaterally by giving written notice of termination to the other Party if such other  Party fails to satisfy its material obligations, which shall include but are not limited to, making required reports and making required payments,  under this Agreement, and such Party subsequently fails to cure such failure(s) within (a) thirty (30) days for failures to remit payment for amounts  due under this Agreement and (b) ninety (90) days for all other obligations after receipt of written notice from the non-breaching Party specifying  such failure." ;
+    ct:source_path "cuad/CERES,INC_01_25_2012-EX-10.20-Collaboration Agreement.txt" ;
+    ct:source_sha256 "83b3bd9444f56aeb9d1d4e5191c6f717356bca0b5d8c8da05e910aa49ec0af7b" ;
+    ct:start_char 166729 .
+
+ex:C019P0702 a ct:SourcePassage ;
+    ct:end_char 167994 ;
+    ct:exact_text "16.3 IGER will have the right to terminate this Agreement unilaterally with thirty (30) days' written notice to CERES, (a) if CERES seeks protection  under any bankruptcy, insolvency, receivership, trust, deed, creditors arrangement or comparable proceeding or if any such proceeding is  instituted against CERES (and not dismissed within one hundred twenty (120) days) or (b) in case of dissolution or winding up of CERES  (excluding any situation where all or substantially all of CERES' assets, stock or business to which this Agreement relates are acquired by a third  party (whether by sale, acquisition, merger, operation of law or otherwise))." ;
+    ct:source_path "cuad/CERES,INC_01_25_2012-EX-10.20-Collaboration Agreement.txt" ;
+    ct:source_sha256 "83b3bd9444f56aeb9d1d4e5191c6f717356bca0b5d8c8da05e910aa49ec0af7b" ;
+    ct:start_char 167344 .
+
+ex:C019P0703 a ct:SourcePassage ;
+    ct:end_char 168389 ;
+    ct:exact_text "16.4 CERES may after consultation with IGER terminate this Agreement by written notice if in the commercially reasonable opinion of CERES the  markets for the LICENSED VARIETY change or do not develop as anticipated, so as to render the production, promotion and sale of the  LICENSED VARIETY uneconomical or impractical or if CERES decides to cease substantially all activities in MISCANTHUS." ;
+    ct:source_path "cuad/CERES,INC_01_25_2012-EX-10.20-Collaboration Agreement.txt" ;
+    ct:source_sha256 "83b3bd9444f56aeb9d1d4e5191c6f717356bca0b5d8c8da05e910aa49ec0af7b" ;
+    ct:start_char 167996 .
+
+ex:C019P0796 a ct:SourcePassage ;
+    ct:end_char 183124 ;
+    ct:exact_text "\"(v) with thirty (30) days' written notice to AU if Defra has not assigned to AU, or granted to AU a license reasonably satisfactory to  CERES on, the Intellectual Property vested in Defra or the Crown or the Secretary of State pursuant to the DEFRA agreement NF 0426  within three (3) years from the Effective Date (the \"Assignment/License\"); provided however that Ceres will not unreasonably refuse to  extend such three (3) year term by six (6) months if so requested by AU by December 31, 2009.\"" ;
+    ct:source_path "cuad/CERES,INC_01_25_2012-EX-10.20-Collaboration Agreement.txt" ;
+    ct:source_sha256 "83b3bd9444f56aeb9d1d4e5191c6f717356bca0b5d8c8da05e910aa49ec0af7b" ;
+    ct:start_char 182625 .
+
+ex:C019P0967 a ct:SourcePassage ;
+    ct:end_char 202721 ;
+    ct:exact_text "(b) failure of one Party to satisfy its material obligations under this SCHEDULE, and such Party subsequently fails to cure such failure(s)  within (i) thirty (30) days for failures to remit payment for amounts due under this SCHEDULE and (ii) ninety (90) days for all other  obligations in each case after receipt of written notice from the non-breaching Party specifying such failure(s);" ;
+    ct:source_path "cuad/CERES,INC_01_25_2012-EX-10.20-Collaboration Agreement.txt" ;
+    ct:source_sha256 "83b3bd9444f56aeb9d1d4e5191c6f717356bca0b5d8c8da05e910aa49ec0af7b" ;
+    ct:start_char 202332 .
+
+ex:C019P0968 a ct:SourcePassage ;
+    ct:end_char 202939 ;
+    ct:exact_text "(c) one (1) year's written notice of termination by either CERES or IGER to the other Party in case either the terminating Party or the other  Party ceases substantially all activities in the COLLABORATION CROPS;" ;
+    ct:source_path "cuad/CERES,INC_01_25_2012-EX-10.20-Collaboration Agreement.txt" ;
+    ct:source_sha256 "83b3bd9444f56aeb9d1d4e5191c6f717356bca0b5d8c8da05e910aa49ec0af7b" ;
+    ct:start_char 202727 .
+
+ex:C019P0974 a ct:SourcePassage ;
+    ct:end_char 206298 ;
+    ct:exact_text "secured to CERES' reasonable satisfaction in compliance with the CBD; or (v) with thirty (30) days' written notice to IGER if Defra has not  assigned to IGER, or granted to IGER an exclusive license reasonably satisfactory to CERES on, the Intellectual Property vested in Defra or  the Crown or the Secretary of State pursuant to the DEFRA agreement NF 0426 within sixty (60) days from the Effective Date (the  \"Assignment/License\"), provided however that such termination may be for the entirety of this SCHEDULE or only for certain parts of the  RESEARCH PROJECT covered by this SCHEDULE." ;
+    ct:source_path "cuad/CERES,INC_01_25_2012-EX-10.20-Collaboration Agreement.txt" ;
+    ct:source_sha256 "83b3bd9444f56aeb9d1d4e5191c6f717356bca0b5d8c8da05e910aa49ec0af7b" ;
+    ct:start_char 205708 .
+
+ex:C019P1936 a ct:SourcePassage ;
+    ct:end_char 322076 ;
+    ct:exact_text "\"(v) with thirty (30) days' written notice to AU if Defra has not assigned to AU, or granted to AU a license reasonably satisfactory to  CERES on, the Intellectual Property vested in Defra or the Crown or the Secretary of State pursuant to the DEFRA agreement NF 0426  within three (3) years from the Effective Date (the \"Assignment/License\"); provided however that Ceres will not unreasonably refuse to  extend such three (3) year term by six (6) months if so requested by AU by December 31, 2009.\"" ;
+    ct:source_path "cuad/CERES,INC_01_25_2012-EX-10.20-Collaboration Agreement.txt" ;
+    ct:source_sha256 "83b3bd9444f56aeb9d1d4e5191c6f717356bca0b5d8c8da05e910aa49ec0af7b" ;
+    ct:start_char 321577 .
+
+ct:Agreement a owl:Class ;
+    rdfs:label "Agreement" .
+
+ex:C019P0204 a ct:SourcePassage ;
+    ct:end_char 67335 ;
+    ct:exact_text "(d) IGER will have the right to terminate this Agreement unilaterally with thirty (30) days' written notice to CERES, (i) if CERES seeks protection  under any bankruptcy, insolvency, receivership, trust, deed, creditors arrangement or comparable proceeding or if any such proceeding is  instituted against CERES (and not dismissed within one hundred twenty (120) days); (ii) in case of dissolution or winding up of CERES  (excluding any situation where all or substantially all of CERES' assets, stock or business to which this Agreement relates are acquired by a  third party (whether by sale, acquisition, merger, operation of law or otherwise)); or (iii) with written notice to CERES, if CERES has failed in a  substantial manner, three (3) years after either Party or the Parties jointly have developed a propagation method for Miscanthus that results in  the crop being commercially competitive in the United States or in Europe as compared to other energy crops being grown at that time in the  relevant geography, to implement the activities set forth in EXHIBIT F, and does not remedy such failure or offer a remediation plan which is  reasonably acceptable to IGER within ninety (90) days after receipt of a written notice from IGER specifying such failure;" ;
+    ct:source_path "cuad/CERES,INC_01_25_2012-EX-10.20-Collaboration Agreement.txt" ;
+    ct:source_sha256 "83b3bd9444f56aeb9d1d4e5191c6f717356bca0b5d8c8da05e910aa49ec0af7b" ;
+    ct:start_char 66069 .
+
+ex:C019P0209 a ct:SourcePassage ;
+    ct:end_char 69737 ;
+    ct:exact_text "(f) either Party will have the right to terminate this Agreement if no active RESEARCH PROJECTS exist for more than two (2) years, provided  that on or after the second anniversary of the expiration or termination of the last SCHEDULE to expire or terminate, the Parties have not agreed  on any new SCHEDULE despite (i) negotiations in good faith by both Parties or (ii) diligent, documented attempts by the terminating Party to  conduct negotiations in good faith with respect to one or more new SCHEDULES, to which attempts the other Party has not been responsive." ;
+    ct:source_path "cuad/CERES,INC_01_25_2012-EX-10.20-Collaboration Agreement.txt" ;
+    ct:source_sha256 "83b3bd9444f56aeb9d1d4e5191c6f717356bca0b5d8c8da05e910aa49ec0af7b" ;
+    ct:start_char 69171 .
+
+ex:C019P0213 a ct:SourcePassage ;
+    ct:end_char 72275 ;
+    ct:exact_text "14.3.2 In case of termination on the basis of Article 14.1 (b) if IGER is the breaching Party, Article 14.1 (c) if IGER ceases substantially all  activities in the COLLABORATION CROPS, Article 14.1 (e) (i) or (ii) or Article 14.1 (f), subject to the obligations of the first sentence of Article  14.3, CERES shall have the exclusive right to use and commercially exploit any JOINT INTELLECTUAL PROPERTY to the extent such JOINT         CERES-IGER Collaboration Agreement    Page 24 of 75" ;
+    ct:source_path "cuad/CERES,INC_01_25_2012-EX-10.20-Collaboration Agreement.txt" ;
+    ct:source_sha256 "83b3bd9444f56aeb9d1d4e5191c6f717356bca0b5d8c8da05e910aa49ec0af7b" ;
+    ct:start_char 71788 .
+
+ex:C019P0959 a ct:SourcePassage ;
+    ct:end_char 201778 ;
+    ct:exact_text "Term: Three (3) years provided however, at least one (1) year before the end of the term of this SCHEDULE, the Parties shall decide whether to  extend it for one (1) or more years, with appropriate updates to the RESEARCH AND DEVELOPMENT PLAN (Attachment A), and FUNDING  (Article 6 of this SCHEDULE)." ;
+    ct:source_path "cuad/CERES,INC_01_25_2012-EX-10.20-Collaboration Agreement.txt" ;
+    ct:source_sha256 "83b3bd9444f56aeb9d1d4e5191c6f717356bca0b5d8c8da05e910aa49ec0af7b" ;
+    ct:start_char 201477 .
+
+ex:C019P0969 a ct:SourcePassage ;
+    ct:end_char 204203 ;
+    ct:exact_text "(d) IGER will have the right to terminate this SCHEDULE unilaterally with thirty (30) days' written notice to CERES, (i) if CERES seeks  protection under any bankruptcy, insolvency, receivership, trust, deed, creditors arrangement or comparable proceeding or if any such  proceeding is instituted against CERES (and not dismissed within one hundred twenty (120) days); (ii) in case of dissolution or winding up  of CERES (excluding any situation where all or substantially all of CERES' assets, stock or business to which the CA relates are acquired by  a third party (whether by sale, acquisition, merger, operation of law or otherwise)); (iii) with written notice to CERES, if CERES has failed in a  substantial manner, three (3) years after either Party or the Parties jointly have developed a [***] method for Miscanthus that results in the  crop being commercially competitive in the United States or in Europe as compared to other energy crops being grown at that time in the  relevant geography, to implement the activities set forth in EXHIBIT F to the CA, and does not remedy such failure or offer a remediation  plan which is reasonably acceptable to IGER within ninety (90) days after receipt of a written notice from IGER specifying such failure;" ;
+    ct:source_path "cuad/CERES,INC_01_25_2012-EX-10.20-Collaboration Agreement.txt" ;
+    ct:source_sha256 "83b3bd9444f56aeb9d1d4e5191c6f717356bca0b5d8c8da05e910aa49ec0af7b" ;
+    ct:start_char 202945 .
+
+ex:C019P0970 a ct:SourcePassage ;
+    ct:end_char 205551 ;
+    ct:exact_text "(e) CERES will have the right to terminate this SCHEDULE unilaterally: (i) with thirty (30) days' written notice to IGER if John Clifton-Brown  or Iain Donnison cease(s) to be associated with IGER and the research activities associated with this SCHEDULE, and IGER has not  replaced such person(s) within one hundred twenty (120) days by (a) person(s) reasonably acceptable to CERES; (ii) with ninety (90) days'  written notice to IGER, if the institutional mission, purpose, structure or funding of IGER would change substantially and adversely affect  IGER's ability to satisfy its obligations hereunder; (iii) with one (1) years' written notice to IGER, if CERES has a documented compelling  business reason to cease the collaboration, (for example, without limitation, lack of sufficient processing capacity for COLLABORATION  CROPS within the expected timeframe in the United States; COLLABORATION CROPS are non-competitive with other biomass sources);  (iv) with three (3) months' prior written notice to IGER, such notice to be given no earlier than eighteen (18) months after the Effective Date  of the CA, if no rights to commercialize (including determination of the compensation due upon commercialization) COLLABORATION  CROPS germplasm provided by IGER which is included in the RESEARCH PROJECT covered by this SCHEDULE have been" ;
+    ct:source_path "cuad/CERES,INC_01_25_2012-EX-10.20-Collaboration Agreement.txt" ;
+    ct:source_sha256 "83b3bd9444f56aeb9d1d4e5191c6f717356bca0b5d8c8da05e910aa49ec0af7b" ;
+    ct:start_char 204209 .
+
+ex:C019P1962 a ct:SourcePassage ;
+    ct:end_char 325920 ;
+    ct:exact_text "\"Term: Five (5) years provided however, at least one (1) year before the end of the term of this SCHEDULE, the Parties shall decide  whether to extend it for one (1) or more years, with appropriate updates to the RESEARCH AND DEVELOPMENT" ;
+    ct:source_path "cuad/CERES,INC_01_25_2012-EX-10.20-Collaboration Agreement.txt" ;
+    ct:source_sha256 "83b3bd9444f56aeb9d1d4e5191c6f717356bca0b5d8c8da05e910aa49ec0af7b" ;
+    ct:start_char 325683 .
+
+ex:C019P0965 a ct:SourcePassage ;
+    ct:end_char 202275 ;
+    ct:exact_text "This SCHEDULE shall expire pursuant to the terms set forth in this SCHEDULE, unless extended by the mutual agreement of the Parties, or  unless sooner terminated in accordance with the following provisions of this Article:" ;
+    ct:source_path "cuad/CERES,INC_01_25_2012-EX-10.20-Collaboration Agreement.txt" ;
+    ct:source_sha256 "83b3bd9444f56aeb9d1d4e5191c6f717356bca0b5d8c8da05e910aa49ec0af7b" ;
+    ct:start_char 202053 .
+
+ct:Condition a owl:Class ;
+    rdfs:label "Condition" .
+
+ct:Reference a owl:Class ;
+    rdfs:label "Reference" .
+
+ct:SourcePassage a owl:Class ;
+    rdfs:label "SourcePassage" .
+
+ct:Rule a owl:Class ;
+    rdfs:label "Rule" .
+

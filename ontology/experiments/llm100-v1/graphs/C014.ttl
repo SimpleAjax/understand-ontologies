@@ -1,0 +1,383 @@
+@prefix ct: <https://cimulink.local/ontology/contract-terms/0.1#> .
+@prefix ex: <https://cimulink.local/ontology/llm100-v1/> .
+@prefix meta: <https://cimulink.local/ontology/extraction#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ct: a owl:Ontology ;
+    rdfs:comment "Partial five-contract development sample. No claim of complete contract coverage or legal correctness." .
+
+ct:agreement_effective_from a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:applies_within a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:calendar_date_status a owl:DatatypeProperty .
+
+ct:coverage a owl:DatatypeProperty .
+
+ct:description a owl:DatatypeProperty .
+
+ct:duration a owl:DatatypeProperty .
+
+ct:duration_status a owl:DatatypeProperty .
+
+ct:end_char a owl:DatatypeProperty .
+
+ct:end_date_status a owl:DatatypeProperty .
+
+ct:ends_on_event a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:exact_text a owl:DatatypeProperty .
+
+ct:has_party a owl:ObjectProperty ;
+    rdfs:domain ct:Agreement ;
+    rdfs:range ct:Party .
+
+ct:has_rule a owl:ObjectProperty ;
+    rdfs:domain ct:Agreement ;
+    rdfs:range ct:Rule .
+
+ct:kind a owl:DatatypeProperty .
+
+ct:notice_actor a owl:DatatypeProperty .
+
+ct:notice_form a owl:DatatypeProperty .
+
+ct:notice_period_status a owl:DatatypeProperty .
+
+ct:qualifies a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Rule .
+
+ct:references_section a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:renewal_count a owl:DatatypeProperty .
+
+ct:resolution_status a owl:DatatypeProperty .
+
+ct:resolved_to a owl:ObjectProperty ;
+    rdfs:domain ct:Reference ;
+    rdfs:range ct:SourcePassage .
+
+ct:source_path a owl:DatatypeProperty .
+
+ct:source_sha256 a owl:DatatypeProperty .
+
+ct:start_char a owl:DatatypeProperty .
+
+ct:starts_from a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:stated_end_date a owl:DatatypeProperty .
+
+ct:subject_to a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Condition .
+
+ct:supported_by a owl:ObjectProperty ;
+    rdfs:range ct:SourcePassage .
+
+ct:termination_notice a owl:DatatypeProperty .
+
+ex:C014 a ct:Agreement ;
+    rdfs:label "BEYONDCOMCORP_08_03_2000-EX-10.2-CO-HOSTING AGREEMENT.txt" ;
+    ct:coverage "LOCAL_LLM_PROPOSED_PARTIAL; NOT_HUMAN_REVIEWED" ;
+    ct:has_rule ex:C014R0001,
+        ex:C014R0002,
+        ex:C014R0003,
+        ex:C014R0004,
+        ex:C014R0005,
+        ex:C014R0006,
+        ex:C014R0007,
+        ex:C014R0008,
+        ex:C014R0009,
+        ex:C014R0010,
+        ex:C014R0011,
+        ex:C014R0012,
+        ex:C014R0013,
+        ex:C014R0014,
+        ex:C014R0015 ;
+    ct:source_path "cuad/BEYONDCOMCORP_08_03_2000-EX-10.2-CO-HOSTING AGREEMENT.txt" ;
+    ct:source_sha256 "366791ae1ac1b2c163c069d3afed275ba3129a65574609fba9e94e56e66de9e4" ;
+    meta:model_digest "0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0" .
+
+ct:Party a owl:Class ;
+    rdfs:label "Party" .
+
+ex:C014P0046 a ct:SourcePassage ;
+    ct:end_char 14933 ;
+    ct:exact_text "6.   TERM AND TERMINATION." ;
+    ct:source_path "cuad/BEYONDCOMCORP_08_03_2000-EX-10.2-CO-HOSTING AGREEMENT.txt" ;
+    ct:source_sha256 "366791ae1ac1b2c163c069d3afed275ba3129a65574609fba9e94e56e66de9e4" ;
+    ct:start_char 14907 .
+
+ex:C014P0047 a ct:SourcePassage ;
+    ct:end_char 15156 ;
+    ct:exact_text "(a)  Term. This Agreement will commence on the Effective Date, and will           terminate on the third anniversary of the Effective Date (the \"Term\"),           unless earlier terminated as provided in this Agreement." ;
+    ct:source_path "cuad/BEYONDCOMCORP_08_03_2000-EX-10.2-CO-HOSTING AGREEMENT.txt" ;
+    ct:source_sha256 "366791ae1ac1b2c163c069d3afed275ba3129a65574609fba9e94e56e66de9e4" ;
+    ct:start_char 14937 .
+
+ex:C014P0094 a ct:SourcePassage ;
+    ct:end_char 34132 ;
+    ct:exact_text "payments are           payable during the second year of the Term until such time as such           aggregate Minimum Revenue Target is achieved at which point Co-Host           will resume making future quarterly payments on the schedule and in           the amount set forth above for the duration of the Term. The parties           hereby agree to renegotiate in good faith a downward adjustment to the           foregoing quarterly payments in the event that the Minimum Revenue           Target for year one (1) is not achieved in the first year of this           Agreement." ;
+    ct:source_path "cuad/BEYONDCOMCORP_08_03_2000-EX-10.2-CO-HOSTING AGREEMENT.txt" ;
+    ct:source_sha256 "366791ae1ac1b2c163c069d3afed275ba3129a65574609fba9e94e56e66de9e4" ;
+    ct:start_char 33553 .
+
+ex:C014R0001 a ct:Rule ;
+    rdfs:label "Termination — source passage 35" ;
+    ct:kind "TERMINATION" ;
+    ct:references_section ex:C014R0001Ref0 ;
+    ct:subject_to ex:C014R0001Condition35 ;
+    ct:supported_by ex:C014P0035 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C014R0001Condition35 a ct:Condition ;
+    ct:description "(c)  Use of Trademarks. Co-Host hereby grants to NAI a non-exclusive,           non-transferable, royalty-free license during the term of this           Agreement to use the trademarks, service marks and trade names of           Co-Host in connection with the advertising and promotion of the Goods           from the Originating Locations, provided that NAI complies with the           terms of Section 9(b) of the Web Site Services Agreement (as defined           below). Co-Host reserves the right to terminate the foregoing right,           after giving NAI notice and opportunity to cure the allegedly harmful           use, if in Co-Host's reasonable judgment, NAI's use of such           trademarks, service marks and trade names harms the business, image or           goodwill of Co-Host." ;
+    ct:supported_by ex:C014P0035 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C014R0001Ref0 a ct:Reference ;
+    rdfs:label "Section 9(b)" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C014R0002 a ct:Rule ;
+    rdfs:label "Conditional Referenced Term — source passage 35" ;
+    ct:kind "CONDITIONAL_REFERENCED_TERM" ;
+    ct:references_section ex:C014R0002Ref0 ;
+    ct:subject_to ex:C014R0002Condition35 ;
+    ct:supported_by ex:C014P0035 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C014R0002Condition35 a ct:Condition ;
+    ct:description "(c)  Use of Trademarks. Co-Host hereby grants to NAI a non-exclusive,           non-transferable, royalty-free license during the term of this           Agreement to use the trademarks, service marks and trade names of           Co-Host in connection with the advertising and promotion of the Goods           from the Originating Locations, provided that NAI complies with the           terms of Section 9(b) of the Web Site Services Agreement (as defined           below). Co-Host reserves the right to terminate the foregoing right,           after giving NAI notice and opportunity to cure the allegedly harmful           use, if in Co-Host's reasonable judgment, NAI's use of such           trademarks, service marks and trade names harms the business, image or           goodwill of Co-Host." ;
+    ct:supported_by ex:C014P0035 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C014R0002Ref0 a ct:Reference ;
+    rdfs:label "Section 9(b)" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C014R0003 a ct:Rule ;
+    rdfs:label "Termination — source passage 46" ;
+    ct:kind "TERMINATION" ;
+    ct:supported_by ex:C014P0046 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C014R0004 a ct:Rule ;
+    rdfs:label "Initial Term — source passage 47" ;
+    ct:kind "INITIAL_TERM" ;
+    ct:supported_by ex:C014P0047 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C014R0005 a ct:Rule ;
+    rdfs:label "Termination — source passage 48" ;
+    ct:kind "TERMINATION" ;
+    ct:subject_to ex:C014R0005Condition48 ;
+    ct:supported_by ex:C014P0048 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C014R0005Condition48 a ct:Condition ;
+    ct:description "(b)  Termination. A party may terminate this Agreement immediately: (i) if           the other party engages in any material unlawful business practice and           such practice continues uncured thirty (30) days following written           notice thereof, (ii) if the other party fails to perform any material           obligation, (which shall include, without limitation, the payment           obligations hereunder and compliance with the Uptime Requirements in           respect of the Originating Locations) or violates any material           restriction contained in this Agreement and such failure continues           uncured thirty (30) days following written notice thereof, (iii) by           such party if that certain Web Site Services Agreement between NAI and           Co-Host dated of even date herewith (the \"Web Site Services           Agreement\") or the ESD Agreement is terminated by the other party,           (iv) if a receiver is appointed for the other party or its property,           (v) if the other party makes an assignment for the benefit of           creditors, (vi) if the other party becomes the subject of any           proceeding under any bankruptcy, insolvency or debtor's relief law,           (vii) upon ninety (90) days prior notice in writing by Co-Host at any           time after June 30, 2000, if the term of the Web Site Services           Agreement " ;
+    ct:supported_by ex:C014P0048 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C014R0006 a ct:Rule ;
+    rdfs:label "Termination — source passage 49" ;
+    ct:kind "TERMINATION" ;
+    ct:subject_to ex:C014R0006Condition49 ;
+    ct:supported_by ex:C014P0049 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C014R0006Condition49 a ct:Condition ;
+    ct:description "has not been renewed for an additional term of one (1) year           or more pursuant to its terms or (viii) if the party terminates the           Web Site Services Agreement by reason of the other party's material           default thereunder." ;
+    ct:supported_by ex:C014P0049 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C014R0007 a ct:Rule ;
+    rdfs:label "Conditional Referenced Term — source passage 49" ;
+    ct:kind "CONDITIONAL_REFERENCED_TERM" ;
+    ct:subject_to ex:C014R0007Condition49 ;
+    ct:supported_by ex:C014P0049 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C014R0007Condition49 a ct:Condition ;
+    ct:description "has not been renewed for an additional term of one (1) year           or more pursuant to its terms or (viii) if the party terminates the           Web Site Services Agreement by reason of the other party's material           default thereunder." ;
+    ct:supported_by ex:C014P0049 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C014R0008 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 50" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:supported_by ex:C014P0050 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C014R0009 a ct:Rule ;
+    rdfs:label "Termination — source passage 50" ;
+    ct:kind "TERMINATION" ;
+    ct:supported_by ex:C014P0050 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C014R0010 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 53" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:references_section ex:C014R0010Ref0 ;
+    ct:subject_to ex:C014R0010Condition53 ;
+    ct:supported_by ex:C014P0053 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C014R0010Condition53 a ct:Condition ;
+    ct:description "Neither party will make any disclosure of, or statement covering, the terms      of this Agreement, including the financial terms, to any third parties      (other than its attorneys, accountants and professional consultants),      without obtaining the other's prior written consent, except as required by      court order or applicable regulatory authorities, including without      limitation, the rules and regulations of the Securities and Exchange      Commission, any stock exchange and the NASDAQ. The parties agree that under      their current understanding, disclosure of the financial terms of this      Agreement is not required under the foregoing rules and regulations. The      obligations of this Section 7 shall survive the termination of this      Agreement, under any circumstances. The parties shall make a joint press      release announcing the relationship, the timing and content of which shall      be subject to the mutual agreement of the parties." ;
+    ct:supported_by ex:C014P0053 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C014R0010Ref0 a ct:Reference ;
+    rdfs:label "Section 7" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C014R0011 a ct:Rule ;
+    rdfs:label "Termination — source passage 69" ;
+    ct:kind "TERMINATION" ;
+    ct:subject_to ex:C014R0011Condition69 ;
+    ct:supported_by ex:C014P0069 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C014R0011Condition69 a ct:Condition ;
+    ct:description "(b)  This Agreement may not be changed, terminated or amended except in           writing. Whenever the consent of any party is required hereunder, such           consent may be given or withheld in such party's sole discretion and           with or without reason or cause, unless this Agreement states           otherwise." ;
+    ct:supported_by ex:C014P0069 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C014R0012 a ct:Rule ;
+    rdfs:label "Initial Term — source passage 93" ;
+    ct:kind "INITIAL_TERM" ;
+    ct:references_section ex:C014R0012Ref0 ;
+    ct:subject_to ex:C014R0012Condition93 ;
+    ct:supported_by ex:C014P0093 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C014R0012Condition93 a ct:Condition ;
+    ct:description "(b)  Quarterly payments of $312,500 each, with the first payment being due           September 15, 1999, and on each December 15, March 15, June 15, and           September 15 thereafter during the Term unless (i) the Agreement is           terminated in accordance with Section 6 of the Agreement prior to such           date in which case no quarterly payments will be due following the           effective date of such termination or (ii) if the Minimum Revenue           Target (as defined in Part 2 of this Exhibit \"A\") for the first year           of the Term is not achieved by the first anniversary of the Effective           Date, in which case no quarterly payments are payable until such time           as the Minimum Revenue Target for the first year of the Term is           achieved at which point Co-Host will resume making future quarterly           payments on the schedule and in the amount set forth above for the           duration of the Term or (iii) if the aggregate Minimum Revenue Targets           (as defined in Part 2 of this Exhibit \"A\") for the first and second           year of the Term are not achieved by the second anniversary of the           Effective Date, then, even if the Minimum Revenue Target (as defined           in Part 2 of this Exhibit \"A\") for the first year of the Term has been           achieved prior to such second Anniversary, no quarterly " ;
+    ct:supported_by ex:C014P0093 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C014R0012Ref0 a ct:Reference ;
+    rdfs:label "Section 6" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C014R0013 a ct:Rule ;
+    rdfs:label "Conditional Referenced Term — source passage 93" ;
+    ct:kind "CONDITIONAL_REFERENCED_TERM" ;
+    ct:references_section ex:C014R0013Ref0 ;
+    ct:subject_to ex:C014R0013Condition93 ;
+    ct:supported_by ex:C014P0093 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C014R0013Condition93 a ct:Condition ;
+    ct:description "(b)  Quarterly payments of $312,500 each, with the first payment being due           September 15, 1999, and on each December 15, March 15, June 15, and           September 15 thereafter during the Term unless (i) the Agreement is           terminated in accordance with Section 6 of the Agreement prior to such           date in which case no quarterly payments will be due following the           effective date of such termination or (ii) if the Minimum Revenue           Target (as defined in Part 2 of this Exhibit \"A\") for the first year           of the Term is not achieved by the first anniversary of the Effective           Date, in which case no quarterly payments are payable until such time           as the Minimum Revenue Target for the first year of the Term is           achieved at which point Co-Host will resume making future quarterly           payments on the schedule and in the amount set forth above for the           duration of the Term or (iii) if the aggregate Minimum Revenue Targets           (as defined in Part 2 of this Exhibit \"A\") for the first and second           year of the Term are not achieved by the second anniversary of the           Effective Date, then, even if the Minimum Revenue Target (as defined           in Part 2 of this Exhibit \"A\") for the first year of the Term has been           achieved prior to such second Anniversary, no quarterly " ;
+    ct:supported_by ex:C014P0093 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C014R0013Ref0 a ct:Reference ;
+    rdfs:label "Section 6" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C014R0014 a ct:Rule ;
+    rdfs:label "Conditional Referenced Term — source passage 94" ;
+    ct:kind "CONDITIONAL_REFERENCED_TERM" ;
+    ct:supported_by ex:C014P0094 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C014R0015 a ct:Rule ;
+    rdfs:label "Conditional Referenced Term — source passage 146" ;
+    ct:kind "CONDITIONAL_REFERENCED_TERM" ;
+    ct:subject_to ex:C014R0015Condition146 ;
+    ct:supported_by ex:C014P0146 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C014R0015Condition146 a ct:Condition ;
+    ct:description "(iv) Orders for such Product in NAI's order entry system in excess of                the quantity specified in (iii) above will be shipped at the new                price unless they are canceled by Co-Host by written notice to                NAI, provided that such notice is received by NAI no later than                fifteen (15) days prior to the date of shipment specified in such                order." ;
+    ct:supported_by ex:C014P0146 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C014P0048 a ct:SourcePassage ;
+    ct:end_char 16562 ;
+    ct:exact_text "(b)  Termination. A party may terminate this Agreement immediately: (i) if           the other party engages in any material unlawful business practice and           such practice continues uncured thirty (30) days following written           notice thereof, (ii) if the other party fails to perform any material           obligation, (which shall include, without limitation, the payment           obligations hereunder and compliance with the Uptime Requirements in           respect of the Originating Locations) or violates any material           restriction contained in this Agreement and such failure continues           uncured thirty (30) days following written notice thereof, (iii) by           such party if that certain Web Site Services Agreement between NAI and           Co-Host dated of even date herewith (the \"Web Site Services           Agreement\") or the ESD Agreement is terminated by the other party,           (iv) if a receiver is appointed for the other party or its property,           (v) if the other party makes an assignment for the benefit of           creditors, (vi) if the other party becomes the subject of any           proceeding under any bankruptcy, insolvency or debtor's relief law,           (vii) upon ninety (90) days prior notice in writing by Co-Host at any           time after June 30, 2000, if the term of the Web Site Services           Agreement " ;
+    ct:source_path "cuad/BEYONDCOMCORP_08_03_2000-EX-10.2-CO-HOSTING AGREEMENT.txt" ;
+    ct:source_sha256 "366791ae1ac1b2c163c069d3afed275ba3129a65574609fba9e94e56e66de9e4" ;
+    ct:start_char 15164 .
+
+ex:C014P0050 a ct:SourcePassage ;
+    ct:end_char 17584 ;
+    ct:exact_text "(c)  Effect of Termination. Upon the effective date of the termination, all           outstanding invoices and other invoicable amounts will become due and           payable. Co-Host's contractual right to the marketing consideration           shall cease immediately upon the effective date of the termination.           Termination or expiration of this Agreement if by reason of material           breach by Co-Host shall not affect any of Co-Host's payment           obligations, all of which survive termination of this Agreement;           provided that, in (i) the event of termination of this Agreement by           Co-Host due to a material default by NAI, NAI shall pay to the Co-Host           the Liquidated Damages Amount (as defined in Part 2 of Exhibit \"A\")." ;
+    ct:source_path "cuad/BEYONDCOMCORP_08_03_2000-EX-10.2-CO-HOSTING AGREEMENT.txt" ;
+    ct:source_sha256 "366791ae1ac1b2c163c069d3afed275ba3129a65574609fba9e94e56e66de9e4" ;
+    ct:start_char 16811 .
+
+ex:C014P0053 a ct:SourcePassage ;
+    ct:end_char 19706 ;
+    ct:exact_text "Neither party will make any disclosure of, or statement covering, the terms      of this Agreement, including the financial terms, to any third parties      (other than its attorneys, accountants and professional consultants),      without obtaining the other's prior written consent, except as required by      court order or applicable regulatory authorities, including without      limitation, the rules and regulations of the Securities and Exchange      Commission, any stock exchange and the NASDAQ. The parties agree that under      their current understanding, disclosure of the financial terms of this      Agreement is not required under the foregoing rules and regulations. The      obligations of this Section 7 shall survive the termination of this      Agreement, under any circumstances. The parties shall make a joint press      release announcing the relationship, the timing and content of which shall      be subject to the mutual agreement of the parties." ;
+    ct:source_path "cuad/BEYONDCOMCORP_08_03_2000-EX-10.2-CO-HOSTING AGREEMENT.txt" ;
+    ct:source_sha256 "366791ae1ac1b2c163c069d3afed275ba3129a65574609fba9e94e56e66de9e4" ;
+    ct:start_char 18731 .
+
+ex:C014P0069 a ct:SourcePassage ;
+    ct:end_char 27378 ;
+    ct:exact_text "(b)  This Agreement may not be changed, terminated or amended except in           writing. Whenever the consent of any party is required hereunder, such           consent may be given or withheld in such party's sole discretion and           with or without reason or cause, unless this Agreement states           otherwise." ;
+    ct:source_path "cuad/BEYONDCOMCORP_08_03_2000-EX-10.2-CO-HOSTING AGREEMENT.txt" ;
+    ct:source_sha256 "366791ae1ac1b2c163c069d3afed275ba3129a65574609fba9e94e56e66de9e4" ;
+    ct:start_char 27054 .
+
+ex:C014P0146 a ct:SourcePassage ;
+    ct:end_char 47699 ;
+    ct:exact_text "(iv) Orders for such Product in NAI's order entry system in excess of                the quantity specified in (iii) above will be shipped at the new                price unless they are canceled by Co-Host by written notice to                NAI, provided that such notice is received by NAI no later than                fifteen (15) days prior to the date of shipment specified in such                order." ;
+    ct:source_path "cuad/BEYONDCOMCORP_08_03_2000-EX-10.2-CO-HOSTING AGREEMENT.txt" ;
+    ct:source_sha256 "366791ae1ac1b2c163c069d3afed275ba3129a65574609fba9e94e56e66de9e4" ;
+    ct:start_char 47290 .
+
+ct:Agreement a owl:Class ;
+    rdfs:label "Agreement" .
+
+ex:C014P0035 a ct:SourcePassage ;
+    ct:end_char 11443 ;
+    ct:exact_text "(c)  Use of Trademarks. Co-Host hereby grants to NAI a non-exclusive,           non-transferable, royalty-free license during the term of this           Agreement to use the trademarks, service marks and trade names of           Co-Host in connection with the advertising and promotion of the Goods           from the Originating Locations, provided that NAI complies with the           terms of Section 9(b) of the Web Site Services Agreement (as defined           below). Co-Host reserves the right to terminate the foregoing right,           after giving NAI notice and opportunity to cure the allegedly harmful           use, if in Co-Host's reasonable judgment, NAI's use of such           trademarks, service marks and trade names harms the business, image or           goodwill of Co-Host." ;
+    ct:source_path "cuad/BEYONDCOMCORP_08_03_2000-EX-10.2-CO-HOSTING AGREEMENT.txt" ;
+    ct:source_sha256 "366791ae1ac1b2c163c069d3afed275ba3129a65574609fba9e94e56e66de9e4" ;
+    ct:start_char 10647 .
+
+ex:C014P0049 a ct:SourcePassage ;
+    ct:end_char 16807 ;
+    ct:exact_text "has not been renewed for an additional term of one (1) year           or more pursuant to its terms or (viii) if the party terminates the           Web Site Services Agreement by reason of the other party's material           default thereunder." ;
+    ct:source_path "cuad/BEYONDCOMCORP_08_03_2000-EX-10.2-CO-HOSTING AGREEMENT.txt" ;
+    ct:source_sha256 "366791ae1ac1b2c163c069d3afed275ba3129a65574609fba9e94e56e66de9e4" ;
+    ct:start_char 16562 .
+
+ex:C014P0093 a ct:SourcePassage ;
+    ct:end_char 33553 ;
+    ct:exact_text "(b)  Quarterly payments of $312,500 each, with the first payment being due           September 15, 1999, and on each December 15, March 15, June 15, and           September 15 thereafter during the Term unless (i) the Agreement is           terminated in accordance with Section 6 of the Agreement prior to such           date in which case no quarterly payments will be due following the           effective date of such termination or (ii) if the Minimum Revenue           Target (as defined in Part 2 of this Exhibit \"A\") for the first year           of the Term is not achieved by the first anniversary of the Effective           Date, in which case no quarterly payments are payable until such time           as the Minimum Revenue Target for the first year of the Term is           achieved at which point Co-Host will resume making future quarterly           payments on the schedule and in the amount set forth above for the           duration of the Term or (iii) if the aggregate Minimum Revenue Targets           (as defined in Part 2 of this Exhibit \"A\") for the first and second           year of the Term are not achieved by the second anniversary of the           Effective Date, then, even if the Minimum Revenue Target (as defined           in Part 2 of this Exhibit \"A\") for the first year of the Term has been           achieved prior to such second Anniversary, no quarterly " ;
+    ct:source_path "cuad/BEYONDCOMCORP_08_03_2000-EX-10.2-CO-HOSTING AGREEMENT.txt" ;
+    ct:source_sha256 "366791ae1ac1b2c163c069d3afed275ba3129a65574609fba9e94e56e66de9e4" ;
+    ct:start_char 32158 .
+
+ct:Condition a owl:Class ;
+    rdfs:label "Condition" .
+
+ct:Reference a owl:Class ;
+    rdfs:label "Reference" .
+
+ct:SourcePassage a owl:Class ;
+    rdfs:label "SourcePassage" .
+
+ct:Rule a owl:Class ;
+    rdfs:label "Rule" .
+

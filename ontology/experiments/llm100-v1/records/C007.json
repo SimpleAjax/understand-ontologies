@@ -1,0 +1,236 @@
+{
+  "document_id": "C007",
+  "file_path": "cuad/ASIANDRAGONGROUPINC_08_11_2005-EX-10.5-Reseller Agreement.txt",
+  "model_digest": "0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0",
+  "rules": [
+    {
+      "passage_id": 20,
+      "kind": "INITIAL_TERM",
+      "label": "Initial Term — source passage 20",
+      "condition_ids": [
+        20
+      ],
+      "reference_labels": [
+        "Schedule A"
+      ],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 20,
+      "kind": "OPTIONAL_RENEWAL",
+      "label": "Optional Renewal — source passage 20",
+      "condition_ids": [
+        20
+      ],
+      "reference_labels": [
+        "Schedule A"
+      ],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 27,
+      "kind": "INITIAL_TERM",
+      "label": "Initial Term — source passage 27",
+      "condition_ids": [
+        27
+      ],
+      "reference_labels": [
+        "section 13.2"
+      ],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 27,
+      "kind": "AUTOMATIC_RENEWAL",
+      "label": "Automatic Renewal — source passage 27",
+      "condition_ids": [
+        27
+      ],
+      "reference_labels": [
+        "section 13.2"
+      ],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 27,
+      "kind": "TERMINATION",
+      "label": "Termination — source passage 27",
+      "condition_ids": [
+        27
+      ],
+      "reference_labels": [
+        "section 13.2"
+      ],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 27,
+      "kind": "POST_EXPIRY_CONTINUATION",
+      "label": "Post Expiry Continuation — source passage 27",
+      "condition_ids": [
+        27
+      ],
+      "reference_labels": [
+        "section 13.2"
+      ],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 28,
+      "kind": "POST_EXPIRY_CONTINUATION",
+      "label": "Post Expiry Continuation — source passage 28",
+      "condition_ids": [],
+      "reference_labels": [
+        "section 10.2"
+      ],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 31,
+      "kind": "POST_EXPIRY_CONTINUATION",
+      "label": "Post Expiry Continuation — source passage 31",
+      "condition_ids": [],
+      "reference_labels": [],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 36,
+      "kind": "TERMINATION",
+      "label": "Termination — source passage 36",
+      "condition_ids": [
+        36
+      ],
+      "reference_labels": [],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 121,
+      "kind": "TERMINATION",
+      "label": "Termination — source passage 121",
+      "condition_ids": [
+        121
+      ],
+      "reference_labels": [],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 122,
+      "kind": "INITIAL_TERM",
+      "label": "Initial Term — source passage 122",
+      "condition_ids": [
+        122
+      ],
+      "reference_labels": [],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 122,
+      "kind": "AUTOMATIC_RENEWAL",
+      "label": "Automatic Renewal — source passage 122",
+      "condition_ids": [
+        122
+      ],
+      "reference_labels": [],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 122,
+      "kind": "POST_EXPIRY_CONTINUATION",
+      "label": "Post Expiry Continuation — source passage 122",
+      "condition_ids": [
+        122
+      ],
+      "reference_labels": [],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 124,
+      "kind": "TERMINATION",
+      "label": "Termination — source passage 124",
+      "condition_ids": [
+        124
+      ],
+      "reference_labels": [],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 125,
+      "kind": "INITIAL_TERM",
+      "label": "Initial Term — source passage 125",
+      "condition_ids": [
+        125
+      ],
+      "reference_labels": [],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 125,
+      "kind": "AUTOMATIC_RENEWAL",
+      "label": "Automatic Renewal — source passage 125",
+      "condition_ids": [
+        125
+      ],
+      "reference_labels": [],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 125,
+      "kind": "POST_EXPIRY_CONTINUATION",
+      "label": "Post Expiry Continuation — source passage 125",
+      "condition_ids": [
+        125
+      ],
+      "reference_labels": [],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 129,
+      "kind": "TERMINATION",
+      "label": "Termination — source passage 129",
+      "condition_ids": [
+        129
+      ],
+      "reference_labels": [],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    }
+  ],
+  "rejected_rules": [],
+  "review_status": "UNREVIEWED",
+  "coverage": "Lexically selected source windows; completeness not guaranteed."
+}

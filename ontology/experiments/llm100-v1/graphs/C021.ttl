@@ -1,0 +1,215 @@
+@prefix ct: <https://cimulink.local/ontology/contract-terms/0.1#> .
+@prefix ex: <https://cimulink.local/ontology/llm100-v1/> .
+@prefix meta: <https://cimulink.local/ontology/extraction#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ct: a owl:Ontology ;
+    rdfs:comment "Partial five-contract development sample. No claim of complete contract coverage or legal correctness." .
+
+ct:agreement_effective_from a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:applies_within a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:calendar_date_status a owl:DatatypeProperty .
+
+ct:coverage a owl:DatatypeProperty .
+
+ct:description a owl:DatatypeProperty .
+
+ct:duration a owl:DatatypeProperty .
+
+ct:duration_status a owl:DatatypeProperty .
+
+ct:end_char a owl:DatatypeProperty .
+
+ct:end_date_status a owl:DatatypeProperty .
+
+ct:ends_on_event a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:exact_text a owl:DatatypeProperty .
+
+ct:has_party a owl:ObjectProperty ;
+    rdfs:domain ct:Agreement ;
+    rdfs:range ct:Party .
+
+ct:has_rule a owl:ObjectProperty ;
+    rdfs:domain ct:Agreement ;
+    rdfs:range ct:Rule .
+
+ct:kind a owl:DatatypeProperty .
+
+ct:notice_actor a owl:DatatypeProperty .
+
+ct:notice_form a owl:DatatypeProperty .
+
+ct:notice_period_status a owl:DatatypeProperty .
+
+ct:qualifies a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Rule .
+
+ct:references_section a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:renewal_count a owl:DatatypeProperty .
+
+ct:resolution_status a owl:DatatypeProperty .
+
+ct:resolved_to a owl:ObjectProperty ;
+    rdfs:domain ct:Reference ;
+    rdfs:range ct:SourcePassage .
+
+ct:source_path a owl:DatatypeProperty .
+
+ct:source_sha256 a owl:DatatypeProperty .
+
+ct:start_char a owl:DatatypeProperty .
+
+ct:starts_from a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:stated_end_date a owl:DatatypeProperty .
+
+ct:subject_to a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Condition .
+
+ct:supported_by a owl:ObjectProperty ;
+    rdfs:range ct:SourcePassage .
+
+ct:termination_notice a owl:DatatypeProperty .
+
+ex:C021 a ct:Agreement ;
+    rdfs:label "CHERRYHILLMORTGAGEINVESTMENTCORP_09_26_2013-EX-10.1-Strategic Alliance Agreement.txt" ;
+    ct:coverage "LOCAL_LLM_PROPOSED_PARTIAL; NOT_HUMAN_REVIEWED" ;
+    ct:has_rule ex:C021R0001,
+        ex:C021R0002,
+        ex:C021R0003,
+        ex:C021R0004,
+        ex:C021R0005,
+        ex:C021R0006 ;
+    ct:source_path "cuad/CHERRYHILLMORTGAGEINVESTMENTCORP_09_26_2013-EX-10.1-Strategic Alliance Agreement.txt" ;
+    ct:source_sha256 "2528d4f273fad72ea608329997b95e96626632b3936a93a32dd0bbad5db970cd" ;
+    meta:model_digest "0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0" .
+
+ct:Party a owl:Class ;
+    rdfs:label "Party" .
+
+ex:C021P0063 a ct:SourcePassage ;
+    ct:end_char 14320 ;
+    ct:exact_text "in a breach of any provisions of, constitute a default (or an event which, with notice or lapse of time, or both, would constitute a default) under, result in the termination of, accelerate the performance required by, or result in a right of termination or acceleration or the creation of any Lien upon any of the properties or assets of Freedom Mortgage under any of the terms, conditions or provisions of any material contract to which Freedom Mortgage is a party, or by which it or any of its properties or assets may be bound or affected." ;
+    ct:source_path "cuad/CHERRYHILLMORTGAGEINVESTMENTCORP_09_26_2013-EX-10.1-Strategic Alliance Agreement.txt" ;
+    ct:source_sha256 "2528d4f273fad72ea608329997b95e96626632b3936a93a32dd0bbad5db970cd" ;
+    ct:start_char 13777 .
+
+ex:C021P0077 a ct:SourcePassage ;
+    ct:end_char 20362 ;
+    ct:exact_text "(b) In the event that a party materially breaches any representation or covenant herein, the other party may give written notice of the breach requiring the same to be remedied within 30 days of receipt of such notice. If the breaching party fails to remedy the material breach in such time period, the non-breaching party may terminate this Agreement by delivery of a written termination notice to the breaching party. Any such termination shall not relieve the breaching party from any obligation or liability arising prior to such termination." ;
+    ct:source_path "cuad/CHERRYHILLMORTGAGEINVESTMENTCORP_09_26_2013-EX-10.1-Strategic Alliance Agreement.txt" ;
+    ct:source_sha256 "2528d4f273fad72ea608329997b95e96626632b3936a93a32dd0bbad5db970cd" ;
+    ct:start_char 19816 .
+
+ex:C021R0001 a ct:Rule ;
+    rdfs:label "Termination — source passage 54" ;
+    ct:kind "TERMINATION" ;
+    ct:subject_to ex:C021R0001Condition54 ;
+    ct:supported_by ex:C021P0054 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C021R0001Condition54 a ct:Condition ;
+    ct:description "(d) The Purchase Agreement will provide that Freedom Mortgage will indemnify Cherry Hill against, and hold it harmless from, any loss, cost or expense incurred by Cherry Hill as a result of Ginnie Mae's termination for cause of Freedom Mortgage as an issuer." ;
+    ct:supported_by ex:C021P0054 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C021R0002 a ct:Rule ;
+    rdfs:label "Termination — source passage 63" ;
+    ct:kind "TERMINATION" ;
+    ct:supported_by ex:C021P0063 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C021R0003 a ct:Rule ;
+    rdfs:label "Termination — source passage 75" ;
+    ct:kind "TERMINATION" ;
+    ct:references_section ex:C021R0003Ref0 ;
+    ct:supported_by ex:C021P0075 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C021R0003Ref0 a ct:Reference ;
+    rdfs:label "Section 5" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C021R0004 a ct:Rule ;
+    rdfs:label "Conditional Referenced Term — source passage 75" ;
+    ct:kind "CONDITIONAL_REFERENCED_TERM" ;
+    ct:references_section ex:C021R0004Ref0 ;
+    ct:supported_by ex:C021P0075 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C021R0004Ref0 a ct:Reference ;
+    rdfs:label "Section 5" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C021R0005 a ct:Rule ;
+    rdfs:label "Initial Term — source passage 76" ;
+    ct:kind "INITIAL_TERM" ;
+    ct:subject_to ex:C021R0005Condition76 ;
+    ct:supported_by ex:C021P0076 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C021R0005Condition76 a ct:Condition ;
+    ct:description "(a) Unless earlier terminated as provided below, this Agreement shall remain in effect until the later to occur of the date that is (x) three (3) years from the date hereof and (y) the date on which an affiliate of Freedom Mortgage is not acting as the external manager of Cherry Hill." ;
+    ct:supported_by ex:C021P0076 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C021R0006 a ct:Rule ;
+    rdfs:label "Termination — source passage 77" ;
+    ct:kind "TERMINATION" ;
+    ct:supported_by ex:C021P0077 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C021P0054 a ct:SourcePassage ;
+    ct:end_char 11159 ;
+    ct:exact_text "(d) The Purchase Agreement will provide that Freedom Mortgage will indemnify Cherry Hill against, and hold it harmless from, any loss, cost or expense incurred by Cherry Hill as a result of Ginnie Mae's termination for cause of Freedom Mortgage as an issuer." ;
+    ct:source_path "cuad/CHERRYHILLMORTGAGEINVESTMENTCORP_09_26_2013-EX-10.1-Strategic Alliance Agreement.txt" ;
+    ct:source_sha256 "2528d4f273fad72ea608329997b95e96626632b3936a93a32dd0bbad5db970cd" ;
+    ct:start_char 10901 .
+
+ex:C021P0075 a ct:SourcePassage ;
+    ct:end_char 19527 ;
+    ct:exact_text "Section 5. Term and Termination." ;
+    ct:source_path "cuad/CHERRYHILLMORTGAGEINVESTMENTCORP_09_26_2013-EX-10.1-Strategic Alliance Agreement.txt" ;
+    ct:source_sha256 "2528d4f273fad72ea608329997b95e96626632b3936a93a32dd0bbad5db970cd" ;
+    ct:start_char 19495 .
+
+ex:C021P0076 a ct:SourcePassage ;
+    ct:end_char 19814 ;
+    ct:exact_text "(a) Unless earlier terminated as provided below, this Agreement shall remain in effect until the later to occur of the date that is (x) three (3) years from the date hereof and (y) the date on which an affiliate of Freedom Mortgage is not acting as the external manager of Cherry Hill." ;
+    ct:source_path "cuad/CHERRYHILLMORTGAGEINVESTMENTCORP_09_26_2013-EX-10.1-Strategic Alliance Agreement.txt" ;
+    ct:source_sha256 "2528d4f273fad72ea608329997b95e96626632b3936a93a32dd0bbad5db970cd" ;
+    ct:start_char 19529 .
+
+ct:Agreement a owl:Class ;
+    rdfs:label "Agreement" .
+
+ct:Condition a owl:Class ;
+    rdfs:label "Condition" .
+
+ct:SourcePassage a owl:Class ;
+    rdfs:label "SourcePassage" .
+
+ct:Reference a owl:Class ;
+    rdfs:label "Reference" .
+
+ct:Rule a owl:Class ;
+    rdfs:label "Rule" .
+

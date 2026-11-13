@@ -1,0 +1,270 @@
+@prefix ct: <https://cimulink.local/ontology/contract-terms/0.1#> .
+@prefix ex: <https://cimulink.local/ontology/llm100-v1/> .
+@prefix meta: <https://cimulink.local/ontology/extraction#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ct: a owl:Ontology ;
+    rdfs:comment "Partial five-contract development sample. No claim of complete contract coverage or legal correctness." .
+
+ct:agreement_effective_from a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:applies_within a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:calendar_date_status a owl:DatatypeProperty .
+
+ct:coverage a owl:DatatypeProperty .
+
+ct:description a owl:DatatypeProperty .
+
+ct:duration a owl:DatatypeProperty .
+
+ct:duration_status a owl:DatatypeProperty .
+
+ct:end_char a owl:DatatypeProperty .
+
+ct:end_date_status a owl:DatatypeProperty .
+
+ct:ends_on_event a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:exact_text a owl:DatatypeProperty .
+
+ct:has_party a owl:ObjectProperty ;
+    rdfs:domain ct:Agreement ;
+    rdfs:range ct:Party .
+
+ct:has_rule a owl:ObjectProperty ;
+    rdfs:domain ct:Agreement ;
+    rdfs:range ct:Rule .
+
+ct:kind a owl:DatatypeProperty .
+
+ct:notice_actor a owl:DatatypeProperty .
+
+ct:notice_form a owl:DatatypeProperty .
+
+ct:notice_period_status a owl:DatatypeProperty .
+
+ct:qualifies a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Rule .
+
+ct:references_section a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:renewal_count a owl:DatatypeProperty .
+
+ct:resolution_status a owl:DatatypeProperty .
+
+ct:resolved_to a owl:ObjectProperty ;
+    rdfs:domain ct:Reference ;
+    rdfs:range ct:SourcePassage .
+
+ct:source_path a owl:DatatypeProperty .
+
+ct:source_sha256 a owl:DatatypeProperty .
+
+ct:start_char a owl:DatatypeProperty .
+
+ct:starts_from a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:stated_end_date a owl:DatatypeProperty .
+
+ct:subject_to a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Condition .
+
+ct:supported_by a owl:ObjectProperty ;
+    rdfs:range ct:SourcePassage .
+
+ct:termination_notice a owl:DatatypeProperty .
+
+ex:C086 a ct:Agreement ;
+    rdfs:label "USASYNTHETICFUELCORP_10_21_2010-EX-10.10-STRATEGIC ALLIANCE AGREEMENT.txt" ;
+    ct:coverage "LOCAL_LLM_PROPOSED_PARTIAL; NOT_HUMAN_REVIEWED" ;
+    ct:has_rule ex:C086R0001,
+        ex:C086R0002,
+        ex:C086R0003,
+        ex:C086R0004,
+        ex:C086R0005,
+        ex:C086R0006,
+        ex:C086R0007,
+        ex:C086R0008 ;
+    ct:source_path "cuad/USASYNTHETICFUELCORP_10_21_2010-EX-10.10-STRATEGIC ALLIANCE AGREEMENT.txt" ;
+    ct:source_sha256 "0fb8cd828f5c763b777f5eb8d80e5f92c46dbcd65a1cc5b3b911aae1c4ab9974" ;
+    meta:model_digest "0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0" .
+
+ct:Party a owl:Class ;
+    rdfs:label "Party" .
+
+ex:C086R0001 a ct:Rule ;
+    rdfs:label "Termination — source passage 10" ;
+    ct:kind "TERMINATION" ;
+    ct:references_section ex:C086R0001Ref0 ;
+    ct:subject_to ex:C086R0001Condition10 ;
+    ct:supported_by ex:C086P0010 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C086R0001Condition10 a ct:Condition ;
+    ct:description "Further, if Oxbow elects to take over the development and management of the Lima Project and Oxbow subsequently determines that it does not desire to continue to participate in the Lima Project, it may withdraw from further participation, relinquish its economic interests in the Lima Project Company and GEC and terminate the Fuel Management and Supply Agreement, without further liability or obligation to Global Energy and/or the other Lima Project participants.    4. Representations and Warranties of Global Energy. Global Energy represents and warrants that the statements contained in this Section 4 are true and correct as of the date of this Agreement and will be true and correct as of the Closing Date.    (a) Organization. Global Energy is a corporation duly formed, validly existing and in good standing under the laws of the State of Ohio, and has full corporate power and authority to own, or hold under lease, and operate its properties, and to conduct its business as such business is now being conducted.    (b) Capitalization of Global Energy. The total authorized share capital of Global Energy as of the date of this Agreement is 10,000,000 common shares and 500,000 preferred shares. As of this date, 5,549,847 common shares and 105,086 preferred shares have been issued. " ;
+    ct:supported_by ex:C086P0010 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C086R0001Ref0 a ct:Reference ;
+    rdfs:label "Section 4" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C086R0002 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 29" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:references_section ex:C086R0002Ref0 ;
+    ct:subject_to ex:C086R0002Condition29 ;
+    ct:supported_by ex:C086P0029 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C086R0002Condition29 a ct:Condition ;
+    ct:description "(iv) Each Party agrees that money damages would not be a sufficient remedy for any breach of this Section 7(c) and that the Parties shall be entitled to injunctive or other equitable relief to remedy or prevent any breach or threatened breach of this Section 7(c). Such remedy shall not be the exclusive remedy for any breach of this Section 7(c), but shall be in addition to all other rights and remedies available at law or in equity.    (v) Any Confidential Information, including all copies of same (including that portion of the Confidential Information that consists of analyses, forecasts, studies or other documents prepared by a Party or its advisors, agents, contractors or lenders), shall be returned to the other Party, or at such Party's option destroyed, within five (5) days of (A) a request by a Party at anytime; or (B) the termination of this Agreement in accordance with the terms hereof. Upon the written request of a Party, the other Party shall certify the destruction of such material by written notice to the requesting Party.    (vi) This covenant shall survive the termination or expiration of this Agreement and shall continue in full force and effect for a period of three (3) years thereafter.    (d) Regulatory Approvals.    " ;
+    ct:supported_by ex:C086P0029 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C086R0002Ref0 a ct:Reference ;
+    rdfs:label "Section 7(c)" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C086R0003 a ct:Rule ;
+    rdfs:label "Conditional Referenced Term — source passage 32" ;
+    ct:kind "CONDITIONAL_REFERENCED_TERM" ;
+    ct:references_section ex:C086R0003Ref0 ;
+    ct:subject_to ex:C086R0003Condition32 ;
+    ct:supported_by ex:C086P0032 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C086R0003Condition32 a ct:Condition ;
+    ct:description "If at any time on or prior to the earlier of (i) December 31, 2007, or (ii) the date on which Global Energy completes an initial public offering (\"IPO\") of its common stock, Global Energy sells additional common shares or other financial instruments convertible into its common shares, or enters into any similar transaction for the sale of an ownership interest in Global Energy which is the same or substantially the same as that sold to Oxbow under Section 1 of this Agreement, and the price of which is less than $200.00 per share, Global Energy shall issue additional common shares to Oxbow such that Oxbow's adjusted per-share price for its stockholdings shall be no greater than the lowest price paid by any such subsequent purchaser of its shares. It is understood that the price protection afforded by this covenant extends to and includes the offering price pursuant to the IPO.    (g) Board of Directors. During the term of this Agreement, and so long as Oxbow continues to own at least 15,000 common shares of Global Energy (as such amount may be adjusted to reflect any subsequent stock splits), Global Energy agrees that Oxbow shall have a seat on Global Energy's Board of Directors.    8. Term; Termination and Remedies.    (a) Term. " ;
+    ct:supported_by ex:C086P0032 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C086R0003Ref0 a ct:Reference ;
+    rdfs:label "Section 1" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C086R0004 a ct:Rule ;
+    rdfs:label "Initial Term — source passage 33" ;
+    ct:kind "INITIAL_TERM" ;
+    ct:subject_to ex:C086R0004Condition33 ;
+    ct:supported_by ex:C086P0033 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C086R0004Condition33 a ct:Condition ;
+    ct:description "This Agreement shall be for an initial term of five (5) years, and unless earlier terminated in accordance with this Agreement, shall automatically renew for an additional term of five (5) years thereafter.    (b) Termination for Default or Bankruptcy. Either Party may terminate this Agreement by written notice to the other Party in the event of the following:    (i) Default. Material nonperformance by the other Party of any provisions set forth in this Agreement which is not cured within thirty (30) days after receipt of notice thereof from the Party not in default; or      13" ;
+    ct:supported_by ex:C086P0033 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C086R0005 a ct:Rule ;
+    rdfs:label "Automatic Renewal — source passage 33" ;
+    ct:kind "AUTOMATIC_RENEWAL" ;
+    ct:subject_to ex:C086R0005Condition33 ;
+    ct:supported_by ex:C086P0033 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C086R0005Condition33 a ct:Condition ;
+    ct:description "This Agreement shall be for an initial term of five (5) years, and unless earlier terminated in accordance with this Agreement, shall automatically renew for an additional term of five (5) years thereafter.    (b) Termination for Default or Bankruptcy. Either Party may terminate this Agreement by written notice to the other Party in the event of the following:    (i) Default. Material nonperformance by the other Party of any provisions set forth in this Agreement which is not cured within thirty (30) days after receipt of notice thereof from the Party not in default; or      13" ;
+    ct:supported_by ex:C086P0033 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C086R0006 a ct:Rule ;
+    rdfs:label "Conditional Referenced Term — source passage 33" ;
+    ct:kind "CONDITIONAL_REFERENCED_TERM" ;
+    ct:subject_to ex:C086R0006Condition33 ;
+    ct:supported_by ex:C086P0033 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C086R0006Condition33 a ct:Condition ;
+    ct:description "This Agreement shall be for an initial term of five (5) years, and unless earlier terminated in accordance with this Agreement, shall automatically renew for an additional term of five (5) years thereafter.    (b) Termination for Default or Bankruptcy. Either Party may terminate this Agreement by written notice to the other Party in the event of the following:    (i) Default. Material nonperformance by the other Party of any provisions set forth in this Agreement which is not cured within thirty (30) days after receipt of notice thereof from the Party not in default; or      13" ;
+    ct:supported_by ex:C086P0033 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C086R0007 a ct:Rule ;
+    rdfs:label "Termination — source passage 34" ;
+    ct:kind "TERMINATION" ;
+    ct:subject_to ex:C086R0007Condition34 ;
+    ct:supported_by ex:C086P0034 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C086R0007Condition34 a ct:Condition ;
+    ct:description "(ii) Bankruptcy. The filing by or against the other Party of a petition or application in any proceeding relating to such other Party as debtor under any bankruptcy or insolvency law of any jurisdiction; provided that in the event of an involuntary bankruptcy or insolvency proceeding, such other Party shall have a sixty (60) day period in which to obtain dismissal or withdrawal of such petition or application.    (c) Remedies. In the event of termination of this Agreement, the Party not in default shall be entitled to obtain all appropriate relief available to it under this Agreement and at law or equity.    (d) Survival. The expiration or earlier termination of this Agreement shall not terminate or otherwise affect Oxbow's ownership of the Shares or the validity of any other definitive agreements executed prior to such expiration or termination in connection with the Lima Project, the Texas City Project or any other business arrangement arising out of the strategic alliance contemplated by this Agreement.    9. Defined Terms.    (a) As used in this Agreement, the following terms have the following meanings:    \"Act\" means the Securities Act of 1933, as amended, and the rules and regulations thereunder.    \"Affiliate\" of any Person means any other Person directly or indirectly controlling, controlled by or under common control with such Person. " ;
+    ct:supported_by ex:C086P0034 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C086R0008 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 34" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:subject_to ex:C086R0008Condition34 ;
+    ct:supported_by ex:C086P0034 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C086R0008Condition34 a ct:Condition ;
+    ct:description "(ii) Bankruptcy. The filing by or against the other Party of a petition or application in any proceeding relating to such other Party as debtor under any bankruptcy or insolvency law of any jurisdiction; provided that in the event of an involuntary bankruptcy or insolvency proceeding, such other Party shall have a sixty (60) day period in which to obtain dismissal or withdrawal of such petition or application.    (c) Remedies. In the event of termination of this Agreement, the Party not in default shall be entitled to obtain all appropriate relief available to it under this Agreement and at law or equity.    (d) Survival. The expiration or earlier termination of this Agreement shall not terminate or otherwise affect Oxbow's ownership of the Shares or the validity of any other definitive agreements executed prior to such expiration or termination in connection with the Lima Project, the Texas City Project or any other business arrangement arising out of the strategic alliance contemplated by this Agreement.    9. Defined Terms.    (a) As used in this Agreement, the following terms have the following meanings:    \"Act\" means the Securities Act of 1933, as amended, and the rules and regulations thereunder.    \"Affiliate\" of any Person means any other Person directly or indirectly controlling, controlled by or under common control with such Person. " ;
+    ct:supported_by ex:C086P0034 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C086P0010 a ct:SourcePassage ;
+    ct:end_char 11706 ;
+    ct:exact_text "Further, if Oxbow elects to take over the development and management of the Lima Project and Oxbow subsequently determines that it does not desire to continue to participate in the Lima Project, it may withdraw from further participation, relinquish its economic interests in the Lima Project Company and GEC and terminate the Fuel Management and Supply Agreement, without further liability or obligation to Global Energy and/or the other Lima Project participants.    4. Representations and Warranties of Global Energy. Global Energy represents and warrants that the statements contained in this Section 4 are true and correct as of the date of this Agreement and will be true and correct as of the Closing Date.    (a) Organization. Global Energy is a corporation duly formed, validly existing and in good standing under the laws of the State of Ohio, and has full corporate power and authority to own, or hold under lease, and operate its properties, and to conduct its business as such business is now being conducted.    (b) Capitalization of Global Energy. The total authorized share capital of Global Energy as of the date of this Agreement is 10,000,000 common shares and 500,000 preferred shares. As of this date, 5,549,847 common shares and 105,086 preferred shares have been issued. " ;
+    ct:source_path "cuad/USASYNTHETICFUELCORP_10_21_2010-EX-10.10-STRATEGIC ALLIANCE AGREEMENT.txt" ;
+    ct:source_sha256 "0fb8cd828f5c763b777f5eb8d80e5f92c46dbcd65a1cc5b3b911aae1c4ab9974" ;
+    ct:start_char 10412 .
+
+ex:C086P0029 a ct:SourcePassage ;
+    ct:end_char 33052 ;
+    ct:exact_text "(iv) Each Party agrees that money damages would not be a sufficient remedy for any breach of this Section 7(c) and that the Parties shall be entitled to injunctive or other equitable relief to remedy or prevent any breach or threatened breach of this Section 7(c). Such remedy shall not be the exclusive remedy for any breach of this Section 7(c), but shall be in addition to all other rights and remedies available at law or in equity.    (v) Any Confidential Information, including all copies of same (including that portion of the Confidential Information that consists of analyses, forecasts, studies or other documents prepared by a Party or its advisors, agents, contractors or lenders), shall be returned to the other Party, or at such Party's option destroyed, within five (5) days of (A) a request by a Party at anytime; or (B) the termination of this Agreement in accordance with the terms hereof. Upon the written request of a Party, the other Party shall certify the destruction of such material by written notice to the requesting Party.    (vi) This covenant shall survive the termination or expiration of this Agreement and shall continue in full force and effect for a period of three (3) years thereafter.    (d) Regulatory Approvals.    " ;
+    ct:source_path "cuad/USASYNTHETICFUELCORP_10_21_2010-EX-10.10-STRATEGIC ALLIANCE AGREEMENT.txt" ;
+    ct:source_sha256 "0fb8cd828f5c763b777f5eb8d80e5f92c46dbcd65a1cc5b3b911aae1c4ab9974" ;
+    ct:start_char 31797 .
+
+ex:C086P0032 a ct:SourcePassage ;
+    ct:end_char 35787 ;
+    ct:exact_text "If at any time on or prior to the earlier of (i) December 31, 2007, or (ii) the date on which Global Energy completes an initial public offering (\"IPO\") of its common stock, Global Energy sells additional common shares or other financial instruments convertible into its common shares, or enters into any similar transaction for the sale of an ownership interest in Global Energy which is the same or substantially the same as that sold to Oxbow under Section 1 of this Agreement, and the price of which is less than $200.00 per share, Global Energy shall issue additional common shares to Oxbow such that Oxbow's adjusted per-share price for its stockholdings shall be no greater than the lowest price paid by any such subsequent purchaser of its shares. It is understood that the price protection afforded by this covenant extends to and includes the offering price pursuant to the IPO.    (g) Board of Directors. During the term of this Agreement, and so long as Oxbow continues to own at least 15,000 common shares of Global Energy (as such amount may be adjusted to reflect any subsequent stock splits), Global Energy agrees that Oxbow shall have a seat on Global Energy's Board of Directors.    8. Term; Termination and Remedies.    (a) Term. " ;
+    ct:source_path "cuad/USASYNTHETICFUELCORP_10_21_2010-EX-10.10-STRATEGIC ALLIANCE AGREEMENT.txt" ;
+    ct:source_sha256 "0fb8cd828f5c763b777f5eb8d80e5f92c46dbcd65a1cc5b3b911aae1c4ab9974" ;
+    ct:start_char 34538 .
+
+ct:Agreement a owl:Class ;
+    rdfs:label "Agreement" .
+
+ex:C086P0034 a ct:SourcePassage ;
+    ct:end_char 37748 ;
+    ct:exact_text "(ii) Bankruptcy. The filing by or against the other Party of a petition or application in any proceeding relating to such other Party as debtor under any bankruptcy or insolvency law of any jurisdiction; provided that in the event of an involuntary bankruptcy or insolvency proceeding, such other Party shall have a sixty (60) day period in which to obtain dismissal or withdrawal of such petition or application.    (c) Remedies. In the event of termination of this Agreement, the Party not in default shall be entitled to obtain all appropriate relief available to it under this Agreement and at law or equity.    (d) Survival. The expiration or earlier termination of this Agreement shall not terminate or otherwise affect Oxbow's ownership of the Shares or the validity of any other definitive agreements executed prior to such expiration or termination in connection with the Lima Project, the Texas City Project or any other business arrangement arising out of the strategic alliance contemplated by this Agreement.    9. Defined Terms.    (a) As used in this Agreement, the following terms have the following meanings:    \"Act\" means the Securities Act of 1933, as amended, and the rules and regulations thereunder.    \"Affiliate\" of any Person means any other Person directly or indirectly controlling, controlled by or under common control with such Person. " ;
+    ct:source_path "cuad/USASYNTHETICFUELCORP_10_21_2010-EX-10.10-STRATEGIC ALLIANCE AGREEMENT.txt" ;
+    ct:source_sha256 "0fb8cd828f5c763b777f5eb8d80e5f92c46dbcd65a1cc5b3b911aae1c4ab9974" ;
+    ct:start_char 36381 .
+
+ex:C086P0033 a ct:SourcePassage ;
+    ct:end_char 36371 ;
+    ct:exact_text "This Agreement shall be for an initial term of five (5) years, and unless earlier terminated in accordance with this Agreement, shall automatically renew for an additional term of five (5) years thereafter.    (b) Termination for Default or Bankruptcy. Either Party may terminate this Agreement by written notice to the other Party in the event of the following:    (i) Default. Material nonperformance by the other Party of any provisions set forth in this Agreement which is not cured within thirty (30) days after receipt of notice thereof from the Party not in default; or      13" ;
+    ct:source_path "cuad/USASYNTHETICFUELCORP_10_21_2010-EX-10.10-STRATEGIC ALLIANCE AGREEMENT.txt" ;
+    ct:source_sha256 "0fb8cd828f5c763b777f5eb8d80e5f92c46dbcd65a1cc5b3b911aae1c4ab9974" ;
+    ct:start_char 35787 .
+
+ct:SourcePassage a owl:Class ;
+    rdfs:label "SourcePassage" .
+
+ct:Condition a owl:Class ;
+    rdfs:label "Condition" .
+
+ct:Reference a owl:Class ;
+    rdfs:label "Reference" .
+
+ct:Rule a owl:Class ;
+    rdfs:label "Rule" .
+

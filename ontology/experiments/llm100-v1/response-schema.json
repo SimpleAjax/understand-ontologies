@@ -1,0 +1,60 @@
+{
+  "$defs": {
+    "ClauseTag": {
+      "additionalProperties": false,
+      "properties": {
+        "a": {
+          "title": "A",
+          "type": "integer"
+        },
+        "b": {
+          "items": {
+            "enum": [
+              "INITIAL_TERM",
+              "OPTIONAL_RENEWAL",
+              "AUTOMATIC_RENEWAL",
+              "POST_EXPIRY_CONTINUATION",
+              "TERMINATION",
+              "CONDITIONAL_REFERENCED_TERM"
+            ],
+            "type": "string"
+          },
+          "maxItems": 6,
+          "title": "B",
+          "type": "array"
+        },
+        "c": {
+          "items": {
+            "type": "integer"
+          },
+          "maxItems": 8,
+          "title": "C",
+          "type": "array"
+        }
+      },
+      "required": [
+        "a",
+        "b",
+        "c"
+      ],
+      "title": "ClauseTag",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "tags": {
+      "items": {
+        "$ref": "#/$defs/ClauseTag"
+      },
+      "maxItems": 1,
+      "title": "Tags",
+      "type": "array"
+    }
+  },
+  "required": [
+    "tags"
+  ],
+  "title": "TagBatch",
+  "type": "object"
+}

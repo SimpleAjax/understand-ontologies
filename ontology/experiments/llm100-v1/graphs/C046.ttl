@@ -1,0 +1,438 @@
+@prefix ct: <https://cimulink.local/ontology/contract-terms/0.1#> .
+@prefix ex: <https://cimulink.local/ontology/llm100-v1/> .
+@prefix meta: <https://cimulink.local/ontology/extraction#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ct: a owl:Ontology ;
+    rdfs:comment "Partial five-contract development sample. No claim of complete contract coverage or legal correctness." .
+
+ct:agreement_effective_from a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:applies_within a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:calendar_date_status a owl:DatatypeProperty .
+
+ct:coverage a owl:DatatypeProperty .
+
+ct:description a owl:DatatypeProperty .
+
+ct:duration a owl:DatatypeProperty .
+
+ct:duration_status a owl:DatatypeProperty .
+
+ct:end_char a owl:DatatypeProperty .
+
+ct:end_date_status a owl:DatatypeProperty .
+
+ct:ends_on_event a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:exact_text a owl:DatatypeProperty .
+
+ct:has_party a owl:ObjectProperty ;
+    rdfs:domain ct:Agreement ;
+    rdfs:range ct:Party .
+
+ct:has_rule a owl:ObjectProperty ;
+    rdfs:domain ct:Agreement ;
+    rdfs:range ct:Rule .
+
+ct:kind a owl:DatatypeProperty .
+
+ct:notice_actor a owl:DatatypeProperty .
+
+ct:notice_form a owl:DatatypeProperty .
+
+ct:notice_period_status a owl:DatatypeProperty .
+
+ct:qualifies a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Rule .
+
+ct:references_section a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:renewal_count a owl:DatatypeProperty .
+
+ct:resolution_status a owl:DatatypeProperty .
+
+ct:resolved_to a owl:ObjectProperty ;
+    rdfs:domain ct:Reference ;
+    rdfs:range ct:SourcePassage .
+
+ct:source_path a owl:DatatypeProperty .
+
+ct:source_sha256 a owl:DatatypeProperty .
+
+ct:start_char a owl:DatatypeProperty .
+
+ct:starts_from a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:stated_end_date a owl:DatatypeProperty .
+
+ct:subject_to a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Condition .
+
+ct:supported_by a owl:ObjectProperty ;
+    rdfs:range ct:SourcePassage .
+
+ct:termination_notice a owl:DatatypeProperty .
+
+ex:C046 a ct:Agreement ;
+    rdfs:label "HYDRONTECHNOLOGIESINC_03_31_1997-EX-10.47-SPONSORSHIP AGREEMENT.txt" ;
+    ct:coverage "LOCAL_LLM_PROPOSED_PARTIAL; NOT_HUMAN_REVIEWED" ;
+    ct:has_rule ex:C046R0001,
+        ex:C046R0002,
+        ex:C046R0003,
+        ex:C046R0004,
+        ex:C046R0005,
+        ex:C046R0006,
+        ex:C046R0007,
+        ex:C046R0008,
+        ex:C046R0009,
+        ex:C046R0010,
+        ex:C046R0011,
+        ex:C046R0012,
+        ex:C046R0013,
+        ex:C046R0014,
+        ex:C046R0015,
+        ex:C046R0016,
+        ex:C046R0017 ;
+    ct:source_path "cuad/HYDRONTECHNOLOGIESINC_03_31_1997-EX-10.47-SPONSORSHIP AGREEMENT.txt" ;
+    ct:source_sha256 "22ec07c8d251ab90a989794c5325cdd87969adc3e44df5a4df033f4ae1ea6ad3" ;
+    meta:model_digest "0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0" .
+
+ct:Party a owl:Class ;
+    rdfs:label "Party" .
+
+ex:C046P0046 a ct:SourcePassage ;
+    ct:end_char 15340 ;
+    ct:exact_text "Each of the parties agree that the foregoing indemnities also apply for the benefit of the NFL (and its affiliates), South Florida Stadium Corporation, the owner and operator of Pro Player Stadium and their respective officials, officers, partners, agents and employees, who shall be deemed third party beneficiaries of this Agreement for the purpose of enforcing these indemnity obligations. These indemnity obligations shall survive the termination or expiration of this Agreement." ;
+    ct:source_path "cuad/HYDRONTECHNOLOGIESINC_03_31_1997-EX-10.47-SPONSORSHIP AGREEMENT.txt" ;
+    ct:source_sha256 "22ec07c8d251ab90a989794c5325cdd87969adc3e44df5a4df033f4ae1ea6ad3" ;
+    ct:start_char 14857 .
+
+ex:C046P0050 a ct:SourcePassage ;
+    ct:end_char 16382 ;
+    ct:exact_text "8.       TERMINATION" ;
+    ct:source_path "cuad/HYDRONTECHNOLOGIESINC_03_31_1997-EX-10.47-SPONSORSHIP AGREEMENT.txt" ;
+    ct:source_sha256 "22ec07c8d251ab90a989794c5325cdd87969adc3e44df5a4df033f4ae1ea6ad3" ;
+    ct:start_char 16362 .
+
+ex:C046P0054 a ct:SourcePassage ;
+    ct:end_char 18669 ;
+    ct:exact_text "8.3 Upon termination of this Agreement, all rights and privileges granted to Hydron hereunder shall automatically revert to the Dolphins. Upon termination of this Agreement by the Dolphins pursuant to paragraph 8.1(a), any and all payments then or later due to the Dolphins shall" ;
+    ct:source_path "cuad/HYDRONTECHNOLOGIESINC_03_31_1997-EX-10.47-SPONSORSHIP AGREEMENT.txt" ;
+    ct:source_sha256 "22ec07c8d251ab90a989794c5325cdd87969adc3e44df5a4df033f4ae1ea6ad3" ;
+    ct:start_char 18390 .
+
+ex:C046R0001 a ct:Rule ;
+    rdfs:label "Initial Term — source passage 6" ;
+    ct:kind "INITIAL_TERM" ;
+    ct:subject_to ex:C046R0001Condition6 ;
+    ct:supported_by ex:C046P0006 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C046R0001Condition6 a ct:Condition ;
+    ct:description "1.1 The term of this Agreement shall commence on the date hereof and terminate upon the conclusion of the week following the conclusion of the Dolphins 2000 regular season or post season, if applicable (the \"Term\" or \"Initial Term\"). However, this Agreement may be earlier terminated in accordance with the provisions hereof." ;
+    ct:supported_by ex:C046P0006 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C046R0002 a ct:Rule ;
+    rdfs:label "Termination — source passage 6" ;
+    ct:kind "TERMINATION" ;
+    ct:subject_to ex:C046R0002Condition6 ;
+    ct:supported_by ex:C046P0006 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C046R0002Condition6 a ct:Condition ;
+    ct:description "1.1 The term of this Agreement shall commence on the date hereof and terminate upon the conclusion of the week following the conclusion of the Dolphins 2000 regular season or post season, if applicable (the \"Term\" or \"Initial Term\"). However, this Agreement may be earlier terminated in accordance with the provisions hereof." ;
+    ct:supported_by ex:C046P0006 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C046R0003 a ct:Rule ;
+    rdfs:label "Termination — source passage 7" ;
+    ct:kind "TERMINATION" ;
+    ct:references_section ex:C046R0003Ref0 ;
+    ct:subject_to ex:C046R0003Condition7 ;
+    ct:supported_by ex:C046P0007 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C046R0003Condition7 a ct:Condition ;
+    ct:description "1.2 Hydron shall have the right to terminate this Agreement upon written notice to Dolphins at any time between November 1, 1997 and December 15, 1997, in which event this Agreement shall be terminated following the Dolphins last 1997 regular or post-season game, if any. If Hydron does not timely exercise its right to terminate this Agreement, then Hydron agrees that this Agreement shall continue for the entire four (4) year term unless earlier terminated pursuant to Section 8 of this Agreement." ;
+    ct:supported_by ex:C046P0007 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C046R0003Ref0 a ct:Reference ;
+    rdfs:label "Section 8" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C046R0004 a ct:Rule ;
+    rdfs:label "Conditional Referenced Term — source passage 7" ;
+    ct:kind "CONDITIONAL_REFERENCED_TERM" ;
+    ct:references_section ex:C046R0004Ref0 ;
+    ct:subject_to ex:C046R0004Condition7 ;
+    ct:supported_by ex:C046P0007 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C046R0004Condition7 a ct:Condition ;
+    ct:description "1.2 Hydron shall have the right to terminate this Agreement upon written notice to Dolphins at any time between November 1, 1997 and December 15, 1997, in which event this Agreement shall be terminated following the Dolphins last 1997 regular or post-season game, if any. If Hydron does not timely exercise its right to terminate this Agreement, then Hydron agrees that this Agreement shall continue for the entire four (4) year term unless earlier terminated pursuant to Section 8 of this Agreement." ;
+    ct:supported_by ex:C046P0007 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C046R0004Ref0 a ct:Reference ;
+    rdfs:label "Section 8" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C046R0005 a ct:Rule ;
+    rdfs:label "Termination — source passage 12" ;
+    ct:kind "TERMINATION" ;
+    ct:references_section ex:C046R0005Ref0 ;
+    ct:supported_by ex:C046P0012 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C046R0005Ref0 a ct:Reference ;
+    rdfs:label "Section 8.2" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C046R0006 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 12" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:references_section ex:C046R0006Ref0 ;
+    ct:supported_by ex:C046P0012 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C046R0006Ref0 a ct:Reference ;
+    rdfs:label "Section 8.2" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C046R0007 a ct:Rule ;
+    rdfs:label "Termination — source passage 16" ;
+    ct:kind "TERMINATION" ;
+    ct:subject_to ex:C046R0007Condition16 ;
+    ct:supported_by ex:C046P0016 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C046R0007Condition16 a ct:Condition ;
+    ct:description "3.2 In the event that the consideration is not paid by Hydron on or before the applicable payment due date, said failure to pay shall be considered a material breach by Hydron, and the Dolphins may elect to charge Hydron a late fee of 1.5% per month of the payment then due and owing until it is paid in full. The Dolphins agree to provide written notice to Hydron of the failure to receive any payment, and Hydron shall have a five (5) business day period following delivery of written notice in which to cure the payment default before the Dolphins may elect to terminate this Agreement and pursue applicable remedies. It is agreed by Hydron that any such election of remedies does not waive any other remedies for breach of contract available to the Dolphins." ;
+    ct:supported_by ex:C046P0016 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C046R0008 a ct:Rule ;
+    rdfs:label "Termination — source passage 25" ;
+    ct:kind "TERMINATION" ;
+    ct:references_section ex:C046R0008Ref0 ;
+    ct:subject_to ex:C046R0008Condition25 ;
+    ct:supported_by ex:C046P0025 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C046R0008Condition25 a ct:Condition ;
+    ct:description "4.5 Hydron expressly recognizes that the Dolphins have previously granted the exclusive rights to license and sublicense its Marks to NFL Properties, Inc., and that the grant to Hydron of the right to use the Marks is subject to the prior approval of NFL Properties, Inc. In the event that such approval is not so given by NFL Properties, Inc., then such usage rights of Hydron shall immediately terminate. The Dolphins represent that they will use reasonable efforts to obtain the consent of NFL Properties, Inc. to the execution and performance of this Agreement prior to their execution hereof. In any such event, the provisions of Section 8.2 will apply." ;
+    ct:supported_by ex:C046P0025 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C046R0008Ref0 a ct:Reference ;
+    rdfs:label "Section 8.2" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C046R0009 a ct:Rule ;
+    rdfs:label "Conditional Referenced Term — source passage 33" ;
+    ct:kind "CONDITIONAL_REFERENCED_TERM" ;
+    ct:references_section ex:C046R0009Ref0 ;
+    ct:subject_to ex:C046R0009Condition33 ;
+    ct:supported_by ex:C046P0033 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C046R0009Condition33 a ct:Condition ;
+    ct:description "5.4 If any rule or regulation of the Stadium, or any Governing League Policy as described in Sections 5.1, 5.2 or 5.3 requires the termination or revision of any Sponsorship Right, such Sponsorship Right shall be revised or terminated upon written notice to Hydron and the provisions of Section 8.2 shall apply to such termination or revisions." ;
+    ct:supported_by ex:C046P0033 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C046R0009Ref0 a ct:Reference ;
+    rdfs:label "Section 8.2" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C046R0010 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 46" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:supported_by ex:C046P0046 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C046R0011 a ct:Rule ;
+    rdfs:label "Termination — source passage 50" ;
+    ct:kind "TERMINATION" ;
+    ct:supported_by ex:C046P0050 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C046R0012 a ct:Rule ;
+    rdfs:label "Termination — source passage 51" ;
+    ct:kind "TERMINATION" ;
+    ct:subject_to ex:C046R0012Condition51 ;
+    ct:supported_by ex:C046P0051 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C046R0012Condition51 a ct:Condition ;
+    ct:description "8.1(a) Without prejudice to any other rights, the Dolphins shall have the right to terminate this Agreement upon written notice to Hydron if Hydron fails to perform or comply with any term or condition of this Agreement within five (5) business days following delivery of written notice for a payment default or within thirty (30) days following written notice of any other breach of this Agreement sent to Hydron stating such failure or failures; provided that any such failure remains uncured at the end of such period." ;
+    ct:supported_by ex:C046P0051 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C046R0013 a ct:Rule ;
+    rdfs:label "Termination — source passage 52" ;
+    ct:kind "TERMINATION" ;
+    ct:subject_to ex:C046R0013Condition52 ;
+    ct:supported_by ex:C046P0052 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C046R0013Condition52 a ct:Condition ;
+    ct:description "(b) Without notice to any rights, Hydron shall have the right to terminate this Agreement upon written notice to Dolphins, if Dolphins fail to perform or comply with any material terms or conditions of this Agreement within thirty (30) days following delivery of written notice to Dolphins stating such failure or failures; provided that any failure remains uncured at the end of such period." ;
+    ct:supported_by ex:C046P0052 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C046R0014 a ct:Rule ;
+    rdfs:label "Termination — source passage 53" ;
+    ct:kind "TERMINATION" ;
+    ct:subject_to ex:C046R0014Condition53 ;
+    ct:supported_by ex:C046P0053 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C046R0014Condition53 a ct:Condition ;
+    ct:description "8.2 This Agreement may be terminated by the Dolphins or modified to reduce or eliminate certain promotional benefits (such as use of Marks or Sponsorship Rights), as described in Sections 2.3, 4.5 and 5.4 hereof. Upon any such termination or modification, the Dolphins will in good faith attempt to substitute a promotional benefit of equivalent promotional value for any benefits that the Dolphins was forced to eliminate; or, if the Dolphins is unable to substitute a promotional benefit of similar magnitude, then the Dolphins and Hydron shall attempt, in good faith, to agree upon an adjustment in the amount of fees payable by Hydron to the Dolphins under this Agreement. If the Dolphins and Hydron cannot agree upon an adjustment in the amount of fees payable hereunder, then Dolphins and Hydron agree to arbitrate the adjustment in fees and to be bound by the decision of the arbitrators. Any such arbitration shall be conducted in accordance with the rules of the American Arbitration Association." ;
+    ct:supported_by ex:C046P0053 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C046R0015 a ct:Rule ;
+    rdfs:label "Conditional Referenced Term — source passage 53" ;
+    ct:kind "CONDITIONAL_REFERENCED_TERM" ;
+    ct:subject_to ex:C046R0015Condition53 ;
+    ct:supported_by ex:C046P0053 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C046R0015Condition53 a ct:Condition ;
+    ct:description "8.2 This Agreement may be terminated by the Dolphins or modified to reduce or eliminate certain promotional benefits (such as use of Marks or Sponsorship Rights), as described in Sections 2.3, 4.5 and 5.4 hereof. Upon any such termination or modification, the Dolphins will in good faith attempt to substitute a promotional benefit of equivalent promotional value for any benefits that the Dolphins was forced to eliminate; or, if the Dolphins is unable to substitute a promotional benefit of similar magnitude, then the Dolphins and Hydron shall attempt, in good faith, to agree upon an adjustment in the amount of fees payable by Hydron to the Dolphins under this Agreement. If the Dolphins and Hydron cannot agree upon an adjustment in the amount of fees payable hereunder, then Dolphins and Hydron agree to arbitrate the adjustment in fees and to be bound by the decision of the arbitrators. Any such arbitration shall be conducted in accordance with the rules of the American Arbitration Association." ;
+    ct:supported_by ex:C046P0053 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C046R0016 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 54" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:references_section ex:C046R0016Ref0 ;
+    ct:supported_by ex:C046P0054 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C046R0016Ref0 a ct:Reference ;
+    rdfs:label "paragraph 8.1(a)" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C046R0017 a ct:Rule ;
+    rdfs:label "Termination — source passage 56" ;
+    ct:kind "TERMINATION" ;
+    ct:references_section ex:C046R0017Ref0 ;
+    ct:subject_to ex:C046R0017Condition56 ;
+    ct:supported_by ex:C046P0056 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C046R0017Condition56 a ct:Condition ;
+    ct:description "8.4 In the event that Hydron terminates this Agreement pursuant to the provisions of Section 8.1(b), then the fees paid, if any, for the balance of the term of this Agreement shall be immediately refunded to Hydron provided Hydron has not received sponsorship rights or benefits equal to such fees." ;
+    ct:supported_by ex:C046P0056 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C046R0017Ref0 a ct:Reference ;
+    rdfs:label "Section 8.1(b)" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C046P0012 a ct:SourcePassage ;
+    ct:end_char 3435 ;
+    ct:exact_text "termination in whole or in part at any time upon written notice to Hydron if such Sponsorship Rights conflict with any exclusive advertising rights granted by NFL Properties, Inc. to one of its advertisers or sponsors. In the event of any such termination of exclusivity, the non-terminated Sponsorship Rights granted to Hydron by the Dolphins shall nonetheless continue for the remainder of the Term and the provisions of Section 8.2 shall apply. As of the date hereof, the Dolphins have no knowledge of any claim by NFL Properties that the Sponsorship Rights violate or conflict with exclusive rights granted by NFL Properties." ;
+    ct:source_path "cuad/HYDRONTECHNOLOGIESINC_03_31_1997-EX-10.47-SPONSORSHIP AGREEMENT.txt" ;
+    ct:source_sha256 "22ec07c8d251ab90a989794c5325cdd87969adc3e44df5a4df033f4ae1ea6ad3" ;
+    ct:start_char 2806 .
+
+ex:C046P0016 a ct:SourcePassage ;
+    ct:end_char 4649 ;
+    ct:exact_text "3.2 In the event that the consideration is not paid by Hydron on or before the applicable payment due date, said failure to pay shall be considered a material breach by Hydron, and the Dolphins may elect to charge Hydron a late fee of 1.5% per month of the payment then due and owing until it is paid in full. The Dolphins agree to provide written notice to Hydron of the failure to receive any payment, and Hydron shall have a five (5) business day period following delivery of written notice in which to cure the payment default before the Dolphins may elect to terminate this Agreement and pursue applicable remedies. It is agreed by Hydron that any such election of remedies does not waive any other remedies for breach of contract available to the Dolphins." ;
+    ct:source_path "cuad/HYDRONTECHNOLOGIESINC_03_31_1997-EX-10.47-SPONSORSHIP AGREEMENT.txt" ;
+    ct:source_sha256 "22ec07c8d251ab90a989794c5325cdd87969adc3e44df5a4df033f4ae1ea6ad3" ;
+    ct:start_char 3887 .
+
+ex:C046P0025 a ct:SourcePassage ;
+    ct:end_char 8707 ;
+    ct:exact_text "4.5 Hydron expressly recognizes that the Dolphins have previously granted the exclusive rights to license and sublicense its Marks to NFL Properties, Inc., and that the grant to Hydron of the right to use the Marks is subject to the prior approval of NFL Properties, Inc. In the event that such approval is not so given by NFL Properties, Inc., then such usage rights of Hydron shall immediately terminate. The Dolphins represent that they will use reasonable efforts to obtain the consent of NFL Properties, Inc. to the execution and performance of this Agreement prior to their execution hereof. In any such event, the provisions of Section 8.2 will apply." ;
+    ct:source_path "cuad/HYDRONTECHNOLOGIESINC_03_31_1997-EX-10.47-SPONSORSHIP AGREEMENT.txt" ;
+    ct:source_sha256 "22ec07c8d251ab90a989794c5325cdd87969adc3e44df5a4df033f4ae1ea6ad3" ;
+    ct:start_char 8049 .
+
+ex:C046P0033 a ct:SourcePassage ;
+    ct:end_char 11783 ;
+    ct:exact_text "5.4 If any rule or regulation of the Stadium, or any Governing League Policy as described in Sections 5.1, 5.2 or 5.3 requires the termination or revision of any Sponsorship Right, such Sponsorship Right shall be revised or terminated upon written notice to Hydron and the provisions of Section 8.2 shall apply to such termination or revisions." ;
+    ct:source_path "cuad/HYDRONTECHNOLOGIESINC_03_31_1997-EX-10.47-SPONSORSHIP AGREEMENT.txt" ;
+    ct:source_sha256 "22ec07c8d251ab90a989794c5325cdd87969adc3e44df5a4df033f4ae1ea6ad3" ;
+    ct:start_char 11439 .
+
+ex:C046P0051 a ct:SourcePassage ;
+    ct:end_char 16923 ;
+    ct:exact_text "8.1(a) Without prejudice to any other rights, the Dolphins shall have the right to terminate this Agreement upon written notice to Hydron if Hydron fails to perform or comply with any term or condition of this Agreement within five (5) business days following delivery of written notice for a payment default or within thirty (30) days following written notice of any other breach of this Agreement sent to Hydron stating such failure or failures; provided that any such failure remains uncured at the end of such period." ;
+    ct:source_path "cuad/HYDRONTECHNOLOGIESINC_03_31_1997-EX-10.47-SPONSORSHIP AGREEMENT.txt" ;
+    ct:source_sha256 "22ec07c8d251ab90a989794c5325cdd87969adc3e44df5a4df033f4ae1ea6ad3" ;
+    ct:start_char 16402 .
+
+ex:C046P0052 a ct:SourcePassage ;
+    ct:end_char 17345 ;
+    ct:exact_text "(b) Without notice to any rights, Hydron shall have the right to terminate this Agreement upon written notice to Dolphins, if Dolphins fail to perform or comply with any material terms or conditions of this Agreement within thirty (30) days following delivery of written notice to Dolphins stating such failure or failures; provided that any failure remains uncured at the end of such period." ;
+    ct:source_path "cuad/HYDRONTECHNOLOGIESINC_03_31_1997-EX-10.47-SPONSORSHIP AGREEMENT.txt" ;
+    ct:source_sha256 "22ec07c8d251ab90a989794c5325cdd87969adc3e44df5a4df033f4ae1ea6ad3" ;
+    ct:start_char 16953 .
+
+ex:C046P0056 a ct:SourcePassage ;
+    ct:end_char 19111 ;
+    ct:exact_text "8.4 In the event that Hydron terminates this Agreement pursuant to the provisions of Section 8.1(b), then the fees paid, if any, for the balance of the term of this Agreement shall be immediately refunded to Hydron provided Hydron has not received sponsorship rights or benefits equal to such fees." ;
+    ct:source_path "cuad/HYDRONTECHNOLOGIESINC_03_31_1997-EX-10.47-SPONSORSHIP AGREEMENT.txt" ;
+    ct:source_sha256 "22ec07c8d251ab90a989794c5325cdd87969adc3e44df5a4df033f4ae1ea6ad3" ;
+    ct:start_char 18813 .
+
+ct:Agreement a owl:Class ;
+    rdfs:label "Agreement" .
+
+ex:C046P0006 a ct:SourcePassage ;
+    ct:end_char 1459 ;
+    ct:exact_text "1.1 The term of this Agreement shall commence on the date hereof and terminate upon the conclusion of the week following the conclusion of the Dolphins 2000 regular season or post season, if applicable (the \"Term\" or \"Initial Term\"). However, this Agreement may be earlier terminated in accordance with the provisions hereof." ;
+    ct:source_path "cuad/HYDRONTECHNOLOGIESINC_03_31_1997-EX-10.47-SPONSORSHIP AGREEMENT.txt" ;
+    ct:source_sha256 "22ec07c8d251ab90a989794c5325cdd87969adc3e44df5a4df033f4ae1ea6ad3" ;
+    ct:start_char 1134 .
+
+ex:C046P0007 a ct:SourcePassage ;
+    ct:end_char 1979 ;
+    ct:exact_text "1.2 Hydron shall have the right to terminate this Agreement upon written notice to Dolphins at any time between November 1, 1997 and December 15, 1997, in which event this Agreement shall be terminated following the Dolphins last 1997 regular or post-season game, if any. If Hydron does not timely exercise its right to terminate this Agreement, then Hydron agrees that this Agreement shall continue for the entire four (4) year term unless earlier terminated pursuant to Section 8 of this Agreement." ;
+    ct:source_path "cuad/HYDRONTECHNOLOGIESINC_03_31_1997-EX-10.47-SPONSORSHIP AGREEMENT.txt" ;
+    ct:source_sha256 "22ec07c8d251ab90a989794c5325cdd87969adc3e44df5a4df033f4ae1ea6ad3" ;
+    ct:start_char 1479 .
+
+ex:C046P0053 a ct:SourcePassage ;
+    ct:end_char 18370 ;
+    ct:exact_text "8.2 This Agreement may be terminated by the Dolphins or modified to reduce or eliminate certain promotional benefits (such as use of Marks or Sponsorship Rights), as described in Sections 2.3, 4.5 and 5.4 hereof. Upon any such termination or modification, the Dolphins will in good faith attempt to substitute a promotional benefit of equivalent promotional value for any benefits that the Dolphins was forced to eliminate; or, if the Dolphins is unable to substitute a promotional benefit of similar magnitude, then the Dolphins and Hydron shall attempt, in good faith, to agree upon an adjustment in the amount of fees payable by Hydron to the Dolphins under this Agreement. If the Dolphins and Hydron cannot agree upon an adjustment in the amount of fees payable hereunder, then Dolphins and Hydron agree to arbitrate the adjustment in fees and to be bound by the decision of the arbitrators. Any such arbitration shall be conducted in accordance with the rules of the American Arbitration Association." ;
+    ct:source_path "cuad/HYDRONTECHNOLOGIESINC_03_31_1997-EX-10.47-SPONSORSHIP AGREEMENT.txt" ;
+    ct:source_sha256 "22ec07c8d251ab90a989794c5325cdd87969adc3e44df5a4df033f4ae1ea6ad3" ;
+    ct:start_char 17365 .
+
+ct:Condition a owl:Class ;
+    rdfs:label "Condition" .
+
+ct:Reference a owl:Class ;
+    rdfs:label "Reference" .
+
+ct:SourcePassage a owl:Class ;
+    rdfs:label "SourcePassage" .
+
+ct:Rule a owl:Class ;
+    rdfs:label "Rule" .
+

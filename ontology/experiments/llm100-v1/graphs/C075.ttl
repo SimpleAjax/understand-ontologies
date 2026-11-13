@@ -1,0 +1,1182 @@
+@prefix ct: <https://cimulink.local/ontology/contract-terms/0.1#> .
+@prefix ex: <https://cimulink.local/ontology/llm100-v1/> .
+@prefix meta: <https://cimulink.local/ontology/extraction#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ct: a owl:Ontology ;
+    rdfs:comment "Partial five-contract development sample. No claim of complete contract coverage or legal correctness." .
+
+ct:agreement_effective_from a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:applies_within a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:calendar_date_status a owl:DatatypeProperty .
+
+ct:coverage a owl:DatatypeProperty .
+
+ct:description a owl:DatatypeProperty .
+
+ct:duration a owl:DatatypeProperty .
+
+ct:duration_status a owl:DatatypeProperty .
+
+ct:end_char a owl:DatatypeProperty .
+
+ct:end_date_status a owl:DatatypeProperty .
+
+ct:ends_on_event a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:exact_text a owl:DatatypeProperty .
+
+ct:has_party a owl:ObjectProperty ;
+    rdfs:domain ct:Agreement ;
+    rdfs:range ct:Party .
+
+ct:has_rule a owl:ObjectProperty ;
+    rdfs:domain ct:Agreement ;
+    rdfs:range ct:Rule .
+
+ct:kind a owl:DatatypeProperty .
+
+ct:notice_actor a owl:DatatypeProperty .
+
+ct:notice_form a owl:DatatypeProperty .
+
+ct:notice_period_status a owl:DatatypeProperty .
+
+ct:qualifies a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Rule .
+
+ct:references_section a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:renewal_count a owl:DatatypeProperty .
+
+ct:resolution_status a owl:DatatypeProperty .
+
+ct:resolved_to a owl:ObjectProperty ;
+    rdfs:domain ct:Reference ;
+    rdfs:range ct:SourcePassage .
+
+ct:source_path a owl:DatatypeProperty .
+
+ct:source_sha256 a owl:DatatypeProperty .
+
+ct:start_char a owl:DatatypeProperty .
+
+ct:starts_from a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:stated_end_date a owl:DatatypeProperty .
+
+ct:subject_to a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Condition .
+
+ct:supported_by a owl:ObjectProperty ;
+    rdfs:range ct:SourcePassage .
+
+ct:termination_notice a owl:DatatypeProperty .
+
+ex:C075 a ct:Agreement ;
+    rdfs:label "ReynoldsConsumerProductsInc_20200121_S-1A_EX-10.22_11948918_EX-10.22_Service Agreement.txt" ;
+    ct:coverage "LOCAL_LLM_PROPOSED_PARTIAL; NOT_HUMAN_REVIEWED" ;
+    ct:has_rule ex:C075R0001,
+        ex:C075R0002,
+        ex:C075R0003,
+        ex:C075R0004,
+        ex:C075R0005,
+        ex:C075R0006,
+        ex:C075R0007,
+        ex:C075R0008,
+        ex:C075R0009,
+        ex:C075R0010,
+        ex:C075R0011,
+        ex:C075R0012,
+        ex:C075R0013,
+        ex:C075R0014,
+        ex:C075R0015,
+        ex:C075R0016,
+        ex:C075R0017,
+        ex:C075R0018,
+        ex:C075R0019,
+        ex:C075R0020,
+        ex:C075R0021,
+        ex:C075R0022,
+        ex:C075R0023,
+        ex:C075R0024,
+        ex:C075R0025,
+        ex:C075R0026,
+        ex:C075R0027,
+        ex:C075R0028,
+        ex:C075R0029,
+        ex:C075R0030,
+        ex:C075R0031,
+        ex:C075R0032,
+        ex:C075R0033,
+        ex:C075R0034,
+        ex:C075R0035,
+        ex:C075R0036,
+        ex:C075R0037,
+        ex:C075R0038,
+        ex:C075R0039,
+        ex:C075R0040,
+        ex:C075R0041,
+        ex:C075R0042,
+        ex:C075R0043,
+        ex:C075R0044,
+        ex:C075R0045,
+        ex:C075R0046,
+        ex:C075R0047,
+        ex:C075R0048,
+        ex:C075R0049,
+        ex:C075R0050,
+        ex:C075R0051,
+        ex:C075R0052,
+        ex:C075R0053,
+        ex:C075R0054,
+        ex:C075R0055,
+        ex:C075R0056,
+        ex:C075R0057,
+        ex:C075R0058,
+        ex:C075R0059,
+        ex:C075R0060,
+        ex:C075R0061,
+        ex:C075R0062 ;
+    ct:source_path "cuad/ReynoldsConsumerProductsInc_20200121_S-1A_EX-10.22_11948918_EX-10.22_Service Agreement.txt" ;
+    ct:source_sha256 "0ddc8b40e5ad7b4f6b1a9d2a921cc7ab2e5d4076a4dcd2575b10b59fc2e6f6d2" ;
+    meta:model_digest "0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0" .
+
+ct:Party a owl:Class ;
+    rdfs:label "Party" .
+
+ex:C075P0016 a ct:SourcePassage ;
+    ct:end_char 2989 ;
+    ct:exact_text "\"Commencement Date\" has the meaning set forth in the preamble." ;
+    ct:source_path "cuad/ReynoldsConsumerProductsInc_20200121_S-1A_EX-10.22_11948918_EX-10.22_Service Agreement.txt" ;
+    ct:source_sha256 "0ddc8b40e5ad7b4f6b1a9d2a921cc7ab2e5d4076a4dcd2575b10b59fc2e6f6d2" ;
+    ct:start_char 2927 .
+
+ex:C075P0049 a ct:SourcePassage ;
+    ct:end_char 7770 ;
+    ct:exact_text "\"Term\" has the meaning set forth in Section 6.1." ;
+    ct:source_path "cuad/ReynoldsConsumerProductsInc_20200121_S-1A_EX-10.22_11948918_EX-10.22_Service Agreement.txt" ;
+    ct:source_sha256 "0ddc8b40e5ad7b4f6b1a9d2a921cc7ab2e5d4076a4dcd2575b10b59fc2e6f6d2" ;
+    ct:start_char 7722 .
+
+ex:C075P0050 a ct:SourcePassage ;
+    ct:end_char 7832 ;
+    ct:exact_text "\"Termination Date\" has the meaning set forth in Section 6.1." ;
+    ct:source_path "cuad/ReynoldsConsumerProductsInc_20200121_S-1A_EX-10.22_11948918_EX-10.22_Service Agreement.txt" ;
+    ct:source_sha256 "0ddc8b40e5ad7b4f6b1a9d2a921cc7ab2e5d4076a4dcd2575b10b59fc2e6f6d2" ;
+    ct:start_char 7772 .
+
+ex:C075P0108 a ct:SourcePassage ;
+    ct:end_char 36795 ;
+    ct:exact_text "to pay for such Service will cease except any sums accrued or due as of the date of such early termination for Services rendered (which shall include (i) any amounts contemplated by 6.2(b), plus (ii) a pro rata portion of any fees applicable to the current period in which such Services are being performed if the applicable fee is determined on a period by period basis as set forth on Exhibit A or Exhibit B, as applicable). The provisions of this Section 6.2 shall apply mutatis mutandis with respect to any assignment of this Agreement subject to Section 10.10(b) and the Parties will negotiate in good faith regarding fee allocations and, if necessary, early termination or partial termination of any Services." ;
+    ct:source_path "cuad/ReynoldsConsumerProductsInc_20200121_S-1A_EX-10.22_11948918_EX-10.22_Service Agreement.txt" ;
+    ct:source_sha256 "0ddc8b40e5ad7b4f6b1a9d2a921cc7ab2e5d4076a4dcd2575b10b59fc2e6f6d2" ;
+    ct:start_char 36080 .
+
+ex:C075P0109 a ct:SourcePassage ;
+    ct:end_char 37148 ;
+    ct:exact_text "Section 6.3 Termination of Agreement. This Agreement shall terminate when the Termination Date has occurred for all Services. In addition, this Agreement may be terminated by either Party (the \"Terminating Party\") upon written notice to the other Party (which notice, in case of material breach, shall specify the basis for such claim for breach), if:" ;
+    ct:source_path "cuad/ReynoldsConsumerProductsInc_20200121_S-1A_EX-10.22_11948918_EX-10.22_Service Agreement.txt" ;
+    ct:source_sha256 "0ddc8b40e5ad7b4f6b1a9d2a921cc7ab2e5d4076a4dcd2575b10b59fc2e6f6d2" ;
+    ct:start_char 36797 .
+
+ex:C075P0112 a ct:SourcePassage ;
+    ct:end_char 38233 ;
+    ct:exact_text "Section 6.4 Effect of Termination. Upon any termination or expiration of this Agreement or any Service provided hereunder:" ;
+    ct:source_path "cuad/ReynoldsConsumerProductsInc_20200121_S-1A_EX-10.22_11948918_EX-10.22_Service Agreement.txt" ;
+    ct:source_sha256 "0ddc8b40e5ad7b4f6b1a9d2a921cc7ab2e5d4076a4dcd2575b10b59fc2e6f6d2" ;
+    ct:start_char 38111 .
+
+ex:C075P0113 a ct:SourcePassage ;
+    ct:end_char 38907 ;
+    ct:exact_text "(a) each Party shall, and shall cause its Affiliates to, as soon as practicable, return to the other Party any equipment, books, records, files and other property, not including current or archived copies of computer files, of the other Party, its Affiliates and their respective third-party service providers, that is in the Party's or its Affiliates' possession or control (and, in case of termination of one or more specific Services, only the equipment, books, records, files and other property, not including current or archived copies of computer files, that are used in connection with the provision or receipt solely of such Services and of no other Services); and" ;
+    ct:source_path "cuad/ReynoldsConsumerProductsInc_20200121_S-1A_EX-10.22_11948918_EX-10.22_Service Agreement.txt" ;
+    ct:source_sha256 "0ddc8b40e5ad7b4f6b1a9d2a921cc7ab2e5d4076a4dcd2575b10b59fc2e6f6d2" ;
+    ct:start_char 38235 .
+
+ex:C075P0115 a ct:SourcePassage ;
+    ct:end_char 39516 ;
+    ct:exact_text "Section 6.5 Survival. The following Articles and Sections shall survive the termination or expiration of this Agreement, including the rights and obligations of each Party thereunder: Article I; Article V; this Article VI; Article VII; Article IX; and Article X." ;
+    ct:source_path "cuad/ReynoldsConsumerProductsInc_20200121_S-1A_EX-10.22_11948918_EX-10.22_Service Agreement.txt" ;
+    ct:source_sha256 "0ddc8b40e5ad7b4f6b1a9d2a921cc7ab2e5d4076a4dcd2575b10b59fc2e6f6d2" ;
+    ct:start_char 39254 .
+
+ex:C075P0132 a ct:SourcePassage ;
+    ct:end_char 48780 ;
+    ct:exact_text "(b) Upon any termination or expiration of this Agreement, at the written request of the other Party, each Party shall, and shall cause any of its Affiliates or third-party vendors used in connection with the provision or receipt of the Services to, deliver to the other Party (i) all records and data (including backup tapes, records and related information) received, computed, developed, processed and stored by it hereunder in a readable format reasonably acceptable to the other Party, and (ii) all other Confidential Information of such other Party, but excluding, in each case, (1) any information stored electronically in a back-up file pursuant to the receiving Party's customary electronic back-up practices which may be retained by such Party solely for archival purposes and subject to the continuing confidentiality obligations set forth in herein, and (2) any information obtained pursuant to Section 7.2 herein; provided that, in lieu of delivering all of the foregoing to the other Party, the relevant delivering Party may confirm in writing that it has destroyed, or has caused RGHI or Company, as the case may be, to destroy, all of the foregoing." ;
+    ct:source_path "cuad/ReynoldsConsumerProductsInc_20200121_S-1A_EX-10.22_11948918_EX-10.22_Service Agreement.txt" ;
+    ct:source_sha256 "0ddc8b40e5ad7b4f6b1a9d2a921cc7ab2e5d4076a4dcd2575b10b59fc2e6f6d2" ;
+    ct:start_char 47616 .
+
+ex:C075P0171 a ct:SourcePassage ;
+    ct:end_char 65308 ;
+    ct:exact_text "If an RGHI Affiliate Provider is no longer affiliated with RGHI due to the sale of all or substantially all of the business or assets of such Affiliate to a third party, RGHI shall cause such Affiliate to agree to continue providing the Services that it is providing at the time of such transaction consistent with the terms of this Agreement for the remaining Term." ;
+    ct:source_path "cuad/ReynoldsConsumerProductsInc_20200121_S-1A_EX-10.22_11948918_EX-10.22_Service Agreement.txt" ;
+    ct:source_sha256 "0ddc8b40e5ad7b4f6b1a9d2a921cc7ab2e5d4076a4dcd2575b10b59fc2e6f6d2" ;
+    ct:start_char 64942 .
+
+ex:C075P0195 a ct:SourcePassage ;
+    ct:end_char 70537 ;
+    ct:exact_text "Monthly Fee (USD) - Commencement Date - 2020" ;
+    ct:source_path "cuad/ReynoldsConsumerProductsInc_20200121_S-1A_EX-10.22_11948918_EX-10.22_Service Agreement.txt" ;
+    ct:source_sha256 "0ddc8b40e5ad7b4f6b1a9d2a921cc7ab2e5d4076a4dcd2575b10b59fc2e6f6d2" ;
+    ct:start_char 70493 .
+
+ex:C075P0220 a ct:SourcePassage ;
+    ct:end_char 73502 ;
+    ct:exact_text "Monthly Fee (USD) - Commencement Date - 2020" ;
+    ct:source_path "cuad/ReynoldsConsumerProductsInc_20200121_S-1A_EX-10.22_11948918_EX-10.22_Service Agreement.txt" ;
+    ct:source_sha256 "0ddc8b40e5ad7b4f6b1a9d2a921cc7ab2e5d4076a4dcd2575b10b59fc2e6f6d2" ;
+    ct:start_char 73458 .
+
+ex:C075P0242 a ct:SourcePassage ;
+    ct:end_char 76521 ;
+    ct:exact_text "All services in group 24 months from the Commencement Date Termination will occur as services are contracted directly with RCP" ;
+    ct:source_path "cuad/ReynoldsConsumerProductsInc_20200121_S-1A_EX-10.22_11948918_EX-10.22_Service Agreement.txt" ;
+    ct:source_sha256 "0ddc8b40e5ad7b4f6b1a9d2a921cc7ab2e5d4076a4dcd2575b10b59fc2e6f6d2" ;
+    ct:start_char 76395 .
+
+ex:C075P0247 a ct:SourcePassage ;
+    ct:end_char 76959 ;
+    ct:exact_text "Monthly Fee (USD) - Commencement Date - 2020" ;
+    ct:source_path "cuad/ReynoldsConsumerProductsInc_20200121_S-1A_EX-10.22_11948918_EX-10.22_Service Agreement.txt" ;
+    ct:source_sha256 "0ddc8b40e5ad7b4f6b1a9d2a921cc7ab2e5d4076a4dcd2575b10b59fc2e6f6d2" ;
+    ct:start_char 76915 .
+
+ex:C075P0264 a ct:SourcePassage ;
+    ct:end_char 78332 ;
+    ct:exact_text "Service Name Description of Service Term Monthly Fee (USD) - Commencement Date - 2020 Monthly Fee (USD) - 2021 G1.4 IT Service Category: Project Management / IT Consulting3" ;
+    ct:source_path "cuad/ReynoldsConsumerProductsInc_20200121_S-1A_EX-10.22_11948918_EX-10.22_Service Agreement.txt" ;
+    ct:source_sha256 "0ddc8b40e5ad7b4f6b1a9d2a921cc7ab2e5d4076a4dcd2575b10b59fc2e6f6d2" ;
+    ct:start_char 78160 .
+
+ex:C075P0266 a ct:SourcePassage ;
+    ct:end_char 78968 ;
+    ct:exact_text "24 months from the Commencement Date" ;
+    ct:source_path "cuad/ReynoldsConsumerProductsInc_20200121_S-1A_EX-10.22_11948918_EX-10.22_Service Agreement.txt" ;
+    ct:source_sha256 "0ddc8b40e5ad7b4f6b1a9d2a921cc7ab2e5d4076a4dcd2575b10b59fc2e6f6d2" ;
+    ct:start_char 78932 .
+
+ex:C075P0270 a ct:SourcePassage ;
+    ct:end_char 79796 ;
+    ct:exact_text "24 months from the Commencement Date" ;
+    ct:source_path "cuad/ReynoldsConsumerProductsInc_20200121_S-1A_EX-10.22_11948918_EX-10.22_Service Agreement.txt" ;
+    ct:source_sha256 "0ddc8b40e5ad7b4f6b1a9d2a921cc7ab2e5d4076a4dcd2575b10b59fc2e6f6d2" ;
+    ct:start_char 79760 .
+
+ex:C075P0274 a ct:SourcePassage ;
+    ct:end_char 81062 ;
+    ct:exact_text "Service Name Description of Service Term Monthly Fee (USD) - Commencement Date - 2020 Monthly Fee (USD) - 2021 G1.4.3 Project Management Services Provision of Project Management services and resources and technical resources required to deliver projects agreed between RGHI and RCP (excluding, for the avoidance of doubt, Migration Services described in G1.4.4). Provision of this Service is subject to availability of internal resource within RGHI and agreement between the Parties. Where this Service is used, the rates will be as follows: •   Project Manager at $150 / hour •   Senior Engineer at $200 / hour •   Junior Engineer at $150 / hour Any costs for engaging external resources will be passed through to RCP." ;
+    ct:source_path "cuad/ReynoldsConsumerProductsInc_20200121_S-1A_EX-10.22_11948918_EX-10.22_Service Agreement.txt" ;
+    ct:source_sha256 "0ddc8b40e5ad7b4f6b1a9d2a921cc7ab2e5d4076a4dcd2575b10b59fc2e6f6d2" ;
+    ct:start_char 80343 .
+
+ex:C075P0275 a ct:SourcePassage ;
+    ct:end_char 81100 ;
+    ct:exact_text "24 months from the Commencement Date" ;
+    ct:source_path "cuad/ReynoldsConsumerProductsInc_20200121_S-1A_EX-10.22_11948918_EX-10.22_Service Agreement.txt" ;
+    ct:source_sha256 "0ddc8b40e5ad7b4f6b1a9d2a921cc7ab2e5d4076a4dcd2575b10b59fc2e6f6d2" ;
+    ct:start_char 81064 .
+
+ex:C075P0279 a ct:SourcePassage ;
+    ct:end_char 82154 ;
+    ct:exact_text "24 months from the Commencement Date" ;
+    ct:source_path "cuad/ReynoldsConsumerProductsInc_20200121_S-1A_EX-10.22_11948918_EX-10.22_Service Agreement.txt" ;
+    ct:source_sha256 "0ddc8b40e5ad7b4f6b1a9d2a921cc7ab2e5d4076a4dcd2575b10b59fc2e6f6d2" ;
+    ct:start_char 82118 .
+
+ex:C075P0285 a ct:SourcePassage ;
+    ct:end_char 83032 ;
+    ct:exact_text "12 months from the Commencement Date" ;
+    ct:source_path "cuad/ReynoldsConsumerProductsInc_20200121_S-1A_EX-10.22_11948918_EX-10.22_Service Agreement.txt" ;
+    ct:source_sha256 "0ddc8b40e5ad7b4f6b1a9d2a921cc7ab2e5d4076a4dcd2575b10b59fc2e6f6d2" ;
+    ct:start_char 82996 .
+
+ex:C075P0289 a ct:SourcePassage ;
+    ct:end_char 84411 ;
+    ct:exact_text "12 months from the Commencement Date No fee" ;
+    ct:source_path "cuad/ReynoldsConsumerProductsInc_20200121_S-1A_EX-10.22_11948918_EX-10.22_Service Agreement.txt" ;
+    ct:source_sha256 "0ddc8b40e5ad7b4f6b1a9d2a921cc7ab2e5d4076a4dcd2575b10b59fc2e6f6d2" ;
+    ct:start_char 84368 .
+
+ex:C075P0304 a ct:SourcePassage ;
+    ct:end_char 87756 ;
+    ct:exact_text "12 months from the Commencement Date $125 per person / per hour Plus pass-through of actual third-party costs incurred in providing the service" ;
+    ct:source_path "cuad/ReynoldsConsumerProductsInc_20200121_S-1A_EX-10.22_11948918_EX-10.22_Service Agreement.txt" ;
+    ct:source_sha256 "0ddc8b40e5ad7b4f6b1a9d2a921cc7ab2e5d4076a4dcd2575b10b59fc2e6f6d2" ;
+    ct:start_char 87613 .
+
+ex:C075P0306 a ct:SourcePassage ;
+    ct:end_char 88675 ;
+    ct:exact_text "The earlier of (i) 12 months from the Commencement Date or (ii) the date RCP obtains its own instance of Costar" ;
+    ct:source_path "cuad/ReynoldsConsumerProductsInc_20200121_S-1A_EX-10.22_11948918_EX-10.22_Service Agreement.txt" ;
+    ct:source_sha256 "0ddc8b40e5ad7b4f6b1a9d2a921cc7ab2e5d4076a4dcd2575b10b59fc2e6f6d2" ;
+    ct:start_char 88564 .
+
+ex:C075P0315 a ct:SourcePassage ;
+    ct:end_char 91228 ;
+    ct:exact_text "12 months from the Commencement Date $95 per person / per hour Plus pass-through of actual third-party costs incurred in providing the service" ;
+    ct:source_path "cuad/ReynoldsConsumerProductsInc_20200121_S-1A_EX-10.22_11948918_EX-10.22_Service Agreement.txt" ;
+    ct:source_sha256 "0ddc8b40e5ad7b4f6b1a9d2a921cc7ab2e5d4076a4dcd2575b10b59fc2e6f6d2" ;
+    ct:start_char 91086 .
+
+ex:C075P0319 a ct:SourcePassage ;
+    ct:end_char 91729 ;
+    ct:exact_text "12 months from the Commencement Date $10,100 per month Plus pass-through of actual third-party costs incurred in providing the service" ;
+    ct:source_path "cuad/ReynoldsConsumerProductsInc_20200121_S-1A_EX-10.22_11948918_EX-10.22_Service Agreement.txt" ;
+    ct:source_sha256 "0ddc8b40e5ad7b4f6b1a9d2a921cc7ab2e5d4076a4dcd2575b10b59fc2e6f6d2" ;
+    ct:start_char 91595 .
+
+ex:C075P0321 a ct:SourcePassage ;
+    ct:end_char 92064 ;
+    ct:exact_text "18 months from the Commencement Date $$22,500 per month Plus pass-through of actual third-party costs incurred in providing the service" ;
+    ct:source_path "cuad/ReynoldsConsumerProductsInc_20200121_S-1A_EX-10.22_11948918_EX-10.22_Service Agreement.txt" ;
+    ct:source_sha256 "0ddc8b40e5ad7b4f6b1a9d2a921cc7ab2e5d4076a4dcd2575b10b59fc2e6f6d2" ;
+    ct:start_char 91929 .
+
+ex:C075P0328 a ct:SourcePassage ;
+    ct:end_char 93381 ;
+    ct:exact_text "Service Name Description of Service Term Fee (USD) G3.9 Treasury Services - FBAR Reporting Provision of Foreign Bank and Financial Accounts (\"FBAR\") reporting services. 12 months from the Commencement Date $80 per person / per hour Plus pass-through of actual third-party costs incurred in providing the service" ;
+    ct:source_path "cuad/ReynoldsConsumerProductsInc_20200121_S-1A_EX-10.22_11948918_EX-10.22_Service Agreement.txt" ;
+    ct:source_sha256 "0ddc8b40e5ad7b4f6b1a9d2a921cc7ab2e5d4076a4dcd2575b10b59fc2e6f6d2" ;
+    ct:start_char 93070 .
+
+ex:C075P0330 a ct:SourcePassage ;
+    ct:end_char 93858 ;
+    ct:exact_text "12 months from the Commencement Date $105 per person / per hour $8,500 per month for Kiodex Plus pass-through of actual third-party costs incurred in providing the service" ;
+    ct:source_path "cuad/ReynoldsConsumerProductsInc_20200121_S-1A_EX-10.22_11948918_EX-10.22_Service Agreement.txt" ;
+    ct:source_sha256 "0ddc8b40e5ad7b4f6b1a9d2a921cc7ab2e5d4076a4dcd2575b10b59fc2e6f6d2" ;
+    ct:start_char 93687 .
+
+ex:C075P0333 a ct:SourcePassage ;
+    ct:end_char 94546 ;
+    ct:exact_text "12 months from the Commencement Date $175 per person / per hour Plus pass- through of actual third-party costs incurred in providing the service" ;
+    ct:source_path "cuad/ReynoldsConsumerProductsInc_20200121_S-1A_EX-10.22_11948918_EX-10.22_Service Agreement.txt" ;
+    ct:source_sha256 "0ddc8b40e5ad7b4f6b1a9d2a921cc7ab2e5d4076a4dcd2575b10b59fc2e6f6d2" ;
+    ct:start_char 94402 .
+
+ex:C075P0339 a ct:SourcePassage ;
+    ct:end_char 97619 ;
+    ct:exact_text "24 months from the Commencement Date $13,285 per month Plus pass- through of actual third-party costs incurred in providing the service" ;
+    ct:source_path "cuad/ReynoldsConsumerProductsInc_20200121_S-1A_EX-10.22_11948918_EX-10.22_Service Agreement.txt" ;
+    ct:source_sha256 "0ddc8b40e5ad7b4f6b1a9d2a921cc7ab2e5d4076a4dcd2575b10b59fc2e6f6d2" ;
+    ct:start_char 97484 .
+
+ex:C075P0343 a ct:SourcePassage ;
+    ct:end_char 98399 ;
+    ct:exact_text "24 months from the Commencement Date $175 per person / per hour Plus pass- through of actual third-party costs incurred in providing the service" ;
+    ct:source_path "cuad/ReynoldsConsumerProductsInc_20200121_S-1A_EX-10.22_11948918_EX-10.22_Service Agreement.txt" ;
+    ct:source_sha256 "0ddc8b40e5ad7b4f6b1a9d2a921cc7ab2e5d4076a4dcd2575b10b59fc2e6f6d2" ;
+    ct:start_char 98255 .
+
+ex:C075P0350 a ct:SourcePassage ;
+    ct:end_char 100160 ;
+    ct:exact_text "12 months from the Commencement Date $100 per person / per hour Plus the pass- through of actual third-party costs incurred in providing the service" ;
+    ct:source_path "cuad/ReynoldsConsumerProductsInc_20200121_S-1A_EX-10.22_11948918_EX-10.22_Service Agreement.txt" ;
+    ct:source_sha256 "0ddc8b40e5ad7b4f6b1a9d2a921cc7ab2e5d4076a4dcd2575b10b59fc2e6f6d2" ;
+    ct:start_char 100012 .
+
+ex:C075P0352 a ct:SourcePassage ;
+    ct:end_char 100665 ;
+    ct:exact_text "12 months form the Commencement Date Services billed through the Warehousing and Freight Services Agreement dated November 1, 2019" ;
+    ct:source_path "cuad/ReynoldsConsumerProductsInc_20200121_S-1A_EX-10.22_11948918_EX-10.22_Service Agreement.txt" ;
+    ct:source_sha256 "0ddc8b40e5ad7b4f6b1a9d2a921cc7ab2e5d4076a4dcd2575b10b59fc2e6f6d2" ;
+    ct:start_char 100535 .
+
+ex:C075P0356 a ct:SourcePassage ;
+    ct:end_char 101247 ;
+    ct:exact_text "12 months from the Commencement Date" ;
+    ct:source_path "cuad/ReynoldsConsumerProductsInc_20200121_S-1A_EX-10.22_11948918_EX-10.22_Service Agreement.txt" ;
+    ct:source_sha256 "0ddc8b40e5ad7b4f6b1a9d2a921cc7ab2e5d4076a4dcd2575b10b59fc2e6f6d2" ;
+    ct:start_char 101211 .
+
+ex:C075P0359 a ct:SourcePassage ;
+    ct:end_char 102164 ;
+    ct:exact_text "12 months from the Commencement Date" ;
+    ct:source_path "cuad/ReynoldsConsumerProductsInc_20200121_S-1A_EX-10.22_11948918_EX-10.22_Service Agreement.txt" ;
+    ct:source_sha256 "0ddc8b40e5ad7b4f6b1a9d2a921cc7ab2e5d4076a4dcd2575b10b59fc2e6f6d2" ;
+    ct:start_char 102128 .
+
+ex:C075P0363 a ct:SourcePassage ;
+    ct:end_char 103525 ;
+    ct:exact_text "12 months from the Commencement Date" ;
+    ct:source_path "cuad/ReynoldsConsumerProductsInc_20200121_S-1A_EX-10.22_11948918_EX-10.22_Service Agreement.txt" ;
+    ct:source_sha256 "0ddc8b40e5ad7b4f6b1a9d2a921cc7ab2e5d4076a4dcd2575b10b59fc2e6f6d2" ;
+    ct:start_char 103489 .
+
+ex:C075P0369 a ct:SourcePassage ;
+    ct:end_char 105950 ;
+    ct:exact_text "The earlier of (i) 24 months from the Commencement Date or (ii) the cessation of current Administrator of IP Operations/Paralegal's employment" ;
+    ct:source_path "cuad/ReynoldsConsumerProductsInc_20200121_S-1A_EX-10.22_11948918_EX-10.22_Service Agreement.txt" ;
+    ct:source_sha256 "0ddc8b40e5ad7b4f6b1a9d2a921cc7ab2e5d4076a4dcd2575b10b59fc2e6f6d2" ;
+    ct:start_char 105808 .
+
+ex:C075P0376 a ct:SourcePassage ;
+    ct:end_char 107142 ;
+    ct:exact_text "24 months from the Commencement Date $10,000 per month Plus pass-through of actual third-party costs incurred in providing the service" ;
+    ct:source_path "cuad/ReynoldsConsumerProductsInc_20200121_S-1A_EX-10.22_11948918_EX-10.22_Service Agreement.txt" ;
+    ct:source_sha256 "0ddc8b40e5ad7b4f6b1a9d2a921cc7ab2e5d4076a4dcd2575b10b59fc2e6f6d2" ;
+    ct:start_char 107008 .
+
+ex:C075P0378 a ct:SourcePassage ;
+    ct:end_char 107403 ;
+    ct:exact_text "12 months from the Commencement Date No fee" ;
+    ct:source_path "cuad/ReynoldsConsumerProductsInc_20200121_S-1A_EX-10.22_11948918_EX-10.22_Service Agreement.txt" ;
+    ct:source_sha256 "0ddc8b40e5ad7b4f6b1a9d2a921cc7ab2e5d4076a4dcd2575b10b59fc2e6f6d2" ;
+    ct:start_char 107360 .
+
+ex:C075P0381 a ct:SourcePassage ;
+    ct:end_char 108229 ;
+    ct:exact_text "12 months from the Commencement Date $1,630 per month Plus pass-through of actual third-party costs incurred in providing the service" ;
+    ct:source_path "cuad/ReynoldsConsumerProductsInc_20200121_S-1A_EX-10.22_11948918_EX-10.22_Service Agreement.txt" ;
+    ct:source_sha256 "0ddc8b40e5ad7b4f6b1a9d2a921cc7ab2e5d4076a4dcd2575b10b59fc2e6f6d2" ;
+    ct:start_char 108096 .
+
+ex:C075P0386 a ct:SourcePassage ;
+    ct:end_char 108798 ;
+    ct:exact_text "12 months from the Commencement Date No fee" ;
+    ct:source_path "cuad/ReynoldsConsumerProductsInc_20200121_S-1A_EX-10.22_11948918_EX-10.22_Service Agreement.txt" ;
+    ct:source_sha256 "0ddc8b40e5ad7b4f6b1a9d2a921cc7ab2e5d4076a4dcd2575b10b59fc2e6f6d2" ;
+    ct:start_char 108755 .
+
+ex:C075P0389 a ct:SourcePassage ;
+    ct:end_char 110164 ;
+    ct:exact_text "12 months from the Commencement Date No fee" ;
+    ct:source_path "cuad/ReynoldsConsumerProductsInc_20200121_S-1A_EX-10.22_11948918_EX-10.22_Service Agreement.txt" ;
+    ct:source_sha256 "0ddc8b40e5ad7b4f6b1a9d2a921cc7ab2e5d4076a4dcd2575b10b59fc2e6f6d2" ;
+    ct:start_char 110121 .
+
+ex:C075P0390 a ct:SourcePassage ;
+    ct:end_char 110428 ;
+    ct:exact_text "GR2.2 General HR - ACA and HSA Training Provision of handover and support services related to ACA reporting and HSA funding and reporting. 12 months from the Commencement Date No fee Plus pass-through of actual third-party costs incurred in providing the service" ;
+    ct:source_path "cuad/ReynoldsConsumerProductsInc_20200121_S-1A_EX-10.22_11948918_EX-10.22_Service Agreement.txt" ;
+    ct:source_sha256 "0ddc8b40e5ad7b4f6b1a9d2a921cc7ab2e5d4076a4dcd2575b10b59fc2e6f6d2" ;
+    ct:start_char 110166 .
+
+ex:C075P0393 a ct:SourcePassage ;
+    ct:end_char 110827 ;
+    ct:exact_text "12 months from the Commencement Date No fee" ;
+    ct:source_path "cuad/ReynoldsConsumerProductsInc_20200121_S-1A_EX-10.22_11948918_EX-10.22_Service Agreement.txt" ;
+    ct:source_sha256 "0ddc8b40e5ad7b4f6b1a9d2a921cc7ab2e5d4076a4dcd2575b10b59fc2e6f6d2" ;
+    ct:start_char 110784 .
+
+ex:C075P0396 a ct:SourcePassage ;
+    ct:end_char 111435 ;
+    ct:exact_text "12 months from the Commencement Date $100 per person / per hour Plus pass-through of actual third-party costs incurred in providing the service" ;
+    ct:source_path "cuad/ReynoldsConsumerProductsInc_20200121_S-1A_EX-10.22_11948918_EX-10.22_Service Agreement.txt" ;
+    ct:source_sha256 "0ddc8b40e5ad7b4f6b1a9d2a921cc7ab2e5d4076a4dcd2575b10b59fc2e6f6d2" ;
+    ct:start_char 111292 .
+
+ex:C075P0399 a ct:SourcePassage ;
+    ct:end_char 112693 ;
+    ct:exact_text "12 months from the Commencement Date No fee Plus pass-through of actual third-party costs incurred in providing the service" ;
+    ct:source_path "cuad/ReynoldsConsumerProductsInc_20200121_S-1A_EX-10.22_11948918_EX-10.22_Service Agreement.txt" ;
+    ct:source_sha256 "0ddc8b40e5ad7b4f6b1a9d2a921cc7ab2e5d4076a4dcd2575b10b59fc2e6f6d2" ;
+    ct:start_char 112570 .
+
+ex:C075R0001 a ct:Rule ;
+    rdfs:label "Initial Term — source passage 16" ;
+    ct:kind "INITIAL_TERM" ;
+    ct:supported_by ex:C075P0016 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C075R0002 a ct:Rule ;
+    rdfs:label "Conditional Referenced Term — source passage 49" ;
+    ct:kind "CONDITIONAL_REFERENCED_TERM" ;
+    ct:references_section ex:C075R0002Ref0 ;
+    ct:supported_by ex:C075P0049 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C075R0002Ref0 a ct:Reference ;
+    rdfs:label "Section 6.1" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C075R0003 a ct:Rule ;
+    rdfs:label "Conditional Referenced Term — source passage 50" ;
+    ct:kind "CONDITIONAL_REFERENCED_TERM" ;
+    ct:references_section ex:C075R0003Ref0 ;
+    ct:supported_by ex:C075P0050 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C075R0003Ref0 a ct:Reference ;
+    rdfs:label "Section 6.1" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C075R0004 a ct:Rule ;
+    rdfs:label "Initial Term — source passage 55" ;
+    ct:kind "INITIAL_TERM" ;
+    ct:references_section ex:C075R0004Ref0,
+        ex:C075R0004Ref1 ;
+    ct:supported_by ex:C075P0055 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C075R0004Ref0 a ct:Reference ;
+    rdfs:label "Section 2.2" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C075R0004Ref1 a ct:Reference ;
+    rdfs:label "Exhibit A" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C075R0005 a ct:Rule ;
+    rdfs:label "Conditional Referenced Term — source passage 55" ;
+    ct:kind "CONDITIONAL_REFERENCED_TERM" ;
+    ct:references_section ex:C075R0005Ref0,
+        ex:C075R0005Ref1 ;
+    ct:supported_by ex:C075P0055 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C075R0005Ref0 a ct:Reference ;
+    rdfs:label "Section 2.2" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C075R0005Ref1 a ct:Reference ;
+    rdfs:label "Exhibit A" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C075R0006 a ct:Rule ;
+    rdfs:label "Initial Term — source passage 105" ;
+    ct:kind "INITIAL_TERM" ;
+    ct:references_section ex:C075R0006Ref0,
+        ex:C075R0006Ref1,
+        ex:C075R0006Ref2 ;
+    ct:subject_to ex:C075R0006Condition105 ;
+    ct:supported_by ex:C075P0105 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C075R0006Condition105 a ct:Condition ;
+    ct:description "Section 6.1 Term of Services. With respect to each of the Services, the term thereof will be for a period commencing as of the date hereof, unless a different date is specified as the commencement date for any applicable Service on Exhibit A or Exhibit B (either, a \"Commencement Date\"), and shall continue until 12 months following the Commencement Date unless (i) such other date as is specified as the termination date for any applicable Service in this Agreement or on Exhibit A or Exhibit B, as applicable (the \"Term\") or (ii) earlier terminated pursuant to this Agreement (a \"Termination Date\")." ;
+    ct:supported_by ex:C075P0105 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C075R0006Ref0 a ct:Reference ;
+    rdfs:label "Section 6.1" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C075R0006Ref1 a ct:Reference ;
+    rdfs:label "Exhibit A" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C075R0006Ref2 a ct:Reference ;
+    rdfs:label "Exhibit B" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C075R0007 a ct:Rule ;
+    rdfs:label "Conditional Referenced Term — source passage 105" ;
+    ct:kind "CONDITIONAL_REFERENCED_TERM" ;
+    ct:references_section ex:C075R0007Ref0,
+        ex:C075R0007Ref1,
+        ex:C075R0007Ref2 ;
+    ct:subject_to ex:C075R0007Condition105 ;
+    ct:supported_by ex:C075P0105 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C075R0007Condition105 a ct:Condition ;
+    ct:description "Section 6.1 Term of Services. With respect to each of the Services, the term thereof will be for a period commencing as of the date hereof, unless a different date is specified as the commencement date for any applicable Service on Exhibit A or Exhibit B (either, a \"Commencement Date\"), and shall continue until 12 months following the Commencement Date unless (i) such other date as is specified as the termination date for any applicable Service in this Agreement or on Exhibit A or Exhibit B, as applicable (the \"Term\") or (ii) earlier terminated pursuant to this Agreement (a \"Termination Date\")." ;
+    ct:supported_by ex:C075P0105 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C075R0007Ref0 a ct:Reference ;
+    rdfs:label "Section 6.1" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C075R0007Ref1 a ct:Reference ;
+    rdfs:label "Exhibit A" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C075R0007Ref2 a ct:Reference ;
+    rdfs:label "Exhibit B" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C075R0008 a ct:Rule ;
+    rdfs:label "Termination — source passage 106" ;
+    ct:kind "TERMINATION" ;
+    ct:references_section ex:C075R0008Ref0,
+        ex:C075R0008Ref1 ;
+    ct:subject_to ex:C075R0008Condition106 ;
+    ct:supported_by ex:C075P0106 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C075R0008Condition106 a ct:Condition ;
+    ct:description "Section 6.2 Termination of Services. Except as agreed by the Parties in writing or as otherwise stated in the Exhibits, Company may terminate for convenience any Transition Service, and RGHI may terminate for convenience any Reverse Transition Service, upon 30 days' prior written notice of such termination; provided, (a) that, with respect to the Services described in Section G1 of Exhibit A, unless otherwise indicated therein, those Services may not be terminated independently except in accordance with an agreed Migration Plan and, (b) any unamortized costs associated with Provider's purchase of any license or other costs incurred specifically for the purpose of providing the Services hereunder will be passed through to the Terminating Party. Upon termination of any Service pursuant to this Section 6.2, the Terminating Party's obligation" ;
+    ct:supported_by ex:C075P0106 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C075R0008Ref0 a ct:Reference ;
+    rdfs:label "Section 6.2" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C075R0008Ref1 a ct:Reference ;
+    rdfs:label "Exhibit A" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C075R0009 a ct:Rule ;
+    rdfs:label "Conditional Referenced Term — source passage 106" ;
+    ct:kind "CONDITIONAL_REFERENCED_TERM" ;
+    ct:references_section ex:C075R0009Ref0,
+        ex:C075R0009Ref1 ;
+    ct:subject_to ex:C075R0009Condition106 ;
+    ct:supported_by ex:C075P0106 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C075R0009Condition106 a ct:Condition ;
+    ct:description "Section 6.2 Termination of Services. Except as agreed by the Parties in writing or as otherwise stated in the Exhibits, Company may terminate for convenience any Transition Service, and RGHI may terminate for convenience any Reverse Transition Service, upon 30 days' prior written notice of such termination; provided, (a) that, with respect to the Services described in Section G1 of Exhibit A, unless otherwise indicated therein, those Services may not be terminated independently except in accordance with an agreed Migration Plan and, (b) any unamortized costs associated with Provider's purchase of any license or other costs incurred specifically for the purpose of providing the Services hereunder will be passed through to the Terminating Party. Upon termination of any Service pursuant to this Section 6.2, the Terminating Party's obligation" ;
+    ct:supported_by ex:C075P0106 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C075R0009Ref0 a ct:Reference ;
+    rdfs:label "Section 6.2" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C075R0009Ref1 a ct:Reference ;
+    rdfs:label "Exhibit A" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C075R0010 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 108" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:references_section ex:C075R0010Ref0,
+        ex:C075R0010Ref1,
+        ex:C075R0010Ref2,
+        ex:C075R0010Ref3 ;
+    ct:supported_by ex:C075P0108 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C075R0010Ref0 a ct:Reference ;
+    rdfs:label "Exhibit A" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C075R0010Ref1 a ct:Reference ;
+    rdfs:label "Exhibit B" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C075R0010Ref2 a ct:Reference ;
+    rdfs:label "Section 6.2" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C075R0010Ref3 a ct:Reference ;
+    rdfs:label "Section 10.10(b)" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C075R0011 a ct:Rule ;
+    rdfs:label "Termination — source passage 109" ;
+    ct:kind "TERMINATION" ;
+    ct:references_section ex:C075R0011Ref0 ;
+    ct:supported_by ex:C075P0109 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C075R0011Ref0 a ct:Reference ;
+    rdfs:label "Section 6.3" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C075R0012 a ct:Rule ;
+    rdfs:label "Termination — source passage 110" ;
+    ct:kind "TERMINATION" ;
+    ct:subject_to ex:C075R0012Condition110 ;
+    ct:supported_by ex:C075P0110 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C075R0012Condition110 a ct:Condition ;
+    ct:description "(a) the other Party or its Affiliates materially breaches this Agreement and such breach is not cured, to the reasonable satisfaction of the Terminating Party, within thirty (30) days of written notice thereof, it being understood that a good-faith dispute over an invoice or Service shall not constitute a material breach of this Agreement; or" ;
+    ct:supported_by ex:C075P0110 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C075R0013 a ct:Rule ;
+    rdfs:label "Termination — source passage 112" ;
+    ct:kind "TERMINATION" ;
+    ct:references_section ex:C075R0013Ref0 ;
+    ct:supported_by ex:C075P0112 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C075R0013Ref0 a ct:Reference ;
+    rdfs:label "Section 6.4" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C075R0014 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 113" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:supported_by ex:C075P0113 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C075R0015 a ct:Rule ;
+    rdfs:label "Conditional Referenced Term — source passage 114" ;
+    ct:kind "CONDITIONAL_REFERENCED_TERM" ;
+    ct:references_section ex:C075R0015Ref0 ;
+    ct:subject_to ex:C075R0015Condition114 ;
+    ct:supported_by ex:C075P0114 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C075R0015Condition114 a ct:Condition ;
+    ct:description "(b) the intellectual property license granted by Section 8.2 shall terminate; provided, however, that in the case of termination of a specific Service, such license shall terminate only to the extent such license was necessary for the provision or receipt of such Service and is not necessary for any other Service that has not yet terminated." ;
+    ct:supported_by ex:C075P0114 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C075R0015Ref0 a ct:Reference ;
+    rdfs:label "Section 8.2" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C075R0016 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 115" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:references_section ex:C075R0016Ref0,
+        ex:C075R0016Ref1,
+        ex:C075R0016Ref2,
+        ex:C075R0016Ref3,
+        ex:C075R0016Ref4,
+        ex:C075R0016Ref5,
+        ex:C075R0016Ref6 ;
+    ct:supported_by ex:C075P0115 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C075R0016Ref0 a ct:Reference ;
+    rdfs:label "Section 6.5" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C075R0016Ref1 a ct:Reference ;
+    rdfs:label "Article I" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C075R0016Ref2 a ct:Reference ;
+    rdfs:label "Article V" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C075R0016Ref3 a ct:Reference ;
+    rdfs:label "Article VI" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C075R0016Ref4 a ct:Reference ;
+    rdfs:label "Article VII" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C075R0016Ref5 a ct:Reference ;
+    rdfs:label "Article IX" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C075R0016Ref6 a ct:Reference ;
+    rdfs:label "Article X" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C075R0017 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 132" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:references_section ex:C075R0017Ref0 ;
+    ct:supported_by ex:C075P0132 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C075R0017Ref0 a ct:Reference ;
+    rdfs:label "Section 7.2" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C075R0018 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 171" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:supported_by ex:C075P0171 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C075R0019 a ct:Rule ;
+    rdfs:label "Initial Term — source passage 195" ;
+    ct:kind "INITIAL_TERM" ;
+    ct:supported_by ex:C075P0195 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C075R0020 a ct:Rule ;
+    rdfs:label "Initial Term — source passage 220" ;
+    ct:kind "INITIAL_TERM" ;
+    ct:supported_by ex:C075P0220 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C075R0021 a ct:Rule ;
+    rdfs:label "Conditional Referenced Term — source passage 242" ;
+    ct:kind "CONDITIONAL_REFERENCED_TERM" ;
+    ct:supported_by ex:C075P0242 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C075R0022 a ct:Rule ;
+    rdfs:label "Initial Term — source passage 247" ;
+    ct:kind "INITIAL_TERM" ;
+    ct:supported_by ex:C075P0247 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C075R0023 a ct:Rule ;
+    rdfs:label "Initial Term — source passage 264" ;
+    ct:kind "INITIAL_TERM" ;
+    ct:supported_by ex:C075P0264 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C075R0024 a ct:Rule ;
+    rdfs:label "Initial Term — source passage 266" ;
+    ct:kind "INITIAL_TERM" ;
+    ct:supported_by ex:C075P0266 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C075R0025 a ct:Rule ;
+    rdfs:label "Initial Term — source passage 270" ;
+    ct:kind "INITIAL_TERM" ;
+    ct:supported_by ex:C075P0270 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C075R0026 a ct:Rule ;
+    rdfs:label "Initial Term — source passage 274" ;
+    ct:kind "INITIAL_TERM" ;
+    ct:supported_by ex:C075P0274 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C075R0027 a ct:Rule ;
+    rdfs:label "Initial Term — source passage 275" ;
+    ct:kind "INITIAL_TERM" ;
+    ct:supported_by ex:C075P0275 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C075R0028 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 278" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:references_section ex:C075R0028Ref0 ;
+    ct:subject_to ex:C075R0028Condition278 ;
+    ct:supported_by ex:C075P0278 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C075R0028Condition278 a ct:Condition ;
+    ct:description "G1.4.4 Migration Services Project services to manage and execute the extraction of IT operations from the RLS managed environment(s) and enable RCP to exit this TSA, as defined in the TSA Migration Services in Section 2.1.(c). For the avoidance of doubt, this service includes all internal RGHI labor and third-party costs associated with project management and execution of all separation activities, and any license or technology acquisitions required to facilitate the establishment of RCP's new, stand-alone IT environment and the handover of same to RCP for future management. This Service cannot be terminated until such time as separation has concluded to the satisfaction of RGHI and RCP." ;
+    ct:supported_by ex:C075P0278 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C075R0028Ref0 a ct:Reference ;
+    rdfs:label "Section 2.1" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C075R0029 a ct:Rule ;
+    rdfs:label "Initial Term — source passage 279" ;
+    ct:kind "INITIAL_TERM" ;
+    ct:supported_by ex:C075P0279 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C075R0030 a ct:Rule ;
+    rdfs:label "Initial Term — source passage 285" ;
+    ct:kind "INITIAL_TERM" ;
+    ct:supported_by ex:C075P0285 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C075R0031 a ct:Rule ;
+    rdfs:label "Initial Term — source passage 289" ;
+    ct:kind "INITIAL_TERM" ;
+    ct:supported_by ex:C075P0289 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C075R0032 a ct:Rule ;
+    rdfs:label "Initial Term — source passage 291" ;
+    ct:kind "INITIAL_TERM" ;
+    ct:subject_to ex:C075R0032Condition291 ;
+    ct:supported_by ex:C075P0291 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C075R0032Condition291 a ct:Condition ;
+    ct:description "The earlier of (i) December 31, 2020 or (ii) the cessation of current Administrative Assistant's employment" ;
+    ct:supported_by ex:C075P0291 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C075R0033 a ct:Rule ;
+    rdfs:label "Initial Term — source passage 304" ;
+    ct:kind "INITIAL_TERM" ;
+    ct:supported_by ex:C075P0304 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C075R0034 a ct:Rule ;
+    rdfs:label "Initial Term — source passage 306" ;
+    ct:kind "INITIAL_TERM" ;
+    ct:supported_by ex:C075P0306 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C075R0035 a ct:Rule ;
+    rdfs:label "Initial Term — source passage 315" ;
+    ct:kind "INITIAL_TERM" ;
+    ct:supported_by ex:C075P0315 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C075R0036 a ct:Rule ;
+    rdfs:label "Initial Term — source passage 319" ;
+    ct:kind "INITIAL_TERM" ;
+    ct:supported_by ex:C075P0319 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C075R0037 a ct:Rule ;
+    rdfs:label "Initial Term — source passage 321" ;
+    ct:kind "INITIAL_TERM" ;
+    ct:supported_by ex:C075P0321 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C075R0038 a ct:Rule ;
+    rdfs:label "Initial Term — source passage 323" ;
+    ct:kind "INITIAL_TERM" ;
+    ct:subject_to ex:C075R0038Condition323 ;
+    ct:supported_by ex:C075P0323 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C075R0038Condition323 a ct:Condition ;
+    ct:description "Provision of support services of RGHI Senior Compliance Manager related to SAP access and security risks (SOX 404). The earlier of (i) 12 months from the Commencement Date or (ii) the cessation of current Senior Compliance Manager's employment" ;
+    ct:supported_by ex:C075P0323 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C075R0039 a ct:Rule ;
+    rdfs:label "Initial Term — source passage 328" ;
+    ct:kind "INITIAL_TERM" ;
+    ct:supported_by ex:C075P0328 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C075R0040 a ct:Rule ;
+    rdfs:label "Initial Term — source passage 330" ;
+    ct:kind "INITIAL_TERM" ;
+    ct:supported_by ex:C075P0330 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C075R0041 a ct:Rule ;
+    rdfs:label "Initial Term — source passage 333" ;
+    ct:kind "INITIAL_TERM" ;
+    ct:supported_by ex:C075P0333 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C075R0042 a ct:Rule ;
+    rdfs:label "Initial Term — source passage 339" ;
+    ct:kind "INITIAL_TERM" ;
+    ct:supported_by ex:C075P0339 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C075R0043 a ct:Rule ;
+    rdfs:label "Initial Term — source passage 343" ;
+    ct:kind "INITIAL_TERM" ;
+    ct:supported_by ex:C075P0343 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C075R0044 a ct:Rule ;
+    rdfs:label "Initial Term — source passage 346" ;
+    ct:kind "INITIAL_TERM" ;
+    ct:subject_to ex:C075R0044Condition346 ;
+    ct:supported_by ex:C075P0346 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C075R0044Condition346 a ct:Condition ;
+    ct:description "The earlier of (i) 24 months from the Commencement Date or (ii) the cessation of current Director of Transfer Pricing's employment" ;
+    ct:supported_by ex:C075P0346 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C075R0045 a ct:Rule ;
+    rdfs:label "Initial Term — source passage 350" ;
+    ct:kind "INITIAL_TERM" ;
+    ct:supported_by ex:C075P0350 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C075R0046 a ct:Rule ;
+    rdfs:label "Initial Term — source passage 352" ;
+    ct:kind "INITIAL_TERM" ;
+    ct:supported_by ex:C075P0352 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C075R0047 a ct:Rule ;
+    rdfs:label "Initial Term — source passage 356" ;
+    ct:kind "INITIAL_TERM" ;
+    ct:supported_by ex:C075P0356 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C075R0048 a ct:Rule ;
+    rdfs:label "Initial Term — source passage 358" ;
+    ct:kind "INITIAL_TERM" ;
+    ct:supported_by ex:C075P0358 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C075R0049 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 358" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:supported_by ex:C075P0358 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C075R0050 a ct:Rule ;
+    rdfs:label "Initial Term — source passage 359" ;
+    ct:kind "INITIAL_TERM" ;
+    ct:supported_by ex:C075P0359 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C075R0051 a ct:Rule ;
+    rdfs:label "Initial Term — source passage 363" ;
+    ct:kind "INITIAL_TERM" ;
+    ct:supported_by ex:C075P0363 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C075R0052 a ct:Rule ;
+    rdfs:label "Conditional Referenced Term — source passage 369" ;
+    ct:kind "CONDITIONAL_REFERENCED_TERM" ;
+    ct:supported_by ex:C075P0369 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C075R0053 a ct:Rule ;
+    rdfs:label "Initial Term — source passage 372" ;
+    ct:kind "INITIAL_TERM" ;
+    ct:subject_to ex:C075R0053Condition372 ;
+    ct:supported_by ex:C075P0372 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C075R0053Condition372 a ct:Condition ;
+    ct:description "Service Name Description of Service Term Fee (USD) G8.3 General Services - Corporate Secretarial Provision of corporate secretarial duties and government filing assistance. To the earlier of (i) 24 months from the Commencement Date or (ii) the cessation of current Corporate Governance Paralegal's employment" ;
+    ct:supported_by ex:C075P0372 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C075R0054 a ct:Rule ;
+    rdfs:label "Initial Term — source passage 376" ;
+    ct:kind "INITIAL_TERM" ;
+    ct:supported_by ex:C075P0376 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C075R0055 a ct:Rule ;
+    rdfs:label "Initial Term — source passage 378" ;
+    ct:kind "INITIAL_TERM" ;
+    ct:supported_by ex:C075P0378 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C075R0056 a ct:Rule ;
+    rdfs:label "Initial Term — source passage 381" ;
+    ct:kind "INITIAL_TERM" ;
+    ct:supported_by ex:C075P0381 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C075R0057 a ct:Rule ;
+    rdfs:label "Initial Term — source passage 386" ;
+    ct:kind "INITIAL_TERM" ;
+    ct:supported_by ex:C075P0386 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C075R0058 a ct:Rule ;
+    rdfs:label "Initial Term — source passage 389" ;
+    ct:kind "INITIAL_TERM" ;
+    ct:supported_by ex:C075P0389 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C075R0059 a ct:Rule ;
+    rdfs:label "Initial Term — source passage 390" ;
+    ct:kind "INITIAL_TERM" ;
+    ct:supported_by ex:C075P0390 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C075R0060 a ct:Rule ;
+    rdfs:label "Initial Term — source passage 393" ;
+    ct:kind "INITIAL_TERM" ;
+    ct:supported_by ex:C075P0393 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C075R0061 a ct:Rule ;
+    rdfs:label "Initial Term — source passage 396" ;
+    ct:kind "INITIAL_TERM" ;
+    ct:supported_by ex:C075P0396 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C075R0062 a ct:Rule ;
+    rdfs:label "Initial Term — source passage 399" ;
+    ct:kind "INITIAL_TERM" ;
+    ct:supported_by ex:C075P0399 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C075P0055 a ct:SourcePassage ;
+    ct:end_char 9144 ;
+    ct:exact_text "(a) During the applicable Term of any Service, and in accordance with the terms and conditions of this Agreement, RGHI shall provide, or shall cause its Affiliates or, subject to Section 2.2, third parties to provide, to the Company or one or more of its Affiliates (in connection with the conduct of the Business) the services described on Exhibit A hereto (the \"Transition Services\"). Notwithstanding the content of Exhibit A, RGHI agrees to consider in good faith any reasonable request by the Company for access to any additional service that is necessary for the operation of the Business, at fees to be agreed upon after good faith negotiation between the parties. RGHI will not be in in breach of this Agreement if RGHI declines to provide a requested additional service for any good faith reason, including the failure of the Parties to agree to the scope, term, and fee for the additional service. Any such additional services so provided by RGHI shall constitute Services hereunder and be subject in all respects to the provisions of this Agreement as if fully set forth on Exhibit A as of the date hereof." ;
+    ct:source_path "cuad/ReynoldsConsumerProductsInc_20200121_S-1A_EX-10.22_11948918_EX-10.22_Service Agreement.txt" ;
+    ct:source_sha256 "0ddc8b40e5ad7b4f6b1a9d2a921cc7ab2e5d4076a4dcd2575b10b59fc2e6f6d2" ;
+    ct:start_char 8028 .
+
+ex:C075P0110 a ct:SourcePassage ;
+    ct:end_char 37494 ;
+    ct:exact_text "(a) the other Party or its Affiliates materially breaches this Agreement and such breach is not cured, to the reasonable satisfaction of the Terminating Party, within thirty (30) days of written notice thereof, it being understood that a good-faith dispute over an invoice or Service shall not constitute a material breach of this Agreement; or" ;
+    ct:source_path "cuad/ReynoldsConsumerProductsInc_20200121_S-1A_EX-10.22_11948918_EX-10.22_Service Agreement.txt" ;
+    ct:source_sha256 "0ddc8b40e5ad7b4f6b1a9d2a921cc7ab2e5d4076a4dcd2575b10b59fc2e6f6d2" ;
+    ct:start_char 37150 .
+
+ex:C075P0114 a ct:SourcePassage ;
+    ct:end_char 39252 ;
+    ct:exact_text "(b) the intellectual property license granted by Section 8.2 shall terminate; provided, however, that in the case of termination of a specific Service, such license shall terminate only to the extent such license was necessary for the provision or receipt of such Service and is not necessary for any other Service that has not yet terminated." ;
+    ct:source_path "cuad/ReynoldsConsumerProductsInc_20200121_S-1A_EX-10.22_11948918_EX-10.22_Service Agreement.txt" ;
+    ct:source_sha256 "0ddc8b40e5ad7b4f6b1a9d2a921cc7ab2e5d4076a4dcd2575b10b59fc2e6f6d2" ;
+    ct:start_char 38909 .
+
+ex:C075P0278 a ct:SourcePassage ;
+    ct:end_char 82116 ;
+    ct:exact_text "G1.4.4 Migration Services Project services to manage and execute the extraction of IT operations from the RLS managed environment(s) and enable RCP to exit this TSA, as defined in the TSA Migration Services in Section 2.1.(c). For the avoidance of doubt, this service includes all internal RGHI labor and third-party costs associated with project management and execution of all separation activities, and any license or technology acquisitions required to facilitate the establishment of RCP's new, stand-alone IT environment and the handover of same to RCP for future management. This Service cannot be terminated until such time as separation has concluded to the satisfaction of RGHI and RCP." ;
+    ct:source_path "cuad/ReynoldsConsumerProductsInc_20200121_S-1A_EX-10.22_11948918_EX-10.22_Service Agreement.txt" ;
+    ct:source_sha256 "0ddc8b40e5ad7b4f6b1a9d2a921cc7ab2e5d4076a4dcd2575b10b59fc2e6f6d2" ;
+    ct:start_char 81420 .
+
+ex:C075P0291 a ct:SourcePassage ;
+    ct:end_char 84909 ;
+    ct:exact_text "The earlier of (i) December 31, 2020 or (ii) the cessation of current Administrative Assistant's employment" ;
+    ct:source_path "cuad/ReynoldsConsumerProductsInc_20200121_S-1A_EX-10.22_11948918_EX-10.22_Service Agreement.txt" ;
+    ct:source_sha256 "0ddc8b40e5ad7b4f6b1a9d2a921cc7ab2e5d4076a4dcd2575b10b59fc2e6f6d2" ;
+    ct:start_char 84802 .
+
+ex:C075P0323 a ct:SourcePassage ;
+    ct:end_char 92365 ;
+    ct:exact_text "Provision of support services of RGHI Senior Compliance Manager related to SAP access and security risks (SOX 404). The earlier of (i) 12 months from the Commencement Date or (ii) the cessation of current Senior Compliance Manager's employment" ;
+    ct:source_path "cuad/ReynoldsConsumerProductsInc_20200121_S-1A_EX-10.22_11948918_EX-10.22_Service Agreement.txt" ;
+    ct:source_sha256 "0ddc8b40e5ad7b4f6b1a9d2a921cc7ab2e5d4076a4dcd2575b10b59fc2e6f6d2" ;
+    ct:start_char 92122 .
+
+ex:C075P0346 a ct:SourcePassage ;
+    ct:end_char 98911 ;
+    ct:exact_text "The earlier of (i) 24 months from the Commencement Date or (ii) the cessation of current Director of Transfer Pricing's employment" ;
+    ct:source_path "cuad/ReynoldsConsumerProductsInc_20200121_S-1A_EX-10.22_11948918_EX-10.22_Service Agreement.txt" ;
+    ct:source_sha256 "0ddc8b40e5ad7b4f6b1a9d2a921cc7ab2e5d4076a4dcd2575b10b59fc2e6f6d2" ;
+    ct:start_char 98781 .
+
+ex:C075P0358 a ct:SourcePassage ;
+    ct:end_char 102126 ;
+    ct:exact_text "G6.2 Travel and Expense Services - Corporate Travel Card Administration of corporate travel credit card program and purchasing \"ProCard\" credit card program for cards provided by HSBC and used by RCP employees solely for business travel and business expenses. Services include: •   Procurement of new cards and cancellation of existing cards •   Facilitating changes to credit limits •   Audits of employee expense reports for compliance with RCP's policies using current audit tools and practices •   Other services consistent with current practices RCP employees may continue to use their current HSBC credit cards under existing rules and limits. At or before the end of the Term, all cards must either be transferred to accounts established by RCP with HSBC or cancelled." ;
+    ct:source_path "cuad/ReynoldsConsumerProductsInc_20200121_S-1A_EX-10.22_11948918_EX-10.22_Service Agreement.txt" ;
+    ct:source_sha256 "0ddc8b40e5ad7b4f6b1a9d2a921cc7ab2e5d4076a4dcd2575b10b59fc2e6f6d2" ;
+    ct:start_char 101351 .
+
+ex:C075P0372 a ct:SourcePassage ;
+    ct:end_char 106544 ;
+    ct:exact_text "Service Name Description of Service Term Fee (USD) G8.3 General Services - Corporate Secretarial Provision of corporate secretarial duties and government filing assistance. To the earlier of (i) 24 months from the Commencement Date or (ii) the cessation of current Corporate Governance Paralegal's employment" ;
+    ct:source_path "cuad/ReynoldsConsumerProductsInc_20200121_S-1A_EX-10.22_11948918_EX-10.22_Service Agreement.txt" ;
+    ct:source_sha256 "0ddc8b40e5ad7b4f6b1a9d2a921cc7ab2e5d4076a4dcd2575b10b59fc2e6f6d2" ;
+    ct:start_char 106236 .
+
+ct:Agreement a owl:Class ;
+    rdfs:label "Agreement" .
+
+ex:C075P0105 a ct:SourcePassage ;
+    ct:end_char 35163 ;
+    ct:exact_text "Section 6.1 Term of Services. With respect to each of the Services, the term thereof will be for a period commencing as of the date hereof, unless a different date is specified as the commencement date for any applicable Service on Exhibit A or Exhibit B (either, a \"Commencement Date\"), and shall continue until 12 months following the Commencement Date unless (i) such other date as is specified as the termination date for any applicable Service in this Agreement or on Exhibit A or Exhibit B, as applicable (the \"Term\") or (ii) earlier terminated pursuant to this Agreement (a \"Termination Date\")." ;
+    ct:source_path "cuad/ReynoldsConsumerProductsInc_20200121_S-1A_EX-10.22_11948918_EX-10.22_Service Agreement.txt" ;
+    ct:source_sha256 "0ddc8b40e5ad7b4f6b1a9d2a921cc7ab2e5d4076a4dcd2575b10b59fc2e6f6d2" ;
+    ct:start_char 34562 .
+
+ex:C075P0106 a ct:SourcePassage ;
+    ct:end_char 36015 ;
+    ct:exact_text "Section 6.2 Termination of Services. Except as agreed by the Parties in writing or as otherwise stated in the Exhibits, Company may terminate for convenience any Transition Service, and RGHI may terminate for convenience any Reverse Transition Service, upon 30 days' prior written notice of such termination; provided, (a) that, with respect to the Services described in Section G1 of Exhibit A, unless otherwise indicated therein, those Services may not be terminated independently except in accordance with an agreed Migration Plan and, (b) any unamortized costs associated with Provider's purchase of any license or other costs incurred specifically for the purpose of providing the Services hereunder will be passed through to the Terminating Party. Upon termination of any Service pursuant to this Section 6.2, the Terminating Party's obligation" ;
+    ct:source_path "cuad/ReynoldsConsumerProductsInc_20200121_S-1A_EX-10.22_11948918_EX-10.22_Service Agreement.txt" ;
+    ct:source_sha256 "0ddc8b40e5ad7b4f6b1a9d2a921cc7ab2e5d4076a4dcd2575b10b59fc2e6f6d2" ;
+    ct:start_char 35165 .
+
+ct:Condition a owl:Class ;
+    rdfs:label "Condition" .
+
+ct:Reference a owl:Class ;
+    rdfs:label "Reference" .
+
+ct:SourcePassage a owl:Class ;
+    rdfs:label "SourcePassage" .
+
+ct:Rule a owl:Class ;
+    rdfs:label "Rule" .
+

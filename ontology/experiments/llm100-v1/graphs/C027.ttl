@@ -1,0 +1,429 @@
+@prefix ct: <https://cimulink.local/ontology/contract-terms/0.1#> .
+@prefix ex: <https://cimulink.local/ontology/llm100-v1/> .
+@prefix meta: <https://cimulink.local/ontology/extraction#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ct: a owl:Ontology ;
+    rdfs:comment "Partial five-contract development sample. No claim of complete contract coverage or legal correctness." .
+
+ct:agreement_effective_from a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:applies_within a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:calendar_date_status a owl:DatatypeProperty .
+
+ct:coverage a owl:DatatypeProperty .
+
+ct:description a owl:DatatypeProperty .
+
+ct:duration a owl:DatatypeProperty .
+
+ct:duration_status a owl:DatatypeProperty .
+
+ct:end_char a owl:DatatypeProperty .
+
+ct:end_date_status a owl:DatatypeProperty .
+
+ct:ends_on_event a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:exact_text a owl:DatatypeProperty .
+
+ct:has_party a owl:ObjectProperty ;
+    rdfs:domain ct:Agreement ;
+    rdfs:range ct:Party .
+
+ct:has_rule a owl:ObjectProperty ;
+    rdfs:domain ct:Agreement ;
+    rdfs:range ct:Rule .
+
+ct:kind a owl:DatatypeProperty .
+
+ct:notice_actor a owl:DatatypeProperty .
+
+ct:notice_form a owl:DatatypeProperty .
+
+ct:notice_period_status a owl:DatatypeProperty .
+
+ct:qualifies a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Rule .
+
+ct:references_section a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:renewal_count a owl:DatatypeProperty .
+
+ct:resolution_status a owl:DatatypeProperty .
+
+ct:resolved_to a owl:ObjectProperty ;
+    rdfs:domain ct:Reference ;
+    rdfs:range ct:SourcePassage .
+
+ct:source_path a owl:DatatypeProperty .
+
+ct:source_sha256 a owl:DatatypeProperty .
+
+ct:start_char a owl:DatatypeProperty .
+
+ct:starts_from a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:stated_end_date a owl:DatatypeProperty .
+
+ct:subject_to a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Condition .
+
+ct:supported_by a owl:ObjectProperty ;
+    rdfs:range ct:SourcePassage .
+
+ct:termination_notice a owl:DatatypeProperty .
+
+ex:C027 a ct:Agreement ;
+    rdfs:label "DYNTEKINC_07_30_1999-EX-10-ONLINE HOSTING AGREEMENT.txt" ;
+    ct:coverage "LOCAL_LLM_PROPOSED_PARTIAL; NOT_HUMAN_REVIEWED" ;
+    ct:has_rule ex:C027R0001,
+        ex:C027R0002,
+        ex:C027R0003,
+        ex:C027R0004,
+        ex:C027R0005,
+        ex:C027R0006,
+        ex:C027R0007,
+        ex:C027R0008,
+        ex:C027R0009,
+        ex:C027R0010,
+        ex:C027R0011,
+        ex:C027R0012,
+        ex:C027R0013,
+        ex:C027R0014,
+        ex:C027R0015,
+        ex:C027R0016 ;
+    ct:source_path "cuad/DYNTEKINC_07_30_1999-EX-10-ONLINE HOSTING AGREEMENT.txt" ;
+    ct:source_sha256 "75cb8dce69c94723ec13f9414fc50d7712a20574ea077674d359447edb709a14" ;
+    meta:model_digest "0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0" .
+
+ct:Party a owl:Class ;
+    rdfs:label "Party" .
+
+ex:C027P0014 a ct:SourcePassage ;
+    ct:end_char 2404 ;
+    ct:exact_text "terminated Service shall cease to accrue on and after the effective date of such termination. In the event that Diplomat terminates this Agreement other than in accordance with Section 3, Diplomat shall be obligated to pay for the Services in accordance with the fee schedule contained on EXHIBIT A throughout the balance of the Period (as hereinafter defined) as though Tadeo continued to provide the terminated Services through the balance of the Period. Late payments shall accrue interest at a rate equal to fifteen (15%) percent per annum." ;
+    ct:source_path "cuad/DYNTEKINC_07_30_1999-EX-10-ONLINE HOSTING AGREEMENT.txt" ;
+    ct:source_sha256 "75cb8dce69c94723ec13f9414fc50d7712a20574ea077674d359447edb709a14" ;
+    ct:start_char 1860 .
+
+ex:C027P0016 a ct:SourcePassage ;
+    ct:end_char 2666 ;
+    ct:exact_text "(a) The term of this Agreement shall begin on the date hereof (the \"Effective Date\") and shall continue for a period of 12 months thereafter (the \"Period\") in full force and effect until it is terminated in accordance with this Section 3." ;
+    ct:source_path "cuad/DYNTEKINC_07_30_1999-EX-10-ONLINE HOSTING AGREEMENT.txt" ;
+    ct:source_sha256 "75cb8dce69c94723ec13f9414fc50d7712a20574ea077674d359447edb709a14" ;
+    ct:start_char 2428 .
+
+ex:C027P0018 a ct:SourcePassage ;
+    ct:end_char 3273 ;
+    ct:exact_text "(c) Tadeo shall have the right (but not the obligation) to terminate this Agreement and the rights granted to Diplomat hereunder if:" ;
+    ct:source_path "cuad/DYNTEKINC_07_30_1999-EX-10-ONLINE HOSTING AGREEMENT.txt" ;
+    ct:source_sha256 "75cb8dce69c94723ec13f9414fc50d7712a20574ea077674d359447edb709a14" ;
+    ct:start_char 3141 .
+
+ex:C027P0025 a ct:SourcePassage ;
+    ct:end_char 4750 ;
+    ct:exact_text "(vi) Upon Tadeo giving Diplomat at least sixty (60) days advance written notice of termination of this Agreement." ;
+    ct:source_path "cuad/DYNTEKINC_07_30_1999-EX-10-ONLINE HOSTING AGREEMENT.txt" ;
+    ct:source_sha256 "75cb8dce69c94723ec13f9414fc50d7712a20574ea077674d359447edb709a14" ;
+    ct:start_char 4637 .
+
+ex:C027P0026 a ct:SourcePassage ;
+    ct:end_char 4884 ;
+    ct:exact_text "(d) Diplomat shall have the right (but not the obligation) to terminate this Agreement and the rights granted to Tadeo hereunder if:" ;
+    ct:source_path "cuad/DYNTEKINC_07_30_1999-EX-10-ONLINE HOSTING AGREEMENT.txt" ;
+    ct:source_sha256 "75cb8dce69c94723ec13f9414fc50d7712a20574ea077674d359447edb709a14" ;
+    ct:start_char 4752 .
+
+ex:C027P0037 a ct:SourcePassage ;
+    ct:end_char 9336 ;
+    ct:exact_text "(f) A party may exercise its right to terminate pursuant to this Section 3 by sending appropriate written notice to the other party. No exercise by a party of its rights under this Section will limit its remedies by reason of the other party's default, the party's rights to exercise any other rights under this Section 3, or any of that party's other rights." ;
+    ct:source_path "cuad/DYNTEKINC_07_30_1999-EX-10-ONLINE HOSTING AGREEMENT.txt" ;
+    ct:source_sha256 "75cb8dce69c94723ec13f9414fc50d7712a20574ea077674d359447edb709a14" ;
+    ct:start_char 8977 .
+
+ex:C027P0070 a ct:SourcePassage ;
+    ct:end_char 20804 ;
+    ct:exact_text "(f) The provisions of Sections 7, 8 and 9 hereof shall survive any termination of this Agreement." ;
+    ct:source_path "cuad/DYNTEKINC_07_30_1999-EX-10-ONLINE HOSTING AGREEMENT.txt" ;
+    ct:source_sha256 "75cb8dce69c94723ec13f9414fc50d7712a20574ea077674d359447edb709a14" ;
+    ct:start_char 20707 .
+
+ex:C027R0001 a ct:Rule ;
+    rdfs:label "Termination — source passage 12" ;
+    ct:kind "TERMINATION" ;
+    ct:references_section ex:C027R0001Ref0,
+        ex:C027R0001Ref1 ;
+    ct:subject_to ex:C027R0001Condition12 ;
+    ct:supported_by ex:C027P0012 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C027R0001Condition12 a ct:Condition ;
+    ct:description "Diplomat will pay to Tadeo when due a fee for each of the Services equal to the amount described in EXHIBIT A hereto relating to each such Service; PROVIDED, that in the event Diplomat terminates this Agreement in accordance with Section 3 hereof, the fee for the provision of each" ;
+    ct:supported_by ex:C027P0012 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C027R0001Ref0 a ct:Reference ;
+    rdfs:label "EXHIBIT A" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C027R0001Ref1 a ct:Reference ;
+    rdfs:label "Section 3" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C027R0002 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 14" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:references_section ex:C027R0002Ref0,
+        ex:C027R0002Ref1 ;
+    ct:supported_by ex:C027P0014 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C027R0002Ref0 a ct:Reference ;
+    rdfs:label "Section 3" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C027R0002Ref1 a ct:Reference ;
+    rdfs:label "EXHIBIT A" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C027R0003 a ct:Rule ;
+    rdfs:label "Initial Term — source passage 16" ;
+    ct:kind "INITIAL_TERM" ;
+    ct:references_section ex:C027R0003Ref0 ;
+    ct:supported_by ex:C027P0016 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C027R0003Ref0 a ct:Reference ;
+    rdfs:label "Section 3" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C027R0004 a ct:Rule ;
+    rdfs:label "Optional Renewal — source passage 17" ;
+    ct:kind "OPTIONAL_RENEWAL" ;
+    ct:subject_to ex:C027R0004Condition17 ;
+    ct:supported_by ex:C027P0017 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C027R0004Condition17 a ct:Condition ;
+    ct:description "(b) Diplomat or Tadeo, if such party is not in default of the terms of this Agreement, may extend the term of this Agreement for an additional one year (\"Additional Period\"), provided the extending party gives the other party at least sixty (60) days advance written notice before the end of the Period. If either party elects to extend the Agreement for the Additional Period, all other terms and conditions of this Agreement shall continue during the Additional Period." ;
+    ct:supported_by ex:C027P0017 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C027R0005 a ct:Rule ;
+    rdfs:label "Termination — source passage 18" ;
+    ct:kind "TERMINATION" ;
+    ct:supported_by ex:C027P0018 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C027R0006 a ct:Rule ;
+    rdfs:label "Termination — source passage 19" ;
+    ct:kind "TERMINATION" ;
+    ct:subject_to ex:C027R0006Condition19 ;
+    ct:supported_by ex:C027P0019 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C027R0006Condition19 a ct:Condition ;
+    ct:description "(i) Diplomat is in material breach of any of its obligations hereunder, which breach is not cured within five days of receipt of written notice from Tadeo of such breach;" ;
+    ct:supported_by ex:C027P0019 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C027R0007 a ct:Rule ;
+    rdfs:label "Termination — source passage 20" ;
+    ct:kind "TERMINATION" ;
+    ct:subject_to ex:C027R0007Condition20 ;
+    ct:supported_by ex:C027P0020 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C027R0007Condition20 a ct:Condition ;
+    ct:description "(ii) The Web Agreement is terminated by any of Tadeo, Diplomat, or any other party thereto [in the event the rights and obligations of any party(ies) to such Web Agreement have been duly assigned to a third party(ies) under the terms thereof] in accordance with the terms of the Web Agreement, but not if the Web Agreement is terminated by Tadeo or its assignee(s) other than in accordance with the terms of the Web Agreement;" ;
+    ct:supported_by ex:C027P0020 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C027R0008 a ct:Rule ;
+    rdfs:label "Termination — source passage 25" ;
+    ct:kind "TERMINATION" ;
+    ct:supported_by ex:C027P0025 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C027R0009 a ct:Rule ;
+    rdfs:label "Termination — source passage 26" ;
+    ct:kind "TERMINATION" ;
+    ct:supported_by ex:C027P0026 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C027R0010 a ct:Rule ;
+    rdfs:label "Termination — source passage 27" ;
+    ct:kind "TERMINATION" ;
+    ct:subject_to ex:C027R0010Condition27 ;
+    ct:supported_by ex:C027P0027 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C027R0010Condition27 a ct:Condition ;
+    ct:description "(i) Tadeo is in material breach of any of its obligations hereunder, which breach is not cured within five days of receipt of written notice from Diplomat of such breach;" ;
+    ct:supported_by ex:C027P0027 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C027R0011 a ct:Rule ;
+    rdfs:label "Termination — source passage 28" ;
+    ct:kind "TERMINATION" ;
+    ct:subject_to ex:C027R0011Condition28 ;
+    ct:supported_by ex:C027P0028 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C027R0011Condition28 a ct:Condition ;
+    ct:description "(ii) The Web Agreement is terminated by any of Tadeo, Diplomat, or any other party thereto [in the event the rights and obligations of any party(ies) to such Web Agreement have been duly assigned to a third party(ies) under the terms thereof] in accordance with the terms of the Web Agreement, but not if the Web Agreement is terminated by Diplomat or its assignee(s) other than in accordance with the terms of the Web Agreement;" ;
+    ct:supported_by ex:C027P0028 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C027R0012 a ct:Rule ;
+    rdfs:label "Termination — source passage 32" ;
+    ct:kind "TERMINATION" ;
+    ct:subject_to ex:C027R0012Condition32 ;
+    ct:supported_by ex:C027P0032 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C027R0012Condition32 a ct:Condition ;
+    ct:description "(vi) Upon Diplomat giving Tadeo at least sixty (60) days advance written notice of termination of this Agreement." ;
+    ct:supported_by ex:C027P0032 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C027R0013 a ct:Rule ;
+    rdfs:label "Termination — source passage 33" ;
+    ct:kind "TERMINATION" ;
+    ct:references_section ex:C027R0013Ref0 ;
+    ct:subject_to ex:C027R0013Condition33 ;
+    ct:supported_by ex:C027P0033 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C027R0013Condition33 a ct:Condition ;
+    ct:description "(e) Tadeo will have the right (but not the obligation) to terminate this Agreement and the rights granted to Diplomat hereunder, upon 60 days written notice to Diplomat, following the acquisition of all or substantially all of the assets of Diplomat by any Permitted Assignee (as defined in Section 9(a) of this Agreement), or the acquisition of the beneficial ownership of at least 20% (the \"Threshold\") of the voting power represented by the voting securities of Diplomat, any successor thereto or any Permitted Assignee by any person or" ;
+    ct:supported_by ex:C027P0033 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C027R0013Ref0 a ct:Reference ;
+    rdfs:label "Section 9(a)" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C027R0014 a ct:Rule ;
+    rdfs:label "Termination — source passage 37" ;
+    ct:kind "TERMINATION" ;
+    ct:references_section ex:C027R0014Ref0 ;
+    ct:supported_by ex:C027P0037 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C027R0014Ref0 a ct:Reference ;
+    rdfs:label "Section 3" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C027R0015 a ct:Rule ;
+    rdfs:label "Conditional Referenced Term — source passage 41" ;
+    ct:kind "CONDITIONAL_REFERENCED_TERM" ;
+    ct:subject_to ex:C027R0015Condition41 ;
+    ct:supported_by ex:C027P0041 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C027R0015Condition41 a ct:Condition ;
+    ct:description "seven days' notice to Diplomat; PROVIDED that Tadeo has cooperated with Diplomat in the examination of such books and records." ;
+    ct:supported_by ex:C027P0041 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C027R0016 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 70" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:supported_by ex:C027P0070 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C027P0012 a ct:SourcePassage ;
+    ct:end_char 1851 ;
+    ct:exact_text "Diplomat will pay to Tadeo when due a fee for each of the Services equal to the amount described in EXHIBIT A hereto relating to each such Service; PROVIDED, that in the event Diplomat terminates this Agreement in accordance with Section 3 hereof, the fee for the provision of each" ;
+    ct:source_path "cuad/DYNTEKINC_07_30_1999-EX-10-ONLINE HOSTING AGREEMENT.txt" ;
+    ct:source_sha256 "75cb8dce69c94723ec13f9414fc50d7712a20574ea077674d359447edb709a14" ;
+    ct:start_char 1570 .
+
+ex:C027P0017 a ct:SourcePassage ;
+    ct:end_char 3139 ;
+    ct:exact_text "(b) Diplomat or Tadeo, if such party is not in default of the terms of this Agreement, may extend the term of this Agreement for an additional one year (\"Additional Period\"), provided the extending party gives the other party at least sixty (60) days advance written notice before the end of the Period. If either party elects to extend the Agreement for the Additional Period, all other terms and conditions of this Agreement shall continue during the Additional Period." ;
+    ct:source_path "cuad/DYNTEKINC_07_30_1999-EX-10-ONLINE HOSTING AGREEMENT.txt" ;
+    ct:source_sha256 "75cb8dce69c94723ec13f9414fc50d7712a20574ea077674d359447edb709a14" ;
+    ct:start_char 2668 .
+
+ex:C027P0019 a ct:SourcePassage ;
+    ct:end_char 3445 ;
+    ct:exact_text "(i) Diplomat is in material breach of any of its obligations hereunder, which breach is not cured within five days of receipt of written notice from Tadeo of such breach;" ;
+    ct:source_path "cuad/DYNTEKINC_07_30_1999-EX-10-ONLINE HOSTING AGREEMENT.txt" ;
+    ct:source_sha256 "75cb8dce69c94723ec13f9414fc50d7712a20574ea077674d359447edb709a14" ;
+    ct:start_char 3275 .
+
+ex:C027P0020 a ct:SourcePassage ;
+    ct:end_char 3873 ;
+    ct:exact_text "(ii) The Web Agreement is terminated by any of Tadeo, Diplomat, or any other party thereto [in the event the rights and obligations of any party(ies) to such Web Agreement have been duly assigned to a third party(ies) under the terms thereof] in accordance with the terms of the Web Agreement, but not if the Web Agreement is terminated by Tadeo or its assignee(s) other than in accordance with the terms of the Web Agreement;" ;
+    ct:source_path "cuad/DYNTEKINC_07_30_1999-EX-10-ONLINE HOSTING AGREEMENT.txt" ;
+    ct:source_sha256 "75cb8dce69c94723ec13f9414fc50d7712a20574ea077674d359447edb709a14" ;
+    ct:start_char 3447 .
+
+ex:C027P0027 a ct:SourcePassage ;
+    ct:end_char 5056 ;
+    ct:exact_text "(i) Tadeo is in material breach of any of its obligations hereunder, which breach is not cured within five days of receipt of written notice from Diplomat of such breach;" ;
+    ct:source_path "cuad/DYNTEKINC_07_30_1999-EX-10-ONLINE HOSTING AGREEMENT.txt" ;
+    ct:source_sha256 "75cb8dce69c94723ec13f9414fc50d7712a20574ea077674d359447edb709a14" ;
+    ct:start_char 4886 .
+
+ex:C027P0028 a ct:SourcePassage ;
+    ct:end_char 5487 ;
+    ct:exact_text "(ii) The Web Agreement is terminated by any of Tadeo, Diplomat, or any other party thereto [in the event the rights and obligations of any party(ies) to such Web Agreement have been duly assigned to a third party(ies) under the terms thereof] in accordance with the terms of the Web Agreement, but not if the Web Agreement is terminated by Diplomat or its assignee(s) other than in accordance with the terms of the Web Agreement;" ;
+    ct:source_path "cuad/DYNTEKINC_07_30_1999-EX-10-ONLINE HOSTING AGREEMENT.txt" ;
+    ct:source_sha256 "75cb8dce69c94723ec13f9414fc50d7712a20574ea077674d359447edb709a14" ;
+    ct:start_char 5058 .
+
+ex:C027P0032 a ct:SourcePassage ;
+    ct:end_char 6302 ;
+    ct:exact_text "(vi) Upon Diplomat giving Tadeo at least sixty (60) days advance written notice of termination of this Agreement." ;
+    ct:source_path "cuad/DYNTEKINC_07_30_1999-EX-10-ONLINE HOSTING AGREEMENT.txt" ;
+    ct:source_sha256 "75cb8dce69c94723ec13f9414fc50d7712a20574ea077674d359447edb709a14" ;
+    ct:start_char 6189 .
+
+ex:C027P0033 a ct:SourcePassage ;
+    ct:end_char 6843 ;
+    ct:exact_text "(e) Tadeo will have the right (but not the obligation) to terminate this Agreement and the rights granted to Diplomat hereunder, upon 60 days written notice to Diplomat, following the acquisition of all or substantially all of the assets of Diplomat by any Permitted Assignee (as defined in Section 9(a) of this Agreement), or the acquisition of the beneficial ownership of at least 20% (the \"Threshold\") of the voting power represented by the voting securities of Diplomat, any successor thereto or any Permitted Assignee by any person or" ;
+    ct:source_path "cuad/DYNTEKINC_07_30_1999-EX-10-ONLINE HOSTING AGREEMENT.txt" ;
+    ct:source_sha256 "75cb8dce69c94723ec13f9414fc50d7712a20574ea077674d359447edb709a14" ;
+    ct:start_char 6304 .
+
+ex:C027P0041 a ct:SourcePassage ;
+    ct:end_char 10696 ;
+    ct:exact_text "seven days' notice to Diplomat; PROVIDED that Tadeo has cooperated with Diplomat in the examination of such books and records." ;
+    ct:source_path "cuad/DYNTEKINC_07_30_1999-EX-10-ONLINE HOSTING AGREEMENT.txt" ;
+    ct:source_sha256 "75cb8dce69c94723ec13f9414fc50d7712a20574ea077674d359447edb709a14" ;
+    ct:start_char 10570 .
+
+ct:Agreement a owl:Class ;
+    rdfs:label "Agreement" .
+
+ct:Condition a owl:Class ;
+    rdfs:label "Condition" .
+
+ct:Reference a owl:Class ;
+    rdfs:label "Reference" .
+
+ct:SourcePassage a owl:Class ;
+    rdfs:label "SourcePassage" .
+
+ct:Rule a owl:Class ;
+    rdfs:label "Rule" .
+

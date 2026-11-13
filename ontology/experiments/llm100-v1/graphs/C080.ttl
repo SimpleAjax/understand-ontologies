@@ -1,0 +1,335 @@
+@prefix ct: <https://cimulink.local/ontology/contract-terms/0.1#> .
+@prefix ex: <https://cimulink.local/ontology/llm100-v1/> .
+@prefix meta: <https://cimulink.local/ontology/extraction#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ct: a owl:Ontology ;
+    rdfs:comment "Partial five-contract development sample. No claim of complete contract coverage or legal correctness." .
+
+ct:agreement_effective_from a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:applies_within a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:calendar_date_status a owl:DatatypeProperty .
+
+ct:coverage a owl:DatatypeProperty .
+
+ct:description a owl:DatatypeProperty .
+
+ct:duration a owl:DatatypeProperty .
+
+ct:duration_status a owl:DatatypeProperty .
+
+ct:end_char a owl:DatatypeProperty .
+
+ct:end_date_status a owl:DatatypeProperty .
+
+ct:ends_on_event a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:exact_text a owl:DatatypeProperty .
+
+ct:has_party a owl:ObjectProperty ;
+    rdfs:domain ct:Agreement ;
+    rdfs:range ct:Party .
+
+ct:has_rule a owl:ObjectProperty ;
+    rdfs:domain ct:Agreement ;
+    rdfs:range ct:Rule .
+
+ct:kind a owl:DatatypeProperty .
+
+ct:notice_actor a owl:DatatypeProperty .
+
+ct:notice_form a owl:DatatypeProperty .
+
+ct:notice_period_status a owl:DatatypeProperty .
+
+ct:qualifies a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Rule .
+
+ct:references_section a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:renewal_count a owl:DatatypeProperty .
+
+ct:resolution_status a owl:DatatypeProperty .
+
+ct:resolved_to a owl:ObjectProperty ;
+    rdfs:domain ct:Reference ;
+    rdfs:range ct:SourcePassage .
+
+ct:source_path a owl:DatatypeProperty .
+
+ct:source_sha256 a owl:DatatypeProperty .
+
+ct:start_char a owl:DatatypeProperty .
+
+ct:starts_from a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:stated_end_date a owl:DatatypeProperty .
+
+ct:subject_to a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Condition .
+
+ct:supported_by a owl:ObjectProperty ;
+    rdfs:range ct:SourcePassage .
+
+ct:termination_notice a owl:DatatypeProperty .
+
+ex:C080 a ct:Agreement ;
+    rdfs:label "SUCAMPOPHARMACEUTICALS,INC_11_04_2015-EX-10.2-STRATEGIC ALLIANCE AGREEMENT.txt" ;
+    ct:coverage "LOCAL_LLM_PROPOSED_PARTIAL; NOT_HUMAN_REVIEWED" ;
+    ct:has_rule ex:C080R0001,
+        ex:C080R0002,
+        ex:C080R0003,
+        ex:C080R0004,
+        ex:C080R0005,
+        ex:C080R0006,
+        ex:C080R0007 ;
+    ct:source_path "cuad/SUCAMPOPHARMACEUTICALS,INC_11_04_2015-EX-10.2-STRATEGIC ALLIANCE AGREEMENT.txt" ;
+    ct:source_sha256 "83c8a5b6a0ee219c184a90eaffec0cf930e7ed80e4f12ce342714bc745115934" ;
+    meta:model_digest "0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0" .
+
+ct:Party a owl:Class ;
+    rdfs:label "Party" .
+
+ex:C080P0014 a ct:SourcePassage ;
+    ct:end_char 1294 ;
+    ct:exact_text "ARTICLE VI TERMINATION" ;
+    ct:source_path "cuad/SUCAMPOPHARMACEUTICALS,INC_11_04_2015-EX-10.2-STRATEGIC ALLIANCE AGREEMENT.txt" ;
+    ct:source_sha256 "83c8a5b6a0ee219c184a90eaffec0cf930e7ed80e4f12ce342714bc745115934" ;
+    ct:start_char 1272 .
+
+ex:C080P0015 a ct:SourcePassage ;
+    ct:end_char 1399 ;
+    ct:exact_text "Section 6.01 Termination 19 Section 6.02 Notice of Termination 19 Section 6.03 Effect of Termination 19" ;
+    ct:source_path "cuad/SUCAMPOPHARMACEUTICALS,INC_11_04_2015-EX-10.2-STRATEGIC ALLIANCE AGREEMENT.txt" ;
+    ct:source_sha256 "83c8a5b6a0ee219c184a90eaffec0cf930e7ed80e4f12ce342714bc745115934" ;
+    ct:start_char 1296 .
+
+ex:C080R0001 a ct:Rule ;
+    rdfs:label "Termination — source passage 14" ;
+    ct:kind "TERMINATION" ;
+    ct:references_section ex:C080R0001Ref0 ;
+    ct:supported_by ex:C080P0014 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C080R0001Ref0 a ct:Reference ;
+    rdfs:label "ARTICLE VI" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C080R0002 a ct:Rule ;
+    rdfs:label "Termination — source passage 15" ;
+    ct:kind "TERMINATION" ;
+    ct:references_section ex:C080R0002Ref0,
+        ex:C080R0002Ref1,
+        ex:C080R0002Ref2 ;
+    ct:supported_by ex:C080P0015 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C080R0002Ref0 a ct:Reference ;
+    rdfs:label "Section 6.01" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C080R0002Ref1 a ct:Reference ;
+    rdfs:label "Section 6.02" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C080R0002Ref2 a ct:Reference ;
+    rdfs:label "Section 6.03" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C080R0003 a ct:Rule ;
+    rdfs:label "Conditional Referenced Term — source passage 51" ;
+    ct:kind "CONDITIONAL_REFERENCED_TERM" ;
+    ct:references_section ex:C080R0003Ref0 ;
+    ct:subject_to ex:C080R0003Condition51 ;
+    ct:supported_by ex:C080P0051 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C080R0003Condition51 a ct:Condition ;
+    ct:description "Acquiror's obligation to commence the Offer will be subject to satisfaction (or waiver in writing by Acquiror in its sole discretion) of each of the following conditions on the Launch Date: (i) The representations and warranties of the Company set forth in Section 3.01 shall be true and correct in all material respects; (ii) The Company shall have duly performed its obligations required to be performed by it prior to the Launch Date under this Agreement; (iii) The board of directors of the Company unanimously (a) shall have made a resolution approving a statement of opinion in support of the Offer and recommending the holders of shares of Common Stock and Stock Options to tender their shares and Stock Options to the Offer, with recommendation by the independent committee of the Company, and have publicly announced such statement, and (b) have not revoked such statement; (iv) The board of directors of the Company unanimously shall have made a resolution revealing its intention to support the Squeeze-out (including the price to be offered therein) and have publicly announced such intention, and have not revoked such intention; " ;
+    ct:supported_by ex:C080P0051 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C080R0003Ref0 a ct:Reference ;
+    rdfs:label "Section 3.01" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C080R0004 a ct:Rule ;
+    rdfs:label "Conditional Referenced Term — source passage 54" ;
+    ct:kind "CONDITIONAL_REFERENCED_TERM" ;
+    ct:subject_to ex:C080R0004Condition54 ;
+    ct:supported_by ex:C080P0054 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C080R0004Condition54 a ct:Condition ;
+    ct:description "(vi) The Financing Commitment shall have been duly made and entered into by Jefferies; (vii) No temporary restraining order, preliminary or permanent injunction or other Order preventing the commencement of the Offer or the consummation of the Squeeze-out shall be in effect, and no Law shall have been enacted or shall be deemed applicable to the Offer or the Squeeze-out which makes the consummation of the Offer or the Squeeze-out illegal; (viii) All necessary consents, approvals (including, but not limited to, approval of the Financial Services Agency, Kanto Local Financial Bureau and Tokyo Stock Exchange) for the Offer shall have been obtained by Acquiror and the Company; (ix) The Company shall not have suffered a Material Adverse Effect since the Financial Statements Date; and (x) Acquiror shall have concurrently entered into a Stock Purchase Agreement with Ryuji Ueno, MD, Sachiko Kuno, S&R Technology Holdings, LLC and S&R Foundation. (c) Withdrawal of the Offer. Acquiror may withdraw the Offer upon the occurrence of any event listed in the FIEL Enforcement Ordinance and the Tender Offer Registration Statement. (d) Publication and Filing. " ;
+    ct:supported_by ex:C080P0054 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C080R0005 a ct:Rule ;
+    rdfs:label "Termination — source passage 54" ;
+    ct:kind "TERMINATION" ;
+    ct:subject_to ex:C080R0005Condition54 ;
+    ct:supported_by ex:C080P0054 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C080R0005Condition54 a ct:Condition ;
+    ct:description "(vi) The Financing Commitment shall have been duly made and entered into by Jefferies; (vii) No temporary restraining order, preliminary or permanent injunction or other Order preventing the commencement of the Offer or the consummation of the Squeeze-out shall be in effect, and no Law shall have been enacted or shall be deemed applicable to the Offer or the Squeeze-out which makes the consummation of the Offer or the Squeeze-out illegal; (viii) All necessary consents, approvals (including, but not limited to, approval of the Financial Services Agency, Kanto Local Financial Bureau and Tokyo Stock Exchange) for the Offer shall have been obtained by Acquiror and the Company; (ix) The Company shall not have suffered a Material Adverse Effect since the Financial Statements Date; and (x) Acquiror shall have concurrently entered into a Stock Purchase Agreement with Ryuji Ueno, MD, Sachiko Kuno, S&R Technology Holdings, LLC and S&R Foundation. (c) Withdrawal of the Offer. Acquiror may withdraw the Offer upon the occurrence of any event listed in the FIEL Enforcement Ordinance and the Tender Offer Registration Statement. (d) Publication and Filing. " ;
+    ct:supported_by ex:C080P0054 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C080R0006 a ct:Rule ;
+    rdfs:label "Termination — source passage 90" ;
+    ct:kind "TERMINATION" ;
+    ct:references_section ex:C080R0006Ref0,
+        ex:C080R0006Ref1,
+        ex:C080R0006Ref2,
+        ex:C080R0006Ref3,
+        ex:C080R0006Ref4,
+        ex:C080R0006Ref5,
+        ex:C080R0006Ref6,
+        ex:C080R0006Ref7 ;
+    ct:subject_to ex:C080R0006Condition90 ;
+    ct:supported_by ex:C080P0090 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C080R0006Condition90 a ct:Condition ;
+    ct:description "TERMINATION Section 6.01 Termination. This Agreement may be terminated prior to the end of the Offer Period by Acquiror if a condition for withdrawal of the Offer has occurred. This Agreement shall be automatically terminated if the Offer has been withdrawn or the Offer is not successful due to the failure of obtaining the minimum threshold. This Agreement may not be terminated after the end of the Offer Period if the Offer is successful. Section 6.02 Notice of Termination. Any Party desiring to terminate this Agreement pursuant to Section 6.01 shall give written notice of such termination to the other Party to this Agreement. Section 6.03 Effect of Termination. In the event of the termination of this Agreement as provided in Section 6.01, this Agreement shall forthwith become void and there shall be no liability on the part of any Party to this Agreement or any Financing Party except as set forth in Article V. This sentence and Section 4.07, Section 4.09, Article V and Article VIII shall survive any termination of this Agreement. ARTICLE VII" ;
+    ct:supported_by ex:C080P0090 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C080R0006Ref0 a ct:Reference ;
+    rdfs:label "Section 6.01" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C080R0006Ref1 a ct:Reference ;
+    rdfs:label "Section 6.02" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C080R0006Ref2 a ct:Reference ;
+    rdfs:label "Section 6.03" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C080R0006Ref3 a ct:Reference ;
+    rdfs:label "Article V" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C080R0006Ref4 a ct:Reference ;
+    rdfs:label "Section 4.07" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C080R0006Ref5 a ct:Reference ;
+    rdfs:label "Section 4.09" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C080R0006Ref6 a ct:Reference ;
+    rdfs:label "Article VIII" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C080R0006Ref7 a ct:Reference ;
+    rdfs:label "ARTICLE VII" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C080R0007 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 90" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:references_section ex:C080R0007Ref0,
+        ex:C080R0007Ref1,
+        ex:C080R0007Ref2,
+        ex:C080R0007Ref3,
+        ex:C080R0007Ref4,
+        ex:C080R0007Ref5,
+        ex:C080R0007Ref6,
+        ex:C080R0007Ref7 ;
+    ct:subject_to ex:C080R0007Condition90 ;
+    ct:supported_by ex:C080P0090 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C080R0007Condition90 a ct:Condition ;
+    ct:description "TERMINATION Section 6.01 Termination. This Agreement may be terminated prior to the end of the Offer Period by Acquiror if a condition for withdrawal of the Offer has occurred. This Agreement shall be automatically terminated if the Offer has been withdrawn or the Offer is not successful due to the failure of obtaining the minimum threshold. This Agreement may not be terminated after the end of the Offer Period if the Offer is successful. Section 6.02 Notice of Termination. Any Party desiring to terminate this Agreement pursuant to Section 6.01 shall give written notice of such termination to the other Party to this Agreement. Section 6.03 Effect of Termination. In the event of the termination of this Agreement as provided in Section 6.01, this Agreement shall forthwith become void and there shall be no liability on the part of any Party to this Agreement or any Financing Party except as set forth in Article V. This sentence and Section 4.07, Section 4.09, Article V and Article VIII shall survive any termination of this Agreement. ARTICLE VII" ;
+    ct:supported_by ex:C080P0090 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C080R0007Ref0 a ct:Reference ;
+    rdfs:label "Section 6.01" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C080R0007Ref1 a ct:Reference ;
+    rdfs:label "Section 6.02" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C080R0007Ref2 a ct:Reference ;
+    rdfs:label "Section 6.03" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C080R0007Ref3 a ct:Reference ;
+    rdfs:label "Article V" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C080R0007Ref4 a ct:Reference ;
+    rdfs:label "Section 4.07" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C080R0007Ref5 a ct:Reference ;
+    rdfs:label "Section 4.09" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C080R0007Ref6 a ct:Reference ;
+    rdfs:label "Article VIII" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C080R0007Ref7 a ct:Reference ;
+    rdfs:label "ARTICLE VII" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C080P0051 a ct:SourcePassage ;
+    ct:end_char 24515 ;
+    ct:exact_text "Acquiror's obligation to commence the Offer will be subject to satisfaction (or waiver in writing by Acquiror in its sole discretion) of each of the following conditions on the Launch Date: (i) The representations and warranties of the Company set forth in Section 3.01 shall be true and correct in all material respects; (ii) The Company shall have duly performed its obligations required to be performed by it prior to the Launch Date under this Agreement; (iii) The board of directors of the Company unanimously (a) shall have made a resolution approving a statement of opinion in support of the Offer and recommending the holders of shares of Common Stock and Stock Options to tender their shares and Stock Options to the Offer, with recommendation by the independent committee of the Company, and have publicly announced such statement, and (b) have not revoked such statement; (iv) The board of directors of the Company unanimously shall have made a resolution revealing its intention to support the Squeeze-out (including the price to be offered therein) and have publicly announced such intention, and have not revoked such intention; " ;
+    ct:source_path "cuad/SUCAMPOPHARMACEUTICALS,INC_11_04_2015-EX-10.2-STRATEGIC ALLIANCE AGREEMENT.txt" ;
+    ct:source_sha256 "83c8a5b6a0ee219c184a90eaffec0cf930e7ed80e4f12ce342714bc745115934" ;
+    ct:start_char 23372 .
+
+ct:Agreement a owl:Class ;
+    rdfs:label "Agreement" .
+
+ex:C080P0054 a ct:SourcePassage ;
+    ct:end_char 26203 ;
+    ct:exact_text "(vi) The Financing Commitment shall have been duly made and entered into by Jefferies; (vii) No temporary restraining order, preliminary or permanent injunction or other Order preventing the commencement of the Offer or the consummation of the Squeeze-out shall be in effect, and no Law shall have been enacted or shall be deemed applicable to the Offer or the Squeeze-out which makes the consummation of the Offer or the Squeeze-out illegal; (viii) All necessary consents, approvals (including, but not limited to, approval of the Financial Services Agency, Kanto Local Financial Bureau and Tokyo Stock Exchange) for the Offer shall have been obtained by Acquiror and the Company; (ix) The Company shall not have suffered a Material Adverse Effect since the Financial Statements Date; and (x) Acquiror shall have concurrently entered into a Stock Purchase Agreement with Ryuji Ueno, MD, Sachiko Kuno, S&R Technology Holdings, LLC and S&R Foundation. (c) Withdrawal of the Offer. Acquiror may withdraw the Offer upon the occurrence of any event listed in the FIEL Enforcement Ordinance and the Tender Offer Registration Statement. (d) Publication and Filing. " ;
+    ct:source_path "cuad/SUCAMPOPHARMACEUTICALS,INC_11_04_2015-EX-10.2-STRATEGIC ALLIANCE AGREEMENT.txt" ;
+    ct:source_sha256 "83c8a5b6a0ee219c184a90eaffec0cf930e7ed80e4f12ce342714bc745115934" ;
+    ct:start_char 25044 .
+
+ex:C080P0090 a ct:SourcePassage ;
+    ct:end_char 52325 ;
+    ct:exact_text "TERMINATION Section 6.01 Termination. This Agreement may be terminated prior to the end of the Offer Period by Acquiror if a condition for withdrawal of the Offer has occurred. This Agreement shall be automatically terminated if the Offer has been withdrawn or the Offer is not successful due to the failure of obtaining the minimum threshold. This Agreement may not be terminated after the end of the Offer Period if the Offer is successful. Section 6.02 Notice of Termination. Any Party desiring to terminate this Agreement pursuant to Section 6.01 shall give written notice of such termination to the other Party to this Agreement. Section 6.03 Effect of Termination. In the event of the termination of this Agreement as provided in Section 6.01, this Agreement shall forthwith become void and there shall be no liability on the part of any Party to this Agreement or any Financing Party except as set forth in Article V. This sentence and Section 4.07, Section 4.09, Article V and Article VIII shall survive any termination of this Agreement. ARTICLE VII" ;
+    ct:source_path "cuad/SUCAMPOPHARMACEUTICALS,INC_11_04_2015-EX-10.2-STRATEGIC ALLIANCE AGREEMENT.txt" ;
+    ct:source_sha256 "83c8a5b6a0ee219c184a90eaffec0cf930e7ed80e4f12ce342714bc745115934" ;
+    ct:start_char 51267 .
+
+ct:Condition a owl:Class ;
+    rdfs:label "Condition" .
+
+ct:SourcePassage a owl:Class ;
+    rdfs:label "SourcePassage" .
+
+ct:Rule a owl:Class ;
+    rdfs:label "Rule" .
+
+ct:Reference a owl:Class ;
+    rdfs:label "Reference" .
+

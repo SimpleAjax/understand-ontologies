@@ -1,0 +1,1330 @@
+{
+  "independent_score_checks": 417,
+  "all_passed": true,
+  "budget_max": 6000,
+  "all_graph_seal_hashes_verified": true,
+  "ontology_incomplete_recall_questions": 30,
+  "nonexclusive_failure_counts": {
+    "gold_not_fully_present_in_extracted_evidence": 6,
+    "ranking_top5_or_character_budget_loses_available_gold": 22,
+    "topic_kind_filter_removes_gold_evidence": 7
+  },
+  "diagnostics": [
+    {
+      "source_index": 10,
+      "document_id": "C034",
+      "topic": "expiry",
+      "extracted_evidence_ceiling": 1.0,
+      "selected_kind_ceiling": 1.0,
+      "actual_recall": 1.0,
+      "causes": []
+    },
+    {
+      "source_index": 11,
+      "document_id": "C034",
+      "topic": "renewal",
+      "extracted_evidence_ceiling": 1.0,
+      "selected_kind_ceiling": 1.0,
+      "actual_recall": 1.0,
+      "causes": []
+    },
+    {
+      "source_index": 12,
+      "document_id": "C034",
+      "topic": "renewal_notice",
+      "extracted_evidence_ceiling": 1.0,
+      "selected_kind_ceiling": 1.0,
+      "actual_recall": 1.0,
+      "causes": []
+    },
+    {
+      "source_index": 30,
+      "document_id": "C040",
+      "topic": "expiry",
+      "extracted_evidence_ceiling": 1.0,
+      "selected_kind_ceiling": 1.0,
+      "actual_recall": 1.0,
+      "causes": []
+    },
+    {
+      "source_index": 31,
+      "document_id": "C040",
+      "topic": "renewal",
+      "extracted_evidence_ceiling": 1.0,
+      "selected_kind_ceiling": 1.0,
+      "actual_recall": 1.0,
+      "causes": []
+    },
+    {
+      "source_index": 32,
+      "document_id": "C040",
+      "topic": "renewal_notice",
+      "extracted_evidence_ceiling": 1.0,
+      "selected_kind_ceiling": 1.0,
+      "actual_recall": 1.0,
+      "causes": []
+    },
+    {
+      "source_index": 129,
+      "document_id": "C033",
+      "topic": "expiry",
+      "extracted_evidence_ceiling": 1.0,
+      "selected_kind_ceiling": 1.0,
+      "actual_recall": 1.0,
+      "causes": []
+    },
+    {
+      "source_index": 192,
+      "document_id": "C050",
+      "topic": "expiry",
+      "extracted_evidence_ceiling": 1.0,
+      "selected_kind_ceiling": 1.0,
+      "actual_recall": 1.0,
+      "causes": []
+    },
+    {
+      "source_index": 268,
+      "document_id": "C067",
+      "topic": "expiry",
+      "extracted_evidence_ceiling": 1.0,
+      "selected_kind_ceiling": 1.0,
+      "actual_recall": 1.0,
+      "causes": []
+    },
+    {
+      "source_index": 269,
+      "document_id": "C067",
+      "topic": "renewal",
+      "extracted_evidence_ceiling": 0.6585956416464891,
+      "selected_kind_ceiling": 0.6585956416464891,
+      "actual_recall": 0.6585956416464891,
+      "causes": [
+        "gold_not_fully_present_in_extracted_evidence"
+      ]
+    },
+    {
+      "source_index": 373,
+      "document_id": "C091",
+      "topic": "expiry",
+      "extracted_evidence_ceiling": 1.0,
+      "selected_kind_ceiling": 1.0,
+      "actual_recall": 1.0,
+      "causes": []
+    },
+    {
+      "source_index": 404,
+      "document_id": "C048",
+      "topic": "expiry",
+      "extracted_evidence_ceiling": 1.0,
+      "selected_kind_ceiling": 1.0,
+      "actual_recall": 1.0,
+      "causes": []
+    },
+    {
+      "source_index": 424,
+      "document_id": "C052",
+      "topic": "expiry",
+      "extracted_evidence_ceiling": 1.0,
+      "selected_kind_ceiling": 1.0,
+      "actual_recall": 1.0,
+      "causes": []
+    },
+    {
+      "source_index": 425,
+      "document_id": "C052",
+      "topic": "renewal",
+      "extracted_evidence_ceiling": 1.0,
+      "selected_kind_ceiling": 1.0,
+      "actual_recall": 1.0,
+      "causes": []
+    },
+    {
+      "source_index": 426,
+      "document_id": "C052",
+      "topic": "renewal_notice",
+      "extracted_evidence_ceiling": 1.0,
+      "selected_kind_ceiling": 1.0,
+      "actual_recall": 1.0,
+      "causes": []
+    },
+    {
+      "source_index": 512,
+      "document_id": "C037",
+      "topic": "renewal",
+      "extracted_evidence_ceiling": 1.0,
+      "selected_kind_ceiling": 1.0,
+      "actual_recall": 1.0,
+      "causes": []
+    },
+    {
+      "source_index": 513,
+      "document_id": "C037",
+      "topic": "renewal_notice",
+      "extracted_evidence_ceiling": 1.0,
+      "selected_kind_ceiling": 1.0,
+      "actual_recall": 1.0,
+      "causes": []
+    },
+    {
+      "source_index": 644,
+      "document_id": "C041",
+      "topic": "expiry",
+      "extracted_evidence_ceiling": 1.0,
+      "selected_kind_ceiling": 1.0,
+      "actual_recall": 0.0,
+      "causes": [
+        "ranking_top5_or_character_budget_loses_available_gold"
+      ]
+    },
+    {
+      "source_index": 663,
+      "document_id": "C075",
+      "topic": "expiry",
+      "extracted_evidence_ceiling": 1.0,
+      "selected_kind_ceiling": 1.0,
+      "actual_recall": 1.0,
+      "causes": []
+    },
+    {
+      "source_index": 682,
+      "document_id": "C008",
+      "topic": "expiry",
+      "extracted_evidence_ceiling": 1.0,
+      "selected_kind_ceiling": 1.0,
+      "actual_recall": 1.0,
+      "causes": []
+    },
+    {
+      "source_index": 713,
+      "document_id": "C038",
+      "topic": "expiry",
+      "extracted_evidence_ceiling": 1.0,
+      "selected_kind_ceiling": 1.0,
+      "actual_recall": 1.0,
+      "causes": []
+    },
+    {
+      "source_index": 733,
+      "document_id": "C096",
+      "topic": "expiry",
+      "extracted_evidence_ceiling": 1.0,
+      "selected_kind_ceiling": 0.0,
+      "actual_recall": 0.0,
+      "causes": [
+        "topic_kind_filter_removes_gold_evidence"
+      ]
+    },
+    {
+      "source_index": 758,
+      "document_id": "C055",
+      "topic": "expiry",
+      "extracted_evidence_ceiling": 1.0,
+      "selected_kind_ceiling": 1.0,
+      "actual_recall": 1.0,
+      "causes": []
+    },
+    {
+      "source_index": 793,
+      "document_id": "C073",
+      "topic": "expiry",
+      "extracted_evidence_ceiling": 1.0,
+      "selected_kind_ceiling": 1.0,
+      "actual_recall": 1.0,
+      "causes": []
+    },
+    {
+      "source_index": 794,
+      "document_id": "C073",
+      "topic": "renewal",
+      "extracted_evidence_ceiling": 1.0,
+      "selected_kind_ceiling": 0.0,
+      "actual_recall": 0.0,
+      "causes": [
+        "topic_kind_filter_removes_gold_evidence"
+      ]
+    },
+    {
+      "source_index": 795,
+      "document_id": "C073",
+      "topic": "renewal_notice",
+      "extracted_evidence_ceiling": 1.0,
+      "selected_kind_ceiling": 1.0,
+      "actual_recall": 1.0,
+      "causes": []
+    },
+    {
+      "source_index": 838,
+      "document_id": "C047",
+      "topic": "expiry",
+      "extracted_evidence_ceiling": 1.0,
+      "selected_kind_ceiling": 1.0,
+      "actual_recall": 1.0,
+      "causes": []
+    },
+    {
+      "source_index": 889,
+      "document_id": "C056",
+      "topic": "expiry",
+      "extracted_evidence_ceiling": 1.0,
+      "selected_kind_ceiling": 1.0,
+      "actual_recall": 1.0,
+      "causes": []
+    },
+    {
+      "source_index": 890,
+      "document_id": "C056",
+      "topic": "renewal",
+      "extracted_evidence_ceiling": 1.0,
+      "selected_kind_ceiling": 1.0,
+      "actual_recall": 1.0,
+      "causes": []
+    },
+    {
+      "source_index": 976,
+      "document_id": "C024",
+      "topic": "expiry",
+      "extracted_evidence_ceiling": 1.0,
+      "selected_kind_ceiling": 1.0,
+      "actual_recall": 1.0,
+      "causes": []
+    },
+    {
+      "source_index": 982,
+      "document_id": "C029",
+      "topic": "expiry",
+      "extracted_evidence_ceiling": 1.0,
+      "selected_kind_ceiling": 1.0,
+      "actual_recall": 0.0,
+      "causes": [
+        "ranking_top5_or_character_budget_loses_available_gold"
+      ]
+    },
+    {
+      "source_index": 1018,
+      "document_id": "C083",
+      "topic": "expiry",
+      "extracted_evidence_ceiling": 1.0,
+      "selected_kind_ceiling": 1.0,
+      "actual_recall": 1.0,
+      "causes": []
+    },
+    {
+      "source_index": 1019,
+      "document_id": "C083",
+      "topic": "renewal",
+      "extracted_evidence_ceiling": 1.0,
+      "selected_kind_ceiling": 1.0,
+      "actual_recall": 1.0,
+      "causes": []
+    },
+    {
+      "source_index": 1026,
+      "document_id": "C087",
+      "topic": "expiry",
+      "extracted_evidence_ceiling": 1.0,
+      "selected_kind_ceiling": 1.0,
+      "actual_recall": 1.0,
+      "causes": []
+    },
+    {
+      "source_index": 1048,
+      "document_id": "C088",
+      "topic": "expiry",
+      "extracted_evidence_ceiling": 1.0,
+      "selected_kind_ceiling": 1.0,
+      "actual_recall": 1.0,
+      "causes": []
+    },
+    {
+      "source_index": 1049,
+      "document_id": "C088",
+      "topic": "renewal",
+      "extracted_evidence_ceiling": 1.0,
+      "selected_kind_ceiling": 1.0,
+      "actual_recall": 1.0,
+      "causes": []
+    },
+    {
+      "source_index": 1050,
+      "document_id": "C088",
+      "topic": "renewal_notice",
+      "extracted_evidence_ceiling": 1.0,
+      "selected_kind_ceiling": 1.0,
+      "actual_recall": 1.0,
+      "causes": []
+    },
+    {
+      "source_index": 1071,
+      "document_id": "C018",
+      "topic": "expiry",
+      "extracted_evidence_ceiling": 1.0,
+      "selected_kind_ceiling": 1.0,
+      "actual_recall": 1.0,
+      "causes": []
+    },
+    {
+      "source_index": 1137,
+      "document_id": "C009",
+      "topic": "expiry",
+      "extracted_evidence_ceiling": 1.0,
+      "selected_kind_ceiling": 1.0,
+      "actual_recall": 1.0,
+      "causes": []
+    },
+    {
+      "source_index": 1138,
+      "document_id": "C009",
+      "topic": "renewal",
+      "extracted_evidence_ceiling": 1.0,
+      "selected_kind_ceiling": 1.0,
+      "actual_recall": 1.0,
+      "causes": []
+    },
+    {
+      "source_index": 1173,
+      "document_id": "C023",
+      "topic": "expiry",
+      "extracted_evidence_ceiling": 1.0,
+      "selected_kind_ceiling": 1.0,
+      "actual_recall": 0.0,
+      "causes": [
+        "ranking_top5_or_character_budget_loses_available_gold"
+      ]
+    },
+    {
+      "source_index": 1174,
+      "document_id": "C023",
+      "topic": "renewal",
+      "extracted_evidence_ceiling": 1.0,
+      "selected_kind_ceiling": 1.0,
+      "actual_recall": 1.0,
+      "causes": []
+    },
+    {
+      "source_index": 1295,
+      "document_id": "C069",
+      "topic": "expiry",
+      "extracted_evidence_ceiling": 1.0,
+      "selected_kind_ceiling": 1.0,
+      "actual_recall": 1.0,
+      "causes": []
+    },
+    {
+      "source_index": 1375,
+      "document_id": "C028",
+      "topic": "expiry",
+      "extracted_evidence_ceiling": 1.0,
+      "selected_kind_ceiling": 1.0,
+      "actual_recall": 0.08135593220338982,
+      "causes": [
+        "ranking_top5_or_character_budget_loses_available_gold"
+      ]
+    },
+    {
+      "source_index": 1376,
+      "document_id": "C028",
+      "topic": "renewal",
+      "extracted_evidence_ceiling": 1.0,
+      "selected_kind_ceiling": 1.0,
+      "actual_recall": 1.0,
+      "causes": []
+    },
+    {
+      "source_index": 1377,
+      "document_id": "C028",
+      "topic": "renewal_notice",
+      "extracted_evidence_ceiling": 1.0,
+      "selected_kind_ceiling": 1.0,
+      "actual_recall": 1.0,
+      "causes": []
+    },
+    {
+      "source_index": 1393,
+      "document_id": "C049",
+      "topic": "expiry",
+      "extracted_evidence_ceiling": 1.0,
+      "selected_kind_ceiling": 1.0,
+      "actual_recall": 1.0,
+      "causes": []
+    },
+    {
+      "source_index": 1413,
+      "document_id": "C066",
+      "topic": "expiry",
+      "extracted_evidence_ceiling": 1.0,
+      "selected_kind_ceiling": 1.0,
+      "actual_recall": 1.0,
+      "causes": []
+    },
+    {
+      "source_index": 1414,
+      "document_id": "C066",
+      "topic": "renewal",
+      "extracted_evidence_ceiling": 1.0,
+      "selected_kind_ceiling": 1.0,
+      "actual_recall": 1.0,
+      "causes": []
+    },
+    {
+      "source_index": 1415,
+      "document_id": "C066",
+      "topic": "renewal_notice",
+      "extracted_evidence_ceiling": 1.0,
+      "selected_kind_ceiling": 1.0,
+      "actual_recall": 1.0,
+      "causes": []
+    },
+    {
+      "source_index": 1430,
+      "document_id": "C074",
+      "topic": "expiry",
+      "extracted_evidence_ceiling": 1.0,
+      "selected_kind_ceiling": 1.0,
+      "actual_recall": 0.0,
+      "causes": [
+        "ranking_top5_or_character_budget_loses_available_gold"
+      ]
+    },
+    {
+      "source_index": 1431,
+      "document_id": "C074",
+      "topic": "renewal",
+      "extracted_evidence_ceiling": 1.0,
+      "selected_kind_ceiling": 1.0,
+      "actual_recall": 1.0,
+      "causes": []
+    },
+    {
+      "source_index": 1444,
+      "document_id": "C099",
+      "topic": "expiry",
+      "extracted_evidence_ceiling": 1.0,
+      "selected_kind_ceiling": 1.0,
+      "actual_recall": 0.0,
+      "causes": [
+        "ranking_top5_or_character_budget_loses_available_gold"
+      ]
+    },
+    {
+      "source_index": 1445,
+      "document_id": "C099",
+      "topic": "renewal",
+      "extracted_evidence_ceiling": 1.0,
+      "selected_kind_ceiling": 1.0,
+      "actual_recall": 1.0,
+      "causes": []
+    },
+    {
+      "source_index": 1448,
+      "document_id": "C095",
+      "topic": "expiry",
+      "extracted_evidence_ceiling": 1.0,
+      "selected_kind_ceiling": 1.0,
+      "actual_recall": 1.0,
+      "causes": []
+    },
+    {
+      "source_index": 1456,
+      "document_id": "C082",
+      "topic": "expiry",
+      "extracted_evidence_ceiling": 1.0,
+      "selected_kind_ceiling": 1.0,
+      "actual_recall": 1.0,
+      "causes": []
+    },
+    {
+      "source_index": 1457,
+      "document_id": "C070",
+      "topic": "expiry",
+      "extracted_evidence_ceiling": 1.0,
+      "selected_kind_ceiling": 1.0,
+      "actual_recall": 1.0,
+      "causes": []
+    },
+    {
+      "source_index": 1567,
+      "document_id": "C068",
+      "topic": "expiry",
+      "extracted_evidence_ceiling": 1.0,
+      "selected_kind_ceiling": 1.0,
+      "actual_recall": 1.0,
+      "causes": []
+    },
+    {
+      "source_index": 1568,
+      "document_id": "C068",
+      "topic": "renewal",
+      "extracted_evidence_ceiling": 1.0,
+      "selected_kind_ceiling": 1.0,
+      "actual_recall": 1.0,
+      "causes": []
+    },
+    {
+      "source_index": 1619,
+      "document_id": "C078",
+      "topic": "expiry",
+      "extracted_evidence_ceiling": 1.0,
+      "selected_kind_ceiling": 1.0,
+      "actual_recall": 1.0,
+      "causes": []
+    },
+    {
+      "source_index": 1633,
+      "document_id": "C079",
+      "topic": "expiry",
+      "extracted_evidence_ceiling": 1.0,
+      "selected_kind_ceiling": 1.0,
+      "actual_recall": 1.0,
+      "causes": []
+    },
+    {
+      "source_index": 1634,
+      "document_id": "C079",
+      "topic": "renewal",
+      "extracted_evidence_ceiling": 1.0,
+      "selected_kind_ceiling": 1.0,
+      "actual_recall": 1.0,
+      "causes": []
+    },
+    {
+      "source_index": 1635,
+      "document_id": "C079",
+      "topic": "renewal_notice",
+      "extracted_evidence_ceiling": 1.0,
+      "selected_kind_ceiling": 1.0,
+      "actual_recall": 1.0,
+      "causes": []
+    },
+    {
+      "source_index": 1658,
+      "document_id": "C025",
+      "topic": "expiry",
+      "extracted_evidence_ceiling": 1.0,
+      "selected_kind_ceiling": 1.0,
+      "actual_recall": 1.0,
+      "causes": []
+    },
+    {
+      "source_index": 1686,
+      "document_id": "C022",
+      "topic": "expiry",
+      "extracted_evidence_ceiling": 1.0,
+      "selected_kind_ceiling": 1.0,
+      "actual_recall": 1.0,
+      "causes": []
+    },
+    {
+      "source_index": 1738,
+      "document_id": "C027",
+      "topic": "expiry",
+      "extracted_evidence_ceiling": 1.0,
+      "selected_kind_ceiling": 1.0,
+      "actual_recall": 1.0,
+      "causes": []
+    },
+    {
+      "source_index": 1739,
+      "document_id": "C027",
+      "topic": "renewal",
+      "extracted_evidence_ceiling": 1.0,
+      "selected_kind_ceiling": 1.0,
+      "actual_recall": 1.0,
+      "causes": []
+    },
+    {
+      "source_index": 1817,
+      "document_id": "C060",
+      "topic": "expiry",
+      "extracted_evidence_ceiling": 1.0,
+      "selected_kind_ceiling": 1.0,
+      "actual_recall": 1.0,
+      "causes": []
+    },
+    {
+      "source_index": 1823,
+      "document_id": "C063",
+      "topic": "expiry",
+      "extracted_evidence_ceiling": 1.0,
+      "selected_kind_ceiling": 1.0,
+      "actual_recall": 1.0,
+      "causes": []
+    },
+    {
+      "source_index": 1841,
+      "document_id": "C064",
+      "topic": "expiry",
+      "extracted_evidence_ceiling": 1.0,
+      "selected_kind_ceiling": 1.0,
+      "actual_recall": 1.0,
+      "causes": []
+    },
+    {
+      "source_index": 1861,
+      "document_id": "C094",
+      "topic": "expiry",
+      "extracted_evidence_ceiling": 1.0,
+      "selected_kind_ceiling": 0.0,
+      "actual_recall": 0.0,
+      "causes": [
+        "topic_kind_filter_removes_gold_evidence"
+      ]
+    },
+    {
+      "source_index": 1866,
+      "document_id": "C015",
+      "topic": "expiry",
+      "extracted_evidence_ceiling": 1.0,
+      "selected_kind_ceiling": 1.0,
+      "actual_recall": 1.0,
+      "causes": []
+    },
+    {
+      "source_index": 1875,
+      "document_id": "C072",
+      "topic": "expiry",
+      "extracted_evidence_ceiling": 1.0,
+      "selected_kind_ceiling": 1.0,
+      "actual_recall": 1.0,
+      "causes": []
+    },
+    {
+      "source_index": 1876,
+      "document_id": "C072",
+      "topic": "renewal",
+      "extracted_evidence_ceiling": 1.0,
+      "selected_kind_ceiling": 1.0,
+      "actual_recall": 1.0,
+      "causes": []
+    },
+    {
+      "source_index": 1995,
+      "document_id": "C046",
+      "topic": "expiry",
+      "extracted_evidence_ceiling": 1.0,
+      "selected_kind_ceiling": 1.0,
+      "actual_recall": 1.0,
+      "causes": []
+    },
+    {
+      "source_index": 2019,
+      "document_id": "C090",
+      "topic": "expiry",
+      "extracted_evidence_ceiling": 1.0,
+      "selected_kind_ceiling": 1.0,
+      "actual_recall": 1.0,
+      "causes": []
+    },
+    {
+      "source_index": 2035,
+      "document_id": "C017",
+      "topic": "expiry",
+      "extracted_evidence_ceiling": 1.0,
+      "selected_kind_ceiling": 1.0,
+      "actual_recall": 1.0,
+      "causes": []
+    },
+    {
+      "source_index": 2036,
+      "document_id": "C017",
+      "topic": "renewal",
+      "extracted_evidence_ceiling": 1.0,
+      "selected_kind_ceiling": 1.0,
+      "actual_recall": 1.0,
+      "causes": []
+    },
+    {
+      "source_index": 2037,
+      "document_id": "C017",
+      "topic": "renewal_notice",
+      "extracted_evidence_ceiling": 1.0,
+      "selected_kind_ceiling": 1.0,
+      "actual_recall": 1.0,
+      "causes": []
+    },
+    {
+      "source_index": 2059,
+      "document_id": "C030",
+      "topic": "expiry",
+      "extracted_evidence_ceiling": 1.0,
+      "selected_kind_ceiling": 1.0,
+      "actual_recall": 1.0,
+      "causes": []
+    },
+    {
+      "source_index": 2060,
+      "document_id": "C030",
+      "topic": "renewal",
+      "extracted_evidence_ceiling": 1.0,
+      "selected_kind_ceiling": 1.0,
+      "actual_recall": 1.0,
+      "causes": []
+    },
+    {
+      "source_index": 2159,
+      "document_id": "C007",
+      "topic": "expiry",
+      "extracted_evidence_ceiling": 1.0,
+      "selected_kind_ceiling": 1.0,
+      "actual_recall": 1.0,
+      "causes": []
+    },
+    {
+      "source_index": 2160,
+      "document_id": "C007",
+      "topic": "renewal",
+      "extracted_evidence_ceiling": 1.0,
+      "selected_kind_ceiling": 1.0,
+      "actual_recall": 1.0,
+      "causes": []
+    },
+    {
+      "source_index": 2161,
+      "document_id": "C007",
+      "topic": "renewal_notice",
+      "extracted_evidence_ceiling": 1.0,
+      "selected_kind_ceiling": 1.0,
+      "actual_recall": 1.0,
+      "causes": []
+    },
+    {
+      "source_index": 2198,
+      "document_id": "C011",
+      "topic": "expiry",
+      "extracted_evidence_ceiling": 1.0,
+      "selected_kind_ceiling": 1.0,
+      "actual_recall": 1.0,
+      "causes": []
+    },
+    {
+      "source_index": 2292,
+      "document_id": "C026",
+      "topic": "expiry",
+      "extracted_evidence_ceiling": 1.0,
+      "selected_kind_ceiling": 1.0,
+      "actual_recall": 1.0,
+      "causes": []
+    },
+    {
+      "source_index": 2316,
+      "document_id": "C020",
+      "topic": "expiry",
+      "extracted_evidence_ceiling": 0.5849056603773585,
+      "selected_kind_ceiling": 0.5849056603773585,
+      "actual_recall": 0.5849056603773585,
+      "causes": [
+        "gold_not_fully_present_in_extracted_evidence"
+      ]
+    },
+    {
+      "source_index": 2317,
+      "document_id": "C020",
+      "topic": "renewal_notice",
+      "extracted_evidence_ceiling": 0.9795539033457249,
+      "selected_kind_ceiling": 0.9795539033457249,
+      "actual_recall": 0.5520446096654275,
+      "causes": [
+        "gold_not_fully_present_in_extracted_evidence",
+        "ranking_top5_or_character_budget_loses_available_gold"
+      ]
+    },
+    {
+      "source_index": 2388,
+      "document_id": "C006",
+      "topic": "expiry",
+      "extracted_evidence_ceiling": 1.0,
+      "selected_kind_ceiling": 1.0,
+      "actual_recall": 1.0,
+      "causes": []
+    },
+    {
+      "source_index": 2429,
+      "document_id": "C077",
+      "topic": "expiry",
+      "extracted_evidence_ceiling": 1.0,
+      "selected_kind_ceiling": 1.0,
+      "actual_recall": 1.0,
+      "causes": []
+    },
+    {
+      "source_index": 2430,
+      "document_id": "C077",
+      "topic": "renewal",
+      "extracted_evidence_ceiling": 1.0,
+      "selected_kind_ceiling": 1.0,
+      "actual_recall": 1.0,
+      "causes": []
+    },
+    {
+      "source_index": 2431,
+      "document_id": "C077",
+      "topic": "renewal_notice",
+      "extracted_evidence_ceiling": 1.0,
+      "selected_kind_ceiling": 1.0,
+      "actual_recall": 1.0,
+      "causes": []
+    },
+    {
+      "source_index": 2437,
+      "document_id": "C005",
+      "topic": "expiry",
+      "extracted_evidence_ceiling": 1.0,
+      "selected_kind_ceiling": 1.0,
+      "actual_recall": 1.0,
+      "causes": []
+    },
+    {
+      "source_index": 2440,
+      "document_id": "C097",
+      "topic": "expiry",
+      "extracted_evidence_ceiling": 1.0,
+      "selected_kind_ceiling": 1.0,
+      "actual_recall": 1.0,
+      "causes": []
+    },
+    {
+      "source_index": 2562,
+      "document_id": "C035",
+      "topic": "expiry",
+      "extracted_evidence_ceiling": 1.0,
+      "selected_kind_ceiling": 1.0,
+      "actual_recall": 1.0,
+      "causes": []
+    },
+    {
+      "source_index": 2589,
+      "document_id": "C059",
+      "topic": "expiry",
+      "extracted_evidence_ceiling": 1.0,
+      "selected_kind_ceiling": 1.0,
+      "actual_recall": 1.0,
+      "causes": []
+    },
+    {
+      "source_index": 2590,
+      "document_id": "C059",
+      "topic": "renewal",
+      "extracted_evidence_ceiling": 1.0,
+      "selected_kind_ceiling": 1.0,
+      "actual_recall": 1.0,
+      "causes": []
+    },
+    {
+      "source_index": 2614,
+      "document_id": "C031",
+      "topic": "expiry",
+      "extracted_evidence_ceiling": 1.0,
+      "selected_kind_ceiling": 1.0,
+      "actual_recall": 0.0,
+      "causes": [
+        "ranking_top5_or_character_budget_loses_available_gold"
+      ]
+    },
+    {
+      "source_index": 2615,
+      "document_id": "C031",
+      "topic": "renewal",
+      "extracted_evidence_ceiling": 1.0,
+      "selected_kind_ceiling": 1.0,
+      "actual_recall": 1.0,
+      "causes": []
+    },
+    {
+      "source_index": 2616,
+      "document_id": "C031",
+      "topic": "renewal_notice",
+      "extracted_evidence_ceiling": 1.0,
+      "selected_kind_ceiling": 1.0,
+      "actual_recall": 1.0,
+      "causes": []
+    },
+    {
+      "source_index": 2646,
+      "document_id": "C051",
+      "topic": "expiry",
+      "extracted_evidence_ceiling": 1.0,
+      "selected_kind_ceiling": 1.0,
+      "actual_recall": 1.0,
+      "causes": []
+    },
+    {
+      "source_index": 2647,
+      "document_id": "C051",
+      "topic": "renewal",
+      "extracted_evidence_ceiling": 1.0,
+      "selected_kind_ceiling": 1.0,
+      "actual_recall": 1.0,
+      "causes": []
+    },
+    {
+      "source_index": 2648,
+      "document_id": "C051",
+      "topic": "renewal_notice",
+      "extracted_evidence_ceiling": 1.0,
+      "selected_kind_ceiling": 1.0,
+      "actual_recall": 0.0,
+      "causes": [
+        "ranking_top5_or_character_budget_loses_available_gold"
+      ]
+    },
+    {
+      "source_index": 2696,
+      "document_id": "C012",
+      "topic": "expiry",
+      "extracted_evidence_ceiling": 1.0,
+      "selected_kind_ceiling": 0.0,
+      "actual_recall": 0.0,
+      "causes": [
+        "topic_kind_filter_removes_gold_evidence"
+      ]
+    },
+    {
+      "source_index": 2736,
+      "document_id": "C021",
+      "topic": "expiry",
+      "extracted_evidence_ceiling": 1.0,
+      "selected_kind_ceiling": 1.0,
+      "actual_recall": 1.0,
+      "causes": []
+    },
+    {
+      "source_index": 2869,
+      "document_id": "C065",
+      "topic": "expiry",
+      "extracted_evidence_ceiling": 1.0,
+      "selected_kind_ceiling": 1.0,
+      "actual_recall": 0.0,
+      "causes": [
+        "ranking_top5_or_character_budget_loses_available_gold"
+      ]
+    },
+    {
+      "source_index": 2870,
+      "document_id": "C065",
+      "topic": "renewal",
+      "extracted_evidence_ceiling": 1.0,
+      "selected_kind_ceiling": 1.0,
+      "actual_recall": 1.0,
+      "causes": []
+    },
+    {
+      "source_index": 2871,
+      "document_id": "C065",
+      "topic": "renewal_notice",
+      "extracted_evidence_ceiling": 1.0,
+      "selected_kind_ceiling": 1.0,
+      "actual_recall": 1.0,
+      "causes": []
+    },
+    {
+      "source_index": 2909,
+      "document_id": "C086",
+      "topic": "expiry",
+      "extracted_evidence_ceiling": 1.0,
+      "selected_kind_ceiling": 1.0,
+      "actual_recall": 1.0,
+      "causes": []
+    },
+    {
+      "source_index": 2910,
+      "document_id": "C086",
+      "topic": "renewal",
+      "extracted_evidence_ceiling": 1.0,
+      "selected_kind_ceiling": 1.0,
+      "actual_recall": 1.0,
+      "causes": []
+    },
+    {
+      "source_index": 2988,
+      "document_id": "C036",
+      "topic": "expiry",
+      "extracted_evidence_ceiling": 1.0,
+      "selected_kind_ceiling": 1.0,
+      "actual_recall": 0.0,
+      "causes": [
+        "ranking_top5_or_character_budget_loses_available_gold"
+      ]
+    },
+    {
+      "source_index": 3042,
+      "document_id": "C019",
+      "topic": "expiry",
+      "extracted_evidence_ceiling": 1.0,
+      "selected_kind_ceiling": 1.0,
+      "actual_recall": 0.0,
+      "causes": [
+        "ranking_top5_or_character_budget_loses_available_gold"
+      ]
+    },
+    {
+      "source_index": 3086,
+      "document_id": "C100",
+      "topic": "expiry",
+      "extracted_evidence_ceiling": 1.0,
+      "selected_kind_ceiling": 1.0,
+      "actual_recall": 1.0,
+      "causes": []
+    },
+    {
+      "source_index": 3104,
+      "document_id": "C001",
+      "topic": "expiry",
+      "extracted_evidence_ceiling": 1.0,
+      "selected_kind_ceiling": 1.0,
+      "actual_recall": 1.0,
+      "causes": []
+    },
+    {
+      "source_index": 3112,
+      "document_id": "C016",
+      "topic": "expiry",
+      "extracted_evidence_ceiling": 1.0,
+      "selected_kind_ceiling": 1.0,
+      "actual_recall": 1.0,
+      "causes": []
+    },
+    {
+      "source_index": 3113,
+      "document_id": "C016",
+      "topic": "renewal",
+      "extracted_evidence_ceiling": 1.0,
+      "selected_kind_ceiling": 1.0,
+      "actual_recall": 1.0,
+      "causes": []
+    },
+    {
+      "source_index": 3148,
+      "document_id": "C032",
+      "topic": "expiry",
+      "extracted_evidence_ceiling": 1.0,
+      "selected_kind_ceiling": 0.9210526315789473,
+      "actual_recall": 0.0,
+      "causes": [
+        "topic_kind_filter_removes_gold_evidence",
+        "ranking_top5_or_character_budget_loses_available_gold"
+      ]
+    },
+    {
+      "source_index": 3149,
+      "document_id": "C032",
+      "topic": "renewal",
+      "extracted_evidence_ceiling": 1.0,
+      "selected_kind_ceiling": 1.0,
+      "actual_recall": 1.0,
+      "causes": []
+    },
+    {
+      "source_index": 3150,
+      "document_id": "C032",
+      "topic": "renewal_notice",
+      "extracted_evidence_ceiling": 1.0,
+      "selected_kind_ceiling": 1.0,
+      "actual_recall": 0.0,
+      "causes": [
+        "ranking_top5_or_character_budget_loses_available_gold"
+      ]
+    },
+    {
+      "source_index": 3208,
+      "document_id": "C057",
+      "topic": "expiry",
+      "extracted_evidence_ceiling": 1.0,
+      "selected_kind_ceiling": 1.0,
+      "actual_recall": 1.0,
+      "causes": []
+    },
+    {
+      "source_index": 3209,
+      "document_id": "C057",
+      "topic": "renewal",
+      "extracted_evidence_ceiling": 1.0,
+      "selected_kind_ceiling": 1.0,
+      "actual_recall": 1.0,
+      "causes": []
+    },
+    {
+      "source_index": 3305,
+      "document_id": "C044",
+      "topic": "expiry",
+      "extracted_evidence_ceiling": 0.9739130434782609,
+      "selected_kind_ceiling": 0.9434782608695652,
+      "actual_recall": 0.9434782608695652,
+      "causes": [
+        "gold_not_fully_present_in_extracted_evidence",
+        "topic_kind_filter_removes_gold_evidence"
+      ]
+    },
+    {
+      "source_index": 3336,
+      "document_id": "C084",
+      "topic": "expiry",
+      "extracted_evidence_ceiling": 1.0,
+      "selected_kind_ceiling": 1.0,
+      "actual_recall": 1.0,
+      "causes": []
+    },
+    {
+      "source_index": 3385,
+      "document_id": "C085",
+      "topic": "expiry",
+      "extracted_evidence_ceiling": 1.0,
+      "selected_kind_ceiling": 0.0,
+      "actual_recall": 0.0,
+      "causes": [
+        "topic_kind_filter_removes_gold_evidence"
+      ]
+    },
+    {
+      "source_index": 3393,
+      "document_id": "C002",
+      "topic": "expiry",
+      "extracted_evidence_ceiling": 1.0,
+      "selected_kind_ceiling": 1.0,
+      "actual_recall": 0.0,
+      "causes": [
+        "ranking_top5_or_character_budget_loses_available_gold"
+      ]
+    },
+    {
+      "source_index": 3394,
+      "document_id": "C002",
+      "topic": "renewal",
+      "extracted_evidence_ceiling": 0.502903600464576,
+      "selected_kind_ceiling": 0.502903600464576,
+      "actual_recall": 0.413472706155633,
+      "causes": [
+        "gold_not_fully_present_in_extracted_evidence",
+        "ranking_top5_or_character_budget_loses_available_gold"
+      ]
+    },
+    {
+      "source_index": 3473,
+      "document_id": "C014",
+      "topic": "expiry",
+      "extracted_evidence_ceiling": 1.0,
+      "selected_kind_ceiling": 1.0,
+      "actual_recall": 0.0,
+      "causes": [
+        "ranking_top5_or_character_budget_loses_available_gold"
+      ]
+    },
+    {
+      "source_index": 3627,
+      "document_id": "C076",
+      "topic": "expiry",
+      "extracted_evidence_ceiling": 1.0,
+      "selected_kind_ceiling": 1.0,
+      "actual_recall": 1.0,
+      "causes": []
+    },
+    {
+      "source_index": 3746,
+      "document_id": "C043",
+      "topic": "expiry",
+      "extracted_evidence_ceiling": 0.26706827309236947,
+      "selected_kind_ceiling": 0.26706827309236947,
+      "actual_recall": 0.0,
+      "causes": [
+        "gold_not_fully_present_in_extracted_evidence",
+        "ranking_top5_or_character_budget_loses_available_gold"
+      ]
+    },
+    {
+      "source_index": 3747,
+      "document_id": "C043",
+      "topic": "renewal",
+      "extracted_evidence_ceiling": 1.0,
+      "selected_kind_ceiling": 1.0,
+      "actual_recall": 0.0,
+      "causes": [
+        "ranking_top5_or_character_budget_loses_available_gold"
+      ]
+    },
+    {
+      "source_index": 3748,
+      "document_id": "C043",
+      "topic": "renewal_notice",
+      "extracted_evidence_ceiling": 1.0,
+      "selected_kind_ceiling": 1.0,
+      "actual_recall": 0.0,
+      "causes": [
+        "ranking_top5_or_character_budget_loses_available_gold"
+      ]
+    },
+    {
+      "source_index": 3893,
+      "document_id": "C013",
+      "topic": "expiry",
+      "extracted_evidence_ceiling": 1.0,
+      "selected_kind_ceiling": 1.0,
+      "actual_recall": 1.0,
+      "causes": []
+    },
+    {
+      "source_index": 3894,
+      "document_id": "C013",
+      "topic": "renewal",
+      "extracted_evidence_ceiling": 1.0,
+      "selected_kind_ceiling": 1.0,
+      "actual_recall": 1.0,
+      "causes": []
+    },
+    {
+      "source_index": 3895,
+      "document_id": "C013",
+      "topic": "renewal_notice",
+      "extracted_evidence_ceiling": 1.0,
+      "selected_kind_ceiling": 1.0,
+      "actual_recall": 0.0,
+      "causes": [
+        "ranking_top5_or_character_budget_loses_available_gold"
+      ]
+    },
+    {
+      "source_index": 3933,
+      "document_id": "C089",
+      "topic": "expiry",
+      "extracted_evidence_ceiling": 1.0,
+      "selected_kind_ceiling": 1.0,
+      "actual_recall": 1.0,
+      "causes": []
+    },
+    {
+      "source_index": 3965,
+      "document_id": "C042",
+      "topic": "expiry",
+      "extracted_evidence_ceiling": 1.0,
+      "selected_kind_ceiling": 1.0,
+      "actual_recall": 1.0,
+      "causes": []
+    },
+    {
+      "source_index": 3966,
+      "document_id": "C042",
+      "topic": "renewal",
+      "extracted_evidence_ceiling": 1.0,
+      "selected_kind_ceiling": 1.0,
+      "actual_recall": 0.28477905073649756,
+      "causes": [
+        "ranking_top5_or_character_budget_loses_available_gold"
+      ]
+    },
+    {
+      "source_index": 3996,
+      "document_id": "C058",
+      "topic": "expiry",
+      "extracted_evidence_ceiling": 1.0,
+      "selected_kind_ceiling": 1.0,
+      "actual_recall": 1.0,
+      "causes": []
+    },
+    {
+      "source_index": 3997,
+      "document_id": "C058",
+      "topic": "renewal",
+      "extracted_evidence_ceiling": 1.0,
+      "selected_kind_ceiling": 1.0,
+      "actual_recall": 1.0,
+      "causes": []
+    }
+  ]
+}

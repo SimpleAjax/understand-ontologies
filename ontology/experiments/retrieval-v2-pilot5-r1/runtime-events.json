@@ -1,0 +1,14 @@
+{
+  "events": [
+    {
+      "phase": "preflight",
+      "issue": "pgvector Vector wrapper required conversion to a numeric NumPy array",
+      "resolution": "to_numpy conversion with shape/finite checks; regression test passed; failed protocol preserved separately"
+    },
+    {
+      "phase": "sample_10_sufficiency_check",
+      "issue": "Ollama logged CUDA out of memory at 12288 context; HTTP 500",
+      "resolution": "Retry same frozen request after runner unload; preserve four completed source-only samples and cached responses"
+    }
+  ]
+}

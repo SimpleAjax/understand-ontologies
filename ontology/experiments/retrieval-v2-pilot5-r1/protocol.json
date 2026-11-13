@@ -1,0 +1,61 @@
+{
+  "created_at": "2026-11-13T07:14:24.804707+00:00",
+  "samples": [
+    733,
+    269,
+    1375,
+    2316,
+    10
+  ],
+  "hard_sample_cap": 5,
+  "sample_selection": "Purposive development examples: one known category-filter loss, three multiple-gold-snippet examples, one already successful control. Not random, held-out or representative.",
+  "settings": {
+    "candidate_limit": 20,
+    "final_seeds": 5,
+    "character_budget": 6000,
+    "max_followup_rounds": 2,
+    "max_queries_per_round": 2,
+    "max_reference_depth": 2,
+    "max_reference_passages": 4,
+    "reference_window_chars": 1600,
+    "context_radius": 250,
+    "category_bonus": 0.0025
+  },
+  "model": "qwen3:4b-instruct-2507-q4_K_M",
+  "model_downloads": 0,
+  "question_only_routing": true,
+  "graph_lock_sha256": "69b3a7b80a7db1c992653c6aefe7eda1a0839b227e5199e808fb45481b223815",
+  "samples_sha256": "1fb3d1e9e3129e09303bad111f0f360bc11a45381915b975a07fcba29a460a74",
+  "code_hashes": {
+    "scripts/retrieval_v2.py": "e81d456f219e49f6fa2360f0a83efff349853df415fc7af6fc7542d0ab3b06a9",
+    "scripts/pilot_retrieval_v2.py": "df0c343af37767b99d25e47af11fa6ec18ddb574492fa0342e73500253ba6ad3",
+    "scripts/compare_llm100.py": "b0ab9fc0c8cc6dda8338aeacbdb0684b5a16ee76a52240331c65b5f491c41cb4",
+    "scripts/compare_retrieval.py": "05e981cfe07b94cdde6411e7f21c84b798eae0dffc24957d9c4bb048b6ffb917",
+    "scripts/evaluate.py": "5f03bff6d1b75bc4dd0a5be933ffb8476d4b5f2be590b7c737605ac4efe6bc69",
+    "scripts/pipeline.py": "3a8b407fba947a39cf9dfb1d1033eb4c7858040faa6d4d208d2f62e2cb9bef19"
+  },
+  "prompt_sha256": "e8a2ef661895e66aa8796762ae78d668c25abe1dd6e11ea2b01b412bbcc54d88",
+  "changes": [
+    "Combine vector and BM25-style keyword candidates from original chunks and extracted passages; categories add a small preference, never exclusion.",
+    "Rerank a menu of up to 20 candidates with existing local Qwen, including nearby source context.",
+    "Resolve uniquely identified within-document numbered sections; ambiguity stays explicit; bound depth, windows and count.",
+    "Inspect returned evidence and issue at most two rounds of up to two new queries; rerank accumulated candidates."
+  ],
+  "extraction": "Existing 100 graphs unchanged. No corpus-wide re-extraction. Context is supplied at query-time to the local selector.",
+  "model_settings": {
+    "temperature": 0,
+    "seed": 42,
+    "num_ctx": 12288,
+    "num_predict": 512
+  },
+  "scoring": "Pinned LegalBench-RAG character overlap; 6000 unique source characters per stage. Gold read for scoring only after retrieval outputs are persisted.",
+  "scope": "Same known contract supplied to each method. Retrieval only; no legal answer generation or verified completeness.",
+  "previous_scores": "Reused saved first-run baseline scores on the same five IDs, not rerun latencies.",
+  "limitations": [
+    "Multiple snippets do not prove multi-hop reasoning.",
+    "Several changes are combined; stage scores are descriptive, not causal proof.",
+    "LLM sufficiency is fallible; hidden exceptions can remain.",
+    "Candidate previews may truncate text; source returns retain exact original ranges.",
+    "The conservative section parser does not resolve every heading format, cross-document reference or amendment priority."
+  ]
+}

@@ -1,0 +1,162 @@
+@prefix ct: <https://cimulink.local/ontology/contract-terms/0.1#> .
+@prefix ex: <https://cimulink.local/ontology/llm100-v1/> .
+@prefix meta: <https://cimulink.local/ontology/extraction#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ct: a owl:Ontology ;
+    rdfs:comment "Partial five-contract development sample. No claim of complete contract coverage or legal correctness." .
+
+ct:agreement_effective_from a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:applies_within a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:calendar_date_status a owl:DatatypeProperty .
+
+ct:coverage a owl:DatatypeProperty .
+
+ct:description a owl:DatatypeProperty .
+
+ct:duration a owl:DatatypeProperty .
+
+ct:duration_status a owl:DatatypeProperty .
+
+ct:end_char a owl:DatatypeProperty .
+
+ct:end_date_status a owl:DatatypeProperty .
+
+ct:ends_on_event a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:exact_text a owl:DatatypeProperty .
+
+ct:has_party a owl:ObjectProperty ;
+    rdfs:domain ct:Agreement ;
+    rdfs:range ct:Party .
+
+ct:has_rule a owl:ObjectProperty ;
+    rdfs:domain ct:Agreement ;
+    rdfs:range ct:Rule .
+
+ct:kind a owl:DatatypeProperty .
+
+ct:notice_actor a owl:DatatypeProperty .
+
+ct:notice_form a owl:DatatypeProperty .
+
+ct:notice_period_status a owl:DatatypeProperty .
+
+ct:qualifies a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Rule .
+
+ct:references_section a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:renewal_count a owl:DatatypeProperty .
+
+ct:resolution_status a owl:DatatypeProperty .
+
+ct:resolved_to a owl:ObjectProperty ;
+    rdfs:domain ct:Reference ;
+    rdfs:range ct:SourcePassage .
+
+ct:source_path a owl:DatatypeProperty .
+
+ct:source_sha256 a owl:DatatypeProperty .
+
+ct:start_char a owl:DatatypeProperty .
+
+ct:starts_from a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:stated_end_date a owl:DatatypeProperty .
+
+ct:subject_to a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Condition .
+
+ct:supported_by a owl:ObjectProperty ;
+    rdfs:range ct:SourcePassage .
+
+ct:termination_notice a owl:DatatypeProperty .
+
+ex:C077 a ct:Agreement ;
+    rdfs:label "SIBANNAC,INC_12_04_2017-EX-2.1-Strategic Alliance Agreement.txt" ;
+    ct:coverage "LOCAL_LLM_PROPOSED_PARTIAL; NOT_HUMAN_REVIEWED" ;
+    ct:has_rule ex:C077R0001,
+        ex:C077R0002,
+        ex:C077R0003 ;
+    ct:source_path "cuad/SIBANNAC,INC_12_04_2017-EX-2.1-Strategic Alliance Agreement.txt" ;
+    ct:source_sha256 "c0b6b7a59795c666d653f5bc73bddba2d852fc59c63b93b97d648a8c593c921f" ;
+    meta:model_digest "0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0" .
+
+ct:Party a owl:Class ;
+    rdfs:label "Party" .
+
+ex:C077R0001 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 8" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:subject_to ex:C077R0001Condition8 ;
+    ct:supported_by ex:C077P0008 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C077R0001Condition8 a ct:Condition ;
+    ct:description "Information which is required by law to be disclosed to federal, state or local authorities.   6) Term of Confidentiality   For a period of five (5) years after termination of this Agreement, the parties shall treat as confidential all information and take every reasonable precaution and use all reasonable efforts to prevent the unauthorized disclosure of the same. The parties agree to take all steps reasonably necessary and appropriate to ensure that their employees, agents, and/or assistants treat all information as confidential and to ensure that such employees, agents, and/or assistants are familiar with and abide by the terms of this Agreement.   7) Term   The term of this Agreement is twelve (12) months from the date hereof, and will be automatically renewed for one (1) additional twelve month period unless either party shall notify the other in writing of its intention not to renew. Such notice must be given ninety (90) days prior to expiration of the original term. This Agreement may also be terminated by either party upon ninety (90) days written notice." ;
+    ct:supported_by ex:C077P0008 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C077R0002 a ct:Rule ;
+    rdfs:label "Optional Renewal — source passage 8" ;
+    ct:kind "OPTIONAL_RENEWAL" ;
+    ct:subject_to ex:C077R0002Condition8 ;
+    ct:supported_by ex:C077P0008 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C077R0002Condition8 a ct:Condition ;
+    ct:description "Information which is required by law to be disclosed to federal, state or local authorities.   6) Term of Confidentiality   For a period of five (5) years after termination of this Agreement, the parties shall treat as confidential all information and take every reasonable precaution and use all reasonable efforts to prevent the unauthorized disclosure of the same. The parties agree to take all steps reasonably necessary and appropriate to ensure that their employees, agents, and/or assistants treat all information as confidential and to ensure that such employees, agents, and/or assistants are familiar with and abide by the terms of this Agreement.   7) Term   The term of this Agreement is twelve (12) months from the date hereof, and will be automatically renewed for one (1) additional twelve month period unless either party shall notify the other in writing of its intention not to renew. Such notice must be given ninety (90) days prior to expiration of the original term. This Agreement may also be terminated by either party upon ninety (90) days written notice." ;
+    ct:supported_by ex:C077P0008 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C077R0003 a ct:Rule ;
+    rdfs:label "Termination — source passage 8" ;
+    ct:kind "TERMINATION" ;
+    ct:subject_to ex:C077R0003Condition8 ;
+    ct:supported_by ex:C077P0008 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C077R0003Condition8 a ct:Condition ;
+    ct:description "Information which is required by law to be disclosed to federal, state or local authorities.   6) Term of Confidentiality   For a period of five (5) years after termination of this Agreement, the parties shall treat as confidential all information and take every reasonable precaution and use all reasonable efforts to prevent the unauthorized disclosure of the same. The parties agree to take all steps reasonably necessary and appropriate to ensure that their employees, agents, and/or assistants treat all information as confidential and to ensure that such employees, agents, and/or assistants are familiar with and abide by the terms of this Agreement.   7) Term   The term of this Agreement is twelve (12) months from the date hereof, and will be automatically renewed for one (1) additional twelve month period unless either party shall notify the other in writing of its intention not to renew. Such notice must be given ninety (90) days prior to expiration of the original term. This Agreement may also be terminated by either party upon ninety (90) days written notice." ;
+    ct:supported_by ex:C077P0008 ;
+    meta:review_status "UNREVIEWED" .
+
+ct:Agreement a owl:Class ;
+    rdfs:label "Agreement" .
+
+ct:SourcePassage a owl:Class ;
+    rdfs:label "SourcePassage" .
+
+ct:Condition a owl:Class ;
+    rdfs:label "Condition" .
+
+ct:Reference a owl:Class ;
+    rdfs:label "Reference" .
+
+ex:C077P0008 a ct:SourcePassage ;
+    ct:end_char 6202 ;
+    ct:exact_text "Information which is required by law to be disclosed to federal, state or local authorities.   6) Term of Confidentiality   For a period of five (5) years after termination of this Agreement, the parties shall treat as confidential all information and take every reasonable precaution and use all reasonable efforts to prevent the unauthorized disclosure of the same. The parties agree to take all steps reasonably necessary and appropriate to ensure that their employees, agents, and/or assistants treat all information as confidential and to ensure that such employees, agents, and/or assistants are familiar with and abide by the terms of this Agreement.   7) Term   The term of this Agreement is twelve (12) months from the date hereof, and will be automatically renewed for one (1) additional twelve month period unless either party shall notify the other in writing of its intention not to renew. Such notice must be given ninety (90) days prior to expiration of the original term. This Agreement may also be terminated by either party upon ninety (90) days written notice." ;
+    ct:source_path "cuad/SIBANNAC,INC_12_04_2017-EX-2.1-Strategic Alliance Agreement.txt" ;
+    ct:source_sha256 "c0b6b7a59795c666d653f5bc73bddba2d852fc59c63b93b97d648a8c593c921f" ;
+    ct:start_char 5123 .
+
+ct:Rule a owl:Class ;
+    rdfs:label "Rule" .
+

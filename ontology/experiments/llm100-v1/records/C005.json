@@ -1,0 +1,95 @@
+{
+  "document_id": "C005",
+  "file_path": "cuad/ALLISONTRANSMISSIONHOLDINGSINC_12_15_2014-EX-99.1-COOPERATION AGREEMENT.txt",
+  "model_digest": "0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0",
+  "rules": [
+    {
+      "passage_id": 9,
+      "kind": "INITIAL_TERM",
+      "label": "Initial Term — source passage 9",
+      "condition_ids": [
+        9
+      ],
+      "reference_labels": [
+        "Section 1(a)"
+      ],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 14,
+      "kind": "TERMINATION",
+      "label": "Termination — source passage 14",
+      "condition_ids": [
+        14
+      ],
+      "reference_labels": [
+        "Section 1(f)",
+        "Section 1(e)"
+      ],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 14,
+      "kind": "CONDITIONAL_REFERENCED_TERM",
+      "label": "Conditional Referenced Term — source passage 14",
+      "condition_ids": [
+        14
+      ],
+      "reference_labels": [
+        "Section 1(f)",
+        "Section 1(e)"
+      ],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 37,
+      "kind": "TERMINATION",
+      "label": "Termination — source passage 37",
+      "condition_ids": [],
+      "reference_labels": [],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 38,
+      "kind": "INITIAL_TERM",
+      "label": "Initial Term — source passage 38",
+      "condition_ids": [
+        38
+      ],
+      "reference_labels": [
+        "Section 1(a)",
+        "Section 1(e)"
+      ],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 39,
+      "kind": "POST_EXPIRY_CONTINUATION",
+      "label": "Post Expiry Continuation — source passage 39",
+      "condition_ids": [],
+      "reference_labels": [
+        "Section 1(d)",
+        "Section 5",
+        "Section 7",
+        "Section 16",
+        "Section 5(a)"
+      ],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    }
+  ],
+  "rejected_rules": [],
+  "review_status": "UNREVIEWED",
+  "coverage": "Lexically selected source windows; completeness not guaranteed."
+}

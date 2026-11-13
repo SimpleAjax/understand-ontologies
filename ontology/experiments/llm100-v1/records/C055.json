@@ -1,0 +1,130 @@
+{
+  "document_id": "C055",
+  "file_path": "cuad/MorganStanleyDirectLendingFund_20191119_10-12GA_EX-10.5_11898508_EX-10.5_Trademark License Agreement.txt",
+  "model_digest": "0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0",
+  "rules": [
+    {
+      "passage_id": 6,
+      "kind": "TERMINATION",
+      "label": "Termination — source passage 6",
+      "condition_ids": [
+        6
+      ],
+      "reference_labels": [
+        "Section 3.3",
+        "Section 4.1",
+        "Section 4.2",
+        "Section 4.3"
+      ],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 6,
+      "kind": "CONDITIONAL_REFERENCED_TERM",
+      "label": "Conditional Referenced Term — source passage 6",
+      "condition_ids": [
+        6
+      ],
+      "reference_labels": [
+        "Section 3.3",
+        "Section 4.1",
+        "Section 4.2",
+        "Section 4.3"
+      ],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 7,
+      "kind": "TERMINATION",
+      "label": "Termination — source passage 7",
+      "condition_ids": [
+        7
+      ],
+      "reference_labels": [
+        "Section 8",
+        "Section 4.4"
+      ],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 7,
+      "kind": "CONDITIONAL_REFERENCED_TERM",
+      "label": "Conditional Referenced Term — source passage 7",
+      "condition_ids": [
+        7
+      ],
+      "reference_labels": [
+        "Section 8",
+        "Section 4.4"
+      ],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 9,
+      "kind": "TERMINATION",
+      "label": "Termination — source passage 9",
+      "condition_ids": [
+        9
+      ],
+      "reference_labels": [
+        "Section 4.5",
+        "Section 2",
+        "Section 6.1"
+      ],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 9,
+      "kind": "POST_EXPIRY_CONTINUATION",
+      "label": "Post Expiry Continuation — source passage 9",
+      "condition_ids": [
+        9
+      ],
+      "reference_labels": [
+        "Section 4.5",
+        "Section 2",
+        "Section 6.1"
+      ],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 14,
+      "kind": "TERMINATION",
+      "label": "Termination — source passage 14",
+      "condition_ids": [
+        14
+      ],
+      "reference_labels": [],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 14,
+      "kind": "CONDITIONAL_REFERENCED_TERM",
+      "label": "Conditional Referenced Term — source passage 14",
+      "condition_ids": [
+        14
+      ],
+      "reference_labels": [],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    }
+  ],
+  "rejected_rules": [],
+  "review_status": "UNREVIEWED",
+  "coverage": "Lexically selected source windows; completeness not guaranteed."
+}

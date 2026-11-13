@@ -1,0 +1,301 @@
+@prefix ct: <https://cimulink.local/ontology/contract-terms/0.1#> .
+@prefix ex: <https://cimulink.local/ontology/llm100-v1/> .
+@prefix meta: <https://cimulink.local/ontology/extraction#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ct: a owl:Ontology ;
+    rdfs:comment "Partial five-contract development sample. No claim of complete contract coverage or legal correctness." .
+
+ct:agreement_effective_from a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:applies_within a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:calendar_date_status a owl:DatatypeProperty .
+
+ct:coverage a owl:DatatypeProperty .
+
+ct:description a owl:DatatypeProperty .
+
+ct:duration a owl:DatatypeProperty .
+
+ct:duration_status a owl:DatatypeProperty .
+
+ct:end_char a owl:DatatypeProperty .
+
+ct:end_date_status a owl:DatatypeProperty .
+
+ct:ends_on_event a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:exact_text a owl:DatatypeProperty .
+
+ct:has_party a owl:ObjectProperty ;
+    rdfs:domain ct:Agreement ;
+    rdfs:range ct:Party .
+
+ct:has_rule a owl:ObjectProperty ;
+    rdfs:domain ct:Agreement ;
+    rdfs:range ct:Rule .
+
+ct:kind a owl:DatatypeProperty .
+
+ct:notice_actor a owl:DatatypeProperty .
+
+ct:notice_form a owl:DatatypeProperty .
+
+ct:notice_period_status a owl:DatatypeProperty .
+
+ct:qualifies a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Rule .
+
+ct:references_section a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:renewal_count a owl:DatatypeProperty .
+
+ct:resolution_status a owl:DatatypeProperty .
+
+ct:resolved_to a owl:ObjectProperty ;
+    rdfs:domain ct:Reference ;
+    rdfs:range ct:SourcePassage .
+
+ct:source_path a owl:DatatypeProperty .
+
+ct:source_sha256 a owl:DatatypeProperty .
+
+ct:start_char a owl:DatatypeProperty .
+
+ct:starts_from a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:stated_end_date a owl:DatatypeProperty .
+
+ct:subject_to a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Condition .
+
+ct:supported_by a owl:ObjectProperty ;
+    rdfs:range ct:SourcePassage .
+
+ct:termination_notice a owl:DatatypeProperty .
+
+ex:C022 a ct:Agreement ;
+    rdfs:label "CORALGOLDRESOURCES,LTD_05_28_2020-EX-4.1-CONSULTING AGREEMENT.txt" ;
+    ct:coverage "LOCAL_LLM_PROPOSED_PARTIAL; NOT_HUMAN_REVIEWED" ;
+    ct:has_rule ex:C022R0001,
+        ex:C022R0002,
+        ex:C022R0003,
+        ex:C022R0004,
+        ex:C022R0005,
+        ex:C022R0006,
+        ex:C022R0007,
+        ex:C022R0008,
+        ex:C022R0009,
+        ex:C022R0010,
+        ex:C022R0011,
+        ex:C022R0012,
+        ex:C022R0013 ;
+    ct:source_path "cuad/CORALGOLDRESOURCES,LTD_05_28_2020-EX-4.1-CONSULTING AGREEMENT.txt" ;
+    ct:source_sha256 "909f4a9d8ca8ef197dcf0c99f79cc682ea5b3df022f07c1b295da82deb4cd8b8" ;
+    meta:model_digest "0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0" .
+
+ct:Condition a owl:Class ;
+    rdfs:label "Condition" .
+
+ct:Party a owl:Class ;
+    rdfs:label "Party" .
+
+ex:C022P0015 a ct:SourcePassage ;
+    ct:end_char 4017 ;
+    ct:exact_text "4.2 The term of this Agreement is for a period of five (5) years (the \"Term\") commencing on the Effective Date and, unless terminated earlier in accordance with the termination provisions of this Agreement, ending on January 31, 2025." ;
+    ct:source_path "cuad/CORALGOLDRESOURCES,LTD_05_28_2020-EX-4.1-CONSULTING AGREEMENT.txt" ;
+    ct:source_sha256 "909f4a9d8ca8ef197dcf0c99f79cc682ea5b3df022f07c1b295da82deb4cd8b8" ;
+    ct:start_char 3783 .
+
+ex:C022P0016 a ct:SourcePassage ;
+    ct:end_char 4033 ;
+    ct:exact_text "5. TERMINATION" ;
+    ct:source_path "cuad/CORALGOLDRESOURCES,LTD_05_28_2020-EX-4.1-CONSULTING AGREEMENT.txt" ;
+    ct:source_sha256 "909f4a9d8ca8ef197dcf0c99f79cc682ea5b3df022f07c1b295da82deb4cd8b8" ;
+    ct:start_char 4019 .
+
+ex:C022P0017 a ct:SourcePassage ;
+    ct:end_char 4236 ;
+    ct:exact_text "5.1 This Agreement can be terminated at any time prior to the expiry of the Term, as follows: (a) by the Consultant electing to give the Company not less than 3 months prior notice of such termination;" ;
+    ct:source_path "cuad/CORALGOLDRESOURCES,LTD_05_28_2020-EX-4.1-CONSULTING AGREEMENT.txt" ;
+    ct:source_sha256 "909f4a9d8ca8ef197dcf0c99f79cc682ea5b3df022f07c1b295da82deb4cd8b8" ;
+    ct:start_char 4035 .
+
+ex:C022P0018 a ct:SourcePassage ;
+    ct:end_char 4399 ;
+    ct:exact_text "(b) by the Company electing to give the Consultant 3 months prior notice of such termination along with a termination payment equal to the annual Consulting Fee;" ;
+    ct:source_path "cuad/CORALGOLDRESOURCES,LTD_05_28_2020-EX-4.1-CONSULTING AGREEMENT.txt" ;
+    ct:source_sha256 "909f4a9d8ca8ef197dcf0c99f79cc682ea5b3df022f07c1b295da82deb4cd8b8" ;
+    ct:start_char 4238 .
+
+ex:C022P0019 a ct:SourcePassage ;
+    ct:end_char 4761 ;
+    ct:exact_text "(c) by the Consultant electing to give the Company notice, in the event that there occurs a Change of Control (as defined below) within six (6) months of the effective date of such Change of Control, and if the Consultant so elects to terminate this Agreement, then the Consultant will be immediately entitled to a termination payment equal to CDN$750,000; and" ;
+    ct:source_path "cuad/CORALGOLDRESOURCES,LTD_05_28_2020-EX-4.1-CONSULTING AGREEMENT.txt" ;
+    ct:source_sha256 "909f4a9d8ca8ef197dcf0c99f79cc682ea5b3df022f07c1b295da82deb4cd8b8" ;
+    ct:start_char 4401 .
+
+ex:C022P0023 a ct:SourcePassage ;
+    ct:end_char 6743 ;
+    ct:exact_text "(B) a reorganization or merger or consolidation effected to implement a recapitalization or reincorporation of the Company (or similar transaction) that does not result in a material change in beneficial ownership of the voting securities of the Company or its successor. 5.2 On any termination of this Agreement under Section 5.l (a), (b), or (c) all outstanding stock options granted to the Consultant shall be exercisable in accordance with the terms of the option agreements covering such grants. If there is any inconsistency between the terms of this Agreement and the terms of any stock option agreement governing the grant of any stock options to the Consultant or the Principal, then the terms of such stock option agreement shall prevail." ;
+    ct:source_path "cuad/CORALGOLDRESOURCES,LTD_05_28_2020-EX-4.1-CONSULTING AGREEMENT.txt" ;
+    ct:source_sha256 "909f4a9d8ca8ef197dcf0c99f79cc682ea5b3df022f07c1b295da82deb4cd8b8" ;
+    ct:start_char 5995 .
+
+ex:C022P0024 a ct:SourcePassage ;
+    ct:end_char 6935 ;
+    ct:exact_text "5.3 This Agreement and the Term shall terminate automatically, without any prior notice or any payment to the Consultant, inthe event that: a. the five year Term expires on January 31, 2025;" ;
+    ct:source_path "cuad/CORALGOLDRESOURCES,LTD_05_28_2020-EX-4.1-CONSULTING AGREEMENT.txt" ;
+    ct:source_sha256 "909f4a9d8ca8ef197dcf0c99f79cc682ea5b3df022f07c1b295da82deb4cd8b8" ;
+    ct:start_char 6745 .
+
+ex:C022P0033 a ct:SourcePassage ;
+    ct:end_char 8683 ;
+    ct:exact_text "6.3 Upon the termination of this Agreement, or upon the Company's earlier request, the Consultant and the Principal shall promptly deliver to the Company all of the Confidential Information that the Consultant and the Principal may have in their possession or control." ;
+    ct:source_path "cuad/CORALGOLDRESOURCES,LTD_05_28_2020-EX-4.1-CONSULTING AGREEMENT.txt" ;
+    ct:source_sha256 "909f4a9d8ca8ef197dcf0c99f79cc682ea5b3df022f07c1b295da82deb4cd8b8" ;
+    ct:start_char 8415 .
+
+ex:C022P0048 a ct:SourcePassage ;
+    ct:end_char 14062 ;
+    ct:exact_text "8.1 The Consultant agrees that all discoveries, maps, technical studies, plans, spreadsheets, documents, inventions, copyright, software, improvements, know-how or other intellectual property, whether or not patentable or copyrightable, created by the Consultant during the Term of this Agreement pertaining to any service, matter, thing, process or method related to this Agreement (the \"Works\") will be the sole and absolute property of the Company. The Consultant will keep and maintain adequate and current written records of all Works made, which records will be available at all times to the Company and will remain the sole property of the Company." ;
+    ct:source_path "cuad/CORALGOLDRESOURCES,LTD_05_28_2020-EX-4.1-CONSULTING AGREEMENT.txt" ;
+    ct:source_sha256 "909f4a9d8ca8ef197dcf0c99f79cc682ea5b3df022f07c1b295da82deb4cd8b8" ;
+    ct:start_char 13407 .
+
+ex:C022P0063 a ct:SourcePassage ;
+    ct:end_char 19782 ;
+    ct:exact_text "13. SURVIVAL OF TERMS" ;
+    ct:source_path "cuad/CORALGOLDRESOURCES,LTD_05_28_2020-EX-4.1-CONSULTING AGREEMENT.txt" ;
+    ct:source_sha256 "909f4a9d8ca8ef197dcf0c99f79cc682ea5b3df022f07c1b295da82deb4cd8b8" ;
+    ct:start_char 19761 .
+
+ex:C022P0064 a ct:SourcePassage ;
+    ct:end_char 20234 ;
+    ct:exact_text "13.l Sections 6 through 12, inclusive, and this Section 13, shall survive and remain in force notwithstanding the expiration or other termination of this Agreement for any reason whatsoever. Any expiration or termination of this Agreement shall be without prejudice to any rights and obligations of the parties hereto arising or existing up to the effective date of such expiration or termination, or any remedies of the parties with respect thereto." ;
+    ct:source_path "cuad/CORALGOLDRESOURCES,LTD_05_28_2020-EX-4.1-CONSULTING AGREEMENT.txt" ;
+    ct:source_sha256 "909f4a9d8ca8ef197dcf0c99f79cc682ea5b3df022f07c1b295da82deb4cd8b8" ;
+    ct:start_char 19784 .
+
+ex:C022R0001 a ct:Rule ;
+    rdfs:label "Initial Term — source passage 12" ;
+    ct:kind "INITIAL_TERM" ;
+    ct:supported_by ex:C022P0012 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C022R0002 a ct:Rule ;
+    rdfs:label "Optional Renewal — source passage 12" ;
+    ct:kind "OPTIONAL_RENEWAL" ;
+    ct:supported_by ex:C022P0012 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C022R0003 a ct:Rule ;
+    rdfs:label "Initial Term — source passage 15" ;
+    ct:kind "INITIAL_TERM" ;
+    ct:supported_by ex:C022P0015 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C022R0004 a ct:Rule ;
+    rdfs:label "Termination — source passage 16" ;
+    ct:kind "TERMINATION" ;
+    ct:supported_by ex:C022P0016 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C022R0005 a ct:Rule ;
+    rdfs:label "Termination — source passage 17" ;
+    ct:kind "TERMINATION" ;
+    ct:supported_by ex:C022P0017 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C022R0006 a ct:Rule ;
+    rdfs:label "Termination — source passage 18" ;
+    ct:kind "TERMINATION" ;
+    ct:supported_by ex:C022P0018 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C022R0007 a ct:Rule ;
+    rdfs:label "Termination — source passage 19" ;
+    ct:kind "TERMINATION" ;
+    ct:supported_by ex:C022P0019 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C022R0008 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 23" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:references_section ex:C022R0008Ref0 ;
+    ct:supported_by ex:C022P0023 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C022R0008Ref0 a ct:Reference ;
+    rdfs:label "Section 5" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C022R0009 a ct:Rule ;
+    rdfs:label "Termination — source passage 24" ;
+    ct:kind "TERMINATION" ;
+    ct:supported_by ex:C022P0024 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C022R0010 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 33" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:supported_by ex:C022P0033 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C022R0011 a ct:Rule ;
+    rdfs:label "Conditional Referenced Term — source passage 48" ;
+    ct:kind "CONDITIONAL_REFERENCED_TERM" ;
+    ct:supported_by ex:C022P0048 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C022R0012 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 63" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:supported_by ex:C022P0063 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C022R0013 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 64" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:references_section ex:C022R0013Ref0 ;
+    ct:supported_by ex:C022P0064 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C022R0013Ref0 a ct:Reference ;
+    rdfs:label "Section 13" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C022P0012 a ct:SourcePassage ;
+    ct:end_char 3511 ;
+    ct:exact_text "3.1 The Company will pay the Consultant basic remuneration for its services in the sum of $10,000 per month (the \"Consulting Fee\") commencing on the 1st day of February, 2020, and payable on the last day of each month thereafter up to and including the 31st day of January, 2025, together with any such increments thereto as the Compensation Committee of the Board of Directors of the Company may from time to time determine. In addition, the Company will pay to the Consultant all reasonable expenses of the Consultant as agreed to from time to time which are incurred by the Consultant in delivery of the Services, based on monthly invoices submitted to the Company, including copies of all paid receipts; plus harmonized sales taxes or goods and services taxes, as the case may be, in addition to the Consulting Fees, which taxes will be remitted by the Consultant to the Canada Revenue Agency." ;
+    ct:source_path "cuad/CORALGOLDRESOURCES,LTD_05_28_2020-EX-4.1-CONSULTING AGREEMENT.txt" ;
+    ct:source_sha256 "909f4a9d8ca8ef197dcf0c99f79cc682ea5b3df022f07c1b295da82deb4cd8b8" ;
+    ct:start_char 2614 .
+
+ct:Agreement a owl:Class ;
+    rdfs:label "Agreement" .
+
+ct:Reference a owl:Class ;
+    rdfs:label "Reference" .
+
+ct:SourcePassage a owl:Class ;
+    rdfs:label "SourcePassage" .
+
+ct:Rule a owl:Class ;
+    rdfs:label "Rule" .
+

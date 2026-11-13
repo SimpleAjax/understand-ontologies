@@ -1,0 +1,352 @@
+@prefix ct: <https://cimulink.local/ontology/contract-terms/0.1#> .
+@prefix ex: <https://cimulink.local/ontology/llm100-v1/> .
+@prefix meta: <https://cimulink.local/ontology/extraction#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ct: a owl:Ontology ;
+    rdfs:comment "Partial five-contract development sample. No claim of complete contract coverage or legal correctness." .
+
+ct:agreement_effective_from a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:applies_within a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:calendar_date_status a owl:DatatypeProperty .
+
+ct:coverage a owl:DatatypeProperty .
+
+ct:description a owl:DatatypeProperty .
+
+ct:duration a owl:DatatypeProperty .
+
+ct:duration_status a owl:DatatypeProperty .
+
+ct:end_char a owl:DatatypeProperty .
+
+ct:end_date_status a owl:DatatypeProperty .
+
+ct:ends_on_event a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:exact_text a owl:DatatypeProperty .
+
+ct:has_party a owl:ObjectProperty ;
+    rdfs:domain ct:Agreement ;
+    rdfs:range ct:Party .
+
+ct:has_rule a owl:ObjectProperty ;
+    rdfs:domain ct:Agreement ;
+    rdfs:range ct:Rule .
+
+ct:kind a owl:DatatypeProperty .
+
+ct:notice_actor a owl:DatatypeProperty .
+
+ct:notice_form a owl:DatatypeProperty .
+
+ct:notice_period_status a owl:DatatypeProperty .
+
+ct:qualifies a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Rule .
+
+ct:references_section a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:renewal_count a owl:DatatypeProperty .
+
+ct:resolution_status a owl:DatatypeProperty .
+
+ct:resolved_to a owl:ObjectProperty ;
+    rdfs:domain ct:Reference ;
+    rdfs:range ct:SourcePassage .
+
+ct:source_path a owl:DatatypeProperty .
+
+ct:source_sha256 a owl:DatatypeProperty .
+
+ct:start_char a owl:DatatypeProperty .
+
+ct:starts_from a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:stated_end_date a owl:DatatypeProperty .
+
+ct:subject_to a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Condition .
+
+ct:supported_by a owl:ObjectProperty ;
+    rdfs:range ct:SourcePassage .
+
+ct:termination_notice a owl:DatatypeProperty .
+
+ex:C057 a ct:Agreement ;
+    rdfs:label "NEOMEDIATECHNOLOGIESINC_12_15_2005-EX-16.1-DISTRIBUTOR AGREEMENT.txt" ;
+    ct:coverage "LOCAL_LLM_PROPOSED_PARTIAL; NOT_HUMAN_REVIEWED" ;
+    ct:has_rule ex:C057R0001,
+        ex:C057R0002,
+        ex:C057R0003,
+        ex:C057R0004,
+        ex:C057R0005,
+        ex:C057R0006,
+        ex:C057R0007,
+        ex:C057R0008,
+        ex:C057R0009,
+        ex:C057R0010,
+        ex:C057R0011,
+        ex:C057R0012,
+        ex:C057R0013,
+        ex:C057R0014,
+        ex:C057R0015 ;
+    ct:source_path "cuad/NEOMEDIATECHNOLOGIESINC_12_15_2005-EX-16.1-DISTRIBUTOR AGREEMENT.txt" ;
+    ct:source_sha256 "b3db6d72f9b7e01afbc4f535c2c4475bdbe758225567ea89ac2b3105276d6993" ;
+    meta:model_digest "0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0" .
+
+ct:Party a owl:Class ;
+    rdfs:label "Party" .
+
+ex:C057P0003 a ct:SourcePassage ;
+    ct:end_char 255 ;
+    ct:exact_text "THIS AGREEMENT, made as of the 1st day of December, (the \"Effective Date\") by and between:" ;
+    ct:source_path "cuad/NEOMEDIATECHNOLOGIESINC_12_15_2005-EX-16.1-DISTRIBUTOR AGREEMENT.txt" ;
+    ct:source_sha256 "b3db6d72f9b7e01afbc4f535c2c4475bdbe758225567ea89ac2b3105276d6993" ;
+    ct:start_char 165 .
+
+ex:C057P0101 a ct:SourcePassage ;
+    ct:end_char 25895 ;
+    ct:exact_text "Notwithstanding the provisions of any law, rule, or regulation to the contrary, on the termination of this Agreement for any cause whatsoever, DISTRIBUTOR shall not be entitled to claim or receive from PPG SHANGHAI any compensation, reimbursement, or damages on account of any expenditure or commitment of any kind in connection with its business or on account of goodwill or on account of loss of prospective profits or otherwise. In no event shall PPG SHANGHAI be liable for consequential damages." ;
+    ct:source_path "cuad/NEOMEDIATECHNOLOGIESINC_12_15_2005-EX-16.1-DISTRIBUTOR AGREEMENT.txt" ;
+    ct:source_sha256 "b3db6d72f9b7e01afbc4f535c2c4475bdbe758225567ea89ac2b3105276d6993" ;
+    ct:start_char 25396 .
+
+ex:C057P0109 a ct:SourcePassage ;
+    ct:end_char 28710 ;
+    ct:exact_text "18.1     The term of this Agreement (the \"Term\") shall commence on the date          first above written and shall terminate on 31 December 2006, unless          sooner terminated in accordance with the provisions hereof." ;
+    ct:source_path "cuad/NEOMEDIATECHNOLOGIESINC_12_15_2005-EX-16.1-DISTRIBUTOR AGREEMENT.txt" ;
+    ct:source_sha256 "b3db6d72f9b7e01afbc4f535c2c4475bdbe758225567ea89ac2b3105276d6993" ;
+    ct:start_char 28489 .
+
+ex:C057P0112 a ct:SourcePassage ;
+    ct:end_char 29989 ;
+    ct:exact_text "19.      DEFAULT AND TERMINATION" ;
+    ct:source_path "cuad/NEOMEDIATECHNOLOGIESINC_12_15_2005-EX-16.1-DISTRIBUTOR AGREEMENT.txt" ;
+    ct:source_sha256 "b3db6d72f9b7e01afbc4f535c2c4475bdbe758225567ea89ac2b3105276d6993" ;
+    ct:start_char 29957 .
+
+ex:C057R0001 a ct:Rule ;
+    rdfs:label "Initial Term — source passage 3" ;
+    ct:kind "INITIAL_TERM" ;
+    ct:supported_by ex:C057P0003 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C057R0002 a ct:Rule ;
+    rdfs:label "Termination — source passage 48" ;
+    ct:kind "TERMINATION" ;
+    ct:subject_to ex:C057R0002Condition48 ;
+    ct:supported_by ex:C057P0048 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C057R0002Condition48 a ct:Condition ;
+    ct:description "4.2      If DISTRIBUTOR sells or distributes the Products outside the Territory,          whether directly or indirectly through DISTRIBUTOR's cooperation or in          conjunction with other third parties, or to customers outside the          Territory without the prior knowledge and consent of PPG SHANGHAI, PPG          SHANGHAI shall have the right to terminate with immediate effect this          Agreement and any existing incentive arrangements between PPG SHANGHAI          and DISTRIBUTOR, whether entered into before or after the commencement          of the Agreement." ;
+    ct:supported_by ex:C057P0048 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C057R0003 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 81" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:supported_by ex:C057P0081 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C057R0004 a ct:Rule ;
+    rdfs:label "Termination — source passage 81" ;
+    ct:kind "TERMINATION" ;
+    ct:supported_by ex:C057P0081 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C057R0005 a ct:Rule ;
+    rdfs:label "Termination — source passage 98" ;
+    ct:kind "TERMINATION" ;
+    ct:subject_to ex:C057R0005Condition98 ;
+    ct:supported_by ex:C057P0098 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C057R0005Condition98 a ct:Condition ;
+    ct:description "DISTRIBUTOR acknowledges that it has express notice that PPG or PPG SHANGHAI may at any time discontinue the production and/or sale of any of the Products. If PPG or PPG SHANGHAI does discontinue the production and/or sale of any of the Products, this Agreement shall automatically terminate with respect to such discontinued Product, and DISTRIBUTOR shall not be entitled to claim or receive" ;
+    ct:supported_by ex:C057P0098 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C057R0006 a ct:Rule ;
+    rdfs:label "Termination — source passage 101" ;
+    ct:kind "TERMINATION" ;
+    ct:supported_by ex:C057P0101 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C057R0007 a ct:Rule ;
+    rdfs:label "Initial Term — source passage 109" ;
+    ct:kind "INITIAL_TERM" ;
+    ct:supported_by ex:C057P0109 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C057R0008 a ct:Rule ;
+    rdfs:label "Optional Renewal — source passage 110" ;
+    ct:kind "OPTIONAL_RENEWAL" ;
+    ct:subject_to ex:C057R0008Condition110 ;
+    ct:supported_by ex:C057P0110 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C057R0008Condition110 a ct:Condition ;
+    ct:description "18.2     The parties hereof intend to form a long-term relationship. To this          end, if both parties wish to renew this Agreement, the parties shall          agree on such intention in writing at least thirty(30) days before the          expiry of the current Term of the Agreement. The parties shall agree on          the terms and conditions of the renewal, and enter into a new agreement          within sixty(60) days from the expiry of this Agreement. During this          sixty(60) days period, both parties shall continue to perform their          respective obligation under the same terms and conditions of this          Agreement." ;
+    ct:supported_by ex:C057P0110 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C057R0009 a ct:Rule ;
+    rdfs:label "Termination — source passage 111" ;
+    ct:kind "TERMINATION" ;
+    ct:subject_to ex:C057R0009Condition111 ;
+    ct:supported_by ex:C057P0111 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C057R0009Condition111 a ct:Condition ;
+    ct:description "18.3     In the event that there is no written notice issued by either party to          show the intention to renew this Agreement in the said thirty(30) days          before the expiry of the current Term of the Agreement, the Agreement          shall terminate at the end of the said thirty(30) days. In the event          that such a notice of intention to renew is issued, but the parties are          not able to enter into a new agreement within that sixty(60) days from          the expiry of this Agreement, this Agreement shall terminate at the end          of the said sixty(60) days." ;
+    ct:supported_by ex:C057P0111 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C057R0010 a ct:Rule ;
+    rdfs:label "Optional Renewal — source passage 111" ;
+    ct:kind "OPTIONAL_RENEWAL" ;
+    ct:subject_to ex:C057R0010Condition111 ;
+    ct:supported_by ex:C057P0111 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C057R0010Condition111 a ct:Condition ;
+    ct:description "18.3     In the event that there is no written notice issued by either party to          show the intention to renew this Agreement in the said thirty(30) days          before the expiry of the current Term of the Agreement, the Agreement          shall terminate at the end of the said thirty(30) days. In the event          that such a notice of intention to renew is issued, but the parties are          not able to enter into a new agreement within that sixty(60) days from          the expiry of this Agreement, this Agreement shall terminate at the end          of the said sixty(60) days." ;
+    ct:supported_by ex:C057P0111 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C057R0011 a ct:Rule ;
+    rdfs:label "Termination — source passage 112" ;
+    ct:kind "TERMINATION" ;
+    ct:supported_by ex:C057P0112 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C057R0012 a ct:Rule ;
+    rdfs:label "Termination — source passage 113" ;
+    ct:kind "TERMINATION" ;
+    ct:subject_to ex:C057R0012Condition113 ;
+    ct:supported_by ex:C057P0113 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C057R0012Condition113 a ct:Condition ;
+    ct:description "19.1     If either party be in default with respect to any of the terms or          conditions of this Agreement, including, without limitation,          DISTRIBUTOR's failure to pay any invoice of PPG SHANGHAI in accordance          with its terms, and if it fails to correct such default or failure          within ten (10) business days following written notice thereof from the          other, the party serving such notice may, without prejudice to any          other right or remedy, defer further performance hereunder until such          default be remedied or terminate this Agreement by written notice to          the other, and the same shall terminate immediately upon the giving of          such notice." ;
+    ct:supported_by ex:C057P0113 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C057R0013 a ct:Rule ;
+    rdfs:label "Conditional Referenced Term — source passage 113" ;
+    ct:kind "CONDITIONAL_REFERENCED_TERM" ;
+    ct:subject_to ex:C057R0013Condition113 ;
+    ct:supported_by ex:C057P0113 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C057R0013Condition113 a ct:Condition ;
+    ct:description "19.1     If either party be in default with respect to any of the terms or          conditions of this Agreement, including, without limitation,          DISTRIBUTOR's failure to pay any invoice of PPG SHANGHAI in accordance          with its terms, and if it fails to correct such default or failure          within ten (10) business days following written notice thereof from the          other, the party serving such notice may, without prejudice to any          other right or remedy, defer further performance hereunder until such          default be remedied or terminate this Agreement by written notice to          the other, and the same shall terminate immediately upon the giving of          such notice." ;
+    ct:supported_by ex:C057P0113 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C057R0014 a ct:Rule ;
+    rdfs:label "Termination — source passage 114" ;
+    ct:kind "TERMINATION" ;
+    ct:subject_to ex:C057R0014Condition114 ;
+    ct:supported_by ex:C057P0114 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C057R0014Condition114 a ct:Condition ;
+    ct:description "19.2     PPG SHANGHAI shall have the right to terminate this Agreement and/or          suspend its performance hereunder immediately upon giving notice to          DISTRIBUTOR, which termination shall be effective upon receipt of          notice, if any one of the following occurs: (i) DISTRIBUTOR engages in          fraudulent conduct in its dealings with PPG SHANGHAI or the Products;          (ii) DISTRIBUTOR, or any principal owner of DISTRIBUTOR, is convicted          of a crime which, in PPG SHANGHAI's reasonable judgment, may adversely          affect the goodwill or interest of DISTRIBUTOR or of PPG SHANGHAI;          (iii) DISTRIBUTOR becomes insolvent, assigns or attempts to assign its          business assets for the benefit of creditors, institutes or has          instituted against it proceedings in bankruptcy, or dissolves or          liquidates the business of DISTRIBUTOR; or (iv) the business licence of          DISTRIBUTOR is cancelled by the State Administration of Industry and          Commerce." ;
+    ct:supported_by ex:C057P0114 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C057R0015 a ct:Rule ;
+    rdfs:label "Conditional Referenced Term — source passage 114" ;
+    ct:kind "CONDITIONAL_REFERENCED_TERM" ;
+    ct:subject_to ex:C057R0015Condition114 ;
+    ct:supported_by ex:C057P0114 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C057R0015Condition114 a ct:Condition ;
+    ct:description "19.2     PPG SHANGHAI shall have the right to terminate this Agreement and/or          suspend its performance hereunder immediately upon giving notice to          DISTRIBUTOR, which termination shall be effective upon receipt of          notice, if any one of the following occurs: (i) DISTRIBUTOR engages in          fraudulent conduct in its dealings with PPG SHANGHAI or the Products;          (ii) DISTRIBUTOR, or any principal owner of DISTRIBUTOR, is convicted          of a crime which, in PPG SHANGHAI's reasonable judgment, may adversely          affect the goodwill or interest of DISTRIBUTOR or of PPG SHANGHAI;          (iii) DISTRIBUTOR becomes insolvent, assigns or attempts to assign its          business assets for the benefit of creditors, institutes or has          instituted against it proceedings in bankruptcy, or dissolves or          liquidates the business of DISTRIBUTOR; or (iv) the business licence of          DISTRIBUTOR is cancelled by the State Administration of Industry and          Commerce." ;
+    ct:supported_by ex:C057P0114 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C057P0048 a ct:SourcePassage ;
+    ct:end_char 7847 ;
+    ct:exact_text "4.2      If DISTRIBUTOR sells or distributes the Products outside the Territory,          whether directly or indirectly through DISTRIBUTOR's cooperation or in          conjunction with other third parties, or to customers outside the          Territory without the prior knowledge and consent of PPG SHANGHAI, PPG          SHANGHAI shall have the right to terminate with immediate effect this          Agreement and any existing incentive arrangements between PPG SHANGHAI          and DISTRIBUTOR, whether entered into before or after the commencement          of the Agreement." ;
+    ct:source_path "cuad/NEOMEDIATECHNOLOGIESINC_12_15_2005-EX-16.1-DISTRIBUTOR AGREEMENT.txt" ;
+    ct:source_sha256 "b3db6d72f9b7e01afbc4f535c2c4475bdbe758225567ea89ac2b3105276d6993" ;
+    ct:start_char 7266 .
+
+ex:C057P0081 a ct:SourcePassage ;
+    ct:end_char 16218 ;
+    ct:exact_text "DISTRIBUTOR          agrees that if it uses the PPG Trademarks on its labels and in its          advertisements, it shall only be in the form approved in writing by PPG          SHANGHAI. PPG SHANGHAI agrees that it will not unreasonably withhold          approval of any labels or advertising material submitted to it by          DISTRIBUTOR for approval and use pursuant to the provisions hereof.          DISTRIBUTOR will not seek to obtain any registration of any of the PPG          Trademarks. Upon termination of this Agreement, DISTRIBUTOR shall          forthwith cease all further use of the PPG Trademarks and shall destroy          all unused labels and advertisements containing the PPG Trademarks.          Thereafter, DISTRIBUTOR shall not use any PPG Trademarks or trade or          corporate names similar thereto." ;
+    ct:source_path "cuad/NEOMEDIATECHNOLOGIESINC_12_15_2005-EX-16.1-DISTRIBUTOR AGREEMENT.txt" ;
+    ct:source_sha256 "b3db6d72f9b7e01afbc4f535c2c4475bdbe758225567ea89ac2b3105276d6993" ;
+    ct:start_char 15387 .
+
+ex:C057P0098 a ct:SourcePassage ;
+    ct:end_char 25147 ;
+    ct:exact_text "DISTRIBUTOR acknowledges that it has express notice that PPG or PPG SHANGHAI may at any time discontinue the production and/or sale of any of the Products. If PPG or PPG SHANGHAI does discontinue the production and/or sale of any of the Products, this Agreement shall automatically terminate with respect to such discontinued Product, and DISTRIBUTOR shall not be entitled to claim or receive" ;
+    ct:source_path "cuad/NEOMEDIATECHNOLOGIESINC_12_15_2005-EX-16.1-DISTRIBUTOR AGREEMENT.txt" ;
+    ct:source_sha256 "b3db6d72f9b7e01afbc4f535c2c4475bdbe758225567ea89ac2b3105276d6993" ;
+    ct:start_char 24755 .
+
+ex:C057P0110 a ct:SourcePassage ;
+    ct:end_char 29358 ;
+    ct:exact_text "18.2     The parties hereof intend to form a long-term relationship. To this          end, if both parties wish to renew this Agreement, the parties shall          agree on such intention in writing at least thirty(30) days before the          expiry of the current Term of the Agreement. The parties shall agree on          the terms and conditions of the renewal, and enter into a new agreement          within sixty(60) days from the expiry of this Agreement. During this          sixty(60) days period, both parties shall continue to perform their          respective obligation under the same terms and conditions of this          Agreement." ;
+    ct:source_path "cuad/NEOMEDIATECHNOLOGIESINC_12_15_2005-EX-16.1-DISTRIBUTOR AGREEMENT.txt" ;
+    ct:source_sha256 "b3db6d72f9b7e01afbc4f535c2c4475bdbe758225567ea89ac2b3105276d6993" ;
+    ct:start_char 28712 .
+
+ct:Agreement a owl:Class ;
+    rdfs:label "Agreement" .
+
+ex:C057P0111 a ct:SourcePassage ;
+    ct:end_char 29955 ;
+    ct:exact_text "18.3     In the event that there is no written notice issued by either party to          show the intention to renew this Agreement in the said thirty(30) days          before the expiry of the current Term of the Agreement, the Agreement          shall terminate at the end of the said thirty(30) days. In the event          that such a notice of intention to renew is issued, but the parties are          not able to enter into a new agreement within that sixty(60) days from          the expiry of this Agreement, this Agreement shall terminate at the end          of the said sixty(60) days." ;
+    ct:source_path "cuad/NEOMEDIATECHNOLOGIESINC_12_15_2005-EX-16.1-DISTRIBUTOR AGREEMENT.txt" ;
+    ct:source_sha256 "b3db6d72f9b7e01afbc4f535c2c4475bdbe758225567ea89ac2b3105276d6993" ;
+    ct:start_char 29360 .
+
+ex:C057P0113 a ct:SourcePassage ;
+    ct:end_char 30707 ;
+    ct:exact_text "19.1     If either party be in default with respect to any of the terms or          conditions of this Agreement, including, without limitation,          DISTRIBUTOR's failure to pay any invoice of PPG SHANGHAI in accordance          with its terms, and if it fails to correct such default or failure          within ten (10) business days following written notice thereof from the          other, the party serving such notice may, without prejudice to any          other right or remedy, defer further performance hereunder until such          default be remedied or terminate this Agreement by written notice to          the other, and the same shall terminate immediately upon the giving of          such notice." ;
+    ct:source_path "cuad/NEOMEDIATECHNOLOGIESINC_12_15_2005-EX-16.1-DISTRIBUTOR AGREEMENT.txt" ;
+    ct:source_sha256 "b3db6d72f9b7e01afbc4f535c2c4475bdbe758225567ea89ac2b3105276d6993" ;
+    ct:start_char 29991 .
+
+ex:C057P0114 a ct:SourcePassage ;
+    ct:end_char 31741 ;
+    ct:exact_text "19.2     PPG SHANGHAI shall have the right to terminate this Agreement and/or          suspend its performance hereunder immediately upon giving notice to          DISTRIBUTOR, which termination shall be effective upon receipt of          notice, if any one of the following occurs: (i) DISTRIBUTOR engages in          fraudulent conduct in its dealings with PPG SHANGHAI or the Products;          (ii) DISTRIBUTOR, or any principal owner of DISTRIBUTOR, is convicted          of a crime which, in PPG SHANGHAI's reasonable judgment, may adversely          affect the goodwill or interest of DISTRIBUTOR or of PPG SHANGHAI;          (iii) DISTRIBUTOR becomes insolvent, assigns or attempts to assign its          business assets for the benefit of creditors, institutes or has          instituted against it proceedings in bankruptcy, or dissolves or          liquidates the business of DISTRIBUTOR; or (iv) the business licence of          DISTRIBUTOR is cancelled by the State Administration of Industry and          Commerce." ;
+    ct:source_path "cuad/NEOMEDIATECHNOLOGIESINC_12_15_2005-EX-16.1-DISTRIBUTOR AGREEMENT.txt" ;
+    ct:source_sha256 "b3db6d72f9b7e01afbc4f535c2c4475bdbe758225567ea89ac2b3105276d6993" ;
+    ct:start_char 30713 .
+
+ct:Reference a owl:Class ;
+    rdfs:label "Reference" .
+
+ct:Condition a owl:Class ;
+    rdfs:label "Condition" .
+
+ct:SourcePassage a owl:Class ;
+    rdfs:label "SourcePassage" .
+
+ct:Rule a owl:Class ;
+    rdfs:label "Rule" .
+

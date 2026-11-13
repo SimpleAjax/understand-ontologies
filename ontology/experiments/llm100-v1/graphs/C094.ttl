@@ -1,0 +1,584 @@
+@prefix ct: <https://cimulink.local/ontology/contract-terms/0.1#> .
+@prefix ex: <https://cimulink.local/ontology/llm100-v1/> .
+@prefix meta: <https://cimulink.local/ontology/extraction#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ct: a owl:Ontology ;
+    rdfs:comment "Partial five-contract development sample. No claim of complete contract coverage or legal correctness." .
+
+ct:agreement_effective_from a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:applies_within a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:calendar_date_status a owl:DatatypeProperty .
+
+ct:coverage a owl:DatatypeProperty .
+
+ct:description a owl:DatatypeProperty .
+
+ct:duration a owl:DatatypeProperty .
+
+ct:duration_status a owl:DatatypeProperty .
+
+ct:end_char a owl:DatatypeProperty .
+
+ct:end_date_status a owl:DatatypeProperty .
+
+ct:ends_on_event a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:exact_text a owl:DatatypeProperty .
+
+ct:has_party a owl:ObjectProperty ;
+    rdfs:domain ct:Agreement ;
+    rdfs:range ct:Party .
+
+ct:has_rule a owl:ObjectProperty ;
+    rdfs:domain ct:Agreement ;
+    rdfs:range ct:Rule .
+
+ct:kind a owl:DatatypeProperty .
+
+ct:notice_actor a owl:DatatypeProperty .
+
+ct:notice_form a owl:DatatypeProperty .
+
+ct:notice_period_status a owl:DatatypeProperty .
+
+ct:qualifies a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Rule .
+
+ct:references_section a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:renewal_count a owl:DatatypeProperty .
+
+ct:resolution_status a owl:DatatypeProperty .
+
+ct:resolved_to a owl:ObjectProperty ;
+    rdfs:domain ct:Reference ;
+    rdfs:range ct:SourcePassage .
+
+ct:source_path a owl:DatatypeProperty .
+
+ct:source_sha256 a owl:DatatypeProperty .
+
+ct:start_char a owl:DatatypeProperty .
+
+ct:starts_from a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:stated_end_date a owl:DatatypeProperty .
+
+ct:subject_to a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Condition .
+
+ct:supported_by a owl:ObjectProperty ;
+    rdfs:range ct:SourcePassage .
+
+ct:termination_notice a owl:DatatypeProperty .
+
+ex:C094 a ct:Agreement ;
+    rdfs:label "WPPPLC_04_30_2020-EX-4.28-SERVICE AGREEMENT.txt" ;
+    ct:coverage "LOCAL_LLM_PROPOSED_PARTIAL; NOT_HUMAN_REVIEWED" ;
+    ct:has_rule ex:C094R0001,
+        ex:C094R0002,
+        ex:C094R0003,
+        ex:C094R0004,
+        ex:C094R0005,
+        ex:C094R0006,
+        ex:C094R0007,
+        ex:C094R0008,
+        ex:C094R0009,
+        ex:C094R0010,
+        ex:C094R0011,
+        ex:C094R0012,
+        ex:C094R0013,
+        ex:C094R0014,
+        ex:C094R0015,
+        ex:C094R0016,
+        ex:C094R0017,
+        ex:C094R0018,
+        ex:C094R0019,
+        ex:C094R0020,
+        ex:C094R0021,
+        ex:C094R0022,
+        ex:C094R0023,
+        ex:C094R0024 ;
+    ct:source_path "cuad/WPPPLC_04_30_2020-EX-4.28-SERVICE AGREEMENT.txt" ;
+    ct:source_sha256 "7a5fbb1185c660bdcdcbdb340f92b50048a49f708ba3ab1051b40c700c0a00a6" ;
+    meta:model_digest "0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0" .
+
+ct:Party a owl:Class ;
+    rdfs:label "Party" .
+
+ex:C094P0025 a ct:SourcePassage ;
+    ct:end_char 2430 ;
+    ct:exact_text "Termination Date means the date on which the Appointment terminates for whatever reason; and" ;
+    ct:source_path "cuad/WPPPLC_04_30_2020-EX-4.28-SERVICE AGREEMENT.txt" ;
+    ct:source_sha256 "7a5fbb1185c660bdcdcbdb340f92b50048a49f708ba3ab1051b40c700c0a00a6" ;
+    ct:start_char 2338 .
+
+ex:C094P0035 a ct:SourcePassage ;
+    ct:end_char 10338 ;
+    ct:exact_text "one year shall confer no right on the Executive to receive a bonus in any other year. Specifically, but without limitation, the Executive shall have no right to be considered for, or payment of, a bonus where the Executive is subject to, or may about to be subject to, an ongoing investigation or disciplinary process into facts or matters which could lead to such bonus being forfeited, or reduced and in all events if the Appointment has terminated for any reason or if he is under notice of termination whether given by the Executive or the Company at or prior to the date when a bonus might otherwise have been payable. For the avoidance of doubt, if the Executive is exonerated of any of the allegations made during any such disciplinary process or if any investigation does not result in any material action against the Executive, he will (once the disciplinary process or investigation is concluded) have the right to be considered for a bonus as if there had been no such investigation or disciplinary process. If any bonus becomes payable in such circumstances it will be paid without delay following the conclusion of the disciplinary process or investigation. " ;
+    ct:source_path "cuad/WPPPLC_04_30_2020-EX-4.28-SERVICE AGREEMENT.txt" ;
+    ct:source_sha256 "7a5fbb1185c660bdcdcbdb340f92b50048a49f708ba3ab1051b40c700c0a00a6" ;
+    ct:start_char 9167 .
+
+ex:C094P0047 a ct:SourcePassage ;
+    ct:end_char 19349 ;
+    ct:exact_text "11.2 No accrued but untaken holiday may be carried forward to the next holiday year and will lapse unless the Executive has been prevented from taking holiday due to sickness or statutory family leave to which he is or may be entitled further to Company policy from time to time. 11.3 The Company reserves the right to require the Executive to take any outstanding holiday during any period of notice of termination of employment or to make a payment in lieu of holiday outstanding at the Termination Date. If, at the Termination Date, the Executive has taken more holiday than he has accrued, the Executive hereby expressly consents to the Company deducting an appropriate amount from any payments otherwise due him. Deductions and payments in lieu of holiday are to be calculated on the basis that a day's holiday is equal to 1/260 of the Executive's basic salary. 12. OTHER INTERESTS" ;
+    ct:source_path "cuad/WPPPLC_04_30_2020-EX-4.28-SERVICE AGREEMENT.txt" ;
+    ct:source_sha256 "7a5fbb1185c660bdcdcbdb340f92b50048a49f708ba3ab1051b40c700c0a00a6" ;
+    ct:start_char 18463 .
+
+ex:C094P0063 a ct:SourcePassage ;
+    ct:end_char 30941 ;
+    ct:exact_text "15. TERMINATION OF EMPLOYMENT 15.1 The Appointment may be terminated by either party giving the other at least 12 months' notice in writing. 15.2 The Company may in its sole and absolute discretion (whether or not any notice of termination has been given under sub clause 15.1) terminate this Agreement at any time and with immediate effect by giving notice in writing to the Executive that the Company is exercising its rights pursuant to this clause 15. If the Company elects to terminate the Executive's employment in this way, it will make, within 30 days, either the first instalment (of equal monthly instalments) of a, or an entire, payment in lieu of notice (Payment in Lieu) equal to the basic salary, benefit allowance and any benefits, as at the Termination Date, which the Executive would have been entitled to receive under this Agreement during the notice period referred to at sub clause 15.1 (or, if notice has already been given, during the remainder of the notice period), less all relevant deductions for income tax and National Insurance contributions. For the avoidance of doubt, the Payment in Lieu shall not include any element in relation to: (a) any bonus or discretionary payment(s) that might otherwise have been due during the period for which the Payment in Lieu is made; " ;
+    ct:source_path "cuad/WPPPLC_04_30_2020-EX-4.28-SERVICE AGREEMENT.txt" ;
+    ct:source_sha256 "7a5fbb1185c660bdcdcbdb340f92b50048a49f708ba3ab1051b40c700c0a00a6" ;
+    ct:start_char 29640 .
+
+ex:C094P0071 a ct:SourcePassage ;
+    ct:end_char 37017 ;
+    ct:exact_text "against the Company or such reconstructed or amalgamated or transferee company in respect of the termination of the Appointment. 16. GARDEN LEAVE 16.1 Following service of notice to terminate the Appointment by either party or if the Executive purports to terminate the Appointment in breach, the Board may suspend all or any of the Executive's duties and powers for such periods and on such terms as he considers expedient and this may include a term that: (a) the Executive must stay away from all or any of the Company's premises, and/or (b) will not be provided with any work, and/or (c) will have no business contact with all or any of the Group's agents, employees, customers, clients, distributors and suppliers, and/or (d) will have no access to the Company's communications systems." ;
+    ct:source_path "cuad/WPPPLC_04_30_2020-EX-4.28-SERVICE AGREEMENT.txt" ;
+    ct:source_sha256 "7a5fbb1185c660bdcdcbdb340f92b50048a49f708ba3ab1051b40c700c0a00a6" ;
+    ct:start_char 36226 .
+
+ex:C094P0072 a ct:SourcePassage ;
+    ct:end_char 38182 ;
+    ct:exact_text "(referred to as Garden Leave). 16.2 During any period of Garden Leave the Company will continue to pay the Executive's salary, benefits allowance and maintain the benefits to which he is contractually entitled prior to the commencement of his Garden Leave (for the avoidance of doubt the Executive shall not be entitled to any bonus or discretionary payment(s) during any period of Garden Leave). 16.3 During any period of Garden Leave may appoint a replacement to exercise any of the Executive's duties and responsibilities and may require the Executive to take such actions as he reasonably requires to effect a proper handover of any of his duties and responsibilities. Alternatively, the Company may require the Executive to carry out exceptional duties or special projects outside the normal scope of his duties and responsibilities (provided such projects are broadly commensurate with his status). 16.4 During any period of Garden Leave the Executive's employment will continue and the Executive will continue to be bound by his obligations under this Agreement and by his general duties of fidelity and good faith (and, where applicable, as a fiduciary). " ;
+    ct:source_path "cuad/WPPPLC_04_30_2020-EX-4.28-SERVICE AGREEMENT.txt" ;
+    ct:source_sha256 "7a5fbb1185c660bdcdcbdb340f92b50048a49f708ba3ab1051b40c700c0a00a6" ;
+    ct:start_char 37019 .
+
+ex:C094P0134 a ct:SourcePassage ;
+    ct:end_char 63676 ;
+    ct:exact_text "Relevant Period means the twelve-month period ending with the Termination Date." ;
+    ct:source_path "cuad/WPPPLC_04_30_2020-EX-4.28-SERVICE AGREEMENT.txt" ;
+    ct:source_sha256 "7a5fbb1185c660bdcdcbdb340f92b50048a49f708ba3ab1051b40c700c0a00a6" ;
+    ct:start_char 63597 .
+
+ex:C094P0136 a ct:SourcePassage ;
+    ct:end_char 64216 ;
+    ct:exact_text "Restricted Period means the 12-month period commencing on the Termination Date in relation to sub-clause 1(a) and the 18- month period commencing on the Termination Date in relation to all remaining sub-clauses in clause 1 above." ;
+    ct:source_path "cuad/WPPPLC_04_30_2020-EX-4.28-SERVICE AGREEMENT.txt" ;
+    ct:source_sha256 "7a5fbb1185c660bdcdcbdb340f92b50048a49f708ba3ab1051b40c700c0a00a6" ;
+    ct:start_char 63987 .
+
+ex:C094R0001 a ct:Rule ;
+    rdfs:label "Conditional Referenced Term — source passage 10" ;
+    ct:kind "CONDITIONAL_REFERENCED_TERM" ;
+    ct:subject_to ex:C094R0001Condition10 ;
+    ct:supported_by ex:C094P0010 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C094R0001Condition10 a ct:Condition ;
+    ct:description "1. Interpretation 3 2. Commencement of Appointment 4 3. Executive's Duties 4 4. Place of Work 5 5. Working Hours 5 6. Remuneration 5 7. Expenses 6 8. Pensions 6 9. Insurances 7 10. Sickness Absence 8 11. Holidays 8 12. Other Interests 8 13. Confidential Information 9 14. Intellectual Property 10 15. Termination of Employment 12 16. Garden Leave 14 17. Office as a Director 14 18. Protective Covenants 15 19. Data Protection 15 20. Grievance and Disciplinary Procedure 15 21. Collective Agreements 16 22. General 16" ;
+    ct:supported_by ex:C094P0010 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C094R0002 a ct:Rule ;
+    rdfs:label "Termination — source passage 25" ;
+    ct:kind "TERMINATION" ;
+    ct:supported_by ex:C094P0025 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C094R0003 a ct:Rule ;
+    rdfs:label "Initial Term — source passage 28" ;
+    ct:kind "INITIAL_TERM" ;
+    ct:references_section ex:C094R0003Ref0 ;
+    ct:subject_to ex:C094R0003Condition28 ;
+    ct:supported_by ex:C094P0028 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C094R0003Condition28 a ct:Condition ;
+    ct:description "2. COMMENCEMENT OF APPOINTMENT 2.1 The Appointment will begin on 27 January 2020 or such other date as the parties shall agree and when the Executive is not subject to any restrictions to prevent the commencement of his employment with the Company. There is no period of previous employment with the Company. 2.2 The Appointment may be terminated in accordance with clause 15 (or in furtherance of any right either party may have at common law). 3. EXECUTIVE'S DUTIES 3.1 The Executive shall serve the Company as Chief Financial Officer and as an Executive Director of WPP plc, and/or in such other capacity or capacities, within the Group as the Company may reasonably require from time to time, but subject always to it being consistent with his status, skills and experience. 3.2 During the Appointment the Executive shall: (a) diligently exercise such powers and perform such duties as may from time to time be assigned to him by the Board of WPP plc; (b) accept any offices or directorships as reasonably required by the Company; (c) use his best endeavours to promote, protect, develop and extend the business of the Company and any Group Company; (d) comply with all reasonable and lawful directions given to him by the Board of WPP plc; (e) comply with all policies and procedures of the Company and/or the Group. " ;
+    ct:supported_by ex:C094P0028 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C094R0003Ref0 a ct:Reference ;
+    rdfs:label "clause 15" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C094R0004 a ct:Rule ;
+    rdfs:label "Termination — source passage 28" ;
+    ct:kind "TERMINATION" ;
+    ct:references_section ex:C094R0004Ref0 ;
+    ct:subject_to ex:C094R0004Condition28 ;
+    ct:supported_by ex:C094P0028 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C094R0004Condition28 a ct:Condition ;
+    ct:description "2. COMMENCEMENT OF APPOINTMENT 2.1 The Appointment will begin on 27 January 2020 or such other date as the parties shall agree and when the Executive is not subject to any restrictions to prevent the commencement of his employment with the Company. There is no period of previous employment with the Company. 2.2 The Appointment may be terminated in accordance with clause 15 (or in furtherance of any right either party may have at common law). 3. EXECUTIVE'S DUTIES 3.1 The Executive shall serve the Company as Chief Financial Officer and as an Executive Director of WPP plc, and/or in such other capacity or capacities, within the Group as the Company may reasonably require from time to time, but subject always to it being consistent with his status, skills and experience. 3.2 During the Appointment the Executive shall: (a) diligently exercise such powers and perform such duties as may from time to time be assigned to him by the Board of WPP plc; (b) accept any offices or directorships as reasonably required by the Company; (c) use his best endeavours to promote, protect, develop and extend the business of the Company and any Group Company; (d) comply with all reasonable and lawful directions given to him by the Board of WPP plc; (e) comply with all policies and procedures of the Company and/or the Group. " ;
+    ct:supported_by ex:C094P0028 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C094R0004Ref0 a ct:Reference ;
+    rdfs:label "clause 15" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C094R0005 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 35" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:supported_by ex:C094P0035 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C094R0006 a ct:Rule ;
+    rdfs:label "Termination — source passage 46" ;
+    ct:kind "TERMINATION" ;
+    ct:subject_to ex:C094R0006Condition46 ;
+    ct:supported_by ex:C094P0046 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C094R0006Condition46 a ct:Condition ;
+    ct:description "The Executive agrees that the Company may have access to reports and results produced in connection with any such examination and that it may discuss the contents of the report with the relevant medical practitioner, subject to the Executive being given the opportunity to review and comment on the report before it is disclosed to anyone within the Company. 10.3 If the Executive is absent due to illness for more than one month, the Board shall be entitled at any time thereafter to appoint an executive director or employee to perform the Executive's duties and to exercise his powers until the Executive is able to resume his duties, following which such substitute will cease to act in the Executive's role. 10.4 The Company reserves the right to terminate the Appointment under the terms of this Agreement even when this would or might cause the Executive to forfeit any entitlement to sick pay or Group income protection benefit. 11. HOLIDAYS 11.1 The Company's holiday year runs from 1 January to 31 December (the Holiday Year). The Executive is entitled to 25 days' paid holiday in addition to the usual public or bank holidays in England) in every Holiday Year, to be taken at times convenient to the Company. " ;
+    ct:supported_by ex:C094P0046 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C094R0007 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 47" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:supported_by ex:C094P0047 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C094R0008 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 55" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:subject_to ex:C094R0008Condition55 ;
+    ct:supported_by ex:C094P0055 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C094R0008Condition55 a ct:Condition ;
+    ct:description "13.4 The Executive shall not, during the Appointment or at any time thereafter, make, except for the benefit of the Company or any Group Company, any copy, record or memorandum (whether or not recorded in writing or on computer disk or tape) of any Confidential Information and any such copy, record or memorandum made by the Executive during the Appointment shall be and remain the property of the Company and accordingly shall be returned by the Executive to the Company on the Termination Date or when required to do so by the Company. 13.5 The Executive shall not other than in the ordinary course of the Appointment without the prior written consent of the Board either directly or indirectly publish any opinion, fact or material or deliver any lecture or address or participate in the making of any film, radio broadcast or television transmission or communicate with any representative of the media or any third party relating to: (a) the business or affairs of the Company or of any other Group Company or to any of its or their officers, employees, customers, clients, suppliers, distributors, agents or shareholders; or (b) the development or exploitation of any Intellectual Property Rights, including Confidential Information. " ;
+    ct:supported_by ex:C094P0055 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C094R0009 a ct:Rule ;
+    rdfs:label "Conditional Referenced Term — source passage 55" ;
+    ct:kind "CONDITIONAL_REFERENCED_TERM" ;
+    ct:subject_to ex:C094R0009Condition55 ;
+    ct:supported_by ex:C094P0055 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C094R0009Condition55 a ct:Condition ;
+    ct:description "13.4 The Executive shall not, during the Appointment or at any time thereafter, make, except for the benefit of the Company or any Group Company, any copy, record or memorandum (whether or not recorded in writing or on computer disk or tape) of any Confidential Information and any such copy, record or memorandum made by the Executive during the Appointment shall be and remain the property of the Company and accordingly shall be returned by the Executive to the Company on the Termination Date or when required to do so by the Company. 13.5 The Executive shall not other than in the ordinary course of the Appointment without the prior written consent of the Board either directly or indirectly publish any opinion, fact or material or deliver any lecture or address or participate in the making of any film, radio broadcast or television transmission or communicate with any representative of the media or any third party relating to: (a) the business or affairs of the Company or of any other Group Company or to any of its or their officers, employees, customers, clients, suppliers, distributors, agents or shareholders; or (b) the development or exploitation of any Intellectual Property Rights, including Confidential Information. " ;
+    ct:supported_by ex:C094P0055 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C094R0010 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 61" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:references_section ex:C094R0010Ref0 ;
+    ct:subject_to ex:C094R0010Condition61 ;
+    ct:supported_by ex:C094P0061 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C094R0010Condition61 a ct:Condition ;
+    ct:description "14.8 The Executive understands and accepts that the remuneration and benefits provided to him by the Company in accordance with this Agreement constitute sufficient consideration to the Executive for the performance of his obligations under this clause 14 including, for the avoidance of doubt, the waiver of or covenant not to assert any moral rights that he may have. 14.9 This clause 14, and the rights and obligations of the parties contained herein, shall survive expiry of this Agreement, or its termination, for any reason. 11" ;
+    ct:supported_by ex:C094P0061 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C094R0010Ref0 a ct:Reference ;
+    rdfs:label "clause 14" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C094R0011 a ct:Rule ;
+    rdfs:label "Termination — source passage 63" ;
+    ct:kind "TERMINATION" ;
+    ct:references_section ex:C094R0011Ref0,
+        ex:C094R0011Ref1 ;
+    ct:supported_by ex:C094P0063 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C094R0011Ref0 a ct:Reference ;
+    rdfs:label "clause 15.1" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C094R0011Ref1 a ct:Reference ;
+    rdfs:label "clause 15" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C094R0012 a ct:Rule ;
+    rdfs:label "Termination — source passage 68" ;
+    ct:kind "TERMINATION" ;
+    ct:references_section ex:C094R0012Ref0 ;
+    ct:subject_to ex:C094R0012Condition68 ;
+    ct:supported_by ex:C094P0068 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C094R0012Condition68 a ct:Condition ;
+    ct:description "the Company may by written notice to the Executive terminate this Agreement with immediate effect. 15.9 The Company's rights under clause 15.8 are without prejudice to any other rights that it might have at common law to terminate the Appointment or to accept any breach of this Agreement by the Executive as having brought the agreement to an end. Any delay by the Company in exercising its rights shall not constitute a waiver thereof. 15.10 On the Termination Date or, at the request of the Board on either party giving notice to terminate this Agreement, the Executive will immediately: (a) deliver to the Company all other property in his possession, custody or under his control belonging to any Group Company including (but not limited to) computers and any other electronic devices, business cards, credit and charge cards, security passes, original and copy documents or other media on which information is held in his possession relating to the business or affairs of any Group Company; " ;
+    ct:supported_by ex:C094P0068 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C094R0012Ref0 a ct:Reference ;
+    rdfs:label "clause 15.8" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C094R0013 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 68" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:references_section ex:C094R0013Ref0 ;
+    ct:subject_to ex:C094R0013Condition68 ;
+    ct:supported_by ex:C094P0068 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C094R0013Condition68 a ct:Condition ;
+    ct:description "the Company may by written notice to the Executive terminate this Agreement with immediate effect. 15.9 The Company's rights under clause 15.8 are without prejudice to any other rights that it might have at common law to terminate the Appointment or to accept any breach of this Agreement by the Executive as having brought the agreement to an end. Any delay by the Company in exercising its rights shall not constitute a waiver thereof. 15.10 On the Termination Date or, at the request of the Board on either party giving notice to terminate this Agreement, the Executive will immediately: (a) deliver to the Company all other property in his possession, custody or under his control belonging to any Group Company including (but not limited to) computers and any other electronic devices, business cards, credit and charge cards, security passes, original and copy documents or other media on which information is held in his possession relating to the business or affairs of any Group Company; " ;
+    ct:supported_by ex:C094P0068 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C094R0013Ref0 a ct:Reference ;
+    rdfs:label "clause 15.8" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C094R0014 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 71" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:supported_by ex:C094P0071 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C094R0015 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 72" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:supported_by ex:C094P0072 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C094R0016 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 73" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:references_section ex:C094R0016Ref0,
+        ex:C094R0016Ref1,
+        ex:C094R0016Ref2 ;
+    ct:subject_to ex:C094R0016Condition73 ;
+    ct:supported_by ex:C094P0073 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C094R0016Condition73 a ct:Condition ;
+    ct:description "The Executive agrees that the Company may, if it so chooses, announce to third parties that the Executive has resigned or been given notice (as the case may be) but the Executive will not make any comment on his status or change of duties, except to confirm he is on garden leave. 17. OFFICE AS A DIRECTOR 17.1 Any office or directorship which the Executive holds in any Group Company is subject to the articles of association of the relevant company from time to time. 17.2 The Executive is required to familiarise himself with all his responsibilities as a director, legal and/or otherwise. 17.3 Upon termination of this Agreement, or on the Board's request, the Executive will resign from any office held by him in any Group Company without any claim for compensation. 17.4 The Executive shall, at the time of signing this Agreement, appoint the Company as his attorney by executing a Power of Attorney in the form set out in Schedule 1 so that the Company can give effect to the provisions of sub clause 17.3 above and clause 14 above as required. 14" ;
+    ct:supported_by ex:C094P0073 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C094R0016Ref0 a ct:Reference ;
+    rdfs:label "Schedule 1" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C094R0016Ref1 a ct:Reference ;
+    rdfs:label "clause 17.3" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C094R0016Ref2 a ct:Reference ;
+    rdfs:label "clause 14" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C094R0017 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 75" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:references_section ex:C094R0017Ref0,
+        ex:C094R0017Ref1 ;
+    ct:subject_to ex:C094R0017Condition75 ;
+    ct:supported_by ex:C094P0075 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C094R0017Condition75 a ct:Condition ;
+    ct:description "17.5 In the event that the Executive fails to be re-elected as a director of any Group Company, or if the Executive resigns as a director of any Group Company at the Company's request, this Agreement shall not automatically terminate and the Executive will continue as an employee of the Company unless and until either party elect to terminate the employment (either in accordance with clause 15.1, or where the Company may have a right to terminate his employment summarily under clause 15 or at common law). 17.6 The Executive must not resign from any directorship or office of any Group Company, except on termination of this Agreement (by either party), on the Board's request or as provided in the articles of association of the Company, and he must not do anything that would cause him to be disqualified from continuing to act as a director. 18. " ;
+    ct:supported_by ex:C094P0075 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C094R0017Ref0 a ct:Reference ;
+    rdfs:label "clause 15.1" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C094R0017Ref1 a ct:Reference ;
+    rdfs:label "clause 15" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C094R0018 a ct:Rule ;
+    rdfs:label "Termination — source passage 75" ;
+    ct:kind "TERMINATION" ;
+    ct:references_section ex:C094R0018Ref0,
+        ex:C094R0018Ref1 ;
+    ct:subject_to ex:C094R0018Condition75 ;
+    ct:supported_by ex:C094P0075 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C094R0018Condition75 a ct:Condition ;
+    ct:description "17.5 In the event that the Executive fails to be re-elected as a director of any Group Company, or if the Executive resigns as a director of any Group Company at the Company's request, this Agreement shall not automatically terminate and the Executive will continue as an employee of the Company unless and until either party elect to terminate the employment (either in accordance with clause 15.1, or where the Company may have a right to terminate his employment summarily under clause 15 or at common law). 17.6 The Executive must not resign from any directorship or office of any Group Company, except on termination of this Agreement (by either party), on the Board's request or as provided in the articles of association of the Company, and he must not do anything that would cause him to be disqualified from continuing to act as a director. 18. " ;
+    ct:supported_by ex:C094P0075 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C094R0018Ref0 a ct:Reference ;
+    rdfs:label "clause 15.1" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C094R0018Ref1 a ct:Reference ;
+    rdfs:label "clause 15" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C094R0019 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 87" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:references_section ex:C094R0019Ref0 ;
+    ct:subject_to ex:C094R0019Condition87 ;
+    ct:supported_by ex:C094P0087 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C094R0019Condition87 a ct:Condition ;
+    ct:description "By this Power of Attorney made on 1 October 2019, I JOHN ROGERS in accordance with the terms of my service agreement (the Service Agreement) with WPP 2005 Limited (the Company) dated today HEREBY APPOINT the Company to act as my attorney with authority in my name and on my behalf (so that words and expressions defined in the Service Agreement shall have the same meaning herein): (a) during my employment or after it has terminated, to do anything and sign or execute any document and generally to use my name for the purpose of giving to the Company or to any Group Company or its or their nominee(s) the full benefit of clause 14 (Intellectual Property); (b) during my employment or after it has terminated, to do anything and sign or execute any document as may be required under the constitution of the Company and each Group Company to make my resignation as a director from those companies effective; and (c) to appoint any substitute and to delegate to that substitute all or any powers conferred by this Power of Attorney." ;
+    ct:supported_by ex:C094P0087 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C094R0019Ref0 a ct:Reference ;
+    rdfs:label "clause 14" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C094R0020 a ct:Rule ;
+    rdfs:label "Termination — source passage 87" ;
+    ct:kind "TERMINATION" ;
+    ct:references_section ex:C094R0020Ref0 ;
+    ct:subject_to ex:C094R0020Condition87 ;
+    ct:supported_by ex:C094P0087 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C094R0020Condition87 a ct:Condition ;
+    ct:description "By this Power of Attorney made on 1 October 2019, I JOHN ROGERS in accordance with the terms of my service agreement (the Service Agreement) with WPP 2005 Limited (the Company) dated today HEREBY APPOINT the Company to act as my attorney with authority in my name and on my behalf (so that words and expressions defined in the Service Agreement shall have the same meaning herein): (a) during my employment or after it has terminated, to do anything and sign or execute any document and generally to use my name for the purpose of giving to the Company or to any Group Company or its or their nominee(s) the full benefit of clause 14 (Intellectual Property); (b) during my employment or after it has terminated, to do anything and sign or execute any document as may be required under the constitution of the Company and each Group Company to make my resignation as a director from those companies effective; and (c) to appoint any substitute and to delegate to that substitute all or any powers conferred by this Power of Attorney." ;
+    ct:supported_by ex:C094P0087 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C094R0020Ref0 a ct:Reference ;
+    rdfs:label "clause 14" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C094R0021 a ct:Rule ;
+    rdfs:label "Termination — source passage 100" ;
+    ct:kind "TERMINATION" ;
+    ct:supported_by ex:C094P0100 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C094R0022 a ct:Rule ;
+    rdfs:label "Conditional Referenced Term — source passage 100" ;
+    ct:kind "CONDITIONAL_REFERENCED_TERM" ;
+    ct:supported_by ex:C094P0100 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C094R0023 a ct:Rule ;
+    rdfs:label "Conditional Referenced Term — source passage 134" ;
+    ct:kind "CONDITIONAL_REFERENCED_TERM" ;
+    ct:supported_by ex:C094P0134 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C094R0024 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 136" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:references_section ex:C094R0024Ref0,
+        ex:C094R0024Ref1 ;
+    ct:supported_by ex:C094P0136 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C094R0024Ref0 a ct:Reference ;
+    rdfs:label "clause 1(a)" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C094R0024Ref1 a ct:Reference ;
+    rdfs:label "clause 1" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C094P0010 a ct:SourcePassage ;
+    ct:end_char 665 ;
+    ct:exact_text "1. Interpretation 3 2. Commencement of Appointment 4 3. Executive's Duties 4 4. Place of Work 5 5. Working Hours 5 6. Remuneration 5 7. Expenses 6 8. Pensions 6 9. Insurances 7 10. Sickness Absence 8 11. Holidays 8 12. Other Interests 8 13. Confidential Information 9 14. Intellectual Property 10 15. Termination of Employment 12 16. Garden Leave 14 17. Office as a Director 14 18. Protective Covenants 15 19. Data Protection 15 20. Grievance and Disciplinary Procedure 15 21. Collective Agreements 16 22. General 16" ;
+    ct:source_path "cuad/WPPPLC_04_30_2020-EX-4.28-SERVICE AGREEMENT.txt" ;
+    ct:source_sha256 "7a5fbb1185c660bdcdcbdb340f92b50048a49f708ba3ab1051b40c700c0a00a6" ;
+    ct:start_char 149 .
+
+ex:C094P0046 a ct:SourcePassage ;
+    ct:end_char 18463 ;
+    ct:exact_text "The Executive agrees that the Company may have access to reports and results produced in connection with any such examination and that it may discuss the contents of the report with the relevant medical practitioner, subject to the Executive being given the opportunity to review and comment on the report before it is disclosed to anyone within the Company. 10.3 If the Executive is absent due to illness for more than one month, the Board shall be entitled at any time thereafter to appoint an executive director or employee to perform the Executive's duties and to exercise his powers until the Executive is able to resume his duties, following which such substitute will cease to act in the Executive's role. 10.4 The Company reserves the right to terminate the Appointment under the terms of this Agreement even when this would or might cause the Executive to forfeit any entitlement to sick pay or Group income protection benefit. 11. HOLIDAYS 11.1 The Company's holiday year runs from 1 January to 31 December (the Holiday Year). The Executive is entitled to 25 days' paid holiday in addition to the usual public or bank holidays in England) in every Holiday Year, to be taken at times convenient to the Company. " ;
+    ct:source_path "cuad/WPPPLC_04_30_2020-EX-4.28-SERVICE AGREEMENT.txt" ;
+    ct:source_sha256 "7a5fbb1185c660bdcdcbdb340f92b50048a49f708ba3ab1051b40c700c0a00a6" ;
+    ct:start_char 17243 .
+
+ex:C094P0061 a ct:SourcePassage ;
+    ct:end_char 29615 ;
+    ct:exact_text "14.8 The Executive understands and accepts that the remuneration and benefits provided to him by the Company in accordance with this Agreement constitute sufficient consideration to the Executive for the performance of his obligations under this clause 14 including, for the avoidance of doubt, the waiver of or covenant not to assert any moral rights that he may have. 14.9 This clause 14, and the rights and obligations of the parties contained herein, shall survive expiry of this Agreement, or its termination, for any reason. 11" ;
+    ct:source_path "cuad/WPPPLC_04_30_2020-EX-4.28-SERVICE AGREEMENT.txt" ;
+    ct:source_sha256 "7a5fbb1185c660bdcdcbdb340f92b50048a49f708ba3ab1051b40c700c0a00a6" ;
+    ct:start_char 29082 .
+
+ex:C094P0073 a ct:SourcePassage ;
+    ct:end_char 39236 ;
+    ct:exact_text "The Executive agrees that the Company may, if it so chooses, announce to third parties that the Executive has resigned or been given notice (as the case may be) but the Executive will not make any comment on his status or change of duties, except to confirm he is on garden leave. 17. OFFICE AS A DIRECTOR 17.1 Any office or directorship which the Executive holds in any Group Company is subject to the articles of association of the relevant company from time to time. 17.2 The Executive is required to familiarise himself with all his responsibilities as a director, legal and/or otherwise. 17.3 Upon termination of this Agreement, or on the Board's request, the Executive will resign from any office held by him in any Group Company without any claim for compensation. 17.4 The Executive shall, at the time of signing this Agreement, appoint the Company as his attorney by executing a Power of Attorney in the form set out in Schedule 1 so that the Company can give effect to the provisions of sub clause 17.3 above and clause 14 above as required. 14" ;
+    ct:source_path "cuad/WPPPLC_04_30_2020-EX-4.28-SERVICE AGREEMENT.txt" ;
+    ct:source_sha256 "7a5fbb1185c660bdcdcbdb340f92b50048a49f708ba3ab1051b40c700c0a00a6" ;
+    ct:start_char 38182 .
+
+ex:C094P0100 a ct:SourcePassage ;
+    ct:end_char 49131 ;
+    ct:exact_text "1.4 In the event the Executive's employment is terminated or he is under notice of termination, whether such notice is given or received by the Company, prior to the date on which the bonus is paid (in respect of the cash element) or prior to the vesting date of the deferred stock award (in respect of the deferred stock element) the Executive will forfeit all and any rights or entitlements under the STIP and will not have any rights against the Company and/or WPP plc in respect of the loss of such entitlement. 2 EXECUTIVE SHARE AWARD (ESA) 2.1 The Executive will be eligible to receive Executive Share Awards (ESA) further to his STIP awards. 2.2 Annual targets based on the financial results of the Company will be determined by WPP plc. ESAs are granted in form of awards (if any) made after the end of the relevant calendar year, under the relevant stock plan and are subject to such conditions as the Compensation Committee may determine from time to time. All ESAs are subject to the overriding discretion of the Compensation Committee up to the point at which the award under the relevant stock plan is granted. Currently the ESA share vesting period is three years from the start of the Financial Year to which the relevant ESA award relates. " ;
+    ct:source_path "cuad/WPPPLC_04_30_2020-EX-4.28-SERVICE AGREEMENT.txt" ;
+    ct:source_sha256 "7a5fbb1185c660bdcdcbdb340f92b50048a49f708ba3ab1051b40c700c0a00a6" ;
+    ct:start_char 47875 .
+
+ct:Agreement a owl:Class ;
+    rdfs:label "Agreement" .
+
+ex:C094P0028 a ct:SourcePassage ;
+    ct:end_char 4279 ;
+    ct:exact_text "2. COMMENCEMENT OF APPOINTMENT 2.1 The Appointment will begin on 27 January 2020 or such other date as the parties shall agree and when the Executive is not subject to any restrictions to prevent the commencement of his employment with the Company. There is no period of previous employment with the Company. 2.2 The Appointment may be terminated in accordance with clause 15 (or in furtherance of any right either party may have at common law). 3. EXECUTIVE'S DUTIES 3.1 The Executive shall serve the Company as Chief Financial Officer and as an Executive Director of WPP plc, and/or in such other capacity or capacities, within the Group as the Company may reasonably require from time to time, but subject always to it being consistent with his status, skills and experience. 3.2 During the Appointment the Executive shall: (a) diligently exercise such powers and perform such duties as may from time to time be assigned to him by the Board of WPP plc; (b) accept any offices or directorships as reasonably required by the Company; (c) use his best endeavours to promote, protect, develop and extend the business of the Company and any Group Company; (d) comply with all reasonable and lawful directions given to him by the Board of WPP plc; (e) comply with all policies and procedures of the Company and/or the Group. " ;
+    ct:source_path "cuad/WPPPLC_04_30_2020-EX-4.28-SERVICE AGREEMENT.txt" ;
+    ct:source_sha256 "7a5fbb1185c660bdcdcbdb340f92b50048a49f708ba3ab1051b40c700c0a00a6" ;
+    ct:start_char 2957 .
+
+ex:C094P0055 a ct:SourcePassage ;
+    ct:end_char 24884 ;
+    ct:exact_text "13.4 The Executive shall not, during the Appointment or at any time thereafter, make, except for the benefit of the Company or any Group Company, any copy, record or memorandum (whether or not recorded in writing or on computer disk or tape) of any Confidential Information and any such copy, record or memorandum made by the Executive during the Appointment shall be and remain the property of the Company and accordingly shall be returned by the Executive to the Company on the Termination Date or when required to do so by the Company. 13.5 The Executive shall not other than in the ordinary course of the Appointment without the prior written consent of the Board either directly or indirectly publish any opinion, fact or material or deliver any lecture or address or participate in the making of any film, radio broadcast or television transmission or communicate with any representative of the media or any third party relating to: (a) the business or affairs of the Company or of any other Group Company or to any of its or their officers, employees, customers, clients, suppliers, distributors, agents or shareholders; or (b) the development or exploitation of any Intellectual Property Rights, including Confidential Information. " ;
+    ct:source_path "cuad/WPPPLC_04_30_2020-EX-4.28-SERVICE AGREEMENT.txt" ;
+    ct:source_sha256 "7a5fbb1185c660bdcdcbdb340f92b50048a49f708ba3ab1051b40c700c0a00a6" ;
+    ct:start_char 23644 .
+
+ex:C094P0068 a ct:SourcePassage ;
+    ct:end_char 34906 ;
+    ct:exact_text "the Company may by written notice to the Executive terminate this Agreement with immediate effect. 15.9 The Company's rights under clause 15.8 are without prejudice to any other rights that it might have at common law to terminate the Appointment or to accept any breach of this Agreement by the Executive as having brought the agreement to an end. Any delay by the Company in exercising its rights shall not constitute a waiver thereof. 15.10 On the Termination Date or, at the request of the Board on either party giving notice to terminate this Agreement, the Executive will immediately: (a) deliver to the Company all other property in his possession, custody or under his control belonging to any Group Company including (but not limited to) computers and any other electronic devices, business cards, credit and charge cards, security passes, original and copy documents or other media on which information is held in his possession relating to the business or affairs of any Group Company; " ;
+    ct:source_path "cuad/WPPPLC_04_30_2020-EX-4.28-SERVICE AGREEMENT.txt" ;
+    ct:source_sha256 "7a5fbb1185c660bdcdcbdb340f92b50048a49f708ba3ab1051b40c700c0a00a6" ;
+    ct:start_char 33909 .
+
+ex:C094P0075 a ct:SourcePassage ;
+    ct:end_char 40115 ;
+    ct:exact_text "17.5 In the event that the Executive fails to be re-elected as a director of any Group Company, or if the Executive resigns as a director of any Group Company at the Company's request, this Agreement shall not automatically terminate and the Executive will continue as an employee of the Company unless and until either party elect to terminate the employment (either in accordance with clause 15.1, or where the Company may have a right to terminate his employment summarily under clause 15 or at common law). 17.6 The Executive must not resign from any directorship or office of any Group Company, except on termination of this Agreement (by either party), on the Board's request or as provided in the articles of association of the Company, and he must not do anything that would cause him to be disqualified from continuing to act as a director. 18. " ;
+    ct:source_path "cuad/WPPPLC_04_30_2020-EX-4.28-SERVICE AGREEMENT.txt" ;
+    ct:source_sha256 "7a5fbb1185c660bdcdcbdb340f92b50048a49f708ba3ab1051b40c700c0a00a6" ;
+    ct:start_char 39261 .
+
+ex:C094P0087 a ct:SourcePassage ;
+    ct:end_char 45833 ;
+    ct:exact_text "By this Power of Attorney made on 1 October 2019, I JOHN ROGERS in accordance with the terms of my service agreement (the Service Agreement) with WPP 2005 Limited (the Company) dated today HEREBY APPOINT the Company to act as my attorney with authority in my name and on my behalf (so that words and expressions defined in the Service Agreement shall have the same meaning herein): (a) during my employment or after it has terminated, to do anything and sign or execute any document and generally to use my name for the purpose of giving to the Company or to any Group Company or its or their nominee(s) the full benefit of clause 14 (Intellectual Property); (b) during my employment or after it has terminated, to do anything and sign or execute any document as may be required under the constitution of the Company and each Group Company to make my resignation as a director from those companies effective; and (c) to appoint any substitute and to delegate to that substitute all or any powers conferred by this Power of Attorney." ;
+    ct:source_path "cuad/WPPPLC_04_30_2020-EX-4.28-SERVICE AGREEMENT.txt" ;
+    ct:source_sha256 "7a5fbb1185c660bdcdcbdb340f92b50048a49f708ba3ab1051b40c700c0a00a6" ;
+    ct:start_char 44801 .
+
+ct:Condition a owl:Class ;
+    rdfs:label "Condition" .
+
+ct:SourcePassage a owl:Class ;
+    rdfs:label "SourcePassage" .
+
+ct:Reference a owl:Class ;
+    rdfs:label "Reference" .
+
+ct:Rule a owl:Class ;
+    rdfs:label "Rule" .
+

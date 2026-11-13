@@ -1,0 +1,163 @@
+{
+  "document_id": "C078",
+  "file_path": "cuad/SLINGERBAGINC_05_27_2020-EX-10.7-CONSULTING AGREEMENT.txt",
+  "model_digest": "0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0",
+  "rules": [
+    {
+      "passage_id": 1,
+      "kind": "INITIAL_TERM",
+      "label": "Initial Term — source passage 1",
+      "condition_ids": [],
+      "reference_labels": [
+        "Exhibit 10.7",
+        "ARTICLE 1"
+      ],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 10,
+      "kind": "TERMINATION",
+      "label": "Termination — source passage 10",
+      "condition_ids": [],
+      "reference_labels": [
+        "ARTICLE 4"
+      ],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 11,
+      "kind": "TERMINATION",
+      "label": "Termination — source passage 11",
+      "condition_ids": [
+        11
+      ],
+      "reference_labels": [
+        "Article 3"
+      ],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 11,
+      "kind": "CONDITIONAL_REFERENCED_TERM",
+      "label": "Conditional Referenced Term — source passage 11",
+      "condition_ids": [
+        11
+      ],
+      "reference_labels": [
+        "Article 3"
+      ],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 12,
+      "kind": "TERMINATION",
+      "label": "Termination — source passage 12",
+      "condition_ids": [
+        12
+      ],
+      "reference_labels": [
+        "Article 5"
+      ],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 12,
+      "kind": "CONDITIONAL_REFERENCED_TERM",
+      "label": "Conditional Referenced Term — source passage 12",
+      "condition_ids": [
+        12
+      ],
+      "reference_labels": [
+        "Article 5"
+      ],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 13,
+      "kind": "POST_EXPIRY_CONTINUATION",
+      "label": "Post Expiry Continuation — source passage 13",
+      "condition_ids": [
+        13
+      ],
+      "reference_labels": [
+        "Article 2",
+        "Article 5",
+        "Section 4.2",
+        "Section 3.1"
+      ],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 13,
+      "kind": "TERMINATION",
+      "label": "Termination — source passage 13",
+      "condition_ids": [
+        13
+      ],
+      "reference_labels": [
+        "Article 2",
+        "Article 5",
+        "Section 4.2",
+        "Section 3.1"
+      ],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 15,
+      "kind": "TERMINATION",
+      "label": "Termination — source passage 15",
+      "condition_ids": [],
+      "reference_labels": [
+        "Section 4.3",
+        "Section 4.1"
+      ],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 15,
+      "kind": "POST_EXPIRY_CONTINUATION",
+      "label": "Post Expiry Continuation — source passage 15",
+      "condition_ids": [],
+      "reference_labels": [
+        "Section 4.3",
+        "Section 4.1"
+      ],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 30,
+      "kind": "INITIAL_TERM",
+      "label": "Initial Term — source passage 30",
+      "condition_ids": [],
+      "reference_labels": [
+        "ARTICLE 4"
+      ],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    }
+  ],
+  "rejected_rules": [],
+  "review_status": "UNREVIEWED",
+  "coverage": "Lexically selected source windows; completeness not guaranteed."
+}

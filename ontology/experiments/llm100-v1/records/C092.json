@@ -1,0 +1,76 @@
+{
+  "document_id": "C092",
+  "file_path": "cuad/WESTERN COPPER - NON-COMPETITION AGREEMENT.txt",
+  "model_digest": "0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0",
+  "rules": [
+    {
+      "passage_id": 48,
+      "kind": "CONDITIONAL_REFERENCED_TERM",
+      "label": "Conditional Referenced Term — source passage 48",
+      "condition_ids": [
+        48
+      ],
+      "reference_labels": [],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 63,
+      "kind": "TERMINATION",
+      "label": "Termination — source passage 63",
+      "condition_ids": [],
+      "reference_labels": [],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 64,
+      "kind": "TERMINATION",
+      "label": "Termination — source passage 64",
+      "condition_ids": [
+        64
+      ],
+      "reference_labels": [],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 66,
+      "kind": "TERMINATION",
+      "label": "Termination — source passage 66",
+      "condition_ids": [
+        66
+      ],
+      "reference_labels": [],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 103,
+      "kind": "TERMINATION",
+      "label": "Termination — source passage 103",
+      "condition_ids": [],
+      "reference_labels": [],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 105,
+      "kind": "TERMINATION",
+      "label": "Termination — source passage 105",
+      "condition_ids": [],
+      "reference_labels": [],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    }
+  ],
+  "rejected_rules": [],
+  "review_status": "UNREVIEWED",
+  "coverage": "Lexically selected source windows; completeness not guaranteed."
+}

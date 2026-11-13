@@ -1,0 +1,436 @@
+@prefix ct: <https://cimulink.local/ontology/contract-terms/0.1#> .
+@prefix ex: <https://cimulink.local/ontology/llm100-v1/> .
+@prefix meta: <https://cimulink.local/ontology/extraction#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ct: a owl:Ontology ;
+    rdfs:comment "Partial five-contract development sample. No claim of complete contract coverage or legal correctness." .
+
+ct:agreement_effective_from a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:applies_within a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:calendar_date_status a owl:DatatypeProperty .
+
+ct:coverage a owl:DatatypeProperty .
+
+ct:description a owl:DatatypeProperty .
+
+ct:duration a owl:DatatypeProperty .
+
+ct:duration_status a owl:DatatypeProperty .
+
+ct:end_char a owl:DatatypeProperty .
+
+ct:end_date_status a owl:DatatypeProperty .
+
+ct:ends_on_event a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:exact_text a owl:DatatypeProperty .
+
+ct:has_party a owl:ObjectProperty ;
+    rdfs:domain ct:Agreement ;
+    rdfs:range ct:Party .
+
+ct:has_rule a owl:ObjectProperty ;
+    rdfs:domain ct:Agreement ;
+    rdfs:range ct:Rule .
+
+ct:kind a owl:DatatypeProperty .
+
+ct:notice_actor a owl:DatatypeProperty .
+
+ct:notice_form a owl:DatatypeProperty .
+
+ct:notice_period_status a owl:DatatypeProperty .
+
+ct:qualifies a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Rule .
+
+ct:references_section a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:renewal_count a owl:DatatypeProperty .
+
+ct:resolution_status a owl:DatatypeProperty .
+
+ct:resolved_to a owl:ObjectProperty ;
+    rdfs:domain ct:Reference ;
+    rdfs:range ct:SourcePassage .
+
+ct:source_path a owl:DatatypeProperty .
+
+ct:source_sha256 a owl:DatatypeProperty .
+
+ct:start_char a owl:DatatypeProperty .
+
+ct:starts_from a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:stated_end_date a owl:DatatypeProperty .
+
+ct:subject_to a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Condition .
+
+ct:supported_by a owl:ObjectProperty ;
+    rdfs:range ct:SourcePassage .
+
+ct:termination_notice a owl:DatatypeProperty .
+
+ex:C041 a ct:Agreement ;
+    rdfs:label "GpaqAcquisitionHoldingsInc_20200123_S-4A_EX-10.8_11951679_EX-10.8_Service Agreement.txt" ;
+    ct:coverage "LOCAL_LLM_PROPOSED_PARTIAL; NOT_HUMAN_REVIEWED" ;
+    ct:has_rule ex:C041R0001,
+        ex:C041R0002,
+        ex:C041R0003,
+        ex:C041R0004,
+        ex:C041R0005,
+        ex:C041R0006,
+        ex:C041R0007,
+        ex:C041R0008,
+        ex:C041R0009,
+        ex:C041R0010,
+        ex:C041R0011,
+        ex:C041R0012,
+        ex:C041R0013,
+        ex:C041R0014 ;
+    ct:source_path "cuad/GpaqAcquisitionHoldingsInc_20200123_S-4A_EX-10.8_11951679_EX-10.8_Service Agreement.txt" ;
+    ct:source_sha256 "9d8942925e1900a35876bf5398d788b28095ea16e207899b0e7d60afb9e44857" ;
+    meta:model_digest "0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0" .
+
+ct:Party a owl:Class ;
+    rdfs:label "Party" .
+
+ex:C041P0024 a ct:SourcePassage ;
+    ct:end_char 16974 ;
+    ct:exact_text "This license expressly prohibits any pass-through rights or the use of the HOF Entity Marks by any third party, except (x) to Constellation's subsidiaries and brands for use in a manner consistent with clauses (i) through (iii) hereof or (y) with the express written consent of the HOF Entities (or the appropriate HOF Entity). On termination or expiration of this Agreement, Constellation shall cease all use of the HOF Entity Marks as soon as practicable, but in any event within thirty (30) days unless the particular media which has been approved requires a longer lead time, but in no event longer than ninety (90) days." ;
+    ct:source_path "cuad/GpaqAcquisitionHoldingsInc_20200123_S-4A_EX-10.8_11951679_EX-10.8_Service Agreement.txt" ;
+    ct:source_sha256 "9d8942925e1900a35876bf5398d788b28095ea16e207899b0e7d60afb9e44857" ;
+    ct:start_char 16349 .
+
+ex:C041P0030 a ct:SourcePassage ;
+    ct:end_char 20890 ;
+    ct:exact_text "On termination or expiration of this Agreement, the HOF Entities shall cease all use of the Constellation Marks as soon as practicable, but in any event within thirty (30) days unless the particular media which has been approved requires a longer lead time, but in no event longer than one hundred eighty (180) days." ;
+    ct:source_path "cuad/GpaqAcquisitionHoldingsInc_20200123_S-4A_EX-10.8_11951679_EX-10.8_Service Agreement.txt" ;
+    ct:source_sha256 "9d8942925e1900a35876bf5398d788b28095ea16e207899b0e7d60afb9e44857" ;
+    ct:start_char 20574 .
+
+ex:C041P0035 a ct:SourcePassage ;
+    ct:end_char 23256 ;
+    ct:exact_text "TERM AND TERMINATION 4.1 Term. The term of this Agreement (the \"Term\"), unless mutually extended by written agreement of the Parties or unless sooner terminated as provided herein, shall commence effective as of the date hereof and shall expire on December 31, 2028." ;
+    ct:source_path "cuad/GpaqAcquisitionHoldingsInc_20200123_S-4A_EX-10.8_11951679_EX-10.8_Service Agreement.txt" ;
+    ct:source_sha256 "9d8942925e1900a35876bf5398d788b28095ea16e207899b0e7d60afb9e44857" ;
+    ct:start_char 22990 .
+
+ex:C041P0045 a ct:SourcePassage ;
+    ct:end_char 29507 ;
+    ct:exact_text "In the event of any termination of this Agreement, this Agreement shall forthwith become wholly void and of no further force and effect and there shall be no liability on the part of the HOF Entities (or either of them) or Constellation, except that the provisions of Section 3.3(a), this Section 4.2(d), Section 5.2 (with respect to the period prior to termination) and Article 6 (other than Section 6.7 and Section 6.9) shall survive any such termination of this Agreement. ARTICLE 5" ;
+    ct:source_path "cuad/GpaqAcquisitionHoldingsInc_20200123_S-4A_EX-10.8_11951679_EX-10.8_Service Agreement.txt" ;
+    ct:source_sha256 "9d8942925e1900a35876bf5398d788b28095ea16e207899b0e7d60afb9e44857" ;
+    ct:start_char 29022 .
+
+ex:C041R0001 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 24" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:supported_by ex:C041P0024 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C041R0002 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 30" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:supported_by ex:C041P0030 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C041R0003 a ct:Rule ;
+    rdfs:label "Initial Term — source passage 35" ;
+    ct:kind "INITIAL_TERM" ;
+    ct:supported_by ex:C041P0035 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C041R0004 a ct:Rule ;
+    rdfs:label "Termination — source passage 38" ;
+    ct:kind "TERMINATION" ;
+    ct:subject_to ex:C041R0004Condition38 ;
+    ct:supported_by ex:C041P0038 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C041R0004Condition38 a ct:Condition ;
+    ct:description "4.2 Termination; Available Remedies. (a) Right to Terminate for Default. A Party shall be in default hereunder if any of the following events shall occur (each of such events being an \"Event of Default\"): (i) Such Party fails to perform timely any of its material obligations hereunder and such default shall continue for a period of sixty (60) days following receipt by such Party of written notice from the other Party specifying such default; provided that, if the default specified in such notice is curable but of a nature such that it cannot be cured through the exercise of reasonable diligence within the sixty (60) day cure period, then such sixty (60) day cure period shall be extended to a period as is reasonable (but in no event more than sixty (60) days, subject to delay due to force majeure) to cure such default pursuant to a mutually agreed plan of cure, provided that the non-performing Party has proceeded at all times and is continuing to proceed in a diligent and reasonable manner to cure; " ;
+    ct:supported_by ex:C041P0038 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C041R0005 a ct:Rule ;
+    rdfs:label "Termination — source passage 40" ;
+    ct:kind "TERMINATION" ;
+    ct:references_section ex:C041R0005Ref0,
+        ex:C041R0005Ref1,
+        ex:C041R0005Ref2 ;
+    ct:subject_to ex:C041R0005Condition40 ;
+    ct:supported_by ex:C041P0040 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C041R0005Condition40 a ct:Condition ;
+    ct:description "If either Party is in default under this Section 4.2(a) beyond the applicable grace or cure periods, then the other Party shall be entitled to terminate this Agreement and to seek such other remedies as are described in Section 4.2(d). (b) Right to Terminate for Potential Reputational Damage. Each of the HOF Entities or Constellation may terminate this Agreement at any time without liability if association with another Party could, in such Party's reasonable opinion, materially damage its reputation or image or in the event a Party breaches Section 3.3 hereof, which breach is not cured within sixty (60). days of receipt of notice of such breach." ;
+    ct:supported_by ex:C041P0040 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C041R0005Ref0 a ct:Reference ;
+    rdfs:label "Section 4.2(a)" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C041R0005Ref1 a ct:Reference ;
+    rdfs:label "Section 4.2(d)" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C041R0005Ref2 a ct:Reference ;
+    rdfs:label "Section 3.3" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C041R0006 a ct:Rule ;
+    rdfs:label "Conditional Referenced Term — source passage 40" ;
+    ct:kind "CONDITIONAL_REFERENCED_TERM" ;
+    ct:references_section ex:C041R0006Ref0,
+        ex:C041R0006Ref1,
+        ex:C041R0006Ref2 ;
+    ct:subject_to ex:C041R0006Condition40 ;
+    ct:supported_by ex:C041P0040 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C041R0006Condition40 a ct:Condition ;
+    ct:description "If either Party is in default under this Section 4.2(a) beyond the applicable grace or cure periods, then the other Party shall be entitled to terminate this Agreement and to seek such other remedies as are described in Section 4.2(d). (b) Right to Terminate for Potential Reputational Damage. Each of the HOF Entities or Constellation may terminate this Agreement at any time without liability if association with another Party could, in such Party's reasonable opinion, materially damage its reputation or image or in the event a Party breaches Section 3.3 hereof, which breach is not cured within sixty (60). days of receipt of notice of such breach." ;
+    ct:supported_by ex:C041P0040 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C041R0006Ref0 a ct:Reference ;
+    rdfs:label "Section 4.2(a)" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C041R0006Ref1 a ct:Reference ;
+    rdfs:label "Section 4.2(d)" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C041R0006Ref2 a ct:Reference ;
+    rdfs:label "Section 3.3" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C041R0007 a ct:Rule ;
+    rdfs:label "Termination — source passage 43" ;
+    ct:kind "TERMINATION" ;
+    ct:references_section ex:C041R0007Ref0 ;
+    ct:subject_to ex:C041R0007Condition43 ;
+    ct:supported_by ex:C041P0043 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C041R0007Condition43 a ct:Condition ;
+    ct:description "(c) Right to Terminate for Failure to Recover Investment. Constellation may terminate this Agreement, effective as of December 31, 2023, in the event that (i) on or prior to December 1, 2022, Constellation shall have provided to the HOF Entities written notice of its election to terminate this Agreement pursuant to this Section 4.2(c) and (ii) during the period commencing on the date hereof and concluding on December 1, 2022, Constellation shall not have accrued (or been required to accrue in accordance with U.S. generally accepted accounting principles) an amount of New Business (as defined below) of not less than the amount of Sponsorship Fees actually paid by Constellation to the HOF Entities prior to December 1, 2022. [***] Constellation will provide a monthly report to the HOF Entities as to all New Business contracted from the previous month and a pipeline of all active and lost opportunities. In January of each calendar year Constellation shall allow, at the written request and expense of the HOF Entities, the HOF Entities the right to audit during normal business hours all relevant Constellation records related to New Business generated during the immediately preceding calendar year. (d) Remedies; Effect of Termination or Expiration. (i) HOF Entity Remedies. " ;
+    ct:supported_by ex:C041P0043 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C041R0007Ref0 a ct:Reference ;
+    rdfs:label "Section 4.2(c)" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C041R0008 a ct:Rule ;
+    rdfs:label "Termination — source passage 44" ;
+    ct:kind "TERMINATION" ;
+    ct:references_section ex:C041R0008Ref0 ;
+    ct:subject_to ex:C041R0008Condition44 ;
+    ct:supported_by ex:C041P0044 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C041R0008Condition44 a ct:Condition ;
+    ct:description "In the event of an Event of Default by Constellation which is not cured within the applicable grace or cure period, the HOF Entities shall have the right, in their sole discretion, (A) to terminate this Agreement, (B) to remove immediately any advertising signs and/or promotional materials covered by this Agreement, and/or (C) to assert any and all other remedies which the HOF Entities may have under this Agreement and/or pursuant to law and/or equity. (ii) Constellation Remedies. In the event of an Event of Default by the HOF Entities (or either of them) which is not cured within the applicable grace or cure period, Constellation shall have the right, in its sole discretion, (A) to terminate this Agreement and/or (B) to assert any and all other remedies which Constellation may have under this Agreement and/or pursuant to law and/or equity. (iii) Effect of Termination or Expiration. In the event of a termination of this Agreement by either Party for any reason, or upon the expiration of the Term, the Parties agree that all representations and warranties made under this Agreement and the indemnification provisions set forth in Section 5.2 for any claims, demands, causes of action, suits or judgments by third parties or losses, liabilities, costs or expenses which may arise on or before the effective date of termination shall survive. " ;
+    ct:supported_by ex:C041P0044 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C041R0008Ref0 a ct:Reference ;
+    rdfs:label "Section 5.2" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C041R0009 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 44" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:references_section ex:C041R0009Ref0 ;
+    ct:subject_to ex:C041R0009Condition44 ;
+    ct:supported_by ex:C041P0044 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C041R0009Condition44 a ct:Condition ;
+    ct:description "In the event of an Event of Default by Constellation which is not cured within the applicable grace or cure period, the HOF Entities shall have the right, in their sole discretion, (A) to terminate this Agreement, (B) to remove immediately any advertising signs and/or promotional materials covered by this Agreement, and/or (C) to assert any and all other remedies which the HOF Entities may have under this Agreement and/or pursuant to law and/or equity. (ii) Constellation Remedies. In the event of an Event of Default by the HOF Entities (or either of them) which is not cured within the applicable grace or cure period, Constellation shall have the right, in its sole discretion, (A) to terminate this Agreement and/or (B) to assert any and all other remedies which Constellation may have under this Agreement and/or pursuant to law and/or equity. (iii) Effect of Termination or Expiration. In the event of a termination of this Agreement by either Party for any reason, or upon the expiration of the Term, the Parties agree that all representations and warranties made under this Agreement and the indemnification provisions set forth in Section 5.2 for any claims, demands, causes of action, suits or judgments by third parties or losses, liabilities, costs or expenses which may arise on or before the effective date of termination shall survive. " ;
+    ct:supported_by ex:C041P0044 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C041R0009Ref0 a ct:Reference ;
+    rdfs:label "Section 5.2" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C041R0010 a ct:Rule ;
+    rdfs:label "Termination — source passage 45" ;
+    ct:kind "TERMINATION" ;
+    ct:references_section ex:C041R0010Ref0,
+        ex:C041R0010Ref1,
+        ex:C041R0010Ref2,
+        ex:C041R0010Ref3,
+        ex:C041R0010Ref4,
+        ex:C041R0010Ref5,
+        ex:C041R0010Ref6 ;
+    ct:supported_by ex:C041P0045 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C041R0010Ref0 a ct:Reference ;
+    rdfs:label "Section 3.3(a)" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C041R0010Ref1 a ct:Reference ;
+    rdfs:label "Section 4.2(d)" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C041R0010Ref2 a ct:Reference ;
+    rdfs:label "Section 5.2" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C041R0010Ref3 a ct:Reference ;
+    rdfs:label "Article 6" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C041R0010Ref4 a ct:Reference ;
+    rdfs:label "Section 6.7" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C041R0010Ref5 a ct:Reference ;
+    rdfs:label "Section 6.9" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C041R0010Ref6 a ct:Reference ;
+    rdfs:label "ARTICLE 5" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C041R0011 a ct:Rule ;
+    rdfs:label "Conditional Referenced Term — source passage 69" ;
+    ct:kind "CONDITIONAL_REFERENCED_TERM" ;
+    ct:subject_to ex:C041R0011Condition69 ;
+    ct:supported_by ex:C041P0069 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C041R0011Condition69 a ct:Condition ;
+    ct:description "In the event of any conflict between the terms of this Agreement and the terms of any such agreement, this Agreement shall be deemed superseded by such conflicting provision of such other agreement. 6.7 Force Majeure. (a) Fire or Other Damage to Village. If the Village is damaged by fire, earthquake, act of God, the elements or other casualty or is condemned by an authority exercising the powers of eminent domain or the Village is transferred in lieu of the exercise of such power so as to render the Village unusable for its intended purpose at any time during the Term, then the HOF Entities shall have the option, but not the obligation, to repair the damage or loss. The HOF Entities shall notify Constellation as to whether the HOF Entities shall effect such repair and restoration within thirty (30) days after the casualty. If the HOF Entities notify Constellation that the HOF Entities are electing to effect such repairs and restoration, this Agreement shall continue in full force and effect; provided, however, that the Term shall be extended by such number of days as equals the length of the period from the date of the event until such repairs and restoration are complete. " ;
+    ct:supported_by ex:C041P0069 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C041R0012 a ct:Rule ;
+    rdfs:label "Termination — source passage 70" ;
+    ct:kind "TERMINATION" ;
+    ct:subject_to ex:C041R0012Condition70 ;
+    ct:supported_by ex:C041P0070 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C041R0012Condition70 a ct:Condition ;
+    ct:description "If the HOF Entities notify Constellation that the HOF Entities are electing not to effect such repairs and restoration, then this Agreement and all rights granted hereunder shall terminate as of the date of such fire or other casualty. (b) Other. Except as otherwise set forth herein, neither Party shall be liable or responsible for any failure to perform its obligations hereunder, which failure is caused or brought about in any manner beyond the control of such Party, including, but not limited to, the breakdown or failure of apparatus, equipment, or machinery employed in its supply of said services, any temporary stoppage for the repair, improvement or enlargement thereof, or any other act or condition beyond its reasonable control, other than such Party's inability to perform payment obligations." ;
+    ct:supported_by ex:C041P0070 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C041R0013 a ct:Rule ;
+    rdfs:label "Conditional Referenced Term — source passage 70" ;
+    ct:kind "CONDITIONAL_REFERENCED_TERM" ;
+    ct:subject_to ex:C041R0013Condition70 ;
+    ct:supported_by ex:C041P0070 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C041R0013Condition70 a ct:Condition ;
+    ct:description "If the HOF Entities notify Constellation that the HOF Entities are electing not to effect such repairs and restoration, then this Agreement and all rights granted hereunder shall terminate as of the date of such fire or other casualty. (b) Other. Except as otherwise set forth herein, neither Party shall be liable or responsible for any failure to perform its obligations hereunder, which failure is caused or brought about in any manner beyond the control of such Party, including, but not limited to, the breakdown or failure of apparatus, equipment, or machinery employed in its supply of said services, any temporary stoppage for the repair, improvement or enlargement thereof, or any other act or condition beyond its reasonable control, other than such Party's inability to perform payment obligations." ;
+    ct:supported_by ex:C041P0070 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C041R0014 a ct:Rule ;
+    rdfs:label "Conditional Referenced Term — source passage 73" ;
+    ct:kind "CONDITIONAL_REFERENCED_TERM" ;
+    ct:references_section ex:C041R0014Ref0 ;
+    ct:subject_to ex:C041R0014Condition73 ;
+    ct:supported_by ex:C041P0073 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C041R0014Condition73 a ct:Condition ;
+    ct:description "(c) Tolling. In the event that, after the construction and development of the Village has been substantially completed, the Village is not usable for a period of at least thirty (30) days as a result of the events described under this Section 6.7 and unless this Agreement shall have been terminated in accordance with its terms, the Term shall be extended for that period of time (after substantial completion) which the Village was not usable and the start and end dates of each period shall be adjusted to reflect the number of days (after substantial completion) in which the Village was not usable for all purposes of this Agreement, including without limitation the expiration date of the Term. 6.8 Not a Lease or License of the Village. This Agreement will not constitute a lease or license of any part of the Village. It will represent solely a contractual obligation of the HOF Entities to provide to Constellation certain other benefits hereunder. 6.9 Insurance. Constellation shall, at its own expense, secure and maintain in full force and effect throughout the Term (a) insurance coverage for defamation, trademark and service mark infringement, unfair competition, copyright infringement, and infringement of a person's right of publicity and right of privacy from a carrier with an A.M. Best rating of A10 or better in an amount not less than [***] per occurrence; " ;
+    ct:supported_by ex:C041P0073 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C041R0014Ref0 a ct:Reference ;
+    rdfs:label "Section 6.7" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C041P0038 a ct:SourcePassage ;
+    ct:end_char 24337 ;
+    ct:exact_text "4.2 Termination; Available Remedies. (a) Right to Terminate for Default. A Party shall be in default hereunder if any of the following events shall occur (each of such events being an \"Event of Default\"): (i) Such Party fails to perform timely any of its material obligations hereunder and such default shall continue for a period of sixty (60) days following receipt by such Party of written notice from the other Party specifying such default; provided that, if the default specified in such notice is curable but of a nature such that it cannot be cured through the exercise of reasonable diligence within the sixty (60) day cure period, then such sixty (60) day cure period shall be extended to a period as is reasonable (but in no event more than sixty (60) days, subject to delay due to force majeure) to cure such default pursuant to a mutually agreed plan of cure, provided that the non-performing Party has proceeded at all times and is continuing to proceed in a diligent and reasonable manner to cure; " ;
+    ct:source_path "cuad/GpaqAcquisitionHoldingsInc_20200123_S-4A_EX-10.8_11951679_EX-10.8_Service Agreement.txt" ;
+    ct:source_sha256 "9d8942925e1900a35876bf5398d788b28095ea16e207899b0e7d60afb9e44857" ;
+    ct:start_char 23324 .
+
+ex:C041P0043 a ct:SourcePassage ;
+    ct:end_char 27667 ;
+    ct:exact_text "(c) Right to Terminate for Failure to Recover Investment. Constellation may terminate this Agreement, effective as of December 31, 2023, in the event that (i) on or prior to December 1, 2022, Constellation shall have provided to the HOF Entities written notice of its election to terminate this Agreement pursuant to this Section 4.2(c) and (ii) during the period commencing on the date hereof and concluding on December 1, 2022, Constellation shall not have accrued (or been required to accrue in accordance with U.S. generally accepted accounting principles) an amount of New Business (as defined below) of not less than the amount of Sponsorship Fees actually paid by Constellation to the HOF Entities prior to December 1, 2022. [***] Constellation will provide a monthly report to the HOF Entities as to all New Business contracted from the previous month and a pipeline of all active and lost opportunities. In January of each calendar year Constellation shall allow, at the written request and expense of the HOF Entities, the HOF Entities the right to audit during normal business hours all relevant Constellation records related to New Business generated during the immediately preceding calendar year. (d) Remedies; Effect of Termination or Expiration. (i) HOF Entity Remedies. " ;
+    ct:source_path "cuad/GpaqAcquisitionHoldingsInc_20200123_S-4A_EX-10.8_11951679_EX-10.8_Service Agreement.txt" ;
+    ct:source_sha256 "9d8942925e1900a35876bf5398d788b28095ea16e207899b0e7d60afb9e44857" ;
+    ct:start_char 26380 .
+
+ex:C041P0069 a ct:SourcePassage ;
+    ct:end_char 44481 ;
+    ct:exact_text "In the event of any conflict between the terms of this Agreement and the terms of any such agreement, this Agreement shall be deemed superseded by such conflicting provision of such other agreement. 6.7 Force Majeure. (a) Fire or Other Damage to Village. If the Village is damaged by fire, earthquake, act of God, the elements or other casualty or is condemned by an authority exercising the powers of eminent domain or the Village is transferred in lieu of the exercise of such power so as to render the Village unusable for its intended purpose at any time during the Term, then the HOF Entities shall have the option, but not the obligation, to repair the damage or loss. The HOF Entities shall notify Constellation as to whether the HOF Entities shall effect such repair and restoration within thirty (30) days after the casualty. If the HOF Entities notify Constellation that the HOF Entities are electing to effect such repairs and restoration, this Agreement shall continue in full force and effect; provided, however, that the Term shall be extended by such number of days as equals the length of the period from the date of the event until such repairs and restoration are complete. " ;
+    ct:source_path "cuad/GpaqAcquisitionHoldingsInc_20200123_S-4A_EX-10.8_11951679_EX-10.8_Service Agreement.txt" ;
+    ct:source_sha256 "9d8942925e1900a35876bf5398d788b28095ea16e207899b0e7d60afb9e44857" ;
+    ct:start_char 43289 .
+
+ex:C041P0073 a ct:SourcePassage ;
+    ct:end_char 46739 ;
+    ct:exact_text "(c) Tolling. In the event that, after the construction and development of the Village has been substantially completed, the Village is not usable for a period of at least thirty (30) days as a result of the events described under this Section 6.7 and unless this Agreement shall have been terminated in accordance with its terms, the Term shall be extended for that period of time (after substantial completion) which the Village was not usable and the start and end dates of each period shall be adjusted to reflect the number of days (after substantial completion) in which the Village was not usable for all purposes of this Agreement, including without limitation the expiration date of the Term. 6.8 Not a Lease or License of the Village. This Agreement will not constitute a lease or license of any part of the Village. It will represent solely a contractual obligation of the HOF Entities to provide to Constellation certain other benefits hereunder. 6.9 Insurance. Constellation shall, at its own expense, secure and maintain in full force and effect throughout the Term (a) insurance coverage for defamation, trademark and service mark infringement, unfair competition, copyright infringement, and infringement of a person's right of publicity and right of privacy from a carrier with an A.M. Best rating of A10 or better in an amount not less than [***] per occurrence; " ;
+    ct:source_path "cuad/GpaqAcquisitionHoldingsInc_20200123_S-4A_EX-10.8_11951679_EX-10.8_Service Agreement.txt" ;
+    ct:source_sha256 "9d8942925e1900a35876bf5398d788b28095ea16e207899b0e7d60afb9e44857" ;
+    ct:start_char 45359 .
+
+ct:Agreement a owl:Class ;
+    rdfs:label "Agreement" .
+
+ex:C041P0040 a ct:SourcePassage ;
+    ct:end_char 26312 ;
+    ct:exact_text "If either Party is in default under this Section 4.2(a) beyond the applicable grace or cure periods, then the other Party shall be entitled to terminate this Agreement and to seek such other remedies as are described in Section 4.2(d). (b) Right to Terminate for Potential Reputational Damage. Each of the HOF Entities or Constellation may terminate this Agreement at any time without liability if association with another Party could, in such Party's reasonable opinion, materially damage its reputation or image or in the event a Party breaches Section 3.3 hereof, which breach is not cured within sixty (60). days of receipt of notice of such breach." ;
+    ct:source_path "cuad/GpaqAcquisitionHoldingsInc_20200123_S-4A_EX-10.8_11951679_EX-10.8_Service Agreement.txt" ;
+    ct:source_sha256 "9d8942925e1900a35876bf5398d788b28095ea16e207899b0e7d60afb9e44857" ;
+    ct:start_char 25659 .
+
+ex:C041P0044 a ct:SourcePassage ;
+    ct:end_char 29022 ;
+    ct:exact_text "In the event of an Event of Default by Constellation which is not cured within the applicable grace or cure period, the HOF Entities shall have the right, in their sole discretion, (A) to terminate this Agreement, (B) to remove immediately any advertising signs and/or promotional materials covered by this Agreement, and/or (C) to assert any and all other remedies which the HOF Entities may have under this Agreement and/or pursuant to law and/or equity. (ii) Constellation Remedies. In the event of an Event of Default by the HOF Entities (or either of them) which is not cured within the applicable grace or cure period, Constellation shall have the right, in its sole discretion, (A) to terminate this Agreement and/or (B) to assert any and all other remedies which Constellation may have under this Agreement and/or pursuant to law and/or equity. (iii) Effect of Termination or Expiration. In the event of a termination of this Agreement by either Party for any reason, or upon the expiration of the Term, the Parties agree that all representations and warranties made under this Agreement and the indemnification provisions set forth in Section 5.2 for any claims, demands, causes of action, suits or judgments by third parties or losses, liabilities, costs or expenses which may arise on or before the effective date of termination shall survive. " ;
+    ct:source_path "cuad/GpaqAcquisitionHoldingsInc_20200123_S-4A_EX-10.8_11951679_EX-10.8_Service Agreement.txt" ;
+    ct:source_sha256 "9d8942925e1900a35876bf5398d788b28095ea16e207899b0e7d60afb9e44857" ;
+    ct:start_char 27667 .
+
+ex:C041P0070 a ct:SourcePassage ;
+    ct:end_char 45290 ;
+    ct:exact_text "If the HOF Entities notify Constellation that the HOF Entities are electing not to effect such repairs and restoration, then this Agreement and all rights granted hereunder shall terminate as of the date of such fire or other casualty. (b) Other. Except as otherwise set forth herein, neither Party shall be liable or responsible for any failure to perform its obligations hereunder, which failure is caused or brought about in any manner beyond the control of such Party, including, but not limited to, the breakdown or failure of apparatus, equipment, or machinery employed in its supply of said services, any temporary stoppage for the repair, improvement or enlargement thereof, or any other act or condition beyond its reasonable control, other than such Party's inability to perform payment obligations." ;
+    ct:source_path "cuad/GpaqAcquisitionHoldingsInc_20200123_S-4A_EX-10.8_11951679_EX-10.8_Service Agreement.txt" ;
+    ct:source_sha256 "9d8942925e1900a35876bf5398d788b28095ea16e207899b0e7d60afb9e44857" ;
+    ct:start_char 44481 .
+
+ct:Condition a owl:Class ;
+    rdfs:label "Condition" .
+
+ct:SourcePassage a owl:Class ;
+    rdfs:label "SourcePassage" .
+
+ct:Reference a owl:Class ;
+    rdfs:label "Reference" .
+
+ct:Rule a owl:Class ;
+    rdfs:label "Rule" .
+

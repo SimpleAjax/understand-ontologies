@@ -1,0 +1,362 @@
+@prefix ct: <https://cimulink.local/ontology/contract-terms/0.1#> .
+@prefix ex: <https://cimulink.local/ontology/llm100-v1/> .
+@prefix meta: <https://cimulink.local/ontology/extraction#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ct: a owl:Ontology ;
+    rdfs:comment "Partial five-contract development sample. No claim of complete contract coverage or legal correctness." .
+
+ct:agreement_effective_from a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:applies_within a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:calendar_date_status a owl:DatatypeProperty .
+
+ct:coverage a owl:DatatypeProperty .
+
+ct:description a owl:DatatypeProperty .
+
+ct:duration a owl:DatatypeProperty .
+
+ct:duration_status a owl:DatatypeProperty .
+
+ct:end_char a owl:DatatypeProperty .
+
+ct:end_date_status a owl:DatatypeProperty .
+
+ct:ends_on_event a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:exact_text a owl:DatatypeProperty .
+
+ct:has_party a owl:ObjectProperty ;
+    rdfs:domain ct:Agreement ;
+    rdfs:range ct:Party .
+
+ct:has_rule a owl:ObjectProperty ;
+    rdfs:domain ct:Agreement ;
+    rdfs:range ct:Rule .
+
+ct:kind a owl:DatatypeProperty .
+
+ct:notice_actor a owl:DatatypeProperty .
+
+ct:notice_form a owl:DatatypeProperty .
+
+ct:notice_period_status a owl:DatatypeProperty .
+
+ct:qualifies a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Rule .
+
+ct:references_section a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:renewal_count a owl:DatatypeProperty .
+
+ct:resolution_status a owl:DatatypeProperty .
+
+ct:resolved_to a owl:ObjectProperty ;
+    rdfs:domain ct:Reference ;
+    rdfs:range ct:SourcePassage .
+
+ct:source_path a owl:DatatypeProperty .
+
+ct:source_sha256 a owl:DatatypeProperty .
+
+ct:start_char a owl:DatatypeProperty .
+
+ct:starts_from a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:stated_end_date a owl:DatatypeProperty .
+
+ct:subject_to a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Condition .
+
+ct:supported_by a owl:ObjectProperty ;
+    rdfs:range ct:SourcePassage .
+
+ct:termination_notice a owl:DatatypeProperty .
+
+ex:C051 a ct:Agreement ;
+    rdfs:label "KIROMICBIOPHARMA,INC_04_08_2020-EX-10.28-JOINT VENTURE AGREEMENT.txt" ;
+    ct:coverage "LOCAL_LLM_PROPOSED_PARTIAL; NOT_HUMAN_REVIEWED" ;
+    ct:has_rule ex:C051R0001,
+        ex:C051R0002,
+        ex:C051R0003,
+        ex:C051R0004,
+        ex:C051R0005,
+        ex:C051R0006,
+        ex:C051R0007,
+        ex:C051R0008,
+        ex:C051R0009,
+        ex:C051R0010,
+        ex:C051R0011,
+        ex:C051R0012,
+        ex:C051R0013,
+        ex:C051R0014 ;
+    ct:source_path "cuad/KIROMICBIOPHARMA,INC_04_08_2020-EX-10.28-JOINT VENTURE AGREEMENT.txt" ;
+    ct:source_sha256 "5d49e97e8deb2ed6d588cdc8604572b6d70ffbe137f42be03a0548c1441e8d6b" ;
+    meta:model_digest "0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0" .
+
+ct:Party a owl:Class ;
+    rdfs:label "Party" .
+
+ex:C051P0058 a ct:SourcePassage ;
+    ct:end_char 16329 ;
+    ct:exact_text "This JV shall automatically cease to be effective on the date when the JV is wound-up or is the target of any kind of insolvency procedure." ;
+    ct:source_path "cuad/KIROMICBIOPHARMA,INC_04_08_2020-EX-10.28-JOINT VENTURE AGREEMENT.txt" ;
+    ct:source_sha256 "5d49e97e8deb2ed6d588cdc8604572b6d70ffbe137f42be03a0548c1441e8d6b" ;
+    ct:start_char 16190 .
+
+ex:C051P0059 a ct:SourcePassage ;
+    ct:end_char 16622 ;
+    ct:exact_text "Termination of this JV Agreement shall not relieve the Parties of their obligations due at the time of such termination, nor shall such termination prejudice any claim of either Party accrued, or to accrue, on account of any default or breach by the other Party. 9. WITHDRAWAL AND RESOLUTION" ;
+    ct:source_path "cuad/KIROMICBIOPHARMA,INC_04_08_2020-EX-10.28-JOINT VENTURE AGREEMENT.txt" ;
+    ct:source_sha256 "5d49e97e8deb2ed6d588cdc8604572b6d70ffbe137f42be03a0548c1441e8d6b" ;
+    ct:start_char 16331 .
+
+ex:C051P0063 a ct:SourcePassage ;
+    ct:end_char 17570 ;
+    ct:exact_text "Pursuant to art. 1456 of the Italian Civil Code, this JV shall be terminated by right in the following cases: a. Breach of confidentiality obligations; b. Unilateral and unagreed variation of the Scope of the JV; c. Failure of each Party to comply with its obligations, including the economic commitments." ;
+    ct:source_path "cuad/KIROMICBIOPHARMA,INC_04_08_2020-EX-10.28-JOINT VENTURE AGREEMENT.txt" ;
+    ct:source_sha256 "5d49e97e8deb2ed6d588cdc8604572b6d70ffbe137f42be03a0548c1441e8d6b" ;
+    ct:start_char 17265 .
+
+ex:C051P0064 a ct:SourcePassage ;
+    ct:end_char 17715 ;
+    ct:exact_text "The Party concerned must communicate by registered letter with return receipt, or PEC, its intention to avail itself of the termination clause." ;
+    ct:source_path "cuad/KIROMICBIOPHARMA,INC_04_08_2020-EX-10.28-JOINT VENTURE AGREEMENT.txt" ;
+    ct:source_sha256 "5d49e97e8deb2ed6d588cdc8604572b6d70ffbe137f42be03a0548c1441e8d6b" ;
+    ct:start_char 17572 .
+
+ex:C051P0066 a ct:SourcePassage ;
+    ct:end_char 18293 ;
+    ct:exact_text "Upon termination of the contract, the agreement set forth in clause 5 (\"Intellectual property rights and prohibition of transfer to third parties\") and clause 6 (\"Economic rights\") will remain into force. 10. TERMINATION" ;
+    ct:source_path "cuad/KIROMICBIOPHARMA,INC_04_08_2020-EX-10.28-JOINT VENTURE AGREEMENT.txt" ;
+    ct:source_sha256 "5d49e97e8deb2ed6d588cdc8604572b6d70ffbe137f42be03a0548c1441e8d6b" ;
+    ct:start_char 18073 .
+
+ex:C051P0092 a ct:SourcePassage ;
+    ct:end_char 30496 ;
+    ct:exact_text "On termination of this Agreement, each Party shall (and shall use all reasonable endeavors to procure that its Associated Companies, and its officers and employees and those of its Associated Companies and the Company shall): (a) return to the other Party all documents and materials (and any copies) containing, reflecting, incorporating or based on the other Party's Confidential Information; and -14-" ;
+    ct:source_path "cuad/KIROMICBIOPHARMA,INC_04_08_2020-EX-10.28-JOINT VENTURE AGREEMENT.txt" ;
+    ct:source_sha256 "5d49e97e8deb2ed6d588cdc8604572b6d70ffbe137f42be03a0548c1441e8d6b" ;
+    ct:start_char 30093 .
+
+ex:C051P0095 a ct:SourcePassage ;
+    ct:end_char 31171 ;
+    ct:exact_text "The provisions of this Clause shall continue to apply after termination of this Agreement for any cause. 14. ANTI-CORRUPTION RULES" ;
+    ct:source_path "cuad/KIROMICBIOPHARMA,INC_04_08_2020-EX-10.28-JOINT VENTURE AGREEMENT.txt" ;
+    ct:source_sha256 "5d49e97e8deb2ed6d588cdc8604572b6d70ffbe137f42be03a0548c1441e8d6b" ;
+    ct:start_char 31041 .
+
+ex:C051R0001 a ct:Rule ;
+    rdfs:label "Conditional Referenced Term — source passage 44" ;
+    ct:kind "CONDITIONAL_REFERENCED_TERM" ;
+    ct:references_section ex:C051R0001Ref0 ;
+    ct:subject_to ex:C051R0001Condition44 ;
+    ct:supported_by ex:C051P0044 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C051R0001Condition44 a ct:Condition ;
+    ct:description "If one of the Parties has no interest in applying for a patent, it will inform the other Party within 30 days from the communication of the Results referred to in paragraph 1. In this case the Party concerned shall have the right to proceed with the submission of the application on the Results at its own expense and in co-ownership with the other Party, subject to written notice. The Party which is not interested in the application shall undertake to transfer its own share of ownership to the other Party, free of charge once it has obtained the patent title. -6-" ;
+    ct:supported_by ex:C051P0044 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C051R0001Ref0 a ct:Reference ;
+    rdfs:label "paragraph 1" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C051R0002 a ct:Rule ;
+    rdfs:label "Initial Term — source passage 57" ;
+    ct:kind "INITIAL_TERM" ;
+    ct:subject_to ex:C051R0002Condition57 ;
+    ct:supported_by ex:C051P0057 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C051R0002Condition57 a ct:Condition ;
+    ct:description "This JV Agreement shall become effective on the signing date and shall have a duration of * years, extendable for a further * years, unless notice of non- renewal is sent one year before the natural expiry date." ;
+    ct:supported_by ex:C051P0057 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C051R0003 a ct:Rule ;
+    rdfs:label "Optional Renewal — source passage 57" ;
+    ct:kind "OPTIONAL_RENEWAL" ;
+    ct:subject_to ex:C051R0003Condition57 ;
+    ct:supported_by ex:C051P0057 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C051R0003Condition57 a ct:Condition ;
+    ct:description "This JV Agreement shall become effective on the signing date and shall have a duration of * years, extendable for a further * years, unless notice of non- renewal is sent one year before the natural expiry date." ;
+    ct:supported_by ex:C051P0057 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C051R0004 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 58" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:supported_by ex:C051P0058 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C051R0005 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 59" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:supported_by ex:C051P0059 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C051R0006 a ct:Rule ;
+    rdfs:label "Termination — source passage 60" ;
+    ct:kind "TERMINATION" ;
+    ct:subject_to ex:C051R0006Condition60 ;
+    ct:supported_by ex:C051P0060 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C051R0006Condition60 a ct:Condition ;
+    ct:description "The Parties may withdraw from this JV only for serious and justified reasons or by mutual consent. The withdrawal must be exercised by written notice, to be sent to the other Party by certified letter or PEC, with minimum notice of 30 days." ;
+    ct:supported_by ex:C051P0060 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C051R0007 a ct:Rule ;
+    rdfs:label "Termination — source passage 61" ;
+    ct:kind "TERMINATION" ;
+    ct:subject_to ex:C051R0007Condition61 ;
+    ct:supported_by ex:C051P0061 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C051R0007Condition61 a ct:Condition ;
+    ct:description "Withdrawal or termination by mutual consent shall only have effect for the future and shall not affect the part of the Agreement already executed." ;
+    ct:supported_by ex:C051P0061 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C051R0008 a ct:Rule ;
+    rdfs:label "Termination — source passage 63" ;
+    ct:kind "TERMINATION" ;
+    ct:supported_by ex:C051P0063 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C051R0009 a ct:Rule ;
+    rdfs:label "Termination — source passage 64" ;
+    ct:kind "TERMINATION" ;
+    ct:supported_by ex:C051P0064 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C051R0010 a ct:Rule ;
+    rdfs:label "Termination — source passage 65" ;
+    ct:kind "TERMINATION" ;
+    ct:subject_to ex:C051R0010Condition65 ;
+    ct:supported_by ex:C051P0065 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C051R0010Condition65 a ct:Condition ;
+    ct:description "In the event of termination of the Agreement pursuant to this clause or, in any case, to termination due to Kiromic's default, the same is required; in addition, Kiromic undertakes to the reimbursement of expenses incurred and/or committed by Molipharma, and agrees to recognize financially the additional damage suffered by Molipharma by such a default." ;
+    ct:supported_by ex:C051P0065 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C051R0011 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 66" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:references_section ex:C051R0011Ref0,
+        ex:C051R0011Ref1 ;
+    ct:supported_by ex:C051P0066 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C051R0011Ref0 a ct:Reference ;
+    rdfs:label "clause 5" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C051R0011Ref1 a ct:Reference ;
+    rdfs:label "clause 6" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C051R0012 a ct:Rule ;
+    rdfs:label "Termination — source passage 67" ;
+    ct:kind "TERMINATION" ;
+    ct:subject_to ex:C051R0012Condition67 ;
+    ct:supported_by ex:C051P0067 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C051R0012Condition67 a ct:Condition ;
+    ct:description "Each Parties shall have the right to terminate its obligations, if one of the following events occurs: the Company (i) applies for or consents to the appointment of a receiver, trustee, custodian or liquidator of itself or substantially all of its property, (ii) becomes subject to the appointment of a receiver, trustee, custodian or liquidator of itself or substantially all of its property, (iii) makes an assignment for the benefit of creditors, (iv) institutes any proceedings under or state bankruptcy, reorganization, receivership, insolvency or other similar law affecting the rights of creditors generally, or files a petition or answer seeking reorganization or an arrangement with creditors to take advantage of any insolvency law, or files an answer admitting the material allegations of a bankruptcy, reorganization or insolvency petition filed against it, or (v) becomes subject to any involuntary proceedings under the state bankruptcy, reorganization, receivership, insolvency or other similar law affecting the rights of creditors generally, when proceeding is not dismissed within thirty (30) days of filing, or have an order for relief entered against it in any proceedings under Bankruptcy Code. -9-" ;
+    ct:supported_by ex:C051P0067 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C051R0013 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 92" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:supported_by ex:C051P0092 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C051R0014 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 95" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:supported_by ex:C051P0095 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C051P0044 a ct:SourcePassage ;
+    ct:end_char 13218 ;
+    ct:exact_text "If one of the Parties has no interest in applying for a patent, it will inform the other Party within 30 days from the communication of the Results referred to in paragraph 1. In this case the Party concerned shall have the right to proceed with the submission of the application on the Results at its own expense and in co-ownership with the other Party, subject to written notice. The Party which is not interested in the application shall undertake to transfer its own share of ownership to the other Party, free of charge once it has obtained the patent title. -6-" ;
+    ct:source_path "cuad/KIROMICBIOPHARMA,INC_04_08_2020-EX-10.28-JOINT VENTURE AGREEMENT.txt" ;
+    ct:source_sha256 "5d49e97e8deb2ed6d588cdc8604572b6d70ffbe137f42be03a0548c1441e8d6b" ;
+    ct:start_char 12650 .
+
+ex:C051P0060 a ct:SourcePassage ;
+    ct:end_char 16864 ;
+    ct:exact_text "The Parties may withdraw from this JV only for serious and justified reasons or by mutual consent. The withdrawal must be exercised by written notice, to be sent to the other Party by certified letter or PEC, with minimum notice of 30 days." ;
+    ct:source_path "cuad/KIROMICBIOPHARMA,INC_04_08_2020-EX-10.28-JOINT VENTURE AGREEMENT.txt" ;
+    ct:source_sha256 "5d49e97e8deb2ed6d588cdc8604572b6d70ffbe137f42be03a0548c1441e8d6b" ;
+    ct:start_char 16624 .
+
+ex:C051P0061 a ct:SourcePassage ;
+    ct:end_char 17012 ;
+    ct:exact_text "Withdrawal or termination by mutual consent shall only have effect for the future and shall not affect the part of the Agreement already executed." ;
+    ct:source_path "cuad/KIROMICBIOPHARMA,INC_04_08_2020-EX-10.28-JOINT VENTURE AGREEMENT.txt" ;
+    ct:source_sha256 "5d49e97e8deb2ed6d588cdc8604572b6d70ffbe137f42be03a0548c1441e8d6b" ;
+    ct:start_char 16866 .
+
+ex:C051P0065 a ct:SourcePassage ;
+    ct:end_char 18071 ;
+    ct:exact_text "In the event of termination of the Agreement pursuant to this clause or, in any case, to termination due to Kiromic's default, the same is required; in addition, Kiromic undertakes to the reimbursement of expenses incurred and/or committed by Molipharma, and agrees to recognize financially the additional damage suffered by Molipharma by such a default." ;
+    ct:source_path "cuad/KIROMICBIOPHARMA,INC_04_08_2020-EX-10.28-JOINT VENTURE AGREEMENT.txt" ;
+    ct:source_sha256 "5d49e97e8deb2ed6d588cdc8604572b6d70ffbe137f42be03a0548c1441e8d6b" ;
+    ct:start_char 17717 .
+
+ex:C051P0067 a ct:SourcePassage ;
+    ct:end_char 19514 ;
+    ct:exact_text "Each Parties shall have the right to terminate its obligations, if one of the following events occurs: the Company (i) applies for or consents to the appointment of a receiver, trustee, custodian or liquidator of itself or substantially all of its property, (ii) becomes subject to the appointment of a receiver, trustee, custodian or liquidator of itself or substantially all of its property, (iii) makes an assignment for the benefit of creditors, (iv) institutes any proceedings under or state bankruptcy, reorganization, receivership, insolvency or other similar law affecting the rights of creditors generally, or files a petition or answer seeking reorganization or an arrangement with creditors to take advantage of any insolvency law, or files an answer admitting the material allegations of a bankruptcy, reorganization or insolvency petition filed against it, or (v) becomes subject to any involuntary proceedings under the state bankruptcy, reorganization, receivership, insolvency or other similar law affecting the rights of creditors generally, when proceeding is not dismissed within thirty (30) days of filing, or have an order for relief entered against it in any proceedings under Bankruptcy Code. -9-" ;
+    ct:source_path "cuad/KIROMICBIOPHARMA,INC_04_08_2020-EX-10.28-JOINT VENTURE AGREEMENT.txt" ;
+    ct:source_sha256 "5d49e97e8deb2ed6d588cdc8604572b6d70ffbe137f42be03a0548c1441e8d6b" ;
+    ct:start_char 18295 .
+
+ct:Agreement a owl:Class ;
+    rdfs:label "Agreement" .
+
+ex:C051P0057 a ct:SourcePassage ;
+    ct:end_char 16188 ;
+    ct:exact_text "This JV Agreement shall become effective on the signing date and shall have a duration of * years, extendable for a further * years, unless notice of non- renewal is sent one year before the natural expiry date." ;
+    ct:source_path "cuad/KIROMICBIOPHARMA,INC_04_08_2020-EX-10.28-JOINT VENTURE AGREEMENT.txt" ;
+    ct:source_sha256 "5d49e97e8deb2ed6d588cdc8604572b6d70ffbe137f42be03a0548c1441e8d6b" ;
+    ct:start_char 15977 .
+
+ct:Condition a owl:Class ;
+    rdfs:label "Condition" .
+
+ct:Reference a owl:Class ;
+    rdfs:label "Reference" .
+
+ct:SourcePassage a owl:Class ;
+    rdfs:label "SourcePassage" .
+
+ct:Rule a owl:Class ;
+    rdfs:label "Rule" .
+

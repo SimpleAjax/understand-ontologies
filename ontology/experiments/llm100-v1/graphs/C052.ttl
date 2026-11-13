@@ -1,0 +1,323 @@
+@prefix ct: <https://cimulink.local/ontology/contract-terms/0.1#> .
+@prefix ex: <https://cimulink.local/ontology/llm100-v1/> .
+@prefix meta: <https://cimulink.local/ontology/extraction#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ct: a owl:Ontology ;
+    rdfs:comment "Partial five-contract development sample. No claim of complete contract coverage or legal correctness." .
+
+ct:agreement_effective_from a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:applies_within a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:calendar_date_status a owl:DatatypeProperty .
+
+ct:coverage a owl:DatatypeProperty .
+
+ct:description a owl:DatatypeProperty .
+
+ct:duration a owl:DatatypeProperty .
+
+ct:duration_status a owl:DatatypeProperty .
+
+ct:end_char a owl:DatatypeProperty .
+
+ct:end_date_status a owl:DatatypeProperty .
+
+ct:ends_on_event a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:exact_text a owl:DatatypeProperty .
+
+ct:has_party a owl:ObjectProperty ;
+    rdfs:domain ct:Agreement ;
+    rdfs:range ct:Party .
+
+ct:has_rule a owl:ObjectProperty ;
+    rdfs:domain ct:Agreement ;
+    rdfs:range ct:Rule .
+
+ct:kind a owl:DatatypeProperty .
+
+ct:notice_actor a owl:DatatypeProperty .
+
+ct:notice_form a owl:DatatypeProperty .
+
+ct:notice_period_status a owl:DatatypeProperty .
+
+ct:qualifies a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Rule .
+
+ct:references_section a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:renewal_count a owl:DatatypeProperty .
+
+ct:resolution_status a owl:DatatypeProperty .
+
+ct:resolved_to a owl:ObjectProperty ;
+    rdfs:domain ct:Reference ;
+    rdfs:range ct:SourcePassage .
+
+ct:source_path a owl:DatatypeProperty .
+
+ct:source_sha256 a owl:DatatypeProperty .
+
+ct:start_char a owl:DatatypeProperty .
+
+ct:starts_from a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:stated_end_date a owl:DatatypeProperty .
+
+ct:subject_to a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Condition .
+
+ct:supported_by a owl:ObjectProperty ;
+    rdfs:range ct:SourcePassage .
+
+ct:termination_notice a owl:DatatypeProperty .
+
+ex:C052 a ct:Agreement ;
+    rdfs:label "KitovPharmaLtd_20190326_20-F_EX-4.15_11584449_EX-4.15_Manufacturing Agreement.txt" ;
+    ct:coverage "LOCAL_LLM_PROPOSED_PARTIAL; NOT_HUMAN_REVIEWED" ;
+    ct:has_rule ex:C052R0001,
+        ex:C052R0002,
+        ex:C052R0003,
+        ex:C052R0004,
+        ex:C052R0005,
+        ex:C052R0006,
+        ex:C052R0007,
+        ex:C052R0008,
+        ex:C052R0009,
+        ex:C052R0010,
+        ex:C052R0011,
+        ex:C052R0012,
+        ex:C052R0013 ;
+    ct:source_path "cuad/KitovPharmaLtd_20190326_20-F_EX-4.15_11584449_EX-4.15_Manufacturing Agreement.txt" ;
+    ct:source_sha256 "7c3032699fe54a5e2c82716545279f4b173b548b79f659841c5689b18f64a058" ;
+    meta:model_digest "0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0" .
+
+ct:Party a owl:Class ;
+    rdfs:label "Party" .
+
+ex:C052P0015 a ct:SourcePassage ;
+    ct:end_char 11492 ;
+    ct:exact_text "1.36 \"Supply Commencement Date\" shall mean the date upon which Dexcel makes the first Delivery of the Product to Kitov pursuant to an Confirmed Order. 1.37 \"Supply Price\" shall have the meaning set forth in Section ​3.4. 1.38 \"Term\" shall have the meaning set forth in Section ​5.1. 1.39 \"Trademark\" shall mean Kitov's trademark Consensi™. 1.40 \"Working Day\" shall mean a day excluding Friday and Saturday and, for the avoidance of doubt, excluding statutory holidays in the State of Israel. 1.41 \"Year\" shall mean the twelve (12) months following the Supply Commencement Date and each successive twelve (12) month period commencing on the anniversary of the Supply Commencement Date. 2 Basics of the Agreement 2.1 Grant of Rights; Exclusivity 2.1.1 Kitov hereby grants to Dexcel a fully paid, limited license right to use all of its Confidential Information and Intellectual Property Rights (including, inter alia, the Kitov Foreground IP, Kitov Data, Kitov's share of the Joint IP, and the Trademark (\"Kitov Product IP\")) necessary in order for Dexcel to manufacture, Label, package with the Livery, test and release the Product for shipment, exclusively for Kitov, for and during the Term." ;
+    ct:source_path "cuad/KitovPharmaLtd_20190326_20-F_EX-4.15_11584449_EX-4.15_Manufacturing Agreement.txt" ;
+    ct:source_sha256 "7c3032699fe54a5e2c82716545279f4b173b548b79f659841c5689b18f64a058" ;
+    ct:start_char 10300 .
+
+ex:C052P0043 a ct:SourcePassage ;
+    ct:end_char 28868 ;
+    ct:exact_text "5.4 Rights and Obligations Following Expiration or Termination It is specifically understood by Dexcel and Kitov that, upon any expiration or termination of this Agreement for any reason, the rights and obligations of the Parties shall include the following: 5.4.1 Neither Party shall be relieved of its duty to discharge in full all obligations accrued or due prior to the date of termination, cancellation or expiration; all sums owed by either Party to the other shall become immediately due and payable thirty (30) days after such date. 5.4.2 Each Party shall remove all references to the other, if any, from its letterhead, business forms, advertising literature, websites and place of business, and shall not thereafter use any name or trademark suggesting that it has any current relationship with the other Party. 5.4.3 Each Party shall return to the other all of the other's Confidential Information and any other material, information or samples relating to the Product which have been provided or made available to the other and shall not retain any copies and the Parties further agree not to make any further use of each other's Confidential Information or any other information, data or samples relating to the Product provided or made available by the other Party, except as necessary to comply with its statutory, regulatory or licensing obligations; " ;
+    ct:source_path "cuad/KitovPharmaLtd_20190326_20-F_EX-4.15_11584449_EX-4.15_Manufacturing Agreement.txt" ;
+    ct:source_sha256 "7c3032699fe54a5e2c82716545279f4b173b548b79f659841c5689b18f64a058" ;
+    ct:start_char 27501 .
+
+ex:C052P0053 a ct:SourcePassage ;
+    ct:end_char 35594 ;
+    ct:exact_text "7.5 The recipient Party agrees not to use Confidential Information for any purpose other than within the framework of the co-operation with the disclosing Party and to exercise its rights and carry out its obligations under this Agreement. Upon any expiration or termination of this Agreement, at the disclosing Party's request, the recipient Party agrees to return to the disclosing Party all Confidential Information disclosed to the recipient Party by the disclosing Party. 7.6 Nothing in this Agreement, nor any disclosure of Confidential Information by the disclosing Party to the recipient Party before or after its execution, shall operate to confer any rights upon the recipient Party (other than the rights set forth in this Agreement) nor be effective to license or transfer to the recipient Party any right, title or interest in the Confidential Information, which rights shall remain the disclosing Party's exclusive property. 7.7 The Parties agree that neither Party may issue or release, directly or indirectly, any press release, marketing material or other communications to third parties, the media or the public regarding the terms of this Agreement, the other Party hereto, the Product, or the transactions contemplated hereby without the prior written approval of the other Party hereto, such approval not to be unreasonably withheld, delayed or conditioned; " ;
+    ct:source_path "cuad/KitovPharmaLtd_20190326_20-F_EX-4.15_11584449_EX-4.15_Manufacturing Agreement.txt" ;
+    ct:source_sha256 "7c3032699fe54a5e2c82716545279f4b173b548b79f659841c5689b18f64a058" ;
+    ct:start_char 34215 .
+
+ex:C052R0001 a ct:Rule ;
+    rdfs:label "Initial Term — source passage 15" ;
+    ct:kind "INITIAL_TERM" ;
+    ct:supported_by ex:C052P0015 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C052R0002 a ct:Rule ;
+    rdfs:label "Termination — source passage 29" ;
+    ct:kind "TERMINATION" ;
+    ct:subject_to ex:C052R0002Condition29 ;
+    ct:supported_by ex:C052P0029 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C052R0002Condition29 a ct:Condition ;
+    ct:description "3.6.3 With the exception of amounts in legitimate dispute, in the event that Kitov fails to make any payment due hereunder within ninety (90) days following the original due date, it shall be deemed a material breach of this Agreement and shall entitle Dexcel, in its sole discretion, to terminate this Agreement with immediate effect. 3.7 Product Acceptance 3.7.1 The Product supplied by Dexcel to Kitov shall correspond to the respective Product Specifications and the relevant Marketing Authorization and shall be manufactured in compliance with cGMP and the Quality Agreement. 3.7.2 Kitov shall provide Dexcel with written notification of any shortfalls in shipment quantity, and (a) any out-of-specification temperature excursions based on the downloaded data logger information following compliance with the provisions of the Quality Agreement, and/or (b) any failure of the Product to meet the Specifications which are apparent upon visual inspection and/or identification testing of the Product delivered to it by Dexcel (each of (a) and (b) being an \"Apparent Defect\"), such notification to be provided within thirty (30) Working Days of receipt of the Product at Kitov's warehouse, accompanied by samples of any such allegedly defective Product and any such Product shall not be removed from quarantine until their status is resolved. " ;
+    ct:supported_by ex:C052P0029 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C052R0003 a ct:Rule ;
+    rdfs:label "Initial Term — source passage 39" ;
+    ct:kind "INITIAL_TERM" ;
+    ct:subject_to ex:C052R0003Condition39 ;
+    ct:supported_by ex:C052P0039 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C052R0003Condition39 a ct:Condition ;
+    ct:description "5 Term and Termination 5.1 The Agreement shall commence on the Effective Date and remain in full force and effect for an initial term of **** from the Supply Commencement Date of the Product (\"Initial Term\"). Following the Initial Term, the Agreement shall automatically be renewed for additional periods of **** (each, a \"Renewal Term,\" and, together with the Initial Term, the \"Term\")), unless a Party provides written notification of non-renewal to the other Party at least **** of the Initial Term or a Renewal Term. 5.2 This Agreement may be terminated: 5.2.1 by either Party, effective immediately upon written notice to the other Party, if (i) a receiver, trustee, or liquidator of the other Party is appointed for any of properties or assets of the other Party; (ii) the other Party makes a general assignment for the benefit of its creditors; (iii) the other Party files a petition under the relevant statute for the bankruptcy or reorganization of the other Party or any arrangement with its creditors or readjustment of its debt, or its dissolution or liquidation, or such a petition is filed against the other Party and is not dismissed within sixty (60) days thereafter; or (iv) the other Party ceases doing business generally or commences dissolution or liquidation proceedings; " ;
+    ct:supported_by ex:C052P0039 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C052R0004 a ct:Rule ;
+    rdfs:label "Automatic Renewal — source passage 39" ;
+    ct:kind "AUTOMATIC_RENEWAL" ;
+    ct:subject_to ex:C052R0004Condition39 ;
+    ct:supported_by ex:C052P0039 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C052R0004Condition39 a ct:Condition ;
+    ct:description "5 Term and Termination 5.1 The Agreement shall commence on the Effective Date and remain in full force and effect for an initial term of **** from the Supply Commencement Date of the Product (\"Initial Term\"). Following the Initial Term, the Agreement shall automatically be renewed for additional periods of **** (each, a \"Renewal Term,\" and, together with the Initial Term, the \"Term\")), unless a Party provides written notification of non-renewal to the other Party at least **** of the Initial Term or a Renewal Term. 5.2 This Agreement may be terminated: 5.2.1 by either Party, effective immediately upon written notice to the other Party, if (i) a receiver, trustee, or liquidator of the other Party is appointed for any of properties or assets of the other Party; (ii) the other Party makes a general assignment for the benefit of its creditors; (iii) the other Party files a petition under the relevant statute for the bankruptcy or reorganization of the other Party or any arrangement with its creditors or readjustment of its debt, or its dissolution or liquidation, or such a petition is filed against the other Party and is not dismissed within sixty (60) days thereafter; or (iv) the other Party ceases doing business generally or commences dissolution or liquidation proceedings; " ;
+    ct:supported_by ex:C052P0039 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C052R0005 a ct:Rule ;
+    rdfs:label "Termination — source passage 39" ;
+    ct:kind "TERMINATION" ;
+    ct:subject_to ex:C052R0005Condition39 ;
+    ct:supported_by ex:C052P0039 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C052R0005Condition39 a ct:Condition ;
+    ct:description "5 Term and Termination 5.1 The Agreement shall commence on the Effective Date and remain in full force and effect for an initial term of **** from the Supply Commencement Date of the Product (\"Initial Term\"). Following the Initial Term, the Agreement shall automatically be renewed for additional periods of **** (each, a \"Renewal Term,\" and, together with the Initial Term, the \"Term\")), unless a Party provides written notification of non-renewal to the other Party at least **** of the Initial Term or a Renewal Term. 5.2 This Agreement may be terminated: 5.2.1 by either Party, effective immediately upon written notice to the other Party, if (i) a receiver, trustee, or liquidator of the other Party is appointed for any of properties or assets of the other Party; (ii) the other Party makes a general assignment for the benefit of its creditors; (iii) the other Party files a petition under the relevant statute for the bankruptcy or reorganization of the other Party or any arrangement with its creditors or readjustment of its debt, or its dissolution or liquidation, or such a petition is filed against the other Party and is not dismissed within sixty (60) days thereafter; or (iv) the other Party ceases doing business generally or commences dissolution or liquidation proceedings; " ;
+    ct:supported_by ex:C052P0039 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C052R0006 a ct:Rule ;
+    rdfs:label "Termination — source passage 40" ;
+    ct:kind "TERMINATION" ;
+    ct:subject_to ex:C052R0006Condition40 ;
+    ct:supported_by ex:C052P0040 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C052R0006Condition40 a ct:Condition ;
+    ct:description "5.2.2 in the event that a Party is in material breach of this Agreement or the Quality Agreement and fails to remedy such breach within thirty (30) calendar days from receipt of written notification of same, by the non-breaching Party; 5.2.3 by Dexcel, in the event that the provisions of Section ​3.6.3 is applicable; or 5.3 in the event of a Change of Control, the Party which was not subject to the Change of Control may terminate this Agreement upon six (6) months advance written notification. The affected Party is obligated to notify the other Party of its decision to terminate within thirty (30) days following notice of the Change of Control." ;
+    ct:supported_by ex:C052P0040 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C052R0007 a ct:Rule ;
+    rdfs:label "Conditional Referenced Term — source passage 40" ;
+    ct:kind "CONDITIONAL_REFERENCED_TERM" ;
+    ct:subject_to ex:C052R0007Condition40 ;
+    ct:supported_by ex:C052P0040 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C052R0007Condition40 a ct:Condition ;
+    ct:description "5.2.2 in the event that a Party is in material breach of this Agreement or the Quality Agreement and fails to remedy such breach within thirty (30) calendar days from receipt of written notification of same, by the non-breaching Party; 5.2.3 by Dexcel, in the event that the provisions of Section ​3.6.3 is applicable; or 5.3 in the event of a Change of Control, the Party which was not subject to the Change of Control may terminate this Agreement upon six (6) months advance written notification. The affected Party is obligated to notify the other Party of its decision to terminate within thirty (30) days following notice of the Change of Control." ;
+    ct:supported_by ex:C052P0040 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C052R0008 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 43" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:supported_by ex:C052P0043 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C052R0009 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 44" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:subject_to ex:C052R0009Condition44 ;
+    ct:supported_by ex:C052P0044 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C052R0009Condition44 a ct:Condition ;
+    ct:description "provided, however, that Kitov may retain such material, information and/or samples relating to the Product as may be necessary for Kitov to continue to sell the Product as permitted by Section ​5.4.4 below, following which, Kitov shall refrain from making any further use of Dexcel's Confidential Information or any other information, data or samples and shall return any remaining Confidential Information and material, information or samples relating to the Product. 5.4.4 The provisions of this Section ​5.4.4 shall not be applicable if Dexcel shall have terminated this Agreement pursuant to Sections ​5.2.2 or ​5.2.3. Any Confirmed Orders made by Dexcel on or before the expiration or termination of this Agreement but not yet delivered by Dexcel shall be delivered to Kitov and Kitov shall be liable to pay for the same in accordance with the provisions of the Agreement. Kitov shall be entitled to sell or otherwise dispose of its remaining stock of the Product until the end of the inventory's shelf life. 5.4.5 In no event shall any expiration or termination of this Agreement excuse either Party from any breach or violation of this Agreement and full legal and equitable remedies shall remain available therefor. The rights and obligations of the Parties to this Agreement set forth in 4, 5, 6, 7, 9 and 10 shall survive any expiration or termination of this Agreement. " ;
+    ct:supported_by ex:C052P0044 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C052R0010 a ct:Rule ;
+    rdfs:label "Termination — source passage 44" ;
+    ct:kind "TERMINATION" ;
+    ct:subject_to ex:C052R0010Condition44 ;
+    ct:supported_by ex:C052P0044 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C052R0010Condition44 a ct:Condition ;
+    ct:description "provided, however, that Kitov may retain such material, information and/or samples relating to the Product as may be necessary for Kitov to continue to sell the Product as permitted by Section ​5.4.4 below, following which, Kitov shall refrain from making any further use of Dexcel's Confidential Information or any other information, data or samples and shall return any remaining Confidential Information and material, information or samples relating to the Product. 5.4.4 The provisions of this Section ​5.4.4 shall not be applicable if Dexcel shall have terminated this Agreement pursuant to Sections ​5.2.2 or ​5.2.3. Any Confirmed Orders made by Dexcel on or before the expiration or termination of this Agreement but not yet delivered by Dexcel shall be delivered to Kitov and Kitov shall be liable to pay for the same in accordance with the provisions of the Agreement. Kitov shall be entitled to sell or otherwise dispose of its remaining stock of the Product until the end of the inventory's shelf life. 5.4.5 In no event shall any expiration or termination of this Agreement excuse either Party from any breach or violation of this Agreement and full legal and equitable remedies shall remain available therefor. The rights and obligations of the Parties to this Agreement set forth in 4, 5, 6, 7, 9 and 10 shall survive any expiration or termination of this Agreement. " ;
+    ct:supported_by ex:C052P0044 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C052R0011 a ct:Rule ;
+    rdfs:label "Termination — source passage 48" ;
+    ct:kind "TERMINATION" ;
+    ct:subject_to ex:C052R0011Condition48 ;
+    ct:supported_by ex:C052P0048 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C052R0011Condition48 a ct:Condition ;
+    ct:description "6.2 In the event that such event of Force Majeure continues for a period in excess of sixty (60) days, the Parties agree to undertake good faith discussions with a view to reaching some other mutually acceptable and reasonable arrangement for alleviating the effects of such Force Majeure. In the event that the Parties are unable to agree on such an arrangement, either Party shall be entitled to provide immediate written notice of termination to the other Party. 7 Confidential Information 7.1 For the purposes of this Agreement, \"Confidential Information\" shall mean, with respect to a Party, all information of any kind whatsoever (including but not limited to, data, compilations, formulae, models, patent disclosures, procedures, processes, projections, protocols, results of experimentation and testing, specifications, strategies and techniques), and all tangible and intangible embodiments thereof of any kind whatsoever (including but not limited to apparatus; compositions; documents; drawings; machinery; patent applications; records and reports), which is proprietary to the disclosing Party or that is marked or identified by the disclosing Party or otherwise acknowledged by the recipient Party to be confidential to the disclosing Party at the time of disclosure to the other Party. " ;
+    ct:supported_by ex:C052P0048 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C052R0012 a ct:Rule ;
+    rdfs:label "Conditional Referenced Term — source passage 48" ;
+    ct:kind "CONDITIONAL_REFERENCED_TERM" ;
+    ct:subject_to ex:C052R0012Condition48 ;
+    ct:supported_by ex:C052P0048 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C052R0012Condition48 a ct:Condition ;
+    ct:description "6.2 In the event that such event of Force Majeure continues for a period in excess of sixty (60) days, the Parties agree to undertake good faith discussions with a view to reaching some other mutually acceptable and reasonable arrangement for alleviating the effects of such Force Majeure. In the event that the Parties are unable to agree on such an arrangement, either Party shall be entitled to provide immediate written notice of termination to the other Party. 7 Confidential Information 7.1 For the purposes of this Agreement, \"Confidential Information\" shall mean, with respect to a Party, all information of any kind whatsoever (including but not limited to, data, compilations, formulae, models, patent disclosures, procedures, processes, projections, protocols, results of experimentation and testing, specifications, strategies and techniques), and all tangible and intangible embodiments thereof of any kind whatsoever (including but not limited to apparatus; compositions; documents; drawings; machinery; patent applications; records and reports), which is proprietary to the disclosing Party or that is marked or identified by the disclosing Party or otherwise acknowledged by the recipient Party to be confidential to the disclosing Party at the time of disclosure to the other Party. " ;
+    ct:supported_by ex:C052P0048 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C052R0013 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 53" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:supported_by ex:C052P0053 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C052P0029 a ct:SourcePassage ;
+    ct:end_char 20558 ;
+    ct:exact_text "3.6.3 With the exception of amounts in legitimate dispute, in the event that Kitov fails to make any payment due hereunder within ninety (90) days following the original due date, it shall be deemed a material breach of this Agreement and shall entitle Dexcel, in its sole discretion, to terminate this Agreement with immediate effect. 3.7 Product Acceptance 3.7.1 The Product supplied by Dexcel to Kitov shall correspond to the respective Product Specifications and the relevant Marketing Authorization and shall be manufactured in compliance with cGMP and the Quality Agreement. 3.7.2 Kitov shall provide Dexcel with written notification of any shortfalls in shipment quantity, and (a) any out-of-specification temperature excursions based on the downloaded data logger information following compliance with the provisions of the Quality Agreement, and/or (b) any failure of the Product to meet the Specifications which are apparent upon visual inspection and/or identification testing of the Product delivered to it by Dexcel (each of (a) and (b) being an \"Apparent Defect\"), such notification to be provided within thirty (30) Working Days of receipt of the Product at Kitov's warehouse, accompanied by samples of any such allegedly defective Product and any such Product shall not be removed from quarantine until their status is resolved. " ;
+    ct:source_path "cuad/KitovPharmaLtd_20190326_20-F_EX-4.15_11584449_EX-4.15_Manufacturing Agreement.txt" ;
+    ct:source_sha256 "7c3032699fe54a5e2c82716545279f4b173b548b79f659841c5689b18f64a058" ;
+    ct:start_char 19213 .
+
+ct:Agreement a owl:Class ;
+    rdfs:label "Agreement" .
+
+ex:C052P0040 a ct:SourcePassage ;
+    ct:end_char 27448 ;
+    ct:exact_text "5.2.2 in the event that a Party is in material breach of this Agreement or the Quality Agreement and fails to remedy such breach within thirty (30) calendar days from receipt of written notification of same, by the non-breaching Party; 5.2.3 by Dexcel, in the event that the provisions of Section ​3.6.3 is applicable; or 5.3 in the event of a Change of Control, the Party which was not subject to the Change of Control may terminate this Agreement upon six (6) months advance written notification. The affected Party is obligated to notify the other Party of its decision to terminate within thirty (30) days following notice of the Change of Control." ;
+    ct:source_path "cuad/KitovPharmaLtd_20190326_20-F_EX-4.15_11584449_EX-4.15_Manufacturing Agreement.txt" ;
+    ct:source_sha256 "7c3032699fe54a5e2c82716545279f4b173b548b79f659841c5689b18f64a058" ;
+    ct:start_char 26796 .
+
+ex:C052P0044 a ct:SourcePassage ;
+    ct:end_char 30249 ;
+    ct:exact_text "provided, however, that Kitov may retain such material, information and/or samples relating to the Product as may be necessary for Kitov to continue to sell the Product as permitted by Section ​5.4.4 below, following which, Kitov shall refrain from making any further use of Dexcel's Confidential Information or any other information, data or samples and shall return any remaining Confidential Information and material, information or samples relating to the Product. 5.4.4 The provisions of this Section ​5.4.4 shall not be applicable if Dexcel shall have terminated this Agreement pursuant to Sections ​5.2.2 or ​5.2.3. Any Confirmed Orders made by Dexcel on or before the expiration or termination of this Agreement but not yet delivered by Dexcel shall be delivered to Kitov and Kitov shall be liable to pay for the same in accordance with the provisions of the Agreement. Kitov shall be entitled to sell or otherwise dispose of its remaining stock of the Product until the end of the inventory's shelf life. 5.4.5 In no event shall any expiration or termination of this Agreement excuse either Party from any breach or violation of this Agreement and full legal and equitable remedies shall remain available therefor. The rights and obligations of the Parties to this Agreement set forth in 4, 5, 6, 7, 9 and 10 shall survive any expiration or termination of this Agreement. " ;
+    ct:source_path "cuad/KitovPharmaLtd_20190326_20-F_EX-4.15_11584449_EX-4.15_Manufacturing Agreement.txt" ;
+    ct:source_sha256 "7c3032699fe54a5e2c82716545279f4b173b548b79f659841c5689b18f64a058" ;
+    ct:start_char 28868 .
+
+ex:C052P0048 a ct:SourcePassage ;
+    ct:end_char 32437 ;
+    ct:exact_text "6.2 In the event that such event of Force Majeure continues for a period in excess of sixty (60) days, the Parties agree to undertake good faith discussions with a view to reaching some other mutually acceptable and reasonable arrangement for alleviating the effects of such Force Majeure. In the event that the Parties are unable to agree on such an arrangement, either Party shall be entitled to provide immediate written notice of termination to the other Party. 7 Confidential Information 7.1 For the purposes of this Agreement, \"Confidential Information\" shall mean, with respect to a Party, all information of any kind whatsoever (including but not limited to, data, compilations, formulae, models, patent disclosures, procedures, processes, projections, protocols, results of experimentation and testing, specifications, strategies and techniques), and all tangible and intangible embodiments thereof of any kind whatsoever (including but not limited to apparatus; compositions; documents; drawings; machinery; patent applications; records and reports), which is proprietary to the disclosing Party or that is marked or identified by the disclosing Party or otherwise acknowledged by the recipient Party to be confidential to the disclosing Party at the time of disclosure to the other Party. " ;
+    ct:source_path "cuad/KitovPharmaLtd_20190326_20-F_EX-4.15_11584449_EX-4.15_Manufacturing Agreement.txt" ;
+    ct:source_sha256 "7c3032699fe54a5e2c82716545279f4b173b548b79f659841c5689b18f64a058" ;
+    ct:start_char 31137 .
+
+ct:Reference a owl:Class ;
+    rdfs:label "Reference" .
+
+ex:C052P0039 a ct:SourcePassage ;
+    ct:end_char 26796 ;
+    ct:exact_text "5 Term and Termination 5.1 The Agreement shall commence on the Effective Date and remain in full force and effect for an initial term of **** from the Supply Commencement Date of the Product (\"Initial Term\"). Following the Initial Term, the Agreement shall automatically be renewed for additional periods of **** (each, a \"Renewal Term,\" and, together with the Initial Term, the \"Term\")), unless a Party provides written notification of non-renewal to the other Party at least **** of the Initial Term or a Renewal Term. 5.2 This Agreement may be terminated: 5.2.1 by either Party, effective immediately upon written notice to the other Party, if (i) a receiver, trustee, or liquidator of the other Party is appointed for any of properties or assets of the other Party; (ii) the other Party makes a general assignment for the benefit of its creditors; (iii) the other Party files a petition under the relevant statute for the bankruptcy or reorganization of the other Party or any arrangement with its creditors or readjustment of its debt, or its dissolution or liquidation, or such a petition is filed against the other Party and is not dismissed within sixty (60) days thereafter; or (iv) the other Party ceases doing business generally or commences dissolution or liquidation proceedings; " ;
+    ct:source_path "cuad/KitovPharmaLtd_20190326_20-F_EX-4.15_11584449_EX-4.15_Manufacturing Agreement.txt" ;
+    ct:source_sha256 "7c3032699fe54a5e2c82716545279f4b173b548b79f659841c5689b18f64a058" ;
+    ct:start_char 25503 .
+
+ct:SourcePassage a owl:Class ;
+    rdfs:label "SourcePassage" .
+
+ct:Condition a owl:Class ;
+    rdfs:label "Condition" .
+
+ct:Rule a owl:Class ;
+    rdfs:label "Rule" .
+

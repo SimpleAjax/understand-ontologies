@@ -1,0 +1,253 @@
+{
+  "document_id": "C030",
+  "file_path": "cuad/ELANDIAINTERNATIONALINC_04_25_2007-EX-10.21-Outsourcing Agreement.txt",
+  "model_digest": "0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0",
+  "rules": [
+    {
+      "passage_id": 39,
+      "kind": "TERMINATION",
+      "label": "Termination — source passage 39",
+      "condition_ids": [],
+      "reference_labels": [],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 59,
+      "kind": "TERMINATION",
+      "label": "Termination — source passage 59",
+      "condition_ids": [],
+      "reference_labels": [],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 83,
+      "kind": "INITIAL_TERM",
+      "label": "Initial Term — source passage 83",
+      "condition_ids": [],
+      "reference_labels": [],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 84,
+      "kind": "INITIAL_TERM",
+      "label": "Initial Term — source passage 84",
+      "condition_ids": [],
+      "reference_labels": [],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 84,
+      "kind": "OPTIONAL_RENEWAL",
+      "label": "Optional Renewal — source passage 84",
+      "condition_ids": [],
+      "reference_labels": [],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 85,
+      "kind": "POST_EXPIRY_CONTINUATION",
+      "label": "Post Expiry Continuation — source passage 85",
+      "condition_ids": [],
+      "reference_labels": [
+        "section 14"
+      ],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 186,
+      "kind": "POST_EXPIRY_CONTINUATION",
+      "label": "Post Expiry Continuation — source passage 186",
+      "condition_ids": [],
+      "reference_labels": [],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 383,
+      "kind": "POST_EXPIRY_CONTINUATION",
+      "label": "Post Expiry Continuation — source passage 383",
+      "condition_ids": [],
+      "reference_labels": [],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 471,
+      "kind": "POST_EXPIRY_CONTINUATION",
+      "label": "Post Expiry Continuation — source passage 471",
+      "condition_ids": [
+        471
+      ],
+      "reference_labels": [
+        "Section 14 (Termination)"
+      ],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 475,
+      "kind": "TERMINATION",
+      "label": "Termination — source passage 475",
+      "condition_ids": [],
+      "reference_labels": [],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 476,
+      "kind": "TERMINATION",
+      "label": "Termination — source passage 476",
+      "condition_ids": [],
+      "reference_labels": [],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 477,
+      "kind": "TERMINATION",
+      "label": "Termination — source passage 477",
+      "condition_ids": [
+        477
+      ],
+      "reference_labels": [],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 478,
+      "kind": "TERMINATION",
+      "label": "Termination — source passage 478",
+      "condition_ids": [],
+      "reference_labels": [],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 480,
+      "kind": "TERMINATION",
+      "label": "Termination — source passage 480",
+      "condition_ids": [],
+      "reference_labels": [],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 481,
+      "kind": "TERMINATION",
+      "label": "Termination — source passage 481",
+      "condition_ids": [],
+      "reference_labels": [],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 482,
+      "kind": "TERMINATION",
+      "label": "Termination — source passage 482",
+      "condition_ids": [
+        482
+      ],
+      "reference_labels": [],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 489,
+      "kind": "TERMINATION",
+      "label": "Termination — source passage 489",
+      "condition_ids": [],
+      "reference_labels": [
+        "Section 14",
+        "Schedule C"
+      ],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 490,
+      "kind": "TERMINATION",
+      "label": "Termination — source passage 490",
+      "condition_ids": [
+        490
+      ],
+      "reference_labels": [],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 491,
+      "kind": "TERMINATION",
+      "label": "Termination — source passage 491",
+      "condition_ids": [
+        491
+      ],
+      "reference_labels": [],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 492,
+      "kind": "TERMINATION",
+      "label": "Termination — source passage 492",
+      "condition_ids": [
+        492
+      ],
+      "reference_labels": [
+        "clause 14.3"
+      ],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 496,
+      "kind": "TERMINATION",
+      "label": "Termination — source passage 496",
+      "condition_ids": [],
+      "reference_labels": [],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 560,
+      "kind": "TERMINATION",
+      "label": "Termination — source passage 560",
+      "condition_ids": [
+        560
+      ],
+      "reference_labels": [],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    }
+  ],
+  "rejected_rules": [],
+  "review_status": "UNREVIEWED",
+  "coverage": "Lexically selected source windows; completeness not guaranteed."
+}

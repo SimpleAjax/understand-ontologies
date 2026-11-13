@@ -1,0 +1,327 @@
+{
+  "document_id": "C034",
+  "file_path": "cuad/EuromediaHoldingsCorp_20070215_10SB12G_EX-10.B(01)_525118_EX-10.B(01)_Content License Agreement.txt",
+  "model_digest": "0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0",
+  "rules": [
+    {
+      "passage_id": 13,
+      "kind": "POST_EXPIRY_CONTINUATION",
+      "label": "Return of Masters after termination or expiration of agreement",
+      "condition_ids": [],
+      "reference_labels": [],
+      "scope_quote": "Such Masters shall at all times remain the sole property of Licensor and, within fifteen (15) days following the termination or expiration of this Agreement, Rogers shall either return to Licensor all",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 13,
+      "kind": "TERMINATION",
+      "label": "Termination of agreement by either party upon expiration or termination",
+      "condition_ids": [],
+      "reference_labels": [],
+      "scope_quote": "within fifteen (15) days following the termination or expiration of this Agreement",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 13,
+      "kind": "CONDITIONAL_REFERENCED_TERM",
+      "label": "Defectiveness of Master leads to reduction in License Fee",
+      "condition_ids": [],
+      "reference_labels": [],
+      "scope_quote": "if Rogers is unable to distribute and/or exhibit the Licensed Program on the availability date as a result of the defectiveness of any such Master, the License Fee payable in respect of such Licensed",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 16,
+      "kind": "OPTIONAL_RENEWAL",
+      "label": "Promotional Programs refreshed at mutually agreed frequency",
+      "condition_ids": [],
+      "reference_labels": [],
+      "scope_quote": "Licensor shall refresh the Promotional Programs at a frequency rate to be mutually agreed upon in writing by Rogers and Licensor",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 16,
+      "kind": "POST_EXPIRY_CONTINUATION",
+      "label": "Promotional materials must be at least 75% promoting Licensed Programs",
+      "condition_ids": [],
+      "reference_labels": [],
+      "scope_quote": "Rogers shall ensure that at least 75% of such promotional materials directly or indirectly promotes the Licensed Programs",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 18,
+      "kind": "AUTOMATIC_RENEWAL",
+      "label": "Production Fund Commitment calculated monthly during Term",
+      "condition_ids": [],
+      "reference_labels": [
+        "Section 6 (b)"
+      ],
+      "scope_quote": "The Production Fund Commitment shall be calculated monthly during the Term",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 39,
+      "kind": "CONDITIONAL_REFERENCED_TERM",
+      "label": "Amendments required if new law impedes performance",
+      "condition_ids": [],
+      "reference_labels": [
+        "Section 29"
+      ],
+      "scope_quote": "In the event that any such law, regulation or decision comes into force during the Term concerning the subject matter of this Agreement, such that it prevents or diminishes either party's ability to\n ",
+      "date_quote": "",
+      "duration_quote": ""
+    }
+  ],
+  "rejected_rules": [
+    {
+      "rule": {
+        "passage_id": 10,
+        "kind": "INITIAL_TERM",
+        "label": "Initial term starts on Effective Date and ends on June 30, 2010",
+        "condition_ids": [],
+        "reference_labels": [
+          "Section 7"
+        ],
+        "scope_quote": "The term of this Agreement (the \"Initial Term\") shall commence as of the Effective Date and, unless earlier terminated in accordance with this Agreement, shall terminate on June 30, 2010.",
+        "date_quote": "June 30, 2010",
+        "duration_quote": ""
+      },
+      "reason": "Quoted field not in source",
+      "invalid_values": [
+        "Section 7"
+      ]
+    },
+    {
+      "rule": {
+        "passage_id": 10,
+        "kind": "OPTIONAL_RENEWAL",
+        "label": "Agreement may renew for a two-year term at Rogers' option",
+        "condition_ids": [],
+        "reference_labels": [
+          "Section 7"
+        ],
+        "scope_quote": "At Rogers' option, this Agreement shall renew for a subsequent term of two (2) years on the terms and conditions herein (the \"Renewal Term\").",
+        "date_quote": "",
+        "duration_quote": "2 years"
+      },
+      "reason": "Quoted field not in source",
+      "invalid_values": [
+        "2 years",
+        "Section 7"
+      ]
+    },
+    {
+      "rule": {
+        "passage_id": 11,
+        "kind": "POST_EXPIRY_CONTINUATION",
+        "label": "Continued distribution after expiry is governed by the Agreement in effect at expiry",
+        "condition_ids": [],
+        "reference_labels": [
+          "Section 11"
+        ],
+        "scope_quote": "if, at the expiry of this Agreement following the Initial Term or the Renewal Term (if any), as applicable, Licensor and Rogers have not executed a new agreement governing the VOD distribution and展览of",
+        "date_quote": "",
+        "duration_quote": ""
+      },
+      "reason": "Quoted field not in source",
+      "invalid_values": [
+        "if, at the expiry of this Agreement following the Initial Term or the Renewal Term (if any), as applicable, Licensor and Rogers have not executed a new agreement governing the VOD distribution and展览of",
+        "Section 11"
+      ]
+    },
+    {
+      "rule": {
+        "passage_id": 11,
+        "kind": "TERMINATION",
+        "label": "Either party may terminate with 60 days' written notice after expiry",
+        "condition_ids": [
+          11
+        ],
+        "reference_labels": [
+          "Section 11"
+        ],
+        "scope_quote": "each of Licensor and Rogers shall have the right, on sixty (60) days' prior written notice, to terminate this Agreement, as so extended.",
+        "date_quote": "",
+        "duration_quote": ""
+      },
+      "reason": "Quoted field not in source",
+      "invalid_values": [
+        "Section 11"
+      ]
+    },
+    {
+      "rule": {
+        "passage_id": 13,
+        "kind": "INITIAL_TERM",
+        "label": "Initial term of agreement for distribution and exhibition of Licensed Programs",
+        "condition_ids": [],
+        "reference_labels": [],
+        "scope_quote": "Licensor shall, at its sole expense, encode each Licensed Program selected for distribution and exhibition by Rogers hereunder and shall deliver such fully encoded Licensed Program to Rogers on a DLT,",
+        "date_quote": "",
+        "duration_quote": ""
+      },
+      "reason": "Quoted field not in source",
+      "invalid_values": [
+        "Licensor shall, at its sole expense, encode each Licensed Program selected for distribution and exhibition by Rogers hereunder and shall deliver such fully encoded Licensed Program to Rogers on a DLT,"
+      ]
+    },
+    {
+      "rule": {
+        "passage_id": 23,
+        "kind": "POST_EXPIRY_CONTINUATION",
+        "label": "Survival of indemnity and liability provisions after termination or expiration",
+        "condition_ids": [],
+        "reference_labels": [
+          "Section 16",
+          "Section 17"
+        ],
+        "scope_quote": "This Section shall survive the termination or expiration of this Agreement.",
+        "date_quote": "",
+        "duration_quote": ""
+      },
+      "reason": "Quoted field not in source",
+      "invalid_values": [
+        "Section 16",
+        "Section 17"
+      ]
+    },
+    {
+      "rule": {
+        "passage_id": 27,
+        "kind": "POST_EXPIRY_CONTINUATION",
+        "label": "Survival of copyright royalty reimbursement after termination or expiration",
+        "condition_ids": [],
+        "reference_labels": [
+          "Section 17"
+        ],
+        "scope_quote": "This Section shall survive the termination of this Agreement for a period of sixty (60) days.",
+        "date_quote": "",
+        "duration_quote": ""
+      },
+      "reason": "Quoted field not in source",
+      "invalid_values": [
+        "This Section shall survive the termination of this Agreement for a period of sixty (60) days.",
+        "Section 17"
+      ]
+    },
+    {
+      "rule": {
+        "passage_id": 28,
+        "kind": "POST_EXPIRY_CONTINUATION",
+        "label": "Survival of audit rights after expiry or termination",
+        "condition_ids": [],
+        "reference_labels": [
+          "Section 28"
+        ],
+        "scope_quote": "This Section shall survive the expiry or other termination of this Agreement for a period of twelve (12) months.",
+        "date_quote": "",
+        "duration_quote": ""
+      },
+      "reason": "Quoted field not in source",
+      "invalid_values": [
+        "Section 28"
+      ]
+    },
+    {
+      "rule": {
+        "passage_id": 24,
+        "kind": "TERMINATION",
+        "label": "Rogers may terminate with 60 days' written notice",
+        "condition_ids": [],
+        "reference_labels": [
+          "Section 18"
+        ],
+        "scope_quote": "Rogers may terminate this Agreement, at any time, upon sixty (60) days' prior written notice to Licensor.",
+        "date_quote": "",
+        "duration_quote": ""
+      },
+      "reason": "Quoted field not in source",
+      "invalid_values": [
+        "Section 18"
+      ]
+    },
+    {
+      "rule": {
+        "passage_id": 24,
+        "kind": "TERMINATION",
+        "label": "Either party may terminate immediately for material default or insolvency",
+        "condition_ids": [],
+        "reference_labels": [
+          "Section 19"
+        ],
+        "scope_quote": "Either Rogers or Licensor may, at its option and without prejudice to any other remedies available to it, immediately terminate this Agreement by giving written notice thereof to the other party for任何",
+        "date_quote": "",
+        "duration_quote": ""
+      },
+      "reason": "Quoted field not in source",
+      "invalid_values": [
+        "Either Rogers or Licensor may, at its option and without prejudice to any other remedies available to it, immediately terminate this Agreement by giving written notice thereof to the other party for任何",
+        "Section 19"
+      ]
+    },
+    {
+      "rule": {
+        "passage_id": 26,
+        "kind": "POST_EXPIRY_CONTINUATION",
+        "label": "Rogers may continue distributing Licensed Programs for 60 days after termination",
+        "condition_ids": [],
+        "reference_labels": [
+          "Section 20"
+        ],
+        "scope_quote": "Rogers shall be entitled to continue to distribute and exhibit all Licensed Programs then being distributed and exhibited on the ROD Service, in each case, for a period of sixty (60) days from the有效日期",
+        "date_quote": "",
+        "duration_quote": ""
+      },
+      "reason": "Quoted field not in source",
+      "invalid_values": [
+        "Rogers shall be entitled to continue to distribute and exhibit all Licensed Programs then being distributed and exhibited on the ROD Service, in each case, for a period of sixty (60) days from the有效日期",
+        "Section 20"
+      ]
+    },
+    {
+      "rule": {
+        "passage_id": 31,
+        "kind": "POST_EXPIRY_CONTINUATION",
+        "label": "Survival of confidentiality obligations after termination or expiration",
+        "condition_ids": [],
+        "reference_labels": [
+          "Section 22(d)"
+        ],
+        "scope_quote": "This Section shall survive the termination or expiration of this Agreement.",
+        "date_quote": "",
+        "duration_quote": ""
+      },
+      "reason": "Quoted field not in source",
+      "invalid_values": [
+        "Section 22(d)"
+      ]
+    },
+    {
+      "rule": {
+        "passage_id": 38,
+        "kind": "POST_EXPIRY_CONTINUATION",
+        "label": "Survival of applicable law and regulatory compliance obligations after termination",
+        "condition_ids": [],
+        "reference_labels": [
+          "Section 27"
+        ],
+        "scope_quote": "This Agreement is subject to all laws, regulations, license conditions and decisions of the Canadian Radio-television and Telecommunications Commission (\"CRTC\") municipal, provincial and federal...",
+        "date_quote": "",
+        "duration_quote": ""
+      },
+      "reason": "Quoted field not in source",
+      "invalid_values": [
+        "This Agreement is subject to all laws, regulations, license conditions and decisions of the Canadian Radio-television and Telecommunications Commission (\"CRTC\") municipal, provincial and federal...",
+        "Section 27"
+      ]
+    }
+  ],
+  "review_status": "UNREVIEWED",
+  "coverage": "Lexically selected source windows; completeness not guaranteed."
+}

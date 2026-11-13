@@ -1,0 +1,62 @@
+{
+  "document_id": "C063",
+  "file_path": "cuad/PAXMEDICA,INC_07_02_2020-EX-10.12-Master Service Agreement.txt",
+  "model_digest": "0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0",
+  "rules": [
+    {
+      "passage_id": 4,
+      "kind": "TERMINATION",
+      "label": "Termination — source passage 4",
+      "condition_ids": [
+        4
+      ],
+      "reference_labels": [
+        "clause 4.0"
+      ],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 4,
+      "kind": "CONDITIONAL_REFERENCED_TERM",
+      "label": "Conditional Referenced Term — source passage 4",
+      "condition_ids": [
+        4
+      ],
+      "reference_labels": [
+        "clause 4.0"
+      ],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 5,
+      "kind": "TERMINATION",
+      "label": "Termination — source passage 5",
+      "condition_ids": [
+        5
+      ],
+      "reference_labels": [],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 5,
+      "kind": "CONDITIONAL_REFERENCED_TERM",
+      "label": "Conditional Referenced Term — source passage 5",
+      "condition_ids": [
+        5
+      ],
+      "reference_labels": [],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    }
+  ],
+  "rejected_rules": [],
+  "review_status": "UNREVIEWED",
+  "coverage": "Lexically selected source windows; completeness not guaranteed."
+}

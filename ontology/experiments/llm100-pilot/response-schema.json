@@ -1,0 +1,89 @@
+{
+  "$defs": {
+    "ProposedRule": {
+      "additionalProperties": false,
+      "properties": {
+        "p": {
+          "title": "P",
+          "type": "integer"
+        },
+        "k": {
+          "enum": [
+            "INITIAL_TERM",
+            "OPTIONAL_RENEWAL",
+            "AUTOMATIC_RENEWAL",
+            "POST_EXPIRY_CONTINUATION",
+            "TERMINATION",
+            "CONDITIONAL_REFERENCED_TERM"
+          ],
+          "title": "K",
+          "type": "string"
+        },
+        "l": {
+          "maxLength": 180,
+          "title": "L",
+          "type": "string"
+        },
+        "c": {
+          "items": {
+            "type": "integer"
+          },
+          "maxItems": 8,
+          "title": "C",
+          "type": "array"
+        },
+        "r": {
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 8,
+          "title": "R",
+          "type": "array"
+        },
+        "s": {
+          "maxLength": 200,
+          "title": "S",
+          "type": "string"
+        },
+        "d": {
+          "maxLength": 120,
+          "title": "D",
+          "type": "string"
+        },
+        "u": {
+          "maxLength": 120,
+          "title": "U",
+          "type": "string"
+        }
+      },
+      "required": [
+        "p",
+        "k",
+        "l",
+        "c",
+        "r",
+        "s",
+        "d",
+        "u"
+      ],
+      "title": "ProposedRule",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "rules": {
+      "items": {
+        "$ref": "#/$defs/ProposedRule"
+      },
+      "maxItems": 32,
+      "title": "Rules",
+      "type": "array"
+    }
+  },
+  "required": [
+    "rules"
+  ],
+  "title": "Extraction",
+  "type": "object"
+}

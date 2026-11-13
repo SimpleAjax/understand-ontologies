@@ -1,0 +1,619 @@
+@prefix ct: <https://cimulink.local/ontology/contract-terms/0.1#> .
+@prefix ex: <https://cimulink.local/ontology/llm100-v1/> .
+@prefix meta: <https://cimulink.local/ontology/extraction#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ct: a owl:Ontology ;
+    rdfs:comment "Partial five-contract development sample. No claim of complete contract coverage or legal correctness." .
+
+ct:agreement_effective_from a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:applies_within a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:calendar_date_status a owl:DatatypeProperty .
+
+ct:coverage a owl:DatatypeProperty .
+
+ct:description a owl:DatatypeProperty .
+
+ct:duration a owl:DatatypeProperty .
+
+ct:duration_status a owl:DatatypeProperty .
+
+ct:end_char a owl:DatatypeProperty .
+
+ct:end_date_status a owl:DatatypeProperty .
+
+ct:ends_on_event a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:exact_text a owl:DatatypeProperty .
+
+ct:has_party a owl:ObjectProperty ;
+    rdfs:domain ct:Agreement ;
+    rdfs:range ct:Party .
+
+ct:has_rule a owl:ObjectProperty ;
+    rdfs:domain ct:Agreement ;
+    rdfs:range ct:Rule .
+
+ct:kind a owl:DatatypeProperty .
+
+ct:notice_actor a owl:DatatypeProperty .
+
+ct:notice_form a owl:DatatypeProperty .
+
+ct:notice_period_status a owl:DatatypeProperty .
+
+ct:qualifies a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Rule .
+
+ct:references_section a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:renewal_count a owl:DatatypeProperty .
+
+ct:resolution_status a owl:DatatypeProperty .
+
+ct:resolved_to a owl:ObjectProperty ;
+    rdfs:domain ct:Reference ;
+    rdfs:range ct:SourcePassage .
+
+ct:source_path a owl:DatatypeProperty .
+
+ct:source_sha256 a owl:DatatypeProperty .
+
+ct:start_char a owl:DatatypeProperty .
+
+ct:starts_from a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:stated_end_date a owl:DatatypeProperty .
+
+ct:subject_to a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Condition .
+
+ct:supported_by a owl:ObjectProperty ;
+    rdfs:range ct:SourcePassage .
+
+ct:termination_notice a owl:DatatypeProperty .
+
+ex:C045 a ct:Agreement ;
+    rdfs:label "HOSPITALITYINVESTORSTRUST,INC_04_07_2014-EX-10.26-FRANCHISE AGREEMENT.txt" ;
+    ct:coverage "LOCAL_LLM_PROPOSED_PARTIAL; NOT_HUMAN_REVIEWED" ;
+    ct:has_rule ex:C045R0001,
+        ex:C045R0002,
+        ex:C045R0003,
+        ex:C045R0004,
+        ex:C045R0005,
+        ex:C045R0006,
+        ex:C045R0007,
+        ex:C045R0008,
+        ex:C045R0009,
+        ex:C045R0010,
+        ex:C045R0011,
+        ex:C045R0012,
+        ex:C045R0013,
+        ex:C045R0014,
+        ex:C045R0015,
+        ex:C045R0016,
+        ex:C045R0017,
+        ex:C045R0018,
+        ex:C045R0019,
+        ex:C045R0020,
+        ex:C045R0021,
+        ex:C045R0022,
+        ex:C045R0023,
+        ex:C045R0024,
+        ex:C045R0025,
+        ex:C045R0026,
+        ex:C045R0027,
+        ex:C045R0028,
+        ex:C045R0029,
+        ex:C045R0030,
+        ex:C045R0031 ;
+    ct:source_path "cuad/HOSPITALITYINVESTORSTRUST,INC_04_07_2014-EX-10.26-FRANCHISE AGREEMENT.txt" ;
+    ct:source_sha256 "f5694a4ed68e476c2e15b37054373b6a5098bd8309df1aa780a486868342c4e1" ;
+    meta:model_digest "0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0" .
+
+ct:Party a owl:Class ;
+    rdfs:label "Party" .
+
+ex:C045P0002 a ct:SourcePassage ;
+    ct:end_char 1446 ;
+    ct:exact_text "TABLE OF CONTENTS   1.0 DEFINITIONS 1       2.0 GRANT OF LICENSE 6           2.1 Non-Exclusive License 6   2.2 Reserved Rights 7         3.0 TERM 7       4.0 OUR RESPONSIBILITIES 7           4.1 Training 7   4.2 Reservation Service 7   4.3 Consultation 7   4.4 Marketing 7   4.5 Inspections/Compliance Assistance 8   4.6 Manual 8   4.7 Equipment and Supplies 9         5.0 YOUR RESPONSIBILITIES 9           5.1 Operational and Other Requirements 9         6.0 HOTEL WORK 11           6.1 Necessary Consents 11   6.2 Initial Hotel Work 12   6.3 Commencement and Completion of the Hotel Work 12   6.4 Opening the Hotel Under This Agreement 12   6.5 Performance of Agreement 13   6.6 Hotel Refurbishment and Room Addition 13         7.0 STAFF AND MANAGEMENT OF THE HOTEL 14       8.0 PAYMENT OF FEES 14           8.1 Monthly Fees 14   8.2 Calculation and Payment of Fees 14   8.3 Other Fees 15   8.4 Taxes 15   8.5 Application of Fees 15         9.0 PROPRIETARY RIGHTS 15           9.1 Our Proprietary Rights 15   9.2 Trade Name, Use of the Marks 15   9.3 Use of Trade Name and Marks 16   9.4 Trademark Disputes 16   9.5 Web Sites 16   9.6 Covenant 17         10.0 REPORTS, RECORDS, AUDITS, AND PRIVACY 17           10.1 Reports 17   10.2 Maintenance of Records 17   10.3 Audit 17   10.4 Ownership of Information 18   10.5 Privacy and Data Protection 18" ;
+    ct:source_path "cuad/HOSPITALITYINVESTORSTRUST,INC_04_07_2014-EX-10.26-FRANCHISE AGREEMENT.txt" ;
+    ct:source_sha256 "f5694a4ed68e476c2e15b37054373b6a5098bd8309df1aa780a486868342c4e1" ;
+    ct:start_char 96 .
+
+ex:C045P0095 a ct:SourcePassage ;
+    ct:end_char 80127 ;
+    ct:exact_text "13.2.6 Commercial Leases. You may lease or sublease commercial space in the Hotel, or enter into concession arrangements for operations in connection with the Hotel, in the ordinary course of business, subject to our right to review and approve the nature of the proposed business and the proposed brand and concept, all in keeping with our Standards for System Hotels.   14.0 TERMINATION   14.1 Termination with Opportunity to Cure. We may terminate this Agreement by written notice to you and opportunity to cure at any time before its expiration on any of the following grounds:   14.1.1 You fail to pay us any sums due and owing to us or the Entities under this Agreement within the cure period set forth in the notice, which shall not be less than ten (10) days;   14.1.2 You fail to begin or complete the Hotel Work by the relevant dates set forth in the Addendum or fail to open the hotel on the Opening Date, and do not cure that default within the cure period set forth in the notice, which shall not be less than ten (10) days;   14.1.3 You do not purchase or maintain insurance required by this Agreement or do not reimburse us for our purchase of insurance on your behalf within the cure period set forth in the notice, which shall not be less than ten (10) days; " ;
+    ct:source_path "cuad/HOSPITALITYINVESTORSTRUST,INC_04_07_2014-EX-10.26-FRANCHISE AGREEMENT.txt" ;
+    ct:source_sha256 "f5694a4ed68e476c2e15b37054373b6a5098bd8309df1aa780a486868342c4e1" ;
+    ct:start_char 78851 .
+
+ex:C045P0107 a ct:SourcePassage ;
+    ct:end_char 90336 ;
+    ct:exact_text "14.6.2 immediately cease operating the Hotel as a System Hotel and cease using the System;   14.6.3 immediately cease using the Marks, the Trade Name, and any confusingly similar names, marks, trade dress systems, insignia, symbols, or other rights, procedures, and methods. You will deliver all goods and materials containing the Marks to us and we will have the sole and exclusive use of any items containing the Marks. You will immediately make any specified changes to the location as we may reasonably require for this purpose, which will include removal of the signs, custom decorations, and promotional materials;   14.6.4 immediately cease representing yourself as then or formerly a System Hotel or affiliated with the Brand or the Network;   14.6.5 immediately return all copies of the Manual and any other Proprietary Information to us;   " ;
+    ct:source_path "cuad/HOSPITALITYINVESTORSTRUST,INC_04_07_2014-EX-10.26-FRANCHISE AGREEMENT.txt" ;
+    ct:source_sha256 "f5694a4ed68e476c2e15b37054373b6a5098bd8309df1aa780a486868342c4e1" ;
+    ct:start_char 89486 .
+
+ex:C045P0116 a ct:SourcePassage ;
+    ct:end_char 98039 ;
+    ct:exact_text "17,1.2 This Agreement will be interpreted without interpreting any provision in favor of or against either Party by reason of the drafting of the provision, or either of our positions relative to the other.   17.1.3 Any covenant, term or provision of this Agreement that provides for continuing obligations after the expiration or termination of this Agreement will survive any expiration or termination.   17.2 Governing Law, Jurisdiction and Venue.   17.2.1 The Parties agree that, except to the extent governed by the United States Trademark Act of 1946 (Lanham Act; 15 U.S.C.  lj 1050 et seq.), as amended, this Agreement will be governed by the laws of the State of New York without recourse to New York choice of law or conflicts of law principles. Nothing in this Section is intended to invoke the application of any franchise, business opportunity, antitrust, \"implied covenant,\" unfair competition, fiduciary or any other doctrine of law of the State of New York or any other state that would not otherwise apply absent this Subsection 17.2.1.   17.2.2 The Parties agree that any action brought pursuant to this Agreement or the relationship between them must be brought in the U.S. " ;
+    ct:source_path "cuad/HOSPITALITYINVESTORSTRUST,INC_04_07_2014-EX-10.26-FRANCHISE AGREEMENT.txt" ;
+    ct:source_sha256 "f5694a4ed68e476c2e15b37054373b6a5098bd8309df1aa780a486868342c4e1" ;
+    ct:start_char 96847 .
+
+ex:C045R0001 a ct:Rule ;
+    rdfs:label "Initial Term — source passage 2" ;
+    ct:kind "INITIAL_TERM" ;
+    ct:supported_by ex:C045P0002 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C045R0002 a ct:Rule ;
+    rdfs:label "Termination — source passage 4" ;
+    ct:kind "TERMINATION" ;
+    ct:subject_to ex:C045R0002Condition4 ;
+    ct:supported_by ex:C045P0004 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C045R0002Condition4 a ct:Condition ;
+    ct:description "11.0 CONDEMNATION AND CASUALTY 18         11.1 Condemnation 18   11.2 Casualty 18   11.3 No Extensions of Term 19         12.0 NOTICE OF INTENT TO MARKET 19       13.0 TRANSFERS 19           13.1 Our Transfer 19   13.2 Your Transfer 19         14.0 TERMINATION 22           14.1 Termination with Opportunity to Cure 22   14.2 Immediate Termination by Us 22   14.3 Suspension Interim Remedies 23   14.4 Liquidated Damages on Termination 24   14.5 Actual Damages Under Special Circumstances 24   14.6 Your Obligations on Termination or Expiration 24         15.0 INDEMNITY 25       16.0 RELATIONSHIP OF THE PARTIES 26           16.1 No Agency Relationship 26   16.2 Notices to Public Concerning Your Independent Status 26         17.0 MISCELLANEOUS 26           17.1 Severability and Interpretation 26   17.2 Governing Law, Jurisdiction and Venue 27   17.3 Exclusive Benefit 27   17.4 Entire Agreement 27   17.5 Amendment and Waiver 27   17.6 Consent; " ;
+    ct:supported_by ex:C045P0004 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C045R0003 a ct:Rule ;
+    rdfs:label "Termination — source passage 32" ;
+    ct:kind "TERMINATION" ;
+    ct:subject_to ex:C045R0003Condition32 ;
+    ct:supported_by ex:C045P0032 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C045R0003Condition32 a ct:Condition ;
+    ct:description "2.2.3 You acknowledge and agree that you have no rights to, and will not make any claims or demands for, damages or other relief arising from or related to any of the foregoing activities, and you acknowledge and agree that such activities will not give rise to any liability on our part, including liability for claims for unfair competition, breach of contract, breach of any applicable implied covenant of good faith and fair dealing, or divided loyalty.   3.0 TERM   The Term shall begin on the Effective Date and will end, without further notice, on the Expiration Date set forth in the Addendum, unless terminated earlier under the terms of this Agreement. You acknowledge and agree that this Agreement is non-renewable and that this Agreement confers on you absolutely no rights of license renewal or extension whatsoever following the Expiration Date.   4.0 OUR RESPONSIBILITIES   We have the following responsibilities to you under this Agreement, We reserve the right to fulfill some or all of these responsibilities through one of the Entities or through unrelated third parties, in our sole business judgment. We may require you to make payment for any resulting services or products directly to the provider.   4.1 Training. We may specify certain required and optional training programs and provide these programs at various locations. " ;
+    ct:supported_by ex:C045P0032 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C045R0004 a ct:Rule ;
+    rdfs:label "Initial Term — source passage 32" ;
+    ct:kind "INITIAL_TERM" ;
+    ct:subject_to ex:C045R0004Condition32 ;
+    ct:supported_by ex:C045P0032 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C045R0004Condition32 a ct:Condition ;
+    ct:description "2.2.3 You acknowledge and agree that you have no rights to, and will not make any claims or demands for, damages or other relief arising from or related to any of the foregoing activities, and you acknowledge and agree that such activities will not give rise to any liability on our part, including liability for claims for unfair competition, breach of contract, breach of any applicable implied covenant of good faith and fair dealing, or divided loyalty.   3.0 TERM   The Term shall begin on the Effective Date and will end, without further notice, on the Expiration Date set forth in the Addendum, unless terminated earlier under the terms of this Agreement. You acknowledge and agree that this Agreement is non-renewable and that this Agreement confers on you absolutely no rights of license renewal or extension whatsoever following the Expiration Date.   4.0 OUR RESPONSIBILITIES   We have the following responsibilities to you under this Agreement, We reserve the right to fulfill some or all of these responsibilities through one of the Entities or through unrelated third parties, in our sole business judgment. We may require you to make payment for any resulting services or products directly to the provider.   4.1 Training. We may specify certain required and optional training programs and provide these programs at various locations. " ;
+    ct:supported_by ex:C045P0032 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C045R0005 a ct:Rule ;
+    rdfs:label "Initial Term — source passage 53" ;
+    ct:kind "INITIAL_TERM" ;
+    ct:subject_to ex:C045R0005Condition53 ;
+    ct:supported_by ex:C045P0053 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C045R0005Condition53 a ct:Condition ;
+    ct:description "6.3.1 You will commence the Hotel Work on or before the Construction Commencement Date or Renovation Commencement Date specified in the Addendum. You may request an extension by submitting a written request for our approval before the applicable deadline, describing the status of the project and the reason for the requested extension, and paying our then-current extension fee. We may condition our approval on an update to the Plans and Designs. Once commenced, the Hotel Work will continue uninterrupted except to the extent continuation is prevented by events of Force Majeure. You must give written notice to us specifying the nature and duration of any event of Force Majeure promptly after becoming aware of the event, and specifying that you have used, and continue to use, reasonable endeavours to mitigate the effects of such event until such event ceases to exist. On verification of the event of Force Majeure, we will approve an extension of the Construction Commencement Date or Renovation Work Completion Date for up to eighteen (18) months. You must promptly provide to us evidence that the Construction Work has commenced if we request it.   " ;
+    ct:supported_by ex:C045P0053 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C045R0006 a ct:Rule ;
+    rdfs:label "Optional Renewal — source passage 53" ;
+    ct:kind "OPTIONAL_RENEWAL" ;
+    ct:subject_to ex:C045R0006Condition53 ;
+    ct:supported_by ex:C045P0053 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C045R0006Condition53 a ct:Condition ;
+    ct:description "6.3.1 You will commence the Hotel Work on or before the Construction Commencement Date or Renovation Commencement Date specified in the Addendum. You may request an extension by submitting a written request for our approval before the applicable deadline, describing the status of the project and the reason for the requested extension, and paying our then-current extension fee. We may condition our approval on an update to the Plans and Designs. Once commenced, the Hotel Work will continue uninterrupted except to the extent continuation is prevented by events of Force Majeure. You must give written notice to us specifying the nature and duration of any event of Force Majeure promptly after becoming aware of the event, and specifying that you have used, and continue to use, reasonable endeavours to mitigate the effects of such event until such event ceases to exist. On verification of the event of Force Majeure, we will approve an extension of the Construction Commencement Date or Renovation Work Completion Date for up to eighteen (18) months. You must promptly provide to us evidence that the Construction Work has commenced if we request it.   " ;
+    ct:supported_by ex:C045P0053 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C045R0007 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 53" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:subject_to ex:C045R0007Condition53 ;
+    ct:supported_by ex:C045P0053 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C045R0007Condition53 a ct:Condition ;
+    ct:description "6.3.1 You will commence the Hotel Work on or before the Construction Commencement Date or Renovation Commencement Date specified in the Addendum. You may request an extension by submitting a written request for our approval before the applicable deadline, describing the status of the project and the reason for the requested extension, and paying our then-current extension fee. We may condition our approval on an update to the Plans and Designs. Once commenced, the Hotel Work will continue uninterrupted except to the extent continuation is prevented by events of Force Majeure. You must give written notice to us specifying the nature and duration of any event of Force Majeure promptly after becoming aware of the event, and specifying that you have used, and continue to use, reasonable endeavours to mitigate the effects of such event until such event ceases to exist. On verification of the event of Force Majeure, we will approve an extension of the Construction Commencement Date or Renovation Work Completion Date for up to eighteen (18) months. You must promptly provide to us evidence that the Construction Work has commenced if we request it.   " ;
+    ct:supported_by ex:C045P0053 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C045R0008 a ct:Rule ;
+    rdfs:label "Initial Term — source passage 54" ;
+    ct:kind "INITIAL_TERM" ;
+    ct:subject_to ex:C045R0008Condition54 ;
+    ct:supported_by ex:C045P0054 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C045R0008Condition54 a ct:Condition ;
+    ct:description "6.3.2 The Hotel Work must be completed and the Hotel must be furnished, equipped, and otherwise made ready to open in accordance with the terms of this Agreement no later than the Construction Work Completion Date or Renovation Work Completion Date specified in the Addendum. You may request an extension by submitting a written request for our approval before the applicable deadline, describing the status of the project and the reason for the requested extension, and paying our then-current extension fee.   6.3.3 On completion of the Hotel Work and, as a condition to our authorization to open the Hotel, your architect, general contractor or other certified professional must provide us with a certificate stating that the as-built premises comply with all Laws relating to accessibility/accommodations/facilities for those with disabilities.   6.4 Opening the Hotel Under This Agreement.   6.4.1 You will open the Hotel on the Opening Date. You will not open the Hotel unless and until you receive our written consent to do so pursuant to Subsection 6.4.2 or 6.4.3.   6.4.2 You will give us at least fifteen (15) days advance notice that you have complied with all the terms and conditions of this Agreement and the Hotel is ready to open. " ;
+    ct:supported_by ex:C045P0054 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C045R0009 a ct:Rule ;
+    rdfs:label "Optional Renewal — source passage 54" ;
+    ct:kind "OPTIONAL_RENEWAL" ;
+    ct:subject_to ex:C045R0009Condition54 ;
+    ct:supported_by ex:C045P0054 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C045R0009Condition54 a ct:Condition ;
+    ct:description "6.3.2 The Hotel Work must be completed and the Hotel must be furnished, equipped, and otherwise made ready to open in accordance with the terms of this Agreement no later than the Construction Work Completion Date or Renovation Work Completion Date specified in the Addendum. You may request an extension by submitting a written request for our approval before the applicable deadline, describing the status of the project and the reason for the requested extension, and paying our then-current extension fee.   6.3.3 On completion of the Hotel Work and, as a condition to our authorization to open the Hotel, your architect, general contractor or other certified professional must provide us with a certificate stating that the as-built premises comply with all Laws relating to accessibility/accommodations/facilities for those with disabilities.   6.4 Opening the Hotel Under This Agreement.   6.4.1 You will open the Hotel on the Opening Date. You will not open the Hotel unless and until you receive our written consent to do so pursuant to Subsection 6.4.2 or 6.4.3.   6.4.2 You will give us at least fifteen (15) days advance notice that you have complied with all the terms and conditions of this Agreement and the Hotel is ready to open. " ;
+    ct:supported_by ex:C045P0054 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C045R0010 a ct:Rule ;
+    rdfs:label "Conditional Referenced Term — source passage 79" ;
+    ct:kind "CONDITIONAL_REFERENCED_TERM" ;
+    ct:subject_to ex:C045R0010Condition79 ;
+    ct:supported_by ex:C045P0079 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C045R0010Condition79 a ct:Condition ;
+    ct:description "You must immediately inform us of any proposed taking of any portion of the Hotel by eminent domain. If, in our business judgment, the taking is significant enough to render the continued operation of the Hotel in accordance with the Standards and guest expectations impractical, then we may terminate this Agreement on written notice to you and you will not pay us Liquidated Damages. If such taking, in our business judgment, does not require the termination of this Agreement, then you will make all necessary modifications to make the Hotel conform to its condition, character and appearance immediately before such taking, according to Plans and Designs approved by us. You will take all measures to ensure that the resumption of normal operations at the Hotel is not unreasonably delayed.   11.2 Casualty.   11.2.1 You must immediately inform us if the Hotel is damaged by fire or other casualty. If the damage or repair requires closing the Hotel, you may choose to repair or rebuild the Hotel according to the Standards, provided you: begin reconstruction within six (6) months after closing and reopen the Hotel for continuous business operations as soon as practicable (but in any event no later than eighteen (18) months after the closing of the Hotel) and give us at least thirty (30) days notice of the projected date of reopening. " ;
+    ct:supported_by ex:C045P0079 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C045R0011 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 79" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:subject_to ex:C045R0011Condition79 ;
+    ct:supported_by ex:C045P0079 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C045R0011Condition79 a ct:Condition ;
+    ct:description "You must immediately inform us of any proposed taking of any portion of the Hotel by eminent domain. If, in our business judgment, the taking is significant enough to render the continued operation of the Hotel in accordance with the Standards and guest expectations impractical, then we may terminate this Agreement on written notice to you and you will not pay us Liquidated Damages. If such taking, in our business judgment, does not require the termination of this Agreement, then you will make all necessary modifications to make the Hotel conform to its condition, character and appearance immediately before such taking, according to Plans and Designs approved by us. You will take all measures to ensure that the resumption of normal operations at the Hotel is not unreasonably delayed.   11.2 Casualty.   11.2.1 You must immediately inform us if the Hotel is damaged by fire or other casualty. If the damage or repair requires closing the Hotel, you may choose to repair or rebuild the Hotel according to the Standards, provided you: begin reconstruction within six (6) months after closing and reopen the Hotel for continuous business operations as soon as practicable (but in any event no later than eighteen (18) months after the closing of the Hotel) and give us at least thirty (30) days notice of the projected date of reopening. " ;
+    ct:supported_by ex:C045P0079 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C045R0012 a ct:Rule ;
+    rdfs:label "Termination — source passage 82" ;
+    ct:kind "TERMINATION" ;
+    ct:references_section ex:C045R0012Ref0 ;
+    ct:subject_to ex:C045R0012Condition82 ;
+    ct:supported_by ex:C045P0082 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C045R0012Condition82 a ct:Condition ;
+    ct:description "11.2.2 You and we each have the right to terminate this Agreement if you elect not to repair or rebuild the Hotel as set forth above in Subsection 11.2.1, provided the terminating party gives the other party sixty (60) days written notice. We will not require you to pay Liquidated Damages unless you or one of your Affiliates own and/or operate a hotel at the Hotel Site under a lease, license or franchise from a Competitor within three (3) years of the termination date.   11.3 No Extensions of Term. Nothing in this Section 11 will extend the Term.   12.0 NOTICE OF INTENT TO MARKET   Except in the case of a Transfer governed by Subsection 13.2.1 or 13.2.2 of this Agreement, if you or a Controlling Affiliate want to Transfer any Equity Interest, you must give us written notice, concurrently with beginning your marketing efforts.   13.0 TRANSFERS   13.1 Our Transfer.   13.1.1 We may assign or Transfer this Agreement or any of our rights, duties, or assets under this Agreement, by operation of law or otherwise, to any person or legal entity without your consent, provided that any such person or legal entity shall be required to assume all of our obligations to permit you to operate the Hotel under the Brand after such assignment. " ;
+    ct:supported_by ex:C045P0082 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C045R0012Ref0 a ct:Reference ;
+    rdfs:label "Section 11" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C045R0013 a ct:Rule ;
+    rdfs:label "Conditional Referenced Term — source passage 82" ;
+    ct:kind "CONDITIONAL_REFERENCED_TERM" ;
+    ct:references_section ex:C045R0013Ref0 ;
+    ct:subject_to ex:C045R0013Condition82 ;
+    ct:supported_by ex:C045P0082 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C045R0013Condition82 a ct:Condition ;
+    ct:description "11.2.2 You and we each have the right to terminate this Agreement if you elect not to repair or rebuild the Hotel as set forth above in Subsection 11.2.1, provided the terminating party gives the other party sixty (60) days written notice. We will not require you to pay Liquidated Damages unless you or one of your Affiliates own and/or operate a hotel at the Hotel Site under a lease, license or franchise from a Competitor within three (3) years of the termination date.   11.3 No Extensions of Term. Nothing in this Section 11 will extend the Term.   12.0 NOTICE OF INTENT TO MARKET   Except in the case of a Transfer governed by Subsection 13.2.1 or 13.2.2 of this Agreement, if you or a Controlling Affiliate want to Transfer any Equity Interest, you must give us written notice, concurrently with beginning your marketing efforts.   13.0 TRANSFERS   13.1 Our Transfer.   13.1.1 We may assign or Transfer this Agreement or any of our rights, duties, or assets under this Agreement, by operation of law or otherwise, to any person or legal entity without your consent, provided that any such person or legal entity shall be required to assume all of our obligations to permit you to operate the Hotel under the Brand after such assignment. " ;
+    ct:supported_by ex:C045P0082 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C045R0013Ref0 a ct:Reference ;
+    rdfs:label "Section 11" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C045R0014 a ct:Rule ;
+    rdfs:label "Termination — source passage 89" ;
+    ct:kind "TERMINATION" ;
+    ct:subject_to ex:C045R0014Condition89 ;
+    ct:supported_by ex:C045P0089 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C045R0014Condition89 a ct:Condition ;
+    ct:description "13.2.3.2 you are not in default of this Agreement or any other agreements with us or our Affiliates;   13.2.3.3 you or the Transferee pay all amounts due to us and the Entities through the date of the Closing;   13.2.3.4 you execute our then-current form of voluntary termination agreement, which may include a general release, covering termination of this Agreement;   13.2.3.5 you conclude to our satisfaction, or provide adequate security for, any suit, action, or proceeding pending or threatened against you, us or any Entity with respect to the Hotel, which may result in liability on the part of us or any Entity;" ;
+    ct:supported_by ex:C045P0089 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C045R0015 a ct:Rule ;
+    rdfs:label "Termination — source passage 95" ;
+    ct:kind "TERMINATION" ;
+    ct:supported_by ex:C045P0095 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C045R0016 a ct:Rule ;
+    rdfs:label "Termination — source passage 96" ;
+    ct:kind "TERMINATION" ;
+    ct:subject_to ex:C045R0016Condition96 ;
+    ct:supported_by ex:C045P0096 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C045R0016Condition96 a ct:Condition ;
+    ct:description "or   14.1.4 You fail to comply with any other provision of this Agreement, the Manual or any Standard and do not cure that default within the cure period set forth in the notice, which shall not be less than thirty (30) days.   14.2 Immediate Termination by Us. We may immediately terminate this Agreement on notice to you and without any opportunity to cure the default if:   14.2.1 after curing any material breach of this Agreement or the Standards, you engage in the same non-compliance within any consecutive twenty-four (24) month period, whether or not the non-compliance is corrected after notice, which pattern of non-compliance in and of itself will be deemed material;   14.2.2 you receive three (3) notices of material default in any twelve (12) month period, even if the defaults have been cured;   14.2.3 you fail to pay debts as they become due or admit in writing your inability to pay your debts or you make a general assignment for the benefit of your creditors;   " ;
+    ct:supported_by ex:C045P0096 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C045R0017 a ct:Rule ;
+    rdfs:label "Conditional Referenced Term — source passage 96" ;
+    ct:kind "CONDITIONAL_REFERENCED_TERM" ;
+    ct:subject_to ex:C045R0017Condition96 ;
+    ct:supported_by ex:C045P0096 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C045R0017Condition96 a ct:Condition ;
+    ct:description "or   14.1.4 You fail to comply with any other provision of this Agreement, the Manual or any Standard and do not cure that default within the cure period set forth in the notice, which shall not be less than thirty (30) days.   14.2 Immediate Termination by Us. We may immediately terminate this Agreement on notice to you and without any opportunity to cure the default if:   14.2.1 after curing any material breach of this Agreement or the Standards, you engage in the same non-compliance within any consecutive twenty-four (24) month period, whether or not the non-compliance is corrected after notice, which pattern of non-compliance in and of itself will be deemed material;   14.2.2 you receive three (3) notices of material default in any twelve (12) month period, even if the defaults have been cured;   14.2.3 you fail to pay debts as they become due or admit in writing your inability to pay your debts or you make a general assignment for the benefit of your creditors;   " ;
+    ct:supported_by ex:C045P0096 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C045R0018 a ct:Rule ;
+    rdfs:label "Termination — source passage 103" ;
+    ct:kind "TERMINATION" ;
+    ct:subject_to ex:C045R0018Condition103 ;
+    ct:supported_by ex:C045P0103 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C045R0018Condition103 a ct:Condition ;
+    ct:description "14.4 Liquidated Damages on Termination.   14.4.1 Calculation of Liquidated Damages. You acknowledge and agree that the premature termination of this Agreement will cause substantial damage to us. You agree that Liquidated Damages are not a penalty, but represent a reasonable estimate of the minimum just and fair compensation for the damages we will suffer as the result of your failure to operate the Hotel for the Term. If this Agreement terminates before the Expiration Date, you will pay us Liquidated Damages as follows:   14.4.1.1 If termination occurs before you begin the Hotel Work and before the Opening Date, and you or any Guarantor (or your or any Guarantor's Affiliates) directly or indirectly, enter into a franchise, license, management, lease and/or other similar agreement for or begin construction or commence operation of a hotel, motel, inn, or similar facility at the Hotel Site under a Competitor Brand within one (1) year after termination, then you will pay us Liquidated Damages in an amount equal to $3,600 multiplied by the number of approved Guest Rooms at the Hotel.   14.4.1.2 If termination occurs after you begin the Hotel Work but before the Opening Date, you will pay us Liquidated Damages in an amount equal to $3,600 multiplied by the number of approved Guest Rooms at the Hotel, unless your failure to complete the Hotel Work was the result of Force Majeure.   " ;
+    ct:supported_by ex:C045P0103 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C045R0019 a ct:Rule ;
+    rdfs:label "Conditional Referenced Term — source passage 103" ;
+    ct:kind "CONDITIONAL_REFERENCED_TERM" ;
+    ct:subject_to ex:C045R0019Condition103 ;
+    ct:supported_by ex:C045P0103 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C045R0019Condition103 a ct:Condition ;
+    ct:description "14.4 Liquidated Damages on Termination.   14.4.1 Calculation of Liquidated Damages. You acknowledge and agree that the premature termination of this Agreement will cause substantial damage to us. You agree that Liquidated Damages are not a penalty, but represent a reasonable estimate of the minimum just and fair compensation for the damages we will suffer as the result of your failure to operate the Hotel for the Term. If this Agreement terminates before the Expiration Date, you will pay us Liquidated Damages as follows:   14.4.1.1 If termination occurs before you begin the Hotel Work and before the Opening Date, and you or any Guarantor (or your or any Guarantor's Affiliates) directly or indirectly, enter into a franchise, license, management, lease and/or other similar agreement for or begin construction or commence operation of a hotel, motel, inn, or similar facility at the Hotel Site under a Competitor Brand within one (1) year after termination, then you will pay us Liquidated Damages in an amount equal to $3,600 multiplied by the number of approved Guest Rooms at the Hotel.   14.4.1.2 If termination occurs after you begin the Hotel Work but before the Opening Date, you will pay us Liquidated Damages in an amount equal to $3,600 multiplied by the number of approved Guest Rooms at the Hotel, unless your failure to complete the Hotel Work was the result of Force Majeure.   " ;
+    ct:supported_by ex:C045P0103 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C045R0020 a ct:Rule ;
+    rdfs:label "Termination — source passage 104" ;
+    ct:kind "TERMINATION" ;
+    ct:subject_to ex:C045R0020Condition104 ;
+    ct:supported_by ex:C045P0104 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C045R0020Condition104 a ct:Condition ;
+    ct:description "14.4.1.3 If termination occurs after the Effective Date but before the second anniversary of the Opening Date, you will pay us Liquidated Damages in an amount equal to $3,600 multiplied by the number of approved Guest Rooms at the Hotel.   14.4.1.4 If termination occurs after the second anniversary of the Opening Date but before the final five (5) calendar years of the Term, you will pay us Liquidated Damages in an amount calculated by dividing the sum of the Monthly Royalty Fees due to us under this Agreement for the prior twenty-four (24) month period by twenty-four (24) and then multiplying the resulting sum by sixty (60).   14.4.1.5 If there are less than sixty (60) months remaining in the Term on the date of termination, you will pay us Liquidated Damages in an amount calculated by dividing the sum of the Monthly Royalty Fees due to us under this Agreement for the prior twenty-four (24) month period by twenty-four (24) and then multiplying the resulting sum by the number of months remaining in the Term.   14.4.2 Payment of Liquidated Damages. Payment of Liquidated Damages is due thirty (30) days following termination of this Agreement or on demand.   14.5 Actual Damages Under Special Circumstances. " ;
+    ct:supported_by ex:C045P0104 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C045R0021 a ct:Rule ;
+    rdfs:label "Conditional Referenced Term — source passage 104" ;
+    ct:kind "CONDITIONAL_REFERENCED_TERM" ;
+    ct:subject_to ex:C045R0021Condition104 ;
+    ct:supported_by ex:C045P0104 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C045R0021Condition104 a ct:Condition ;
+    ct:description "14.4.1.3 If termination occurs after the Effective Date but before the second anniversary of the Opening Date, you will pay us Liquidated Damages in an amount equal to $3,600 multiplied by the number of approved Guest Rooms at the Hotel.   14.4.1.4 If termination occurs after the second anniversary of the Opening Date but before the final five (5) calendar years of the Term, you will pay us Liquidated Damages in an amount calculated by dividing the sum of the Monthly Royalty Fees due to us under this Agreement for the prior twenty-four (24) month period by twenty-four (24) and then multiplying the resulting sum by sixty (60).   14.4.1.5 If there are less than sixty (60) months remaining in the Term on the date of termination, you will pay us Liquidated Damages in an amount calculated by dividing the sum of the Monthly Royalty Fees due to us under this Agreement for the prior twenty-four (24) month period by twenty-four (24) and then multiplying the resulting sum by the number of months remaining in the Term.   14.4.2 Payment of Liquidated Damages. Payment of Liquidated Damages is due thirty (30) days following termination of this Agreement or on demand.   14.5 Actual Damages Under Special Circumstances. " ;
+    ct:supported_by ex:C045P0104 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C045R0022 a ct:Rule ;
+    rdfs:label "Termination — source passage 105" ;
+    ct:kind "TERMINATION" ;
+    ct:subject_to ex:C045R0022Condition105 ;
+    ct:supported_by ex:C045P0105 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C045R0022Condition105 a ct:Condition ;
+    ct:description "You acknowledge that the Liquidated Damages described in Subsection 14.4 may be inadequate to compensate us for additional harm we may suffer, by reason of greater difficulty in re-entering the market, competitive damage to the System or the Network, damage to goodwill of the Marks, and other similar harm, under the following circumstances:   14.5.1 within twelve (12) months of each other, five (5) or more franchise agreements for the Brand between yourself (or any of your Affiliates) and us (or any of our Affiliates) terminate before their expiration date as a result of a breach by you or your Affiliate; or   14.5.2 this Agreement terminates due to an unapproved Transfer either to a (i) Competitor or (ii) buyer that converts the Hotel to a Competing Brand within two (2) years from the date this Agreement terminates.   14.5.3 In the circumstances set forth in Subsection 14.5.1 and 14.5.2, we reserve the right to seek actual damages in lieu of Liquidated Damages.   14.6 Your Obligations on Termination or Expiration. On termination or expiration of this Agreement, you will:   14.6.1 immediately pay all sums due and owing to us or any of the Entities, including any expenses incurred by us in obtaining injunctive relief for the enforcement of this Agreement;" ;
+    ct:supported_by ex:C045P0105 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C045R0023 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 105" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:subject_to ex:C045R0023Condition105 ;
+    ct:supported_by ex:C045P0105 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C045R0023Condition105 a ct:Condition ;
+    ct:description "You acknowledge that the Liquidated Damages described in Subsection 14.4 may be inadequate to compensate us for additional harm we may suffer, by reason of greater difficulty in re-entering the market, competitive damage to the System or the Network, damage to goodwill of the Marks, and other similar harm, under the following circumstances:   14.5.1 within twelve (12) months of each other, five (5) or more franchise agreements for the Brand between yourself (or any of your Affiliates) and us (or any of our Affiliates) terminate before their expiration date as a result of a breach by you or your Affiliate; or   14.5.2 this Agreement terminates due to an unapproved Transfer either to a (i) Competitor or (ii) buyer that converts the Hotel to a Competing Brand within two (2) years from the date this Agreement terminates.   14.5.3 In the circumstances set forth in Subsection 14.5.1 and 14.5.2, we reserve the right to seek actual damages in lieu of Liquidated Damages.   14.6 Your Obligations on Termination or Expiration. On termination or expiration of this Agreement, you will:   14.6.1 immediately pay all sums due and owing to us or any of the Entities, including any expenses incurred by us in obtaining injunctive relief for the enforcement of this Agreement;" ;
+    ct:supported_by ex:C045P0105 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C045R0024 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 107" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:supported_by ex:C045P0107 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C045R0025 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 108" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:supported_by ex:C045P0108 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C045R0026 a ct:Rule ;
+    rdfs:label "Termination — source passage 108" ;
+    ct:kind "TERMINATION" ;
+    ct:supported_by ex:C045P0108 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C045R0027 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 112" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:references_section ex:C045R0027Ref0 ;
+    ct:subject_to ex:C045R0027Condition112 ;
+    ct:supported_by ex:C045P0112 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C045R0027Condition112 a ct:Condition ;
+    ct:description "At our election, you will defend us and/or the Indemnified Parties against the same or we may elect to assume (but under no circumstance will we be obligated to undertake) the defense and/or settlement of the action, suit, proceeding, claim, demand, inquiry or investigation at your expense and risk.   15.4 If we think our respective interests conflict, we may obtain separate counsel of our choice. This will not diminish your obligation to indemnify the Indemnified Parties and to hold them harmless. You will reimburse the Indemnified Parties on demand for all expenses, including reasonable attorneys' fees, expert fees, costs and other expenses of litigation, the Indemnified Parties incur to protect themselves or to remedy your defaults. The Indemnified Parties will not be required to seek recovery from third parties or otherwise mitigate their losses to maintain a claim against you, and their failure to do so will not reduce the amounts recoverable from you by the Indemnified Parties.   15.6 Your obligations under this Section 15 will survive expiration or termination of this Agreement.   16.0 RELATIONSHIP OF THE PARTIES   16.1 No Agency Relationship. You are an independent contractor. Neither Party is the legal representative or agent of the other Party nor has the power to obligate the other Party for any purpose. " ;
+    ct:supported_by ex:C045P0112 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C045R0027Ref0 a ct:Reference ;
+    rdfs:label "Section 15" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C045R0028 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 116" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:supported_by ex:C045P0116 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C045R0029 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 122" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:subject_to ex:C045R0029Condition122 ;
+    ct:supported_by ex:C045P0122 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C045R0029Condition122 a ct:Condition ;
+    ct:description "or 3) three (3) days after placement in the United States mail if overnight delivery is not available to the notice address.   17.8 General Release. With the exception of claims related to representations contained in the franchise disclosure document for the Brand, you, on your own behalf and on behalf of, as applicable, your officers, directors, managers, employees, heirs, administrators, executors, agents and representatives and their respective successors and assigns hereby release, remise, acquit and forever discharge us and the Entities and our and their respective officers, directors, employees, managers, agents, representatives and their respective successors and assigns from any and all actions, claims, causes of action, suits, rights, debts, liabilities, accounts, agreements, covenants, contracts, promises, warranties, judgments, executions, demands, damages, costs and expenses, whether known or unknown at this time, of any kind or nature, absolute or contingent, existing at law or in equity, on account of any matter, cause or thing whatsoever that has happened, developed or occurred relating to this Agreement or the relationship between you and us. This release will survive the termination of this Agreement.   17.9 Remedies Cumulative. The remedies provided in this Agreement are cumulative. " ;
+    ct:supported_by ex:C045P0122 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C045R0030 a ct:Rule ;
+    rdfs:label "Initial Term — source passage 140" ;
+    ct:kind "INITIAL_TERM" ;
+    ct:supported_by ex:C045P0140 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C045R0031 a ct:Rule ;
+    rdfs:label "Optional Renewal — source passage 140" ;
+    ct:kind "OPTIONAL_RENEWAL" ;
+    ct:supported_by ex:C045P0140 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C045P0004 a ct:SourcePassage ;
+    ct:end_char 2409 ;
+    ct:exact_text "11.0 CONDEMNATION AND CASUALTY 18         11.1 Condemnation 18   11.2 Casualty 18   11.3 No Extensions of Term 19         12.0 NOTICE OF INTENT TO MARKET 19       13.0 TRANSFERS 19           13.1 Our Transfer 19   13.2 Your Transfer 19         14.0 TERMINATION 22           14.1 Termination with Opportunity to Cure 22   14.2 Immediate Termination by Us 22   14.3 Suspension Interim Remedies 23   14.4 Liquidated Damages on Termination 24   14.5 Actual Damages Under Special Circumstances 24   14.6 Your Obligations on Termination or Expiration 24         15.0 INDEMNITY 25       16.0 RELATIONSHIP OF THE PARTIES 26           16.1 No Agency Relationship 26   16.2 Notices to Public Concerning Your Independent Status 26         17.0 MISCELLANEOUS 26           17.1 Severability and Interpretation 26   17.2 Governing Law, Jurisdiction and Venue 27   17.3 Exclusive Benefit 27   17.4 Entire Agreement 27   17.5 Amendment and Waiver 27   17.6 Consent; " ;
+    ct:source_path "cuad/HOSPITALITYINVESTORSTRUST,INC_04_07_2014-EX-10.26-FRANCHISE AGREEMENT.txt" ;
+    ct:source_sha256 "f5694a4ed68e476c2e15b37054373b6a5098bd8309df1aa780a486868342c4e1" ;
+    ct:start_char 1459 .
+
+ex:C045P0089 a ct:SourcePassage ;
+    ct:end_char 75054 ;
+    ct:exact_text "13.2.3.2 you are not in default of this Agreement or any other agreements with us or our Affiliates;   13.2.3.3 you or the Transferee pay all amounts due to us and the Entities through the date of the Closing;   13.2.3.4 you execute our then-current form of voluntary termination agreement, which may include a general release, covering termination of this Agreement;   13.2.3.5 you conclude to our satisfaction, or provide adequate security for, any suit, action, or proceeding pending or threatened against you, us or any Entity with respect to the Hotel, which may result in liability on the part of us or any Entity;" ;
+    ct:source_path "cuad/HOSPITALITYINVESTORSTRUST,INC_04_07_2014-EX-10.26-FRANCHISE AGREEMENT.txt" ;
+    ct:source_sha256 "f5694a4ed68e476c2e15b37054373b6a5098bd8309df1aa780a486868342c4e1" ;
+    ct:start_char 74434 .
+
+ex:C045P0108 a ct:SourcePassage ;
+    ct:end_char 91693 ;
+    ct:exact_text "14.6.6 immediately cancel all assumed name or equivalent registrations relating to your use of any Mark, notify the telephone company and all listing agencies and directory publishers including Internet domain name granting authorities, Internet service providers, global distribution systems, and web search engines of the termination or expiration of your right to use the Marks, the Trade Name, and any telephone number, any classified or other telephone directory listings, Internet domain names, uniform resource locators, website names, electronic mail addresses and search engine metatags and keywords associated with the Hotel, and authorize their transfer to us; and   14.6.7 irrevocably assign and transfer to us (or to our designee) all of your right, title and interest in any domain name listings and registrations that contain any reference to our Marks, System, Network or Brand; notify the applicable domain name registrars of the termination of your right to use any domain name or Sites associated with the Marks or the Brand; and authorize and instruct the cancellation of the domain name, or transfer of the domain name to us (or our designee), as we specify. You will also delete all references to our Marks, System, Network or Brand from any Sites you own, maintain or operate beyond the expiration or termination of this Agreement.   " ;
+    ct:source_path "cuad/HOSPITALITYINVESTORSTRUST,INC_04_07_2014-EX-10.26-FRANCHISE AGREEMENT.txt" ;
+    ct:source_sha256 "f5694a4ed68e476c2e15b37054373b6a5098bd8309df1aa780a486868342c4e1" ;
+    ct:start_char 90336 .
+
+ex:C045P0112 a ct:SourcePassage ;
+    ct:end_char 95228 ;
+    ct:exact_text "At our election, you will defend us and/or the Indemnified Parties against the same or we may elect to assume (but under no circumstance will we be obligated to undertake) the defense and/or settlement of the action, suit, proceeding, claim, demand, inquiry or investigation at your expense and risk.   15.4 If we think our respective interests conflict, we may obtain separate counsel of our choice. This will not diminish your obligation to indemnify the Indemnified Parties and to hold them harmless. You will reimburse the Indemnified Parties on demand for all expenses, including reasonable attorneys' fees, expert fees, costs and other expenses of litigation, the Indemnified Parties incur to protect themselves or to remedy your defaults. The Indemnified Parties will not be required to seek recovery from third parties or otherwise mitigate their losses to maintain a claim against you, and their failure to do so will not reduce the amounts recoverable from you by the Indemnified Parties.   15.6 Your obligations under this Section 15 will survive expiration or termination of this Agreement.   16.0 RELATIONSHIP OF THE PARTIES   16.1 No Agency Relationship. You are an independent contractor. Neither Party is the legal representative or agent of the other Party nor has the power to obligate the other Party for any purpose. " ;
+    ct:source_path "cuad/HOSPITALITYINVESTORSTRUST,INC_04_07_2014-EX-10.26-FRANCHISE AGREEMENT.txt" ;
+    ct:source_sha256 "f5694a4ed68e476c2e15b37054373b6a5098bd8309df1aa780a486868342c4e1" ;
+    ct:start_char 93891 .
+
+ex:C045P0122 a ct:SourcePassage ;
+    ct:end_char 103811 ;
+    ct:exact_text "or 3) three (3) days after placement in the United States mail if overnight delivery is not available to the notice address.   17.8 General Release. With the exception of claims related to representations contained in the franchise disclosure document for the Brand, you, on your own behalf and on behalf of, as applicable, your officers, directors, managers, employees, heirs, administrators, executors, agents and representatives and their respective successors and assigns hereby release, remise, acquit and forever discharge us and the Entities and our and their respective officers, directors, employees, managers, agents, representatives and their respective successors and assigns from any and all actions, claims, causes of action, suits, rights, debts, liabilities, accounts, agreements, covenants, contracts, promises, warranties, judgments, executions, demands, damages, costs and expenses, whether known or unknown at this time, of any kind or nature, absolute or contingent, existing at law or in equity, on account of any matter, cause or thing whatsoever that has happened, developed or occurred relating to this Agreement or the relationship between you and us. This release will survive the termination of this Agreement.   17.9 Remedies Cumulative. The remedies provided in this Agreement are cumulative. " ;
+    ct:source_path "cuad/HOSPITALITYINVESTORSTRUST,INC_04_07_2014-EX-10.26-FRANCHISE AGREEMENT.txt" ;
+    ct:source_sha256 "f5694a4ed68e476c2e15b37054373b6a5098bd8309df1aa780a486868342c4e1" ;
+    ct:start_char 102488 .
+
+ex:C045P0140 a ct:SourcePassage ;
+    ct:end_char 115913 ;
+    ct:exact_text "Construction Work Completion Date: n/a     Renovation Commencement Date: The Effective Date     Renovation Work Completion Date: In accordance with the attached PIP     Expiration Date: at midnight on the last day of the month fifteen (15) years from the Effective Date     Monthly Fees:   Monthly Program Fee: Four percent (4%) of the Hotel's Gross Rooms Revenue for the preceding calendar month. The Monthly Program Fee is subject to change by us. Any change may be established in the Standards, but the rate will not exceed the standard Monthly Program Fee as of the Effective Date plus one percent (1%) of the Hotel's Gross Rooms Revenue during the Term     Monthly Royalty Fee: Five percent (5%) of the Hotel's Gross Rooms   Revenue for the preceding calendar month   Additional Requirements/Special Provisions:   ·  The parties acknowledge that the Hotel is an existing System Hotel that was authorized to open under the Brand before the Effective Date.   ·  Obligations of Prior Franchisee. You acknowledge and agree that you are directly responsible for, and will pay on demand, all fees and charges due and owing us and the Entities related to the prior franchise agreement for the Hotel if any such fees and charges remain outstanding as of or accrue after the Effective Date of this Agreement.   " ;
+    ct:source_path "cuad/HOSPITALITYINVESTORSTRUST,INC_04_07_2014-EX-10.26-FRANCHISE AGREEMENT.txt" ;
+    ct:source_sha256 "f5694a4ed68e476c2e15b37054373b6a5098bd8309df1aa780a486868342c4e1" ;
+    ct:start_char 114606 .
+
+ct:Agreement a owl:Class ;
+    rdfs:label "Agreement" .
+
+ex:C045P0032 a ct:SourcePassage ;
+    ct:end_char 25810 ;
+    ct:exact_text "2.2.3 You acknowledge and agree that you have no rights to, and will not make any claims or demands for, damages or other relief arising from or related to any of the foregoing activities, and you acknowledge and agree that such activities will not give rise to any liability on our part, including liability for claims for unfair competition, breach of contract, breach of any applicable implied covenant of good faith and fair dealing, or divided loyalty.   3.0 TERM   The Term shall begin on the Effective Date and will end, without further notice, on the Expiration Date set forth in the Addendum, unless terminated earlier under the terms of this Agreement. You acknowledge and agree that this Agreement is non-renewable and that this Agreement confers on you absolutely no rights of license renewal or extension whatsoever following the Expiration Date.   4.0 OUR RESPONSIBILITIES   We have the following responsibilities to you under this Agreement, We reserve the right to fulfill some or all of these responsibilities through one of the Entities or through unrelated third parties, in our sole business judgment. We may require you to make payment for any resulting services or products directly to the provider.   4.1 Training. We may specify certain required and optional training programs and provide these programs at various locations. " ;
+    ct:source_path "cuad/HOSPITALITYINVESTORSTRUST,INC_04_07_2014-EX-10.26-FRANCHISE AGREEMENT.txt" ;
+    ct:source_sha256 "f5694a4ed68e476c2e15b37054373b6a5098bd8309df1aa780a486868342c4e1" ;
+    ct:start_char 24460 .
+
+ex:C045P0054 a ct:SourcePassage ;
+    ct:end_char 46038 ;
+    ct:exact_text "6.3.2 The Hotel Work must be completed and the Hotel must be furnished, equipped, and otherwise made ready to open in accordance with the terms of this Agreement no later than the Construction Work Completion Date or Renovation Work Completion Date specified in the Addendum. You may request an extension by submitting a written request for our approval before the applicable deadline, describing the status of the project and the reason for the requested extension, and paying our then-current extension fee.   6.3.3 On completion of the Hotel Work and, as a condition to our authorization to open the Hotel, your architect, general contractor or other certified professional must provide us with a certificate stating that the as-built premises comply with all Laws relating to accessibility/accommodations/facilities for those with disabilities.   6.4 Opening the Hotel Under This Agreement.   6.4.1 You will open the Hotel on the Opening Date. You will not open the Hotel unless and until you receive our written consent to do so pursuant to Subsection 6.4.2 or 6.4.3.   6.4.2 You will give us at least fifteen (15) days advance notice that you have complied with all the terms and conditions of this Agreement and the Hotel is ready to open. " ;
+    ct:source_path "cuad/HOSPITALITYINVESTORSTRUST,INC_04_07_2014-EX-10.26-FRANCHISE AGREEMENT.txt" ;
+    ct:source_sha256 "f5694a4ed68e476c2e15b37054373b6a5098bd8309df1aa780a486868342c4e1" ;
+    ct:start_char 44791 .
+
+ex:C045P0079 a ct:SourcePassage ;
+    ct:end_char 67175 ;
+    ct:exact_text "You must immediately inform us of any proposed taking of any portion of the Hotel by eminent domain. If, in our business judgment, the taking is significant enough to render the continued operation of the Hotel in accordance with the Standards and guest expectations impractical, then we may terminate this Agreement on written notice to you and you will not pay us Liquidated Damages. If such taking, in our business judgment, does not require the termination of this Agreement, then you will make all necessary modifications to make the Hotel conform to its condition, character and appearance immediately before such taking, according to Plans and Designs approved by us. You will take all measures to ensure that the resumption of normal operations at the Hotel is not unreasonably delayed.   11.2 Casualty.   11.2.1 You must immediately inform us if the Hotel is damaged by fire or other casualty. If the damage or repair requires closing the Hotel, you may choose to repair or rebuild the Hotel according to the Standards, provided you: begin reconstruction within six (6) months after closing and reopen the Hotel for continuous business operations as soon as practicable (but in any event no later than eighteen (18) months after the closing of the Hotel) and give us at least thirty (30) days notice of the projected date of reopening. " ;
+    ct:source_path "cuad/HOSPITALITYINVESTORSTRUST,INC_04_07_2014-EX-10.26-FRANCHISE AGREEMENT.txt" ;
+    ct:source_sha256 "f5694a4ed68e476c2e15b37054373b6a5098bd8309df1aa780a486868342c4e1" ;
+    ct:start_char 65830 .
+
+ex:C045P0082 a ct:SourcePassage ;
+    ct:end_char 68881 ;
+    ct:exact_text "11.2.2 You and we each have the right to terminate this Agreement if you elect not to repair or rebuild the Hotel as set forth above in Subsection 11.2.1, provided the terminating party gives the other party sixty (60) days written notice. We will not require you to pay Liquidated Damages unless you or one of your Affiliates own and/or operate a hotel at the Hotel Site under a lease, license or franchise from a Competitor within three (3) years of the termination date.   11.3 No Extensions of Term. Nothing in this Section 11 will extend the Term.   12.0 NOTICE OF INTENT TO MARKET   Except in the case of a Transfer governed by Subsection 13.2.1 or 13.2.2 of this Agreement, if you or a Controlling Affiliate want to Transfer any Equity Interest, you must give us written notice, concurrently with beginning your marketing efforts.   13.0 TRANSFERS   13.1 Our Transfer.   13.1.1 We may assign or Transfer this Agreement or any of our rights, duties, or assets under this Agreement, by operation of law or otherwise, to any person or legal entity without your consent, provided that any such person or legal entity shall be required to assume all of our obligations to permit you to operate the Hotel under the Brand after such assignment. " ;
+    ct:source_path "cuad/HOSPITALITYINVESTORSTRUST,INC_04_07_2014-EX-10.26-FRANCHISE AGREEMENT.txt" ;
+    ct:source_sha256 "f5694a4ed68e476c2e15b37054373b6a5098bd8309df1aa780a486868342c4e1" ;
+    ct:start_char 67636 .
+
+ex:C045P0096 a ct:SourcePassage ;
+    ct:end_char 81110 ;
+    ct:exact_text "or   14.1.4 You fail to comply with any other provision of this Agreement, the Manual or any Standard and do not cure that default within the cure period set forth in the notice, which shall not be less than thirty (30) days.   14.2 Immediate Termination by Us. We may immediately terminate this Agreement on notice to you and without any opportunity to cure the default if:   14.2.1 after curing any material breach of this Agreement or the Standards, you engage in the same non-compliance within any consecutive twenty-four (24) month period, whether or not the non-compliance is corrected after notice, which pattern of non-compliance in and of itself will be deemed material;   14.2.2 you receive three (3) notices of material default in any twelve (12) month period, even if the defaults have been cured;   14.2.3 you fail to pay debts as they become due or admit in writing your inability to pay your debts or you make a general assignment for the benefit of your creditors;   " ;
+    ct:source_path "cuad/HOSPITALITYINVESTORSTRUST,INC_04_07_2014-EX-10.26-FRANCHISE AGREEMENT.txt" ;
+    ct:source_sha256 "f5694a4ed68e476c2e15b37054373b6a5098bd8309df1aa780a486868342c4e1" ;
+    ct:start_char 80127 .
+
+ex:C045P0103 a ct:SourcePassage ;
+    ct:end_char 86975 ;
+    ct:exact_text "14.4 Liquidated Damages on Termination.   14.4.1 Calculation of Liquidated Damages. You acknowledge and agree that the premature termination of this Agreement will cause substantial damage to us. You agree that Liquidated Damages are not a penalty, but represent a reasonable estimate of the minimum just and fair compensation for the damages we will suffer as the result of your failure to operate the Hotel for the Term. If this Agreement terminates before the Expiration Date, you will pay us Liquidated Damages as follows:   14.4.1.1 If termination occurs before you begin the Hotel Work and before the Opening Date, and you or any Guarantor (or your or any Guarantor's Affiliates) directly or indirectly, enter into a franchise, license, management, lease and/or other similar agreement for or begin construction or commence operation of a hotel, motel, inn, or similar facility at the Hotel Site under a Competitor Brand within one (1) year after termination, then you will pay us Liquidated Damages in an amount equal to $3,600 multiplied by the number of approved Guest Rooms at the Hotel.   14.4.1.2 If termination occurs after you begin the Hotel Work but before the Opening Date, you will pay us Liquidated Damages in an amount equal to $3,600 multiplied by the number of approved Guest Rooms at the Hotel, unless your failure to complete the Hotel Work was the result of Force Majeure.   " ;
+    ct:source_path "cuad/HOSPITALITYINVESTORSTRUST,INC_04_07_2014-EX-10.26-FRANCHISE AGREEMENT.txt" ;
+    ct:source_sha256 "f5694a4ed68e476c2e15b37054373b6a5098bd8309df1aa780a486868342c4e1" ;
+    ct:start_char 85575 .
+
+ex:C045P0104 a ct:SourcePassage ;
+    ct:end_char 88198 ;
+    ct:exact_text "14.4.1.3 If termination occurs after the Effective Date but before the second anniversary of the Opening Date, you will pay us Liquidated Damages in an amount equal to $3,600 multiplied by the number of approved Guest Rooms at the Hotel.   14.4.1.4 If termination occurs after the second anniversary of the Opening Date but before the final five (5) calendar years of the Term, you will pay us Liquidated Damages in an amount calculated by dividing the sum of the Monthly Royalty Fees due to us under this Agreement for the prior twenty-four (24) month period by twenty-four (24) and then multiplying the resulting sum by sixty (60).   14.4.1.5 If there are less than sixty (60) months remaining in the Term on the date of termination, you will pay us Liquidated Damages in an amount calculated by dividing the sum of the Monthly Royalty Fees due to us under this Agreement for the prior twenty-four (24) month period by twenty-four (24) and then multiplying the resulting sum by the number of months remaining in the Term.   14.4.2 Payment of Liquidated Damages. Payment of Liquidated Damages is due thirty (30) days following termination of this Agreement or on demand.   14.5 Actual Damages Under Special Circumstances. " ;
+    ct:source_path "cuad/HOSPITALITYINVESTORSTRUST,INC_04_07_2014-EX-10.26-FRANCHISE AGREEMENT.txt" ;
+    ct:source_sha256 "f5694a4ed68e476c2e15b37054373b6a5098bd8309df1aa780a486868342c4e1" ;
+    ct:start_char 86975 .
+
+ex:C045P0105 a ct:SourcePassage ;
+    ct:end_char 89472 ;
+    ct:exact_text "You acknowledge that the Liquidated Damages described in Subsection 14.4 may be inadequate to compensate us for additional harm we may suffer, by reason of greater difficulty in re-entering the market, competitive damage to the System or the Network, damage to goodwill of the Marks, and other similar harm, under the following circumstances:   14.5.1 within twelve (12) months of each other, five (5) or more franchise agreements for the Brand between yourself (or any of your Affiliates) and us (or any of our Affiliates) terminate before their expiration date as a result of a breach by you or your Affiliate; or   14.5.2 this Agreement terminates due to an unapproved Transfer either to a (i) Competitor or (ii) buyer that converts the Hotel to a Competing Brand within two (2) years from the date this Agreement terminates.   14.5.3 In the circumstances set forth in Subsection 14.5.1 and 14.5.2, we reserve the right to seek actual damages in lieu of Liquidated Damages.   14.6 Your Obligations on Termination or Expiration. On termination or expiration of this Agreement, you will:   14.6.1 immediately pay all sums due and owing to us or any of the Entities, including any expenses incurred by us in obtaining injunctive relief for the enforcement of this Agreement;" ;
+    ct:source_path "cuad/HOSPITALITYINVESTORSTRUST,INC_04_07_2014-EX-10.26-FRANCHISE AGREEMENT.txt" ;
+    ct:source_sha256 "f5694a4ed68e476c2e15b37054373b6a5098bd8309df1aa780a486868342c4e1" ;
+    ct:start_char 88198 .
+
+ex:C045P0053 a ct:SourcePassage ;
+    ct:end_char 44791 ;
+    ct:exact_text "6.3.1 You will commence the Hotel Work on or before the Construction Commencement Date or Renovation Commencement Date specified in the Addendum. You may request an extension by submitting a written request for our approval before the applicable deadline, describing the status of the project and the reason for the requested extension, and paying our then-current extension fee. We may condition our approval on an update to the Plans and Designs. Once commenced, the Hotel Work will continue uninterrupted except to the extent continuation is prevented by events of Force Majeure. You must give written notice to us specifying the nature and duration of any event of Force Majeure promptly after becoming aware of the event, and specifying that you have used, and continue to use, reasonable endeavours to mitigate the effects of such event until such event ceases to exist. On verification of the event of Force Majeure, we will approve an extension of the Construction Commencement Date or Renovation Work Completion Date for up to eighteen (18) months. You must promptly provide to us evidence that the Construction Work has commenced if we request it.   " ;
+    ct:source_path "cuad/HOSPITALITYINVESTORSTRUST,INC_04_07_2014-EX-10.26-FRANCHISE AGREEMENT.txt" ;
+    ct:source_sha256 "f5694a4ed68e476c2e15b37054373b6a5098bd8309df1aa780a486868342c4e1" ;
+    ct:start_char 43631 .
+
+ct:Reference a owl:Class ;
+    rdfs:label "Reference" .
+
+ct:SourcePassage a owl:Class ;
+    rdfs:label "SourcePassage" .
+
+ct:Condition a owl:Class ;
+    rdfs:label "Condition" .
+
+ct:Rule a owl:Class ;
+    rdfs:label "Rule" .
+

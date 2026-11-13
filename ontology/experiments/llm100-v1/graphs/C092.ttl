@@ -1,0 +1,218 @@
+@prefix ct: <https://cimulink.local/ontology/contract-terms/0.1#> .
+@prefix ex: <https://cimulink.local/ontology/llm100-v1/> .
+@prefix meta: <https://cimulink.local/ontology/extraction#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ct: a owl:Ontology ;
+    rdfs:comment "Partial five-contract development sample. No claim of complete contract coverage or legal correctness." .
+
+ct:agreement_effective_from a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:applies_within a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:calendar_date_status a owl:DatatypeProperty .
+
+ct:coverage a owl:DatatypeProperty .
+
+ct:description a owl:DatatypeProperty .
+
+ct:duration a owl:DatatypeProperty .
+
+ct:duration_status a owl:DatatypeProperty .
+
+ct:end_char a owl:DatatypeProperty .
+
+ct:end_date_status a owl:DatatypeProperty .
+
+ct:ends_on_event a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:exact_text a owl:DatatypeProperty .
+
+ct:has_party a owl:ObjectProperty ;
+    rdfs:domain ct:Agreement ;
+    rdfs:range ct:Party .
+
+ct:has_rule a owl:ObjectProperty ;
+    rdfs:domain ct:Agreement ;
+    rdfs:range ct:Rule .
+
+ct:kind a owl:DatatypeProperty .
+
+ct:notice_actor a owl:DatatypeProperty .
+
+ct:notice_form a owl:DatatypeProperty .
+
+ct:notice_period_status a owl:DatatypeProperty .
+
+ct:qualifies a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Rule .
+
+ct:references_section a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:renewal_count a owl:DatatypeProperty .
+
+ct:resolution_status a owl:DatatypeProperty .
+
+ct:resolved_to a owl:ObjectProperty ;
+    rdfs:domain ct:Reference ;
+    rdfs:range ct:SourcePassage .
+
+ct:source_path a owl:DatatypeProperty .
+
+ct:source_sha256 a owl:DatatypeProperty .
+
+ct:start_char a owl:DatatypeProperty .
+
+ct:starts_from a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:stated_end_date a owl:DatatypeProperty .
+
+ct:subject_to a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Condition .
+
+ct:supported_by a owl:ObjectProperty ;
+    rdfs:range ct:SourcePassage .
+
+ct:termination_notice a owl:DatatypeProperty .
+
+ex:C092 a ct:Agreement ;
+    rdfs:label "WESTERN COPPER - NON-COMPETITION AGREEMENT.txt" ;
+    ct:coverage "LOCAL_LLM_PROPOSED_PARTIAL; NOT_HUMAN_REVIEWED" ;
+    ct:has_rule ex:C092R0001,
+        ex:C092R0002,
+        ex:C092R0003,
+        ex:C092R0004,
+        ex:C092R0005,
+        ex:C092R0006 ;
+    ct:source_path "cuad/WESTERN COPPER - NON-COMPETITION AGREEMENT.txt" ;
+    ct:source_sha256 "d148e0be306beafca1731bbda95efdd7d3fa21be087c5b1a56bdd51b3433f9aa" ;
+    meta:model_digest "0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0" .
+
+ct:Party a owl:Class ;
+    rdfs:label "Party" .
+
+ex:C092P0063 a ct:SourcePassage ;
+    ct:end_char 10653 ;
+    ct:exact_text "Western Copper's Right of Termination" ;
+    ct:source_path "cuad/WESTERN COPPER - NON-COMPETITION AGREEMENT.txt" ;
+    ct:source_sha256 "d148e0be306beafca1731bbda95efdd7d3fa21be087c5b1a56bdd51b3433f9aa" ;
+    ct:start_char 10616 .
+
+ex:C092P0103 a ct:SourcePassage ;
+    ct:end_char 15800 ;
+    ct:exact_text "Termination" ;
+    ct:source_path "cuad/WESTERN COPPER - NON-COMPETITION AGREEMENT.txt" ;
+    ct:source_sha256 "d148e0be306beafca1731bbda95efdd7d3fa21be087c5b1a56bdd51b3433f9aa" ;
+    ct:start_char 15789 .
+
+ex:C092P0105 a ct:SourcePassage ;
+    ct:end_char 15907 ;
+    ct:exact_text "4.10 This Agreement may be terminated at any time by agreement in writing executed by the parties." ;
+    ct:source_path "cuad/WESTERN COPPER - NON-COMPETITION AGREEMENT.txt" ;
+    ct:source_sha256 "d148e0be306beafca1731bbda95efdd7d3fa21be087c5b1a56bdd51b3433f9aa" ;
+    ct:start_char 15809 .
+
+ex:C092R0001 a ct:Rule ;
+    rdfs:label "Conditional Referenced Term — source passage 48" ;
+    ct:kind "CONDITIONAL_REFERENCED_TERM" ;
+    ct:subject_to ex:C092R0001Condition48 ;
+    ct:supported_by ex:C092P0048 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C092R0001Condition48 a ct:Condition ;
+    ct:description "2.2 Glamis covenants and agrees with Western Copper that if at any time it intends to dispose of a Designated Mineral Property for cash consideration or by abandonment, it will give  Western Copper notice (the ' Disposition Notice\") of the intended disposition. For a period of  30 days from the time of delivery of the Disposition Notice Glamis will, if requested by Western  Silver, entertain an offer from Western Copper to acquire the Designated Mineral Property. In  the ease of a Designated Mineral Property that Glamis intends to dispose of for cash  consideration, the parties will negotiate in good faith to reach a mutually agreeable agreement for  the sale to Western Copper of the [Designated Mineral Property. If Glamis and Western Copper  are unable to negotiate an acceptable agreement with respect to the Designated Mineral Property  within the 30 day period, Glamis may thereafter dispose of the Designated Mineral Property as it  sees til in its absolute discretion. " ;
+    ct:supported_by ex:C092P0048 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C092R0002 a ct:Rule ;
+    rdfs:label "Termination — source passage 63" ;
+    ct:kind "TERMINATION" ;
+    ct:supported_by ex:C092P0063 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C092R0003 a ct:Rule ;
+    rdfs:label "Termination — source passage 64" ;
+    ct:kind "TERMINATION" ;
+    ct:subject_to ex:C092R0003Condition64 ;
+    ct:supported_by ex:C092P0064 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C092R0003Condition64 a ct:Condition ;
+    ct:description "3.5 W'estem Copper may, at its option, terminate this Agreement by written notice to  Glamis, effective immediately upon delivery of the notice, should Glamis cease conducting  business in the normal course, become insolvent, make a general assignment for the benefit of  creditors, suffer or permit the appointment of a receiver for its business or assets or avail itself  of, or become subject to, any proceedings under the Bankruptcy and Insolvency Act (Canada) or  any other statute of any province or state relating to insolvency or the protection of rights of  creditors." ;
+    ct:supported_by ex:C092P0064 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C092R0004 a ct:Rule ;
+    rdfs:label "Termination — source passage 66" ;
+    ct:kind "TERMINATION" ;
+    ct:subject_to ex:C092R0004Condition66 ;
+    ct:supported_by ex:C092P0066 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C092R0004Condition66 a ct:Condition ;
+    ct:description "3.6 Glamis may, at its option, terminate this Agreement by written notice to Western  Copper, effective immediately upon delivery of the notice, should Western Copper cease  conducting business in the normal course, become insolvent, make a general assignment for the  benefit of creditors, suffer or permit the appointment of a receiver for its business or assets or  avail itself of, or become subject to, any proceedings under the Bankruptcy and Insolvency Act  (Canada) or any other statute of any province or state relating to insolvency or the protection of  rights of creditors." ;
+    ct:supported_by ex:C092P0066 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C092R0005 a ct:Rule ;
+    rdfs:label "Termination — source passage 103" ;
+    ct:kind "TERMINATION" ;
+    ct:supported_by ex:C092P0103 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C092R0006 a ct:Rule ;
+    rdfs:label "Termination — source passage 105" ;
+    ct:kind "TERMINATION" ;
+    ct:supported_by ex:C092P0105 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C092P0048 a ct:SourcePassage ;
+    ct:end_char 7456 ;
+    ct:exact_text "2.2 Glamis covenants and agrees with Western Copper that if at any time it intends to dispose of a Designated Mineral Property for cash consideration or by abandonment, it will give  Western Copper notice (the ' Disposition Notice\") of the intended disposition. For a period of  30 days from the time of delivery of the Disposition Notice Glamis will, if requested by Western  Silver, entertain an offer from Western Copper to acquire the Designated Mineral Property. In  the ease of a Designated Mineral Property that Glamis intends to dispose of for cash  consideration, the parties will negotiate in good faith to reach a mutually agreeable agreement for  the sale to Western Copper of the [Designated Mineral Property. If Glamis and Western Copper  are unable to negotiate an acceptable agreement with respect to the Designated Mineral Property  within the 30 day period, Glamis may thereafter dispose of the Designated Mineral Property as it  sees til in its absolute discretion. " ;
+    ct:source_path "cuad/WESTERN COPPER - NON-COMPETITION AGREEMENT.txt" ;
+    ct:source_sha256 "d148e0be306beafca1731bbda95efdd7d3fa21be087c5b1a56bdd51b3433f9aa" ;
+    ct:start_char 6471 .
+
+ex:C092P0064 a ct:SourcePassage ;
+    ct:end_char 11232 ;
+    ct:exact_text "3.5 W'estem Copper may, at its option, terminate this Agreement by written notice to  Glamis, effective immediately upon delivery of the notice, should Glamis cease conducting  business in the normal course, become insolvent, make a general assignment for the benefit of  creditors, suffer or permit the appointment of a receiver for its business or assets or avail itself  of, or become subject to, any proceedings under the Bankruptcy and Insolvency Act (Canada) or  any other statute of any province or state relating to insolvency or the protection of rights of  creditors." ;
+    ct:source_path "cuad/WESTERN COPPER - NON-COMPETITION AGREEMENT.txt" ;
+    ct:source_sha256 "d148e0be306beafca1731bbda95efdd7d3fa21be087c5b1a56bdd51b3433f9aa" ;
+    ct:start_char 10655 .
+
+ex:C092P0066 a ct:SourcePassage ;
+    ct:end_char 11848 ;
+    ct:exact_text "3.6 Glamis may, at its option, terminate this Agreement by written notice to Western  Copper, effective immediately upon delivery of the notice, should Western Copper cease  conducting business in the normal course, become insolvent, make a general assignment for the  benefit of creditors, suffer or permit the appointment of a receiver for its business or assets or  avail itself of, or become subject to, any proceedings under the Bankruptcy and Insolvency Act  (Canada) or any other statute of any province or state relating to insolvency or the protection of  rights of creditors." ;
+    ct:source_path "cuad/WESTERN COPPER - NON-COMPETITION AGREEMENT.txt" ;
+    ct:source_sha256 "d148e0be306beafca1731bbda95efdd7d3fa21be087c5b1a56bdd51b3433f9aa" ;
+    ct:start_char 11263 .
+
+ct:Agreement a owl:Class ;
+    rdfs:label "Agreement" .
+
+ct:Condition a owl:Class ;
+    rdfs:label "Condition" .
+
+ct:Reference a owl:Class ;
+    rdfs:label "Reference" .
+
+ct:SourcePassage a owl:Class ;
+    rdfs:label "SourcePassage" .
+
+ct:Rule a owl:Class ;
+    rdfs:label "Rule" .
+

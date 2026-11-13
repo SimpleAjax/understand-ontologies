@@ -1,0 +1,178 @@
+{
+  "document_id": "C057",
+  "file_path": "cuad/NEOMEDIATECHNOLOGIESINC_12_15_2005-EX-16.1-DISTRIBUTOR AGREEMENT.txt",
+  "model_digest": "0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0",
+  "rules": [
+    {
+      "passage_id": 3,
+      "kind": "INITIAL_TERM",
+      "label": "Initial Term — source passage 3",
+      "condition_ids": [],
+      "reference_labels": [],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 48,
+      "kind": "TERMINATION",
+      "label": "Termination — source passage 48",
+      "condition_ids": [
+        48
+      ],
+      "reference_labels": [],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 81,
+      "kind": "POST_EXPIRY_CONTINUATION",
+      "label": "Post Expiry Continuation — source passage 81",
+      "condition_ids": [],
+      "reference_labels": [],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 81,
+      "kind": "TERMINATION",
+      "label": "Termination — source passage 81",
+      "condition_ids": [],
+      "reference_labels": [],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 98,
+      "kind": "TERMINATION",
+      "label": "Termination — source passage 98",
+      "condition_ids": [
+        98
+      ],
+      "reference_labels": [],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 101,
+      "kind": "TERMINATION",
+      "label": "Termination — source passage 101",
+      "condition_ids": [],
+      "reference_labels": [],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 109,
+      "kind": "INITIAL_TERM",
+      "label": "Initial Term — source passage 109",
+      "condition_ids": [],
+      "reference_labels": [],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 110,
+      "kind": "OPTIONAL_RENEWAL",
+      "label": "Optional Renewal — source passage 110",
+      "condition_ids": [
+        110
+      ],
+      "reference_labels": [],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 111,
+      "kind": "TERMINATION",
+      "label": "Termination — source passage 111",
+      "condition_ids": [
+        111
+      ],
+      "reference_labels": [],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 111,
+      "kind": "OPTIONAL_RENEWAL",
+      "label": "Optional Renewal — source passage 111",
+      "condition_ids": [
+        111
+      ],
+      "reference_labels": [],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 112,
+      "kind": "TERMINATION",
+      "label": "Termination — source passage 112",
+      "condition_ids": [],
+      "reference_labels": [],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 113,
+      "kind": "TERMINATION",
+      "label": "Termination — source passage 113",
+      "condition_ids": [
+        113
+      ],
+      "reference_labels": [],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 113,
+      "kind": "CONDITIONAL_REFERENCED_TERM",
+      "label": "Conditional Referenced Term — source passage 113",
+      "condition_ids": [
+        113
+      ],
+      "reference_labels": [],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 114,
+      "kind": "TERMINATION",
+      "label": "Termination — source passage 114",
+      "condition_ids": [
+        114
+      ],
+      "reference_labels": [],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 114,
+      "kind": "CONDITIONAL_REFERENCED_TERM",
+      "label": "Conditional Referenced Term — source passage 114",
+      "condition_ids": [
+        114
+      ],
+      "reference_labels": [],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    }
+  ],
+  "rejected_rules": [],
+  "review_status": "UNREVIEWED",
+  "coverage": "Lexically selected source windows; completeness not guaranteed."
+}

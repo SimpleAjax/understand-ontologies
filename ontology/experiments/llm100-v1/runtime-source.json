@@ -1,0 +1,10 @@
+{
+  "runtime": "Ollama",
+  "version": "v0.40.16",
+  "asset_url": "https://github.com/ollama/ollama/releases/download/v0.40.16/ollama-windows-amd64.zip",
+  "asset_sha256": "50fcf5ad54277f2fa5d173ebfc93bcb017adbc0c9ef2314daabc96ca9e6aa64e",
+  "model_tag": "qwen3:4b-instruct-2507-q4_K_M",
+  "model_source": "https://ollama.com/library/qwen3:4b-instruct-2507-q4_K_M",
+  "model_digest": "Recorded from local registry in config.json after pull",
+  "bind": "127.0.0.1:18765"
+}

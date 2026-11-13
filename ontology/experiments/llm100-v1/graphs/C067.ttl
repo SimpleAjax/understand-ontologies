@@ -1,0 +1,463 @@
+@prefix ct: <https://cimulink.local/ontology/contract-terms/0.1#> .
+@prefix ex: <https://cimulink.local/ontology/llm100-v1/> .
+@prefix meta: <https://cimulink.local/ontology/extraction#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ct: a owl:Ontology ;
+    rdfs:comment "Partial five-contract development sample. No claim of complete contract coverage or legal correctness." .
+
+ct:agreement_effective_from a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:applies_within a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:calendar_date_status a owl:DatatypeProperty .
+
+ct:coverage a owl:DatatypeProperty .
+
+ct:description a owl:DatatypeProperty .
+
+ct:duration a owl:DatatypeProperty .
+
+ct:duration_status a owl:DatatypeProperty .
+
+ct:end_char a owl:DatatypeProperty .
+
+ct:end_date_status a owl:DatatypeProperty .
+
+ct:ends_on_event a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:exact_text a owl:DatatypeProperty .
+
+ct:has_party a owl:ObjectProperty ;
+    rdfs:domain ct:Agreement ;
+    rdfs:range ct:Party .
+
+ct:has_rule a owl:ObjectProperty ;
+    rdfs:domain ct:Agreement ;
+    rdfs:range ct:Rule .
+
+ct:kind a owl:DatatypeProperty .
+
+ct:notice_actor a owl:DatatypeProperty .
+
+ct:notice_form a owl:DatatypeProperty .
+
+ct:notice_period_status a owl:DatatypeProperty .
+
+ct:qualifies a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Rule .
+
+ct:references_section a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:renewal_count a owl:DatatypeProperty .
+
+ct:resolution_status a owl:DatatypeProperty .
+
+ct:resolved_to a owl:ObjectProperty ;
+    rdfs:domain ct:Reference ;
+    rdfs:range ct:SourcePassage .
+
+ct:source_path a owl:DatatypeProperty .
+
+ct:source_sha256 a owl:DatatypeProperty .
+
+ct:start_char a owl:DatatypeProperty .
+
+ct:starts_from a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:stated_end_date a owl:DatatypeProperty .
+
+ct:subject_to a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Condition .
+
+ct:supported_by a owl:ObjectProperty ;
+    rdfs:range ct:SourcePassage .
+
+ct:termination_notice a owl:DatatypeProperty .
+
+ex:C067 a ct:Agreement ;
+    rdfs:label "PareteumCorp_20081001_8-K_EX-99.1_2654808_EX-99.1_Hosting Agreement.txt" ;
+    ct:coverage "LOCAL_LLM_PROPOSED_PARTIAL; NOT_HUMAN_REVIEWED" ;
+    ct:has_rule ex:C067R0001,
+        ex:C067R0002,
+        ex:C067R0003,
+        ex:C067R0004,
+        ex:C067R0005,
+        ex:C067R0006,
+        ex:C067R0007,
+        ex:C067R0008,
+        ex:C067R0009,
+        ex:C067R0010,
+        ex:C067R0011,
+        ex:C067R0012,
+        ex:C067R0013,
+        ex:C067R0014,
+        ex:C067R0015,
+        ex:C067R0016,
+        ex:C067R0017,
+        ex:C067R0018,
+        ex:C067R0019 ;
+    ct:source_path "cuad/PareteumCorp_20081001_8-K_EX-99.1_2654808_EX-99.1_Hosting Agreement.txt" ;
+    ct:source_sha256 "9c66eef9725257be89d3735e03bde9a00c307f60d1668d177cc88b42c35d4edc" ;
+    meta:model_digest "0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0" .
+
+ct:Party a owl:Class ;
+    rdfs:label "Party" .
+
+ex:C067P0041 a ct:SourcePassage ;
+    ct:end_char 8462 ;
+    ct:exact_text "1.18 \"Initial Term\" means the initial duration of the Agreement as agreed upon between the Parties and defined in article 17.1" ;
+    ct:source_path "cuad/PareteumCorp_20081001_8-K_EX-99.1_2654808_EX-99.1_Hosting Agreement.txt" ;
+    ct:source_sha256 "9c66eef9725257be89d3735e03bde9a00c307f60d1668d177cc88b42c35d4edc" ;
+    ct:start_char 8336 .
+
+ex:C067P0085 a ct:SourcePassage ;
+    ct:end_char 20675 ;
+    ct:exact_text "3.1 T-Mobile shall provide the Hosting Services, as described in Appendix 1, during the term of this Agreement from the Ready for Service Date." ;
+    ct:source_path "cuad/PareteumCorp_20081001_8-K_EX-99.1_2654808_EX-99.1_Hosting Agreement.txt" ;
+    ct:source_sha256 "9c66eef9725257be89d3735e03bde9a00c307f60d1668d177cc88b42c35d4edc" ;
+    ct:start_char 20532 .
+
+ex:C067P0099 a ct:SourcePassage ;
+    ct:end_char 24960 ;
+    ct:exact_text "4.5 Subject to article 4.4., ELEPHANT TALK shall commence the Soft Launch on or after the ***. From the *** ELEPHANT TALK shall be permitted to (technically) test the Hosting Services for the duration of five (5) calendar weeks, with a limited number of users (***). The traffic generated during the Soft Launch shall be free of charge for up to *** - based on the tariffs T-Mobile will charge ELEPHANT TALK according to Appendix 2. For all other users and costs above the ***,- per user, ELEPHANT TALK has to pay the fees for the Hosting Services as defined in Appendix 2. The Soft Launch is not part of the forecasts pursuant to Appendix 4. ELEPHANT TALK will finalize the Soft Launch by signing the Protocol of Delivery, according to Appendix 3 and 11." ;
+    ct:source_path "cuad/PareteumCorp_20081001_8-K_EX-99.1_2654808_EX-99.1_Hosting Agreement.txt" ;
+    ct:source_sha256 "9c66eef9725257be89d3735e03bde9a00c307f60d1668d177cc88b42c35d4edc" ;
+    ct:start_char 24205 .
+
+ex:C067P0154 a ct:SourcePassage ;
+    ct:end_char 41051 ;
+    ct:exact_text "11.5 This article 11 shall survive the termination of this Agreement as provided for in articles 17 and 18 for a period of two (2) years but shall not in any way limit or restrict either Party's use of its own Confidential Information.   12.  LIMITATION OF LIABILITY" ;
+    ct:source_path "cuad/PareteumCorp_20081001_8-K_EX-99.1_2654808_EX-99.1_Hosting Agreement.txt" ;
+    ct:source_sha256 "9c66eef9725257be89d3735e03bde9a00c307f60d1668d177cc88b42c35d4edc" ;
+    ct:start_char 40785 .
+
+ex:C067P0182 a ct:SourcePassage ;
+    ct:end_char 53935 ;
+    ct:exact_text "In addition, ELEPHANT TALK shall do its best to stop these actions immediately on first request of T-Mobile. Should ELEPHANT TALK wilfully or negligently fail to comply with an T-Mobile request, ELEPHANT TALK shall bear full responsibility and indemnify T- Mobile for all damages and losses T-Mobile suffers resulting from actions as mentioned in this article by ELEPHANT TALK's Customers.   17.  DURATION OF THE AGREEMENT   17.1 This Agreement shall come into force on the Date of the Agreement, and shall, subject to article 18, remain in full force and effect for an initial period of *** from the Commercial Launch Date." ;
+    ct:source_path "cuad/PareteumCorp_20081001_8-K_EX-99.1_2654808_EX-99.1_Hosting Agreement.txt" ;
+    ct:source_sha256 "9c66eef9725257be89d3735e03bde9a00c307f60d1668d177cc88b42c35d4edc" ;
+    ct:start_char 53311 .
+
+ex:C067P0187 a ct:SourcePassage ;
+    ct:end_char 54727 ;
+    ct:exact_text "18.  TERMINATION OF AGREEMENT" ;
+    ct:source_path "cuad/PareteumCorp_20081001_8-K_EX-99.1_2654808_EX-99.1_Hosting Agreement.txt" ;
+    ct:source_sha256 "9c66eef9725257be89d3735e03bde9a00c307f60d1668d177cc88b42c35d4edc" ;
+    ct:start_char 54698 .
+
+ex:C067P0188 a ct:SourcePassage ;
+    ct:end_char 54823 ;
+    ct:exact_text "18.1 In addition to the conditions of Article 17, this Agreement may be terminated as follows:" ;
+    ct:source_path "cuad/PareteumCorp_20081001_8-K_EX-99.1_2654808_EX-99.1_Hosting Agreement.txt" ;
+    ct:source_sha256 "9c66eef9725257be89d3735e03bde9a00c307f60d1668d177cc88b42c35d4edc" ;
+    ct:start_char 54729 .
+
+ex:C067P0212 a ct:SourcePassage ;
+    ct:end_char 62978 ;
+    ct:exact_text "20.6  Survival   Any provision of this Agreement which by its nature or implication (including in respect of any accrued rights and liabilities) is required to survive termination or expiry of this Agreement shall survive termination or expiry as aforesaid.   20.7  Notices     Any notice or other formal communication to be given or made under or in connection with this Agreement, if not stated otherwise explicitly in this Agreement and its Appendices, shall be in writing, signed by or on behalf of the Party giving it and sent by registered mail. All notice or other formal communication to be delivered under this Agreement shall be addressed to:    for ELEPHANT TALK: the CTO;   for T-Mobile: the Director Wholesale & Interconnect." ;
+    ct:source_path "cuad/PareteumCorp_20081001_8-K_EX-99.1_2654808_EX-99.1_Hosting Agreement.txt" ;
+    ct:source_sha256 "9c66eef9725257be89d3735e03bde9a00c307f60d1668d177cc88b42c35d4edc" ;
+    ct:start_char 62240 .
+
+ex:C067R0001 a ct:Rule ;
+    rdfs:label "Initial Term — source passage 9" ;
+    ct:kind "INITIAL_TERM" ;
+    ct:subject_to ex:C067R0001Condition9 ;
+    ct:supported_by ex:C067P0009 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C067R0001Condition9 a ct:Condition ;
+    ct:description "TABLE OF CONTENT 1. Definitions 2. Purpose and Scope of the Agreement 3. Hosting Services 4. Implementation 5. Forecast & Commitments 6. Service level 7. Data Protection & Privacy 8. The co-operation relationship 9. Prices, Charging, Billing & Accounting 10. Customer Care Support 11. Confidentiality 12. Limitation of Liability 13. Suspension and termination of Hosting Services 14. Force Majeure 15. Intellectual Property Rights 16. SIM cards and Calling Credit 17. Duration of the Agreement 18. Termination of the Agreement 19. Modifications 20. Miscellaneous 21. Governing Law 22. Dispute resolution 23. Counterpart" ;
+    ct:supported_by ex:C067P0009 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C067R0002 a ct:Rule ;
+    rdfs:label "Termination — source passage 9" ;
+    ct:kind "TERMINATION" ;
+    ct:subject_to ex:C067R0002Condition9 ;
+    ct:supported_by ex:C067P0009 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C067R0002Condition9 a ct:Condition ;
+    ct:description "TABLE OF CONTENT 1. Definitions 2. Purpose and Scope of the Agreement 3. Hosting Services 4. Implementation 5. Forecast & Commitments 6. Service level 7. Data Protection & Privacy 8. The co-operation relationship 9. Prices, Charging, Billing & Accounting 10. Customer Care Support 11. Confidentiality 12. Limitation of Liability 13. Suspension and termination of Hosting Services 14. Force Majeure 15. Intellectual Property Rights 16. SIM cards and Calling Credit 17. Duration of the Agreement 18. Termination of the Agreement 19. Modifications 20. Miscellaneous 21. Governing Law 22. Dispute resolution 23. Counterpart" ;
+    ct:supported_by ex:C067P0009 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C067R0003 a ct:Rule ;
+    rdfs:label "Conditional Referenced Term — source passage 9" ;
+    ct:kind "CONDITIONAL_REFERENCED_TERM" ;
+    ct:subject_to ex:C067R0003Condition9 ;
+    ct:supported_by ex:C067P0009 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C067R0003Condition9 a ct:Condition ;
+    ct:description "TABLE OF CONTENT 1. Definitions 2. Purpose and Scope of the Agreement 3. Hosting Services 4. Implementation 5. Forecast & Commitments 6. Service level 7. Data Protection & Privacy 8. The co-operation relationship 9. Prices, Charging, Billing & Accounting 10. Customer Care Support 11. Confidentiality 12. Limitation of Liability 13. Suspension and termination of Hosting Services 14. Force Majeure 15. Intellectual Property Rights 16. SIM cards and Calling Credit 17. Duration of the Agreement 18. Termination of the Agreement 19. Modifications 20. Miscellaneous 21. Governing Law 22. Dispute resolution 23. Counterpart" ;
+    ct:supported_by ex:C067P0009 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C067R0004 a ct:Rule ;
+    rdfs:label "Initial Term — source passage 41" ;
+    ct:kind "INITIAL_TERM" ;
+    ct:references_section ex:C067R0004Ref0 ;
+    ct:supported_by ex:C067P0041 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C067R0004Ref0 a ct:Reference ;
+    rdfs:label "article 17.1" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C067R0005 a ct:Rule ;
+    rdfs:label "Initial Term — source passage 85" ;
+    ct:kind "INITIAL_TERM" ;
+    ct:references_section ex:C067R0005Ref0 ;
+    ct:supported_by ex:C067P0085 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C067R0005Ref0 a ct:Reference ;
+    rdfs:label "Appendix 1" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C067R0006 a ct:Rule ;
+    rdfs:label "Initial Term — source passage 99" ;
+    ct:kind "INITIAL_TERM" ;
+    ct:references_section ex:C067R0006Ref0,
+        ex:C067R0006Ref1,
+        ex:C067R0006Ref2,
+        ex:C067R0006Ref3 ;
+    ct:supported_by ex:C067P0099 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C067R0006Ref0 a ct:Reference ;
+    rdfs:label "article 4.4" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C067R0006Ref1 a ct:Reference ;
+    rdfs:label "Appendix 2" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C067R0006Ref2 a ct:Reference ;
+    rdfs:label "Appendix 4" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C067R0006Ref3 a ct:Reference ;
+    rdfs:label "Appendix 3" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C067R0007 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 154" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:references_section ex:C067R0007Ref0 ;
+    ct:supported_by ex:C067P0154 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C067R0007Ref0 a ct:Reference ;
+    rdfs:label "article 11" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C067R0008 a ct:Rule ;
+    rdfs:label "Termination — source passage 160" ;
+    ct:kind "TERMINATION" ;
+    ct:supported_by ex:C067P0160 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C067R0009 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 160" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:supported_by ex:C067P0160 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C067R0010 a ct:Rule ;
+    rdfs:label "Termination — source passage 167" ;
+    ct:kind "TERMINATION" ;
+    ct:subject_to ex:C067R0010Condition167 ;
+    ct:supported_by ex:C067P0167 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C067R0010Condition167 a ct:Condition ;
+    ct:description "14.3 If the force majeure event continues for more than two (2) consecutive calendar weeks, then the Parties shall promptly meet and discuss methods to resolve the difficulties arising from the event of force majeure. If no agreement is reached by the Parties within a period of fifteen(15) Calendar Days and the force majeure event continues to have a substantial effect on the performance of the Agreement, either Party shall have the right to terminate this Agreement in whole or in part with immediate effect by written notice without incurring any financial liability to the other Party as a consequence of such termination." ;
+    ct:supported_by ex:C067P0167 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C067R0011 a ct:Rule ;
+    rdfs:label "Initial Term — source passage 182" ;
+    ct:kind "INITIAL_TERM" ;
+    ct:references_section ex:C067R0011Ref0 ;
+    ct:supported_by ex:C067P0182 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C067R0011Ref0 a ct:Reference ;
+    rdfs:label "article 18" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C067R0012 a ct:Rule ;
+    rdfs:label "Termination — source passage 183" ;
+    ct:kind "TERMINATION" ;
+    ct:subject_to ex:C067R0012Condition183 ;
+    ct:supported_by ex:C067P0183 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C067R0012Condition183 a ct:Condition ;
+    ct:description "17.2 The Agreement may be terminated by both Parties with a notification period of *** before the end of the Initial Term of the Agreement. If no termination notice is provided, the Agreement will be automatically extended for consecutive *** periods until such time as *** termination notice is provided. At the end of *** Parties will negotiate in good faith regarding a possible extension of the Initial Term." ;
+    ct:supported_by ex:C067P0183 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C067R0013 a ct:Rule ;
+    rdfs:label "Automatic Renewal — source passage 183" ;
+    ct:kind "AUTOMATIC_RENEWAL" ;
+    ct:subject_to ex:C067R0013Condition183 ;
+    ct:supported_by ex:C067P0183 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C067R0013Condition183 a ct:Condition ;
+    ct:description "17.2 The Agreement may be terminated by both Parties with a notification period of *** before the end of the Initial Term of the Agreement. If no termination notice is provided, the Agreement will be automatically extended for consecutive *** periods until such time as *** termination notice is provided. At the end of *** Parties will negotiate in good faith regarding a possible extension of the Initial Term." ;
+    ct:supported_by ex:C067P0183 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C067R0014 a ct:Rule ;
+    rdfs:label "Termination — source passage 187" ;
+    ct:kind "TERMINATION" ;
+    ct:supported_by ex:C067P0187 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C067R0015 a ct:Rule ;
+    rdfs:label "Termination — source passage 188" ;
+    ct:kind "TERMINATION" ;
+    ct:references_section ex:C067R0015Ref0 ;
+    ct:supported_by ex:C067P0188 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C067R0015Ref0 a ct:Reference ;
+    rdfs:label "Article 17" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C067R0016 a ct:Rule ;
+    rdfs:label "Termination — source passage 190" ;
+    ct:kind "TERMINATION" ;
+    ct:references_section ex:C067R0016Ref0 ;
+    ct:subject_to ex:C067R0016Condition190 ;
+    ct:supported_by ex:C067P0190 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C067R0016Condition190 a ct:Condition ;
+    ct:description "b. by either Party, with immediate effect, if the other Party is in material breach of any provision of this Agreement and does not or is not capable of remedying such breach within a reasonable time and in any event within sixty (60) Business Days of receipt of a written notice to such effect. A material breach will, for the purpose of this Agreement, not include the event that ELEPHANT TALK fails to comply with its payments obligations under article 9.2.; or" ;
+    ct:supported_by ex:C067P0190 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C067R0016Ref0 a ct:Reference ;
+    rdfs:label "article 9.2" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C067R0017 a ct:Rule ;
+    rdfs:label "Conditional Referenced Term — source passage 191" ;
+    ct:kind "CONDITIONAL_REFERENCED_TERM" ;
+    ct:references_section ex:C067R0017Ref0 ;
+    ct:subject_to ex:C067R0017Condition191 ;
+    ct:supported_by ex:C067P0191 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C067R0017Condition191 a ct:Condition ;
+    ct:description "c. by T-Mobile, if ELEPHANT TALK fails to comply with its obligations under article 16.5 upon written notification thereof by T-Mobile, within a reasonable period of time following the respective notification date (but in no event later than forty-five (45) Business Days of receipt of a written notice to such effect); or," ;
+    ct:supported_by ex:C067P0191 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C067R0017Ref0 a ct:Reference ;
+    rdfs:label "article 16.5" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C067R0018 a ct:Rule ;
+    rdfs:label "Termination — source passage 199" ;
+    ct:kind "TERMINATION" ;
+    ct:subject_to ex:C067R0018Condition199 ;
+    ct:supported_by ex:C067P0199 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C067R0018Condition199 a ct:Condition ;
+    ct:description "18.4 This Agreement will terminate immediately in the event that a final order made by the relevant governmental authority not granting, revoking or denying renewal of T-Mobile DCS 1800 or UMTS/HSDPA license or permission to operate the T-Mobile Network or any other license to operate the Hosting Services, takes effect, if such order will be beyond the reasonable control of T-Mobile.    19.  MODIFICATIONS" ;
+    ct:supported_by ex:C067P0199 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C067R0019 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 212" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:supported_by ex:C067P0212 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C067P0160 a ct:SourcePassage ;
+    ct:end_char 44564 ;
+    ct:exact_text "13.1 Notwithstanding anything stipulated in the Agreement, T-Mobile may without liability suspend or terminate whole or part of the Hosting Services in relation to one or more ELEPHANT TALK Customers, in circumstances where T-Mobile would suspend or terminate those services to its own customers, in the following circumstances - or circumstances of similar severity. a)  ***;   b)  ***; or c)  suspected fraudulent or unauthorized use by the relevant ***; or   d) necessary maintenance or enhancement of the T-Mobile Network. In the event of planned suspension or termination of all or any of the Hosting Services, T-Mobile shall inform ELEPHANT TALK accordingly by sending a written notification, as soon as reasonably and business wise possible." ;
+    ct:source_path "cuad/PareteumCorp_20081001_8-K_EX-99.1_2654808_EX-99.1_Hosting Agreement.txt" ;
+    ct:source_sha256 "9c66eef9725257be89d3735e03bde9a00c307f60d1668d177cc88b42c35d4edc" ;
+    ct:start_char 43816 .
+
+ex:C067P0167 a ct:SourcePassage ;
+    ct:end_char 47845 ;
+    ct:exact_text "14.3 If the force majeure event continues for more than two (2) consecutive calendar weeks, then the Parties shall promptly meet and discuss methods to resolve the difficulties arising from the event of force majeure. If no agreement is reached by the Parties within a period of fifteen(15) Calendar Days and the force majeure event continues to have a substantial effect on the performance of the Agreement, either Party shall have the right to terminate this Agreement in whole or in part with immediate effect by written notice without incurring any financial liability to the other Party as a consequence of such termination." ;
+    ct:source_path "cuad/PareteumCorp_20081001_8-K_EX-99.1_2654808_EX-99.1_Hosting Agreement.txt" ;
+    ct:source_sha256 "9c66eef9725257be89d3735e03bde9a00c307f60d1668d177cc88b42c35d4edc" ;
+    ct:start_char 47216 .
+
+ex:C067P0190 a ct:SourcePassage ;
+    ct:end_char 55336 ;
+    ct:exact_text "b. by either Party, with immediate effect, if the other Party is in material breach of any provision of this Agreement and does not or is not capable of remedying such breach within a reasonable time and in any event within sixty (60) Business Days of receipt of a written notice to such effect. A material breach will, for the purpose of this Agreement, not include the event that ELEPHANT TALK fails to comply with its payments obligations under article 9.2.; or" ;
+    ct:source_path "cuad/PareteumCorp_20081001_8-K_EX-99.1_2654808_EX-99.1_Hosting Agreement.txt" ;
+    ct:source_sha256 "9c66eef9725257be89d3735e03bde9a00c307f60d1668d177cc88b42c35d4edc" ;
+    ct:start_char 54872 .
+
+ex:C067P0191 a ct:SourcePassage ;
+    ct:end_char 55663 ;
+    ct:exact_text "c. by T-Mobile, if ELEPHANT TALK fails to comply with its obligations under article 16.5 upon written notification thereof by T-Mobile, within a reasonable period of time following the respective notification date (but in no event later than forty-five (45) Business Days of receipt of a written notice to such effect); or," ;
+    ct:source_path "cuad/PareteumCorp_20081001_8-K_EX-99.1_2654808_EX-99.1_Hosting Agreement.txt" ;
+    ct:source_sha256 "9c66eef9725257be89d3735e03bde9a00c307f60d1668d177cc88b42c35d4edc" ;
+    ct:start_char 55340 .
+
+ex:C067P0199 a ct:SourcePassage ;
+    ct:end_char 57258 ;
+    ct:exact_text "18.4 This Agreement will terminate immediately in the event that a final order made by the relevant governmental authority not granting, revoking or denying renewal of T-Mobile DCS 1800 or UMTS/HSDPA license or permission to operate the T-Mobile Network or any other license to operate the Hosting Services, takes effect, if such order will be beyond the reasonable control of T-Mobile.    19.  MODIFICATIONS" ;
+    ct:source_path "cuad/PareteumCorp_20081001_8-K_EX-99.1_2654808_EX-99.1_Hosting Agreement.txt" ;
+    ct:source_sha256 "9c66eef9725257be89d3735e03bde9a00c307f60d1668d177cc88b42c35d4edc" ;
+    ct:start_char 56850 .
+
+ct:Agreement a owl:Class ;
+    rdfs:label "Agreement" .
+
+ex:C067P0183 a ct:SourcePassage ;
+    ct:end_char 54349 ;
+    ct:exact_text "17.2 The Agreement may be terminated by both Parties with a notification period of *** before the end of the Initial Term of the Agreement. If no termination notice is provided, the Agreement will be automatically extended for consecutive *** periods until such time as *** termination notice is provided. At the end of *** Parties will negotiate in good faith regarding a possible extension of the Initial Term." ;
+    ct:source_path "cuad/PareteumCorp_20081001_8-K_EX-99.1_2654808_EX-99.1_Hosting Agreement.txt" ;
+    ct:source_sha256 "9c66eef9725257be89d3735e03bde9a00c307f60d1668d177cc88b42c35d4edc" ;
+    ct:start_char 53937 .
+
+ex:C067P0009 a ct:SourcePassage ;
+    ct:end_char 1060 ;
+    ct:exact_text "TABLE OF CONTENT 1. Definitions 2. Purpose and Scope of the Agreement 3. Hosting Services 4. Implementation 5. Forecast & Commitments 6. Service level 7. Data Protection & Privacy 8. The co-operation relationship 9. Prices, Charging, Billing & Accounting 10. Customer Care Support 11. Confidentiality 12. Limitation of Liability 13. Suspension and termination of Hosting Services 14. Force Majeure 15. Intellectual Property Rights 16. SIM cards and Calling Credit 17. Duration of the Agreement 18. Termination of the Agreement 19. Modifications 20. Miscellaneous 21. Governing Law 22. Dispute resolution 23. Counterpart" ;
+    ct:source_path "cuad/PareteumCorp_20081001_8-K_EX-99.1_2654808_EX-99.1_Hosting Agreement.txt" ;
+    ct:source_sha256 "9c66eef9725257be89d3735e03bde9a00c307f60d1668d177cc88b42c35d4edc" ;
+    ct:start_char 441 .
+
+ct:Condition a owl:Class ;
+    rdfs:label "Condition" .
+
+ct:Reference a owl:Class ;
+    rdfs:label "Reference" .
+
+ct:SourcePassage a owl:Class ;
+    rdfs:label "SourcePassage" .
+
+ct:Rule a owl:Class ;
+    rdfs:label "Rule" .
+

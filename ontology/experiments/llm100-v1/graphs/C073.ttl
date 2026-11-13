@@ -1,0 +1,446 @@
+@prefix ct: <https://cimulink.local/ontology/contract-terms/0.1#> .
+@prefix ex: <https://cimulink.local/ontology/llm100-v1/> .
+@prefix meta: <https://cimulink.local/ontology/extraction#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ct: a owl:Ontology ;
+    rdfs:comment "Partial five-contract development sample. No claim of complete contract coverage or legal correctness." .
+
+ct:agreement_effective_from a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:applies_within a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:calendar_date_status a owl:DatatypeProperty .
+
+ct:coverage a owl:DatatypeProperty .
+
+ct:description a owl:DatatypeProperty .
+
+ct:duration a owl:DatatypeProperty .
+
+ct:duration_status a owl:DatatypeProperty .
+
+ct:end_char a owl:DatatypeProperty .
+
+ct:end_date_status a owl:DatatypeProperty .
+
+ct:ends_on_event a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:exact_text a owl:DatatypeProperty .
+
+ct:has_party a owl:ObjectProperty ;
+    rdfs:domain ct:Agreement ;
+    rdfs:range ct:Party .
+
+ct:has_rule a owl:ObjectProperty ;
+    rdfs:domain ct:Agreement ;
+    rdfs:range ct:Rule .
+
+ct:kind a owl:DatatypeProperty .
+
+ct:notice_actor a owl:DatatypeProperty .
+
+ct:notice_form a owl:DatatypeProperty .
+
+ct:notice_period_status a owl:DatatypeProperty .
+
+ct:qualifies a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Rule .
+
+ct:references_section a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:renewal_count a owl:DatatypeProperty .
+
+ct:resolution_status a owl:DatatypeProperty .
+
+ct:resolved_to a owl:ObjectProperty ;
+    rdfs:domain ct:Reference ;
+    rdfs:range ct:SourcePassage .
+
+ct:source_path a owl:DatatypeProperty .
+
+ct:source_sha256 a owl:DatatypeProperty .
+
+ct:start_char a owl:DatatypeProperty .
+
+ct:starts_from a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:stated_end_date a owl:DatatypeProperty .
+
+ct:subject_to a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Condition .
+
+ct:supported_by a owl:ObjectProperty ;
+    rdfs:range ct:SourcePassage .
+
+ct:termination_notice a owl:DatatypeProperty .
+
+ex:C073 a ct:Agreement ;
+    rdfs:label "RangeResourcesLouisianaInc_20150417_8-K_EX-10.5_9045501_EX-10.5_Transportation Agreement.txt" ;
+    ct:coverage "LOCAL_LLM_PROPOSED_PARTIAL; NOT_HUMAN_REVIEWED" ;
+    ct:has_rule ex:C073R0001,
+        ex:C073R0002,
+        ex:C073R0003,
+        ex:C073R0004,
+        ex:C073R0005,
+        ex:C073R0006,
+        ex:C073R0007,
+        ex:C073R0008,
+        ex:C073R0009,
+        ex:C073R0010,
+        ex:C073R0011,
+        ex:C073R0012,
+        ex:C073R0013,
+        ex:C073R0014,
+        ex:C073R0015,
+        ex:C073R0016,
+        ex:C073R0017 ;
+    ct:source_path "cuad/RangeResourcesLouisianaInc_20150417_8-K_EX-10.5_9045501_EX-10.5_Transportation Agreement.txt" ;
+    ct:source_sha256 "7fc48e1f66eb87cca6ac67e84e7286fd95f39b7b9f3d70169fa527291595eb1d" ;
+    meta:model_digest "0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0" .
+
+ct:Party a owl:Class ;
+    rdfs:label "Party" .
+
+ex:C073P0026 a ct:SourcePassage ;
+    ct:end_char 4415 ;
+    ct:exact_text "\"Contract Year\" shall mean a period commencing at 9:00 a.m., Central Clock Time, on the Commencement Date and ending at 9:00 a.m., Central Clock Time on the same day and calendar month of the following calendar year and thereafter for succeeding periods of twelve (12) consecutive Months each." ;
+    ct:source_path "cuad/RangeResourcesLouisianaInc_20150417_8-K_EX-10.5_9045501_EX-10.5_Transportation Agreement.txt" ;
+    ct:source_sha256 "7fc48e1f66eb87cca6ac67e84e7286fd95f39b7b9f3d70169fa527291595eb1d" ;
+    ct:start_char 4122 .
+
+ex:C073P0071 a ct:SourcePassage ;
+    ct:end_char 12381 ;
+    ct:exact_text "2.2 Commencement Date. The \"Commencement Date\" under this Agreement shall be the first day of the Month following the date Carrier notifies Shipper that (i) Carrier has obtained all required operating permits and/or approvals of regulatory authorities necessary to operate the System, (ii) the System is operational to the extent necessary to commence the   5" ;
+    ct:source_path "cuad/RangeResourcesLouisianaInc_20150417_8-K_EX-10.5_9045501_EX-10.5_Transportation Agreement.txt" ;
+    ct:source_sha256 "7fc48e1f66eb87cca6ac67e84e7286fd95f39b7b9f3d70169fa527291595eb1d" ;
+    ct:start_char 12022 .
+
+ex:C073P0105 a ct:SourcePassage ;
+    ct:end_char 24341 ;
+    ct:exact_text "(1) terminate this Agreement, any such termination to be effective upon receipt of the applicable notice by Shipper, in which event Shipper shall be liable to Carrier for (i) all of its accrued obligations up to and including the effective date of termination, and (ii) any and all other losses and damages sustained by Carrier as a result of or arising out of such termination; and/or" ;
+    ct:source_path "cuad/RangeResourcesLouisianaInc_20150417_8-K_EX-10.5_9045501_EX-10.5_Transportation Agreement.txt" ;
+    ct:source_sha256 "7fc48e1f66eb87cca6ac67e84e7286fd95f39b7b9f3d70169fa527291595eb1d" ;
+    ct:start_char 23956 .
+
+ex:C073P0112 a ct:SourcePassage ;
+    ct:end_char 27485 ;
+    ct:exact_text "terminate this Agreement, any such termination to be effective upon receipt of such termination notice by Carrier." ;
+    ct:source_path "cuad/RangeResourcesLouisianaInc_20150417_8-K_EX-10.5_9045501_EX-10.5_Transportation Agreement.txt" ;
+    ct:source_sha256 "7fc48e1f66eb87cca6ac67e84e7286fd95f39b7b9f3d70169fa527291595eb1d" ;
+    ct:start_char 27371 .
+
+ex:C073P0128 a ct:SourcePassage ;
+    ct:end_char 34414 ;
+    ct:exact_text "11.3 Termination Based on Carrier Force Majeure. If as a result of an event of Carrier Force Majeure, Carrier provides no Services to Shipper for a period of at least twelve (12) consecutive Months, either Party shall be entitled to terminate this Agreement by written notice to the other Party given at any time after the expiration of such twelve (12) Month period, but prior to the cessation of the applicable event of Carrier Force Majeure. Shipper's termination right under this Section 11.3 shall be subject to its compliance with Section 14.2 in connection with any certificates, approvals, authorizations and permits required by Carrier as a result of the event of Carrier Force Majeure." ;
+    ct:source_path "cuad/RangeResourcesLouisianaInc_20150417_8-K_EX-10.5_9045501_EX-10.5_Transportation Agreement.txt" ;
+    ct:source_sha256 "7fc48e1f66eb87cca6ac67e84e7286fd95f39b7b9f3d70169fa527291595eb1d" ;
+    ct:start_char 33719 .
+
+ex:C073P0173 a ct:SourcePassage ;
+    ct:end_char 48866 ;
+    ct:exact_text "Shipper shall pay, or cause to be paid, all production, severance, gross receipts, ad valorem, and similar Taxes, and all surcharges, levied or imposed on it by any Governmental Authority with respect to Shipper Product. In the event Carrier is required to pay or remit any such Tax or surcharge owed by Shipper, Shipper shall reimburse Carrier for such Tax or surcharge pursuant to Carrier's invoice for the same. Shipper hereby agrees to indemnify, defend and hold harmless Carrier from and against any and all claims and losses arising out of or related to such Taxes or surcharges. This indemnity and defense obligation shall survive the expiration or termination of this Agreement. Carrier shall be responsible for all Taxes or surcharges levied or imposed on it by any Governmental Authority with respect to the System and Carrier's other facilities, including without limitation, Carrier's gas processing plants." ;
+    ct:source_path "cuad/RangeResourcesLouisianaInc_20150417_8-K_EX-10.5_9045501_EX-10.5_Transportation Agreement.txt" ;
+    ct:source_sha256 "7fc48e1f66eb87cca6ac67e84e7286fd95f39b7b9f3d70169fa527291595eb1d" ;
+    ct:start_char 47947 .
+
+ex:C073P0195 a ct:SourcePassage ;
+    ct:end_char 53424 ;
+    ct:exact_text "19.7 Survival. Notwithstanding the termination of this Agreement for any reason, (a) ARTICLE VI, ARTICLE VIII, ARTICLE IX, ARTICLE X, ARTICLE XII, ARTICLE XIV, ARTICLE XVII, ARTICLE XVIII and ARTICLE XIX shall survive the termination of this Agreement, and (b) each Party to this Agreement will be liable for all of its accrued obligations hereunder up to and including the date on which the termination becomes effective." ;
+    ct:source_path "cuad/RangeResourcesLouisianaInc_20150417_8-K_EX-10.5_9045501_EX-10.5_Transportation Agreement.txt" ;
+    ct:source_sha256 "7fc48e1f66eb87cca6ac67e84e7286fd95f39b7b9f3d70169fa527291595eb1d" ;
+    ct:start_char 53002 .
+
+ex:C073P0388 a ct:SourcePassage ;
+    ct:end_char 95485 ;
+    ct:exact_text "J. If Shipper fails to pay an invoice by the due date, Carrier will notify Shipper of the failure, and if Shipper has not remedied the failure within thirty (30) days following receipt of notice from Carrier, in addition to any other remedies under this Tariff or under applicable law, Carrier shall have the right, either directly or through an agent, to sell any Products of such Shipper in Carrier's custody at public auction, on any day not a legal holiday, not less than forty-eight (48) hours after publication of notice of such sale in a daily newspaper of general circulation published in the town, city, or general area where the sale is to be held, stating the time and place of sale and the quantity and location of the Products to be sold. At said sale, Carrier shall have the right to bid, and, if it is the highest bidder, to become the purchaser. The proceeds of any sale shall be applied in the following order: (1) To the reasonable expenses of holding, preparing for sale, selling, and to the extent allowed by law, reasonable attorney's fees and legal expenses incurred by Carrier; and (2) To the satisfaction of Shipper's indebtedness including interest herein provided from the date payment is due. " ;
+    ct:source_path "cuad/RangeResourcesLouisianaInc_20150417_8-K_EX-10.5_9045501_EX-10.5_Transportation Agreement.txt" ;
+    ct:source_sha256 "7fc48e1f66eb87cca6ac67e84e7286fd95f39b7b9f3d70169fa527291595eb1d" ;
+    ct:start_char 94265 .
+
+ex:C073P0406 a ct:SourcePassage ;
+    ct:end_char 99620 ;
+    ct:exact_text "COMMENCEMENT DATE FACILITIES" ;
+    ct:source_path "cuad/RangeResourcesLouisianaInc_20150417_8-K_EX-10.5_9045501_EX-10.5_Transportation Agreement.txt" ;
+    ct:source_sha256 "7fc48e1f66eb87cca6ac67e84e7286fd95f39b7b9f3d70169fa527291595eb1d" ;
+    ct:start_char 99592 .
+
+ex:C073R0001 a ct:Rule ;
+    rdfs:label "Initial Term — source passage 26" ;
+    ct:kind "INITIAL_TERM" ;
+    ct:supported_by ex:C073P0026 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C073R0002 a ct:Rule ;
+    rdfs:label "Initial Term — source passage 70" ;
+    ct:kind "INITIAL_TERM" ;
+    ct:subject_to ex:C073R0002Condition70 ;
+    ct:supported_by ex:C073P0070 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C073R0002Condition70 a ct:Condition ;
+    ct:description "2.1 Term. This Agreement shall commence on the Effective Date and continue in full force and effect until the end of the fifteenth (15th) Contract Year, and shall continue in full force and effect thereafter until terminated by either Party by providing thirty (30) calendar days' prior written notice of termination to the other Party (such fifteen (15) Contract Year period, as may be further extended as provided herein is referred to as the \"Term\")." ;
+    ct:supported_by ex:C073P0070 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C073R0003 a ct:Rule ;
+    rdfs:label "Termination — source passage 70" ;
+    ct:kind "TERMINATION" ;
+    ct:subject_to ex:C073R0003Condition70 ;
+    ct:supported_by ex:C073P0070 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C073R0003Condition70 a ct:Condition ;
+    ct:description "2.1 Term. This Agreement shall commence on the Effective Date and continue in full force and effect until the end of the fifteenth (15th) Contract Year, and shall continue in full force and effect thereafter until terminated by either Party by providing thirty (30) calendar days' prior written notice of termination to the other Party (such fifteen (15) Contract Year period, as may be further extended as provided herein is referred to as the \"Term\")." ;
+    ct:supported_by ex:C073P0070 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C073R0004 a ct:Rule ;
+    rdfs:label "Initial Term — source passage 71" ;
+    ct:kind "INITIAL_TERM" ;
+    ct:supported_by ex:C073P0071 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C073R0005 a ct:Rule ;
+    rdfs:label "Termination — source passage 86" ;
+    ct:kind "TERMINATION" ;
+    ct:subject_to ex:C073R0005Condition86 ;
+    ct:supported_by ex:C073P0086 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C073R0005Condition86 a ct:Condition ;
+    ct:description "If, in Carrier's reasonable judgment, an increase in Shipper's Dedicated Rates of more than ten percent (10%) would be required to place Carrier in substantially the same economic position as it was in prior to the imposition or assessment of such fees, charges or costs, Carrier may call for a meeting among the Parties' senior management to take place within thirty (30) Days of written notice to Shipper, and the Parties shall negotiate in good faith to amend the provisions of this Agreement such that the Parties are in substantially the same relative economic position as they were in prior to the imposition or assessment of such fees, charges or costs. If the Parties are unable to agree on an economic adjustment within sixty (60) Days of the senior management meeting, then Carrier may, in its sole discretion, terminate this Agreement without penalty by delivering Shipper written notice of Carrier's intent to terminate. Such termination shall be effective, at the option of Shipper, (i) as of 9:00 a.m. on the first Day of the Month which follows the Month that Carrier delivered its notice of intent to terminate, or (ii) as of 9:00 a.m. " ;
+    ct:supported_by ex:C073P0086 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C073R0006 a ct:Rule ;
+    rdfs:label "Conditional Referenced Term — source passage 86" ;
+    ct:kind "CONDITIONAL_REFERENCED_TERM" ;
+    ct:subject_to ex:C073R0006Condition86 ;
+    ct:supported_by ex:C073P0086 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C073R0006Condition86 a ct:Condition ;
+    ct:description "If, in Carrier's reasonable judgment, an increase in Shipper's Dedicated Rates of more than ten percent (10%) would be required to place Carrier in substantially the same economic position as it was in prior to the imposition or assessment of such fees, charges or costs, Carrier may call for a meeting among the Parties' senior management to take place within thirty (30) Days of written notice to Shipper, and the Parties shall negotiate in good faith to amend the provisions of this Agreement such that the Parties are in substantially the same relative economic position as they were in prior to the imposition or assessment of such fees, charges or costs. If the Parties are unable to agree on an economic adjustment within sixty (60) Days of the senior management meeting, then Carrier may, in its sole discretion, terminate this Agreement without penalty by delivering Shipper written notice of Carrier's intent to terminate. Such termination shall be effective, at the option of Shipper, (i) as of 9:00 a.m. on the first Day of the Month which follows the Month that Carrier delivered its notice of intent to terminate, or (ii) as of 9:00 a.m. " ;
+    ct:supported_by ex:C073P0086 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C073R0007 a ct:Rule ;
+    rdfs:label "Conditional Referenced Term — source passage 87" ;
+    ct:kind "CONDITIONAL_REFERENCED_TERM" ;
+    ct:subject_to ex:C073R0007Condition87 ;
+    ct:supported_by ex:C073P0087 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C073R0007Condition87 a ct:Condition ;
+    ct:description "on the first Day of the Month which is twelve (12) Months after such date, provided that Shipper's Dedicated Rates for such twelve (12) Month period before such termination shall be increased to place Carrier in substantially the same economic position as it was in prior to the imposition or assessment of such fees, charges, or costs. Shipper shall exercise such option by delivery of written notice to Carrier of Shipper's election within ten (10) Business Days of receipt of Carrier's notice to terminate, provided that if Shipper has not responded to Carrier by the time described in clause (i) above, the Agreement shall continue pursuant to clause (ii) above." ;
+    ct:supported_by ex:C073P0087 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C073R0008 a ct:Rule ;
+    rdfs:label "Termination — source passage 103" ;
+    ct:kind "TERMINATION" ;
+    ct:references_section ex:C073R0008Ref0,
+        ex:C073R0008Ref1 ;
+    ct:subject_to ex:C073R0008Condition103 ;
+    ct:supported_by ex:C073P0103 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C073R0008Condition103 a ct:Condition ;
+    ct:description "(a) Upon becoming aware of the occurrence of a Shipper Default with respect to Shipper's obligations under this Agreement or the Tariff, Carrier may provide written notice to Shipper describing the Shipper Default in reasonable detail and requiring Shipper to cure the Shipper Default (the \"Shipper Default Notice\"). If (i) a Shipper Default as described in Section 8.1(a) has not been cured within ten (10) Business Days following receipt by Shipper of a Shipper Default Notice, or (ii) the Shipper Default comprises a default described in Section 8.1(b), then, in any such case, and in addition to Carrier's right to enforce the Financial Assurances and Carrier's other rights and remedies provided for in this Agreement, in the Tariff or under Applicable Law, Carrier shall not be obligated to transport Shipper Product and may suspend the provision of other Services to Shipper." ;
+    ct:supported_by ex:C073P0103 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C073R0008Ref0 a ct:Reference ;
+    rdfs:label "Section 8.1(a)" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C073R0008Ref1 a ct:Reference ;
+    rdfs:label "Section 8.1(b)" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C073R0009 a ct:Rule ;
+    rdfs:label "Termination — source passage 105" ;
+    ct:kind "TERMINATION" ;
+    ct:supported_by ex:C073P0105 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C073R0010 a ct:Rule ;
+    rdfs:label "Termination — source passage 111" ;
+    ct:kind "TERMINATION" ;
+    ct:subject_to ex:C073R0010Condition111 ;
+    ct:supported_by ex:C073P0111 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C073R0010Condition111 a ct:Condition ;
+    ct:description "8.4 Remedies on Carrier Default. Upon becoming aware of the occurrence of a Carrier Default, Shipper may provide written notice to Carrier, describing the Carrier Default in reasonable detail and requiring Carrier to cure the Carrier Default (the \"Carrier Default Notice\"). If (a) a Carrier Default comprising Carrier's failure to make any payment due hereunder has not been cured within ten (10) Business Days following receipt by Carrier of a Carrier Default Notice, or (b) a Carrier Default comprising Carrier's failure to comply with any obligation under this Agreement or the Tariff, other than a payment obligation, has not been cured within ninety (90) Days after receipt by Carrier of a Carrier Default Notice, or, if such failure is not reasonably capable of being cured within a ninety (90) Day period, but Carrier expeditiously commences to cure the same following its receipt of a Carrier Default Notice and diligently proceeds with such cure, within such longer period of time as shall be reasonably necessary to cure such failure, then in any such case, Shipper may, by written notice to Carrier, inform Carrier of its intention to terminate this Agreement if such Carrier Default is not cured within a further ninety (90) Day period, and if any such Carrier Default has not been cured within such further period of ninety (90) Days, Shipper may, by written notice to Carrier, " ;
+    ct:supported_by ex:C073P0111 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C073R0011 a ct:Rule ;
+    rdfs:label "Conditional Referenced Term — source passage 111" ;
+    ct:kind "CONDITIONAL_REFERENCED_TERM" ;
+    ct:subject_to ex:C073R0011Condition111 ;
+    ct:supported_by ex:C073P0111 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C073R0011Condition111 a ct:Condition ;
+    ct:description "8.4 Remedies on Carrier Default. Upon becoming aware of the occurrence of a Carrier Default, Shipper may provide written notice to Carrier, describing the Carrier Default in reasonable detail and requiring Carrier to cure the Carrier Default (the \"Carrier Default Notice\"). If (a) a Carrier Default comprising Carrier's failure to make any payment due hereunder has not been cured within ten (10) Business Days following receipt by Carrier of a Carrier Default Notice, or (b) a Carrier Default comprising Carrier's failure to comply with any obligation under this Agreement or the Tariff, other than a payment obligation, has not been cured within ninety (90) Days after receipt by Carrier of a Carrier Default Notice, or, if such failure is not reasonably capable of being cured within a ninety (90) Day period, but Carrier expeditiously commences to cure the same following its receipt of a Carrier Default Notice and diligently proceeds with such cure, within such longer period of time as shall be reasonably necessary to cure such failure, then in any such case, Shipper may, by written notice to Carrier, inform Carrier of its intention to terminate this Agreement if such Carrier Default is not cured within a further ninety (90) Day period, and if any such Carrier Default has not been cured within such further period of ninety (90) Days, Shipper may, by written notice to Carrier, " ;
+    ct:supported_by ex:C073P0111 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C073R0012 a ct:Rule ;
+    rdfs:label "Termination — source passage 112" ;
+    ct:kind "TERMINATION" ;
+    ct:supported_by ex:C073P0112 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C073R0013 a ct:Rule ;
+    rdfs:label "Termination — source passage 128" ;
+    ct:kind "TERMINATION" ;
+    ct:references_section ex:C073R0013Ref0,
+        ex:C073R0013Ref1 ;
+    ct:supported_by ex:C073P0128 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C073R0013Ref0 a ct:Reference ;
+    rdfs:label "Section 11.3" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C073R0013Ref1 a ct:Reference ;
+    rdfs:label "Section 14.2" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C073R0014 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 173" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:supported_by ex:C073P0173 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C073R0015 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 195" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:references_section ex:C073R0015Ref0,
+        ex:C073R0015Ref1,
+        ex:C073R0015Ref2,
+        ex:C073R0015Ref3,
+        ex:C073R0015Ref4,
+        ex:C073R0015Ref5,
+        ex:C073R0015Ref6,
+        ex:C073R0015Ref7,
+        ex:C073R0015Ref8 ;
+    ct:supported_by ex:C073P0195 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C073R0015Ref0 a ct:Reference ;
+    rdfs:label "ARTICLE VI" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C073R0015Ref1 a ct:Reference ;
+    rdfs:label "ARTICLE VIII" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C073R0015Ref2 a ct:Reference ;
+    rdfs:label "ARTICLE IX" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C073R0015Ref3 a ct:Reference ;
+    rdfs:label "ARTICLE X" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C073R0015Ref4 a ct:Reference ;
+    rdfs:label "ARTICLE XII" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C073R0015Ref5 a ct:Reference ;
+    rdfs:label "ARTICLE XIV" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C073R0015Ref6 a ct:Reference ;
+    rdfs:label "ARTICLE XVII" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C073R0015Ref7 a ct:Reference ;
+    rdfs:label "ARTICLE XVIII" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C073R0015Ref8 a ct:Reference ;
+    rdfs:label "ARTICLE XIX" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C073R0016 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 388" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:supported_by ex:C073P0388 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C073R0017 a ct:Rule ;
+    rdfs:label "Initial Term — source passage 406" ;
+    ct:kind "INITIAL_TERM" ;
+    ct:supported_by ex:C073P0406 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C073P0087 a ct:SourcePassage ;
+    ct:end_char 18229 ;
+    ct:exact_text "on the first Day of the Month which is twelve (12) Months after such date, provided that Shipper's Dedicated Rates for such twelve (12) Month period before such termination shall be increased to place Carrier in substantially the same economic position as it was in prior to the imposition or assessment of such fees, charges, or costs. Shipper shall exercise such option by delivery of written notice to Carrier of Shipper's election within ten (10) Business Days of receipt of Carrier's notice to terminate, provided that if Shipper has not responded to Carrier by the time described in clause (i) above, the Agreement shall continue pursuant to clause (ii) above." ;
+    ct:source_path "cuad/RangeResourcesLouisianaInc_20150417_8-K_EX-10.5_9045501_EX-10.5_Transportation Agreement.txt" ;
+    ct:source_sha256 "7fc48e1f66eb87cca6ac67e84e7286fd95f39b7b9f3d70169fa527291595eb1d" ;
+    ct:start_char 17563 .
+
+ex:C073P0103 a ct:SourcePassage ;
+    ct:end_char 23484 ;
+    ct:exact_text "(a) Upon becoming aware of the occurrence of a Shipper Default with respect to Shipper's obligations under this Agreement or the Tariff, Carrier may provide written notice to Shipper describing the Shipper Default in reasonable detail and requiring Shipper to cure the Shipper Default (the \"Shipper Default Notice\"). If (i) a Shipper Default as described in Section 8.1(a) has not been cured within ten (10) Business Days following receipt by Shipper of a Shipper Default Notice, or (ii) the Shipper Default comprises a default described in Section 8.1(b), then, in any such case, and in addition to Carrier's right to enforce the Financial Assurances and Carrier's other rights and remedies provided for in this Agreement, in the Tariff or under Applicable Law, Carrier shall not be obligated to transport Shipper Product and may suspend the provision of other Services to Shipper." ;
+    ct:source_path "cuad/RangeResourcesLouisianaInc_20150417_8-K_EX-10.5_9045501_EX-10.5_Transportation Agreement.txt" ;
+    ct:source_sha256 "7fc48e1f66eb87cca6ac67e84e7286fd95f39b7b9f3d70169fa527291595eb1d" ;
+    ct:start_char 22602 .
+
+ct:Agreement a owl:Class ;
+    rdfs:label "Agreement" .
+
+ex:C073P0070 a ct:SourcePassage ;
+    ct:end_char 12020 ;
+    ct:exact_text "2.1 Term. This Agreement shall commence on the Effective Date and continue in full force and effect until the end of the fifteenth (15th) Contract Year, and shall continue in full force and effect thereafter until terminated by either Party by providing thirty (30) calendar days' prior written notice of termination to the other Party (such fifteen (15) Contract Year period, as may be further extended as provided herein is referred to as the \"Term\")." ;
+    ct:source_path "cuad/RangeResourcesLouisianaInc_20150417_8-K_EX-10.5_9045501_EX-10.5_Transportation Agreement.txt" ;
+    ct:source_sha256 "7fc48e1f66eb87cca6ac67e84e7286fd95f39b7b9f3d70169fa527291595eb1d" ;
+    ct:start_char 11567 .
+
+ex:C073P0086 a ct:SourcePassage ;
+    ct:end_char 17563 ;
+    ct:exact_text "If, in Carrier's reasonable judgment, an increase in Shipper's Dedicated Rates of more than ten percent (10%) would be required to place Carrier in substantially the same economic position as it was in prior to the imposition or assessment of such fees, charges or costs, Carrier may call for a meeting among the Parties' senior management to take place within thirty (30) Days of written notice to Shipper, and the Parties shall negotiate in good faith to amend the provisions of this Agreement such that the Parties are in substantially the same relative economic position as they were in prior to the imposition or assessment of such fees, charges or costs. If the Parties are unable to agree on an economic adjustment within sixty (60) Days of the senior management meeting, then Carrier may, in its sole discretion, terminate this Agreement without penalty by delivering Shipper written notice of Carrier's intent to terminate. Such termination shall be effective, at the option of Shipper, (i) as of 9:00 a.m. on the first Day of the Month which follows the Month that Carrier delivered its notice of intent to terminate, or (ii) as of 9:00 a.m. " ;
+    ct:source_path "cuad/RangeResourcesLouisianaInc_20150417_8-K_EX-10.5_9045501_EX-10.5_Transportation Agreement.txt" ;
+    ct:source_sha256 "7fc48e1f66eb87cca6ac67e84e7286fd95f39b7b9f3d70169fa527291595eb1d" ;
+    ct:start_char 16411 .
+
+ex:C073P0111 a ct:SourcePassage ;
+    ct:end_char 27371 ;
+    ct:exact_text "8.4 Remedies on Carrier Default. Upon becoming aware of the occurrence of a Carrier Default, Shipper may provide written notice to Carrier, describing the Carrier Default in reasonable detail and requiring Carrier to cure the Carrier Default (the \"Carrier Default Notice\"). If (a) a Carrier Default comprising Carrier's failure to make any payment due hereunder has not been cured within ten (10) Business Days following receipt by Carrier of a Carrier Default Notice, or (b) a Carrier Default comprising Carrier's failure to comply with any obligation under this Agreement or the Tariff, other than a payment obligation, has not been cured within ninety (90) Days after receipt by Carrier of a Carrier Default Notice, or, if such failure is not reasonably capable of being cured within a ninety (90) Day period, but Carrier expeditiously commences to cure the same following its receipt of a Carrier Default Notice and diligently proceeds with such cure, within such longer period of time as shall be reasonably necessary to cure such failure, then in any such case, Shipper may, by written notice to Carrier, inform Carrier of its intention to terminate this Agreement if such Carrier Default is not cured within a further ninety (90) Day period, and if any such Carrier Default has not been cured within such further period of ninety (90) Days, Shipper may, by written notice to Carrier, " ;
+    ct:source_path "cuad/RangeResourcesLouisianaInc_20150417_8-K_EX-10.5_9045501_EX-10.5_Transportation Agreement.txt" ;
+    ct:source_sha256 "7fc48e1f66eb87cca6ac67e84e7286fd95f39b7b9f3d70169fa527291595eb1d" ;
+    ct:start_char 25980 .
+
+ct:Condition a owl:Class ;
+    rdfs:label "Condition" .
+
+ct:SourcePassage a owl:Class ;
+    rdfs:label "SourcePassage" .
+
+ct:Reference a owl:Class ;
+    rdfs:label "Reference" .
+
+ct:Rule a owl:Class ;
+    rdfs:label "Rule" .
+

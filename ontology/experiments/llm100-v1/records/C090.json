@@ -1,0 +1,139 @@
+{
+  "document_id": "C090",
+  "file_path": "cuad/VITAMINSHOPPECOMINC_09_13_1999-EX-10.26-SPONSORSHIP AGREEMENT.txt",
+  "model_digest": "0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0",
+  "rules": [
+    {
+      "passage_id": 34,
+      "kind": "TERMINATION",
+      "label": "Termination — source passage 34",
+      "condition_ids": [
+        34
+      ],
+      "reference_labels": [],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 73,
+      "kind": "INITIAL_TERM",
+      "label": "Initial Term — source passage 73",
+      "condition_ids": [
+        73
+      ],
+      "reference_labels": [
+        "Exhibit                           B"
+      ],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 73,
+      "kind": "CONDITIONAL_REFERENCED_TERM",
+      "label": "Conditional Referenced Term — source passage 73",
+      "condition_ids": [
+        73
+      ],
+      "reference_labels": [
+        "Exhibit                           B"
+      ],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 74,
+      "kind": "TERMINATION",
+      "label": "Termination — source passage 74",
+      "condition_ids": [
+        74
+      ],
+      "reference_labels": [],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 75,
+      "kind": "POST_EXPIRY_CONTINUATION",
+      "label": "Post Expiry Continuation — source passage 75",
+      "condition_ids": [],
+      "reference_labels": [],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 76,
+      "kind": "POST_EXPIRY_CONTINUATION",
+      "label": "Post Expiry Continuation — source passage 76",
+      "condition_ids": [],
+      "reference_labels": [
+        "Section 12",
+        "Section 13 (Indemnity)",
+        "Section 14",
+        "Section 15"
+      ],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 77,
+      "kind": "POST_EXPIRY_CONTINUATION",
+      "label": "Post Expiry Continuation — source passage 77",
+      "condition_ids": [
+        77
+      ],
+      "reference_labels": [
+        "Exhibit C",
+        "Section                           7"
+      ],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 77,
+      "kind": "TERMINATION",
+      "label": "Termination — source passage 77",
+      "condition_ids": [
+        77
+      ],
+      "reference_labels": [
+        "Exhibit C",
+        "Section                           7"
+      ],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 78,
+      "kind": "POST_EXPIRY_CONTINUATION",
+      "label": "Post Expiry Continuation — source passage 78",
+      "condition_ids": [],
+      "reference_labels": [
+        "Section 7"
+      ],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 84,
+      "kind": "POST_EXPIRY_CONTINUATION",
+      "label": "Post Expiry Continuation — source passage 84",
+      "condition_ids": [],
+      "reference_labels": [],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    }
+  ],
+  "rejected_rules": [],
+  "review_status": "UNREVIEWED",
+  "coverage": "Lexically selected source windows; completeness not guaranteed."
+}

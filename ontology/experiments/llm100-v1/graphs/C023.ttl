@@ -1,0 +1,866 @@
+@prefix ct: <https://cimulink.local/ontology/contract-terms/0.1#> .
+@prefix ex: <https://cimulink.local/ontology/llm100-v1/> .
+@prefix meta: <https://cimulink.local/ontology/extraction#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ct: a owl:Ontology ;
+    rdfs:comment "Partial five-contract development sample. No claim of complete contract coverage or legal correctness." .
+
+ct:agreement_effective_from a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:applies_within a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:calendar_date_status a owl:DatatypeProperty .
+
+ct:coverage a owl:DatatypeProperty .
+
+ct:description a owl:DatatypeProperty .
+
+ct:duration a owl:DatatypeProperty .
+
+ct:duration_status a owl:DatatypeProperty .
+
+ct:end_char a owl:DatatypeProperty .
+
+ct:end_date_status a owl:DatatypeProperty .
+
+ct:ends_on_event a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:exact_text a owl:DatatypeProperty .
+
+ct:has_party a owl:ObjectProperty ;
+    rdfs:domain ct:Agreement ;
+    rdfs:range ct:Party .
+
+ct:has_rule a owl:ObjectProperty ;
+    rdfs:domain ct:Agreement ;
+    rdfs:range ct:Rule .
+
+ct:kind a owl:DatatypeProperty .
+
+ct:notice_actor a owl:DatatypeProperty .
+
+ct:notice_form a owl:DatatypeProperty .
+
+ct:notice_period_status a owl:DatatypeProperty .
+
+ct:qualifies a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Rule .
+
+ct:references_section a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:renewal_count a owl:DatatypeProperty .
+
+ct:resolution_status a owl:DatatypeProperty .
+
+ct:resolved_to a owl:ObjectProperty ;
+    rdfs:domain ct:Reference ;
+    rdfs:range ct:SourcePassage .
+
+ct:source_path a owl:DatatypeProperty .
+
+ct:source_sha256 a owl:DatatypeProperty .
+
+ct:start_char a owl:DatatypeProperty .
+
+ct:starts_from a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:stated_end_date a owl:DatatypeProperty .
+
+ct:subject_to a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Condition .
+
+ct:supported_by a owl:ObjectProperty ;
+    rdfs:range ct:SourcePassage .
+
+ct:termination_notice a owl:DatatypeProperty .
+
+ex:C023 a ct:Agreement ;
+    rdfs:label "CoherusBiosciencesInc_20200227_10-K_EX-10.29_12021376_EX-10.29_Development Agreement.txt" ;
+    ct:coverage "LOCAL_LLM_PROPOSED_PARTIAL; NOT_HUMAN_REVIEWED" ;
+    ct:has_rule ex:C023R0001,
+        ex:C023R0002,
+        ex:C023R0003,
+        ex:C023R0004,
+        ex:C023R0005,
+        ex:C023R0006,
+        ex:C023R0007,
+        ex:C023R0008,
+        ex:C023R0009,
+        ex:C023R0010,
+        ex:C023R0011,
+        ex:C023R0012,
+        ex:C023R0013,
+        ex:C023R0014,
+        ex:C023R0015,
+        ex:C023R0016,
+        ex:C023R0017,
+        ex:C023R0018,
+        ex:C023R0019,
+        ex:C023R0020,
+        ex:C023R0021,
+        ex:C023R0022,
+        ex:C023R0023,
+        ex:C023R0024,
+        ex:C023R0025,
+        ex:C023R0026,
+        ex:C023R0027,
+        ex:C023R0028,
+        ex:C023R0029,
+        ex:C023R0030,
+        ex:C023R0031,
+        ex:C023R0032,
+        ex:C023R0033,
+        ex:C023R0034,
+        ex:C023R0035 ;
+    ct:source_path "cuad/CoherusBiosciencesInc_20200227_10-K_EX-10.29_12021376_EX-10.29_Development Agreement.txt" ;
+    ct:source_sha256 "e6370745e927c1182c7c7425a6a984ad0d0ebc3439bc33d99cfc91c30bd381db" ;
+    meta:model_digest "0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0" .
+
+ct:Party a owl:Class ;
+    rdfs:label "Party" .
+
+ex:C023P0231 a ct:SourcePassage ;
+    ct:end_char 61049 ;
+    ct:exact_text "Confidential Execution Version pay all audit expenses, provided, however, that in the event the audit reveals a greater than [***] percent ([***]%) payment shortfall in the amounts owed to Bioeq by Licensee during the relevant period, Licensee shall reimburse all audit expenses to Bioeq. Bioeq shall treat all financial information subject to review under this Section 7.3.6 as confidential, and shall cause its accounting firm to retain all such financial information in confidence under Section 11 below. The provisions of this Section 7.3.6 shall survive the expiration or termination of this Agreement for [***] ([***]) years." ;
+    ct:source_path "cuad/CoherusBiosciencesInc_20200227_10-K_EX-10.29_12021376_EX-10.29_Development Agreement.txt" ;
+    ct:source_sha256 "e6370745e927c1182c7c7425a6a984ad0d0ebc3439bc33d99cfc91c30bd381db" ;
+    ct:start_char 60418 .
+
+ex:C023P0315 a ct:SourcePassage ;
+    ct:end_char 95165 ;
+    ct:exact_text "11.5 Return of Confidential Information. Upon termination of this Agreement for any reason whatsoever, the Receiving Party shall cease all use of and return to the Disclosing Party, or destroy, as the Disclosing Party shall specify in writing promptly upon such expiration or termination, all materials transferred pursuant to Section 11.4 and all copies of all documents and other materials that contain or embody any of the Disclosing Party's Confidential Information, except to the extent that the Receiving Party is required by Applicable Laws to retain such documents, and provided further that each Party may keep copies of all Confidential Information within its ordinary legal archives (including IT back-up systems). Within [***] ([***]) days after the date of expiration or termination of this Agreement, the Receiving Party shall furnish the Disclosing Party with a certificate, duly executed by an officer of the Receiving Party, confirming that the Receiving Party has complied with its obligations under this Section 11.4." ;
+    ct:source_path "cuad/CoherusBiosciencesInc_20200227_10-K_EX-10.29_12021376_EX-10.29_Development Agreement.txt" ;
+    ct:source_sha256 "e6370745e927c1182c7c7425a6a984ad0d0ebc3439bc33d99cfc91c30bd381db" ;
+    ct:start_char 94129 .
+
+ex:C023P0316 a ct:SourcePassage ;
+    ct:end_char 95466 ;
+    ct:exact_text "11.6 Survival. All of the Receiving Party's obligations under Sections 11.1 and 11.2 hereof, with respect to the protection of the Disclosing Party's Confidential Information shall for a period of [***] ([***]) [***] survive the expiration or termination of this Agreement for any reason whatsoever." ;
+    ct:source_path "cuad/CoherusBiosciencesInc_20200227_10-K_EX-10.29_12021376_EX-10.29_Development Agreement.txt" ;
+    ct:source_sha256 "e6370745e927c1182c7c7425a6a984ad0d0ebc3439bc33d99cfc91c30bd381db" ;
+    ct:start_char 95167 .
+
+ex:C023P0383 a ct:SourcePassage ;
+    ct:end_char 115226 ;
+    ct:exact_text "15.2 Termination." ;
+    ct:source_path "cuad/CoherusBiosciencesInc_20200227_10-K_EX-10.29_12021376_EX-10.29_Development Agreement.txt" ;
+    ct:source_sha256 "e6370745e927c1182c7c7425a6a984ad0d0ebc3439bc33d99cfc91c30bd381db" ;
+    ct:start_char 115209 .
+
+ex:C023P0389 a ct:SourcePassage ;
+    ct:end_char 119189 ;
+    ct:exact_text "15.2.4 Termination by Bioeq for challenge of Patent Rights. Bioeq may terminate this Agreement immediately upon written notice to Licensee, if Licensee or any of its Affiliates or sublicensees directly or indirectly challenge the validity or enforceability of, or oppose any extension of or the grant of a supplementary protection certificate with respect to, any Licensed Patent in any legal, court, administrative or other governmental proceeding." ;
+    ct:source_path "cuad/CoherusBiosciencesInc_20200227_10-K_EX-10.29_12021376_EX-10.29_Development Agreement.txt" ;
+    ct:source_sha256 "e6370745e927c1182c7c7425a6a984ad0d0ebc3439bc33d99cfc91c30bd381db" ;
+    ct:start_char 118740 .
+
+ex:C023P0391 a ct:SourcePassage ;
+    ct:end_char 119658 ;
+    ct:exact_text "15.2.6 Termination by Licensee for Development Delay." ;
+    ct:source_path "cuad/CoherusBiosciencesInc_20200227_10-K_EX-10.29_12021376_EX-10.29_Development Agreement.txt" ;
+    ct:source_sha256 "e6370745e927c1182c7c7425a6a984ad0d0ebc3439bc33d99cfc91c30bd381db" ;
+    ct:start_char 119605 .
+
+ex:C023P0397 a ct:SourcePassage ;
+    ct:end_char 123329 ;
+    ct:exact_text "15.2.7 Termination by Licensee for Regulatory Reasons. Licensee may terminate this Agreement immediately upon written notice to Bioeq in the event that Bioeq receives [***], in each case, with respect to the first Biologics License Application for such Licensed Product filed by Bioeq with the FDA in accordance with Section 4.1.1 (Adverse Regulatory Event). Bioeq shall notify Licensee in writing immediately of any such Adverse Regulatory Event which may occur." ;
+    ct:source_path "cuad/CoherusBiosciencesInc_20200227_10-K_EX-10.29_12021376_EX-10.29_Development Agreement.txt" ;
+    ct:source_sha256 "e6370745e927c1182c7c7425a6a984ad0d0ebc3439bc33d99cfc91c30bd381db" ;
+    ct:start_char 122866 .
+
+ex:C023P0398 a ct:SourcePassage ;
+    ct:end_char 123550 ;
+    ct:exact_text "15.2.8 Termination for Insolvency. Either Party may terminate this Agreement immediately if an Insolvency Event occurs (save as part of a bona fide reorganisation not involving insolvency) in respect of the other Party." ;
+    ct:source_path "cuad/CoherusBiosciencesInc_20200227_10-K_EX-10.29_12021376_EX-10.29_Development Agreement.txt" ;
+    ct:source_sha256 "e6370745e927c1182c7c7425a6a984ad0d0ebc3439bc33d99cfc91c30bd381db" ;
+    ct:start_char 123331 .
+
+ex:C023P0403 a ct:SourcePassage ;
+    ct:end_char 126550 ;
+    ct:exact_text "15.2.10 Effect of Termination of the [***] Agreement. Without limiting Bioeq's obligations under Article 10, in the event that the [***] Agreement is terminated by [***], Bioeq will notify Licensee thereof immediately, and Licensee may terminate this Agreement upon written notice to Bioeq." ;
+    ct:source_path "cuad/CoherusBiosciencesInc_20200227_10-K_EX-10.29_12021376_EX-10.29_Development Agreement.txt" ;
+    ct:source_sha256 "e6370745e927c1182c7c7425a6a984ad0d0ebc3439bc33d99cfc91c30bd381db" ;
+    ct:start_char 126260 .
+
+ex:C023P0404 a ct:SourcePassage ;
+    ct:end_char 126708 ;
+    ct:exact_text "15.2.11 Written Notice. Any termination shall only be valid if made in writing and delivered to the other Party under the address set forth in Section 16.1." ;
+    ct:source_path "cuad/CoherusBiosciencesInc_20200227_10-K_EX-10.29_12021376_EX-10.29_Development Agreement.txt" ;
+    ct:source_sha256 "e6370745e927c1182c7c7425a6a984ad0d0ebc3439bc33d99cfc91c30bd381db" ;
+    ct:start_char 126552 .
+
+ex:C023P0405 a ct:SourcePassage ;
+    ct:end_char 126945 ;
+    ct:exact_text "15.3 Effect of Termination. In case of any termination or expiration of this Agreement, all rights and obligations of the Parties shall cease immediately, unless otherwise indicated in this Section below or elsewhere in this Agreement:" ;
+    ct:source_path "cuad/CoherusBiosciencesInc_20200227_10-K_EX-10.29_12021376_EX-10.29_Development Agreement.txt" ;
+    ct:source_sha256 "e6370745e927c1182c7c7425a6a984ad0d0ebc3439bc33d99cfc91c30bd381db" ;
+    ct:start_char 126710 .
+
+ex:C023P0416 a ct:SourcePassage ;
+    ct:end_char 133972 ;
+    ct:exact_text "15.3.7 Accrued Payment Claims. Termination of this Agreement for any reason whatsoever shall not relieve Licensee of its obligations to pay all amounts payable to Bioeq which have accrued prior to, but remain unpaid as of, the date of termination hereof, or which accrue thereafter. Upon termination of this Agreement any accrued payment obligations shall become immediately due and payable." ;
+    ct:source_path "cuad/CoherusBiosciencesInc_20200227_10-K_EX-10.29_12021376_EX-10.29_Development Agreement.txt" ;
+    ct:source_sha256 "e6370745e927c1182c7c7425a6a984ad0d0ebc3439bc33d99cfc91c30bd381db" ;
+    ct:start_char 133581 .
+
+ex:C023P0417 a ct:SourcePassage ;
+    ct:end_char 134393 ;
+    ct:exact_text "15.3.8 Survival. Articles 1, 8, 11 (and with respect to Sections 11.1-11.2, in accordance with Section 11.6), and 13 (solely as to Claims for Losses arising during the term of the Agreement), and Sections 7.3.5, 7.3.6, 9.1, 9.2.2 (in accordance with and as modified by Section 15.3.4), 9.2.3, 9.2.4, 9.6, 15.3, 15.4 (as applicable) and 16 of this Agreement shall survive any termination or expiration of this Agreement." ;
+    ct:source_path "cuad/CoherusBiosciencesInc_20200227_10-K_EX-10.29_12021376_EX-10.29_Development Agreement.txt" ;
+    ct:source_sha256 "e6370745e927c1182c7c7425a6a984ad0d0ebc3439bc33d99cfc91c30bd381db" ;
+    ct:start_char 133974 .
+
+ex:C023R0001 a ct:Rule ;
+    rdfs:label "Termination — source passage 84" ;
+    ct:kind "TERMINATION" ;
+    ct:subject_to ex:C023R0001Condition84 ;
+    ct:supported_by ex:C023P0084 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C023R0001Condition84 a ct:Condition ;
+    ct:description "1.32.1 In relation to Licensee: (a) the making by it of a general assignment for the benefit of creditors; (b) the commencement by it of any voluntary petition in bankruptcy or suffering by it of the filing of an involuntary petition of its creditors; (c) the suffering by it of the appointment of a receiver to take possession of all, or substantially all, of its assets; (d) the suffering by it of the attachment or other judicial seizure of all, or substantially all, of its assets; (e) the admission by it in writing of its inability to pay its debts as they come due; or (f) the making by it of an offer of settlement, extension or composition to its creditors generally." ;
+    ct:supported_by ex:C023P0084 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C023R0002 a ct:Rule ;
+    rdfs:label "Initial Term — source passage 190" ;
+    ct:kind "INITIAL_TERM" ;
+    ct:references_section ex:C023R0002Ref0,
+        ex:C023R0002Ref1,
+        ex:C023R0002Ref2 ;
+    ct:subject_to ex:C023R0002Condition190 ;
+    ct:supported_by ex:C023P0190 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C023R0002Condition190 a ct:Condition ;
+    ct:description "(c) dedicate the minimum pre-launch and post-launch resources specified in Section B of Schedule 6.2(c) to its Commercialization of the Licensed Products in the Territory in accordance with the Commercialization Plan during each year ([***]) after the First Commercial Sale of any Licensed Product in the Field in the Territory until [***] (Commercialization Commitment Period); provided that if Licensee [***], then the commercialization commitments as set forth in Section B of Schedule 6.2(c) shall continue to apply except that the [***]. For clarity, after the expiration of the Commercialization Commitment Period, Licensee shall have no further obligation under this Section 6.2(c)." ;
+    ct:supported_by ex:C023P0190 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C023R0002Ref0 a ct:Reference ;
+    rdfs:label "Section B" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C023R0002Ref1 a ct:Reference ;
+    rdfs:label "Schedule 6.2(c)" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C023R0002Ref2 a ct:Reference ;
+    rdfs:label "Section 6.2(c)" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C023R0003 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 190" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:references_section ex:C023R0003Ref0,
+        ex:C023R0003Ref1,
+        ex:C023R0003Ref2 ;
+    ct:subject_to ex:C023R0003Condition190 ;
+    ct:supported_by ex:C023P0190 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C023R0003Condition190 a ct:Condition ;
+    ct:description "(c) dedicate the minimum pre-launch and post-launch resources specified in Section B of Schedule 6.2(c) to its Commercialization of the Licensed Products in the Territory in accordance with the Commercialization Plan during each year ([***]) after the First Commercial Sale of any Licensed Product in the Field in the Territory until [***] (Commercialization Commitment Period); provided that if Licensee [***], then the commercialization commitments as set forth in Section B of Schedule 6.2(c) shall continue to apply except that the [***]. For clarity, after the expiration of the Commercialization Commitment Period, Licensee shall have no further obligation under this Section 6.2(c)." ;
+    ct:supported_by ex:C023P0190 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C023R0003Ref0 a ct:Reference ;
+    rdfs:label "Section B" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C023R0003Ref1 a ct:Reference ;
+    rdfs:label "Schedule 6.2(c)" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C023R0003Ref2 a ct:Reference ;
+    rdfs:label "Section 6.2(c)" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C023R0004 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 228" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:references_section ex:C023R0004Ref0,
+        ex:C023R0004Ref1 ;
+    ct:subject_to ex:C023R0004Condition228 ;
+    ct:supported_by ex:C023P0228 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C023R0004Condition228 a ct:Condition ;
+    ct:description "7.3.5 Records. Licensee shall maintain, and shall ensure that its Affiliates maintain, records, in sufficient detail, which shall be complete and accurate and shall fully and properly reflect all Net Sales and Gross Margins indicated in the quarterly reports described in Section 7.3.2. For each quarterly report, Licensee shall maintain records reflecting the Net Sales and Gross Margins contained in such quarterly report for [***] ([***]) years following the date that such quarterly report is delivered to Bioeq. The provisions of this Section 7.3.5 shall survive the expiration or termination of this Agreement for [***] ([***]) years." ;
+    ct:supported_by ex:C023P0228 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C023R0004Ref0 a ct:Reference ;
+    rdfs:label "Section 7.3.2" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C023R0004Ref1 a ct:Reference ;
+    rdfs:label "Section 7.3.5" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C023R0005 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 231" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:references_section ex:C023R0005Ref0,
+        ex:C023R0005Ref1 ;
+    ct:supported_by ex:C023P0231 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C023R0005Ref0 a ct:Reference ;
+    rdfs:label "Section 7.3.6" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C023R0005Ref1 a ct:Reference ;
+    rdfs:label "Section 11" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C023R0006 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 315" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:references_section ex:C023R0006Ref0 ;
+    ct:supported_by ex:C023P0315 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C023R0006Ref0 a ct:Reference ;
+    rdfs:label "Section 11.4" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C023R0007 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 316" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:supported_by ex:C023P0316 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C023R0008 a ct:Rule ;
+    rdfs:label "Initial Term — source passage 382" ;
+    ct:kind "INITIAL_TERM" ;
+    ct:references_section ex:C023R0008Ref0 ;
+    ct:subject_to ex:C023R0008Condition382 ;
+    ct:supported_by ex:C023P0382 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C023R0008Condition382 a ct:Condition ;
+    ct:description "15.1 Term. Except as otherwise specified in this Agreement, the Parties' respective rights and obligations under this Agreement shall commence on the Effective Date and shall remain in full force for ten (10) years after the First Commercial Sale of the first Licensed Product, and shall thereafter automatically renew for an unlimited period of time unless otherwise terminated in accordance with Section 15.2." ;
+    ct:supported_by ex:C023P0382 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C023R0008Ref0 a ct:Reference ;
+    rdfs:label "Section 15.2" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C023R0009 a ct:Rule ;
+    rdfs:label "Automatic Renewal — source passage 382" ;
+    ct:kind "AUTOMATIC_RENEWAL" ;
+    ct:references_section ex:C023R0009Ref0 ;
+    ct:subject_to ex:C023R0009Condition382 ;
+    ct:supported_by ex:C023P0382 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C023R0009Condition382 a ct:Condition ;
+    ct:description "15.1 Term. Except as otherwise specified in this Agreement, the Parties' respective rights and obligations under this Agreement shall commence on the Effective Date and shall remain in full force for ten (10) years after the First Commercial Sale of the first Licensed Product, and shall thereafter automatically renew for an unlimited period of time unless otherwise terminated in accordance with Section 15.2." ;
+    ct:supported_by ex:C023P0382 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C023R0009Ref0 a ct:Reference ;
+    rdfs:label "Section 15.2" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C023R0010 a ct:Rule ;
+    rdfs:label "Termination — source passage 383" ;
+    ct:kind "TERMINATION" ;
+    ct:supported_by ex:C023P0383 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C023R0011 a ct:Rule ;
+    rdfs:label "Termination — source passage 384" ;
+    ct:kind "TERMINATION" ;
+    ct:references_section ex:C023R0011Ref0 ;
+    ct:subject_to ex:C023R0011Condition384 ;
+    ct:supported_by ex:C023P0384 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C023R0011Condition384 a ct:Condition ;
+    ct:description "15.2.1 Termination for Breach. Either Party may terminate this Agreement upon material breach of any obligation under this Agreement by the other Party provided that such breach (if curable) is not cured within thirty (30) days following the receipt of written notice thereof by the non-breaching Party. If there is a dispute between the Parties as to whether a material breach has occurred or whether such breach was curable or has been cured by the other Party within the above cure period, notice of termination may only be given after the terminating Party has escalated the issue to the relevant senior executives pursuant to Section 16.3.1 and the senior executives have not been able to solve such dispute within thirty (30) days of such escalation." ;
+    ct:supported_by ex:C023P0384 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C023R0011Ref0 a ct:Reference ;
+    rdfs:label "Section 16.3.1" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C023R0012 a ct:Rule ;
+    rdfs:label "Termination — source passage 386" ;
+    ct:kind "TERMINATION" ;
+    ct:references_section ex:C023R0012Ref0 ;
+    ct:subject_to ex:C023R0012Condition386 ;
+    ct:supported_by ex:C023P0386 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C023R0012Condition386 a ct:Condition ;
+    ct:description "Confidential Execution Version 15.2.2 Termination by Bioeq for Underperformance. Subject to the second sentence of this Section 15.2.2, Bioeq may notify Licensee of its intent to terminate this Agreement anytime within thirty ([***]) days following the end of any [***] ([***]) month time period starting [***] ([***]) months after the First Commercial Sale of the first [***] Product in the Field in the Territory upon written notice to Licensee, if Licensee, with respect to its sales of Licensed Products in the Field in the Territory, has not achieved an average market share of at least [***] percent ([***]%) of the [***] (such market excluding for clarity in all cases [***]), calculated based on [***] in the Field in the Territory in the [***] ([***]) months prior to the end of such [***] ([***]) month time period (i.e., for example, in months [***] of the [***] after the First Commercial Sale of such [***] Product) (Minimum Market Share Requirement); upon Licensee's receipt of such notice from Bioeq, if Licensee does not achieve the Minimum Market Share Requirement, applied mutatis mutandis, during the subsequent [***] ([***]) months period following its receipt of such notice from Bioeq (Licensee Cure Period), Bioeq may terminate this Agreement upon written notice to Licensee; " ;
+    ct:supported_by ex:C023P0386 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C023R0012Ref0 a ct:Reference ;
+    rdfs:label "Section 15.2.2" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C023R0013 a ct:Rule ;
+    rdfs:label "Conditional Referenced Term — source passage 386" ;
+    ct:kind "CONDITIONAL_REFERENCED_TERM" ;
+    ct:references_section ex:C023R0013Ref0 ;
+    ct:subject_to ex:C023R0013Condition386 ;
+    ct:supported_by ex:C023P0386 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C023R0013Condition386 a ct:Condition ;
+    ct:description "Confidential Execution Version 15.2.2 Termination by Bioeq for Underperformance. Subject to the second sentence of this Section 15.2.2, Bioeq may notify Licensee of its intent to terminate this Agreement anytime within thirty ([***]) days following the end of any [***] ([***]) month time period starting [***] ([***]) months after the First Commercial Sale of the first [***] Product in the Field in the Territory upon written notice to Licensee, if Licensee, with respect to its sales of Licensed Products in the Field in the Territory, has not achieved an average market share of at least [***] percent ([***]%) of the [***] (such market excluding for clarity in all cases [***]), calculated based on [***] in the Field in the Territory in the [***] ([***]) months prior to the end of such [***] ([***]) month time period (i.e., for example, in months [***] of the [***] after the First Commercial Sale of such [***] Product) (Minimum Market Share Requirement); upon Licensee's receipt of such notice from Bioeq, if Licensee does not achieve the Minimum Market Share Requirement, applied mutatis mutandis, during the subsequent [***] ([***]) months period following its receipt of such notice from Bioeq (Licensee Cure Period), Bioeq may terminate this Agreement upon written notice to Licensee; " ;
+    ct:supported_by ex:C023P0386 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C023R0013Ref0 a ct:Reference ;
+    rdfs:label "Section 15.2.2" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C023R0014 a ct:Rule ;
+    rdfs:label "Conditional Referenced Term — source passage 387" ;
+    ct:kind "CONDITIONAL_REFERENCED_TERM" ;
+    ct:references_section ex:C023R0014Ref0 ;
+    ct:subject_to ex:C023R0014Condition387 ;
+    ct:supported_by ex:C023P0387 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C023R0014Condition387 a ct:Condition ;
+    ct:description "provided further, that the termination right described in this Section 15.2.2 shall apply only if [***], and provided further that such failure of Licensee to achieve the Minimum Market Share Requirement (i) is not due to any [***] (including [***]); (ii) not due to any [***] Bioeq's right to notify Licensee of its intent to terminate this Agreement in accordance with the first sentence of this Section 15.2.2 shall apply only until [***] ([***]) days after the [***] ([***]) anniversary of the First Commercial Sale of the first [***] Product in the Field in the Territory, after which Bioeq shall have no further rights under this Section 15.2.2." ;
+    ct:supported_by ex:C023P0387 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C023R0014Ref0 a ct:Reference ;
+    rdfs:label "Section 15.2.2" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C023R0015 a ct:Rule ;
+    rdfs:label "Termination — source passage 388" ;
+    ct:kind "TERMINATION" ;
+    ct:references_section ex:C023R0015Ref0,
+        ex:C023R0015Ref1 ;
+    ct:subject_to ex:C023R0015Condition388 ;
+    ct:supported_by ex:C023P0388 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C023R0015Condition388 a ct:Condition ;
+    ct:description "15.2.3 Termination by Bioeq for Development or Commercialization of a Competitive Product by Licensee. Bioeq may terminate this Agreement immediately upon written notice to Licensee, if Licensee conducts any clinical development of, markets, sells or distributes any Competitive Product in the Territory, whether directly or indirectly through the intermediary of a Third Party or its Affiliates (Restricted Activities); provided, that in the event that Restricted Activities are being or would be deemed to be conducted by Licensee solely in connection with a Competitor Change of Control, Bioeq may not terminate this Agreement in accordance with this Section 15.2.2 and instead may terminate this Agreement in accordance with Section 15.2.9." ;
+    ct:supported_by ex:C023P0388 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C023R0015Ref0 a ct:Reference ;
+    rdfs:label "Section 15.2.2" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C023R0015Ref1 a ct:Reference ;
+    rdfs:label "Section 15.2.9" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C023R0016 a ct:Rule ;
+    rdfs:label "Termination — source passage 389" ;
+    ct:kind "TERMINATION" ;
+    ct:supported_by ex:C023P0389 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C023R0017 a ct:Rule ;
+    rdfs:label "Termination — source passage 390" ;
+    ct:kind "TERMINATION" ;
+    ct:subject_to ex:C023R0017Condition390 ;
+    ct:supported_by ex:C023P0390 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C023R0017Condition390 a ct:Condition ;
+    ct:description "15.2.5 Termination by Licensee for Convenience. Licensee may terminate this Agreement for convenience upon eighteen (18) months' advance written notice to Bioeq; provided, however, that any such termination for convenience shall not become effective prior to twelve (12) months after the First Commercial Sale of the first Licensed Product. In the event of any such termination for convenience by Licensee, [***]" ;
+    ct:supported_by ex:C023P0390 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C023R0018 a ct:Rule ;
+    rdfs:label "Termination — source passage 391" ;
+    ct:kind "TERMINATION" ;
+    ct:supported_by ex:C023P0391 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C023R0019 a ct:Rule ;
+    rdfs:label "Termination — source passage 392" ;
+    ct:kind "TERMINATION" ;
+    ct:subject_to ex:C023R0019Condition392 ;
+    ct:supported_by ex:C023P0392 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C023R0019Condition392 a ct:Condition ;
+    ct:description "(a) Licensee may terminate this Agreement immediately upon written notice sent to Bioeq any time between [***] and until the receipt of first Regulatory Approval of any Licensed Product in the Field in the Territory if (a) Bioeq has failed to obtain any Regulatory Approval for any Licensed Product in the Field in the Territory on or prior to [***], and (b) [***]." ;
+    ct:supported_by ex:C023P0392 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C023R0020 a ct:Rule ;
+    rdfs:label "Termination — source passage 395" ;
+    ct:kind "TERMINATION" ;
+    ct:references_section ex:C023R0020Ref0,
+        ex:C023R0020Ref1 ;
+    ct:subject_to ex:C023R0020Condition395 ;
+    ct:supported_by ex:C023P0395 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C023R0020Condition395 a ct:Condition ;
+    ct:description "Confidential Execution Version Licensee may terminate this Agreement upon written notice to Bioeq. If [***] that the first Regulatory Approval for any Licensed Product in the Field in the Territory could not reasonably be expected to be obtained by [***], within [***] days of [***] notifying [***] in writing of its determination thereof, then the Parties shall negotiate in good faith and use reasonable efforts to settle such disagreement in accordance with Section 16.3.1 for the provided [***] ([***]) day period, provided, however, notwithstanding Section 16.3, either Party may initiate proceedings in relation to such disagreement at any time regardless of the expiration of such [***] ([***]) day period. Any such proceedings shall be finally and exclusively resolved by binding arbitration according to the [***], as applicable on the date of commencement of the arbitration proceedings, by [***] ([***]) [***] appointed mutually by the Parties within [***] ([***]) days of the commencement of arbitration, provided, however, if the Parties are unable to appoint such arbitrator within such [***] ([***]) day period, then the arbitrator shall be appointed by the [***]. " ;
+    ct:supported_by ex:C023P0395 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C023R0020Ref0 a ct:Reference ;
+    rdfs:label "Section 16.3.1" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C023R0020Ref1 a ct:Reference ;
+    rdfs:label "Section 16.3" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C023R0021 a ct:Rule ;
+    rdfs:label "Conditional Referenced Term — source passage 395" ;
+    ct:kind "CONDITIONAL_REFERENCED_TERM" ;
+    ct:references_section ex:C023R0021Ref0,
+        ex:C023R0021Ref1 ;
+    ct:subject_to ex:C023R0021Condition395 ;
+    ct:supported_by ex:C023P0395 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C023R0021Condition395 a ct:Condition ;
+    ct:description "Confidential Execution Version Licensee may terminate this Agreement upon written notice to Bioeq. If [***] that the first Regulatory Approval for any Licensed Product in the Field in the Territory could not reasonably be expected to be obtained by [***], within [***] days of [***] notifying [***] in writing of its determination thereof, then the Parties shall negotiate in good faith and use reasonable efforts to settle such disagreement in accordance with Section 16.3.1 for the provided [***] ([***]) day period, provided, however, notwithstanding Section 16.3, either Party may initiate proceedings in relation to such disagreement at any time regardless of the expiration of such [***] ([***]) day period. Any such proceedings shall be finally and exclusively resolved by binding arbitration according to the [***], as applicable on the date of commencement of the arbitration proceedings, by [***] ([***]) [***] appointed mutually by the Parties within [***] ([***]) days of the commencement of arbitration, provided, however, if the Parties are unable to appoint such arbitrator within such [***] ([***]) day period, then the arbitrator shall be appointed by the [***]. " ;
+    ct:supported_by ex:C023P0395 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C023R0021Ref0 a ct:Reference ;
+    rdfs:label "Section 16.3.1" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C023R0021Ref1 a ct:Reference ;
+    rdfs:label "Section 16.3" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C023R0022 a ct:Rule ;
+    rdfs:label "Termination — source passage 397" ;
+    ct:kind "TERMINATION" ;
+    ct:references_section ex:C023R0022Ref0 ;
+    ct:supported_by ex:C023P0397 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C023R0022Ref0 a ct:Reference ;
+    rdfs:label "Section 4.1.1" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C023R0023 a ct:Rule ;
+    rdfs:label "Termination — source passage 398" ;
+    ct:kind "TERMINATION" ;
+    ct:supported_by ex:C023P0398 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C023R0024 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 400" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:references_section ex:C023R0024Ref0 ;
+    ct:subject_to ex:C023R0024Condition400 ;
+    ct:supported_by ex:C023P0400 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C023R0024Condition400 a ct:Condition ;
+    ct:description "Such duplicates shall be promptly delivered, and such access shall promptly be provided, to the Non Bankrupt Party (i) upon any such commencement of a bankruptcy proceeding, upon written request therefor by the Non Bankrupt Party, unless the Bankrupt Party elects to continue to perform all of its obligations under this Agreement or (ii) if not delivered under (i) above, upon the rejection of this Agreement by or on behalf of the Bankrupt Party, upon written request therefor by the Non Bankrupt Party. The provisions of this Section 15.2.6(b)(a) are without prejudice to any rights the Non Bankrupt Party may have arising under the Bankruptcy Code or other Applicable Law." ;
+    ct:supported_by ex:C023P0400 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C023R0024Ref0 a ct:Reference ;
+    rdfs:label "Section 15.2.6(b)(a)" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C023R0025 a ct:Rule ;
+    rdfs:label "Termination — source passage 402" ;
+    ct:kind "TERMINATION" ;
+    ct:subject_to ex:C023R0025Condition402 ;
+    ct:supported_by ex:C023P0402 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C023R0025Condition402 a ct:Condition ;
+    ct:description "Confidential Execution Version 15.2.9 Termination for Competitor Change of Control. Licensee shall notify Bioeq in writing within [***] ([***]) days after entry by Licensee into a definitive agreement which would result in a Competitor Change of Control. During the period between when Licensee enters into a definitive agreement which would result in a Competitor Change of Control and when such definitive agreement is consummated, Licensee shall have the right to divest all such Competitive Products which would be acquired upon the consummation of the transaction giving rise to such Competitor Change of Control. Upon the consummation of such definitive agreement, if Licensee has not then divested all such Competitive Products such that a Competitor Change of Control has occurred, Bioeq may, upon sending written notice to Licensee within sixty (60) days thereafter, terminate this Agreement." ;
+    ct:supported_by ex:C023P0402 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C023R0026 a ct:Rule ;
+    rdfs:label "Conditional Referenced Term — source passage 402" ;
+    ct:kind "CONDITIONAL_REFERENCED_TERM" ;
+    ct:subject_to ex:C023R0026Condition402 ;
+    ct:supported_by ex:C023P0402 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C023R0026Condition402 a ct:Condition ;
+    ct:description "Confidential Execution Version 15.2.9 Termination for Competitor Change of Control. Licensee shall notify Bioeq in writing within [***] ([***]) days after entry by Licensee into a definitive agreement which would result in a Competitor Change of Control. During the period between when Licensee enters into a definitive agreement which would result in a Competitor Change of Control and when such definitive agreement is consummated, Licensee shall have the right to divest all such Competitive Products which would be acquired upon the consummation of the transaction giving rise to such Competitor Change of Control. Upon the consummation of such definitive agreement, if Licensee has not then divested all such Competitive Products such that a Competitor Change of Control has occurred, Bioeq may, upon sending written notice to Licensee within sixty (60) days thereafter, terminate this Agreement." ;
+    ct:supported_by ex:C023P0402 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C023R0027 a ct:Rule ;
+    rdfs:label "Termination — source passage 403" ;
+    ct:kind "TERMINATION" ;
+    ct:references_section ex:C023R0027Ref0 ;
+    ct:supported_by ex:C023P0403 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C023R0027Ref0 a ct:Reference ;
+    rdfs:label "Article 10" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C023R0028 a ct:Rule ;
+    rdfs:label "Termination — source passage 404" ;
+    ct:kind "TERMINATION" ;
+    ct:references_section ex:C023R0028Ref0 ;
+    ct:supported_by ex:C023P0404 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C023R0028Ref0 a ct:Reference ;
+    rdfs:label "Section 16.1" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C023R0029 a ct:Rule ;
+    rdfs:label "Termination — source passage 405" ;
+    ct:kind "TERMINATION" ;
+    ct:supported_by ex:C023P0405 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C023R0030 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 406" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:references_section ex:C023R0030Ref0 ;
+    ct:subject_to ex:C023R0030Condition406 ;
+    ct:supported_by ex:C023P0406 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C023R0030Condition406 a ct:Condition ;
+    ct:description "15.3.1 Sale of Inventory. Licensee shall be permitted, at Bioeq's choice (if this Agreement is terminated by Bioeq pursuant to Sections 15.2.1, 15.2.2, 15.2.3, 15.2.4, 15.2.8 or 15.2.9, or by Licensee pursuant to Section 15.2.5) or at Licensee's choice (if this Agreement is terminated by Licensee pursuant to Sections 15.2.1, 15.2.6, 15.2.7 or 15.2.8), to cither (a) continue selling its and its Affiliates' inventory of Licensed Products existing on the termination effective date in accordance with this Agreement for a maximum period of [***] ([***]) days (in which case all terms and conditions of this Agreement, including Licensee's obligation to report and pay royalties, shall continue to apply to such continued sale) or (b) sell such inventory to Bioeq at the supply price paid by Licensee to Bioeq for such inventory in accordance with the Manufacturing and Supply Agreement." ;
+    ct:supported_by ex:C023P0406 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C023R0030Ref0 a ct:Reference ;
+    rdfs:label "Section 15.2.5" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C023R0031 a ct:Rule ;
+    rdfs:label "Conditional Referenced Term — source passage 413" ;
+    ct:kind "CONDITIONAL_REFERENCED_TERM" ;
+    ct:references_section ex:C023R0031Ref0,
+        ex:C023R0031Ref1 ;
+    ct:subject_to ex:C023R0031Condition413 ;
+    ct:supported_by ex:C023P0413 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C023R0031Condition413 a ct:Condition ;
+    ct:description "15.3.4 Licensee Improvements. The license granted by Licensee pursuant to Section 9.2.2 shall be extended to also include the Development, Manufacture, sale, import or other Commercialization of Licensed Products in the Field in the Territory, and, unless this Agreement is terminated by Bioeq pursuant to pursuant to Sections 15.2.1, 15.2.2, 15.2.3, 15.2.4, 15.2.8 or 15.2.9, or by Licensee pursuant to Section 15.2.5 (in [***]), such license shall thereafter be royalty-bearing on Bioeq on Net Sales (applied mutatis mutandis as if Bioeq were Licensee, and additionally applying to sales by sublicensees of Bioeq) by Bioeq, its Affiliates, and its sublicensees of Licensed Products in the Field in the Territory which have [***] Licensee Improvement, at [***]." ;
+    ct:supported_by ex:C023P0413 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C023R0031Ref0 a ct:Reference ;
+    rdfs:label "Section 9.2.2" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C023R0031Ref1 a ct:Reference ;
+    rdfs:label "Section 15.2.5" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C023R0032 a ct:Rule ;
+    rdfs:label "Termination — source passage 414" ;
+    ct:kind "TERMINATION" ;
+    ct:references_section ex:C023R0032Ref0 ;
+    ct:subject_to ex:C023R0032Condition414 ;
+    ct:supported_by ex:C023P0414 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C023R0032Condition414 a ct:Condition ;
+    ct:description "15.3.5 License to Licensee-Controlled Trademark. Solely in the event that this Agreement is terminated by Bioeq pursuant to Sections 15.2.1, 15.2.2, 15.2.3, 15.2.4, 15.2.8 or 15.2.9 or by Licensee pursuant to Section 15.2.5 , Licensee shall grant, and hereby grants to Bioeq an exclusive, royalty-free, fully paid, sublicenseable, license to use the Licensee-Controlled Trademarks which were actually used by Licensee to Commercialize the Licensed Products in the Territory in connection with Bioeq's Commercialization of the Licensed Products in the Territory. If this Agreement is terminated by Licensee pursuant to Sections 15.2.1, 15.2.6, 15.2.7 or 15.2.8, such license shall be royalty bearing on Bioeq at [***]." ;
+    ct:supported_by ex:C023P0414 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C023R0032Ref0 a ct:Reference ;
+    rdfs:label "Section 15.2.5" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C023R0033 a ct:Rule ;
+    rdfs:label "Conditional Referenced Term — source passage 414" ;
+    ct:kind "CONDITIONAL_REFERENCED_TERM" ;
+    ct:references_section ex:C023R0033Ref0 ;
+    ct:subject_to ex:C023R0033Condition414 ;
+    ct:supported_by ex:C023P0414 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C023R0033Condition414 a ct:Condition ;
+    ct:description "15.3.5 License to Licensee-Controlled Trademark. Solely in the event that this Agreement is terminated by Bioeq pursuant to Sections 15.2.1, 15.2.2, 15.2.3, 15.2.4, 15.2.8 or 15.2.9 or by Licensee pursuant to Section 15.2.5 , Licensee shall grant, and hereby grants to Bioeq an exclusive, royalty-free, fully paid, sublicenseable, license to use the Licensee-Controlled Trademarks which were actually used by Licensee to Commercialize the Licensed Products in the Territory in connection with Bioeq's Commercialization of the Licensed Products in the Territory. If this Agreement is terminated by Licensee pursuant to Sections 15.2.1, 15.2.6, 15.2.7 or 15.2.8, such license shall be royalty bearing on Bioeq at [***]." ;
+    ct:supported_by ex:C023P0414 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C023R0033Ref0 a ct:Reference ;
+    rdfs:label "Section 15.2.5" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C023R0034 a ct:Rule ;
+    rdfs:label "Termination — source passage 416" ;
+    ct:kind "TERMINATION" ;
+    ct:supported_by ex:C023P0416 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C023R0035 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 417" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:references_section ex:C023R0035Ref0,
+        ex:C023R0035Ref1 ;
+    ct:supported_by ex:C023P0417 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C023R0035Ref0 a ct:Reference ;
+    rdfs:label "Section 11.6" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C023R0035Ref1 a ct:Reference ;
+    rdfs:label "Section 15.3.4" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C023P0084 a ct:SourcePassage ;
+    ct:end_char 14058 ;
+    ct:exact_text "1.32.1 In relation to Licensee: (a) the making by it of a general assignment for the benefit of creditors; (b) the commencement by it of any voluntary petition in bankruptcy or suffering by it of the filing of an involuntary petition of its creditors; (c) the suffering by it of the appointment of a receiver to take possession of all, or substantially all, of its assets; (d) the suffering by it of the attachment or other judicial seizure of all, or substantially all, of its assets; (e) the admission by it in writing of its inability to pay its debts as they come due; or (f) the making by it of an offer of settlement, extension or composition to its creditors generally." ;
+    ct:source_path "cuad/CoherusBiosciencesInc_20200227_10-K_EX-10.29_12021376_EX-10.29_Development Agreement.txt" ;
+    ct:source_sha256 "e6370745e927c1182c7c7425a6a984ad0d0ebc3439bc33d99cfc91c30bd381db" ;
+    ct:start_char 13382 .
+
+ex:C023P0228 a ct:SourcePassage ;
+    ct:end_char 59850 ;
+    ct:exact_text "7.3.5 Records. Licensee shall maintain, and shall ensure that its Affiliates maintain, records, in sufficient detail, which shall be complete and accurate and shall fully and properly reflect all Net Sales and Gross Margins indicated in the quarterly reports described in Section 7.3.2. For each quarterly report, Licensee shall maintain records reflecting the Net Sales and Gross Margins contained in such quarterly report for [***] ([***]) years following the date that such quarterly report is delivered to Bioeq. The provisions of this Section 7.3.5 shall survive the expiration or termination of this Agreement for [***] ([***]) years." ;
+    ct:source_path "cuad/CoherusBiosciencesInc_20200227_10-K_EX-10.29_12021376_EX-10.29_Development Agreement.txt" ;
+    ct:source_sha256 "e6370745e927c1182c7c7425a6a984ad0d0ebc3439bc33d99cfc91c30bd381db" ;
+    ct:start_char 59210 .
+
+ex:C023P0384 a ct:SourcePassage ;
+    ct:end_char 115984 ;
+    ct:exact_text "15.2.1 Termination for Breach. Either Party may terminate this Agreement upon material breach of any obligation under this Agreement by the other Party provided that such breach (if curable) is not cured within thirty (30) days following the receipt of written notice thereof by the non-breaching Party. If there is a dispute between the Parties as to whether a material breach has occurred or whether such breach was curable or has been cured by the other Party within the above cure period, notice of termination may only be given after the terminating Party has escalated the issue to the relevant senior executives pursuant to Section 16.3.1 and the senior executives have not been able to solve such dispute within thirty (30) days of such escalation." ;
+    ct:source_path "cuad/CoherusBiosciencesInc_20200227_10-K_EX-10.29_12021376_EX-10.29_Development Agreement.txt" ;
+    ct:source_sha256 "e6370745e927c1182c7c7425a6a984ad0d0ebc3439bc33d99cfc91c30bd381db" ;
+    ct:start_char 115228 .
+
+ex:C023P0387 a ct:SourcePassage ;
+    ct:end_char 117992 ;
+    ct:exact_text "provided further, that the termination right described in this Section 15.2.2 shall apply only if [***], and provided further that such failure of Licensee to achieve the Minimum Market Share Requirement (i) is not due to any [***] (including [***]); (ii) not due to any [***] Bioeq's right to notify Licensee of its intent to terminate this Agreement in accordance with the first sentence of this Section 15.2.2 shall apply only until [***] ([***]) days after the [***] ([***]) anniversary of the First Commercial Sale of the first [***] Product in the Field in the Territory, after which Bioeq shall have no further rights under this Section 15.2.2." ;
+    ct:source_path "cuad/CoherusBiosciencesInc_20200227_10-K_EX-10.29_12021376_EX-10.29_Development Agreement.txt" ;
+    ct:source_sha256 "e6370745e927c1182c7c7425a6a984ad0d0ebc3439bc33d99cfc91c30bd381db" ;
+    ct:start_char 117341 .
+
+ex:C023P0388 a ct:SourcePassage ;
+    ct:end_char 118738 ;
+    ct:exact_text "15.2.3 Termination by Bioeq for Development or Commercialization of a Competitive Product by Licensee. Bioeq may terminate this Agreement immediately upon written notice to Licensee, if Licensee conducts any clinical development of, markets, sells or distributes any Competitive Product in the Territory, whether directly or indirectly through the intermediary of a Third Party or its Affiliates (Restricted Activities); provided, that in the event that Restricted Activities are being or would be deemed to be conducted by Licensee solely in connection with a Competitor Change of Control, Bioeq may not terminate this Agreement in accordance with this Section 15.2.2 and instead may terminate this Agreement in accordance with Section 15.2.9." ;
+    ct:source_path "cuad/CoherusBiosciencesInc_20200227_10-K_EX-10.29_12021376_EX-10.29_Development Agreement.txt" ;
+    ct:source_sha256 "e6370745e927c1182c7c7425a6a984ad0d0ebc3439bc33d99cfc91c30bd381db" ;
+    ct:start_char 117994 .
+
+ex:C023P0390 a ct:SourcePassage ;
+    ct:end_char 119603 ;
+    ct:exact_text "15.2.5 Termination by Licensee for Convenience. Licensee may terminate this Agreement for convenience upon eighteen (18) months' advance written notice to Bioeq; provided, however, that any such termination for convenience shall not become effective prior to twelve (12) months after the First Commercial Sale of the first Licensed Product. In the event of any such termination for convenience by Licensee, [***]" ;
+    ct:source_path "cuad/CoherusBiosciencesInc_20200227_10-K_EX-10.29_12021376_EX-10.29_Development Agreement.txt" ;
+    ct:source_sha256 "e6370745e927c1182c7c7425a6a984ad0d0ebc3439bc33d99cfc91c30bd381db" ;
+    ct:start_char 119191 .
+
+ex:C023P0392 a ct:SourcePassage ;
+    ct:end_char 120025 ;
+    ct:exact_text "(a) Licensee may terminate this Agreement immediately upon written notice sent to Bioeq any time between [***] and until the receipt of first Regulatory Approval of any Licensed Product in the Field in the Territory if (a) Bioeq has failed to obtain any Regulatory Approval for any Licensed Product in the Field in the Territory on or prior to [***], and (b) [***]." ;
+    ct:source_path "cuad/CoherusBiosciencesInc_20200227_10-K_EX-10.29_12021376_EX-10.29_Development Agreement.txt" ;
+    ct:source_sha256 "e6370745e927c1182c7c7425a6a984ad0d0ebc3439bc33d99cfc91c30bd381db" ;
+    ct:start_char 119660 .
+
+ex:C023P0400 a ct:SourcePassage ;
+    ct:end_char 125299 ;
+    ct:exact_text "Such duplicates shall be promptly delivered, and such access shall promptly be provided, to the Non Bankrupt Party (i) upon any such commencement of a bankruptcy proceeding, upon written request therefor by the Non Bankrupt Party, unless the Bankrupt Party elects to continue to perform all of its obligations under this Agreement or (ii) if not delivered under (i) above, upon the rejection of this Agreement by or on behalf of the Bankrupt Party, upon written request therefor by the Non Bankrupt Party. The provisions of this Section 15.2.6(b)(a) are without prejudice to any rights the Non Bankrupt Party may have arising under the Bankruptcy Code or other Applicable Law." ;
+    ct:source_path "cuad/CoherusBiosciencesInc_20200227_10-K_EX-10.29_12021376_EX-10.29_Development Agreement.txt" ;
+    ct:source_sha256 "e6370745e927c1182c7c7425a6a984ad0d0ebc3439bc33d99cfc91c30bd381db" ;
+    ct:start_char 124623 .
+
+ex:C023P0406 a ct:SourcePassage ;
+    ct:end_char 127834 ;
+    ct:exact_text "15.3.1 Sale of Inventory. Licensee shall be permitted, at Bioeq's choice (if this Agreement is terminated by Bioeq pursuant to Sections 15.2.1, 15.2.2, 15.2.3, 15.2.4, 15.2.8 or 15.2.9, or by Licensee pursuant to Section 15.2.5) or at Licensee's choice (if this Agreement is terminated by Licensee pursuant to Sections 15.2.1, 15.2.6, 15.2.7 or 15.2.8), to cither (a) continue selling its and its Affiliates' inventory of Licensed Products existing on the termination effective date in accordance with this Agreement for a maximum period of [***] ([***]) days (in which case all terms and conditions of this Agreement, including Licensee's obligation to report and pay royalties, shall continue to apply to such continued sale) or (b) sell such inventory to Bioeq at the supply price paid by Licensee to Bioeq for such inventory in accordance with the Manufacturing and Supply Agreement." ;
+    ct:source_path "cuad/CoherusBiosciencesInc_20200227_10-K_EX-10.29_12021376_EX-10.29_Development Agreement.txt" ;
+    ct:source_sha256 "e6370745e927c1182c7c7425a6a984ad0d0ebc3439bc33d99cfc91c30bd381db" ;
+    ct:start_char 126947 .
+
+ex:C023P0413 a ct:SourcePassage ;
+    ct:end_char 132600 ;
+    ct:exact_text "15.3.4 Licensee Improvements. The license granted by Licensee pursuant to Section 9.2.2 shall be extended to also include the Development, Manufacture, sale, import or other Commercialization of Licensed Products in the Field in the Territory, and, unless this Agreement is terminated by Bioeq pursuant to pursuant to Sections 15.2.1, 15.2.2, 15.2.3, 15.2.4, 15.2.8 or 15.2.9, or by Licensee pursuant to Section 15.2.5 (in [***]), such license shall thereafter be royalty-bearing on Bioeq on Net Sales (applied mutatis mutandis as if Bioeq were Licensee, and additionally applying to sales by sublicensees of Bioeq) by Bioeq, its Affiliates, and its sublicensees of Licensed Products in the Field in the Territory which have [***] Licensee Improvement, at [***]." ;
+    ct:source_path "cuad/CoherusBiosciencesInc_20200227_10-K_EX-10.29_12021376_EX-10.29_Development Agreement.txt" ;
+    ct:source_sha256 "e6370745e927c1182c7c7425a6a984ad0d0ebc3439bc33d99cfc91c30bd381db" ;
+    ct:start_char 131838 .
+
+ct:Agreement a owl:Class ;
+    rdfs:label "Agreement" .
+
+ex:C023P0190 a ct:SourcePassage ;
+    ct:end_char 49743 ;
+    ct:exact_text "(c) dedicate the minimum pre-launch and post-launch resources specified in Section B of Schedule 6.2(c) to its Commercialization of the Licensed Products in the Territory in accordance with the Commercialization Plan during each year ([***]) after the First Commercial Sale of any Licensed Product in the Field in the Territory until [***] (Commercialization Commitment Period); provided that if Licensee [***], then the commercialization commitments as set forth in Section B of Schedule 6.2(c) shall continue to apply except that the [***]. For clarity, after the expiration of the Commercialization Commitment Period, Licensee shall have no further obligation under this Section 6.2(c)." ;
+    ct:source_path "cuad/CoherusBiosciencesInc_20200227_10-K_EX-10.29_12021376_EX-10.29_Development Agreement.txt" ;
+    ct:source_sha256 "e6370745e927c1182c7c7425a6a984ad0d0ebc3439bc33d99cfc91c30bd381db" ;
+    ct:start_char 49054 .
+
+ex:C023P0382 a ct:SourcePassage ;
+    ct:end_char 115207 ;
+    ct:exact_text "15.1 Term. Except as otherwise specified in this Agreement, the Parties' respective rights and obligations under this Agreement shall commence on the Effective Date and shall remain in full force for ten (10) years after the First Commercial Sale of the first Licensed Product, and shall thereafter automatically renew for an unlimited period of time unless otherwise terminated in accordance with Section 15.2." ;
+    ct:source_path "cuad/CoherusBiosciencesInc_20200227_10-K_EX-10.29_12021376_EX-10.29_Development Agreement.txt" ;
+    ct:source_sha256 "e6370745e927c1182c7c7425a6a984ad0d0ebc3439bc33d99cfc91c30bd381db" ;
+    ct:start_char 114796 .
+
+ex:C023P0386 a ct:SourcePassage ;
+    ct:end_char 117341 ;
+    ct:exact_text "Confidential Execution Version 15.2.2 Termination by Bioeq for Underperformance. Subject to the second sentence of this Section 15.2.2, Bioeq may notify Licensee of its intent to terminate this Agreement anytime within thirty ([***]) days following the end of any [***] ([***]) month time period starting [***] ([***]) months after the First Commercial Sale of the first [***] Product in the Field in the Territory upon written notice to Licensee, if Licensee, with respect to its sales of Licensed Products in the Field in the Territory, has not achieved an average market share of at least [***] percent ([***]%) of the [***] (such market excluding for clarity in all cases [***]), calculated based on [***] in the Field in the Territory in the [***] ([***]) months prior to the end of such [***] ([***]) month time period (i.e., for example, in months [***] of the [***] after the First Commercial Sale of such [***] Product) (Minimum Market Share Requirement); upon Licensee's receipt of such notice from Bioeq, if Licensee does not achieve the Minimum Market Share Requirement, applied mutatis mutandis, during the subsequent [***] ([***]) months period following its receipt of such notice from Bioeq (Licensee Cure Period), Bioeq may terminate this Agreement upon written notice to Licensee; " ;
+    ct:source_path "cuad/CoherusBiosciencesInc_20200227_10-K_EX-10.29_12021376_EX-10.29_Development Agreement.txt" ;
+    ct:source_sha256 "e6370745e927c1182c7c7425a6a984ad0d0ebc3439bc33d99cfc91c30bd381db" ;
+    ct:start_char 116042 .
+
+ex:C023P0395 a ct:SourcePassage ;
+    ct:end_char 121687 ;
+    ct:exact_text "Confidential Execution Version Licensee may terminate this Agreement upon written notice to Bioeq. If [***] that the first Regulatory Approval for any Licensed Product in the Field in the Territory could not reasonably be expected to be obtained by [***], within [***] days of [***] notifying [***] in writing of its determination thereof, then the Parties shall negotiate in good faith and use reasonable efforts to settle such disagreement in accordance with Section 16.3.1 for the provided [***] ([***]) day period, provided, however, notwithstanding Section 16.3, either Party may initiate proceedings in relation to such disagreement at any time regardless of the expiration of such [***] ([***]) day period. Any such proceedings shall be finally and exclusively resolved by binding arbitration according to the [***], as applicable on the date of commencement of the arbitration proceedings, by [***] ([***]) [***] appointed mutually by the Parties within [***] ([***]) days of the commencement of arbitration, provided, however, if the Parties are unable to appoint such arbitrator within such [***] ([***]) day period, then the arbitrator shall be appointed by the [***]. " ;
+    ct:source_path "cuad/CoherusBiosciencesInc_20200227_10-K_EX-10.29_12021376_EX-10.29_Development Agreement.txt" ;
+    ct:source_sha256 "e6370745e927c1182c7c7425a6a984ad0d0ebc3439bc33d99cfc91c30bd381db" ;
+    ct:start_char 120507 .
+
+ex:C023P0402 a ct:SourcePassage ;
+    ct:end_char 126258 ;
+    ct:exact_text "Confidential Execution Version 15.2.9 Termination for Competitor Change of Control. Licensee shall notify Bioeq in writing within [***] ([***]) days after entry by Licensee into a definitive agreement which would result in a Competitor Change of Control. During the period between when Licensee enters into a definitive agreement which would result in a Competitor Change of Control and when such definitive agreement is consummated, Licensee shall have the right to divest all such Competitive Products which would be acquired upon the consummation of the transaction giving rise to such Competitor Change of Control. Upon the consummation of such definitive agreement, if Licensee has not then divested all such Competitive Products such that a Competitor Change of Control has occurred, Bioeq may, upon sending written notice to Licensee within sixty (60) days thereafter, terminate this Agreement." ;
+    ct:source_path "cuad/CoherusBiosciencesInc_20200227_10-K_EX-10.29_12021376_EX-10.29_Development Agreement.txt" ;
+    ct:source_sha256 "e6370745e927c1182c7c7425a6a984ad0d0ebc3439bc33d99cfc91c30bd381db" ;
+    ct:start_char 125357 .
+
+ex:C023P0414 a ct:SourcePassage ;
+    ct:end_char 133319 ;
+    ct:exact_text "15.3.5 License to Licensee-Controlled Trademark. Solely in the event that this Agreement is terminated by Bioeq pursuant to Sections 15.2.1, 15.2.2, 15.2.3, 15.2.4, 15.2.8 or 15.2.9 or by Licensee pursuant to Section 15.2.5 , Licensee shall grant, and hereby grants to Bioeq an exclusive, royalty-free, fully paid, sublicenseable, license to use the Licensee-Controlled Trademarks which were actually used by Licensee to Commercialize the Licensed Products in the Territory in connection with Bioeq's Commercialization of the Licensed Products in the Territory. If this Agreement is terminated by Licensee pursuant to Sections 15.2.1, 15.2.6, 15.2.7 or 15.2.8, such license shall be royalty bearing on Bioeq at [***]." ;
+    ct:source_path "cuad/CoherusBiosciencesInc_20200227_10-K_EX-10.29_12021376_EX-10.29_Development Agreement.txt" ;
+    ct:source_sha256 "e6370745e927c1182c7c7425a6a984ad0d0ebc3439bc33d99cfc91c30bd381db" ;
+    ct:start_char 132602 .
+
+ct:Condition a owl:Class ;
+    rdfs:label "Condition" .
+
+ct:SourcePassage a owl:Class ;
+    rdfs:label "SourcePassage" .
+
+ct:Reference a owl:Class ;
+    rdfs:label "Reference" .
+
+ct:Rule a owl:Class ;
+    rdfs:label "Rule" .
+

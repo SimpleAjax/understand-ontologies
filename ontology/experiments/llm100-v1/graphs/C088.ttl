@@ -1,0 +1,439 @@
+@prefix ct: <https://cimulink.local/ontology/contract-terms/0.1#> .
+@prefix ex: <https://cimulink.local/ontology/llm100-v1/> .
+@prefix meta: <https://cimulink.local/ontology/extraction#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ct: a owl:Ontology ;
+    rdfs:comment "Partial five-contract development sample. No claim of complete contract coverage or legal correctness." .
+
+ct:agreement_effective_from a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:applies_within a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:calendar_date_status a owl:DatatypeProperty .
+
+ct:coverage a owl:DatatypeProperty .
+
+ct:description a owl:DatatypeProperty .
+
+ct:duration a owl:DatatypeProperty .
+
+ct:duration_status a owl:DatatypeProperty .
+
+ct:end_char a owl:DatatypeProperty .
+
+ct:end_date_status a owl:DatatypeProperty .
+
+ct:ends_on_event a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:exact_text a owl:DatatypeProperty .
+
+ct:has_party a owl:ObjectProperty ;
+    rdfs:domain ct:Agreement ;
+    rdfs:range ct:Party .
+
+ct:has_rule a owl:ObjectProperty ;
+    rdfs:domain ct:Agreement ;
+    rdfs:range ct:Rule .
+
+ct:kind a owl:DatatypeProperty .
+
+ct:notice_actor a owl:DatatypeProperty .
+
+ct:notice_form a owl:DatatypeProperty .
+
+ct:notice_period_status a owl:DatatypeProperty .
+
+ct:qualifies a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Rule .
+
+ct:references_section a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:renewal_count a owl:DatatypeProperty .
+
+ct:resolution_status a owl:DatatypeProperty .
+
+ct:resolved_to a owl:ObjectProperty ;
+    rdfs:domain ct:Reference ;
+    rdfs:range ct:SourcePassage .
+
+ct:source_path a owl:DatatypeProperty .
+
+ct:source_sha256 a owl:DatatypeProperty .
+
+ct:start_char a owl:DatatypeProperty .
+
+ct:starts_from a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:stated_end_date a owl:DatatypeProperty .
+
+ct:subject_to a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Condition .
+
+ct:supported_by a owl:ObjectProperty ;
+    rdfs:range ct:SourcePassage .
+
+ct:termination_notice a owl:DatatypeProperty .
+
+ex:C088 a ct:Agreement ;
+    rdfs:label "UsioInc_20040428_SB-2_EX-10.11_1723988_EX-10.11_Affiliate Agreement 2.txt" ;
+    ct:coverage "LOCAL_LLM_PROPOSED_PARTIAL; NOT_HUMAN_REVIEWED" ;
+    ct:has_rule ex:C088R0001,
+        ex:C088R0002,
+        ex:C088R0003,
+        ex:C088R0004,
+        ex:C088R0005,
+        ex:C088R0006,
+        ex:C088R0007,
+        ex:C088R0008,
+        ex:C088R0009,
+        ex:C088R0010,
+        ex:C088R0011,
+        ex:C088R0012,
+        ex:C088R0013,
+        ex:C088R0014,
+        ex:C088R0015 ;
+    ct:source_path "cuad/UsioInc_20040428_SB-2_EX-10.11_1723988_EX-10.11_Affiliate Agreement 2.txt" ;
+    ct:source_sha256 "42ae613e5bb22f1c5684f8215983db7ce2a1ae603db45a4b0d849f8942f9dc91" ;
+    meta:model_digest "0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0" .
+
+ct:Party a owl:Class ;
+    rdfs:label "Party" .
+
+ex:C088P0024 a ct:SourcePassage ;
+    ct:end_char 8412 ;
+    ct:exact_text "2.03     RETENTION  OF  CONTRACTORS.  In  the  event  that this contract between Network 1 and Affiliate is terminated for any reason, the Contractors located by Affiliate  shall  remain  Contractors  of  Network  1." ;
+    ct:source_path "cuad/UsioInc_20040428_SB-2_EX-10.11_1723988_EX-10.11_Affiliate Agreement 2.txt" ;
+    ct:source_sha256 "42ae613e5bb22f1c5684f8215983db7ce2a1ae603db45a4b0d849f8942f9dc91" ;
+    ct:start_char 8196 .
+
+ex:C088P0038 a ct:SourcePassage ;
+    ct:end_char 15608 ;
+    ct:exact_text "4.02     NETWORK  1  NAME  USAGE.  Affiliate  shall  use  the  Network 1 name in Relationship to all Bankcard marketing activity as required by the rules of VISA USA,  International  and  MasterCard International.  Affiliate acknowledges that the  use of the Network 1 name is on a non-exclusive basis and further agrees to cease using Network 1 name, including but not limited to logo(s) and insignia(s) at  the written request of Network 1.  In the event this contract terminates for any  reason,  Affiliate  shall  immediately cease using the Network 1 name.  The insignia,  logo's,  Service  Marks,  trademarks  and  name  of Network 1 are the" ;
+    ct:source_path "cuad/UsioInc_20040428_SB-2_EX-10.11_1723988_EX-10.11_Affiliate Agreement 2.txt" ;
+    ct:source_sha256 "42ae613e5bb22f1c5684f8215983db7ce2a1ae603db45a4b0d849f8942f9dc91" ;
+    ct:start_char 14961 .
+
+ex:C088R0001 a ct:Rule ;
+    rdfs:label "Conditional Referenced Term — source passage 9" ;
+    ct:kind "CONDITIONAL_REFERENCED_TERM" ;
+    ct:subject_to ex:C088R0001Condition9 ;
+    ct:supported_by ex:C088P0009 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C088R0001Condition9 a ct:Condition ;
+    ct:description "WHEREAS,  Affiliate  requires  a  referral  arrangement  while  Affiliate  is negotiating an ISO sponsorship agreement with Network 1 and Harris Bank and this Agreement  shall  govern  the agreement between the parties until such time that the  ISO  sponsorship agreement has been approval and executed in which case the Processing  Agreement, ISO sponsorship Agreement, and Three Party Agreement will govern  the  relationship and this Agreement shall be terminated without penalty or  prejudice;" ;
+    ct:supported_by ex:C088P0009 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C088R0002 a ct:Rule ;
+    rdfs:label "Termination — source passage 9" ;
+    ct:kind "TERMINATION" ;
+    ct:subject_to ex:C088R0002Condition9 ;
+    ct:supported_by ex:C088P0009 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C088R0002Condition9 a ct:Condition ;
+    ct:description "WHEREAS,  Affiliate  requires  a  referral  arrangement  while  Affiliate  is negotiating an ISO sponsorship agreement with Network 1 and Harris Bank and this Agreement  shall  govern  the agreement between the parties until such time that the  ISO  sponsorship agreement has been approval and executed in which case the Processing  Agreement, ISO sponsorship Agreement, and Three Party Agreement will govern  the  relationship and this Agreement shall be terminated without penalty or  prejudice;" ;
+    ct:supported_by ex:C088P0009 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C088R0003 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 24" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:supported_by ex:C088P0024 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C088R0004 a ct:Rule ;
+    rdfs:label "Conditional Referenced Term — source passage 25" ;
+    ct:kind "CONDITIONAL_REFERENCED_TERM" ;
+    ct:subject_to ex:C088R0004Condition25 ;
+    ct:supported_by ex:C088P0025 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C088R0004Condition25 a ct:Condition ;
+    ct:description "(A)     RIGHT  OF  FIRST  REFUSAL.  If during the term of this Agreement for any renewal of this Agreement (the \"Right of First Refusal Period\"), Affiliate shall receive (i) any Bona Fide Offer to purchase the revenue due Affiliate under this Agreement  or  Affiliate's company through an asset purchase or merger (in which case  Network  1  shall be subordinate to the Checkfree first refusal right), or (ii) a Bona Fide Offer to acquire or merge with or into Affiliate (in which case Network  1 shall be subordinate to the Checkfree first refusal right), Affiliate shall  immediately  give written notice (the \"Offer Notice\") to Network 1 of the terms  and  conditions  of the Bona Fide Offer, including without limitation the price.  Network  1  shall  have the exclusive right of first refusal to purchase all  or  any part of the revenue due Affiliate or acquire Affiliate (as the case may  be)  on the same terms and conditions as the Bona Fide Offer.  If Network 1 desires to exercise its rights under this Section it will give written notice to Affiliate  within  15  business  days  of  receipt of the Offer.  The failure by Network  1  to  exercise  its  rights within the 15-day period shall be deemed a waiver  of  such right.  " ;
+    ct:supported_by ex:C088P0025 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C088R0005 a ct:Rule ;
+    rdfs:label "Termination — source passage 26" ;
+    ct:kind "TERMINATION" ;
+    ct:references_section ex:C088R0005Ref0,
+        ex:C088R0005Ref1 ;
+    ct:subject_to ex:C088R0005Condition26 ;
+    ct:supported_by ex:C088P0026 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C088R0005Condition26 a ct:Condition ;
+    ct:description "Any changes in the terms of the Bona Fide Offer as well as  any  subsequent  Bona  Fide  Offer  received by Affiliate shall require full compliance  by  Affiliate  with  the  procedures  in  this  Section. (b)     CLIENT  shall have the right to withdraw (\"Transfer\") Merchants from the Merchant  Program,  provided  (i)  that CLIENT shall have given 120 days written notice to NET1, (ii) that Affiliate is not in, and has not breached any terms of this  Agreement,  (iii)  NW1  has  waived its rights in Section 2.03 (a)  [RETENTION OF CONTRACTORS] (iv) 18 months  have  lapsed  under this Agreement and (v) Affiliate pays the applicable Exit Fee as defined in section 7.6 (c) below.  NET1 agrees that it shall use its reasonable  efforts to cause the prompt and orderly Transfer of all Merchants to the  processor  or  processors  selected by Affiliate.  Affiliate agrees that in" ;
+    ct:supported_by ex:C088P0026 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C088R0005Ref0 a ct:Reference ;
+    rdfs:label "Section 2.03 (a)" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C088R0005Ref1 a ct:Reference ;
+    rdfs:label "section 7.6 (c)" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C088R0006 a ct:Rule ;
+    rdfs:label "Conditional Referenced Term — source passage 26" ;
+    ct:kind "CONDITIONAL_REFERENCED_TERM" ;
+    ct:references_section ex:C088R0006Ref0,
+        ex:C088R0006Ref1 ;
+    ct:subject_to ex:C088R0006Condition26 ;
+    ct:supported_by ex:C088P0026 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C088R0006Condition26 a ct:Condition ;
+    ct:description "Any changes in the terms of the Bona Fide Offer as well as  any  subsequent  Bona  Fide  Offer  received by Affiliate shall require full compliance  by  Affiliate  with  the  procedures  in  this  Section. (b)     CLIENT  shall have the right to withdraw (\"Transfer\") Merchants from the Merchant  Program,  provided  (i)  that CLIENT shall have given 120 days written notice to NET1, (ii) that Affiliate is not in, and has not breached any terms of this  Agreement,  (iii)  NW1  has  waived its rights in Section 2.03 (a)  [RETENTION OF CONTRACTORS] (iv) 18 months  have  lapsed  under this Agreement and (v) Affiliate pays the applicable Exit Fee as defined in section 7.6 (c) below.  NET1 agrees that it shall use its reasonable  efforts to cause the prompt and orderly Transfer of all Merchants to the  processor  or  processors  selected by Affiliate.  Affiliate agrees that in" ;
+    ct:supported_by ex:C088P0026 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C088R0006Ref0 a ct:Reference ;
+    rdfs:label "Section 2.03 (a)" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C088R0006Ref1 a ct:Reference ;
+    rdfs:label "section 7.6 (c)" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C088R0007 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 38" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:supported_by ex:C088P0038 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C088R0008 a ct:Rule ;
+    rdfs:label "Initial Term — source passage 43" ;
+    ct:kind "INITIAL_TERM" ;
+    ct:subject_to ex:C088R0008Condition43 ;
+    ct:supported_by ex:C088P0043 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C088R0008Condition43 a ct:Condition ;
+    ct:description "5.01     TERM.  The  term  (\"Term\")  of  this Agreement shall be for one hundred eighty  days  (180)  from  the  date set forth below unless Network 1 or Visa or MasterCard  or Harris Bank doesn't approve Affiliate's ISO application, in which case,  the  Term  will  be  3 years. This Agreement will automatically renew for successive  one-year  terms  unless  terminated by either party by providing the other  with  30  days  written notice that this Agreement will not be renewed or Affiliate  enters  into  a  Processing  agreement  with  Network  1  and  an ISO Sponsorship  agreement  with  Harris  Bank  in  which  case  this Agreement will automatically  terminate  concurrent  with  the  execution  of  such agreements." ;
+    ct:supported_by ex:C088P0043 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C088R0009 a ct:Rule ;
+    rdfs:label "Automatic Renewal — source passage 43" ;
+    ct:kind "AUTOMATIC_RENEWAL" ;
+    ct:subject_to ex:C088R0009Condition43 ;
+    ct:supported_by ex:C088P0043 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C088R0009Condition43 a ct:Condition ;
+    ct:description "5.01     TERM.  The  term  (\"Term\")  of  this Agreement shall be for one hundred eighty  days  (180)  from  the  date set forth below unless Network 1 or Visa or MasterCard  or Harris Bank doesn't approve Affiliate's ISO application, in which case,  the  Term  will  be  3 years. This Agreement will automatically renew for successive  one-year  terms  unless  terminated by either party by providing the other  with  30  days  written notice that this Agreement will not be renewed or Affiliate  enters  into  a  Processing  agreement  with  Network  1  and  an ISO Sponsorship  agreement  with  Harris  Bank  in  which  case  this Agreement will automatically  terminate  concurrent  with  the  execution  of  such agreements." ;
+    ct:supported_by ex:C088P0043 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C088R0010 a ct:Rule ;
+    rdfs:label "Conditional Referenced Term — source passage 43" ;
+    ct:kind "CONDITIONAL_REFERENCED_TERM" ;
+    ct:subject_to ex:C088R0010Condition43 ;
+    ct:supported_by ex:C088P0043 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C088R0010Condition43 a ct:Condition ;
+    ct:description "5.01     TERM.  The  term  (\"Term\")  of  this Agreement shall be for one hundred eighty  days  (180)  from  the  date set forth below unless Network 1 or Visa or MasterCard  or Harris Bank doesn't approve Affiliate's ISO application, in which case,  the  Term  will  be  3 years. This Agreement will automatically renew for successive  one-year  terms  unless  terminated by either party by providing the other  with  30  days  written notice that this Agreement will not be renewed or Affiliate  enters  into  a  Processing  agreement  with  Network  1  and  an ISO Sponsorship  agreement  with  Harris  Bank  in  which  case  this Agreement will automatically  terminate  concurrent  with  the  execution  of  such agreements." ;
+    ct:supported_by ex:C088P0043 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C088R0011 a ct:Rule ;
+    rdfs:label "Termination — source passage 44" ;
+    ct:kind "TERMINATION" ;
+    ct:subject_to ex:C088R0011Condition44 ;
+    ct:supported_by ex:C088P0044 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C088R0011Condition44 a ct:Condition ;
+    ct:description "5.02     TERMINATION.  Agreement  may  be  terminated prior to the conclusion of the  Term  by  giving  written  notice  of  termination: A.     By  either  party  as  a  result of default by the other party under this Agreement  and failure to cure said default within thirty (30) days after notice of  said  default  is  given. B.     By  either  party  in the event of insolvency, receivership, voluntary or involuntary  bankruptcy  or  an assignment for the benefit of creditors of or by the Affiliate other than in the ordinary course of business.  However, Affiliate may  pledge  or  otherwise  collateralize  assets  for  the  purpose of securing commercial  loans or lines of credit in the ordinary course of business provided that  such  pledge  is  subordinate  to an security interest associated with the Merchant  accounts  and/or  losses  from  such  accounts. C.     By  Affiliate  in  the event of any changes in the Affiliate's Fee (other than  direct  pass through increases related to Visa and MasterCard interchange, fees,  assessments  and  dues,  processor  communication costs, and other direct increases  including  terminal  hardware). D.     By Network 1, for cause. For purpose hereof; " ;
+    ct:supported_by ex:C088P0044 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C088R0012 a ct:Rule ;
+    rdfs:label "Conditional Referenced Term — source passage 45" ;
+    ct:kind "CONDITIONAL_REFERENCED_TERM" ;
+    ct:references_section ex:C088R0012Ref0 ;
+    ct:subject_to ex:C088R0012Condition45 ;
+    ct:supported_by ex:C088P0045 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C088R0012Condition45 a ct:Condition ;
+    ct:description "\"cause\" shall consist of (i) fraud,  intentional  misrepresentation  or  negligence  by  Affiliate  or  any Contractor  located  by  Affiliate  in  compiling  or  providing any information submitted  to  or relied on by Network 1 to Network 1, whether or not such fraud or  misrepresentation  is based on a misstatement, omission, a substantive fact, or  data;  (ii)  intentional  violations  by  the Affiliate or any Contractor(s) located by Affiliate of any of the rules or regulations of VISA, MasterCard, the Member Bank or Network 1; and (iii) the providing of vendor services or merchant services  by  Affiliate  or  Contractor(s)  located  by  Affiliate  which  are competitive  with  Network  1 or without the prior written consent of Network 1, contrary  to Section 1.01  [CONTRACTORS] and IV, violation of any clause of Network 1 Affiliate Office  Agreement  and  failure  to  cure  such  violation  within  30  days  of notification E.     By  Network  1 in the event any provision of the Sales Certificate or the Code  of  Ethics  is  in  breach  by  the  Affiliate or Contractor(s) located by Affiliate. F.      Affiliate  enters  into a Processing agreement with Network 1 and an ISO Sponsorship  agreement  with  Harris  Bank  in  which  case  this Agreement will automatically  terminate  concurrent  with  the  execution  of  such agreements.      " ;
+    ct:supported_by ex:C088P0045 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C088R0012Ref0 a ct:Reference ;
+    rdfs:label "Section 1.01" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C088R0013 a ct:Rule ;
+    rdfs:label "Termination — source passage 46" ;
+    ct:kind "TERMINATION" ;
+    ct:references_section ex:C088R0013Ref0 ;
+    ct:subject_to ex:C088R0013Condition46 ;
+    ct:supported_by ex:C088P0046 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C088R0013Condition46 a ct:Condition ;
+    ct:description "If  this  Agreement is terminated for cause, all rights of the Affiliate to future  payments  hereunder shall immediately terminate and Transferability will remain  in  place  in  accordance  with  Section  2.03  (b)  [RETENTION OF CONTRACTORS]  and  2.03  (c)." ;
+    ct:supported_by ex:C088P0046 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C088R0013Ref0 a ct:Reference ;
+    rdfs:label "Section  2.03  (b)" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C088R0014 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 47" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:references_section ex:C088R0014Ref0,
+        ex:C088R0014Ref1,
+        ex:C088R0014Ref2,
+        ex:C088R0014Ref3 ;
+    ct:subject_to ex:C088R0014Condition47 ;
+    ct:supported_by ex:C088P0047 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C088R0014Condition47 a ct:Condition ;
+    ct:description "5.03     EFFECT  OF  TERMINATION.  Upon termination of this Agreement, except in the  event  of  termination  due  to an uncured default by Affiliate pursuant to Section  5.02  [TERMINATION]A, Network 1 shall continue to pay to the Affiliate the Affiliate's Fee  described  in  Section  3.01  [AMOUNT]B for so long as Network 1 continues to process transactions  of the Merchants in accordance with Schedule B attached hereto and Affiliate  continues  to maintain the merchant accounts, provided, however, that no such Affiliate's Fees shall be earned or paid for any calendar month in which the  Affiliate's  Fee  does not exceed $500.  Upon termination due to an uncured default  by  Affiliate,  or  termination for cause pursuant to Section 5.02  [TERMINATION]D all Affiliates  fees  shall  cease  to  be  accrued  and  paid  immediately upon the occurrence  of  said  event. Additionally, upon termination of this contract for any  reason, all merchants recruited by Affiliate on behalf of Network 1 for any product  offered  through  Network  1,  Affiliate  shall  not approach, rewrite, pursue,  or  contract  with any current client for the purpose of obtaining said client as a new customer for Affiliate or any competing entity the Affiliate may be  in  contract  with.  " ;
+    ct:supported_by ex:C088P0047 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C088R0014Ref0 a ct:Reference ;
+    rdfs:label "Section  5.02" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C088R0014Ref1 a ct:Reference ;
+    rdfs:label "Section  3.01" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C088R0014Ref2 a ct:Reference ;
+    rdfs:label "Schedule B" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C088R0014Ref3 a ct:Reference ;
+    rdfs:label "Section 5.02" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C088R0015 a ct:Rule ;
+    rdfs:label "Termination — source passage 47" ;
+    ct:kind "TERMINATION" ;
+    ct:references_section ex:C088R0015Ref0,
+        ex:C088R0015Ref1,
+        ex:C088R0015Ref2,
+        ex:C088R0015Ref3 ;
+    ct:subject_to ex:C088R0015Condition47 ;
+    ct:supported_by ex:C088P0047 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C088R0015Condition47 a ct:Condition ;
+    ct:description "5.03     EFFECT  OF  TERMINATION.  Upon termination of this Agreement, except in the  event  of  termination  due  to an uncured default by Affiliate pursuant to Section  5.02  [TERMINATION]A, Network 1 shall continue to pay to the Affiliate the Affiliate's Fee  described  in  Section  3.01  [AMOUNT]B for so long as Network 1 continues to process transactions  of the Merchants in accordance with Schedule B attached hereto and Affiliate  continues  to maintain the merchant accounts, provided, however, that no such Affiliate's Fees shall be earned or paid for any calendar month in which the  Affiliate's  Fee  does not exceed $500.  Upon termination due to an uncured default  by  Affiliate,  or  termination for cause pursuant to Section 5.02  [TERMINATION]D all Affiliates  fees  shall  cease  to  be  accrued  and  paid  immediately upon the occurrence  of  said  event. Additionally, upon termination of this contract for any  reason, all merchants recruited by Affiliate on behalf of Network 1 for any product  offered  through  Network  1,  Affiliate  shall  not approach, rewrite, pursue,  or  contract  with any current client for the purpose of obtaining said client as a new customer for Affiliate or any competing entity the Affiliate may be  in  contract  with.  " ;
+    ct:supported_by ex:C088P0047 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C088R0015Ref0 a ct:Reference ;
+    rdfs:label "Section  5.02" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C088R0015Ref1 a ct:Reference ;
+    rdfs:label "Section  3.01" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C088R0015Ref2 a ct:Reference ;
+    rdfs:label "Schedule B" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C088R0015Ref3 a ct:Reference ;
+    rdfs:label "Section 5.02" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C088P0025 a ct:SourcePassage ;
+    ct:end_char 9654 ;
+    ct:exact_text "(A)     RIGHT  OF  FIRST  REFUSAL.  If during the term of this Agreement for any renewal of this Agreement (the \"Right of First Refusal Period\"), Affiliate shall receive (i) any Bona Fide Offer to purchase the revenue due Affiliate under this Agreement  or  Affiliate's company through an asset purchase or merger (in which case  Network  1  shall be subordinate to the Checkfree first refusal right), or (ii) a Bona Fide Offer to acquire or merge with or into Affiliate (in which case Network  1 shall be subordinate to the Checkfree first refusal right), Affiliate shall  immediately  give written notice (the \"Offer Notice\") to Network 1 of the terms  and  conditions  of the Bona Fide Offer, including without limitation the price.  Network  1  shall  have the exclusive right of first refusal to purchase all  or  any part of the revenue due Affiliate or acquire Affiliate (as the case may  be)  on the same terms and conditions as the Bona Fide Offer.  If Network 1 desires to exercise its rights under this Section it will give written notice to Affiliate  within  15  business  days  of  receipt of the Offer.  The failure by Network  1  to  exercise  its  rights within the 15-day period shall be deemed a waiver  of  such right.  " ;
+    ct:source_path "cuad/UsioInc_20040428_SB-2_EX-10.11_1723988_EX-10.11_Affiliate Agreement 2.txt" ;
+    ct:source_sha256 "42ae613e5bb22f1c5684f8215983db7ce2a1ae603db45a4b0d849f8942f9dc91" ;
+    ct:start_char 8414 .
+
+ex:C088P0044 a ct:SourcePassage ;
+    ct:end_char 17783 ;
+    ct:exact_text "5.02     TERMINATION.  Agreement  may  be  terminated prior to the conclusion of the  Term  by  giving  written  notice  of  termination: A.     By  either  party  as  a  result of default by the other party under this Agreement  and failure to cure said default within thirty (30) days after notice of  said  default  is  given. B.     By  either  party  in the event of insolvency, receivership, voluntary or involuntary  bankruptcy  or  an assignment for the benefit of creditors of or by the Affiliate other than in the ordinary course of business.  However, Affiliate may  pledge  or  otherwise  collateralize  assets  for  the  purpose of securing commercial  loans or lines of credit in the ordinary course of business provided that  such  pledge  is  subordinate  to an security interest associated with the Merchant  accounts  and/or  losses  from  such  accounts. C.     By  Affiliate  in  the event of any changes in the Affiliate's Fee (other than  direct  pass through increases related to Visa and MasterCard interchange, fees,  assessments  and  dues,  processor  communication costs, and other direct increases  including  terminal  hardware). D.     By Network 1, for cause. For purpose hereof; " ;
+    ct:source_path "cuad/UsioInc_20040428_SB-2_EX-10.11_1723988_EX-10.11_Affiliate Agreement 2.txt" ;
+    ct:source_sha256 "42ae613e5bb22f1c5684f8215983db7ce2a1ae603db45a4b0d849f8942f9dc91" ;
+    ct:start_char 16571 .
+
+ex:C088P0045 a ct:SourcePassage ;
+    ct:end_char 19148 ;
+    ct:exact_text "\"cause\" shall consist of (i) fraud,  intentional  misrepresentation  or  negligence  by  Affiliate  or  any Contractor  located  by  Affiliate  in  compiling  or  providing any information submitted  to  or relied on by Network 1 to Network 1, whether or not such fraud or  misrepresentation  is based on a misstatement, omission, a substantive fact, or  data;  (ii)  intentional  violations  by  the Affiliate or any Contractor(s) located by Affiliate of any of the rules or regulations of VISA, MasterCard, the Member Bank or Network 1; and (iii) the providing of vendor services or merchant services  by  Affiliate  or  Contractor(s)  located  by  Affiliate  which  are competitive  with  Network  1 or without the prior written consent of Network 1, contrary  to Section 1.01  [CONTRACTORS] and IV, violation of any clause of Network 1 Affiliate Office  Agreement  and  failure  to  cure  such  violation  within  30  days  of notification E.     By  Network  1 in the event any provision of the Sales Certificate or the Code  of  Ethics  is  in  breach  by  the  Affiliate or Contractor(s) located by Affiliate. F.      Affiliate  enters  into a Processing agreement with Network 1 and an ISO Sponsorship  agreement  with  Harris  Bank  in  which  case  this Agreement will automatically  terminate  concurrent  with  the  execution  of  such agreements.      " ;
+    ct:source_path "cuad/UsioInc_20040428_SB-2_EX-10.11_1723988_EX-10.11_Affiliate Agreement 2.txt" ;
+    ct:source_sha256 "42ae613e5bb22f1c5684f8215983db7ce2a1ae603db45a4b0d849f8942f9dc91" ;
+    ct:start_char 17783 .
+
+ex:C088P0046 a ct:SourcePassage ;
+    ct:end_char 19409 ;
+    ct:exact_text "If  this  Agreement is terminated for cause, all rights of the Affiliate to future  payments  hereunder shall immediately terminate and Transferability will remain  in  place  in  accordance  with  Section  2.03  (b)  [RETENTION OF CONTRACTORS]  and  2.03  (c)." ;
+    ct:source_path "cuad/UsioInc_20040428_SB-2_EX-10.11_1723988_EX-10.11_Affiliate Agreement 2.txt" ;
+    ct:source_sha256 "42ae613e5bb22f1c5684f8215983db7ce2a1ae603db45a4b0d849f8942f9dc91" ;
+    ct:start_char 19148 .
+
+ct:Agreement a owl:Class ;
+    rdfs:label "Agreement" .
+
+ex:C088P0009 a ct:SourcePassage ;
+    ct:end_char 2020 ;
+    ct:exact_text "WHEREAS,  Affiliate  requires  a  referral  arrangement  while  Affiliate  is negotiating an ISO sponsorship agreement with Network 1 and Harris Bank and this Agreement  shall  govern  the agreement between the parties until such time that the  ISO  sponsorship agreement has been approval and executed in which case the Processing  Agreement, ISO sponsorship Agreement, and Three Party Agreement will govern  the  relationship and this Agreement shall be terminated without penalty or  prejudice;" ;
+    ct:source_path "cuad/UsioInc_20040428_SB-2_EX-10.11_1723988_EX-10.11_Affiliate Agreement 2.txt" ;
+    ct:source_sha256 "42ae613e5bb22f1c5684f8215983db7ce2a1ae603db45a4b0d849f8942f9dc91" ;
+    ct:start_char 1523 .
+
+ex:C088P0026 a ct:SourcePassage ;
+    ct:end_char 10535 ;
+    ct:exact_text "Any changes in the terms of the Bona Fide Offer as well as  any  subsequent  Bona  Fide  Offer  received by Affiliate shall require full compliance  by  Affiliate  with  the  procedures  in  this  Section. (b)     CLIENT  shall have the right to withdraw (\"Transfer\") Merchants from the Merchant  Program,  provided  (i)  that CLIENT shall have given 120 days written notice to NET1, (ii) that Affiliate is not in, and has not breached any terms of this  Agreement,  (iii)  NW1  has  waived its rights in Section 2.03 (a)  [RETENTION OF CONTRACTORS] (iv) 18 months  have  lapsed  under this Agreement and (v) Affiliate pays the applicable Exit Fee as defined in section 7.6 (c) below.  NET1 agrees that it shall use its reasonable  efforts to cause the prompt and orderly Transfer of all Merchants to the  processor  or  processors  selected by Affiliate.  Affiliate agrees that in" ;
+    ct:source_path "cuad/UsioInc_20040428_SB-2_EX-10.11_1723988_EX-10.11_Affiliate Agreement 2.txt" ;
+    ct:source_sha256 "42ae613e5bb22f1c5684f8215983db7ce2a1ae603db45a4b0d849f8942f9dc91" ;
+    ct:start_char 9654 .
+
+ex:C088P0047 a ct:SourcePassage ;
+    ct:end_char 20691 ;
+    ct:exact_text "5.03     EFFECT  OF  TERMINATION.  Upon termination of this Agreement, except in the  event  of  termination  due  to an uncured default by Affiliate pursuant to Section  5.02  [TERMINATION]A, Network 1 shall continue to pay to the Affiliate the Affiliate's Fee  described  in  Section  3.01  [AMOUNT]B for so long as Network 1 continues to process transactions  of the Merchants in accordance with Schedule B attached hereto and Affiliate  continues  to maintain the merchant accounts, provided, however, that no such Affiliate's Fees shall be earned or paid for any calendar month in which the  Affiliate's  Fee  does not exceed $500.  Upon termination due to an uncured default  by  Affiliate,  or  termination for cause pursuant to Section 5.02  [TERMINATION]D all Affiliates  fees  shall  cease  to  be  accrued  and  paid  immediately upon the occurrence  of  said  event. Additionally, upon termination of this contract for any  reason, all merchants recruited by Affiliate on behalf of Network 1 for any product  offered  through  Network  1,  Affiliate  shall  not approach, rewrite, pursue,  or  contract  with any current client for the purpose of obtaining said client as a new customer for Affiliate or any competing entity the Affiliate may be  in  contract  with.  " ;
+    ct:source_path "cuad/UsioInc_20040428_SB-2_EX-10.11_1723988_EX-10.11_Affiliate Agreement 2.txt" ;
+    ct:source_sha256 "42ae613e5bb22f1c5684f8215983db7ce2a1ae603db45a4b0d849f8942f9dc91" ;
+    ct:start_char 19411 .
+
+ex:C088P0043 a ct:SourcePassage ;
+    ct:end_char 16569 ;
+    ct:exact_text "5.01     TERM.  The  term  (\"Term\")  of  this Agreement shall be for one hundred eighty  days  (180)  from  the  date set forth below unless Network 1 or Visa or MasterCard  or Harris Bank doesn't approve Affiliate's ISO application, in which case,  the  Term  will  be  3 years. This Agreement will automatically renew for successive  one-year  terms  unless  terminated by either party by providing the other  with  30  days  written notice that this Agreement will not be renewed or Affiliate  enters  into  a  Processing  agreement  with  Network  1  and  an ISO Sponsorship  agreement  with  Harris  Bank  in  which  case  this Agreement will automatically  terminate  concurrent  with  the  execution  of  such agreements." ;
+    ct:source_path "cuad/UsioInc_20040428_SB-2_EX-10.11_1723988_EX-10.11_Affiliate Agreement 2.txt" ;
+    ct:source_sha256 "42ae613e5bb22f1c5684f8215983db7ce2a1ae603db45a4b0d849f8942f9dc91" ;
+    ct:start_char 15841 .
+
+ct:SourcePassage a owl:Class ;
+    rdfs:label "SourcePassage" .
+
+ct:Condition a owl:Class ;
+    rdfs:label "Condition" .
+
+ct:Reference a owl:Class ;
+    rdfs:label "Reference" .
+
+ct:Rule a owl:Class ;
+    rdfs:label "Rule" .
+

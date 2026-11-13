@@ -1,0 +1,178 @@
+{
+  "document_id": "C003",
+  "file_path": "cuad/ALAMOGORDOFINANCIALCORP_12_16_1999-EX-1-AGENCY AGREEMENT.txt",
+  "model_digest": "0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0",
+  "rules": [
+    {
+      "passage_id": 16,
+      "kind": "TERMINATION",
+      "label": "Termination — source passage 16",
+      "condition_ids": [
+        16
+      ],
+      "reference_labels": [],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 16,
+      "kind": "OPTIONAL_RENEWAL",
+      "label": "Optional Renewal — source passage 16",
+      "condition_ids": [
+        16
+      ],
+      "reference_labels": [],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 17,
+      "kind": "TERMINATION",
+      "label": "Termination — source passage 17",
+      "condition_ids": [],
+      "reference_labels": [
+        "Section 2"
+      ],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 18,
+      "kind": "POST_EXPIRY_CONTINUATION",
+      "label": "Post Expiry Continuation — source passage 18",
+      "condition_ids": [],
+      "reference_labels": [],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 22,
+      "kind": "POST_EXPIRY_CONTINUATION",
+      "label": "Post Expiry Continuation — source passage 22",
+      "condition_ids": [],
+      "reference_labels": [],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 236,
+      "kind": "POST_EXPIRY_CONTINUATION",
+      "label": "Post Expiry Continuation — source passage 236",
+      "condition_ids": [],
+      "reference_labels": [
+        "Section  8",
+        "Section 9"
+      ],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 244,
+      "kind": "POST_EXPIRY_CONTINUATION",
+      "label": "Post Expiry Continuation — source passage 244",
+      "condition_ids": [],
+      "reference_labels": [
+        "Section 10",
+        "Section 8"
+      ],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 245,
+      "kind": "TERMINATION",
+      "label": "Termination — source passage 245",
+      "condition_ids": [],
+      "reference_labels": [
+        "Section 11"
+      ],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 246,
+      "kind": "TERMINATION",
+      "label": "Termination — source passage 246",
+      "condition_ids": [],
+      "reference_labels": [],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 249,
+      "kind": "TERMINATION",
+      "label": "Termination — source passage 249",
+      "condition_ids": [
+        249
+      ],
+      "reference_labels": [
+        "Section 7"
+      ],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 249,
+      "kind": "CONDITIONAL_REFERENCED_TERM",
+      "label": "Conditional Referenced Term — source passage 249",
+      "condition_ids": [
+        249
+      ],
+      "reference_labels": [
+        "Section 7"
+      ],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 250,
+      "kind": "TERMINATION",
+      "label": "Termination — source passage 250",
+      "condition_ids": [
+        250
+      ],
+      "reference_labels": [],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 251,
+      "kind": "TERMINATION",
+      "label": "Termination — source passage 251",
+      "condition_ids": [
+        251
+      ],
+      "reference_labels": [
+        "Section 5"
+      ],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 252,
+      "kind": "TERMINATION",
+      "label": "Termination — source passage 252",
+      "condition_ids": [],
+      "reference_labels": [],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    }
+  ],
+  "rejected_rules": [],
+  "review_status": "UNREVIEWED",
+  "coverage": "Lexically selected source windows; completeness not guaranteed."
+}

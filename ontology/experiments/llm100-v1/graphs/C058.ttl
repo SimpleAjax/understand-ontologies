@@ -1,0 +1,299 @@
+@prefix ct: <https://cimulink.local/ontology/contract-terms/0.1#> .
+@prefix ex: <https://cimulink.local/ontology/llm100-v1/> .
+@prefix meta: <https://cimulink.local/ontology/extraction#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ct: a owl:Ontology ;
+    rdfs:comment "Partial five-contract development sample. No claim of complete contract coverage or legal correctness." .
+
+ct:agreement_effective_from a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:applies_within a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:calendar_date_status a owl:DatatypeProperty .
+
+ct:coverage a owl:DatatypeProperty .
+
+ct:description a owl:DatatypeProperty .
+
+ct:duration a owl:DatatypeProperty .
+
+ct:duration_status a owl:DatatypeProperty .
+
+ct:end_char a owl:DatatypeProperty .
+
+ct:end_date_status a owl:DatatypeProperty .
+
+ct:ends_on_event a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:exact_text a owl:DatatypeProperty .
+
+ct:has_party a owl:ObjectProperty ;
+    rdfs:domain ct:Agreement ;
+    rdfs:range ct:Party .
+
+ct:has_rule a owl:ObjectProperty ;
+    rdfs:domain ct:Agreement ;
+    rdfs:range ct:Rule .
+
+ct:kind a owl:DatatypeProperty .
+
+ct:notice_actor a owl:DatatypeProperty .
+
+ct:notice_form a owl:DatatypeProperty .
+
+ct:notice_period_status a owl:DatatypeProperty .
+
+ct:qualifies a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Rule .
+
+ct:references_section a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:renewal_count a owl:DatatypeProperty .
+
+ct:resolution_status a owl:DatatypeProperty .
+
+ct:resolved_to a owl:ObjectProperty ;
+    rdfs:domain ct:Reference ;
+    rdfs:range ct:SourcePassage .
+
+ct:source_path a owl:DatatypeProperty .
+
+ct:source_sha256 a owl:DatatypeProperty .
+
+ct:start_char a owl:DatatypeProperty .
+
+ct:starts_from a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:stated_end_date a owl:DatatypeProperty .
+
+ct:subject_to a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Condition .
+
+ct:supported_by a owl:ObjectProperty ;
+    rdfs:range ct:SourcePassage .
+
+ct:termination_notice a owl:DatatypeProperty .
+
+ex:C058 a ct:Agreement ;
+    rdfs:label "NETGEAR,INC_04_21_2003-EX-10.16-DISTRIBUTOR AGREEMENT.txt" ;
+    ct:coverage "LOCAL_LLM_PROPOSED_PARTIAL; NOT_HUMAN_REVIEWED" ;
+    ct:has_rule ex:C058R0001,
+        ex:C058R0002,
+        ex:C058R0003,
+        ex:C058R0004,
+        ex:C058R0005,
+        ex:C058R0006,
+        ex:C058R0007,
+        ex:C058R0008,
+        ex:C058R0009,
+        ex:C058R0010,
+        ex:C058R0011,
+        ex:C058R0012 ;
+    ct:source_path "cuad/NETGEAR,INC_04_21_2003-EX-10.16-DISTRIBUTOR AGREEMENT.txt" ;
+    ct:source_sha256 "1b4a0744754138176a7a3081a9c89a859248df2013a56f6ef13eeccbc264c9a1" ;
+    meta:model_digest "0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0" .
+
+ct:Party a owl:Class ;
+    rdfs:label "Party" .
+
+ex:C058P0003 a ct:SourcePassage ;
+    ct:end_char 663 ;
+    ct:exact_text "NETGEAR Agreement Number: N115                     Effective Date: March 1, 1996                                                    Term: 1 Year" ;
+    ct:source_path "cuad/NETGEAR,INC_04_21_2003-EX-10.16-DISTRIBUTOR AGREEMENT.txt" ;
+    ct:source_sha256 "1b4a0744754138176a7a3081a9c89a859248df2013a56f6ef13eeccbc264c9a1" ;
+    ct:start_char 519 .
+
+ex:C058P0017 a ct:SourcePassage ;
+    ct:end_char 3881 ;
+    ct:exact_text "Subject to Distributor's performance of its obligations under this Agreement, Distributor is appointed as a NETGEAR Distributor and may purchase certain equipment (\"Hardware\") and licenses for software including revisions and updates (\"Software\"), as are listed in NETGEAR's then-current price list (the \"Price List\") for resale within the Territory (as defined below). During the initial one (1) year term of this Agreement. Distributor shall be the only distributor appointed by NETGEAR in the Territory, subject to Distributor conducting mutually agreed to marketing activities as described in the Marketing Plan to be developed and agreed to by and between the parties and which shall be attached to and made a part of this Agreement as Exhibit 4. For the purposes of this provision, distributor shall mean a company acquiring products directly from NETGEAR for resale or license to dealers or other second tier resellers which in turn resell or license the products to end use customers. The foregoing notwithstanding, during the initial one (1) year term and any subsequent period. " ;
+    ct:source_path "cuad/NETGEAR,INC_04_21_2003-EX-10.16-DISTRIBUTOR AGREEMENT.txt" ;
+    ct:source_sha256 "1b4a0744754138176a7a3081a9c89a859248df2013a56f6ef13eeccbc264c9a1" ;
+    ct:start_char 2793 .
+
+ex:C058P0103 a ct:SourcePassage ;
+    ct:end_char 31860 ;
+    ct:exact_text "B.       TERMINATION. This Agreement may be canceled at any time without cause, by either party upon ninety (90) days written notice to the other party. Either party may terminate this Agreement immediately if (i) the other party becomes insolvent, files or has filed against it a petition in bankruptcy, or ceases doing business; or (ii) the other party fails to cure a material breach of the Agreement within thirty (30) days after receipt of written notice of such breach from the party not in default. Upon termination of the Agreement by NETGEAR for Distributor's breach, NETGEAR may cancel all of Distributor's unfulfilled orders without further obligation. This Agreement may be terminated at any time without cause by either party upon ninety (90) days written notice to the other party." ;
+    ct:source_path "cuad/NETGEAR,INC_04_21_2003-EX-10.16-DISTRIBUTOR AGREEMENT.txt" ;
+    ct:source_sha256 "1b4a0744754138176a7a3081a9c89a859248df2013a56f6ef13eeccbc264c9a1" ;
+    ct:start_char 31065 .
+
+ex:C058P0104 a ct:SourcePassage ;
+    ct:end_char 32086 ;
+    ct:exact_text "C.       EFFECT OF TERMINATION. Except as otherwise specifically stated in the Agreement, neither party will be liable to the other for damages in any form by reason of the expiration or earlier termination of the Agreement." ;
+    ct:source_path "cuad/NETGEAR,INC_04_21_2003-EX-10.16-DISTRIBUTOR AGREEMENT.txt" ;
+    ct:source_sha256 "1b4a0744754138176a7a3081a9c89a859248df2013a56f6ef13eeccbc264c9a1" ;
+    ct:start_char 31862 .
+
+ex:C058P0105 a ct:SourcePassage ;
+    ct:end_char 32544 ;
+    ct:exact_text "D.       CONTINUING EFFECT. Any expiration or earlier termination of the Agreement does not modify or alter any of the obligations of the parties which accrued prior to such expiration or termination. The sections of the Agreement which address taxes; duty; fee; payment; security interest; proprietary rights and information; warranties; foreign reshipment; remedies; limitations; termination and governing law survive any expiration or termination of the" ;
+    ct:source_path "cuad/NETGEAR,INC_04_21_2003-EX-10.16-DISTRIBUTOR AGREEMENT.txt" ;
+    ct:source_sha256 "1b4a0744754138176a7a3081a9c89a859248df2013a56f6ef13eeccbc264c9a1" ;
+    ct:start_char 32088 .
+
+ex:C058P0106 a ct:SourcePassage ;
+    ct:end_char 32961 ;
+    ct:exact_text "Agreement. The section entitled SOFTWARE LICENSES also survives any expiration or termination provided Distributor and end-users continues to comply with the provisions of the applicable software license terms. Except as expressly agreed in writing between the parties, no party is liable to the other for any dollar amounts, costs or damages by reason of the expiration or earlier termination of the Agreement." ;
+    ct:source_path "cuad/NETGEAR,INC_04_21_2003-EX-10.16-DISTRIBUTOR AGREEMENT.txt" ;
+    ct:source_sha256 "1b4a0744754138176a7a3081a9c89a859248df2013a56f6ef13eeccbc264c9a1" ;
+    ct:start_char 32550 .
+
+ex:C058R0001 a ct:Rule ;
+    rdfs:label "Initial Term — source passage 3" ;
+    ct:kind "INITIAL_TERM" ;
+    ct:supported_by ex:C058P0003 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C058R0002 a ct:Rule ;
+    rdfs:label "Initial Term — source passage 17" ;
+    ct:kind "INITIAL_TERM" ;
+    ct:references_section ex:C058R0002Ref0 ;
+    ct:supported_by ex:C058P0017 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C058R0002Ref0 a ct:Reference ;
+    rdfs:label "Exhibit 4" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C058R0003 a ct:Rule ;
+    rdfs:label "Initial Term — source passage 18" ;
+    ct:kind "INITIAL_TERM" ;
+    ct:subject_to ex:C058R0003Condition18 ;
+    ct:supported_by ex:C058P0018 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C058R0003Condition18 a ct:Condition ;
+    ct:description "NETGEAR reserves the right to sell or license Products in the Territory to customers other than distributors such as, but not limited to resellers who procure Products at centralized locations for resale to end-use customers solely through their wholly or majority owned retail outlets, both store-front and catalog. Following the initial one (1) year term, for any extension or renewal term, Distributor's appointment as Distributor shall be non-exclusive and NETGEAR may appoint other distributors in the Territory at its sole discretion." ;
+    ct:supported_by ex:C058P0018 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C058R0004 a ct:Rule ;
+    rdfs:label "Optional Renewal — source passage 18" ;
+    ct:kind "OPTIONAL_RENEWAL" ;
+    ct:subject_to ex:C058R0004Condition18 ;
+    ct:supported_by ex:C058P0018 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C058R0004Condition18 a ct:Condition ;
+    ct:description "NETGEAR reserves the right to sell or license Products in the Territory to customers other than distributors such as, but not limited to resellers who procure Products at centralized locations for resale to end-use customers solely through their wholly or majority owned retail outlets, both store-front and catalog. Following the initial one (1) year term, for any extension or renewal term, Distributor's appointment as Distributor shall be non-exclusive and NETGEAR may appoint other distributors in the Territory at its sole discretion." ;
+    ct:supported_by ex:C058P0018 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C058R0005 a ct:Rule ;
+    rdfs:label "Termination — source passage 43" ;
+    ct:kind "TERMINATION" ;
+    ct:subject_to ex:C058R0005Condition43 ;
+    ct:supported_by ex:C058P0043 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C058R0005Condition43 a ct:Condition ;
+    ct:description "service charge provided NETGEAR has provided 10 days written notice to Distributor of Distributor's failure to pay. The foregoing notwithstanding, Distributor shall not be deemed in default under this provision if Distributor withholds payment of amounts legitimately in dispute on any invoice provided that (1) Distributor promptly pays the undisputed portion of the invoice in accordance with the terms of this Agreement; (2) Distributor provides NETGEAR with written notice of the disputed amount within 10 days of receipt of the invoice; and (3) Distributor works in good faith with NETGEAR to resolve any dispute within a reasonable time period." ;
+    ct:supported_by ex:C058P0043 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C058R0006 a ct:Rule ;
+    rdfs:label "Initial Term — source passage 102" ;
+    ct:kind "INITIAL_TERM" ;
+    ct:supported_by ex:C058P0102 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C058R0007 a ct:Rule ;
+    rdfs:label "Automatic Renewal — source passage 102" ;
+    ct:kind "AUTOMATIC_RENEWAL" ;
+    ct:supported_by ex:C058P0102 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C058R0008 a ct:Rule ;
+    rdfs:label "Termination — source passage 103" ;
+    ct:kind "TERMINATION" ;
+    ct:supported_by ex:C058P0103 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C058R0009 a ct:Rule ;
+    rdfs:label "Termination — source passage 104" ;
+    ct:kind "TERMINATION" ;
+    ct:supported_by ex:C058P0104 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C058R0010 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 105" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:supported_by ex:C058P0105 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C058R0011 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 106" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:supported_by ex:C058P0106 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C058R0012 a ct:Rule ;
+    rdfs:label "Conditional Referenced Term — source passage 123" ;
+    ct:kind "CONDITIONAL_REFERENCED_TERM" ;
+    ct:subject_to ex:C058R0012Condition123 ;
+    ct:supported_by ex:C058P0123 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C058R0012Condition123 a ct:Condition ;
+    ct:description "term under the Agreement will not be effective unless mutually agreed to in writing and signed by authorized representatives of both parties. Neither party shall be bound by typographical or clerical errors." ;
+    ct:supported_by ex:C058P0123 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C058P0043 a ct:SourcePassage ;
+    ct:end_char 11131 ;
+    ct:exact_text "service charge provided NETGEAR has provided 10 days written notice to Distributor of Distributor's failure to pay. The foregoing notwithstanding, Distributor shall not be deemed in default under this provision if Distributor withholds payment of amounts legitimately in dispute on any invoice provided that (1) Distributor promptly pays the undisputed portion of the invoice in accordance with the terms of this Agreement; (2) Distributor provides NETGEAR with written notice of the disputed amount within 10 days of receipt of the invoice; and (3) Distributor works in good faith with NETGEAR to resolve any dispute within a reasonable time period." ;
+    ct:source_path "cuad/NETGEAR,INC_04_21_2003-EX-10.16-DISTRIBUTOR AGREEMENT.txt" ;
+    ct:source_sha256 "1b4a0744754138176a7a3081a9c89a859248df2013a56f6ef13eeccbc264c9a1" ;
+    ct:start_char 10481 .
+
+ex:C058P0102 a ct:SourcePassage ;
+    ct:end_char 31063 ;
+    ct:exact_text "A.       TERM. This Agreement will be in effect for one year from the Effective Date and will automatically renew for successive one (1) year periods unless terminated as provided below." ;
+    ct:source_path "cuad/NETGEAR,INC_04_21_2003-EX-10.16-DISTRIBUTOR AGREEMENT.txt" ;
+    ct:source_sha256 "1b4a0744754138176a7a3081a9c89a859248df2013a56f6ef13eeccbc264c9a1" ;
+    ct:start_char 30877 .
+
+ex:C058P0123 a ct:SourcePassage ;
+    ct:end_char 38168 ;
+    ct:exact_text "term under the Agreement will not be effective unless mutually agreed to in writing and signed by authorized representatives of both parties. Neither party shall be bound by typographical or clerical errors." ;
+    ct:source_path "cuad/NETGEAR,INC_04_21_2003-EX-10.16-DISTRIBUTOR AGREEMENT.txt" ;
+    ct:source_sha256 "1b4a0744754138176a7a3081a9c89a859248df2013a56f6ef13eeccbc264c9a1" ;
+    ct:start_char 37961 .
+
+ct:Agreement a owl:Class ;
+    rdfs:label "Agreement" .
+
+ex:C058P0018 a ct:SourcePassage ;
+    ct:end_char 4421 ;
+    ct:exact_text "NETGEAR reserves the right to sell or license Products in the Territory to customers other than distributors such as, but not limited to resellers who procure Products at centralized locations for resale to end-use customers solely through their wholly or majority owned retail outlets, both store-front and catalog. Following the initial one (1) year term, for any extension or renewal term, Distributor's appointment as Distributor shall be non-exclusive and NETGEAR may appoint other distributors in the Territory at its sole discretion." ;
+    ct:source_path "cuad/NETGEAR,INC_04_21_2003-EX-10.16-DISTRIBUTOR AGREEMENT.txt" ;
+    ct:source_sha256 "1b4a0744754138176a7a3081a9c89a859248df2013a56f6ef13eeccbc264c9a1" ;
+    ct:start_char 3881 .
+
+ct:Condition a owl:Class ;
+    rdfs:label "Condition" .
+
+ct:Reference a owl:Class ;
+    rdfs:label "Reference" .
+
+ct:SourcePassage a owl:Class ;
+    rdfs:label "SourcePassage" .
+
+ct:Rule a owl:Class ;
+    rdfs:label "Rule" .
+

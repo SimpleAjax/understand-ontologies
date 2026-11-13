@@ -1,0 +1,353 @@
+@prefix ct: <https://cimulink.local/ontology/contract-terms/0.1#> .
+@prefix ex: <https://cimulink.local/ontology/llm100-v1/> .
+@prefix meta: <https://cimulink.local/ontology/extraction#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ct: a owl:Ontology ;
+    rdfs:comment "Partial five-contract development sample. No claim of complete contract coverage or legal correctness." .
+
+ct:agreement_effective_from a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:applies_within a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:calendar_date_status a owl:DatatypeProperty .
+
+ct:coverage a owl:DatatypeProperty .
+
+ct:description a owl:DatatypeProperty .
+
+ct:duration a owl:DatatypeProperty .
+
+ct:duration_status a owl:DatatypeProperty .
+
+ct:end_char a owl:DatatypeProperty .
+
+ct:end_date_status a owl:DatatypeProperty .
+
+ct:ends_on_event a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:exact_text a owl:DatatypeProperty .
+
+ct:has_party a owl:ObjectProperty ;
+    rdfs:domain ct:Agreement ;
+    rdfs:range ct:Party .
+
+ct:has_rule a owl:ObjectProperty ;
+    rdfs:domain ct:Agreement ;
+    rdfs:range ct:Rule .
+
+ct:kind a owl:DatatypeProperty .
+
+ct:notice_actor a owl:DatatypeProperty .
+
+ct:notice_form a owl:DatatypeProperty .
+
+ct:notice_period_status a owl:DatatypeProperty .
+
+ct:qualifies a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Rule .
+
+ct:references_section a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:renewal_count a owl:DatatypeProperty .
+
+ct:resolution_status a owl:DatatypeProperty .
+
+ct:resolved_to a owl:ObjectProperty ;
+    rdfs:domain ct:Reference ;
+    rdfs:range ct:SourcePassage .
+
+ct:source_path a owl:DatatypeProperty .
+
+ct:source_sha256 a owl:DatatypeProperty .
+
+ct:start_char a owl:DatatypeProperty .
+
+ct:starts_from a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:stated_end_date a owl:DatatypeProperty .
+
+ct:subject_to a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Condition .
+
+ct:supported_by a owl:ObjectProperty ;
+    rdfs:range ct:SourcePassage .
+
+ct:termination_notice a owl:DatatypeProperty .
+
+ex:C006 a ct:Agreement ;
+    rdfs:label "ASHWORTHINC_01_29_1999-EX-10.(D)-PROMOTION AGREEMENT AND NANTZ COMMUNICATIONS, INC..txt" ;
+    ct:coverage "LOCAL_LLM_PROPOSED_PARTIAL; NOT_HUMAN_REVIEWED" ;
+    ct:has_rule ex:C006R0001,
+        ex:C006R0002,
+        ex:C006R0003,
+        ex:C006R0004,
+        ex:C006R0005,
+        ex:C006R0006,
+        ex:C006R0007,
+        ex:C006R0008,
+        ex:C006R0009,
+        ex:C006R0010,
+        ex:C006R0011,
+        ex:C006R0012,
+        ex:C006R0013,
+        ex:C006R0014 ;
+    ct:source_path "cuad/ASHWORTHINC_01_29_1999-EX-10.(D)-PROMOTION AGREEMENT AND NANTZ COMMUNICATIONS, INC..txt" ;
+    ct:source_sha256 "977154e5d3a369d6eba47a390737030f8a6482bdf1a28dff81ca0427baac2ad3" ;
+    meta:model_digest "0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0" .
+
+ct:Party a owl:Class ;
+    rdfs:label "Party" .
+
+ex:C006P0013 a ct:SourcePassage ;
+    ct:end_char 2121 ;
+    ct:exact_text "CONTRACT YEAR shall mean a period of twelve (12) successive months commencing on any first day of June during the Term." ;
+    ct:source_path "cuad/ASHWORTHINC_01_29_1999-EX-10.(D)-PROMOTION AGREEMENT AND NANTZ COMMUNICATIONS, INC..txt" ;
+    ct:source_sha256 "977154e5d3a369d6eba47a390737030f8a6482bdf1a28dff81ca0427baac2ad3" ;
+    ct:start_char 2002 .
+
+ex:C006P0016 a ct:SourcePassage ;
+    ct:end_char 2712 ;
+    ct:exact_text "2.   TERM.  Except as otherwise provided herein, this Agreement shall commence      effective June 1, 1998, and shall continue for a term of three (3) years      expiring May 31, 2001 (the \"Term\")." ;
+    ct:source_path "cuad/ASHWORTHINC_01_29_1999-EX-10.(D)-PROMOTION AGREEMENT AND NANTZ COMMUNICATIONS, INC..txt" ;
+    ct:source_sha256 "977154e5d3a369d6eba47a390737030f8a6482bdf1a28dff81ca0427baac2ad3" ;
+    ct:start_char 2515 .
+
+ex:C006P0055 a ct:SourcePassage ;
+    ct:end_char 15108 ;
+    ct:exact_text "TERMINATION" ;
+    ct:source_path "cuad/ASHWORTHINC_01_29_1999-EX-10.(D)-PROMOTION AGREEMENT AND NANTZ COMMUNICATIONS, INC..txt" ;
+    ct:source_sha256 "977154e5d3a369d6eba47a390737030f8a6482bdf1a28dff81ca0427baac2ad3" ;
+    ct:start_char 15097 .
+
+ex:C006P0056 a ct:SourcePassage ;
+    ct:end_char 15187 ;
+    ct:exact_text "This Agreement may be terminated by any party in the following circumstances:" ;
+    ct:source_path "cuad/ASHWORTHINC_01_29_1999-EX-10.(D)-PROMOTION AGREEMENT AND NANTZ COMMUNICATIONS, INC..txt" ;
+    ct:source_sha256 "977154e5d3a369d6eba47a390737030f8a6482bdf1a28dff81ca0427baac2ad3" ;
+    ct:start_char 15110 .
+
+ex:C006P0058 a ct:SourcePassage ;
+    ct:end_char 15440 ;
+    ct:exact_text "19.  Nantz's Disability or death, in which event the Agreement shall terminate      on the May 1 following such Disability or death;" ;
+    ct:source_path "cuad/ASHWORTHINC_01_29_1999-EX-10.(D)-PROMOTION AGREEMENT AND NANTZ COMMUNICATIONS, INC..txt" ;
+    ct:source_sha256 "977154e5d3a369d6eba47a390737030f8a6482bdf1a28dff81ca0427baac2ad3" ;
+    ct:start_char 15308 .
+
+ex:C006P0067 a ct:SourcePassage ;
+    ct:end_char 18280 ;
+    ct:exact_text "From and after the termination of the Term all of the rights of the Company to the use of the Endorsement shall cease absolutely and the Company shall not thereafter use or refer to the Endorsement in advertising or promotion in any manner whatsoever.  The Company shall not advertise, promote, distribute or sell any item whatsoever in connection with the use of any name, figure, design, logo, trademark or trade name confusingly similar to or suggestive of the Endorsement following the termination of the Term." ;
+    ct:source_path "cuad/ASHWORTHINC_01_29_1999-EX-10.(D)-PROMOTION AGREEMENT AND NANTZ COMMUNICATIONS, INC..txt" ;
+    ct:source_sha256 "977154e5d3a369d6eba47a390737030f8a6482bdf1a28dff81ca0427baac2ad3" ;
+    ct:start_char 17766 .
+
+ex:C006R0001 a ct:Rule ;
+    rdfs:label "Initial Term — source passage 13" ;
+    ct:kind "INITIAL_TERM" ;
+    ct:supported_by ex:C006P0013 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C006R0002 a ct:Rule ;
+    rdfs:label "Initial Term — source passage 16" ;
+    ct:kind "INITIAL_TERM" ;
+    ct:supported_by ex:C006P0016 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C006R0003 a ct:Rule ;
+    rdfs:label "Conditional Referenced Term — source passage 46" ;
+    ct:kind "CONDITIONAL_REFERENCED_TERM" ;
+    ct:subject_to ex:C006R0003Condition46 ;
+    ct:supported_by ex:C006P0046 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C006R0003Condition46 a ct:Condition ;
+    ct:description "15.  The first Option to purchase 40,000 Shares upon payment of the aggregate      Option Share Price (as defined below) for the number of Shares so purchased      shall become exercisable on June 1, 1999, unless this Agreement is      terminated as provided herein prior to such date, in which case this Option      shall be canceled.  Once exercisable, this Option may be exercised in full      or in any number of partial exercises or in combination with the full or      partial exercise of any other Option for a period terminating upon the      earlier to occur of (A) the fifth anniversary of the initial exercisability      date or (B) the date of termination of this Agreement, as provided herein,      if this Agreement is terminated prior to May 30, 2001." ;
+    ct:supported_by ex:C006P0046 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C006R0004 a ct:Rule ;
+    rdfs:label "Termination — source passage 46" ;
+    ct:kind "TERMINATION" ;
+    ct:subject_to ex:C006R0004Condition46 ;
+    ct:supported_by ex:C006P0046 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C006R0004Condition46 a ct:Condition ;
+    ct:description "15.  The first Option to purchase 40,000 Shares upon payment of the aggregate      Option Share Price (as defined below) for the number of Shares so purchased      shall become exercisable on June 1, 1999, unless this Agreement is      terminated as provided herein prior to such date, in which case this Option      shall be canceled.  Once exercisable, this Option may be exercised in full      or in any number of partial exercises or in combination with the full or      partial exercise of any other Option for a period terminating upon the      earlier to occur of (A) the fifth anniversary of the initial exercisability      date or (B) the date of termination of this Agreement, as provided herein,      if this Agreement is terminated prior to May 30, 2001." ;
+    ct:supported_by ex:C006P0046 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C006R0005 a ct:Rule ;
+    rdfs:label "Conditional Referenced Term — source passage 47" ;
+    ct:kind "CONDITIONAL_REFERENCED_TERM" ;
+    ct:subject_to ex:C006R0005Condition47 ;
+    ct:supported_by ex:C006P0047 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C006R0005Condition47 a ct:Condition ;
+    ct:description "16.  The second Option to purchase up to an additional 40,000 shares upon      payment of the aggregate Option Share Price for the number of Shares so      purchased shall become exercisable on June 1, 2000, unless this Agreement      is terminated as provided herein prior to such date, in which case this      Option shall be canceled.  Once exercisable, this Option may be exercised      in full or in any number of partial exercises or in combination with the      full or partial exercise of any other Option for a period terminating upon      the earlier to occur of (A) the fifth anniversary of the initial      exercisability date or (B) the date of termination of this Agreement, as      provided herein, if this Agreement is terminated prior to May 30, 2001;" ;
+    ct:supported_by ex:C006P0047 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C006R0006 a ct:Rule ;
+    rdfs:label "Conditional Referenced Term — source passage 48" ;
+    ct:kind "CONDITIONAL_REFERENCED_TERM" ;
+    ct:subject_to ex:C006R0006Condition48 ;
+    ct:supported_by ex:C006P0048 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C006R0006Condition48 a ct:Condition ;
+    ct:description "17.  The third Option to purchase up to an additional 40,000 shares upon payment      of the aggregate Option Share Price for the number of Shares so purchased      shall become exercisable on June 1, 2001, unless this Agreement is      terminated as provided herein prior to such date, in which case this Option      shall be canceled.  Once exercisable, this Option may be exercised in full      or in any number of partial exercises or in combination with the full or      partial exercise of any other Option for a period terminating upon the      earlier to occur of (A) the fifth anniversary of the initial exercisability      date or (B) the date of termination of this Agreement, as provided herein,      if this Agreement is terminated prior to May 30, 2001;" ;
+    ct:supported_by ex:C006P0048 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C006R0007 a ct:Rule ;
+    rdfs:label "Termination — source passage 55" ;
+    ct:kind "TERMINATION" ;
+    ct:supported_by ex:C006P0055 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C006R0008 a ct:Rule ;
+    rdfs:label "Termination — source passage 56" ;
+    ct:kind "TERMINATION" ;
+    ct:supported_by ex:C006P0056 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C006R0009 a ct:Rule ;
+    rdfs:label "Termination — source passage 58" ;
+    ct:kind "TERMINATION" ;
+    ct:supported_by ex:C006P0058 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C006R0010 a ct:Rule ;
+    rdfs:label "Termination — source passage 61" ;
+    ct:kind "TERMINATION" ;
+    ct:subject_to ex:C006R0010Condition61 ;
+    ct:supported_by ex:C006P0061 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C006R0010Condition61 a ct:Condition ;
+    ct:description "22.  A finding of insolvency or bankruptcy against the other party (which, in      the case of a desired termination by the Company, shall mean Nantz      Communications or Nantz); and" ;
+    ct:supported_by ex:C006P0061 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C006R0011 a ct:Rule ;
+    rdfs:label "Termination — source passage 64" ;
+    ct:kind "TERMINATION" ;
+    ct:subject_to ex:C006R0011Condition64 ;
+    ct:supported_by ex:C006P0064 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C006R0011Condition64 a ct:Condition ;
+    ct:description "Notwithstanding the foregoing, upon the occurrence of repeated intentional failures to comply with the terms and conditions of this Agreement, which have been noticed in accordance with the terms hereof (regardless of whether such failures have been cured), the non-defaulting party may immediately terminate this Agreement upon written notice to the defaulting party without affording a further opportunity to cure." ;
+    ct:supported_by ex:C006P0064 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C006R0012 a ct:Rule ;
+    rdfs:label "Conditional Referenced Term — source passage 65" ;
+    ct:kind "CONDITIONAL_REFERENCED_TERM" ;
+    ct:subject_to ex:C006R0012Condition65 ;
+    ct:supported_by ex:C006P0065 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C006R0012Condition65 a ct:Condition ;
+    ct:description "Should Nantz Communications or Nantz disagree with the Company as to the existence of a condition affording the Company the right to so terminate this Agreement, Nantz Communications or Nantz shall, within thirty (30) days following the receipt of any such notice of termination, submit the matter to arbitration pursuant to the provisions of this Agreement." ;
+    ct:supported_by ex:C006P0065 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C006R0013 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 67" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:supported_by ex:C006P0067 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C006R0014 a ct:Rule ;
+    rdfs:label "Termination — source passage 69" ;
+    ct:kind "TERMINATION" ;
+    ct:subject_to ex:C006R0014Condition69 ;
+    ct:supported_by ex:C006P0069 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C006R0014Condition69 a ct:Condition ;
+    ct:description "any other.  In the event of the merger or consolidation of the Company with any other entity, Nantz Communications shall have the right to terminate the Agreement by so notifying the Company in writing on or before sixty (60) days" ;
+    ct:supported_by ex:C006P0069 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C006P0047 a ct:SourcePassage ;
+    ct:end_char 12859 ;
+    ct:exact_text "16.  The second Option to purchase up to an additional 40,000 shares upon      payment of the aggregate Option Share Price for the number of Shares so      purchased shall become exercisable on June 1, 2000, unless this Agreement      is terminated as provided herein prior to such date, in which case this      Option shall be canceled.  Once exercisable, this Option may be exercised      in full or in any number of partial exercises or in combination with the      full or partial exercise of any other Option for a period terminating upon      the earlier to occur of (A) the fifth anniversary of the initial      exercisability date or (B) the date of termination of this Agreement, as      provided herein, if this Agreement is terminated prior to May 30, 2001;" ;
+    ct:source_path "cuad/ASHWORTHINC_01_29_1999-EX-10.(D)-PROMOTION AGREEMENT AND NANTZ COMMUNICATIONS, INC..txt" ;
+    ct:source_sha256 "977154e5d3a369d6eba47a390737030f8a6482bdf1a28dff81ca0427baac2ad3" ;
+    ct:start_char 12091 .
+
+ex:C006P0048 a ct:SourcePassage ;
+    ct:end_char 13628 ;
+    ct:exact_text "17.  The third Option to purchase up to an additional 40,000 shares upon payment      of the aggregate Option Share Price for the number of Shares so purchased      shall become exercisable on June 1, 2001, unless this Agreement is      terminated as provided herein prior to such date, in which case this Option      shall be canceled.  Once exercisable, this Option may be exercised in full      or in any number of partial exercises or in combination with the full or      partial exercise of any other Option for a period terminating upon the      earlier to occur of (A) the fifth anniversary of the initial exercisability      date or (B) the date of termination of this Agreement, as provided herein,      if this Agreement is terminated prior to May 30, 2001;" ;
+    ct:source_path "cuad/ASHWORTHINC_01_29_1999-EX-10.(D)-PROMOTION AGREEMENT AND NANTZ COMMUNICATIONS, INC..txt" ;
+    ct:source_sha256 "977154e5d3a369d6eba47a390737030f8a6482bdf1a28dff81ca0427baac2ad3" ;
+    ct:start_char 12861 .
+
+ex:C006P0061 a ct:SourcePassage ;
+    ct:end_char 15878 ;
+    ct:exact_text "22.  A finding of insolvency or bankruptcy against the other party (which, in      the case of a desired termination by the Company, shall mean Nantz      Communications or Nantz); and" ;
+    ct:source_path "cuad/ASHWORTHINC_01_29_1999-EX-10.(D)-PROMOTION AGREEMENT AND NANTZ COMMUNICATIONS, INC..txt" ;
+    ct:source_sha256 "977154e5d3a369d6eba47a390737030f8a6482bdf1a28dff81ca0427baac2ad3" ;
+    ct:start_char 15694 .
+
+ex:C006P0064 a ct:SourcePassage ;
+    ct:end_char 16894 ;
+    ct:exact_text "Notwithstanding the foregoing, upon the occurrence of repeated intentional failures to comply with the terms and conditions of this Agreement, which have been noticed in accordance with the terms hereof (regardless of whether such failures have been cured), the non-defaulting party may immediately terminate this Agreement upon written notice to the defaulting party without affording a further opportunity to cure." ;
+    ct:source_path "cuad/ASHWORTHINC_01_29_1999-EX-10.(D)-PROMOTION AGREEMENT AND NANTZ COMMUNICATIONS, INC..txt" ;
+    ct:source_sha256 "977154e5d3a369d6eba47a390737030f8a6482bdf1a28dff81ca0427baac2ad3" ;
+    ct:start_char 16478 .
+
+ex:C006P0065 a ct:SourcePassage ;
+    ct:end_char 17254 ;
+    ct:exact_text "Should Nantz Communications or Nantz disagree with the Company as to the existence of a condition affording the Company the right to so terminate this Agreement, Nantz Communications or Nantz shall, within thirty (30) days following the receipt of any such notice of termination, submit the matter to arbitration pursuant to the provisions of this Agreement." ;
+    ct:source_path "cuad/ASHWORTHINC_01_29_1999-EX-10.(D)-PROMOTION AGREEMENT AND NANTZ COMMUNICATIONS, INC..txt" ;
+    ct:source_sha256 "977154e5d3a369d6eba47a390737030f8a6482bdf1a28dff81ca0427baac2ad3" ;
+    ct:start_char 16896 .
+
+ex:C006P0069 a ct:SourcePassage ;
+    ct:end_char 19910 ;
+    ct:exact_text "any other.  In the event of the merger or consolidation of the Company with any other entity, Nantz Communications shall have the right to terminate the Agreement by so notifying the Company in writing on or before sixty (60) days" ;
+    ct:source_path "cuad/ASHWORTHINC_01_29_1999-EX-10.(D)-PROMOTION AGREEMENT AND NANTZ COMMUNICATIONS, INC..txt" ;
+    ct:source_sha256 "977154e5d3a369d6eba47a390737030f8a6482bdf1a28dff81ca0427baac2ad3" ;
+    ct:start_char 19680 .
+
+ct:Agreement a owl:Class ;
+    rdfs:label "Agreement" .
+
+ex:C006P0046 a ct:SourcePassage ;
+    ct:end_char 12089 ;
+    ct:exact_text "15.  The first Option to purchase 40,000 Shares upon payment of the aggregate      Option Share Price (as defined below) for the number of Shares so purchased      shall become exercisable on June 1, 1999, unless this Agreement is      terminated as provided herein prior to such date, in which case this Option      shall be canceled.  Once exercisable, this Option may be exercised in full      or in any number of partial exercises or in combination with the full or      partial exercise of any other Option for a period terminating upon the      earlier to occur of (A) the fifth anniversary of the initial exercisability      date or (B) the date of termination of this Agreement, as provided herein,      if this Agreement is terminated prior to May 30, 2001." ;
+    ct:source_path "cuad/ASHWORTHINC_01_29_1999-EX-10.(D)-PROMOTION AGREEMENT AND NANTZ COMMUNICATIONS, INC..txt" ;
+    ct:source_sha256 "977154e5d3a369d6eba47a390737030f8a6482bdf1a28dff81ca0427baac2ad3" ;
+    ct:start_char 11323 .
+
+ct:Reference a owl:Class ;
+    rdfs:label "Reference" .
+
+ct:Condition a owl:Class ;
+    rdfs:label "Condition" .
+
+ct:SourcePassage a owl:Class ;
+    rdfs:label "SourcePassage" .
+
+ct:Rule a owl:Class ;
+    rdfs:label "Rule" .
+

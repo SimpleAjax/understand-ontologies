@@ -1,0 +1,257 @@
+@prefix ct: <https://cimulink.local/ontology/contract-terms/0.1#> .
+@prefix ex: <https://cimulink.local/ontology/llm100-v1/> .
+@prefix meta: <https://cimulink.local/ontology/extraction#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ct: a owl:Ontology ;
+    rdfs:comment "Partial five-contract development sample. No claim of complete contract coverage or legal correctness." .
+
+ct:agreement_effective_from a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:applies_within a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:calendar_date_status a owl:DatatypeProperty .
+
+ct:coverage a owl:DatatypeProperty .
+
+ct:description a owl:DatatypeProperty .
+
+ct:duration a owl:DatatypeProperty .
+
+ct:duration_status a owl:DatatypeProperty .
+
+ct:end_char a owl:DatatypeProperty .
+
+ct:end_date_status a owl:DatatypeProperty .
+
+ct:ends_on_event a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:exact_text a owl:DatatypeProperty .
+
+ct:has_party a owl:ObjectProperty ;
+    rdfs:domain ct:Agreement ;
+    rdfs:range ct:Party .
+
+ct:has_rule a owl:ObjectProperty ;
+    rdfs:domain ct:Agreement ;
+    rdfs:range ct:Rule .
+
+ct:kind a owl:DatatypeProperty .
+
+ct:notice_actor a owl:DatatypeProperty .
+
+ct:notice_form a owl:DatatypeProperty .
+
+ct:notice_period_status a owl:DatatypeProperty .
+
+ct:qualifies a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Rule .
+
+ct:references_section a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:renewal_count a owl:DatatypeProperty .
+
+ct:resolution_status a owl:DatatypeProperty .
+
+ct:resolved_to a owl:ObjectProperty ;
+    rdfs:domain ct:Reference ;
+    rdfs:range ct:SourcePassage .
+
+ct:source_path a owl:DatatypeProperty .
+
+ct:source_sha256 a owl:DatatypeProperty .
+
+ct:start_char a owl:DatatypeProperty .
+
+ct:starts_from a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:stated_end_date a owl:DatatypeProperty .
+
+ct:subject_to a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Condition .
+
+ct:supported_by a owl:ObjectProperty ;
+    rdfs:range ct:SourcePassage .
+
+ct:termination_notice a owl:DatatypeProperty .
+
+ex:C018 a ct:Agreement ;
+    rdfs:label "BerkshireHillsBancorpInc_20120809_10-Q_EX-10.16_7708169_EX-10.16_Endorsement Agreement.txt" ;
+    ct:coverage "LOCAL_LLM_PROPOSED_PARTIAL; NOT_HUMAN_REVIEWED" ;
+    ct:has_rule ex:C018R0001,
+        ex:C018R0002,
+        ex:C018R0003,
+        ex:C018R0004,
+        ex:C018R0005,
+        ex:C018R0006,
+        ex:C018R0007,
+        ex:C018R0008,
+        ex:C018R0009 ;
+    ct:source_path "cuad/BerkshireHillsBancorpInc_20120809_10-Q_EX-10.16_7708169_EX-10.16_Endorsement Agreement.txt" ;
+    ct:source_sha256 "a64e7166503fb0add16eb2f7a4466a9d6bb859868e427a59276160342da13867" ;
+    meta:model_digest "0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0" .
+
+ct:Party a owl:Class ;
+    rdfs:label "Party" .
+
+ex:C018P0002 a ct:SourcePassage ;
+    ct:end_char 2156 ;
+    ct:exact_text "b) \"SERVICES PERIOD\" means that period of time commencing upon the full execution of this Agreement by both Parties and  terminating on May 31, 2014 unless sooner terminated under this Agreement.     b) \"CONTRACT TERRITORY\" shall be any State in which Berkshire currently, or at any time during the Contract Period, offers  Banking Services.     c) \"FINANCIAL SERVICES\" shall mean banking, lending, financial and wealth management products and services offered by Berkshire  and insurance products and services offered by Berkshire's affiliate Berkshire Insurance Group, Inc.     d) \"AURIEMMA IDENTIFICATION\" shall mean any words, symbols, photographic or graphic representations, statements by  Auriemma or any combination thereof which identify Auriemma such as, for example, Auriemma's name, voice, nickname, likeness, and anything  else that identifies Auriemma. The Auriemma" ;
+    ct:source_path "cuad/BerkshireHillsBancorpInc_20120809_10-Q_EX-10.16_7708169_EX-10.16_Endorsement Agreement.txt" ;
+    ct:source_sha256 "a64e7166503fb0add16eb2f7a4466a9d6bb859868e427a59276160342da13867" ;
+    ct:start_char 1277 .
+
+ex:C018P0016 a ct:SourcePassage ;
+    ct:end_char 13020 ;
+    ct:exact_text "For the purpose of this Agreement, Confidential Information shall mean all information, materials and data, in any form, format or  medium, disclosed, or revealed to either party in any way relating to the other party's business including but not limited to its finances, customers,  operations, products, services, plans, pricing, suppliers, business strategies or any other similar information. Confidential Information may be  contained in written material, verbal or electronic communications.     10. TERMINATION AND DEFAULT.     a) TERMINATION FOR BREACH. Either Party shall have the right, without prejudice to any other rights it may have, to terminate this  Agreement if the other Party materially breaches its obligation hereunder and such breach remains uncured.     A material breach occurs if either Party (i) fails to make any payment, or (ii) fails to observe or perform any of the covenants, agreements, or  obligations (other than payments of money).     Upon the breach of either of the above conditions, the non-defaulting party may terminate this Agreement as follows: (A) as to a default under  clause (i) above, if payment is not made within ten (10) days after the defaulting party shall have received written notice of such failure to make  payment; " ;
+    ct:source_path "cuad/BerkshireHillsBancorpInc_20120809_10-Q_EX-10.16_7708169_EX-10.16_Endorsement Agreement.txt" ;
+    ct:source_sha256 "a64e7166503fb0add16eb2f7a4466a9d6bb859868e427a59276160342da13867" ;
+    ct:start_char 11746 .
+
+ex:C018P0021 a ct:SourcePassage ;
+    ct:end_char 16813 ;
+    ct:exact_text "(ii) Auriemma is convicted of a felony or criminal offense involving  dishonesty or fraud; or (iii) Auriemma publicly disparages Berkshire and/ or its products.     12. OTHER REMEDIES AND RIGHTS.     The termination rights set forth herein shall not constitute the exclusive remedy of the non-defaulting party. Termination in accordance with the  above provisions shall be without prejudice to any rights or claims, which the terminating party may otherwise have against the defaulting party.  In the event of any arbitration or litigation, including breach, enforcement or interpretation, arising out of this Agreement, the prevailing party" ;
+    ct:source_path "cuad/BerkshireHillsBancorpInc_20120809_10-Q_EX-10.16_7708169_EX-10.16_Endorsement Agreement.txt" ;
+    ct:source_sha256 "a64e7166503fb0add16eb2f7a4466a9d6bb859868e427a59276160342da13867" ;
+    ct:start_char 16172 .
+
+ex:C018R0001 a ct:Rule ;
+    rdfs:label "Initial Term — source passage 1" ;
+    ct:kind "INITIAL_TERM" ;
+    ct:references_section ex:C018R0001Ref0 ;
+    ct:subject_to ex:C018R0001Condition1 ;
+    ct:supported_by ex:C018P0001 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C018R0001Condition1 a ct:Condition ;
+    ct:description "Exhibit 10.16   ENDORSEMENT AGREEMENT     THIS ENDORSEMENT AGREEMENT (\"Agreement\") by and between GENO AURIEMMA (\"Auriemma\") and BERKSHIRE BANK, a  Massachusetts savings bank with its principal place of business at 24 North Street, Pittsfield, MA 01210 (\"Berkshire\")(Each or both of which shall  hereinafter be referred to as the \"PARTY\" or \"PARTIES,\" respectively).     RECITALS:     Berkshire desires to obtain the right to use the name, likeness, and endorsement services of Auriemma in connection with the advertisement  and promotion of Berkshire's Financial Services (as defined below).     The endorsement by Auriemma of Berkshire is of commercial value.     Berkshire and Auriemma wish to enter into an agreement to cooperate and coordinate the marketing of Auriemma's endorsement with  Berkshire's banking services.     NOW, THEREFORE for and in consideration of the foregoing, and the mutual covenants and agreements set forth herein, the Parties hereby  agree as follows:     1. DEFINITIONS.     The following terms shall be defined in the Agreement as follows:     a) \"CONTRACT PERIOD\" means that period of time commencing upon the full execution of this Agreement by both Parties and  terminating on May 31, 2016 unless sooner terminated under this Agreement.     " ;
+    ct:supported_by ex:C018P0001 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C018R0001Ref0 a ct:Reference ;
+    rdfs:label "Exhibit 10.16" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C018R0002 a ct:Rule ;
+    rdfs:label "Initial Term — source passage 2" ;
+    ct:kind "INITIAL_TERM" ;
+    ct:supported_by ex:C018P0002 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C018R0003 a ct:Rule ;
+    rdfs:label "Termination — source passage 16" ;
+    ct:kind "TERMINATION" ;
+    ct:supported_by ex:C018P0016 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C018R0004 a ct:Rule ;
+    rdfs:label "Termination — source passage 17" ;
+    ct:kind "TERMINATION" ;
+    ct:subject_to ex:C018R0004Condition17 ;
+    ct:supported_by ex:C018P0017 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C018R0004Condition17 a ct:Condition ;
+    ct:description "or (B) as to a default under clause (ii) above, if such default is not cured within thirty (30) days after the defaulting party shall have  received written notice specifying in reasonable detail the nature of such default and such action the defaulting party must take in order to cure  each such item of default.     b) TERMINATION DUE TO INSOLVENCY. If either Party (the \"Bankrupt Party\"), (i) commences or becomes the subject of any case  or proceeding under the" ;
+    ct:supported_by ex:C018P0017 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C018R0005 a ct:Rule ;
+    rdfs:label "Termination — source passage 19" ;
+    ct:kind "TERMINATION" ;
+    ct:supported_by ex:C018P0019 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C018R0006 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 19" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:supported_by ex:C018P0019 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C018R0007 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 20" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:subject_to ex:C018R0007Condition20 ;
+    ct:supported_by ex:C018P0020 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C018R0007Condition20 a ct:Condition ;
+    ct:description "(ii) except as otherwise provided herein, the Services  Period and the Contract Period shall end immediately and Berkshire shall promptly cease all use of the Auriemma Identification including any  displays, documents, artwork, symbols, logos trademarks, trade names, photographic or graphic representations, depictions and/or other materials  (including, but not limited to, advertising and/or promotional materials), which in any way or form (hard copy, electronic or otherwise) use the  Auriemma Identification (collectively, \"Materials\"), except as otherwise set forth herein; and (iii) except as otherwise provided herein, Berkshire  shall promptly remove all links and references to Auriemma and Materials from its website. Notwithstanding the foregoing, if the Agreement is  terminated for any reason other than Berkshire's material breach, then for thirty (30) days following such termination, Berkshire may continue to  use any printed material already produced under this Agreement. At the conclusion of this period, Berkshire's use of the printed material will  cease.     11. TERMINATION BY BERKSHIRE.     Berkshire may terminate this Agreement immediately by giving Auriemma notice if (i) Auriemma dies or is prevented by injury or illness from  satisfactorily performing the obligations required by this Agreement; " ;
+    ct:supported_by ex:C018P0020 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C018R0008 a ct:Rule ;
+    rdfs:label "Termination — source passage 20" ;
+    ct:kind "TERMINATION" ;
+    ct:subject_to ex:C018R0008Condition20 ;
+    ct:supported_by ex:C018P0020 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C018R0008Condition20 a ct:Condition ;
+    ct:description "(ii) except as otherwise provided herein, the Services  Period and the Contract Period shall end immediately and Berkshire shall promptly cease all use of the Auriemma Identification including any  displays, documents, artwork, symbols, logos trademarks, trade names, photographic or graphic representations, depictions and/or other materials  (including, but not limited to, advertising and/or promotional materials), which in any way or form (hard copy, electronic or otherwise) use the  Auriemma Identification (collectively, \"Materials\"), except as otherwise set forth herein; and (iii) except as otherwise provided herein, Berkshire  shall promptly remove all links and references to Auriemma and Materials from its website. Notwithstanding the foregoing, if the Agreement is  terminated for any reason other than Berkshire's material breach, then for thirty (30) days following such termination, Berkshire may continue to  use any printed material already produced under this Agreement. At the conclusion of this period, Berkshire's use of the printed material will  cease.     11. TERMINATION BY BERKSHIRE.     Berkshire may terminate this Agreement immediately by giving Auriemma notice if (i) Auriemma dies or is prevented by injury or illness from  satisfactorily performing the obligations required by this Agreement; " ;
+    ct:supported_by ex:C018P0020 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C018R0009 a ct:Rule ;
+    rdfs:label "Termination — source passage 21" ;
+    ct:kind "TERMINATION" ;
+    ct:supported_by ex:C018P0021 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C018P0001 a ct:SourcePassage ;
+    ct:end_char 1277 ;
+    ct:exact_text "Exhibit 10.16   ENDORSEMENT AGREEMENT     THIS ENDORSEMENT AGREEMENT (\"Agreement\") by and between GENO AURIEMMA (\"Auriemma\") and BERKSHIRE BANK, a  Massachusetts savings bank with its principal place of business at 24 North Street, Pittsfield, MA 01210 (\"Berkshire\")(Each or both of which shall  hereinafter be referred to as the \"PARTY\" or \"PARTIES,\" respectively).     RECITALS:     Berkshire desires to obtain the right to use the name, likeness, and endorsement services of Auriemma in connection with the advertisement  and promotion of Berkshire's Financial Services (as defined below).     The endorsement by Auriemma of Berkshire is of commercial value.     Berkshire and Auriemma wish to enter into an agreement to cooperate and coordinate the marketing of Auriemma's endorsement with  Berkshire's banking services.     NOW, THEREFORE for and in consideration of the foregoing, and the mutual covenants and agreements set forth herein, the Parties hereby  agree as follows:     1. DEFINITIONS.     The following terms shall be defined in the Agreement as follows:     a) \"CONTRACT PERIOD\" means that period of time commencing upon the full execution of this Agreement by both Parties and  terminating on May 31, 2016 unless sooner terminated under this Agreement.     " ;
+    ct:source_path "cuad/BerkshireHillsBancorpInc_20120809_10-Q_EX-10.16_7708169_EX-10.16_Endorsement Agreement.txt" ;
+    ct:source_sha256 "a64e7166503fb0add16eb2f7a4466a9d6bb859868e427a59276160342da13867" ;
+    ct:start_char 0 .
+
+ex:C018P0017 a ct:SourcePassage ;
+    ct:end_char 13486 ;
+    ct:exact_text "or (B) as to a default under clause (ii) above, if such default is not cured within thirty (30) days after the defaulting party shall have  received written notice specifying in reasonable detail the nature of such default and such action the defaulting party must take in order to cure  each such item of default.     b) TERMINATION DUE TO INSOLVENCY. If either Party (the \"Bankrupt Party\"), (i) commences or becomes the subject of any case  or proceeding under the" ;
+    ct:source_path "cuad/BerkshireHillsBancorpInc_20120809_10-Q_EX-10.16_7708169_EX-10.16_Endorsement Agreement.txt" ;
+    ct:source_sha256 "a64e7166503fb0add16eb2f7a4466a9d6bb859868e427a59276160342da13867" ;
+    ct:start_char 13020 .
+
+ex:C018P0019 a ct:SourcePassage ;
+    ct:end_char 14843 ;
+    ct:exact_text "bankruptcy or insolvency laws; (ii) has appointed for it or for any substantial part of its property a court-appointed receiver, liquidator, assignee,  trustee, custodian, sequestrator or other similar official; (iii) makes an assignment or the benefit of its credits; (iv) fails generally to pay its debts as  they become due; or (v) takes corporate action in furtherance of any of the foregoing (collectively, herein referred to as \"Events of Insolvency\"),  then, in each case, the Bankrupt Party shall immediately give notice of such event to the other Party. Whether or not such notice is given, the  other Party shall have the right, to the fullest extent permitted under applicable law, following the occurrence of any Event of Insolvency and  without prejudice to any other rights it may have, at any time thereafter to terminate this Agreement, effective immediately upon giving notice to  the Bankrupt Party.     c) EFFECT OF TERMINATION. Upon the expiration or termination of this Agreement for any reason (i) all payments that have accrued  prior to the termination or expiration of this Agreement will be payable in full within thirty (30) days thereof, but any obligations to make further  payments due, or that may have come due, under this Agreement shall become null and void; " ;
+    ct:source_path "cuad/BerkshireHillsBancorpInc_20120809_10-Q_EX-10.16_7708169_EX-10.16_Endorsement Agreement.txt" ;
+    ct:source_sha256 "a64e7166503fb0add16eb2f7a4466a9d6bb859868e427a59276160342da13867" ;
+    ct:start_char 13550 .
+
+ct:Agreement a owl:Class ;
+    rdfs:label "Agreement" .
+
+ex:C018P0020 a ct:SourcePassage ;
+    ct:end_char 16172 ;
+    ct:exact_text "(ii) except as otherwise provided herein, the Services  Period and the Contract Period shall end immediately and Berkshire shall promptly cease all use of the Auriemma Identification including any  displays, documents, artwork, symbols, logos trademarks, trade names, photographic or graphic representations, depictions and/or other materials  (including, but not limited to, advertising and/or promotional materials), which in any way or form (hard copy, electronic or otherwise) use the  Auriemma Identification (collectively, \"Materials\"), except as otherwise set forth herein; and (iii) except as otherwise provided herein, Berkshire  shall promptly remove all links and references to Auriemma and Materials from its website. Notwithstanding the foregoing, if the Agreement is  terminated for any reason other than Berkshire's material breach, then for thirty (30) days following such termination, Berkshire may continue to  use any printed material already produced under this Agreement. At the conclusion of this period, Berkshire's use of the printed material will  cease.     11. TERMINATION BY BERKSHIRE.     Berkshire may terminate this Agreement immediately by giving Auriemma notice if (i) Auriemma dies or is prevented by injury or illness from  satisfactorily performing the obligations required by this Agreement; " ;
+    ct:source_path "cuad/BerkshireHillsBancorpInc_20120809_10-Q_EX-10.16_7708169_EX-10.16_Endorsement Agreement.txt" ;
+    ct:source_sha256 "a64e7166503fb0add16eb2f7a4466a9d6bb859868e427a59276160342da13867" ;
+    ct:start_char 14843 .
+
+ct:Condition a owl:Class ;
+    rdfs:label "Condition" .
+
+ct:Reference a owl:Class ;
+    rdfs:label "Reference" .
+
+ct:SourcePassage a owl:Class ;
+    rdfs:label "SourcePassage" .
+
+ct:Rule a owl:Class ;
+    rdfs:label "Rule" .
+

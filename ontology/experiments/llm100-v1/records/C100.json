@@ -1,0 +1,151 @@
+{
+  "document_id": "C100",
+  "file_path": "cuad/ZEBRATECHNOLOGIESCORP_04_16_2014-EX-10.1-INTELLECTUAL PROPERTY AGREEMENT.txt",
+  "model_digest": "0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0",
+  "rules": [
+    {
+      "passage_id": 185,
+      "kind": "INITIAL_TERM",
+      "label": "Initial Term — source passage 185",
+      "condition_ids": [
+        185
+      ],
+      "reference_labels": [
+        "Section 4.2(ii)(c)"
+      ],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 206,
+      "kind": "TERMINATION",
+      "label": "Termination — source passage 206",
+      "condition_ids": [
+        206
+      ],
+      "reference_labels": [],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 238,
+      "kind": "INITIAL_TERM",
+      "label": "Initial Term — source passage 238",
+      "condition_ids": [
+        238
+      ],
+      "reference_labels": [
+        "Section 4.1",
+        "Article III",
+        "Section 4.3"
+      ],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 238,
+      "kind": "CONDITIONAL_REFERENCED_TERM",
+      "label": "Conditional Referenced Term — source passage 238",
+      "condition_ids": [
+        238
+      ],
+      "reference_labels": [
+        "Section 4.1",
+        "Article III",
+        "Section 4.3"
+      ],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 239,
+      "kind": "TERMINATION",
+      "label": "Termination — source passage 239",
+      "condition_ids": [
+        239
+      ],
+      "reference_labels": [
+        "Section 4.2",
+        "Section 2.4(a)"
+      ],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 240,
+      "kind": "TERMINATION",
+      "label": "Termination — source passage 240",
+      "condition_ids": [
+        240
+      ],
+      "reference_labels": [
+        "Section 2.2(c)"
+      ],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 240,
+      "kind": "CONDITIONAL_REFERENCED_TERM",
+      "label": "Conditional Referenced Term — source passage 240",
+      "condition_ids": [
+        240
+      ],
+      "reference_labels": [
+        "Section 2.2(c)"
+      ],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 241,
+      "kind": "CONDITIONAL_REFERENCED_TERM",
+      "label": "Conditional Referenced Term — source passage 241",
+      "condition_ids": [
+        241
+      ],
+      "reference_labels": [
+        "Section 4.3"
+      ],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 242,
+      "kind": "POST_EXPIRY_CONTINUATION",
+      "label": "Post Expiry Continuation — source passage 242",
+      "condition_ids": [
+        242
+      ],
+      "reference_labels": [
+        "Section 4.4",
+        "Section 4.3",
+        "Article V",
+        "Section 6.1",
+        "Section 6.2",
+        "Section 6.6",
+        "Section 6.7",
+        "Section 6.8",
+        "Section 6.9",
+        "Section 6.10",
+        "Section 6.11",
+        "Section 6.12",
+        "Section 6.13"
+      ],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    }
+  ],
+  "rejected_rules": [],
+  "review_status": "UNREVIEWED",
+  "coverage": "Lexically selected source windows; completeness not guaranteed."
+}

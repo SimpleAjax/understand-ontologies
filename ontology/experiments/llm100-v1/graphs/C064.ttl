@@ -1,0 +1,175 @@
+@prefix ct: <https://cimulink.local/ontology/contract-terms/0.1#> .
+@prefix ex: <https://cimulink.local/ontology/llm100-v1/> .
+@prefix meta: <https://cimulink.local/ontology/extraction#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ct: a owl:Ontology ;
+    rdfs:comment "Partial five-contract development sample. No claim of complete contract coverage or legal correctness." .
+
+ct:agreement_effective_from a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:applies_within a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:calendar_date_status a owl:DatatypeProperty .
+
+ct:coverage a owl:DatatypeProperty .
+
+ct:description a owl:DatatypeProperty .
+
+ct:duration a owl:DatatypeProperty .
+
+ct:duration_status a owl:DatatypeProperty .
+
+ct:end_char a owl:DatatypeProperty .
+
+ct:end_date_status a owl:DatatypeProperty .
+
+ct:ends_on_event a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:exact_text a owl:DatatypeProperty .
+
+ct:has_party a owl:ObjectProperty ;
+    rdfs:domain ct:Agreement ;
+    rdfs:range ct:Party .
+
+ct:has_rule a owl:ObjectProperty ;
+    rdfs:domain ct:Agreement ;
+    rdfs:range ct:Rule .
+
+ct:kind a owl:DatatypeProperty .
+
+ct:notice_actor a owl:DatatypeProperty .
+
+ct:notice_form a owl:DatatypeProperty .
+
+ct:notice_period_status a owl:DatatypeProperty .
+
+ct:qualifies a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Rule .
+
+ct:references_section a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:renewal_count a owl:DatatypeProperty .
+
+ct:resolution_status a owl:DatatypeProperty .
+
+ct:resolved_to a owl:ObjectProperty ;
+    rdfs:domain ct:Reference ;
+    rdfs:range ct:SourcePassage .
+
+ct:source_path a owl:DatatypeProperty .
+
+ct:source_sha256 a owl:DatatypeProperty .
+
+ct:start_char a owl:DatatypeProperty .
+
+ct:starts_from a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:stated_end_date a owl:DatatypeProperty .
+
+ct:subject_to a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Condition .
+
+ct:supported_by a owl:ObjectProperty ;
+    rdfs:range ct:SourcePassage .
+
+ct:termination_notice a owl:DatatypeProperty .
+
+ex:C064 a ct:Agreement ;
+    rdfs:label "PFSFUNDS_06_26_2020-EX-99.H OTH MAT CONT-SERVICES AGREEMENT.txt" ;
+    ct:coverage "LOCAL_LLM_PROPOSED_PARTIAL; NOT_HUMAN_REVIEWED" ;
+    ct:has_rule ex:C064R0001,
+        ex:C064R0002,
+        ex:C064R0003,
+        ex:C064R0004 ;
+    ct:source_path "cuad/PFSFUNDS_06_26_2020-EX-99.H OTH MAT CONT-SERVICES AGREEMENT.txt" ;
+    ct:source_sha256 "5e5547691fe99cd023da22a15b906d7c5d506a416da4902a653efea4900170e4" ;
+    meta:model_digest "0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0" .
+
+ct:Party a owl:Class ;
+    rdfs:label "Party" .
+
+ex:C064R0001 a ct:Rule ;
+    rdfs:label "Initial Term — source passage 22" ;
+    ct:kind "INITIAL_TERM" ;
+    ct:subject_to ex:C064R0001Condition22 ;
+    ct:supported_by ex:C064P0022 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C064R0001Condition22 a ct:Condition ;
+    ct:description "9. Renewal and Termination. The term of this Services Agreement shall begin on the date of execution and shall continue in effect for a period of two years. This Services Agreement shall continue in effect from year to year thereafter, subject to termination as hereinafter provided, if such continuance is approved at least annually by vote of a majority of the Trustees who are not interested persons of the Trust or the Adviser. This Agreement may be terminated without the payment of any penalty by either party upon sixty (60) days' written notice to the other party. Upon the termination of this Agreement, the Trust shall pay the Adviser such compensation as may be payable for the period prior to the effective date of such termination. This Agreement shall automatically terminate in the event the Management Agreement is assigned or otherwise terminated." ;
+    ct:supported_by ex:C064P0022 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C064R0002 a ct:Rule ;
+    rdfs:label "Optional Renewal — source passage 22" ;
+    ct:kind "OPTIONAL_RENEWAL" ;
+    ct:subject_to ex:C064R0002Condition22 ;
+    ct:supported_by ex:C064P0022 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C064R0002Condition22 a ct:Condition ;
+    ct:description "9. Renewal and Termination. The term of this Services Agreement shall begin on the date of execution and shall continue in effect for a period of two years. This Services Agreement shall continue in effect from year to year thereafter, subject to termination as hereinafter provided, if such continuance is approved at least annually by vote of a majority of the Trustees who are not interested persons of the Trust or the Adviser. This Agreement may be terminated without the payment of any penalty by either party upon sixty (60) days' written notice to the other party. Upon the termination of this Agreement, the Trust shall pay the Adviser such compensation as may be payable for the period prior to the effective date of such termination. This Agreement shall automatically terminate in the event the Management Agreement is assigned or otherwise terminated." ;
+    ct:supported_by ex:C064P0022 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C064R0003 a ct:Rule ;
+    rdfs:label "Termination — source passage 22" ;
+    ct:kind "TERMINATION" ;
+    ct:subject_to ex:C064R0003Condition22 ;
+    ct:supported_by ex:C064P0022 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C064R0003Condition22 a ct:Condition ;
+    ct:description "9. Renewal and Termination. The term of this Services Agreement shall begin on the date of execution and shall continue in effect for a period of two years. This Services Agreement shall continue in effect from year to year thereafter, subject to termination as hereinafter provided, if such continuance is approved at least annually by vote of a majority of the Trustees who are not interested persons of the Trust or the Adviser. This Agreement may be terminated without the payment of any penalty by either party upon sixty (60) days' written notice to the other party. Upon the termination of this Agreement, the Trust shall pay the Adviser such compensation as may be payable for the period prior to the effective date of such termination. This Agreement shall automatically terminate in the event the Management Agreement is assigned or otherwise terminated." ;
+    ct:supported_by ex:C064P0022 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C064R0004 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 22" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:subject_to ex:C064R0004Condition22 ;
+    ct:supported_by ex:C064P0022 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C064R0004Condition22 a ct:Condition ;
+    ct:description "9. Renewal and Termination. The term of this Services Agreement shall begin on the date of execution and shall continue in effect for a period of two years. This Services Agreement shall continue in effect from year to year thereafter, subject to termination as hereinafter provided, if such continuance is approved at least annually by vote of a majority of the Trustees who are not interested persons of the Trust or the Adviser. This Agreement may be terminated without the payment of any penalty by either party upon sixty (60) days' written notice to the other party. Upon the termination of this Agreement, the Trust shall pay the Adviser such compensation as may be payable for the period prior to the effective date of such termination. This Agreement shall automatically terminate in the event the Management Agreement is assigned or otherwise terminated." ;
+    ct:supported_by ex:C064P0022 ;
+    meta:review_status "UNREVIEWED" .
+
+ct:Agreement a owl:Class ;
+    rdfs:label "Agreement" .
+
+ct:SourcePassage a owl:Class ;
+    rdfs:label "SourcePassage" .
+
+ct:Condition a owl:Class ;
+    rdfs:label "Condition" .
+
+ct:Reference a owl:Class ;
+    rdfs:label "Reference" .
+
+ex:C064P0022 a ct:SourcePassage ;
+    ct:end_char 12996 ;
+    ct:exact_text "9. Renewal and Termination. The term of this Services Agreement shall begin on the date of execution and shall continue in effect for a period of two years. This Services Agreement shall continue in effect from year to year thereafter, subject to termination as hereinafter provided, if such continuance is approved at least annually by vote of a majority of the Trustees who are not interested persons of the Trust or the Adviser. This Agreement may be terminated without the payment of any penalty by either party upon sixty (60) days' written notice to the other party. Upon the termination of this Agreement, the Trust shall pay the Adviser such compensation as may be payable for the period prior to the effective date of such termination. This Agreement shall automatically terminate in the event the Management Agreement is assigned or otherwise terminated." ;
+    ct:source_path "cuad/PFSFUNDS_06_26_2020-EX-99.H OTH MAT CONT-SERVICES AGREEMENT.txt" ;
+    ct:source_sha256 "5e5547691fe99cd023da22a15b906d7c5d506a416da4902a653efea4900170e4" ;
+    ct:start_char 12132 .
+
+ct:Rule a owl:Class ;
+    rdfs:label "Rule" .
+

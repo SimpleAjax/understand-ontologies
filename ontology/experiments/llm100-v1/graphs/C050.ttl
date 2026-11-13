@@ -1,0 +1,349 @@
+@prefix ct: <https://cimulink.local/ontology/contract-terms/0.1#> .
+@prefix ex: <https://cimulink.local/ontology/llm100-v1/> .
+@prefix meta: <https://cimulink.local/ontology/extraction#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ct: a owl:Ontology ;
+    rdfs:comment "Partial five-contract development sample. No claim of complete contract coverage or legal correctness." .
+
+ct:agreement_effective_from a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:applies_within a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:calendar_date_status a owl:DatatypeProperty .
+
+ct:coverage a owl:DatatypeProperty .
+
+ct:description a owl:DatatypeProperty .
+
+ct:duration a owl:DatatypeProperty .
+
+ct:duration_status a owl:DatatypeProperty .
+
+ct:end_char a owl:DatatypeProperty .
+
+ct:end_date_status a owl:DatatypeProperty .
+
+ct:ends_on_event a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:exact_text a owl:DatatypeProperty .
+
+ct:has_party a owl:ObjectProperty ;
+    rdfs:domain ct:Agreement ;
+    rdfs:range ct:Party .
+
+ct:has_rule a owl:ObjectProperty ;
+    rdfs:domain ct:Agreement ;
+    rdfs:range ct:Rule .
+
+ct:kind a owl:DatatypeProperty .
+
+ct:notice_actor a owl:DatatypeProperty .
+
+ct:notice_form a owl:DatatypeProperty .
+
+ct:notice_period_status a owl:DatatypeProperty .
+
+ct:qualifies a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Rule .
+
+ct:references_section a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:renewal_count a owl:DatatypeProperty .
+
+ct:resolution_status a owl:DatatypeProperty .
+
+ct:resolved_to a owl:ObjectProperty ;
+    rdfs:domain ct:Reference ;
+    rdfs:range ct:SourcePassage .
+
+ct:source_path a owl:DatatypeProperty .
+
+ct:source_sha256 a owl:DatatypeProperty .
+
+ct:start_char a owl:DatatypeProperty .
+
+ct:starts_from a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:stated_end_date a owl:DatatypeProperty .
+
+ct:subject_to a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Condition .
+
+ct:supported_by a owl:ObjectProperty ;
+    rdfs:range ct:SourcePassage .
+
+ct:termination_notice a owl:DatatypeProperty .
+
+ex:C050 a ct:Agreement ;
+    rdfs:label "ImineCorp_20180725_S-1_EX-10.5_11275970_EX-10.5_Distributor Agreement.txt" ;
+    ct:coverage "LOCAL_LLM_PROPOSED_PARTIAL; NOT_HUMAN_REVIEWED" ;
+    ct:has_rule ex:C050R0001,
+        ex:C050R0002,
+        ex:C050R0003,
+        ex:C050R0004,
+        ex:C050R0005,
+        ex:C050R0006,
+        ex:C050R0007,
+        ex:C050R0008,
+        ex:C050R0009,
+        ex:C050R0010,
+        ex:C050R0011 ;
+    ct:source_path "cuad/ImineCorp_20180725_S-1_EX-10.5_11275970_EX-10.5_Distributor Agreement.txt" ;
+    ct:source_sha256 "defee8695f6aab9389fab7e5787a43b583db560688d8dcc698859c12903c4c6c" ;
+    meta:model_digest "0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0" .
+
+ct:Party a owl:Class ;
+    rdfs:label "Party" .
+
+ex:C050P0020 a ct:SourcePassage ;
+    ct:end_char 18683 ;
+    ct:exact_text "8.5 Use of Trade Names. The Distributor will present and promote the sale of the Products fairly. The Distributor may use JRVS's product names in the Distributor's advertising and promotional media provided (i) that the Distributor conspicuously indicates in all such media that such names are trademarks of JRVS and (ii) that the Distributor submits all such media to JRVS for prior approval and complies with the requirements set forth in Section 8.4. Upon termination of this Agreement for any reason, the Distributor will immediately cease all use of Products' names and JRVS Trademarks and, at the Distributor's election, destroy or deliver to JRVS all materials in the Distributor's control or possession which bear such names and trademarks, including any sales literature. The Distributor will not challenge any intellectual property rights claimed by JRVS in such trademarks. 9. CONFIDENTIAL INFORMATION 9.1 Nondisclosure, Non Use. Each party shall treat as confidential all Confidential Information of the other party, shall not use such Confidential Information except as set forth herein, and shall use reasonable efforts not to disclose such Confidential Information to any third party. " ;
+    ct:source_path "cuad/ImineCorp_20180725_S-1_EX-10.5_11275970_EX-10.5_Distributor Agreement.txt" ;
+    ct:source_sha256 "defee8695f6aab9389fab7e5787a43b583db560688d8dcc698859c12903c4c6c" ;
+    ct:start_char 17483 .
+
+ex:C050P0027 a ct:SourcePassage ;
+    ct:end_char 25690 ;
+    ct:exact_text "12.7 Survival of Certain Terms. The provisions of Sections 1, 3.9, 5, 6, 8, 9, 10, 11, 12, 13, 14, and 15 of this Agreement, and all payment obligations incurred during the term of this Agreement, shall survive the expiration or termination of this Agreement for any reason. The provisions of Section 9 shall survive the expiration or termination of this Agreement for five (5) years. All other rights and obligations of the parties shall cease upon termination of this Agreement. 6" ;
+    ct:source_path "cuad/ImineCorp_20180725_S-1_EX-10.5_11275970_EX-10.5_Distributor Agreement.txt" ;
+    ct:source_sha256 "defee8695f6aab9389fab7e5787a43b583db560688d8dcc698859c12903c4c6c" ;
+    ct:start_char 25208 .
+
+ex:C050R0001 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 20" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:references_section ex:C050R0001Ref0 ;
+    ct:supported_by ex:C050P0020 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C050R0001Ref0 a ct:Reference ;
+    rdfs:label "Section 8.4" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C050R0002 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 22" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:references_section ex:C050R0002Ref0 ;
+    ct:subject_to ex:C050R0002Condition22 ;
+    ct:supported_by ex:C050P0022 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C050R0002Condition22 a ct:Condition ;
+    ct:description "(e) becomes known to the receiving party, without restriction, from a source other than the disclosing party without breach of this Agreement by the receiving party and otherwise not in violation of the disclosing party's rights; (f) is disclosed generally to third parties by the disclosing party without restrictions similar to those contained in this Agreement; or (g) is disclosed pursuant to the order or requirement of a court, administrative agency, or other governmental body; provided, however, that the receiving party shall provide prompt notice thereof to the disclosing party to enable the disclosing party to seek a protective order or otherwise prevent or restrict such disclosure. 9.3 Return of Confidential Information. Upon expiration or termination of this Agreement, each party shall return all Confidential Information received from the other party. 9.4 Remedies. Any breach of the restrictions contained in this Section 9 is a breach of this Agreement which may cause irreparable harm to the nonbreaching party. Any such breach shall entitle the nonbreaching party to injunctive relief in addition to all legal remedies. 5" ;
+    ct:supported_by ex:C050P0022 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C050R0002Ref0 a ct:Reference ;
+    rdfs:label "Section 9" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C050R0003 a ct:Rule ;
+    rdfs:label "Termination — source passage 22" ;
+    ct:kind "TERMINATION" ;
+    ct:references_section ex:C050R0003Ref0 ;
+    ct:subject_to ex:C050R0003Condition22 ;
+    ct:supported_by ex:C050P0022 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C050R0003Condition22 a ct:Condition ;
+    ct:description "(e) becomes known to the receiving party, without restriction, from a source other than the disclosing party without breach of this Agreement by the receiving party and otherwise not in violation of the disclosing party's rights; (f) is disclosed generally to third parties by the disclosing party without restrictions similar to those contained in this Agreement; or (g) is disclosed pursuant to the order or requirement of a court, administrative agency, or other governmental body; provided, however, that the receiving party shall provide prompt notice thereof to the disclosing party to enable the disclosing party to seek a protective order or otherwise prevent or restrict such disclosure. 9.3 Return of Confidential Information. Upon expiration or termination of this Agreement, each party shall return all Confidential Information received from the other party. 9.4 Remedies. Any breach of the restrictions contained in this Section 9 is a breach of this Agreement which may cause irreparable harm to the nonbreaching party. Any such breach shall entitle the nonbreaching party to injunctive relief in addition to all legal remedies. 5" ;
+    ct:supported_by ex:C050P0022 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C050R0003Ref0 a ct:Reference ;
+    rdfs:label "Section 9" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C050R0004 a ct:Rule ;
+    rdfs:label "Initial Term — source passage 25" ;
+    ct:kind "INITIAL_TERM" ;
+    ct:references_section ex:C050R0004Ref0,
+        ex:C050R0004Ref1 ;
+    ct:subject_to ex:C050R0004Condition25 ;
+    ct:supported_by ex:C050P0025 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C050R0004Condition25 a ct:Condition ;
+    ct:description "TERM AND TERMINATION 12.1 Term. This Agreement shall become effective upon the date first written above and shall remain in full force and effect for a period of two years (2), unless earlier terminated pursuant to the provisions in this Agreement. This Agreement shall expire unless extended by both parties in writing prior to the termination. 12.2 Termination for Convenience. This Agreement may be terminated by either party for any reason or no reason, whether or not extended beyond the initial term, by giving the other party written notice ninety (90) days in advance. 12.3 Termination for Cause. Except as set forth in the last sentence of this Section 12.3, if either party defaults in the performance of any material provision of this Agreement, then the non-defaulting party may give written notice to the defaulting party that if the default is not cured within thirty (30) days the Agreement will be terminated. If the non-defaulting party gives such notice and the default is not cured during the thirty (30) day period, then the Agreement shall automatically terminate at the end of that period. Notwithstanding the foregoing, if the Distributor breaches the provisions of Section 9 hereof, then JRVS shall be entitled to terminate this Agreement effective immediately upon delivery of written notice to the Distributor. 12.4 Termination for Insolvency and Other Events. " ;
+    ct:supported_by ex:C050P0025 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C050R0004Ref0 a ct:Reference ;
+    rdfs:label "Section 12.3" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C050R0004Ref1 a ct:Reference ;
+    rdfs:label "Section 9" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C050R0005 a ct:Rule ;
+    rdfs:label "Optional Renewal — source passage 25" ;
+    ct:kind "OPTIONAL_RENEWAL" ;
+    ct:references_section ex:C050R0005Ref0,
+        ex:C050R0005Ref1 ;
+    ct:subject_to ex:C050R0005Condition25 ;
+    ct:supported_by ex:C050P0025 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C050R0005Condition25 a ct:Condition ;
+    ct:description "TERM AND TERMINATION 12.1 Term. This Agreement shall become effective upon the date first written above and shall remain in full force and effect for a period of two years (2), unless earlier terminated pursuant to the provisions in this Agreement. This Agreement shall expire unless extended by both parties in writing prior to the termination. 12.2 Termination for Convenience. This Agreement may be terminated by either party for any reason or no reason, whether or not extended beyond the initial term, by giving the other party written notice ninety (90) days in advance. 12.3 Termination for Cause. Except as set forth in the last sentence of this Section 12.3, if either party defaults in the performance of any material provision of this Agreement, then the non-defaulting party may give written notice to the defaulting party that if the default is not cured within thirty (30) days the Agreement will be terminated. If the non-defaulting party gives such notice and the default is not cured during the thirty (30) day period, then the Agreement shall automatically terminate at the end of that period. Notwithstanding the foregoing, if the Distributor breaches the provisions of Section 9 hereof, then JRVS shall be entitled to terminate this Agreement effective immediately upon delivery of written notice to the Distributor. 12.4 Termination for Insolvency and Other Events. " ;
+    ct:supported_by ex:C050P0025 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C050R0005Ref0 a ct:Reference ;
+    rdfs:label "Section 12.3" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C050R0005Ref1 a ct:Reference ;
+    rdfs:label "Section 9" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C050R0006 a ct:Rule ;
+    rdfs:label "Termination — source passage 25" ;
+    ct:kind "TERMINATION" ;
+    ct:references_section ex:C050R0006Ref0,
+        ex:C050R0006Ref1 ;
+    ct:subject_to ex:C050R0006Condition25 ;
+    ct:supported_by ex:C050P0025 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C050R0006Condition25 a ct:Condition ;
+    ct:description "TERM AND TERMINATION 12.1 Term. This Agreement shall become effective upon the date first written above and shall remain in full force and effect for a period of two years (2), unless earlier terminated pursuant to the provisions in this Agreement. This Agreement shall expire unless extended by both parties in writing prior to the termination. 12.2 Termination for Convenience. This Agreement may be terminated by either party for any reason or no reason, whether or not extended beyond the initial term, by giving the other party written notice ninety (90) days in advance. 12.3 Termination for Cause. Except as set forth in the last sentence of this Section 12.3, if either party defaults in the performance of any material provision of this Agreement, then the non-defaulting party may give written notice to the defaulting party that if the default is not cured within thirty (30) days the Agreement will be terminated. If the non-defaulting party gives such notice and the default is not cured during the thirty (30) day period, then the Agreement shall automatically terminate at the end of that period. Notwithstanding the foregoing, if the Distributor breaches the provisions of Section 9 hereof, then JRVS shall be entitled to terminate this Agreement effective immediately upon delivery of written notice to the Distributor. 12.4 Termination for Insolvency and Other Events. " ;
+    ct:supported_by ex:C050P0025 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C050R0006Ref0 a ct:Reference ;
+    rdfs:label "Section 12.3" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C050R0006Ref1 a ct:Reference ;
+    rdfs:label "Section 9" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C050R0007 a ct:Rule ;
+    rdfs:label "Conditional Referenced Term — source passage 25" ;
+    ct:kind "CONDITIONAL_REFERENCED_TERM" ;
+    ct:references_section ex:C050R0007Ref0,
+        ex:C050R0007Ref1 ;
+    ct:subject_to ex:C050R0007Condition25 ;
+    ct:supported_by ex:C050P0025 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C050R0007Condition25 a ct:Condition ;
+    ct:description "TERM AND TERMINATION 12.1 Term. This Agreement shall become effective upon the date first written above and shall remain in full force and effect for a period of two years (2), unless earlier terminated pursuant to the provisions in this Agreement. This Agreement shall expire unless extended by both parties in writing prior to the termination. 12.2 Termination for Convenience. This Agreement may be terminated by either party for any reason or no reason, whether or not extended beyond the initial term, by giving the other party written notice ninety (90) days in advance. 12.3 Termination for Cause. Except as set forth in the last sentence of this Section 12.3, if either party defaults in the performance of any material provision of this Agreement, then the non-defaulting party may give written notice to the defaulting party that if the default is not cured within thirty (30) days the Agreement will be terminated. If the non-defaulting party gives such notice and the default is not cured during the thirty (30) day period, then the Agreement shall automatically terminate at the end of that period. Notwithstanding the foregoing, if the Distributor breaches the provisions of Section 9 hereof, then JRVS shall be entitled to terminate this Agreement effective immediately upon delivery of written notice to the Distributor. 12.4 Termination for Insolvency and Other Events. " ;
+    ct:supported_by ex:C050P0025 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C050R0007Ref0 a ct:Reference ;
+    rdfs:label "Section 12.3" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C050R0007Ref1 a ct:Reference ;
+    rdfs:label "Section 9" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C050R0008 a ct:Rule ;
+    rdfs:label "Termination — source passage 26" ;
+    ct:kind "TERMINATION" ;
+    ct:subject_to ex:C050R0008Condition26 ;
+    ct:supported_by ex:C050P0026 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C050R0008Condition26 a ct:Condition ;
+    ct:description "This Agreement shall terminate, without notice, (i) upon the institution by or against either party of insolvency, receivership or bankruptcy proceedings or any other proceedings for the settlement of such party's debts, (ii) upon either party's making an assignment for the benefit of creditors, or (iii) upon either party's dissolution or ceasing to do business. 12.5 Effect of Termination. Upon termination of this Agreement, the Distributor shall make such disposition of price lists, advertising materials and other materials furnished by JRVS as JRVS may direct. JRVS's name, JRVS's Trademarks, and similar identifying symbols shall not be displayed or used by the Distributor thereafter. 12.6 No Liability. In the event of termination by either party in accordance with any of the provisions of this Agreement, neither party shall be liable to the other, because of such termination, for compensation, reimbursement or damages on account of the loss of prospective profits or anticipated sales or on account of expenditures, inventory, investments, leases or commitments in connection with the business or goodwill of either party. Termination shall not, however, relieve either party of any obligations incurred prior to the termination, including, without limitation, the obligation of the Distributor to pay JRVS for Products purchased prior to such termination. " ;
+    ct:supported_by ex:C050P0026 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C050R0009 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 27" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:references_section ex:C050R0009Ref0 ;
+    ct:supported_by ex:C050P0027 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C050R0009Ref0 a ct:Reference ;
+    rdfs:label "Section 9" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C050R0010 a ct:Rule ;
+    rdfs:label "Termination — source passage 34" ;
+    ct:kind "TERMINATION" ;
+    ct:subject_to ex:C050R0010Condition34 ;
+    ct:supported_by ex:C050P0034 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C050R0010Condition34 a ct:Condition ;
+    ct:description "In the event that either party is prevented from performing or is unable to perform any of its obligations under this Agreement (other than a payment obligation) due to any Act of God, fire, casualty, flood, earthquake, war, strike, lockout, epidemic, destruction of production facilities, riot, insurrection, material unavailability, or any other cause beyond the reasonable control of the party invoking this section, and if such party shall have used its best efforts to mitigate its effects, such party shall give prompt written notice to the other party, its performance shall be excused, and the time for the performance shall be extended for the period of delay or inability to perform due to such occurrences. Notwithstanding the foregoing, if such party is not able to perform within thirty (30) days after the event giving rise to the excuse of force majeure, the other party may terminate this Agreement. 15.9 Severability. If one or more provisions of this Agreement are held to be unenforceable under applicable law, the parties agree to renegotiate such provision in good faith, in order to maintain the economic position enjoyed by each party as close as possible to that under the provision rendered unenforceable. " ;
+    ct:supported_by ex:C050P0034 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C050R0011 a ct:Rule ;
+    rdfs:label "Conditional Referenced Term — source passage 34" ;
+    ct:kind "CONDITIONAL_REFERENCED_TERM" ;
+    ct:subject_to ex:C050R0011Condition34 ;
+    ct:supported_by ex:C050P0034 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C050R0011Condition34 a ct:Condition ;
+    ct:description "In the event that either party is prevented from performing or is unable to perform any of its obligations under this Agreement (other than a payment obligation) due to any Act of God, fire, casualty, flood, earthquake, war, strike, lockout, epidemic, destruction of production facilities, riot, insurrection, material unavailability, or any other cause beyond the reasonable control of the party invoking this section, and if such party shall have used its best efforts to mitigate its effects, such party shall give prompt written notice to the other party, its performance shall be excused, and the time for the performance shall be extended for the period of delay or inability to perform due to such occurrences. Notwithstanding the foregoing, if such party is not able to perform within thirty (30) days after the event giving rise to the excuse of force majeure, the other party may terminate this Agreement. 15.9 Severability. If one or more provisions of this Agreement are held to be unenforceable under applicable law, the parties agree to renegotiate such provision in good faith, in order to maintain the economic position enjoyed by each party as close as possible to that under the provision rendered unenforceable. " ;
+    ct:supported_by ex:C050P0034 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C050P0026 a ct:SourcePassage ;
+    ct:end_char 25208 ;
+    ct:exact_text "This Agreement shall terminate, without notice, (i) upon the institution by or against either party of insolvency, receivership or bankruptcy proceedings or any other proceedings for the settlement of such party's debts, (ii) upon either party's making an assignment for the benefit of creditors, or (iii) upon either party's dissolution or ceasing to do business. 12.5 Effect of Termination. Upon termination of this Agreement, the Distributor shall make such disposition of price lists, advertising materials and other materials furnished by JRVS as JRVS may direct. JRVS's name, JRVS's Trademarks, and similar identifying symbols shall not be displayed or used by the Distributor thereafter. 12.6 No Liability. In the event of termination by either party in accordance with any of the provisions of this Agreement, neither party shall be liable to the other, because of such termination, for compensation, reimbursement or damages on account of the loss of prospective profits or anticipated sales or on account of expenditures, inventory, investments, leases or commitments in connection with the business or goodwill of either party. Termination shall not, however, relieve either party of any obligations incurred prior to the termination, including, without limitation, the obligation of the Distributor to pay JRVS for Products purchased prior to such termination. " ;
+    ct:source_path "cuad/ImineCorp_20180725_S-1_EX-10.5_11275970_EX-10.5_Distributor Agreement.txt" ;
+    ct:source_sha256 "defee8695f6aab9389fab7e5787a43b583db560688d8dcc698859c12903c4c6c" ;
+    ct:start_char 23835 .
+
+ct:Agreement a owl:Class ;
+    rdfs:label "Agreement" .
+
+ex:C050P0022 a ct:SourcePassage ;
+    ct:end_char 21008 ;
+    ct:exact_text "(e) becomes known to the receiving party, without restriction, from a source other than the disclosing party without breach of this Agreement by the receiving party and otherwise not in violation of the disclosing party's rights; (f) is disclosed generally to third parties by the disclosing party without restrictions similar to those contained in this Agreement; or (g) is disclosed pursuant to the order or requirement of a court, administrative agency, or other governmental body; provided, however, that the receiving party shall provide prompt notice thereof to the disclosing party to enable the disclosing party to seek a protective order or otherwise prevent or restrict such disclosure. 9.3 Return of Confidential Information. Upon expiration or termination of this Agreement, each party shall return all Confidential Information received from the other party. 9.4 Remedies. Any breach of the restrictions contained in this Section 9 is a breach of this Agreement which may cause irreparable harm to the nonbreaching party. Any such breach shall entitle the nonbreaching party to injunctive relief in addition to all legal remedies. 5" ;
+    ct:source_path "cuad/ImineCorp_20180725_S-1_EX-10.5_11275970_EX-10.5_Distributor Agreement.txt" ;
+    ct:source_sha256 "defee8695f6aab9389fab7e5787a43b583db560688d8dcc698859c12903c4c6c" ;
+    ct:start_char 19864 .
+
+ex:C050P0034 a ct:SourcePassage ;
+    ct:end_char 32237 ;
+    ct:exact_text "In the event that either party is prevented from performing or is unable to perform any of its obligations under this Agreement (other than a payment obligation) due to any Act of God, fire, casualty, flood, earthquake, war, strike, lockout, epidemic, destruction of production facilities, riot, insurrection, material unavailability, or any other cause beyond the reasonable control of the party invoking this section, and if such party shall have used its best efforts to mitigate its effects, such party shall give prompt written notice to the other party, its performance shall be excused, and the time for the performance shall be extended for the period of delay or inability to perform due to such occurrences. Notwithstanding the foregoing, if such party is not able to perform within thirty (30) days after the event giving rise to the excuse of force majeure, the other party may terminate this Agreement. 15.9 Severability. If one or more provisions of this Agreement are held to be unenforceable under applicable law, the parties agree to renegotiate such provision in good faith, in order to maintain the economic position enjoyed by each party as close as possible to that under the provision rendered unenforceable. " ;
+    ct:source_path "cuad/ImineCorp_20180725_S-1_EX-10.5_11275970_EX-10.5_Distributor Agreement.txt" ;
+    ct:source_sha256 "defee8695f6aab9389fab7e5787a43b583db560688d8dcc698859c12903c4c6c" ;
+    ct:start_char 31006 .
+
+ct:SourcePassage a owl:Class ;
+    rdfs:label "SourcePassage" .
+
+ex:C050P0025 a ct:SourcePassage ;
+    ct:end_char 23835 ;
+    ct:exact_text "TERM AND TERMINATION 12.1 Term. This Agreement shall become effective upon the date first written above and shall remain in full force and effect for a period of two years (2), unless earlier terminated pursuant to the provisions in this Agreement. This Agreement shall expire unless extended by both parties in writing prior to the termination. 12.2 Termination for Convenience. This Agreement may be terminated by either party for any reason or no reason, whether or not extended beyond the initial term, by giving the other party written notice ninety (90) days in advance. 12.3 Termination for Cause. Except as set forth in the last sentence of this Section 12.3, if either party defaults in the performance of any material provision of this Agreement, then the non-defaulting party may give written notice to the defaulting party that if the default is not cured within thirty (30) days the Agreement will be terminated. If the non-defaulting party gives such notice and the default is not cured during the thirty (30) day period, then the Agreement shall automatically terminate at the end of that period. Notwithstanding the foregoing, if the Distributor breaches the provisions of Section 9 hereof, then JRVS shall be entitled to terminate this Agreement effective immediately upon delivery of written notice to the Distributor. 12.4 Termination for Insolvency and Other Events. " ;
+    ct:source_path "cuad/ImineCorp_20180725_S-1_EX-10.5_11275970_EX-10.5_Distributor Agreement.txt" ;
+    ct:source_sha256 "defee8695f6aab9389fab7e5787a43b583db560688d8dcc698859c12903c4c6c" ;
+    ct:start_char 22448 .
+
+ct:Condition a owl:Class ;
+    rdfs:label "Condition" .
+
+ct:Reference a owl:Class ;
+    rdfs:label "Reference" .
+
+ct:Rule a owl:Class ;
+    rdfs:label "Rule" .
+

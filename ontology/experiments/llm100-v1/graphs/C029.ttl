@@ -1,0 +1,586 @@
+@prefix ct: <https://cimulink.local/ontology/contract-terms/0.1#> .
+@prefix ex: <https://cimulink.local/ontology/llm100-v1/> .
+@prefix meta: <https://cimulink.local/ontology/extraction#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ct: a owl:Ontology ;
+    rdfs:comment "Partial five-contract development sample. No claim of complete contract coverage or legal correctness." .
+
+ct:agreement_effective_from a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:applies_within a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:calendar_date_status a owl:DatatypeProperty .
+
+ct:coverage a owl:DatatypeProperty .
+
+ct:description a owl:DatatypeProperty .
+
+ct:duration a owl:DatatypeProperty .
+
+ct:duration_status a owl:DatatypeProperty .
+
+ct:end_char a owl:DatatypeProperty .
+
+ct:end_date_status a owl:DatatypeProperty .
+
+ct:ends_on_event a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:exact_text a owl:DatatypeProperty .
+
+ct:has_party a owl:ObjectProperty ;
+    rdfs:domain ct:Agreement ;
+    rdfs:range ct:Party .
+
+ct:has_rule a owl:ObjectProperty ;
+    rdfs:domain ct:Agreement ;
+    rdfs:range ct:Rule .
+
+ct:kind a owl:DatatypeProperty .
+
+ct:notice_actor a owl:DatatypeProperty .
+
+ct:notice_form a owl:DatatypeProperty .
+
+ct:notice_period_status a owl:DatatypeProperty .
+
+ct:qualifies a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Rule .
+
+ct:references_section a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:renewal_count a owl:DatatypeProperty .
+
+ct:resolution_status a owl:DatatypeProperty .
+
+ct:resolved_to a owl:ObjectProperty ;
+    rdfs:domain ct:Reference ;
+    rdfs:range ct:SourcePassage .
+
+ct:source_path a owl:DatatypeProperty .
+
+ct:source_sha256 a owl:DatatypeProperty .
+
+ct:start_char a owl:DatatypeProperty .
+
+ct:starts_from a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:stated_end_date a owl:DatatypeProperty .
+
+ct:subject_to a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Condition .
+
+ct:supported_by a owl:ObjectProperty ;
+    rdfs:range ct:SourcePassage .
+
+ct:termination_notice a owl:DatatypeProperty .
+
+ex:C029 a ct:Agreement ;
+    rdfs:label "DigitalCinemaDestinationsCorp_20111220_S-1_EX-10.10_7346719_EX-10.10_Affiliate Agreement.txt" ;
+    ct:coverage "LOCAL_LLM_PROPOSED_PARTIAL; NOT_HUMAN_REVIEWED" ;
+    ct:has_rule ex:C029R0001,
+        ex:C029R0002,
+        ex:C029R0003,
+        ex:C029R0004,
+        ex:C029R0005,
+        ex:C029R0006,
+        ex:C029R0007,
+        ex:C029R0008,
+        ex:C029R0009,
+        ex:C029R0010,
+        ex:C029R0011,
+        ex:C029R0012,
+        ex:C029R0013,
+        ex:C029R0014,
+        ex:C029R0015,
+        ex:C029R0016,
+        ex:C029R0017 ;
+    ct:source_path "cuad/DigitalCinemaDestinationsCorp_20111220_S-1_EX-10.10_7346719_EX-10.10_Affiliate Agreement.txt" ;
+    ct:source_sha256 "e7af6c31ad15625052cf5a166db30aa312faac61927e34cc9675adf418e61076" ;
+    meta:model_digest "0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0" .
+
+ct:Party a owl:Class ;
+    rdfs:label "Party" .
+
+ex:C029P0009 a ct:SourcePassage ;
+    ct:end_char 6917 ;
+    ct:exact_text "\"Excluded Theatres\" has the meaning assigned to it in Section 3.10(a).     \"Exclusivity Exceptions\" has the meaning assigned to it in Section 6.1.     \"Flight\" has the meaning assigned to it in Section 3.2(a).     \"IMAX Screens\" has the meaning assigned to it in Section 3.10(b).     \"Infringement\" has the meaning assigned to it in Section 11.2.     \"Initial Term\" has the meaning assigned to it in Section 8.1.     \"Inventory\" means any advertising or other content.     \"Lobby Screen\" means a plasma, LED or other type of screen displaying digital or recorded content that is located inside a Theatre and  outside the auditoriums, or any other type of visual display mechanism that replaces such a screen.     \"Lobby Promotions\" has the meaning assigned to it in Part A of Exhibit A.     \"Marketing Materials\" has the meaning assigned to it in Section 5.3(a).     \"Minimum Fee\" has the meaning assigned to it in Section 7.2.     \"NCM\" has the meaning assigned to it in the preamble of this Agreement.     \"NCM Equipment\" has the meaning assigned to it in Section 2.3.     \"NCM Marks\" means the trademarks, service marks, logos, slogans and/or designs of NCM, each as identified on Exhibit C, in any and  all forms, formats, and styles.     \"NCM Property\" has the meaning assigned to it in Section 12.1.     \"NCM Quality Standards\" has the meaning assigned to it in Section 5.3(a).     " ;
+    ct:source_path "cuad/DigitalCinemaDestinationsCorp_20111220_S-1_EX-10.10_7346719_EX-10.10_Affiliate Agreement.txt" ;
+    ct:source_sha256 "e7af6c31ad15625052cf5a166db30aa312faac61927e34cc9675adf418e61076" ;
+    ct:start_char 5529 .
+
+ex:C029P0024 a ct:SourcePassage ;
+    ct:end_char 16702 ;
+    ct:exact_text "Network Affiliate shall use commercially reasonable efforts to provide NCM at least six (6) months advance  written notice (or such lesser time for notice as may be practicable based upon the date of execution of the agreement for such disposition and the  disposition date) of the sale or other disposition of a Theatre, the loss of any Theatre lease, or its desire to permanently discontinue delivery of the  Service to a Theatre (collectively, a \"Disposition\"). Subject to the provisions of Section 2.3 with respect to transfer of title to NCM Equipment, at  least thirty (30) days prior to any Disposition, NCM shall be permitted to enter the affected Theatre(s) and remove any NCM Property. Except in  connection with a Disposition, Network Affiliate shall not be permitted to permanently discontinue Service to any Theatre without the prior written  consent of NCM, which consent will not be unreasonably withheld, conditioned or delayed. The costs of removal of NCM Equipment from any  Theatre to which Service has been permanently discontinued shall be borne by Network Affiliate." ;
+    ct:source_path "cuad/DigitalCinemaDestinationsCorp_20111220_S-1_EX-10.10_7346719_EX-10.10_Affiliate Agreement.txt" ;
+    ct:source_sha256 "e7af6c31ad15625052cf5a166db30aa312faac61927e34cc9675adf418e61076" ;
+    ct:start_char 15614 .
+
+ex:C029P0101 a ct:SourcePassage ;
+    ct:end_char 70333 ;
+    ct:exact_text "On the occurrence of any event which would permit NCM to terminate this Agreement, in addition to  any and all other rights and remedies to which NCM may be entitled at law or in equity, NCM may, without terminating this Agreement, and in its  sole discretion and without further notice to Network Affiliate, suspend performance of any or all of its obligations under this Agreement  (including, without limitation, by activating internal controls in systems or software that are designed to deny Network Affiliate use of or access to  NCM Property) until and unless NCM determines, in its sole discretion and upon whatever conditions NCM chooses to impose on Network  Affiliate, to resume performance of some or all of the suspended obligations." ;
+    ct:source_path "cuad/DigitalCinemaDestinationsCorp_20111220_S-1_EX-10.10_7346719_EX-10.10_Affiliate Agreement.txt" ;
+    ct:source_sha256 "e7af6c31ad15625052cf5a166db30aa312faac61927e34cc9675adf418e61076" ;
+    ct:start_char 69587 .
+
+ex:C029R0001 a ct:Rule ;
+    rdfs:label "Initial Term — source passage 9" ;
+    ct:kind "INITIAL_TERM" ;
+    ct:references_section ex:C029R0001Ref0,
+        ex:C029R0001Ref1,
+        ex:C029R0001Ref10,
+        ex:C029R0001Ref11,
+        ex:C029R0001Ref2,
+        ex:C029R0001Ref3,
+        ex:C029R0001Ref4,
+        ex:C029R0001Ref5,
+        ex:C029R0001Ref6,
+        ex:C029R0001Ref7,
+        ex:C029R0001Ref8,
+        ex:C029R0001Ref9 ;
+    ct:supported_by ex:C029P0009 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C029R0001Ref0 a ct:Reference ;
+    rdfs:label "Section 3.10(a)" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C029R0001Ref1 a ct:Reference ;
+    rdfs:label "Section 6.1" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C029R0001Ref10 a ct:Reference ;
+    rdfs:label "Exhibit C" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C029R0001Ref11 a ct:Reference ;
+    rdfs:label "Section 12.1" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C029R0001Ref2 a ct:Reference ;
+    rdfs:label "Section 3.2(a)" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C029R0001Ref3 a ct:Reference ;
+    rdfs:label "Section 3.10(b)" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C029R0001Ref4 a ct:Reference ;
+    rdfs:label "Section 11.2" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C029R0001Ref5 a ct:Reference ;
+    rdfs:label "Section 8.1" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C029R0001Ref6 a ct:Reference ;
+    rdfs:label "Exhibit A" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C029R0001Ref7 a ct:Reference ;
+    rdfs:label "Section 5.3(a)" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C029R0001Ref8 a ct:Reference ;
+    rdfs:label "Section 7.2" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C029R0001Ref9 a ct:Reference ;
+    rdfs:label "Section 2.3" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C029R0002 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 24" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:references_section ex:C029R0002Ref0 ;
+    ct:supported_by ex:C029P0024 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C029R0002Ref0 a ct:Reference ;
+    rdfs:label "Section 2.3" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C029R0003 a ct:Rule ;
+    rdfs:label "Termination — source passage 73" ;
+    ct:kind "TERMINATION" ;
+    ct:subject_to ex:C029R0003Condition73 ;
+    ct:supported_by ex:C029P0073 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C029R0003Condition73 a ct:Condition ;
+    ct:description "Notwithstanding anything herein to the contrary,  NCM shall have the right, at its sole option, to terminate or suspend the trademark license grant provided herein if NCM, in its sole discretion,  determines that Network Affiliate's use of the NCM Marks or any of them is in violation of the terms of this Agreement or of the NCM Quality  Standards, or is otherwise disparaging to NCM's image or reputation, and such use is not conformed to the terms of this Agreement of the NCM  Quality Standards within ten (10) days of receipt of written notice thereof. NCM's obligation to provide any Services dependant upon the use of  the NCM Marks will be suspended during the period of any such suspension or termination, and NCM will have no liability for any failure to  perform such Services during such time period.     (f) Network Affiliate agrees not to use or adopt (i) any trademark or service mark which is confusingly similar to, or a colorable  imitation of, any NCM Mark or any part thereof, (ii) any trademark or service mark in combination with any NCM Mark, or (iii) any NCM Mark in  connection with or for the benefit of any product or service of any other person or entity. " ;
+    ct:supported_by ex:C029P0073 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C029R0004 a ct:Rule ;
+    rdfs:label "Termination — source passage 82" ;
+    ct:kind "TERMINATION" ;
+    ct:subject_to ex:C029R0004Condition82 ;
+    ct:supported_by ex:C029P0082 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C029R0004Condition82 a ct:Condition ;
+    ct:description "(e) NCM shall not use any Network Affiliate Mark in any manner that may reflect adversely on the image or quality symbolized  by the Network Affiliate Mark, or that may be detrimental to the image or reputation of Network Affiliate. Notwithstanding anything herein to the  contrary, Network Affiliate shall have the right, at its sole option, to terminate or suspend the trademark license grant provided herein if it  determines that NCM's use of the Network Affiliate Marks or any of them is in violation of its trademark usage guidelines or is otherwise  disparaging to its image or reputation, and such use is not conformed to such guidelines and other reasonable requests of Network Affiliate within  ten (10) days of receipt of written notice thereof. NCM's obligation to provide any Services dependant upon the use of the Network Affiliate Mark  will be suspended during the period of any such suspension or termination, and NCM will have no liability for any failure to perform such Services  during such time period.     " ;
+    ct:supported_by ex:C029P0082 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C029R0005 a ct:Rule ;
+    rdfs:label "Conditional Referenced Term — source passage 82" ;
+    ct:kind "CONDITIONAL_REFERENCED_TERM" ;
+    ct:subject_to ex:C029R0005Condition82 ;
+    ct:supported_by ex:C029P0082 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C029R0005Condition82 a ct:Condition ;
+    ct:description "(e) NCM shall not use any Network Affiliate Mark in any manner that may reflect adversely on the image or quality symbolized  by the Network Affiliate Mark, or that may be detrimental to the image or reputation of Network Affiliate. Notwithstanding anything herein to the  contrary, Network Affiliate shall have the right, at its sole option, to terminate or suspend the trademark license grant provided herein if it  determines that NCM's use of the Network Affiliate Marks or any of them is in violation of its trademark usage guidelines or is otherwise  disparaging to its image or reputation, and such use is not conformed to such guidelines and other reasonable requests of Network Affiliate within  ten (10) days of receipt of written notice thereof. NCM's obligation to provide any Services dependant upon the use of the Network Affiliate Mark  will be suspended during the period of any such suspension or termination, and NCM will have no liability for any failure to perform such Services  during such time period.     " ;
+    ct:supported_by ex:C029P0082 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C029R0006 a ct:Rule ;
+    rdfs:label "Initial Term — source passage 94" ;
+    ct:kind "INITIAL_TERM" ;
+    ct:references_section ex:C029R0006Ref0,
+        ex:C029R0006Ref1 ;
+    ct:subject_to ex:C029R0006Condition94 ;
+    ct:supported_by ex:C029P0094 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C029R0006Condition94 a ct:Condition ;
+    ct:description "The determination of such firm shall be conclusive and binding on each party, and  judgment upon any such determination can be entered in any court having jurisdiction over the matter. Each Party shall bear one-half of the fees of  such firm. If the Parties cannot select such accounting firm, then the selection of such accounting firm shall be made by the American Arbitration  Association located in Denver, Colorado. In addition to the foregoing audit rights of the parties, during the Term, NCM and its authorized agents  shall have the right, upon reasonable advance notice, to inspect any Network Affiliate premises or facilities involved in the performance of this  Agreement to confirm the performance and satisfaction of Network Affiliate's obligations hereunder.     ARTICLE VIII  TERM AND TERMINATION     Section 8.1 Term. Unless earlier terminated as provided below, the term of this Agreement shall begin on the Effective Date and shall  continue for a period of five (5) years from the Effective Date (the \"Initial Term\") after which this Agreement may be extended on mutual agreement  of the parties (a \"Renewal Term,\" and together with the Initial Term, the \"Term\"). If either party wishes to extend the Initial Term it shall provide  notice to the other not later than 180 days, nor sooner than 270 days, before the end of the Initial Term. " ;
+    ct:supported_by ex:C029P0094 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C029R0006Ref0 a ct:Reference ;
+    rdfs:label "ARTICLE VIII" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C029R0006Ref1 a ct:Reference ;
+    rdfs:label "Section 8.1" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C029R0007 a ct:Rule ;
+    rdfs:label "Optional Renewal — source passage 94" ;
+    ct:kind "OPTIONAL_RENEWAL" ;
+    ct:references_section ex:C029R0007Ref0,
+        ex:C029R0007Ref1 ;
+    ct:subject_to ex:C029R0007Condition94 ;
+    ct:supported_by ex:C029P0094 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C029R0007Condition94 a ct:Condition ;
+    ct:description "The determination of such firm shall be conclusive and binding on each party, and  judgment upon any such determination can be entered in any court having jurisdiction over the matter. Each Party shall bear one-half of the fees of  such firm. If the Parties cannot select such accounting firm, then the selection of such accounting firm shall be made by the American Arbitration  Association located in Denver, Colorado. In addition to the foregoing audit rights of the parties, during the Term, NCM and its authorized agents  shall have the right, upon reasonable advance notice, to inspect any Network Affiliate premises or facilities involved in the performance of this  Agreement to confirm the performance and satisfaction of Network Affiliate's obligations hereunder.     ARTICLE VIII  TERM AND TERMINATION     Section 8.1 Term. Unless earlier terminated as provided below, the term of this Agreement shall begin on the Effective Date and shall  continue for a period of five (5) years from the Effective Date (the \"Initial Term\") after which this Agreement may be extended on mutual agreement  of the parties (a \"Renewal Term,\" and together with the Initial Term, the \"Term\"). If either party wishes to extend the Initial Term it shall provide  notice to the other not later than 180 days, nor sooner than 270 days, before the end of the Initial Term. " ;
+    ct:supported_by ex:C029P0094 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C029R0007Ref0 a ct:Reference ;
+    rdfs:label "ARTICLE VIII" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C029R0007Ref1 a ct:Reference ;
+    rdfs:label "Section 8.1" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C029R0008 a ct:Rule ;
+    rdfs:label "Optional Renewal — source passage 95" ;
+    ct:kind "OPTIONAL_RENEWAL" ;
+    ct:references_section ex:C029R0008Ref0 ;
+    ct:subject_to ex:C029R0008Condition95 ;
+    ct:supported_by ex:C029P0095 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C029R0008Condition95 a ct:Condition ;
+    ct:description "The parties shall then engage in  discussions regarding renewal for a period of 30 days. If no agreement is reached during that 30-day period, then neither party shall have any  obligation to extend this Agreement beyond the Initial Term.     Section 8.2 Termination by Either Party. Either Party may terminate this Agreement, immediately, by giving written notice of termination  to the other, and without prejudice to any other rights or remedies the terminating party may have, if:" ;
+    ct:supported_by ex:C029P0095 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C029R0008Ref0 a ct:Reference ;
+    rdfs:label "Section 8.2" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C029R0009 a ct:Rule ;
+    rdfs:label "Termination — source passage 98" ;
+    ct:kind "TERMINATION" ;
+    ct:references_section ex:C029R0009Ref0 ;
+    ct:subject_to ex:C029R0009Condition98 ;
+    ct:supported_by ex:C029P0098 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C029R0009Condition98 a ct:Condition ;
+    ct:description "(a) The other Party breaches any material provision of this Agreement, other than any provision of Section 14.8 or Articles V or  XIII, and fails to cure such breach within thirty (30) days after receipt from the terminating party of written notice of the breach.     (b) The other Party breaches any provision of Section or 14.8 or Articles V or XIII, and, to the extent such breach is susceptible  to cure, fails to cure such breach within five (5) days after receipt from the terminating party of written notice of the breach. Notwithstanding  anything else to the contrary herein, if the breach is not susceptible to cure, this Agreement will terminate immediately as of such breach, with or  without any notice from the terminating party.     (c) (i) A voluntary petition is commenced by the other Party under the United States Bankruptcy Code, as amended, 11 U.S.C. " ;
+    ct:supported_by ex:C029P0098 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C029R0009Ref0 a ct:Reference ;
+    rdfs:label "Section 14.8" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C029R0010 a ct:Rule ;
+    rdfs:label "Conditional Referenced Term — source passage 98" ;
+    ct:kind "CONDITIONAL_REFERENCED_TERM" ;
+    ct:references_section ex:C029R0010Ref0 ;
+    ct:subject_to ex:C029R0010Condition98 ;
+    ct:supported_by ex:C029P0098 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C029R0010Condition98 a ct:Condition ;
+    ct:description "(a) The other Party breaches any material provision of this Agreement, other than any provision of Section 14.8 or Articles V or  XIII, and fails to cure such breach within thirty (30) days after receipt from the terminating party of written notice of the breach.     (b) The other Party breaches any provision of Section or 14.8 or Articles V or XIII, and, to the extent such breach is susceptible  to cure, fails to cure such breach within five (5) days after receipt from the terminating party of written notice of the breach. Notwithstanding  anything else to the contrary herein, if the breach is not susceptible to cure, this Agreement will terminate immediately as of such breach, with or  without any notice from the terminating party.     (c) (i) A voluntary petition is commenced by the other Party under the United States Bankruptcy Code, as amended, 11 U.S.C. " ;
+    ct:supported_by ex:C029P0098 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C029R0010Ref0 a ct:Reference ;
+    rdfs:label "Section 14.8" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C029R0011 a ct:Rule ;
+    rdfs:label "Termination — source passage 99" ;
+    ct:kind "TERMINATION" ;
+    ct:references_section ex:C029R0011Ref0,
+        ex:C029R0011Ref1,
+        ex:C029R0011Ref2,
+        ex:C029R0011Ref3 ;
+    ct:subject_to ex:C029R0011Condition99 ;
+    ct:supported_by ex:C029P0099 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C029R0011Condition99 a ct:Condition ;
+    ct:description "§  101 et seq., (ii) the other Party has an involuntary petition commenced against it under the Bankruptcy Code and such petition is not dismissed  within sixty (60) days after filing, (iii) the other Party becomes insolvent, (iv) any substantial part of the other Party's property becomes subject to  any levy, seizure, assignment, application, or sale for or by any creditor or governmental agency, or (v) the other Party liquidates or otherwise  discontinues all or most of that portion of its business operations which are related to this Agreement.     Section 8.3 Termination by NCM. NCM may terminate this Agreement upon thirty (30) days written notice to Network Affiliate in the  event that distribution of the Service to all of the Theatres listed on Exhibit B is permanently discontinued.     Section 8.4 Survival. Sections 2.3, 5.2, 5.3, 5.4, 8.4, 8.5, 11.1, 11.2, 11.3 and 11.6 and Articles VII, IX, X, XII, and XV shall survive any  expiration or termination of this Agreement.     Section 8.5 Effect of Termination. " ;
+    ct:supported_by ex:C029P0099 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C029R0011Ref0 a ct:Reference ;
+    rdfs:label "Section 8.3" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C029R0011Ref1 a ct:Reference ;
+    rdfs:label "Exhibit B" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C029R0011Ref2 a ct:Reference ;
+    rdfs:label "Section 8.4" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C029R0011Ref3 a ct:Reference ;
+    rdfs:label "Section 8.5" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C029R0012 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 99" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:references_section ex:C029R0012Ref0,
+        ex:C029R0012Ref1,
+        ex:C029R0012Ref2,
+        ex:C029R0012Ref3 ;
+    ct:subject_to ex:C029R0012Condition99 ;
+    ct:supported_by ex:C029P0099 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C029R0012Condition99 a ct:Condition ;
+    ct:description "§  101 et seq., (ii) the other Party has an involuntary petition commenced against it under the Bankruptcy Code and such petition is not dismissed  within sixty (60) days after filing, (iii) the other Party becomes insolvent, (iv) any substantial part of the other Party's property becomes subject to  any levy, seizure, assignment, application, or sale for or by any creditor or governmental agency, or (v) the other Party liquidates or otherwise  discontinues all or most of that portion of its business operations which are related to this Agreement.     Section 8.3 Termination by NCM. NCM may terminate this Agreement upon thirty (30) days written notice to Network Affiliate in the  event that distribution of the Service to all of the Theatres listed on Exhibit B is permanently discontinued.     Section 8.4 Survival. Sections 2.3, 5.2, 5.3, 5.4, 8.4, 8.5, 11.1, 11.2, 11.3 and 11.6 and Articles VII, IX, X, XII, and XV shall survive any  expiration or termination of this Agreement.     Section 8.5 Effect of Termination. " ;
+    ct:supported_by ex:C029P0099 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C029R0012Ref0 a ct:Reference ;
+    rdfs:label "Section 8.3" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C029R0012Ref1 a ct:Reference ;
+    rdfs:label "Exhibit B" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C029R0012Ref2 a ct:Reference ;
+    rdfs:label "Section 8.4" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C029R0012Ref3 a ct:Reference ;
+    rdfs:label "Section 8.5" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C029R0013 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 100" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:references_section ex:C029R0013Ref0,
+        ex:C029R0013Ref1 ;
+    ct:subject_to ex:C029R0013Condition100 ;
+    ct:supported_by ex:C029P0100 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C029R0013Condition100 a ct:Condition ;
+    ct:description "Upon termination or expiration of this Agreement, and upon reasonable prior notice to Network  Affiliate, NCM shall be entitled to enter the Theatres upon reasonable prior written notice, and any other premises of Network Affiliate where any  NCM Property may be located, and recover any and all NCM Property, unless Network Affiliate chooses to purchase such Property based on a  straight line five year depreciated value. In addition, each Party shall promptly deliver to the other or, at the other Party's option, permit the other  Party to enter its premises and recover any Equipment in the first Party's possession, custody or control which may be owned by the other Party  pursuant to Section 2.3 hereof. Each Party shall fully cooperate in this effort. NCM shall be obligated to restore all premises from which it removes  NCM Property or Equipment to its previous condition, reasonable wear and tear excepted. In addition, any and all licenses granted by either party  to the other under this Agreement shall immediately terminate, and NCM shall be entitled to immediately discontinue the Service. Notwithstanding  termination of this Agreement, each party shall pay to the other, within five (5) days after the effective date of such termination, any and all fees  (including costs and expenses) owed hereunder as of such termination.     Section 8.6 Suspension of Services. " ;
+    ct:supported_by ex:C029P0100 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C029R0013Ref0 a ct:Reference ;
+    rdfs:label "Section 2.3" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C029R0013Ref1 a ct:Reference ;
+    rdfs:label "Section 8.6" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C029R0014 a ct:Rule ;
+    rdfs:label "Termination — source passage 100" ;
+    ct:kind "TERMINATION" ;
+    ct:references_section ex:C029R0014Ref0,
+        ex:C029R0014Ref1 ;
+    ct:subject_to ex:C029R0014Condition100 ;
+    ct:supported_by ex:C029P0100 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C029R0014Condition100 a ct:Condition ;
+    ct:description "Upon termination or expiration of this Agreement, and upon reasonable prior notice to Network  Affiliate, NCM shall be entitled to enter the Theatres upon reasonable prior written notice, and any other premises of Network Affiliate where any  NCM Property may be located, and recover any and all NCM Property, unless Network Affiliate chooses to purchase such Property based on a  straight line five year depreciated value. In addition, each Party shall promptly deliver to the other or, at the other Party's option, permit the other  Party to enter its premises and recover any Equipment in the first Party's possession, custody or control which may be owned by the other Party  pursuant to Section 2.3 hereof. Each Party shall fully cooperate in this effort. NCM shall be obligated to restore all premises from which it removes  NCM Property or Equipment to its previous condition, reasonable wear and tear excepted. In addition, any and all licenses granted by either party  to the other under this Agreement shall immediately terminate, and NCM shall be entitled to immediately discontinue the Service. Notwithstanding  termination of this Agreement, each party shall pay to the other, within five (5) days after the effective date of such termination, any and all fees  (including costs and expenses) owed hereunder as of such termination.     Section 8.6 Suspension of Services. " ;
+    ct:supported_by ex:C029P0100 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C029R0014Ref0 a ct:Reference ;
+    rdfs:label "Section 2.3" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C029R0014Ref1 a ct:Reference ;
+    rdfs:label "Section 8.6" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C029R0015 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 101" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:supported_by ex:C029P0101 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C029R0016 a ct:Rule ;
+    rdfs:label "Termination — source passage 113" ;
+    ct:kind "TERMINATION" ;
+    ct:references_section ex:C029R0016Ref0,
+        ex:C029R0016Ref1,
+        ex:C029R0016Ref2 ;
+    ct:subject_to ex:C029R0016Condition113 ;
+    ct:supported_by ex:C029P0113 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C029R0016Condition113 a ct:Condition ;
+    ct:description "(b) Additional Remedies. In addition to, but not in limitation of, NCM's obligations under Section 10.3 (a) above, NCM may, at  its sole option, in the event that any claim, suit, proceeding, or action is brought or threatened for which NCM may be obligated under Section 10.3 (a) to indemnify Network Affiliate: (i) replace or modify the NCM Property to render it non-infringing; (ii) secure for Network Affiliate the right to  use the NCM Property; or (iii) terminate this Agreement under the provisions of Article X. In the event NCM chooses to terminate this Agreement  under Article X hereof, NCM shall refund to Network Affiliate the portion (if any) of the total amount of license fees actually paid to NCM by  Network Affiliate hereunder during the two-year period immediately preceding the date of the claim for indemnification, depreciated according to a  five-year straight line depreciation.     (c) Limitations of Obligations. NCM shall not have any liability to Network Affiliate under this Section 10.3 for any alleged  infringement based in any part on: (i) any Service content or Confidential Information supplied by or on behalf of Network Affiliate; (ii) the  combined use of the NCM Property with software or hardware products or other technology or materials not provided or owned by NCM; (iii)  additions or modifications to the NCM Property not made by NCM; " ;
+    ct:supported_by ex:C029P0113 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C029R0016Ref0 a ct:Reference ;
+    rdfs:label "Section 10.3 (a)" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C029R0016Ref1 a ct:Reference ;
+    rdfs:label "Article X" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C029R0016Ref2 a ct:Reference ;
+    rdfs:label "Section 10.3" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C029R0017 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 113" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:references_section ex:C029R0017Ref0,
+        ex:C029R0017Ref1,
+        ex:C029R0017Ref2 ;
+    ct:subject_to ex:C029R0017Condition113 ;
+    ct:supported_by ex:C029P0113 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C029R0017Condition113 a ct:Condition ;
+    ct:description "(b) Additional Remedies. In addition to, but not in limitation of, NCM's obligations under Section 10.3 (a) above, NCM may, at  its sole option, in the event that any claim, suit, proceeding, or action is brought or threatened for which NCM may be obligated under Section 10.3 (a) to indemnify Network Affiliate: (i) replace or modify the NCM Property to render it non-infringing; (ii) secure for Network Affiliate the right to  use the NCM Property; or (iii) terminate this Agreement under the provisions of Article X. In the event NCM chooses to terminate this Agreement  under Article X hereof, NCM shall refund to Network Affiliate the portion (if any) of the total amount of license fees actually paid to NCM by  Network Affiliate hereunder during the two-year period immediately preceding the date of the claim for indemnification, depreciated according to a  five-year straight line depreciation.     (c) Limitations of Obligations. NCM shall not have any liability to Network Affiliate under this Section 10.3 for any alleged  infringement based in any part on: (i) any Service content or Confidential Information supplied by or on behalf of Network Affiliate; (ii) the  combined use of the NCM Property with software or hardware products or other technology or materials not provided or owned by NCM; (iii)  additions or modifications to the NCM Property not made by NCM; " ;
+    ct:supported_by ex:C029P0113 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C029R0017Ref0 a ct:Reference ;
+    rdfs:label "Section 10.3 (a)" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C029R0017Ref1 a ct:Reference ;
+    rdfs:label "Article X" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C029R0017Ref2 a ct:Reference ;
+    rdfs:label "Section 10.3" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C029P0073 a ct:SourcePassage ;
+    ct:end_char 51813 ;
+    ct:exact_text "Notwithstanding anything herein to the contrary,  NCM shall have the right, at its sole option, to terminate or suspend the trademark license grant provided herein if NCM, in its sole discretion,  determines that Network Affiliate's use of the NCM Marks or any of them is in violation of the terms of this Agreement or of the NCM Quality  Standards, or is otherwise disparaging to NCM's image or reputation, and such use is not conformed to the terms of this Agreement of the NCM  Quality Standards within ten (10) days of receipt of written notice thereof. NCM's obligation to provide any Services dependant upon the use of  the NCM Marks will be suspended during the period of any such suspension or termination, and NCM will have no liability for any failure to  perform such Services during such time period.     (f) Network Affiliate agrees not to use or adopt (i) any trademark or service mark which is confusingly similar to, or a colorable  imitation of, any NCM Mark or any part thereof, (ii) any trademark or service mark in combination with any NCM Mark, or (iii) any NCM Mark in  connection with or for the benefit of any product or service of any other person or entity. " ;
+    ct:source_path "cuad/DigitalCinemaDestinationsCorp_20111220_S-1_EX-10.10_7346719_EX-10.10_Affiliate Agreement.txt" ;
+    ct:source_sha256 "e7af6c31ad15625052cf5a166db30aa312faac61927e34cc9675adf418e61076" ;
+    ct:start_char 50629 .
+
+ex:C029P0095 a ct:SourcePassage ;
+    ct:end_char 66222 ;
+    ct:exact_text "The parties shall then engage in  discussions regarding renewal for a period of 30 days. If no agreement is reached during that 30-day period, then neither party shall have any  obligation to extend this Agreement beyond the Initial Term.     Section 8.2 Termination by Either Party. Either Party may terminate this Agreement, immediately, by giving written notice of termination  to the other, and without prejudice to any other rights or remedies the terminating party may have, if:" ;
+    ct:source_path "cuad/DigitalCinemaDestinationsCorp_20111220_S-1_EX-10.10_7346719_EX-10.10_Affiliate Agreement.txt" ;
+    ct:source_sha256 "e7af6c31ad15625052cf5a166db30aa312faac61927e34cc9675adf418e61076" ;
+    ct:start_char 65738 .
+
+ct:Agreement a owl:Class ;
+    rdfs:label "Agreement" .
+
+ex:C029P0082 a ct:SourcePassage ;
+    ct:end_char 56654 ;
+    ct:exact_text "(e) NCM shall not use any Network Affiliate Mark in any manner that may reflect adversely on the image or quality symbolized  by the Network Affiliate Mark, or that may be detrimental to the image or reputation of Network Affiliate. Notwithstanding anything herein to the  contrary, Network Affiliate shall have the right, at its sole option, to terminate or suspend the trademark license grant provided herein if it  determines that NCM's use of the Network Affiliate Marks or any of them is in violation of its trademark usage guidelines or is otherwise  disparaging to its image or reputation, and such use is not conformed to such guidelines and other reasonable requests of Network Affiliate within  ten (10) days of receipt of written notice thereof. NCM's obligation to provide any Services dependant upon the use of the Network Affiliate Mark  will be suspended during the period of any such suspension or termination, and NCM will have no liability for any failure to perform such Services  during such time period.     " ;
+    ct:source_path "cuad/DigitalCinemaDestinationsCorp_20111220_S-1_EX-10.10_7346719_EX-10.10_Affiliate Agreement.txt" ;
+    ct:source_sha256 "e7af6c31ad15625052cf5a166db30aa312faac61927e34cc9675adf418e61076" ;
+    ct:start_char 55625 .
+
+ex:C029P0094 a ct:SourcePassage ;
+    ct:end_char 65738 ;
+    ct:exact_text "The determination of such firm shall be conclusive and binding on each party, and  judgment upon any such determination can be entered in any court having jurisdiction over the matter. Each Party shall bear one-half of the fees of  such firm. If the Parties cannot select such accounting firm, then the selection of such accounting firm shall be made by the American Arbitration  Association located in Denver, Colorado. In addition to the foregoing audit rights of the parties, during the Term, NCM and its authorized agents  shall have the right, upon reasonable advance notice, to inspect any Network Affiliate premises or facilities involved in the performance of this  Agreement to confirm the performance and satisfaction of Network Affiliate's obligations hereunder.     ARTICLE VIII  TERM AND TERMINATION     Section 8.1 Term. Unless earlier terminated as provided below, the term of this Agreement shall begin on the Effective Date and shall  continue for a period of five (5) years from the Effective Date (the \"Initial Term\") after which this Agreement may be extended on mutual agreement  of the parties (a \"Renewal Term,\" and together with the Initial Term, the \"Term\"). If either party wishes to extend the Initial Term it shall provide  notice to the other not later than 180 days, nor sooner than 270 days, before the end of the Initial Term. " ;
+    ct:source_path "cuad/DigitalCinemaDestinationsCorp_20111220_S-1_EX-10.10_7346719_EX-10.10_Affiliate Agreement.txt" ;
+    ct:source_sha256 "e7af6c31ad15625052cf5a166db30aa312faac61927e34cc9675adf418e61076" ;
+    ct:start_char 64379 .
+
+ex:C029P0098 a ct:SourcePassage ;
+    ct:end_char 67171 ;
+    ct:exact_text "(a) The other Party breaches any material provision of this Agreement, other than any provision of Section 14.8 or Articles V or  XIII, and fails to cure such breach within thirty (30) days after receipt from the terminating party of written notice of the breach.     (b) The other Party breaches any provision of Section or 14.8 or Articles V or XIII, and, to the extent such breach is susceptible  to cure, fails to cure such breach within five (5) days after receipt from the terminating party of written notice of the breach. Notwithstanding  anything else to the contrary herein, if the breach is not susceptible to cure, this Agreement will terminate immediately as of such breach, with or  without any notice from the terminating party.     (c) (i) A voluntary petition is commenced by the other Party under the United States Bankruptcy Code, as amended, 11 U.S.C. " ;
+    ct:source_path "cuad/DigitalCinemaDestinationsCorp_20111220_S-1_EX-10.10_7346719_EX-10.10_Affiliate Agreement.txt" ;
+    ct:source_sha256 "e7af6c31ad15625052cf5a166db30aa312faac61927e34cc9675adf418e61076" ;
+    ct:start_char 66299 .
+
+ex:C029P0099 a ct:SourcePassage ;
+    ct:end_char 68202 ;
+    ct:exact_text "§  101 et seq., (ii) the other Party has an involuntary petition commenced against it under the Bankruptcy Code and such petition is not dismissed  within sixty (60) days after filing, (iii) the other Party becomes insolvent, (iv) any substantial part of the other Party's property becomes subject to  any levy, seizure, assignment, application, or sale for or by any creditor or governmental agency, or (v) the other Party liquidates or otherwise  discontinues all or most of that portion of its business operations which are related to this Agreement.     Section 8.3 Termination by NCM. NCM may terminate this Agreement upon thirty (30) days written notice to Network Affiliate in the  event that distribution of the Service to all of the Theatres listed on Exhibit B is permanently discontinued.     Section 8.4 Survival. Sections 2.3, 5.2, 5.3, 5.4, 8.4, 8.5, 11.1, 11.2, 11.3 and 11.6 and Articles VII, IX, X, XII, and XV shall survive any  expiration or termination of this Agreement.     Section 8.5 Effect of Termination. " ;
+    ct:source_path "cuad/DigitalCinemaDestinationsCorp_20111220_S-1_EX-10.10_7346719_EX-10.10_Affiliate Agreement.txt" ;
+    ct:source_sha256 "e7af6c31ad15625052cf5a166db30aa312faac61927e34cc9675adf418e61076" ;
+    ct:start_char 67171 .
+
+ex:C029P0100 a ct:SourcePassage ;
+    ct:end_char 69587 ;
+    ct:exact_text "Upon termination or expiration of this Agreement, and upon reasonable prior notice to Network  Affiliate, NCM shall be entitled to enter the Theatres upon reasonable prior written notice, and any other premises of Network Affiliate where any  NCM Property may be located, and recover any and all NCM Property, unless Network Affiliate chooses to purchase such Property based on a  straight line five year depreciated value. In addition, each Party shall promptly deliver to the other or, at the other Party's option, permit the other  Party to enter its premises and recover any Equipment in the first Party's possession, custody or control which may be owned by the other Party  pursuant to Section 2.3 hereof. Each Party shall fully cooperate in this effort. NCM shall be obligated to restore all premises from which it removes  NCM Property or Equipment to its previous condition, reasonable wear and tear excepted. In addition, any and all licenses granted by either party  to the other under this Agreement shall immediately terminate, and NCM shall be entitled to immediately discontinue the Service. Notwithstanding  termination of this Agreement, each party shall pay to the other, within five (5) days after the effective date of such termination, any and all fees  (including costs and expenses) owed hereunder as of such termination.     Section 8.6 Suspension of Services. " ;
+    ct:source_path "cuad/DigitalCinemaDestinationsCorp_20111220_S-1_EX-10.10_7346719_EX-10.10_Affiliate Agreement.txt" ;
+    ct:source_sha256 "e7af6c31ad15625052cf5a166db30aa312faac61927e34cc9675adf418e61076" ;
+    ct:start_char 68202 .
+
+ex:C029P0113 a ct:SourcePassage ;
+    ct:end_char 77254 ;
+    ct:exact_text "(b) Additional Remedies. In addition to, but not in limitation of, NCM's obligations under Section 10.3 (a) above, NCM may, at  its sole option, in the event that any claim, suit, proceeding, or action is brought or threatened for which NCM may be obligated under Section 10.3 (a) to indemnify Network Affiliate: (i) replace or modify the NCM Property to render it non-infringing; (ii) secure for Network Affiliate the right to  use the NCM Property; or (iii) terminate this Agreement under the provisions of Article X. In the event NCM chooses to terminate this Agreement  under Article X hereof, NCM shall refund to Network Affiliate the portion (if any) of the total amount of license fees actually paid to NCM by  Network Affiliate hereunder during the two-year period immediately preceding the date of the claim for indemnification, depreciated according to a  five-year straight line depreciation.     (c) Limitations of Obligations. NCM shall not have any liability to Network Affiliate under this Section 10.3 for any alleged  infringement based in any part on: (i) any Service content or Confidential Information supplied by or on behalf of Network Affiliate; (ii) the  combined use of the NCM Property with software or hardware products or other technology or materials not provided or owned by NCM; (iii)  additions or modifications to the NCM Property not made by NCM; " ;
+    ct:source_path "cuad/DigitalCinemaDestinationsCorp_20111220_S-1_EX-10.10_7346719_EX-10.10_Affiliate Agreement.txt" ;
+    ct:source_sha256 "e7af6c31ad15625052cf5a166db30aa312faac61927e34cc9675adf418e61076" ;
+    ct:start_char 75873 .
+
+ct:SourcePassage a owl:Class ;
+    rdfs:label "SourcePassage" .
+
+ct:Condition a owl:Class ;
+    rdfs:label "Condition" .
+
+ct:Rule a owl:Class ;
+    rdfs:label "Rule" .
+
+ct:Reference a owl:Class ;
+    rdfs:label "Reference" .
+

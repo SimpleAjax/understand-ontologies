@@ -1,0 +1,379 @@
+@prefix ct: <https://cimulink.local/ontology/contract-terms/0.1#> .
+@prefix ex: <https://cimulink.local/ontology/llm100-v1/> .
+@prefix meta: <https://cimulink.local/ontology/extraction#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ct: a owl:Ontology ;
+    rdfs:comment "Partial five-contract development sample. No claim of complete contract coverage or legal correctness." .
+
+ct:agreement_effective_from a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:applies_within a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:calendar_date_status a owl:DatatypeProperty .
+
+ct:coverage a owl:DatatypeProperty .
+
+ct:description a owl:DatatypeProperty .
+
+ct:duration a owl:DatatypeProperty .
+
+ct:duration_status a owl:DatatypeProperty .
+
+ct:end_char a owl:DatatypeProperty .
+
+ct:end_date_status a owl:DatatypeProperty .
+
+ct:ends_on_event a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:exact_text a owl:DatatypeProperty .
+
+ct:has_party a owl:ObjectProperty ;
+    rdfs:domain ct:Agreement ;
+    rdfs:range ct:Party .
+
+ct:has_rule a owl:ObjectProperty ;
+    rdfs:domain ct:Agreement ;
+    rdfs:range ct:Rule .
+
+ct:kind a owl:DatatypeProperty .
+
+ct:notice_actor a owl:DatatypeProperty .
+
+ct:notice_form a owl:DatatypeProperty .
+
+ct:notice_period_status a owl:DatatypeProperty .
+
+ct:qualifies a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Rule .
+
+ct:references_section a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:renewal_count a owl:DatatypeProperty .
+
+ct:resolution_status a owl:DatatypeProperty .
+
+ct:resolved_to a owl:ObjectProperty ;
+    rdfs:domain ct:Reference ;
+    rdfs:range ct:SourcePassage .
+
+ct:source_path a owl:DatatypeProperty .
+
+ct:source_sha256 a owl:DatatypeProperty .
+
+ct:start_char a owl:DatatypeProperty .
+
+ct:starts_from a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:stated_end_date a owl:DatatypeProperty .
+
+ct:subject_to a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Condition .
+
+ct:supported_by a owl:ObjectProperty ;
+    rdfs:range ct:SourcePassage .
+
+ct:termination_notice a owl:DatatypeProperty .
+
+ex:C003 a ct:Agreement ;
+    rdfs:label "ALAMOGORDOFINANCIALCORP_12_16_1999-EX-1-AGENCY AGREEMENT.txt" ;
+    ct:coverage "LOCAL_LLM_PROPOSED_PARTIAL; NOT_HUMAN_REVIEWED" ;
+    ct:has_rule ex:C003R0001,
+        ex:C003R0002,
+        ex:C003R0003,
+        ex:C003R0004,
+        ex:C003R0005,
+        ex:C003R0006,
+        ex:C003R0007,
+        ex:C003R0008,
+        ex:C003R0009,
+        ex:C003R0010,
+        ex:C003R0011,
+        ex:C003R0012,
+        ex:C003R0013,
+        ex:C003R0014 ;
+    ct:source_path "cuad/ALAMOGORDOFINANCIALCORP_12_16_1999-EX-1-AGENCY AGREEMENT.txt" ;
+    ct:source_sha256 "3c70a981a2107097efddcf6fdba26d5d4b3d7eb458d826a10002d5dcc767fad7" ;
+    meta:model_digest "0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0" .
+
+ct:Party a owl:Class ;
+    rdfs:label "Party" .
+
+ex:C003P0017 a ct:SourcePassage ;
+    ct:end_char 7881 ;
+    ct:exact_text "In the event the Company is unable to sell a minimum of 708,050  Shares within the period  herein  provided,  this  Agreement  shall  terminate  and the Company shall refund to any persons who have  subscribed  for any of the Shares, the full amount which it may have  received  from them plus accrued  interest as set forth in the  Prospectus;  and none of the parties to this  Agreement  shall have any obligation to the other parties hereunder,  except as set forth in this Section 2 and in Sections 6, 8 and 9 hereof." ;
+    ct:source_path "cuad/ALAMOGORDOFINANCIALCORP_12_16_1999-EX-1-AGENCY AGREEMENT.txt" ;
+    ct:source_sha256 "3c70a981a2107097efddcf6fdba26d5d4b3d7eb458d826a10002d5dcc767fad7" ;
+    ct:start_char 7360 .
+
+ex:C003P0018 a ct:SourcePassage ;
+    ct:end_char 8014 ;
+    ct:exact_text "In the event the Offering is terminated,  the Agent shall be reimbursed for its actual accountable out-of-pocket expenses." ;
+    ct:source_path "cuad/ALAMOGORDOFINANCIALCORP_12_16_1999-EX-1-AGENCY AGREEMENT.txt" ;
+    ct:source_sha256 "3c70a981a2107097efddcf6fdba26d5d4b3d7eb458d826a10002d5dcc767fad7" ;
+    ct:start_char 7892 .
+
+ex:C003P0022 a ct:SourcePassage ;
+    ct:end_char 9717 ;
+    ct:exact_text "(a)  A  management  fee of $25,000,  payable in four  installments  of                $6,250 on  November 29 and  December  29, 1999 and January 29 and                February 29,  2000.  Should the  Offering be  terminated  for any                reason not  attributable  to the action or inaction of the Agent,                the Agent  shall  have  earned  and be  entitled  to be paid fees                accruing through the stage at which the termination occurred." ;
+    ct:source_path "cuad/ALAMOGORDOFINANCIALCORP_12_16_1999-EX-1-AGENCY AGREEMENT.txt" ;
+    ct:source_sha256 "3c70a981a2107097efddcf6fdba26d5d4b3d7eb458d826a10002d5dcc767fad7" ;
+    ct:start_char 9246 .
+
+ex:C003P0236 a ct:SourcePassage ;
+    ct:end_char 129366 ;
+    ct:exact_text "(d)  The  agreements  contained  in this  Section  8 and in  Section 9                hereof and the representations and warranties of the Company, the                MHC  and the  Bank  set  forth  in this  Agreement  shall  remain                operative  and in full  force and effect  regardless  of: (i) any                investigation  made by or on behalf  of agent or their  officers,                directors or controlling persons,  agent or employees or by or on                behalf  of the  Company,  the MHC or the  Bank  or any  officers,                directors  or  controlling  persons,  agent or  employees  of the                Company,  the  MHC or the  Bank;  (ii)  delivery  of and  payment                hereunder  for the  Shares;  or  (iii)  any  termination  of this" ;
+    ct:source_path "cuad/ALAMOGORDOFINANCIALCORP_12_16_1999-EX-1-AGENCY AGREEMENT.txt" ;
+    ct:source_sha256 "3c70a981a2107097efddcf6fdba26d5d4b3d7eb458d826a10002d5dcc767fad7" ;
+    ct:start_char 128567 .
+
+ex:C003P0244 a ct:SourcePassage ;
+    ct:end_char 135307 ;
+    ct:exact_text "Section 10. Survival of Agreements,  Representations  and  Indemnities. The respective  indemnities of the Company,  the MHC, the Bank and the Agent and the representations and warranties and other statements of the Company, the MHC, the Bank and the Agent set forth in or made  pursuant  to this  Agreement  shall remain in full force and effect,  regardless of any  termination or cancellation of this Agreement or any  investigation  made by or on behalf of the Agent,  the Company,  the MHC, the Bank or any  controlling  person referred to in Section 8 hereof,  and shall  survive the  issuance of the Shares,  and any  successor  or assign of the Agent,  the Company,  the MHC, the Bank, and any such  controlling person  shall  be  entitled  to  the  benefit  of  the  respective   agreements, indemnities, warranties and representations." ;
+    ct:source_path "cuad/ALAMOGORDOFINANCIALCORP_12_16_1999-EX-1-AGENCY AGREEMENT.txt" ;
+    ct:source_sha256 "3c70a981a2107097efddcf6fdba26d5d4b3d7eb458d826a10002d5dcc767fad7" ;
+    ct:start_char 134462 .
+
+ex:C003P0245 a ct:SourcePassage ;
+    ct:end_char 135510 ;
+    ct:exact_text "Section 11.  Termination.  The Agent may  terminate  this  Agreement by giving  the  notice  indicated  below in this  Section 11 at any time after this Agreement becomes effective as follows:" ;
+    ct:source_path "cuad/ALAMOGORDOFINANCIALCORP_12_16_1999-EX-1-AGENCY AGREEMENT.txt" ;
+    ct:source_sha256 "3c70a981a2107097efddcf6fdba26d5d4b3d7eb458d826a10002d5dcc767fad7" ;
+    ct:start_char 135318 .
+
+ex:C003P0246 a ct:SourcePassage ;
+    ct:end_char 135974 ;
+    ct:exact_text "(a)  In the  event  the  Company  fails to sell the  required  minimum                number of the Shares by _________,  2000, and in accordance  with                the provisions of the Plan or as required by the MHC Regulations,                and applicable law, this Agreement shall terminate upon refund by                the Company to each person who has  subscribed for or ordered any                of the Shares the full amount which it may" ;
+    ct:source_path "cuad/ALAMOGORDOFINANCIALCORP_12_16_1999-EX-1-AGENCY AGREEMENT.txt" ;
+    ct:source_sha256 "3c70a981a2107097efddcf6fdba26d5d4b3d7eb458d826a10002d5dcc767fad7" ;
+    ct:start_char 135522 .
+
+ex:C003P0252 a ct:SourcePassage ;
+    ct:end_char 137761 ;
+    ct:exact_text "This Agreement may also be terminated by mutual written  consent of the parties hereto." ;
+    ct:source_path "cuad/ALAMOGORDOFINANCIALCORP_12_16_1999-EX-1-AGENCY AGREEMENT.txt" ;
+    ct:source_sha256 "3c70a981a2107097efddcf6fdba26d5d4b3d7eb458d826a10002d5dcc767fad7" ;
+    ct:start_char 137674 .
+
+ex:C003R0001 a ct:Rule ;
+    rdfs:label "Termination — source passage 16" ;
+    ct:kind "TERMINATION" ;
+    ct:subject_to ex:C003R0001Condition16 ;
+    ct:supported_by ex:C003P0016 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C003R0001Condition16 a ct:Condition ;
+    ct:description "The  obligations of the Agent  pursuant to this  Agreement  (other than those set forth in  Sections  2(d),  8 and 9 hereof)  shall  terminate  upon the completion  or  termination  or  abandonment  of the Plan by the Company or upon termination  of the  Offering,  but in no event  later  than the date  (the \"End Date\") which is 45 days after the Closing  Date (as  hereinafter  defined).  All fees or  expenses  due to the Agent but  unpaid  will be payable to the Agent in next day funds at the earlier of the Closing  Date (as  hereinafter  defined) or the End Date.  In the event the  Offering is extended  beyond the End Date,  the Company, the MHC, the Bank and the Agent may agree to renew this Agreement under mutually acceptable terms." ;
+    ct:supported_by ex:C003P0016 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C003R0002 a ct:Rule ;
+    rdfs:label "Optional Renewal — source passage 16" ;
+    ct:kind "OPTIONAL_RENEWAL" ;
+    ct:subject_to ex:C003R0002Condition16 ;
+    ct:supported_by ex:C003P0016 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C003R0002Condition16 a ct:Condition ;
+    ct:description "The  obligations of the Agent  pursuant to this  Agreement  (other than those set forth in  Sections  2(d),  8 and 9 hereof)  shall  terminate  upon the completion  or  termination  or  abandonment  of the Plan by the Company or upon termination  of the  Offering,  but in no event  later  than the date  (the \"End Date\") which is 45 days after the Closing  Date (as  hereinafter  defined).  All fees or  expenses  due to the Agent but  unpaid  will be payable to the Agent in next day funds at the earlier of the Closing  Date (as  hereinafter  defined) or the End Date.  In the event the  Offering is extended  beyond the End Date,  the Company, the MHC, the Bank and the Agent may agree to renew this Agreement under mutually acceptable terms." ;
+    ct:supported_by ex:C003P0016 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C003R0003 a ct:Rule ;
+    rdfs:label "Termination — source passage 17" ;
+    ct:kind "TERMINATION" ;
+    ct:references_section ex:C003R0003Ref0 ;
+    ct:supported_by ex:C003P0017 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C003R0003Ref0 a ct:Reference ;
+    rdfs:label "Section 2" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C003R0004 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 18" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:supported_by ex:C003P0018 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C003R0005 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 22" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:supported_by ex:C003P0022 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C003R0006 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 236" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:references_section ex:C003R0006Ref0,
+        ex:C003R0006Ref1 ;
+    ct:supported_by ex:C003P0236 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C003R0006Ref0 a ct:Reference ;
+    rdfs:label "Section  8" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C003R0006Ref1 a ct:Reference ;
+    rdfs:label "Section 9" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C003R0007 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 244" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:references_section ex:C003R0007Ref0,
+        ex:C003R0007Ref1 ;
+    ct:supported_by ex:C003P0244 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C003R0007Ref0 a ct:Reference ;
+    rdfs:label "Section 10" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C003R0007Ref1 a ct:Reference ;
+    rdfs:label "Section 8" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C003R0008 a ct:Rule ;
+    rdfs:label "Termination — source passage 245" ;
+    ct:kind "TERMINATION" ;
+    ct:references_section ex:C003R0008Ref0 ;
+    ct:supported_by ex:C003P0245 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C003R0008Ref0 a ct:Reference ;
+    rdfs:label "Section 11" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C003R0009 a ct:Rule ;
+    rdfs:label "Termination — source passage 246" ;
+    ct:kind "TERMINATION" ;
+    ct:supported_by ex:C003P0246 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C003R0010 a ct:Rule ;
+    rdfs:label "Termination — source passage 249" ;
+    ct:kind "TERMINATION" ;
+    ct:references_section ex:C003R0010Ref0 ;
+    ct:subject_to ex:C003R0010Condition249 ;
+    ct:supported_by ex:C003P0249 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C003R0010Condition249 a ct:Condition ;
+    ct:description "(b)  If any of the  conditions  specified  in Section 7 shall not have                been  fulfilled  when and as  required by this  Agreement  unless                waived in writing, or by the Closing Date, this Agreement and all                of the Agent's  obligations  hereunder  may be  cancelled  by the                Agent  by  notifying  the  Company,  the MHC and the Bank of such                cancellation in writing or by telegram at any time at or prior to                the  Closing  Date,  and any such  cancellation  shall be without                liability  of any party to any other  party  except as  otherwise                provided in Sections 2(a), 6, 8 and 9 hereof." ;
+    ct:supported_by ex:C003P0249 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C003R0010Ref0 a ct:Reference ;
+    rdfs:label "Section 7" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C003R0011 a ct:Rule ;
+    rdfs:label "Conditional Referenced Term — source passage 249" ;
+    ct:kind "CONDITIONAL_REFERENCED_TERM" ;
+    ct:references_section ex:C003R0011Ref0 ;
+    ct:subject_to ex:C003R0011Condition249 ;
+    ct:supported_by ex:C003P0249 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C003R0011Condition249 a ct:Condition ;
+    ct:description "(b)  If any of the  conditions  specified  in Section 7 shall not have                been  fulfilled  when and as  required by this  Agreement  unless                waived in writing, or by the Closing Date, this Agreement and all                of the Agent's  obligations  hereunder  may be  cancelled  by the                Agent  by  notifying  the  Company,  the MHC and the Bank of such                cancellation in writing or by telegram at any time at or prior to                the  Closing  Date,  and any such  cancellation  shall be without                liability  of any party to any other  party  except as  otherwise                provided in Sections 2(a), 6, 8 and 9 hereof." ;
+    ct:supported_by ex:C003P0249 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C003R0011Ref0 a ct:Reference ;
+    rdfs:label "Section 7" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C003R0012 a ct:Rule ;
+    rdfs:label "Termination — source passage 250" ;
+    ct:kind "TERMINATION" ;
+    ct:subject_to ex:C003R0012Condition250 ;
+    ct:supported_by ex:C003P0250 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C003R0012Condition250 a ct:Condition ;
+    ct:description "(c)  If the Agent  elects to terminate  this  Agreement as provided in                this Section, the Company, the MHC and the Bank shall be notified                promptly by telephone or telegram, confirmed by letter." ;
+    ct:supported_by ex:C003P0250 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C003R0013 a ct:Rule ;
+    rdfs:label "Termination — source passage 251" ;
+    ct:kind "TERMINATION" ;
+    ct:references_section ex:C003R0013Ref0 ;
+    ct:subject_to ex:C003R0013Condition251 ;
+    ct:supported_by ex:C003P0251 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C003R0013Condition251 a ct:Condition ;
+    ct:description "The Company,  the MHC and the Bank may terminate  this Agreement in the event the Agent is in material breach of the  representations  and warranties or covenants  contained  in Section 5 and such  breach has not been cured after the Company,  the MHC and the Bank  have  provided  the  Agent  with  notice of such breach." ;
+    ct:supported_by ex:C003P0251 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C003R0013Ref0 a ct:Reference ;
+    rdfs:label "Section 5" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C003R0014 a ct:Rule ;
+    rdfs:label "Termination — source passage 252" ;
+    ct:kind "TERMINATION" ;
+    ct:supported_by ex:C003P0252 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C003P0250 a ct:SourcePassage ;
+    ct:end_char 137330 ;
+    ct:exact_text "(c)  If the Agent  elects to terminate  this  Agreement as provided in                this Section, the Company, the MHC and the Bank shall be notified                promptly by telephone or telegram, confirmed by letter." ;
+    ct:source_path "cuad/ALAMOGORDOFINANCIALCORP_12_16_1999-EX-1-AGENCY AGREEMENT.txt" ;
+    ct:source_sha256 "3c70a981a2107097efddcf6fdba26d5d4b3d7eb458d826a10002d5dcc767fad7" ;
+    ct:start_char 137108 .
+
+ex:C003P0251 a ct:SourcePassage ;
+    ct:end_char 137663 ;
+    ct:exact_text "The Company,  the MHC and the Bank may terminate  this Agreement in the event the Agent is in material breach of the  representations  and warranties or covenants  contained  in Section 5 and such  breach has not been cured after the Company,  the MHC and the Bank  have  provided  the  Agent  with  notice of such breach." ;
+    ct:source_path "cuad/ALAMOGORDOFINANCIALCORP_12_16_1999-EX-1-AGENCY AGREEMENT.txt" ;
+    ct:source_sha256 "3c70a981a2107097efddcf6fdba26d5d4b3d7eb458d826a10002d5dcc767fad7" ;
+    ct:start_char 137341 .
+
+ct:Agreement a owl:Class ;
+    rdfs:label "Agreement" .
+
+ex:C003P0016 a ct:SourcePassage ;
+    ct:end_char 7349 ;
+    ct:exact_text "The  obligations of the Agent  pursuant to this  Agreement  (other than those set forth in  Sections  2(d),  8 and 9 hereof)  shall  terminate  upon the completion  or  termination  or  abandonment  of the Plan by the Company or upon termination  of the  Offering,  but in no event  later  than the date  (the \"End Date\") which is 45 days after the Closing  Date (as  hereinafter  defined).  All fees or  expenses  due to the Agent but  unpaid  will be payable to the Agent in next day funds at the earlier of the Closing  Date (as  hereinafter  defined) or the End Date.  In the event the  Offering is extended  beyond the End Date,  the Company, the MHC, the Bank and the Agent may agree to renew this Agreement under mutually acceptable terms." ;
+    ct:source_path "cuad/ALAMOGORDOFINANCIALCORP_12_16_1999-EX-1-AGENCY AGREEMENT.txt" ;
+    ct:source_sha256 "3c70a981a2107097efddcf6fdba26d5d4b3d7eb458d826a10002d5dcc767fad7" ;
+    ct:start_char 6603 .
+
+ex:C003P0249 a ct:SourcePassage ;
+    ct:end_char 137096 ;
+    ct:exact_text "(b)  If any of the  conditions  specified  in Section 7 shall not have                been  fulfilled  when and as  required by this  Agreement  unless                waived in writing, or by the Closing Date, this Agreement and all                of the Agent's  obligations  hereunder  may be  cancelled  by the                Agent  by  notifying  the  Company,  the MHC and the Bank of such                cancellation in writing or by telegram at any time at or prior to                the  Closing  Date,  and any such  cancellation  shall be without                liability  of any party to any other  party  except as  otherwise                provided in Sections 2(a), 6, 8 and 9 hereof." ;
+    ct:source_path "cuad/ALAMOGORDOFINANCIALCORP_12_16_1999-EX-1-AGENCY AGREEMENT.txt" ;
+    ct:source_sha256 "3c70a981a2107097efddcf6fdba26d5d4b3d7eb458d826a10002d5dcc767fad7" ;
+    ct:start_char 136398 .
+
+ct:Condition a owl:Class ;
+    rdfs:label "Condition" .
+
+ct:SourcePassage a owl:Class ;
+    rdfs:label "SourcePassage" .
+
+ct:Reference a owl:Class ;
+    rdfs:label "Reference" .
+
+ct:Rule a owl:Class ;
+    rdfs:label "Rule" .
+

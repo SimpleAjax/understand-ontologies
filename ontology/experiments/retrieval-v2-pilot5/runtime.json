@@ -1,0 +1,6 @@
+{
+  "started_at": "2026-11-13T07:12:47.571321+00:00",
+  "model": "qwen3:4b-instruct-2507-q4_K_M",
+  "model_digest": "0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0",
+  "api": "http://127.0.0.1:18765"
+}

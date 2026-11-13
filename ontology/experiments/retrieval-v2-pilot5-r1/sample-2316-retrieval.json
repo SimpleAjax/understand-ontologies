@@ -1,0 +1,515 @@
+{
+  "sample": {
+    "source_index": 2316,
+    "question": "Consider the Transportation Contract between JSC NOC KazakhOil and JSC Karakudukmunay for Crude Oil Export; What is the expiration date of this contract?",
+    "topic": "expiry",
+    "document_id": "C020",
+    "file_path": "cuad/CHAPARRALRESOURCESINC_03_30_2000-EX-10.66-TRANSPORTATION CONTRACT.txt"
+  },
+  "retrieval": {
+    "stages": {
+      "soft_candidates": [
+        {
+          "id": "d90049d949dd",
+          "file_path": "cuad/CHAPARRALRESOURCESINC_03_30_2000-EX-10.66-TRANSPORTATION CONTRACT.txt",
+          "span": [
+            3592,
+            5994
+          ],
+          "text": "Offtake Agreement or the Other Agreement, as applicable.\n\n\"Effective Date\" means the date of actual execution of this Contract by the Parties.\n\n\"FOB\" has the meaning given to \"free on board\" in the Incoterms 1990.\n\n\"Initial Term\" means the period commencing on the Effective Date and concluding on the last day of the month in which the fifth anniversary of the Offtake Agreement Effective Date falls.\n\n\n\n\n\n\"Karakuduk Crude Oil\" means Commodity produced from the Karakuduk Field or from such other field as the Principal and the Company may agree.\n\n\"Karakuduk Field\" means the Karakuduk oil field in the Mangistau Oblast of the Republic of Kazakhstan as more particularly described in the Petroleum Contract and the License.\n\n\"Offtake Agreement\" means that certain Crude Oil Sale and Purchase Agreement between the Principal and STASCO dated 1 November 1999.\n\n\"Offtake Agreement Effective Date\" means the \"effective date\" of and as defined in the Offtake Agreement.\n\n\"Other Agreement\" means any agreement other than the Offtake Agreement pursuant to which the Principal sells Karakuduk Crude Oil.\n\n\"Parties\" is defined in the Preamble to this Contract.\n\n\"Petroleum Contract\" means that certain Agreement for Exploration, Development and Production of Oil in Karakuduk Oil Field in Mangistau Oblast of the Republic of Kazakhstan between the Ministry of Oil and Gas Industries of the Republic of Kazakhstan for and on behalf of the Government of the Republic of Kazakhstan and the Principal.\n\n\"License\" means License No. MG#249 (Oil) dated 25 June 1995 (as subsequently amended) granted to the Principal by the Government of the Republic of Kazakhstan.\n\n\"Principal\" is defined in the Preamble to this Contract.\n\n\"Principal Period\" means the period from the Effective Date to the CPC Pipeline Operational Date.\n\n\"REBCO\" means Commodity that satisfies the specifications of TU-39-1623-93 \"Russian oil delivered for export; Specifications\" for export to the far abroad.\n\n                                       2\n\n\"Secondary Period\" means the period from the CPC Pipeline Operational Date to the date of termination of this Contract (inclusive).\n\n\"STASCO\" means Shell Trading International Limited acting through its agent Shell International Trading and Shipping Company Limited.\n\n\"Tenge\" means official currency of the Republic of Kazakhstan.\n\n2.2 In this Contract, unless the context otherwise requires:\n\n",
+          "categories": [
+            "CONDITIONAL_REFERENCED_TERM",
+            "INITIAL_TERM"
+          ],
+          "origin": "original_chunk",
+          "fusion_score": 0.03450204813108039
+        },
+        {
+          "id": "763ea5e63339",
+          "file_path": "cuad/CHAPARRALRESOURCESINC_03_30_2000-EX-10.66-TRANSPORTATION CONTRACT.txt",
+          "span": [
+            0,
+            2065
+          ],
+          "text": "Exhibit 10.66\n\n                             TRANSPORTATION CONTRACT\n\n        Astana                                         January 31, 2000\n\n                                    PREAMBLE\n\nJSC NOC KazakhOil, hereinafter referred to as the \"Company\", in the person of Executive Marketing Director Ms. A. M. Rakhimbekov, acting on the basis of the Power of Attorney (1) 1-13 dated January 3, 2000, on the one side and JSC Karakudukmunay, hereinafter referred to as the \"Principal\" in the person of General Director Mr. N. D. Klinchev and Financial Director Mr. R. Moore, acting on the basis of the Charter, on the other side, collectively referred to as the \"Parties\", have entered into this Transportation Contract (the \"Contract\") and hereby agree as follows:\n\n                           1. SUBJECT OF THE CONTRACT\n\n1.1  The Company, at the expense and on the instructions of the Principal, shall      arrange transportation for export in batches to the far abroad of crude oil      (\"Commodity\") belonging to the Principal and shall provide such other      services in connection therewith as are provided in this Contract.\n\n1.2  The volume of a batch of Commodity transported hereunder shall be      determined in accordance with the monthly schedules of transit and      distribution of Kazakhstany oil.\n\n                        2. DEFINITIONS AND INTERPRETATION\n\n2.1  As used in the Contract, the following terms have the meanings indicated:\n\n\"Buyer\" means STASCO in its capacity as Buyer under the Offtake Agreement and any other person in its capacity as buyer under any Other Agreement.\n\n\"Commodity\" is defined in item 1.1.\n\n\"Company\" is defined in the Preamble to this Contract.\n\n\"Contract\" is defined in the Preamble to this Contract.\n\n\"CPC Blend\" means the blend of crude oil generally available at the CPC Terminal that complies with minimum specifications agreed by the Principal and STASCO pursuant to the Offtake Agreement.\n\n\"CPC Pipeline\" means the pipeline being constructed by the Caspian Pipeline Consortium from the Tengiz field to Novorossiysk.\n\n",
+          "categories": [],
+          "origin": "original_chunk",
+          "fusion_score": 0.03278688524590164
+        },
+        {
+          "id": "7240d8bdea8c",
+          "file_path": "cuad/CHAPARRALRESOURCESINC_03_30_2000-EX-10.66-TRANSPORTATION CONTRACT.txt",
+          "span": [
+            25293,
+            26826
+          ],
+          "text": "as well as exercise of any other      right, power or remedy.\n\n14.5 This Contract does not confer rights or remedies upon any person other than      the Principal and the Company.\n\n                  15. LEGAL ADDRESSES AND PROPS OF THE PARTIES\n\n             COMPANY:                                      PRINCIPAL\n\nJSC NOC KazakhOil                                    JSC Karakudukmunay 473000, Republic of Kazakhstan, Astana,         466200, Aktau, Mangistau oblast 60, Republic avenue                                District 3, Building 82 Tel.: (3172) 280609, fax 327724                 Tel.: (3292) 513795, fax 518336 TRN 600700150675                                       TRN 430600001175\n\nBank props:                                               Bank props: Tenge account (1) 000467052                           AB Neftebank, Aktau in Akmola affiliate of                           Tenge account (1) 609614 JSC \"Almaty trade and finance bank\", Astana IAT 195301730                                           IAT 192901705\n\n/s/ Amangeldy Tlegenov                        &bbsp;     /s/ Nikolai D. Klinchev\n\n\n\n\n\n- --------------------------------------------     ------------------------------- A.M. Rakhimbekov                                       Nikolai Klinchev\n\n                                                      /s/ Richard J. Moore                                                  -------------------------------                                                         Richard Moore\n\n                                    ",
+          "categories": [],
+          "origin": "original_chunk",
+          "fusion_score": 0.0315136476426799
+        }
+      ],
+      "llm_reranked": [
+        {
+          "id": "7055febdb26a",
+          "file_path": "cuad/CHAPARRALRESOURCESINC_03_30_2000-EX-10.66-TRANSPORTATION CONTRACT.txt",
+          "span": [
+            14305,
+            16910
+          ],
+          "text": "batches during the period from      the Effective Date through the term of this Contract subject to (i) the      Principal having the requisite supplies of Commodity and (ii) the Principal      having entered into the Offtake Agreement or another Agreement with the      Buyer.\n\n                                       5\n\n6.2  The Company shall have a right to deliver Commodity to the Buyer with a      permissible +/-5% deviation from the number of batches of Commodity.\n\n                 7. OWNERSHIP RIGHT AND RISK OF ACCIDENTAL LOSS\n\n7.1  Ownership right and risk of loss with respect to all Commodity transported      under this Contract, shall remain with the Principal at all times prior to      transfer of the ownership right and risk of loss with respect to such      Commodity to the Buyer in accordance with the Delivery Basis. At no time      shall the Company have the ownership right to any Commodity transported      under this Contract.\n\n7.2  At any time in accordance with reasonable requirements of the Principal,      the Company shall confirm the Principal's ownership rights to Commodity,      transported under this Contract.\n\n7.3  At any time the Principal may insure this Contract at his own expense, and      the Company shall render feasible assistance to the Principal in this case.\n\n                             8. LIABILITY; INDEMNITY\n\n8.1  The Parties shall be liable for non-execution and/or improper execution of      their obligations under this Agreement in accordance with the legislation      of the Republic of Kazakstan.\n\n8.2  In case if the Principal violates the conditions of this Contract, and such      violation entails infringement of the Off-take Agreement conditions by the      Principal, then the Principal shall be solely liable in front of the      Purchaser for such violations. In addition, the Company shall not be liable      in front of the Principal or the Purchaser hereunder.\n\n8.3  In case if violation by the Principal of the Off-take Agreement conditions      takes place due to infringement by the Company of its liabilities in front      of the Principal under this Contract, the Company shall be soley liable in      front of the Principal for such losses resulting from such violation ,      evidenced and supported by confirming documents ..\n\n                             9. TERM OF THE CONTRACT\n\n9.1  In accordance with items 9.3, 9.4, and 10.3, this Contract shall come into      force on the Effective Date, remain effective throughout the Initial Term,      and be prolonged, or further extended automatically for a period of 12\n\n\n\n\n\n",
+          "categories": [
+            "AUTOMATIC_RENEWAL",
+            "INITIAL_TERM"
+          ],
+          "origin": "original_chunk",
+          "fusion_score": 0.030484344422700583
+        },
+        {
+          "id": "4dc5a668179a",
+          "file_path": "cuad/CHAPARRALRESOURCESINC_03_30_2000-EX-10.66-TRANSPORTATION CONTRACT.txt",
+          "span": [
+            23052,
+            25608
+          ],
+          "text": "or any of its assets;\n\niv.  all governmental and other permits which are required to have been obtained      by it with respect to this Contract, have been obtained and have full legal      force; and all conditions of any such permits have been complied with; and\n\nv    obligations of such Party under this Contract constitute its legal, valid      and binding obligations, enforceable in accordance with its respective      terms (subject to applicable bankruptcy, re-organization, insolvency,      moratorium or similar laws affecting creditors' rights generally and      subject, as to the enforceability, to equitable principles of general      application (regardless of whether enforcement on execution of this      Contract is sought in a proceeding in equity or under law)).\n\n                                       8\n\n                                14. MISCELLANEOUS\n\n14.1 This Contract constitutes the entire agreement of the Parties with respect      to the subject matter of this Contract and the Parties acknowledge that      they do not enter into this Contract regardless of any previous contacts      between the Parties or their affiliates.\n\n14.2 Any amendments or alterations to any of the terms of this Contract shall be      effective unless they are registered in writing and signed by or on behalf      of each of the Parties; no waiver of any provision hereof shall be      effective unless it is in writing and signed by the Party, against which      such waiver is sought to be enforced.\n\n14.3 Except as expressly provided herein, the rights, authorities and remedies,      provided in this Contract, are cumulative and not exclusive of any rights,      authorities and remedies provided by the law.\n\n14.4 Except as expressly provided herein no delay or omission on the part of      either Party in exercising any rights, authorities or remedies, provided by      law or under this Contract, nor any indulgence granted by any Party to      another Party, shall impair such rights, authorities or remedies, or be      construed as a waiver thereof; moreover, no single or partial exercise of      any right, power or remedy provided by law or under this Contract shall      hinder other or further exercise thereof, as well as exercise of any other      right, power or remedy.\n\n14.5 This Contract does not confer rights or remedies upon any person other than      the Principal and the Company.\n\n                  15. LEGAL ADDRESSES AND PROPS OF THE PARTIES\n\n             COMPANY:                                      PRINCIPAL\n\n",
+          "categories": [],
+          "origin": "original_chunk",
+          "fusion_score": 0.025807525807525808
+        },
+        {
+          "id": "d90049d949dd",
+          "file_path": "cuad/CHAPARRALRESOURCESINC_03_30_2000-EX-10.66-TRANSPORTATION CONTRACT.txt",
+          "span": [
+            3592,
+            4431
+          ],
+          "text": "Offtake Agreement or the Other Agreement, as applicable.\n\n\"Effective Date\" means the date of actual execution of this Contract by the Parties.\n\n\"FOB\" has the meaning given to \"free on board\" in the Incoterms 1990.\n\n\"Initial Term\" means the period commencing on the Effective Date and concluding on the last day of the month in which the fifth anniversary of the Offtake Agreement Effective Date falls.\n\n\n\n\n\n\"Karakuduk Crude Oil\" means Commodity produced from the Karakuduk Field or from such other field as the Principal and the Company may agree.\n\n\"Karakuduk Field\" means the Karakuduk oil field in the Mangistau Oblast of the Republic of Kazakhstan as more particularly described in the Petroleum Contract and the License.\n\n\"Offtake Agreement\" means that certain Crude Oil Sale and Purchase Agreement between the Principal and STASCO dat",
+          "categories": [
+            "CONDITIONAL_REFERENCED_TERM",
+            "INITIAL_TERM"
+          ],
+          "origin": "original_chunk",
+          "fusion_score": 0.03450204813108039
+        }
+      ],
+      "section_links": [
+        {
+          "id": "7055febdb26a",
+          "file_path": "cuad/CHAPARRALRESOURCESINC_03_30_2000-EX-10.66-TRANSPORTATION CONTRACT.txt",
+          "span": [
+            14305,
+            16910
+          ],
+          "text": "batches during the period from      the Effective Date through the term of this Contract subject to (i) the      Principal having the requisite supplies of Commodity and (ii) the Principal      having entered into the Offtake Agreement or another Agreement with the      Buyer.\n\n                                       5\n\n6.2  The Company shall have a right to deliver Commodity to the Buyer with a      permissible +/-5% deviation from the number of batches of Commodity.\n\n                 7. OWNERSHIP RIGHT AND RISK OF ACCIDENTAL LOSS\n\n7.1  Ownership right and risk of loss with respect to all Commodity transported      under this Contract, shall remain with the Principal at all times prior to      transfer of the ownership right and risk of loss with respect to such      Commodity to the Buyer in accordance with the Delivery Basis. At no time      shall the Company have the ownership right to any Commodity transported      under this Contract.\n\n7.2  At any time in accordance with reasonable requirements of the Principal,      the Company shall confirm the Principal's ownership rights to Commodity,      transported under this Contract.\n\n7.3  At any time the Principal may insure this Contract at his own expense, and      the Company shall render feasible assistance to the Principal in this case.\n\n                             8. LIABILITY; INDEMNITY\n\n8.1  The Parties shall be liable for non-execution and/or improper execution of      their obligations under this Agreement in accordance with the legislation      of the Republic of Kazakstan.\n\n8.2  In case if the Principal violates the conditions of this Contract, and such      violation entails infringement of the Off-take Agreement conditions by the      Principal, then the Principal shall be solely liable in front of the      Purchaser for such violations. In addition, the Company shall not be liable      in front of the Principal or the Purchaser hereunder.\n\n8.3  In case if violation by the Principal of the Off-take Agreement conditions      takes place due to infringement by the Company of its liabilities in front      of the Principal under this Contract, the Company shall be soley liable in      front of the Principal for such losses resulting from such violation ,      evidenced and supported by confirming documents ..\n\n                             9. TERM OF THE CONTRACT\n\n9.1  In accordance with items 9.3, 9.4, and 10.3, this Contract shall come into      force on the Effective Date, remain effective throughout the Initial Term,      and be prolonged, or further extended automatically for a period of 12\n\n\n\n\n\n",
+          "categories": [
+            "AUTOMATIC_RENEWAL",
+            "INITIAL_TERM"
+          ],
+          "origin": "original_chunk",
+          "fusion_score": 0.030484344422700583
+        },
+        {
+          "id": "4dc5a668179a",
+          "file_path": "cuad/CHAPARRALRESOURCESINC_03_30_2000-EX-10.66-TRANSPORTATION CONTRACT.txt",
+          "span": [
+            23052,
+            25608
+          ],
+          "text": "or any of its assets;\n\niv.  all governmental and other permits which are required to have been obtained      by it with respect to this Contract, have been obtained and have full legal      force; and all conditions of any such permits have been complied with; and\n\nv    obligations of such Party under this Contract constitute its legal, valid      and binding obligations, enforceable in accordance with its respective      terms (subject to applicable bankruptcy, re-organization, insolvency,      moratorium or similar laws affecting creditors' rights generally and      subject, as to the enforceability, to equitable principles of general      application (regardless of whether enforcement on execution of this      Contract is sought in a proceeding in equity or under law)).\n\n                                       8\n\n                                14. MISCELLANEOUS\n\n14.1 This Contract constitutes the entire agreement of the Parties with respect      to the subject matter of this Contract and the Parties acknowledge that      they do not enter into this Contract regardless of any previous contacts      between the Parties or their affiliates.\n\n14.2 Any amendments or alterations to any of the terms of this Contract shall be      effective unless they are registered in writing and signed by or on behalf      of each of the Parties; no waiver of any provision hereof shall be      effective unless it is in writing and signed by the Party, against which      such waiver is sought to be enforced.\n\n14.3 Except as expressly provided herein, the rights, authorities and remedies,      provided in this Contract, are cumulative and not exclusive of any rights,      authorities and remedies provided by the law.\n\n14.4 Except as expressly provided herein no delay or omission on the part of      either Party in exercising any rights, authorities or remedies, provided by      law or under this Contract, nor any indulgence granted by any Party to      another Party, shall impair such rights, authorities or remedies, or be      construed as a waiver thereof; moreover, no single or partial exercise of      any right, power or remedy provided by law or under this Contract shall      hinder other or further exercise thereof, as well as exercise of any other      right, power or remedy.\n\n14.5 This Contract does not confer rights or remedies upon any person other than      the Principal and the Company.\n\n                  15. LEGAL ADDRESSES AND PROPS OF THE PARTIES\n\n             COMPANY:                                      PRINCIPAL\n\n",
+          "categories": [],
+          "origin": "original_chunk",
+          "fusion_score": 0.025807525807525808
+        },
+        {
+          "id": "d90049d949dd",
+          "file_path": "cuad/CHAPARRALRESOURCESINC_03_30_2000-EX-10.66-TRANSPORTATION CONTRACT.txt",
+          "span": [
+            3592,
+            4431
+          ],
+          "text": "Offtake Agreement or the Other Agreement, as applicable.\n\n\"Effective Date\" means the date of actual execution of this Contract by the Parties.\n\n\"FOB\" has the meaning given to \"free on board\" in the Incoterms 1990.\n\n\"Initial Term\" means the period commencing on the Effective Date and concluding on the last day of the month in which the fifth anniversary of the Offtake Agreement Effective Date falls.\n\n\n\n\n\n\"Karakuduk Crude Oil\" means Commodity produced from the Karakuduk Field or from such other field as the Principal and the Company may agree.\n\n\"Karakuduk Field\" means the Karakuduk oil field in the Mangistau Oblast of the Republic of Kazakhstan as more particularly described in the Petroleum Contract and the License.\n\n\"Offtake Agreement\" means that certain Crude Oil Sale and Purchase Agreement between the Principal and STASCO dat",
+          "categories": [
+            "CONDITIONAL_REFERENCED_TERM",
+            "INITIAL_TERM"
+          ],
+          "origin": "original_chunk",
+          "fusion_score": 0.03450204813108039
+        }
+      ],
+      "iterative": [
+        {
+          "id": "d90049d949dd",
+          "file_path": "cuad/CHAPARRALRESOURCESINC_03_30_2000-EX-10.66-TRANSPORTATION CONTRACT.txt",
+          "span": [
+            3592,
+            4431
+          ],
+          "text": "Offtake Agreement or the Other Agreement, as applicable.\n\n\"Effective Date\" means the date of actual execution of this Contract by the Parties.\n\n\"FOB\" has the meaning given to \"free on board\" in the Incoterms 1990.\n\n\"Initial Term\" means the period commencing on the Effective Date and concluding on the last day of the month in which the fifth anniversary of the Offtake Agreement Effective Date falls.\n\n\n\n\n\n\"Karakuduk Crude Oil\" means Commodity produced from the Karakuduk Field or from such other field as the Principal and the Company may agree.\n\n\"Karakuduk Field\" means the Karakuduk oil field in the Mangistau Oblast of the Republic of Kazakhstan as more particularly described in the Petroleum Contract and the License.\n\n\"Offtake Agreement\" means that certain Crude Oil Sale and Purchase Agreement between the Principal and STASCO dat",
+          "categories": [
+            "CONDITIONAL_REFERENCED_TERM",
+            "INITIAL_TERM"
+          ],
+          "origin": "original_chunk",
+          "fusion_score": 0.03450204813108039
+        },
+        {
+          "id": "c057d5761016",
+          "file_path": "cuad/CHAPARRALRESOURCESINC_03_30_2000-EX-10.66-TRANSPORTATION CONTRACT.txt",
+          "span": [
+            1808,
+            3592
+          ],
+          "text": "the CPC Terminal that complies with minimum specifications agreed by the Principal and STASCO pursuant to the Offtake Agreement.\n\n\"CPC Pipeline\" means the pipeline being constructed by the Caspian Pipeline Consortium from the Tengiz field to Novorossiysk.\n\n\"CPC Pipeline Operational Date\" means the last day of the month in which (i) the CPC Pipeline is completed, (ii) the Karakuduk Field is so connected with the CPC Pipeline (via pipeline, rail link, or otherwise) that Karakuduk Crude Oil can and will be evacuated to the CPC Terminal via the CPC Pipeline, (iii) the CPC Pipeline commences pumping commercial quantities of crude oil as determined by the Principal and STASCO pursuant to the Offtake Agreement, and (iv) if the CPC Pipeline is only transporting Commodity on a blend (as opposed to batch) basis, the Principal and STASCO have agreed on the specifications for CPC Blend pursuant to the Offtake Agreement.\n\n\"CPC Terminal\" means the single buoy-mooring terminal being built by the Caspian Pipeline Consortium near Novorossiysk.\n\n\"DAF\" has the meaning given to \"delivered at frontier\" in the Incoterms 1990.\n\n\"Delivery Basis\" means (i) during the \"Principal Period\", delivery of Commodity on terms of DAF Adamovo, DAF Fenyeshlitke, DAF Budkovce, FOB sea-port Odessa, FOB sea-port Novorossiysk, or FOB sea-port Ventspils, as applicable, and (ii) during the \"Secondary Period\", delivery of Commodity on terms of FOB CPC Terminal, in each case in accordance with the route indicated in the monthly delivery schedules of the Company.\n\n\"Delivery Date\" for a batch of Commodity means the date of execution of the last acceptance-delivery act/bill of lading for that batch of Commodity in accordance with item 4.1.vii.\n\n\"Delivery Month\" means the period for delivery under the ",
+          "categories": [],
+          "origin": "original_chunk",
+          "fusion_score": 0.031024531024531024
+        },
+        {
+          "id": "8a01c5ecbd28",
+          "file_path": "cuad/CHAPARRALRESOURCESINC_03_30_2000-EX-10.66-TRANSPORTATION CONTRACT.txt",
+          "span": [
+            16670,
+            19079
+          ],
+          "text": ".1  In accordance with items 9.3, 9.4, and 10.3, this Contract shall come into      force on the Effective Date, remain effective throughout the Initial Term,      and be prolonged, or further extended automatically for a period of 12\n\n\n\n\n\n     months, each such extension commencing at the end of the last day of the      Initial Term or the relevant anniversary thereof, unless either Party      serves written notice of termination on the other Party at least 65 days      prior to the end of the Initial Term, or any subsequent extension.\n\n9.2  Any notice of termination served by any Party with violation of the period      of notice required by item 9.1 shall be invalid and of no effect      whatsoever.\n\n9.3  If the Company fails to perform within 30 days upon notice from the      Principal on nonperformance by the Company of any of its obligations under      this Contract, and keeps non-performing it, then the Principal may upon      expiry of the indicated 30 day period, terminate this Contract, with      obligatory accounts settling.\n\n                                       6\n\n9.4  If the Principal fails to perform within 30 days upon notice from the      Company on nonperformance by the Principal of any of its obligations under      this Contract, and keeps non-performing it, then the Company is entitled,      upon expiry of such 30 day period, to terminate this Contract, with      obligatory accounts settling.\n\n                                10. FORCE-MAJEURE\n\n10.1 Except for the obligations to make any payment, required by this Contract      (which shall not be subject to relief under this item), a Party shall not      be in breach of this Contract and liable to the other Party for any failure      to fulfil any obligation under this Contract to the extent any fulfillment      has been interfered with, hindered, delayed, or prevented by any      circumstance whatsoever, which is not reasonably within the control of and      is unforeseeable by such Party and if such Party exercised due diligence,      including acts of God, fire, flood, freezing, landslides, lightning,      earthquakes, fire, storm, floods, washouts, and other natural disasters,      wars (declared or undeclared), insurrections, riots, civil disturbances,      epidemics, quarantine restrictions, blockade, embargo, strike, lockouts,      labor disputes, or restrictions imposed by any government.\n\n",
+          "categories": [
+            "AUTOMATIC_RENEWAL",
+            "INITIAL_TERM",
+            "OPTIONAL_RENEWAL",
+            "TERMINATION"
+          ],
+          "origin": "original_chunk",
+          "fusion_score": 0.033276515151515154
+        },
+        {
+          "evidence_id": "https://cimulink.local/ontology/llm100-v1/C020P0038",
+          "file_path": "cuad/CHAPARRALRESOURCESINC_03_30_2000-EX-10.66-TRANSPORTATION CONTRACT.txt",
+          "span": [
+            5600,
+            5731
+          ],
+          "text": "\"Secondary Period\" means the period from the CPC Pipeline Operational Date to the date of termination of this Contract (inclusive).",
+          "id": "937111a531e1",
+          "categories": [
+            "CONDITIONAL_REFERENCED_TERM"
+          ],
+          "origin": "extracted_passage",
+          "fusion_score": 0.02934684684684685
+        }
+      ]
+    },
+    "rounds": [
+      {
+        "round": 0,
+        "decision": {
+          "evidence_sufficient": false,
+          "missing_queries": [
+            "What is the Effective Date of the Offtake Agreement referenced in the contract?",
+            "What is the date of the fifth anniversary of the Offtake Agreement Effective Date?"
+          ],
+          "ranked_ids": [
+            "7055febdb26a",
+            "4dc5a668179a",
+            "d90049d949dd",
+            "c399cfc7cf8d",
+            "937111a531e1",
+            "7a6ea183d140",
+            "b49d9a36b880",
+            "fbf6ed0177a4",
+            "f3844535ffef",
+            "e475a68b235a"
+          ]
+        },
+        "references": [],
+        "returned_spans": [
+          [
+            14305,
+            16910
+          ],
+          [
+            23052,
+            25608
+          ],
+          [
+            3592,
+            4431
+          ]
+        ]
+      },
+      {
+        "round": 1,
+        "queries": [
+          "What is the Effective Date of the Offtake Agreement referenced in the contract?",
+          "What is the specific date of the fifth anniversary of the Offtake Agreement Effective Date?"
+        ],
+        "decision": {
+          "evidence_sufficient": false,
+          "missing_queries": [
+            "What is the Effective Date of the Offtake Agreement referenced in the contract?",
+            "What is the specific date of the fifth anniversary of the Offtake Agreement Effective Date?"
+          ],
+          "ranked_ids": [
+            "d90049d949dd",
+            "4d755011d2d7",
+            "c057d5761016",
+            "8a01c5ecbd28",
+            "937111a531e1",
+            "763ea5e63339"
+          ]
+        },
+        "references": [],
+        "returned_spans": [
+          [
+            3592,
+            4431
+          ],
+          [
+            1808,
+            3592
+          ],
+          [
+            16670,
+            19079
+          ],
+          [
+            5600,
+            5731
+          ]
+        ]
+      }
+    ],
+    "queries": [
+      {
+        "query": "Consider the Transportation Contract between JSC NOC KazakhOil and JSC Karakudukmunay for Crude Oil Export; What is the expiration date of this contract?",
+        "candidate_ids": [
+          "d90049d949dd",
+          "763ea5e63339",
+          "7240d8bdea8c",
+          "c057d5761016",
+          "b39e7c8160b6",
+          "937111a531e1",
+          "7055febdb26a",
+          "7a6ea183d140",
+          "8a01c5ecbd28",
+          "cbab2dfb614c",
+          "c399cfc7cf8d",
+          "b49d9a36b880",
+          "9cf96e2b8409",
+          "1b66fd104083",
+          "d994af41ba07",
+          "fbf6ed0177a4",
+          "f3844535ffef",
+          "4dc5a668179a",
+          "e475a68b235a",
+          "4d755011d2d7"
+        ]
+      },
+      {
+        "query": "What is the Effective Date of the Offtake Agreement referenced in the contract?",
+        "candidate_ids": [
+          "4d755011d2d7",
+          "d90049d949dd",
+          "7055febdb26a",
+          "b49d9a36b880",
+          "8a01c5ecbd28",
+          "c399cfc7cf8d",
+          "c057d5761016",
+          "763ea5e63339",
+          "937111a531e1",
+          "cbab2dfb614c",
+          "1b66fd104083",
+          "b39e7c8160b6",
+          "d994af41ba07",
+          "e475a68b235a",
+          "4dc5a668179a",
+          "9cf96e2b8409",
+          "7a6ea183d140",
+          "f3844535ffef",
+          "fbf6ed0177a4",
+          "7240d8bdea8c"
+        ]
+      },
+      {
+        "query": "What is the specific date of the fifth anniversary of the Offtake Agreement Effective Date?",
+        "candidate_ids": [
+          "4d755011d2d7",
+          "d90049d949dd",
+          "7055febdb26a",
+          "c399cfc7cf8d",
+          "8a01c5ecbd28",
+          "b49d9a36b880",
+          "c057d5761016",
+          "763ea5e63339",
+          "937111a531e1",
+          "cbab2dfb614c",
+          "d994af41ba07",
+          "1b66fd104083",
+          "b39e7c8160b6",
+          "5fd23ea6777c",
+          "9cf96e2b8409",
+          "4dc5a668179a",
+          "e475a68b235a",
+          "7240d8bdea8c",
+          "7a6ea183d140",
+          "f3844535ffef"
+        ]
+      }
+    ],
+    "stop_reason": "no_new_queries",
+    "seconds": 34.253954799845815,
+    "llm_calls": [
+      {
+        "cache_key": "03e94c931ad3bd470773aff37b6f74466eb8b3854731e8b4b32f8a104ea04c13",
+        "cached": false,
+        "seconds": 12.220441600074992,
+        "prompt_tokens": 5965,
+        "output_tokens": 203,
+        "model_total_duration_ns": 12216620700,
+        "response": {
+          "evidence_sufficient": false,
+          "missing_queries": [
+            "What is the Effective Date of the Offtake Agreement referenced in the contract?",
+            "What is the date of the fifth anniversary of the Offtake Agreement Effective Date?"
+          ],
+          "ranked_ids": [
+            "7055febdb26a",
+            "4dc5a668179a",
+            "d90049d949dd",
+            "c399cfc7cf8d",
+            "937111a531e1",
+            "7a6ea183d140",
+            "b49d9a36b880",
+            "fbf6ed0177a4",
+            "f3844535ffef",
+            "e475a68b235a"
+          ]
+        },
+        "candidate_ids": [
+          "d90049d949dd",
+          "763ea5e63339",
+          "7240d8bdea8c",
+          "c057d5761016",
+          "b39e7c8160b6",
+          "937111a531e1",
+          "7055febdb26a",
+          "7a6ea183d140",
+          "8a01c5ecbd28",
+          "cbab2dfb614c",
+          "c399cfc7cf8d",
+          "b49d9a36b880",
+          "9cf96e2b8409",
+          "1b66fd104083",
+          "d994af41ba07",
+          "fbf6ed0177a4",
+          "f3844535ffef",
+          "4dc5a668179a",
+          "e475a68b235a",
+          "4d755011d2d7"
+        ],
+        "preview_truncated_count": 13
+      },
+      {
+        "cache_key": "3cac49e1e3dcc8e0bb200a8f6700d3a5d31ccc1947bbba8d676fd3f3798fdee9",
+        "cached": false,
+        "seconds": 9.264375900151208,
+        "prompt_tokens": 7260,
+        "output_tokens": 203,
+        "model_total_duration_ns": 9261085500,
+        "response": {
+          "evidence_sufficient": false,
+          "missing_queries": [
+            "What is the Effective Date of the Offtake Agreement referenced in the contract?",
+            "What is the specific date of the fifth anniversary of the Offtake Agreement Effective Date?"
+          ],
+          "ranked_ids": [
+            "4d755011d2d7",
+            "d90049d949dd",
+            "c057d5761016",
+            "937111a531e1",
+            "7055febdb26a",
+            "8a01c5ecbd28",
+            "b39e7c8160b6",
+            "cbab2dfb614c",
+            "f3844535ffef",
+            "fbf6ed0177a4"
+          ]
+        },
+        "candidate_ids": [
+          "d90049d949dd",
+          "763ea5e63339",
+          "7240d8bdea8c",
+          "c057d5761016",
+          "b39e7c8160b6",
+          "937111a531e1",
+          "7055febdb26a",
+          "7a6ea183d140",
+          "8a01c5ecbd28",
+          "cbab2dfb614c",
+          "c399cfc7cf8d",
+          "b49d9a36b880",
+          "9cf96e2b8409",
+          "1b66fd104083",
+          "d994af41ba07",
+          "fbf6ed0177a4",
+          "f3844535ffef",
+          "4dc5a668179a",
+          "e475a68b235a",
+          "4d755011d2d7"
+        ],
+        "preview_truncated_count": 13
+      },
+      {
+        "cache_key": "016a2621343348b6aa91a00c7bc79537b250cc2ac33c4d24e0b18714e0aaa15e",
+        "cached": false,
+        "seconds": 12.660112999845296,
+        "prompt_tokens": 7315,
+        "output_tokens": 152,
+        "model_total_duration_ns": 12655977600,
+        "response": {
+          "evidence_sufficient": false,
+          "missing_queries": [
+            "What is the Effective Date of the Offtake Agreement referenced in the contract?",
+            "What is the specific date of the fifth anniversary of the Offtake Agreement Effective Date?"
+          ],
+          "ranked_ids": [
+            "d90049d949dd",
+            "4d755011d2d7",
+            "c057d5761016",
+            "8a01c5ecbd28",
+            "937111a531e1",
+            "763ea5e63339"
+          ]
+        },
+        "candidate_ids": [
+          "7055febdb26a",
+          "4dc5a668179a",
+          "d90049d949dd",
+          "4d755011d2d7",
+          "c399cfc7cf8d",
+          "8a01c5ecbd28",
+          "b49d9a36b880",
+          "c057d5761016",
+          "763ea5e63339",
+          "937111a531e1",
+          "cbab2dfb614c",
+          "d994af41ba07",
+          "1b66fd104083",
+          "b39e7c8160b6",
+          "5fd23ea6777c",
+          "9cf96e2b8409",
+          "e475a68b235a",
+          "7240d8bdea8c",
+          "fbf6ed0177a4",
+          "7a6ea183d140"
+        ],
+        "preview_truncated_count": 13
+      }
+    ],
+    "caveat": "Model evidence sufficiency is unverified; unknown exceptions can remain. No final answer is generated."
+  },
+  "source_sha256": "0e03737ee6eafee156bb168e59f3134ba959e8e5f38ef4b5548a62798caf3174",
+  "model_digest": "0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0",
+  "embedding_revision": "5c38ec7c405ec4b44b94cc5a9bb96e735b38267a",
+  "finished_at": "2026-11-13T07:17:22.817794+00:00"
+}

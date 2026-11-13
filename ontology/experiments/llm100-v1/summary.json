@@ -1,0 +1,32 @@
+{
+  "contracts": 100,
+  "status": "COMPLETE_AND_SEALED",
+  "review_status": "UNREVIEWED",
+  "scope": "Contract term, renewal, termination and related qualifications; partial coverage.",
+  "counts": {
+    "SourcePassage": 1025,
+    "Rule": 1296,
+    "Reference": 930,
+    "Condition": 704
+  },
+  "rule_kinds": {
+    "POST_EXPIRY_CONTINUATION": 314,
+    "CONDITIONAL_REFERENCED_TERM": 207,
+    "TERMINATION": 502,
+    "INITIAL_TERM": 203,
+    "OPTIONAL_RENEWAL": 46,
+    "AUTOMATIC_RENEWAL": 24
+  },
+  "evaluation_groups": {
+    "not_in_known_exposure_artifacts": 68,
+    "development": 32
+  },
+  "zero_rule_contracts": [
+    "C039",
+    "C061",
+    "C098"
+  ],
+  "sealed_at": "2026-11-13T04:37:40.674198+00:00",
+  "benchmark_evaluation_run": false,
+  "validation": "Turtle parsing, original-source hashes, exact passage text and offsets, ownership/evidence links and frozen artifact hashes. Not legal correctness or completeness."
+}

@@ -1,0 +1,317 @@
+@prefix ct: <https://cimulink.local/ontology/contract-terms/0.1#> .
+@prefix ex: <https://cimulink.local/ontology/llm100-v1/> .
+@prefix meta: <https://cimulink.local/ontology/extraction#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ct: a owl:Ontology ;
+    rdfs:comment "Partial five-contract development sample. No claim of complete contract coverage or legal correctness." .
+
+ct:agreement_effective_from a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:applies_within a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:calendar_date_status a owl:DatatypeProperty .
+
+ct:coverage a owl:DatatypeProperty .
+
+ct:description a owl:DatatypeProperty .
+
+ct:duration a owl:DatatypeProperty .
+
+ct:duration_status a owl:DatatypeProperty .
+
+ct:end_char a owl:DatatypeProperty .
+
+ct:end_date_status a owl:DatatypeProperty .
+
+ct:ends_on_event a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:exact_text a owl:DatatypeProperty .
+
+ct:has_party a owl:ObjectProperty ;
+    rdfs:domain ct:Agreement ;
+    rdfs:range ct:Party .
+
+ct:has_rule a owl:ObjectProperty ;
+    rdfs:domain ct:Agreement ;
+    rdfs:range ct:Rule .
+
+ct:kind a owl:DatatypeProperty .
+
+ct:notice_actor a owl:DatatypeProperty .
+
+ct:notice_form a owl:DatatypeProperty .
+
+ct:notice_period_status a owl:DatatypeProperty .
+
+ct:qualifies a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Rule .
+
+ct:references_section a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:renewal_count a owl:DatatypeProperty .
+
+ct:resolution_status a owl:DatatypeProperty .
+
+ct:resolved_to a owl:ObjectProperty ;
+    rdfs:domain ct:Reference ;
+    rdfs:range ct:SourcePassage .
+
+ct:source_path a owl:DatatypeProperty .
+
+ct:source_sha256 a owl:DatatypeProperty .
+
+ct:start_char a owl:DatatypeProperty .
+
+ct:starts_from a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:stated_end_date a owl:DatatypeProperty .
+
+ct:subject_to a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Condition .
+
+ct:supported_by a owl:ObjectProperty ;
+    rdfs:range ct:SourcePassage .
+
+ct:termination_notice a owl:DatatypeProperty .
+
+ex:C026 a ct:Agreement ;
+    rdfs:label "DYNAMEXINC_06_06_1996-EX-10.4-TRANSPORTATION SERVICES AGREEMENT.txt" ;
+    ct:coverage "LOCAL_LLM_PROPOSED_PARTIAL; NOT_HUMAN_REVIEWED" ;
+    ct:has_rule ex:C026R0001,
+        ex:C026R0002,
+        ex:C026R0003,
+        ex:C026R0004,
+        ex:C026R0005,
+        ex:C026R0006,
+        ex:C026R0007,
+        ex:C026R0008,
+        ex:C026R0009,
+        ex:C026R0010,
+        ex:C026R0011,
+        ex:C026R0012 ;
+    ct:source_path "cuad/DYNAMEXINC_06_06_1996-EX-10.4-TRANSPORTATION SERVICES AGREEMENT.txt" ;
+    ct:source_sha256 "b78b65221c6ae786e6c1274ca932d7a5ffef078da4d94d0b6617db6028764e96" ;
+    meta:model_digest "0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0" .
+
+ct:Party a owl:Class ;
+    rdfs:label "Party" .
+
+ex:C026P0135 a ct:SourcePassage ;
+    ct:end_char 31637 ;
+    ct:exact_text "17.3    Termination of this Agreement shall be without prejudice to any other         rights of the Party not in default, including the right to claim         damages, and to the rights of the Parties that have accrued prior to         termination." ;
+    ct:source_path "cuad/DYNAMEXINC_06_06_1996-EX-10.4-TRANSPORTATION SERVICES AGREEMENT.txt" ;
+    ct:source_sha256 "b78b65221c6ae786e6c1274ca932d7a5ffef078da4d94d0b6617db6028764e96" ;
+    ct:start_char 31389 .
+
+ex:C026P0142 a ct:SourcePassage ;
+    ct:end_char 33332 ;
+    ct:exact_text "19.1    Either Party may terminate this Agreement, without cause, by giving two         (2) years written notice." ;
+    ct:source_path "cuad/DYNAMEXINC_06_06_1996-EX-10.4-TRANSPORTATION SERVICES AGREEMENT.txt" ;
+    ct:source_sha256 "b78b65221c6ae786e6c1274ca932d7a5ffef078da4d94d0b6617db6028764e96" ;
+    ct:start_char 33219 .
+
+ex:C026P0143 a ct:SourcePassage ;
+    ct:end_char 33500 ;
+    ct:exact_text "19.2    In the event of a change in control of a Party, the other Party shall         have the right, upon written prior notice, to terminate this          Agreement." ;
+    ct:source_path "cuad/DYNAMEXINC_06_06_1996-EX-10.4-TRANSPORTATION SERVICES AGREEMENT.txt" ;
+    ct:source_sha256 "b78b65221c6ae786e6c1274ca932d7a5ffef078da4d94d0b6617db6028764e96" ;
+    ct:start_char 33334 .
+
+ex:C026P0193 a ct:SourcePassage ;
+    ct:end_char 43792 ;
+    ct:exact_text "35.1    Each Party's trade-marks, distinctive colours and designs used in         connection with the Services shall remain at all times during the term         of this Agreement and on the expiration or termination thereof, the         exclusive property of each Party and any benefit associated with such         use shall accrue solely to that Party. Each Party shall use the other         Party's trade-mark, distinctive colours and designs only with the         prior written consent of the other Party and only in connection with the         services provided hereunder." ;
+    ct:source_path "cuad/DYNAMEXINC_06_06_1996-EX-10.4-TRANSPORTATION SERVICES AGREEMENT.txt" ;
+    ct:source_sha256 "b78b65221c6ae786e6c1274ca932d7a5ffef078da4d94d0b6617db6028764e96" ;
+    ct:start_char 43216 .
+
+ex:C026P0212 a ct:SourcePassage ;
+    ct:end_char 47519 ;
+    ct:exact_text "41.1    In the event a Party has committed or shall commit any material act, or         has or does become involved in any material situation or occurrence         bringing either Party into public disrepute, contempt, scandal or         ridicule, or shocking, insulting or offending potential customers of         either Party or any racial, religious or ethnic, age or gender group, or         reflecting unfavourably on either Party's reputation or their products         or services, then the other Party may terminate this Agreement upon         giving such notice as it deems appropriate. The non-offending Party's         decision on such matter arising hereunder shall be based on its judgment         as to whether or not the act or involvement of the offending Party has         materially harmed or may be materially harmful to the Parties, their         products, services or trademarks, in any respect, acting bona fidely." ;
+    ct:source_path "cuad/DYNAMEXINC_06_06_1996-EX-10.4-TRANSPORTATION SERVICES AGREEMENT.txt" ;
+    ct:source_sha256 "b78b65221c6ae786e6c1274ca932d7a5ffef078da4d94d0b6617db6028764e96" ;
+    ct:start_char 46584 .
+
+ex:C026P0214 a ct:SourcePassage ;
+    ct:end_char 47970 ;
+    ct:exact_text "32.1    In the event this Agreement is terminated pursuant to the provisions of         paragraph 17, then the Party in default shall not enter into an         agreement with any other Party to provide services similar to those         provided herein or to provide its services similar to those provided for         herein without an agreement, for a period of six (6) months from the         effective date of termination." ;
+    ct:source_path "cuad/DYNAMEXINC_06_06_1996-EX-10.4-TRANSPORTATION SERVICES AGREEMENT.txt" ;
+    ct:source_sha256 "b78b65221c6ae786e6c1274ca932d7a5ffef078da4d94d0b6617db6028764e96" ;
+    ct:start_char 47546 .
+
+ex:C026P0215 a ct:SourcePassage ;
+    ct:end_char 48417 ;
+    ct:exact_text "42.2    In the event this Agreement is terminated pursuant to the provisions of         paragraph 19.2, then the Party whose control has changed shall not         enter into an agreement with any other Party to provide services similar         to those provided herein or to provide its services similar to those         provided for herein without an agreement, for a period of twelve (12)         months from the effective date of termination." ;
+    ct:source_path "cuad/DYNAMEXINC_06_06_1996-EX-10.4-TRANSPORTATION SERVICES AGREEMENT.txt" ;
+    ct:source_sha256 "b78b65221c6ae786e6c1274ca932d7a5ffef078da4d94d0b6617db6028764e96" ;
+    ct:start_char 47972 .
+
+ex:C026R0001 a ct:Rule ;
+    rdfs:label "Initial Term — source passage 23" ;
+    ct:kind "INITIAL_TERM" ;
+    ct:subject_to ex:C026R0001Condition23 ;
+    ct:supported_by ex:C026P0023 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C026R0001Condition23 a ct:Condition ;
+    ct:description "2.1     This Agreement shall be effective from the date first above written and         shall continue indefinitely until terminated by either Party in          accordance with the provisions of this Agreement." ;
+    ct:supported_by ex:C026P0023 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C026R0002 a ct:Rule ;
+    rdfs:label "Termination — source passage 23" ;
+    ct:kind "TERMINATION" ;
+    ct:subject_to ex:C026R0002Condition23 ;
+    ct:supported_by ex:C026P0023 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C026R0002Condition23 a ct:Condition ;
+    ct:description "2.1     This Agreement shall be effective from the date first above written and         shall continue indefinitely until terminated by either Party in          accordance with the provisions of this Agreement." ;
+    ct:supported_by ex:C026P0023 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C026R0003 a ct:Rule ;
+    rdfs:label "Conditional Referenced Term — source passage 124" ;
+    ct:kind "CONDITIONAL_REFERENCED_TERM" ;
+    ct:subject_to ex:C026R0003Condition124 ;
+    ct:supported_by ex:C026P0124 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C026R0003Condition124 a ct:Condition ;
+    ct:description "(c)     if it ceases or threatens to cease to carry on its business;" ;
+    ct:supported_by ex:C026P0124 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C026R0004 a ct:Rule ;
+    rdfs:label "Termination — source passage 132" ;
+    ct:kind "TERMINATION" ;
+    ct:subject_to ex:C026R0004Condition132 ;
+    ct:supported_by ex:C026P0132 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C026R0004Condition132 a ct:Condition ;
+    ct:description "(a)     terminate this Agreement, upon giving one hundred and twenty                 (120) days written notice, otherwise upon written notice with                 respect to 17.1 (g) and (h);" ;
+    ct:supported_by ex:C026P0132 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C026R0005 a ct:Rule ;
+    rdfs:label "Termination — source passage 135" ;
+    ct:kind "TERMINATION" ;
+    ct:supported_by ex:C026P0135 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C026R0006 a ct:Rule ;
+    rdfs:label "Termination — source passage 141" ;
+    ct:kind "TERMINATION" ;
+    ct:subject_to ex:C026R0006Condition141 ;
+    ct:supported_by ex:C026P0141 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C026R0006Condition141 a ct:Condition ;
+    ct:description "For example, if the defaulting Party, in a Default Month, provided         services at an eighty five percent (85%) level and the average yield for         the Default Month of the Party not in default is ten dollars ($10.00)         and the total number of shipments handled by the defaulting Party         pursuant to this Agreement is one hundred (100), then the penalty would         be equal to 5 x[(Performance Commitment - Actual Performance Level) x #         of shipments] x average yield or 5 x [(90-85) x 100] x 10 = $250.00.                                       100 19.0    TERMINATION WITHOUT CAUSE" ;
+    ct:supported_by ex:C026P0141 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C026R0007 a ct:Rule ;
+    rdfs:label "Termination — source passage 142" ;
+    ct:kind "TERMINATION" ;
+    ct:supported_by ex:C026P0142 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C026R0008 a ct:Rule ;
+    rdfs:label "Termination — source passage 143" ;
+    ct:kind "TERMINATION" ;
+    ct:supported_by ex:C026P0143 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C026R0009 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 193" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:supported_by ex:C026P0193 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C026R0010 a ct:Rule ;
+    rdfs:label "Termination — source passage 212" ;
+    ct:kind "TERMINATION" ;
+    ct:supported_by ex:C026P0212 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C026R0011 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 214" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:references_section ex:C026R0011Ref0 ;
+    ct:supported_by ex:C026P0214 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C026R0011Ref0 a ct:Reference ;
+    rdfs:label "paragraph 17" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C026R0012 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 215" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:references_section ex:C026R0012Ref0 ;
+    ct:supported_by ex:C026P0215 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C026R0012Ref0 a ct:Reference ;
+    rdfs:label "paragraph 19.2" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C026P0124 a ct:SourcePassage ;
+    ct:end_char 29200 ;
+    ct:exact_text "(c)     if it ceases or threatens to cease to carry on its business;" ;
+    ct:source_path "cuad/DYNAMEXINC_06_06_1996-EX-10.4-TRANSPORTATION SERVICES AGREEMENT.txt" ;
+    ct:source_sha256 "b78b65221c6ae786e6c1274ca932d7a5ffef078da4d94d0b6617db6028764e96" ;
+    ct:start_char 29132 .
+
+ex:C026P0132 a ct:SourcePassage ;
+    ct:end_char 30978 ;
+    ct:exact_text "(a)     terminate this Agreement, upon giving one hundred and twenty                 (120) days written notice, otherwise upon written notice with                 respect to 17.1 (g) and (h);" ;
+    ct:source_path "cuad/DYNAMEXINC_06_06_1996-EX-10.4-TRANSPORTATION SERVICES AGREEMENT.txt" ;
+    ct:source_sha256 "b78b65221c6ae786e6c1274ca932d7a5ffef078da4d94d0b6617db6028764e96" ;
+    ct:start_char 30787 .
+
+ex:C026P0141 a ct:SourcePassage ;
+    ct:end_char 33217 ;
+    ct:exact_text "For example, if the defaulting Party, in a Default Month, provided         services at an eighty five percent (85%) level and the average yield for         the Default Month of the Party not in default is ten dollars ($10.00)         and the total number of shipments handled by the defaulting Party         pursuant to this Agreement is one hundred (100), then the penalty would         be equal to 5 x[(Performance Commitment - Actual Performance Level) x #         of shipments] x average yield or 5 x [(90-85) x 100] x 10 = $250.00.                                       100 19.0    TERMINATION WITHOUT CAUSE" ;
+    ct:source_path "cuad/DYNAMEXINC_06_06_1996-EX-10.4-TRANSPORTATION SERVICES AGREEMENT.txt" ;
+    ct:source_sha256 "b78b65221c6ae786e6c1274ca932d7a5ffef078da4d94d0b6617db6028764e96" ;
+    ct:start_char 32605 .
+
+ct:Agreement a owl:Class ;
+    rdfs:label "Agreement" .
+
+ex:C026P0023 a ct:SourcePassage ;
+    ct:end_char 3509 ;
+    ct:exact_text "2.1     This Agreement shall be effective from the date first above written and         shall continue indefinitely until terminated by either Party in          accordance with the provisions of this Agreement." ;
+    ct:source_path "cuad/DYNAMEXINC_06_06_1996-EX-10.4-TRANSPORTATION SERVICES AGREEMENT.txt" ;
+    ct:source_sha256 "b78b65221c6ae786e6c1274ca932d7a5ffef078da4d94d0b6617db6028764e96" ;
+    ct:start_char 3299 .
+
+ct:Condition a owl:Class ;
+    rdfs:label "Condition" .
+
+ct:Reference a owl:Class ;
+    rdfs:label "Reference" .
+
+ct:SourcePassage a owl:Class ;
+    rdfs:label "SourcePassage" .
+
+ct:Rule a owl:Class ;
+    rdfs:label "Rule" .
+

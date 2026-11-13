@@ -1,0 +1,338 @@
+@prefix ct: <https://cimulink.local/ontology/contract-terms/0.1#> .
+@prefix ex: <https://cimulink.local/ontology/llm100-v1/> .
+@prefix meta: <https://cimulink.local/ontology/extraction#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ct: a owl:Ontology ;
+    rdfs:comment "Partial five-contract development sample. No claim of complete contract coverage or legal correctness." .
+
+ct:agreement_effective_from a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:applies_within a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:calendar_date_status a owl:DatatypeProperty .
+
+ct:coverage a owl:DatatypeProperty .
+
+ct:description a owl:DatatypeProperty .
+
+ct:duration a owl:DatatypeProperty .
+
+ct:duration_status a owl:DatatypeProperty .
+
+ct:end_char a owl:DatatypeProperty .
+
+ct:end_date_status a owl:DatatypeProperty .
+
+ct:ends_on_event a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:exact_text a owl:DatatypeProperty .
+
+ct:has_party a owl:ObjectProperty ;
+    rdfs:domain ct:Agreement ;
+    rdfs:range ct:Party .
+
+ct:has_rule a owl:ObjectProperty ;
+    rdfs:domain ct:Agreement ;
+    rdfs:range ct:Rule .
+
+ct:kind a owl:DatatypeProperty .
+
+ct:notice_actor a owl:DatatypeProperty .
+
+ct:notice_form a owl:DatatypeProperty .
+
+ct:notice_period_status a owl:DatatypeProperty .
+
+ct:qualifies a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Rule .
+
+ct:references_section a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:renewal_count a owl:DatatypeProperty .
+
+ct:resolution_status a owl:DatatypeProperty .
+
+ct:resolved_to a owl:ObjectProperty ;
+    rdfs:domain ct:Reference ;
+    rdfs:range ct:SourcePassage .
+
+ct:source_path a owl:DatatypeProperty .
+
+ct:source_sha256 a owl:DatatypeProperty .
+
+ct:start_char a owl:DatatypeProperty .
+
+ct:starts_from a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:stated_end_date a owl:DatatypeProperty .
+
+ct:subject_to a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Condition .
+
+ct:supported_by a owl:ObjectProperty ;
+    rdfs:range ct:SourcePassage .
+
+ct:termination_notice a owl:DatatypeProperty .
+
+ex:C055 a ct:Agreement ;
+    rdfs:label "MorganStanleyDirectLendingFund_20191119_10-12GA_EX-10.5_11898508_EX-10.5_Trademark License Agreement.txt" ;
+    ct:coverage "LOCAL_LLM_PROPOSED_PARTIAL; NOT_HUMAN_REVIEWED" ;
+    ct:has_rule ex:C055R0001,
+        ex:C055R0002,
+        ex:C055R0003,
+        ex:C055R0004,
+        ex:C055R0005,
+        ex:C055R0006,
+        ex:C055R0007,
+        ex:C055R0008 ;
+    ct:source_path "cuad/MorganStanleyDirectLendingFund_20191119_10-12GA_EX-10.5_11898508_EX-10.5_Trademark License Agreement.txt" ;
+    ct:source_sha256 "2968497b74ed1946495a91d7baa6d62f400ff981f462d6d945f601d8806694ca" ;
+    meta:model_digest "0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0" .
+
+ct:Party a owl:Class ;
+    rdfs:label "Party" .
+
+ex:C055R0001 a ct:Rule ;
+    rdfs:label "Termination — source passage 6" ;
+    ct:kind "TERMINATION" ;
+    ct:references_section ex:C055R0001Ref0,
+        ex:C055R0001Ref1,
+        ex:C055R0001Ref2,
+        ex:C055R0001Ref3 ;
+    ct:subject_to ex:C055R0001Condition6 ;
+    ct:supported_by ex:C055P0006 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C055R0001Condition6 a ct:Condition ;
+    ct:description "Prior Written Approval. Prior to using the Brand in any manner, Licensee shall submit all proposed uses to Licensor for prior written approval. Section 3.3. Compliance with Laws. Licensee shall, at its sole expense, comply at all times with all applicable Laws and reputable industry practice pertaining to the Licensee Business and Permitted Activity. 4. Termination. Section 4.1. Term. The term of this Agreement commences on the Effective Date and continues in perpetuity, unless termination occurs pursuant to Sections 4.2 through 4.4. Section 4.2. Termination for Convenience. Licensor reserves the right to terminate this Agreement immediately upon written notice for any reason, including if the usage of the Brand is not in compliance with the standards and policies. Section 4.3. Termination for Breach. If either party materially breaches one or more of its obligations hereunder, the other party may terminate this Agreement, effective upon written notice, if the breaching party does not cure such breach within 15 days after written notice thereof (or any mutually agreed extension). " ;
+    ct:supported_by ex:C055P0006 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C055R0001Ref0 a ct:Reference ;
+    rdfs:label "Section 3.3" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C055R0001Ref1 a ct:Reference ;
+    rdfs:label "Section 4.1" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C055R0001Ref2 a ct:Reference ;
+    rdfs:label "Section 4.2" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C055R0001Ref3 a ct:Reference ;
+    rdfs:label "Section 4.3" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C055R0002 a ct:Rule ;
+    rdfs:label "Conditional Referenced Term — source passage 6" ;
+    ct:kind "CONDITIONAL_REFERENCED_TERM" ;
+    ct:references_section ex:C055R0002Ref0,
+        ex:C055R0002Ref1,
+        ex:C055R0002Ref2,
+        ex:C055R0002Ref3 ;
+    ct:subject_to ex:C055R0002Condition6 ;
+    ct:supported_by ex:C055P0006 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C055R0002Condition6 a ct:Condition ;
+    ct:description "Prior Written Approval. Prior to using the Brand in any manner, Licensee shall submit all proposed uses to Licensor for prior written approval. Section 3.3. Compliance with Laws. Licensee shall, at its sole expense, comply at all times with all applicable Laws and reputable industry practice pertaining to the Licensee Business and Permitted Activity. 4. Termination. Section 4.1. Term. The term of this Agreement commences on the Effective Date and continues in perpetuity, unless termination occurs pursuant to Sections 4.2 through 4.4. Section 4.2. Termination for Convenience. Licensor reserves the right to terminate this Agreement immediately upon written notice for any reason, including if the usage of the Brand is not in compliance with the standards and policies. Section 4.3. Termination for Breach. If either party materially breaches one or more of its obligations hereunder, the other party may terminate this Agreement, effective upon written notice, if the breaching party does not cure such breach within 15 days after written notice thereof (or any mutually agreed extension). " ;
+    ct:supported_by ex:C055P0006 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C055R0002Ref0 a ct:Reference ;
+    rdfs:label "Section 3.3" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C055R0002Ref1 a ct:Reference ;
+    rdfs:label "Section 4.1" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C055R0002Ref2 a ct:Reference ;
+    rdfs:label "Section 4.2" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C055R0002Ref3 a ct:Reference ;
+    rdfs:label "Section 4.3" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C055R0003 a ct:Rule ;
+    rdfs:label "Termination — source passage 7" ;
+    ct:kind "TERMINATION" ;
+    ct:references_section ex:C055R0003Ref0,
+        ex:C055R0003Ref1 ;
+    ct:subject_to ex:C055R0003Condition7 ;
+    ct:supported_by ex:C055P0007 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C055R0003Condition7 a ct:Condition ;
+    ct:description "Licensor may terminate this Agreement immediately, effective upon written notice, if (i) Licensee attempts to violate Section 8 or (ii) a sublicensee materially breaches its sublicense in a manner that harms the Brand, and (a) such sublicensee does not cure the same within 15 days after notice from Licensor or Licensee or (b) Licensee does not terminate such sublicense within 15 days after notice from Licensor. Section 4.4. Termination of Advisory Agreement. This Agreement shall terminate automatically without notice and immediately (a) if MS Capital Partners Adviser Inc. or another affiliate of Licensor is no longer acting as the investment adviser (any such entity, the \"Advisor\") to Licensee under the Investment Advisory Agreement, dated as of [·], 201[9] (as the same may 2" ;
+    ct:supported_by ex:C055P0007 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C055R0003Ref0 a ct:Reference ;
+    rdfs:label "Section 8" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C055R0003Ref1 a ct:Reference ;
+    rdfs:label "Section 4.4" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C055R0004 a ct:Rule ;
+    rdfs:label "Conditional Referenced Term — source passage 7" ;
+    ct:kind "CONDITIONAL_REFERENCED_TERM" ;
+    ct:references_section ex:C055R0004Ref0,
+        ex:C055R0004Ref1 ;
+    ct:subject_to ex:C055R0004Condition7 ;
+    ct:supported_by ex:C055P0007 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C055R0004Condition7 a ct:Condition ;
+    ct:description "Licensor may terminate this Agreement immediately, effective upon written notice, if (i) Licensee attempts to violate Section 8 or (ii) a sublicensee materially breaches its sublicense in a manner that harms the Brand, and (a) such sublicensee does not cure the same within 15 days after notice from Licensor or Licensee or (b) Licensee does not terminate such sublicense within 15 days after notice from Licensor. Section 4.4. Termination of Advisory Agreement. This Agreement shall terminate automatically without notice and immediately (a) if MS Capital Partners Adviser Inc. or another affiliate of Licensor is no longer acting as the investment adviser (any such entity, the \"Advisor\") to Licensee under the Investment Advisory Agreement, dated as of [·], 201[9] (as the same may 2" ;
+    ct:supported_by ex:C055P0007 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C055R0004Ref0 a ct:Reference ;
+    rdfs:label "Section 8" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C055R0004Ref1 a ct:Reference ;
+    rdfs:label "Section 4.4" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C055R0005 a ct:Rule ;
+    rdfs:label "Termination — source passage 9" ;
+    ct:kind "TERMINATION" ;
+    ct:references_section ex:C055R0005Ref0,
+        ex:C055R0005Ref1,
+        ex:C055R0005Ref2 ;
+    ct:subject_to ex:C055R0005Condition9 ;
+    ct:supported_by ex:C055P0009 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C055R0005Condition9 a ct:Condition ;
+    ct:description "be amended, modified or otherwise restated, the \"Investment Advisory Agreement\"), or a similar agreement, or (b) the Advisor is no longer an affiliate of Licensor. Further, Licensor may terminate this Agreement, effective upon written notice, at any time after 30 days from the date that Licensee notifies Licensor that the Investment Advisory Agreement has terminated or is not being renewed. The term \"affiliate\" as used herein shall have the meaning given to such term in the Investment Advisory Agreement. Section 4.5. Effect of Termination; Survival. Upon termination of this Agreement for any reason, (a) Licensee shall immediately, except as required by applicable Law, (i) cease all use of the Permitted Activity; and (b) the parties shall cooperate so as to best preserve the value of the Brand. Section 2, this Section 4.5, and Sections 6.2, 6.3, 7 and 9 shall survive termination of this Agreement. 5. Infringement. Licensee shall notify Licensor promptly after it becomes aware of any actual or threatened infringement, imitation, dilution, misappropriation or other unauthorized use or conduct in derogation (\"Infringement\") of the Brand. Licensor shall have the sole right to bring any Action to remedy the foregoing, and Licensee shall cooperate with Licensor in same, at Licensor's expense. 6. Representations and Warranties; Limitations. Section 6.1. " ;
+    ct:supported_by ex:C055P0009 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C055R0005Ref0 a ct:Reference ;
+    rdfs:label "Section 4.5" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C055R0005Ref1 a ct:Reference ;
+    rdfs:label "Section 2" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C055R0005Ref2 a ct:Reference ;
+    rdfs:label "Section 6.1" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C055R0006 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 9" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:references_section ex:C055R0006Ref0,
+        ex:C055R0006Ref1,
+        ex:C055R0006Ref2 ;
+    ct:subject_to ex:C055R0006Condition9 ;
+    ct:supported_by ex:C055P0009 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C055R0006Condition9 a ct:Condition ;
+    ct:description "be amended, modified or otherwise restated, the \"Investment Advisory Agreement\"), or a similar agreement, or (b) the Advisor is no longer an affiliate of Licensor. Further, Licensor may terminate this Agreement, effective upon written notice, at any time after 30 days from the date that Licensee notifies Licensor that the Investment Advisory Agreement has terminated or is not being renewed. The term \"affiliate\" as used herein shall have the meaning given to such term in the Investment Advisory Agreement. Section 4.5. Effect of Termination; Survival. Upon termination of this Agreement for any reason, (a) Licensee shall immediately, except as required by applicable Law, (i) cease all use of the Permitted Activity; and (b) the parties shall cooperate so as to best preserve the value of the Brand. Section 2, this Section 4.5, and Sections 6.2, 6.3, 7 and 9 shall survive termination of this Agreement. 5. Infringement. Licensee shall notify Licensor promptly after it becomes aware of any actual or threatened infringement, imitation, dilution, misappropriation or other unauthorized use or conduct in derogation (\"Infringement\") of the Brand. Licensor shall have the sole right to bring any Action to remedy the foregoing, and Licensee shall cooperate with Licensor in same, at Licensor's expense. 6. Representations and Warranties; Limitations. Section 6.1. " ;
+    ct:supported_by ex:C055P0009 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C055R0006Ref0 a ct:Reference ;
+    rdfs:label "Section 4.5" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C055R0006Ref1 a ct:Reference ;
+    rdfs:label "Section 2" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C055R0006Ref2 a ct:Reference ;
+    rdfs:label "Section 6.1" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C055R0007 a ct:Rule ;
+    rdfs:label "Termination — source passage 14" ;
+    ct:kind "TERMINATION" ;
+    ct:subject_to ex:C055R0007Condition14 ;
+    ct:supported_by ex:C055P0014 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C055R0007Condition14 a ct:Condition ;
+    ct:description "Licensee may not settle any indemnified claim without Licensor's prior written consent in Licensor's sole discretion. Licensor may participate in its defense of an indemnified claim with counsel of its own choice at its own expense. 8. Assignments. Licensee may not assign, transfer, pledge, mortgage or otherwise encumber this Agreement or its right to use the Brand (or assume this Agreement in bankruptcy), in whole or in part, without the prior written consent of Licensor in its sole discretion, except for an assignment outside of bankruptcy to a successor organization that is solely the result of a name change by Licensee. For the avoidance of doubt, a merger, change of control, reorganization or sale of all or substantially all of the stock of Licensee shall be deemed an \"assignment\" requiring the above consent, regardless of whether Licensee is the surviving entity or whether such transaction constitutes an assignment under applicable law. Licensee acknowledges that its identity is a material condition that induced Licensor to enter into this Agreement. Any attempted action in violation of the foregoing shall be null and void ab initio and of no force or effect, and shall result in immediate termination of this Agreement. " ;
+    ct:supported_by ex:C055P0014 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C055R0008 a ct:Rule ;
+    rdfs:label "Conditional Referenced Term — source passage 14" ;
+    ct:kind "CONDITIONAL_REFERENCED_TERM" ;
+    ct:subject_to ex:C055R0008Condition14 ;
+    ct:supported_by ex:C055P0014 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C055R0008Condition14 a ct:Condition ;
+    ct:description "Licensee may not settle any indemnified claim without Licensor's prior written consent in Licensor's sole discretion. Licensor may participate in its defense of an indemnified claim with counsel of its own choice at its own expense. 8. Assignments. Licensee may not assign, transfer, pledge, mortgage or otherwise encumber this Agreement or its right to use the Brand (or assume this Agreement in bankruptcy), in whole or in part, without the prior written consent of Licensor in its sole discretion, except for an assignment outside of bankruptcy to a successor organization that is solely the result of a name change by Licensee. For the avoidance of doubt, a merger, change of control, reorganization or sale of all or substantially all of the stock of Licensee shall be deemed an \"assignment\" requiring the above consent, regardless of whether Licensee is the surviving entity or whether such transaction constitutes an assignment under applicable law. Licensee acknowledges that its identity is a material condition that induced Licensor to enter into this Agreement. Any attempted action in violation of the foregoing shall be null and void ab initio and of no force or effect, and shall result in immediate termination of this Agreement. " ;
+    ct:supported_by ex:C055P0014 ;
+    meta:review_status "UNREVIEWED" .
+
+ct:Agreement a owl:Class ;
+    rdfs:label "Agreement" .
+
+ex:C055P0006 a ct:SourcePassage ;
+    ct:end_char 5804 ;
+    ct:exact_text "Prior Written Approval. Prior to using the Brand in any manner, Licensee shall submit all proposed uses to Licensor for prior written approval. Section 3.3. Compliance with Laws. Licensee shall, at its sole expense, comply at all times with all applicable Laws and reputable industry practice pertaining to the Licensee Business and Permitted Activity. 4. Termination. Section 4.1. Term. The term of this Agreement commences on the Effective Date and continues in perpetuity, unless termination occurs pursuant to Sections 4.2 through 4.4. Section 4.2. Termination for Convenience. Licensor reserves the right to terminate this Agreement immediately upon written notice for any reason, including if the usage of the Brand is not in compliance with the standards and policies. Section 4.3. Termination for Breach. If either party materially breaches one or more of its obligations hereunder, the other party may terminate this Agreement, effective upon written notice, if the breaching party does not cure such breach within 15 days after written notice thereof (or any mutually agreed extension). " ;
+    ct:source_path "cuad/MorganStanleyDirectLendingFund_20191119_10-12GA_EX-10.5_11898508_EX-10.5_Trademark License Agreement.txt" ;
+    ct:source_sha256 "2968497b74ed1946495a91d7baa6d62f400ff981f462d6d945f601d8806694ca" ;
+    ct:start_char 4707 .
+
+ex:C055P0007 a ct:SourcePassage ;
+    ct:end_char 6590 ;
+    ct:exact_text "Licensor may terminate this Agreement immediately, effective upon written notice, if (i) Licensee attempts to violate Section 8 or (ii) a sublicensee materially breaches its sublicense in a manner that harms the Brand, and (a) such sublicensee does not cure the same within 15 days after notice from Licensor or Licensee or (b) Licensee does not terminate such sublicense within 15 days after notice from Licensor. Section 4.4. Termination of Advisory Agreement. This Agreement shall terminate automatically without notice and immediately (a) if MS Capital Partners Adviser Inc. or another affiliate of Licensor is no longer acting as the investment adviser (any such entity, the \"Advisor\") to Licensee under the Investment Advisory Agreement, dated as of [·], 201[9] (as the same may 2" ;
+    ct:source_path "cuad/MorganStanleyDirectLendingFund_20191119_10-12GA_EX-10.5_11898508_EX-10.5_Trademark License Agreement.txt" ;
+    ct:source_sha256 "2968497b74ed1946495a91d7baa6d62f400ff981f462d6d945f601d8806694ca" ;
+    ct:start_char 5804 .
+
+ex:C055P0009 a ct:SourcePassage ;
+    ct:end_char 8030 ;
+    ct:exact_text "be amended, modified or otherwise restated, the \"Investment Advisory Agreement\"), or a similar agreement, or (b) the Advisor is no longer an affiliate of Licensor. Further, Licensor may terminate this Agreement, effective upon written notice, at any time after 30 days from the date that Licensee notifies Licensor that the Investment Advisory Agreement has terminated or is not being renewed. The term \"affiliate\" as used herein shall have the meaning given to such term in the Investment Advisory Agreement. Section 4.5. Effect of Termination; Survival. Upon termination of this Agreement for any reason, (a) Licensee shall immediately, except as required by applicable Law, (i) cease all use of the Permitted Activity; and (b) the parties shall cooperate so as to best preserve the value of the Brand. Section 2, this Section 4.5, and Sections 6.2, 6.3, 7 and 9 shall survive termination of this Agreement. 5. Infringement. Licensee shall notify Licensor promptly after it becomes aware of any actual or threatened infringement, imitation, dilution, misappropriation or other unauthorized use or conduct in derogation (\"Infringement\") of the Brand. Licensor shall have the sole right to bring any Action to remedy the foregoing, and Licensee shall cooperate with Licensor in same, at Licensor's expense. 6. Representations and Warranties; Limitations. Section 6.1. " ;
+    ct:source_path "cuad/MorganStanleyDirectLendingFund_20191119_10-12GA_EX-10.5_11898508_EX-10.5_Trademark License Agreement.txt" ;
+    ct:source_sha256 "2968497b74ed1946495a91d7baa6d62f400ff981f462d6d945f601d8806694ca" ;
+    ct:start_char 6662 .
+
+ex:C055P0014 a ct:SourcePassage ;
+    ct:end_char 12262 ;
+    ct:exact_text "Licensee may not settle any indemnified claim without Licensor's prior written consent in Licensor's sole discretion. Licensor may participate in its defense of an indemnified claim with counsel of its own choice at its own expense. 8. Assignments. Licensee may not assign, transfer, pledge, mortgage or otherwise encumber this Agreement or its right to use the Brand (or assume this Agreement in bankruptcy), in whole or in part, without the prior written consent of Licensor in its sole discretion, except for an assignment outside of bankruptcy to a successor organization that is solely the result of a name change by Licensee. For the avoidance of doubt, a merger, change of control, reorganization or sale of all or substantially all of the stock of Licensee shall be deemed an \"assignment\" requiring the above consent, regardless of whether Licensee is the surviving entity or whether such transaction constitutes an assignment under applicable law. Licensee acknowledges that its identity is a material condition that induced Licensor to enter into this Agreement. Any attempted action in violation of the foregoing shall be null and void ab initio and of no force or effect, and shall result in immediate termination of this Agreement. " ;
+    ct:source_path "cuad/MorganStanleyDirectLendingFund_20191119_10-12GA_EX-10.5_11898508_EX-10.5_Trademark License Agreement.txt" ;
+    ct:source_sha256 "2968497b74ed1946495a91d7baa6d62f400ff981f462d6d945f601d8806694ca" ;
+    ct:start_char 11017 .
+
+ct:SourcePassage a owl:Class ;
+    rdfs:label "SourcePassage" .
+
+ct:Condition a owl:Class ;
+    rdfs:label "Condition" .
+
+ct:Rule a owl:Class ;
+    rdfs:label "Rule" .
+
+ct:Reference a owl:Class ;
+    rdfs:label "Reference" .
+

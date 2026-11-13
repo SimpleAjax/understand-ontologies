@@ -1,0 +1,78 @@
+{
+  "document_id": "C021",
+  "file_path": "cuad/CHERRYHILLMORTGAGEINVESTMENTCORP_09_26_2013-EX-10.1-Strategic Alliance Agreement.txt",
+  "model_digest": "0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0",
+  "rules": [
+    {
+      "passage_id": 54,
+      "kind": "TERMINATION",
+      "label": "Termination — source passage 54",
+      "condition_ids": [
+        54
+      ],
+      "reference_labels": [],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 63,
+      "kind": "TERMINATION",
+      "label": "Termination — source passage 63",
+      "condition_ids": [],
+      "reference_labels": [],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 75,
+      "kind": "TERMINATION",
+      "label": "Termination — source passage 75",
+      "condition_ids": [],
+      "reference_labels": [
+        "Section 5"
+      ],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 75,
+      "kind": "CONDITIONAL_REFERENCED_TERM",
+      "label": "Conditional Referenced Term — source passage 75",
+      "condition_ids": [],
+      "reference_labels": [
+        "Section 5"
+      ],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 76,
+      "kind": "INITIAL_TERM",
+      "label": "Initial Term — source passage 76",
+      "condition_ids": [
+        76
+      ],
+      "reference_labels": [],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 77,
+      "kind": "TERMINATION",
+      "label": "Termination — source passage 77",
+      "condition_ids": [],
+      "reference_labels": [],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    }
+  ],
+  "rejected_rules": [],
+  "review_status": "UNREVIEWED",
+  "coverage": "Lexically selected source windows; completeness not guaranteed."
+}

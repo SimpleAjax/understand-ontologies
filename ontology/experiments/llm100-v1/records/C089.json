@@ -1,0 +1,165 @@
+{
+  "document_id": "C089",
+  "file_path": "cuad/VAXCYTE,INC_05_22_2020-EX-10.19-SUPPLY AGREEMENT.txt",
+  "model_digest": "0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0",
+  "rules": [
+    {
+      "passage_id": 52,
+      "kind": "TERMINATION",
+      "label": "Termination — source passage 52",
+      "condition_ids": [],
+      "reference_labels": [],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 66,
+      "kind": "TERMINATION",
+      "label": "Termination — source passage 66",
+      "condition_ids": [
+        66
+      ],
+      "reference_labels": [],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 76,
+      "kind": "TERMINATION",
+      "label": "Termination — source passage 76",
+      "condition_ids": [],
+      "reference_labels": [],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 106,
+      "kind": "CONDITIONAL_REFERENCED_TERM",
+      "label": "Conditional Referenced Term — source passage 106",
+      "condition_ids": [
+        106
+      ],
+      "reference_labels": [],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 169,
+      "kind": "INITIAL_TERM",
+      "label": "Initial Term — source passage 169",
+      "condition_ids": [],
+      "reference_labels": [
+        "Section 10.2"
+      ],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 170,
+      "kind": "TERMINATION",
+      "label": "Termination — source passage 170",
+      "condition_ids": [],
+      "reference_labels": [],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 172,
+      "kind": "TERMINATION",
+      "label": "Termination — source passage 172",
+      "condition_ids": [
+        172
+      ],
+      "reference_labels": [],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 173,
+      "kind": "TERMINATION",
+      "label": "Termination — source passage 173",
+      "condition_ids": [
+        173
+      ],
+      "reference_labels": [],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 174,
+      "kind": "POST_EXPIRY_CONTINUATION",
+      "label": "Post Expiry Continuation — source passage 174",
+      "condition_ids": [
+        174
+      ],
+      "reference_labels": [
+        "Section 10.3",
+        "Section 10.5",
+        "Section 10.2.3"
+      ],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 175,
+      "kind": "POST_EXPIRY_CONTINUATION",
+      "label": "Post Expiry Continuation — source passage 175",
+      "condition_ids": [],
+      "reference_labels": [],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 176,
+      "kind": "TERMINATION",
+      "label": "Termination — source passage 176",
+      "condition_ids": [],
+      "reference_labels": [],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 177,
+      "kind": "POST_EXPIRY_CONTINUATION",
+      "label": "Post Expiry Continuation — source passage 177",
+      "condition_ids": [],
+      "reference_labels": [
+        "Article 4",
+        "Article 5 (Inspection)",
+        "Article 8 (Confidentiality)",
+        "Article 9",
+        "Article 11 (Disputes)",
+        "Article 12 (Miscellaneous)"
+      ],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 190,
+      "kind": "TERMINATION",
+      "label": "Termination — source passage 190",
+      "condition_ids": [
+        190
+      ],
+      "reference_labels": [],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    }
+  ],
+  "rejected_rules": [],
+  "review_status": "UNREVIEWED",
+  "coverage": "Lexically selected source windows; completeness not guaranteed."
+}

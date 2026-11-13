@@ -1,0 +1,302 @@
+{
+  "document_id": "C034",
+  "file_path": "cuad/EuromediaHoldingsCorp_20070215_10SB12G_EX-10.B(01)_525118_EX-10.B(01)_Content License Agreement.txt",
+  "model_digest": "357c53fb659c5076de1d65ccb0b397446227b71a42be9d1603d46168015c9e4b",
+  "rules": [
+    {
+      "passage_id": 11,
+      "kind": "TERMINATION",
+      "label": "termination",
+      "condition_ids": [],
+      "reference_labels": [],
+      "scope_quote": "such continued distribution and exhibition",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 23,
+      "kind": "TERMINATION",
+      "label": "termination",
+      "condition_ids": [],
+      "reference_labels": [],
+      "scope_quote": "this Agreement",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 24,
+      "kind": "TERMINATION",
+      "label": "termination",
+      "condition_ids": [],
+      "reference_labels": [],
+      "scope_quote": "termination",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 26,
+      "kind": "TERMINATION",
+      "label": "termination",
+      "condition_ids": [],
+      "reference_labels": [],
+      "scope_quote": "termination",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 28,
+      "kind": "TERMINATION",
+      "label": "termination",
+      "condition_ids": [],
+      "reference_labels": [],
+      "scope_quote": "termination",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 31,
+      "kind": "TERMINATION",
+      "label": "Survives termination or expiration of this Agreement",
+      "condition_ids": [],
+      "reference_labels": [],
+      "scope_quote": "This Section shall survive the termination or expiration of this Agreement.",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 32,
+      "kind": "TERMINATION",
+      "label": "Survives termination or expiration of this Agreement",
+      "condition_ids": [],
+      "reference_labels": [],
+      "scope_quote": "This Section shall survive the termination or expiration of this Agreement.",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 38,
+      "kind": "TERMINATION",
+      "label": "Survives termination or expiration of this Agreement",
+      "condition_ids": [],
+      "reference_labels": [],
+      "scope_quote": "Any Notice so given shall be deemed to have been received on the date on which it was delivered in person, or transmitted, if delivered or transmitted on a day, other than a Saturday, on which the Tor",
+      "date_quote": "",
+      "duration_quote": ""
+    }
+  ],
+  "rejected_rules": [
+    {
+      "rule": {
+        "passage_id": 2,
+        "kind": "TERMINATION",
+        "label": "termination",
+        "condition_ids": [],
+        "reference_labels": [],
+        "scope_quote": "the Initial Term",
+        "date_quote": "",
+        "duration_quote": "2010-06-30"
+      },
+      "reason": "Quoted field not in source",
+      "invalid_values": [
+        "the Initial Term",
+        "2010-06-30"
+      ]
+    },
+    {
+      "rule": {
+        "passage_id": 13,
+        "kind": "TERMINATION",
+        "label": "termination or expiration of this Agreement",
+        "condition_ids": [],
+        "reference_labels": [],
+        "scope_quote": "8. ENCODING AND DELIVERY OF LICENSED PROGRAMS.     (a) Licensor shall, at its sole expense, encode each Licensed Program selected for distribution and exhibition by Rogers hereunder and shall deliver",
+        "date_quote": "",
+        "duration_quote": "15 days following the termination or expiration of this Agreement, Rogers shall either return to Licensor all such Maste"
+      },
+      "reason": "Quoted field not in source",
+      "invalid_values": [
+        "15 days following the termination or expiration of this Agreement, Rogers shall either return to Licensor all such Maste"
+      ]
+    },
+    {
+      "rule": {
+        "passage_id": 13,
+        "kind": "TERMINATION",
+        "label": "termination or expiration of this Agreement",
+        "condition_ids": [],
+        "reference_labels": [],
+        "scope_quote": "8. ENCODING AND DELIVERY OF LICENSED PROGRAMS.     (a) Licensor shall, at its sole expense, encode each Licensed Program selected for distribution and exhibition by Rogers hereunder and shall deliver",
+        "date_quote": "",
+        "duration_quote": "15 days following the termination or expiration of this Agreement, Rogers shall either return to Licensor all such Maste"
+      },
+      "reason": "Quoted field not in source",
+      "invalid_values": [
+        "15 days following the termination or expiration of this Agreement, Rogers shall either return to Licensor all such Maste"
+      ]
+    },
+    {
+      "rule": {
+        "passage_id": 16,
+        "kind": "TERMINATION",
+        "label": "termination or expiration of this Agreement",
+        "condition_ids": [],
+        "reference_labels": [],
+        "scope_quote": "10. MARKETING AND PROMOTION.     (a) Licensor shall provide, at its sole expense and on a timely basis, promotional materials and trailers for each Licensed Program selected for distribution and",
+        "date_quote": "",
+        "duration_quote": "15 days following the termination or expiration of this Agreement, Rogers shall either return to Licensor all such Maste"
+      },
+      "reason": "Quoted field not in source",
+      "invalid_values": [
+        "10. MARKETING AND PROMOTION.     (a) Licensor shall provide, at its sole expense and on a timely basis, promotional materials and trailers for each Licensed Program selected for distribution and",
+        "15 days following the termination or expiration of this Agreement, Rogers shall either return to Licensor all such Maste"
+      ]
+    },
+    {
+      "rule": {
+        "passage_id": 17,
+        "kind": "TERMINATION",
+        "label": "termination or expiration of this Agreement",
+        "condition_ids": [],
+        "reference_labels": [],
+        "scope_quote": "11. GUI/EPG.   ",
+        "date_quote": "",
+        "duration_quote": "15 days following the termination or expiration of this Agreement, Rogers shall either return to Licensor all such Maste"
+      },
+      "reason": "Quoted field not in source",
+      "invalid_values": [
+        "11. GUI/EPG.   ",
+        "15 days following the termination or expiration of this Agreement, Rogers shall either return to Licensor all such Maste"
+      ]
+    },
+    {
+      "rule": {
+        "passage_id": 13,
+        "kind": "TERMINATION",
+        "label": "termination or expiration of this Agreement",
+        "condition_ids": [],
+        "reference_labels": [],
+        "scope_quote": "8. ENCODING AND DELIVERY OF LICENSED PROGRAMS.     (a) Licensor shall, at its sole expense, encode each Licensed Program selected for distribution and exhibition by Rogers hereunder and shall deliver",
+        "date_quote": "",
+        "duration_quote": "15 days following the termination or expiration of this Agreement, Rogers shall either return to Licensor all such Maste"
+      },
+      "reason": "Quoted field not in source",
+      "invalid_values": [
+        "15 days following the termination or expiration of this Agreement, Rogers shall either return to Licensor all such Maste"
+      ]
+    },
+    {
+      "rule": {
+        "passage_id": 13,
+        "kind": "TERMINATION",
+        "label": "termination or expiration of this Agreement",
+        "condition_ids": [],
+        "reference_labels": [],
+        "scope_quote": "8. ENCODING AND DELIVERY OF LICENSED PROGRAMS.     (a) Licensor shall, at its sole expense, encode each Licensed Program selected for distribution and exhibition by Rogers hereunder and shall deliver",
+        "date_quote": "",
+        "duration_quote": "15 days following the termination or expiration of this Agreement, Rogers shall either return to Licensor all such Maste"
+      },
+      "reason": "Quoted field not in source",
+      "invalid_values": [
+        "15 days following the termination or expiration of this Agreement, Rogers shall either return to Licensor all such Maste"
+      ]
+    },
+    {
+      "rule": {
+        "passage_id": 13,
+        "kind": "TERMINATION",
+        "label": "termination or expiration of this Agreement",
+        "condition_ids": [],
+        "reference_labels": [],
+        "scope_quote": "8. ENCODING AND DELIVERY OF LICENSED PROGRAMS.     (a) Licensor shall, at its sole expense, encode each Licensed Program selected for distribution and exhibition by Rogers hereunder and shall deliver",
+        "date_quote": "",
+        "duration_quote": "15 days following the termination or expiration of this Agreement, Rogers shall either return to Licensor all such Maste"
+      },
+      "reason": "Quoted field not in source",
+      "invalid_values": [
+        "15 days following the termination or expiration of this Agreement, Rogers shall either return to Licensor all such Maste"
+      ]
+    },
+    {
+      "rule": {
+        "passage_id": 13,
+        "kind": "TERMINATION",
+        "label": "termination or expiration of this Agreement",
+        "condition_ids": [],
+        "reference_labels": [],
+        "scope_quote": "8. ENCODING AND DELIVERY OF LICENSED PROGRAMS.     (a) Licensor shall, at its sole expense, encode each Licensed Program selected for distribution and exhibition by Rogers hereunder and shall deliver",
+        "date_quote": "",
+        "duration_quote": "15 days following the termination or expiration of this Agreement, Rogers shall either return to Licensor all such Maste"
+      },
+      "reason": "Quoted field not in source",
+      "invalid_values": [
+        "15 days following the termination or expiration of this Agreement, Rogers shall either return to Licensor all such Maste"
+      ]
+    },
+    {
+      "rule": {
+        "passage_id": 13,
+        "kind": "TERMINATION",
+        "label": "termination or expiration of this Agreement",
+        "condition_ids": [],
+        "reference_labels": [],
+        "scope_quote": "8. ENCODING AND DELIVERY OF LICENSED PROGRAMS.     (a) Licensor shall, at its sole expense, encode each Licensed Program selected for distribution and exhibition by Rogers hereunder and shall deliver",
+        "date_quote": "",
+        "duration_quote": "15 days following the termination or expiration of this Agreement, Rogers shall either return to Licensor all such Maste"
+      },
+      "reason": "Quoted field not in source",
+      "invalid_values": [
+        "15 days following the termination or expiration of this Agreement, Rogers shall either return to Licensor all such Maste"
+      ]
+    },
+    {
+      "rule": {
+        "passage_id": 13,
+        "kind": "TERMINATION",
+        "label": "termination or expiration of this Agreement",
+        "condition_ids": [],
+        "reference_labels": [],
+        "scope_quote": "8. ENCODING AND DELIVERY OF LICENSED PROGRAMS.     (a) Licensor shall, at its sole expense, encode each Licensed Program selected for distribution and exhibition by Rogers hereunder and shall deliver",
+        "date_quote": "",
+        "duration_quote": "15 days following the termination or expiration of this Agreement, Rogers shall either return to Licensor all such Maste"
+      },
+      "reason": "Quoted field not in source",
+      "invalid_values": [
+        "15 days following the termination or expiration of this Agreement, Rogers shall either return to Licensor all such Maste"
+      ]
+    },
+    {
+      "rule": {
+        "passage_id": 27,
+        "kind": "TERMINATION",
+        "label": "termination",
+        "condition_ids": [],
+        "reference_labels": [],
+        "scope_quote": "termination",
+        "date_quote": "",
+        "duration_quote": ""
+      },
+      "reason": "Quoted field not in source",
+      "invalid_values": [
+        "termination"
+      ]
+    },
+    {
+      "rule": {
+        "passage_id": 34,
+        "kind": "TERMINATION",
+        "label": "Survives termination or expiration of this Agreement",
+        "condition_ids": [],
+        "reference_labels": [],
+        "scope_quote": "This Section shall survive the termination or expiration of this Agreement.",
+        "date_quote": "",
+        "duration_quote": ""
+      },
+      "reason": "Quoted field not in source",
+      "invalid_values": [
+        "This Section shall survive the termination or expiration of this Agreement."
+      ]
+    }
+  ],
+  "review_status": "UNREVIEWED",
+  "coverage": "Lexically selected source windows; completeness not guaranteed."
+}

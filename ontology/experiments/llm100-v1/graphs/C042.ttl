@@ -1,0 +1,673 @@
+@prefix ct: <https://cimulink.local/ontology/contract-terms/0.1#> .
+@prefix ex: <https://cimulink.local/ontology/llm100-v1/> .
+@prefix meta: <https://cimulink.local/ontology/extraction#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ct: a owl:Ontology ;
+    rdfs:comment "Partial five-contract development sample. No claim of complete contract coverage or legal correctness." .
+
+ct:agreement_effective_from a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:applies_within a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:calendar_date_status a owl:DatatypeProperty .
+
+ct:coverage a owl:DatatypeProperty .
+
+ct:description a owl:DatatypeProperty .
+
+ct:duration a owl:DatatypeProperty .
+
+ct:duration_status a owl:DatatypeProperty .
+
+ct:end_char a owl:DatatypeProperty .
+
+ct:end_date_status a owl:DatatypeProperty .
+
+ct:ends_on_event a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:exact_text a owl:DatatypeProperty .
+
+ct:has_party a owl:ObjectProperty ;
+    rdfs:domain ct:Agreement ;
+    rdfs:range ct:Party .
+
+ct:has_rule a owl:ObjectProperty ;
+    rdfs:domain ct:Agreement ;
+    rdfs:range ct:Rule .
+
+ct:kind a owl:DatatypeProperty .
+
+ct:notice_actor a owl:DatatypeProperty .
+
+ct:notice_form a owl:DatatypeProperty .
+
+ct:notice_period_status a owl:DatatypeProperty .
+
+ct:qualifies a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Rule .
+
+ct:references_section a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:renewal_count a owl:DatatypeProperty .
+
+ct:resolution_status a owl:DatatypeProperty .
+
+ct:resolved_to a owl:ObjectProperty ;
+    rdfs:domain ct:Reference ;
+    rdfs:range ct:SourcePassage .
+
+ct:source_path a owl:DatatypeProperty .
+
+ct:source_sha256 a owl:DatatypeProperty .
+
+ct:start_char a owl:DatatypeProperty .
+
+ct:starts_from a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:stated_end_date a owl:DatatypeProperty .
+
+ct:subject_to a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Condition .
+
+ct:supported_by a owl:ObjectProperty ;
+    rdfs:range ct:SourcePassage .
+
+ct:termination_notice a owl:DatatypeProperty .
+
+ex:C042 a ct:Agreement ;
+    rdfs:label "HEALTHGATEDATACORP_11_24_1999-EX-10.1-HOSTING AND MANAGEMENT AGREEMENT (1).txt" ;
+    ct:coverage "LOCAL_LLM_PROPOSED_PARTIAL; NOT_HUMAN_REVIEWED" ;
+    ct:has_rule ex:C042R0001,
+        ex:C042R0002,
+        ex:C042R0003,
+        ex:C042R0004,
+        ex:C042R0005,
+        ex:C042R0006,
+        ex:C042R0007,
+        ex:C042R0008,
+        ex:C042R0009,
+        ex:C042R0010,
+        ex:C042R0011,
+        ex:C042R0012,
+        ex:C042R0013,
+        ex:C042R0014,
+        ex:C042R0015,
+        ex:C042R0016,
+        ex:C042R0017,
+        ex:C042R0018,
+        ex:C042R0019,
+        ex:C042R0020,
+        ex:C042R0021,
+        ex:C042R0022,
+        ex:C042R0023,
+        ex:C042R0024,
+        ex:C042R0025,
+        ex:C042R0026,
+        ex:C042R0027,
+        ex:C042R0028,
+        ex:C042R0029,
+        ex:C042R0030,
+        ex:C042R0031,
+        ex:C042R0032,
+        ex:C042R0033 ;
+    ct:source_path "cuad/HEALTHGATEDATACORP_11_24_1999-EX-10.1-HOSTING AND MANAGEMENT AGREEMENT (1).txt" ;
+    ct:source_sha256 "8180c54f224250c10362b5d159032157a5d30a1821b0897f392c971a8764925a" ;
+    meta:model_digest "0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0" .
+
+ct:Party a owl:Class ;
+    rdfs:label "Party" .
+
+ex:C042P0044 a ct:SourcePassage ;
+    ct:end_char 9311 ;
+    ct:exact_text "3.1.  This Agreement shall commence on 1 January 1998. The initial term of             the Services, unless terminated as set out herein, shall continue up             to and including 28 February 2000 (\"the Initial Term\")." ;
+    ct:source_path "cuad/HEALTHGATEDATACORP_11_24_1999-EX-10.1-HOSTING AND MANAGEMENT AGREEMENT (1).txt" ;
+    ct:source_sha256 "8180c54f224250c10362b5d159032157a5d30a1821b0897f392c971a8764925a" ;
+    ct:start_char 9088 .
+
+ex:C042P0045 a ct:SourcePassage ;
+    ct:end_char 9345 ;
+    ct:exact_text "3.2.  Right of Renewal" ;
+    ct:source_path "cuad/HEALTHGATEDATACORP_11_24_1999-EX-10.1-HOSTING AND MANAGEMENT AGREEMENT (1).txt" ;
+    ct:source_sha256 "8180c54f224250c10362b5d159032157a5d30a1821b0897f392c971a8764925a" ;
+    ct:start_char 9323 .
+
+ex:C042P0046 a ct:SourcePassage ;
+    ct:end_char 9471 ;
+    ct:exact_text "The Publishers shall have the right to renew the term of the             Services as provided in this Agreement." ;
+    ct:source_path "cuad/HEALTHGATEDATACORP_11_24_1999-EX-10.1-HOSTING AND MANAGEMENT AGREEMENT (1).txt" ;
+    ct:source_sha256 "8180c54f224250c10362b5d159032157a5d30a1821b0897f392c971a8764925a" ;
+    ct:start_char 9359 .
+
+ex:C042P0085 a ct:SourcePassage ;
+    ct:end_char 19528 ;
+    ct:exact_text "10.2.3. The Publishers shall have the right to terminate the licence                     referred to in Clause 10.2.1 by giving three months' notice                     in writing to HealthGate." ;
+    ct:source_path "cuad/HEALTHGATEDATACORP_11_24_1999-EX-10.1-HOSTING AND MANAGEMENT AGREEMENT (1).txt" ;
+    ct:source_sha256 "8180c54f224250c10362b5d159032157a5d30a1821b0897f392c971a8764925a" ;
+    ct:start_char 19334 .
+
+ex:C042P0112 a ct:SourcePassage ;
+    ct:end_char 25519 ;
+    ct:exact_text "17.   Right of Renewal" ;
+    ct:source_path "cuad/HEALTHGATEDATACORP_11_24_1999-EX-10.1-HOSTING AND MANAGEMENT AGREEMENT (1).txt" ;
+    ct:source_sha256 "8180c54f224250c10362b5d159032157a5d30a1821b0897f392c971a8764925a" ;
+    ct:start_char 25497 .
+
+ex:C042P0115 a ct:SourcePassage ;
+    ct:end_char 26606 ;
+    ct:exact_text "18.   Assistance upon Termination" ;
+    ct:source_path "cuad/HEALTHGATEDATACORP_11_24_1999-EX-10.1-HOSTING AND MANAGEMENT AGREEMENT (1).txt" ;
+    ct:source_sha256 "8180c54f224250c10362b5d159032157a5d30a1821b0897f392c971a8764925a" ;
+    ct:start_char 26573 .
+
+ex:C042P0116 a ct:SourcePassage ;
+    ct:end_char 26715 ;
+    ct:exact_text "On termination of the provision of the Services by HealthGate to the       Publishers for any reason:" ;
+    ct:source_path "cuad/HEALTHGATEDATACORP_11_24_1999-EX-10.1-HOSTING AND MANAGEMENT AGREEMENT (1).txt" ;
+    ct:source_sha256 "8180c54f224250c10362b5d159032157a5d30a1821b0897f392c971a8764925a" ;
+    ct:start_char 26614 .
+
+ex:C042P0118 a ct:SourcePassage ;
+    ct:end_char 27329 ;
+    ct:exact_text "18.1. HealthGate will liaise with the Publishers, making available for             such purposes such HealthGate liaison staff as the Publishers may             reasonably require, and acting in all good faith, to ensure a             mutually satisfactory license to the Publishers or, at the             Publishers' option, to a replacement contractor. The period of             liaison will commence as soon as notice has been given of             termination of this Agreement, and will continue for a maximum             period of 3 months after termination;" ;
+    ct:source_path "cuad/HEALTHGATEDATACORP_11_24_1999-EX-10.1-HOSTING AND MANAGEMENT AGREEMENT (1).txt" ;
+    ct:source_sha256 "8180c54f224250c10362b5d159032157a5d30a1821b0897f392c971a8764925a" ;
+    ct:start_char 26766 .
+
+ex:C042P0119 a ct:SourcePassage ;
+    ct:end_char 27692 ;
+    ct:exact_text "18.2. HealthGate agrees that at the time of termination of this Agreement,             it will render all assistance, provide all documentation and             undertake all actions to the extent necessary to effect an orderly             assumption of the Services by the Publishers or, at the Publishers'             option, by a replacement contractor;" ;
+    ct:source_path "cuad/HEALTHGATEDATACORP_11_24_1999-EX-10.1-HOSTING AND MANAGEMENT AGREEMENT (1).txt" ;
+    ct:source_sha256 "8180c54f224250c10362b5d159032157a5d30a1821b0897f392c971a8764925a" ;
+    ct:start_char 27337 .
+
+ex:C042P0189 a ct:SourcePassage ;
+    ct:end_char 46165 ;
+    ct:exact_text "The parties hereto acknowledge and agree that the Publishers and/or             their licensors own and will continue to own all right, title and             interest in and to Publishers' Journals and other data, including             but not limited to usage statistics for the Services (\"Publishers'             Data\"). Upon the termination of this Agreement for any reason or,             with respect to any Publishers' Data, on such earlier date as the             Publishers shall determine that any of the same will no longer be             required by HealthGate in order to render Services to the             Publishers, Publishers' Data will be either erased from the data             files maintained by HealthGate. or if the Publishers so elect,             returned to the Publishers by HealthGate. The Publishers' Data may             not be utilized by HealthGate for any purpose except to provide             Services to the Publishers, nor may Publishers' Data or any part             thereof be disclosed, sold, assigned, leased or otherwise disposed             of to third parties by HealthGate or commercially exploited by or on             behalf of HealthGate, or any of its employees or agents." ;
+    ct:source_path "cuad/HEALTHGATEDATACORP_11_24_1999-EX-10.1-HOSTING AND MANAGEMENT AGREEMENT (1).txt" ;
+    ct:source_sha256 "8180c54f224250c10362b5d159032157a5d30a1821b0897f392c971a8764925a" ;
+    ct:start_char 44946 .
+
+ex:C042P0220 a ct:SourcePassage ;
+    ct:end_char 54973 ;
+    ct:exact_text "32.   Termination, Change of Control of HealthGate" ;
+    ct:source_path "cuad/HEALTHGATEDATACORP_11_24_1999-EX-10.1-HOSTING AND MANAGEMENT AGREEMENT (1).txt" ;
+    ct:source_sha256 "8180c54f224250c10362b5d159032157a5d30a1821b0897f392c971a8764925a" ;
+    ct:start_char 54923 .
+
+ex:C042P0221 a ct:SourcePassage ;
+    ct:end_char 55230 ;
+    ct:exact_text "32.1. Notwithstanding any provisions herein contained this Agreement may             be terminated forthwith by either party by notice in writing from             the party not at fault if any of the following events shall occur,             namely:" ;
+    ct:source_path "cuad/HEALTHGATEDATACORP_11_24_1999-EX-10.1-HOSTING AND MANAGEMENT AGREEMENT (1).txt" ;
+    ct:source_sha256 "8180c54f224250c10362b5d159032157a5d30a1821b0897f392c971a8764925a" ;
+    ct:start_char 54981 .
+
+ex:C042P0224 a ct:SourcePassage ;
+    ct:end_char 56676 ;
+    ct:exact_text "If any such event referred to in this sub-clause shall occur,                   termination shall become effective forthwith or on the date                   set forth in such notice." ;
+    ct:source_path "cuad/HEALTHGATEDATACORP_11_24_1999-EX-10.1-HOSTING AND MANAGEMENT AGREEMENT (1).txt" ;
+    ct:source_sha256 "8180c54f224250c10362b5d159032157a5d30a1821b0897f392c971a8764925a" ;
+    ct:start_char 56493 .
+
+ex:C042P0225 a ct:SourcePassage ;
+    ct:end_char 56866 ;
+    ct:exact_text "32.2.    Either party may by notice in writing to the other party                   terminate this Agreement, if any of the following events shall                   occur, namely:" ;
+    ct:source_path "cuad/HEALTHGATEDATACORP_11_24_1999-EX-10.1-HOSTING AND MANAGEMENT AGREEMENT (1).txt" ;
+    ct:source_sha256 "8180c54f224250c10362b5d159032157a5d30a1821b0897f392c971a8764925a" ;
+    ct:start_char 56687 .
+
+ex:C042P0231 a ct:SourcePassage ;
+    ct:end_char 58640 ;
+    ct:exact_text "32.3. Termination, howsoever or whenever occasioned shall be subject to             any rights and remedies either party may have under this Agreement             or in Law." ;
+    ct:source_path "cuad/HEALTHGATEDATACORP_11_24_1999-EX-10.1-HOSTING AND MANAGEMENT AGREEMENT (1).txt" ;
+    ct:source_sha256 "8180c54f224250c10362b5d159032157a5d30a1821b0897f392c971a8764925a" ;
+    ct:start_char 58467 .
+
+ex:C042P0232 a ct:SourcePassage ;
+    ct:end_char 58821 ;
+    ct:exact_text "32.4. the following Clauses shall survive termination for whatever cause             of this Agreement: Clauses 4.2, 5, 10.2, 20.4, 23.2, 25-28, 30-34             inclusive." ;
+    ct:source_path "cuad/HEALTHGATEDATACORP_11_24_1999-EX-10.1-HOSTING AND MANAGEMENT AGREEMENT (1).txt" ;
+    ct:source_sha256 "8180c54f224250c10362b5d159032157a5d30a1821b0897f392c971a8764925a" ;
+    ct:start_char 58648 .
+
+ex:C042P0233 a ct:SourcePassage ;
+    ct:end_char 58852 ;
+    ct:exact_text "33.   Rights Upon Termination" ;
+    ct:source_path "cuad/HEALTHGATEDATACORP_11_24_1999-EX-10.1-HOSTING AND MANAGEMENT AGREEMENT (1).txt" ;
+    ct:source_sha256 "8180c54f224250c10362b5d159032157a5d30a1821b0897f392c971a8764925a" ;
+    ct:start_char 58823 .
+
+ex:C042P0234 a ct:SourcePassage ;
+    ct:end_char 59010 ;
+    ct:exact_text "Upon termination of this Agreement and for a period of six (6) months       thereafter, the Publishers will have the following rights and obligations:" ;
+    ct:source_path "cuad/HEALTHGATEDATACORP_11_24_1999-EX-10.1-HOSTING AND MANAGEMENT AGREEMENT (1).txt" ;
+    ct:source_sha256 "8180c54f224250c10362b5d159032157a5d30a1821b0897f392c971a8764925a" ;
+    ct:start_char 58860 .
+
+ex:C042P0235 a ct:SourcePassage ;
+    ct:end_char 59649 ;
+    ct:exact_text "33.1. Commencing upon any notice of termination by the Publishers,             HealthGate will comply with the Publishers' reasonable directions,             and will provide to the Publishers any and all termination             assistance reasonably requested by the Publishers to allow the             Services to continue and to facilitate the orderly transfer of             responsibility for the Services to the Publishers or a successor             provider of Services designated by the Publishers. The termination             assistance to be provided to the Publishers by HealthGate may             include the following:" ;
+    ct:source_path "cuad/HEALTHGATEDATACORP_11_24_1999-EX-10.1-HOSTING AND MANAGEMENT AGREEMENT (1).txt" ;
+    ct:source_sha256 "8180c54f224250c10362b5d159032157a5d30a1821b0897f392c971a8764925a" ;
+    ct:start_char 59018 .
+
+ex:C042P0242 a ct:SourcePassage ;
+    ct:end_char 61785 ;
+    ct:exact_text "33.3. Upon receipt of written notice from the Publishers that HealthGate             is in default under this Agreement by failing to comply with the             requirements of this Clause 33, or that HealthGate is in default             under any provision regarding rights upon termination of this             Agreement, HealthGate shall have ten (10) business days in which to             cure such default. HealthGate acknowledges that, in the event             HealthGate fails to cure such default within the specified time             period, the Publishers would suffer irreparable harm, and             HealthGate, hereby agrees that the Publishers would in such event be             entitled to obtain from a court of competent jurisdiction an order             of specific performance, in addition to such other rights and             remedies to which it may be entitled at law or in equity under this             Agreement." ;
+    ct:source_path "cuad/HEALTHGATEDATACORP_11_24_1999-EX-10.1-HOSTING AND MANAGEMENT AGREEMENT (1).txt" ;
+    ct:source_sha256 "8180c54f224250c10362b5d159032157a5d30a1821b0897f392c971a8764925a" ;
+    ct:start_char 60848 .
+
+ex:C042P0243 a ct:SourcePassage ;
+    ct:end_char 62418 ;
+    ct:exact_text "33.4. Upon the termination of this Agreement or HealthGate's engagement             whichever shall be the earlier, HealthGate or its personal             representative as the case may be, shall immediately deliver up to             the Publishers all correspondence, reports, documents,             specifications, papers, information (on whatever media) and property             belonging to the Publishers which may be in his possession or under             his control together with all confidential information or copyright             works belonging to the Publishers specified in Clauses 27 and 31             above." ;
+    ct:source_path "cuad/HEALTHGATEDATACORP_11_24_1999-EX-10.1-HOSTING AND MANAGEMENT AGREEMENT (1).txt" ;
+    ct:source_sha256 "8180c54f224250c10362b5d159032157a5d30a1821b0897f392c971a8764925a" ;
+    ct:start_char 61793 .
+
+ex:C042P0416 a ct:SourcePassage ;
+    ct:end_char 85609 ;
+    ct:exact_text "4.    Account expiration: If the account expires, or reaches the monetary             cap assigned, the user will be shown a page that prompts them to             contact Blackwell/Munksgaard to renew the account. This page will             also provide the option to continue and have purchases applied to a             credit card. A report will be available warning Blackwell/Munksgaard             of accounts that are close to expiring." ;
+    ct:source_path "cuad/HEALTHGATEDATACORP_11_24_1999-EX-10.1-HOSTING AND MANAGEMENT AGREEMENT (1).txt" ;
+    ct:source_sha256 "8180c54f224250c10362b5d159032157a5d30a1821b0897f392c971a8764925a" ;
+    ct:start_char 85168 .
+
+ex:C042P0761 a ct:SourcePassage ;
+    ct:end_char 143911 ;
+    ct:exact_text "o     Expiration Date" ;
+    ct:source_path "cuad/HEALTHGATEDATACORP_11_24_1999-EX-10.1-HOSTING AND MANAGEMENT AGREEMENT (1).txt" ;
+    ct:source_sha256 "8180c54f224250c10362b5d159032157a5d30a1821b0897f392c971a8764925a" ;
+    ct:start_char 143890 .
+
+ex:C042R0001 a ct:Rule ;
+    rdfs:label "Initial Term — source passage 44" ;
+    ct:kind "INITIAL_TERM" ;
+    ct:supported_by ex:C042P0044 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C042R0002 a ct:Rule ;
+    rdfs:label "Optional Renewal — source passage 45" ;
+    ct:kind "OPTIONAL_RENEWAL" ;
+    ct:supported_by ex:C042P0045 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C042R0003 a ct:Rule ;
+    rdfs:label "Optional Renewal — source passage 46" ;
+    ct:kind "OPTIONAL_RENEWAL" ;
+    ct:supported_by ex:C042P0046 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C042R0004 a ct:Rule ;
+    rdfs:label "Termination — source passage 54" ;
+    ct:kind "TERMINATION" ;
+    ct:subject_to ex:C042R0004Condition54 ;
+    ct:supported_by ex:C042P0054 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C042R0004Condition54 a ct:Condition ;
+    ct:description "5.2.  If HealthGate fails to complete the System by the end of the tenth             week after the System Completion Date then the Publishers (unless             such failure demonstrably results from the Publishers' default in             the performance of its obligations under this Agreement) will be             entitled without prejudice to any other rights or remedies they may             have under this Agreement or at law or in equity to terminate this             Agreement immediately by written notice." ;
+    ct:supported_by ex:C042P0054 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C042R0005 a ct:Rule ;
+    rdfs:label "Termination — source passage 79" ;
+    ct:kind "TERMINATION" ;
+    ct:subject_to ex:C042R0005Condition79 ;
+    ct:supported_by ex:C042P0079 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C042R0005Condition79 a ct:Condition ;
+    ct:description "10.2.1. On termination of the provision of the Services by                     HealthGate to the Publishers for whatever reason, HealthGate                     shall at the Publishers' option:" ;
+    ct:supported_by ex:C042P0079 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C042R0006 a ct:Rule ;
+    rdfs:label "Termination — source passage 85" ;
+    ct:kind "TERMINATION" ;
+    ct:references_section ex:C042R0006Ref0 ;
+    ct:supported_by ex:C042P0085 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C042R0006Ref0 a ct:Reference ;
+    rdfs:label "Clause 10.2.1" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C042R0007 a ct:Rule ;
+    rdfs:label "Optional Renewal — source passage 112" ;
+    ct:kind "OPTIONAL_RENEWAL" ;
+    ct:supported_by ex:C042P0112 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C042R0008 a ct:Rule ;
+    rdfs:label "Optional Renewal — source passage 113" ;
+    ct:kind "OPTIONAL_RENEWAL" ;
+    ct:subject_to ex:C042R0008Condition113 ;
+    ct:supported_by ex:C042P0113 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C042R0008Condition113 a ct:Condition ;
+    ct:description "17.1  The Publishers shall have the right to renew the term of the             Services by notice in writing to HealthGate to be given on or before             30 September 1999. If the Publishers exercise their right to renew,             the term of the Services shall be extended by one further year, up             to and including 28 February 2001. The Use Fees shall remain the             same as in the Initial Period and the fee for the Services shall not             exceed $7000 for additional journals, $2000 maintenance fee on             existing journals and $2000 per Gigabyte." ;
+    ct:supported_by ex:C042P0113 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C042R0009 a ct:Rule ;
+    rdfs:label "Optional Renewal — source passage 114" ;
+    ct:kind "OPTIONAL_RENEWAL" ;
+    ct:references_section ex:C042R0009Ref0 ;
+    ct:subject_to ex:C042R0009Condition114 ;
+    ct:supported_by ex:C042P0114 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C042R0009Condition114 a ct:Condition ;
+    ct:description "17.2  If the Publishers exercise their right of renewal under Clause 17.1,             then the Publishers shall have a further right of renewal for each             of the subsequent three years, provided that the right to renew             shall be conditional upon the Publishers having exercised their             right in the previous year, and giving notice on or before the 30             September before the renewal is to take effect." ;
+    ct:supported_by ex:C042P0114 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C042R0009Ref0 a ct:Reference ;
+    rdfs:label "Clause 17.1" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C042R0010 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 115" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:supported_by ex:C042P0115 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C042R0011 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 116" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:supported_by ex:C042P0116 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C042R0012 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 118" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:supported_by ex:C042P0118 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C042R0013 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 119" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:supported_by ex:C042P0119 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C042R0014 a ct:Rule ;
+    rdfs:label "Conditional Referenced Term — source passage 136" ;
+    ct:kind "CONDITIONAL_REFERENCED_TERM" ;
+    ct:references_section ex:C042R0014Ref0,
+        ex:C042R0014Ref1 ;
+    ct:subject_to ex:C042R0014Condition136 ;
+    ct:supported_by ex:C042P0136 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C042R0014Condition136 a ct:Condition ;
+    ct:description "PROVIDED ALWAYS THAT if the Agreement is terminated in accordance with       Clause 9.4 then the financial provisions of that Clause will apply in       place of this Clause 19." ;
+    ct:supported_by ex:C042P0136 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C042R0014Ref0 a ct:Reference ;
+    rdfs:label "Clause 9.4" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C042R0014Ref1 a ct:Reference ;
+    rdfs:label "Clause 19" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C042R0015 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 140" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:references_section ex:C042R0015Ref0,
+        ex:C042R0015Ref1 ;
+    ct:subject_to ex:C042R0015Condition140 ;
+    ct:supported_by ex:C042P0140 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C042R0015Condition140 a ct:Condition ;
+    ct:description "Interest on late payment by either party shall be charged at 2%             above base rate for the time being of Barclays Bank plc in England.             This sub-Clause 19.5 shall survive termination under Clause 9.4." ;
+    ct:supported_by ex:C042P0140 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C042R0015Ref0 a ct:Reference ;
+    rdfs:label "Clause 19.5" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C042R0015Ref1 a ct:Reference ;
+    rdfs:label "Clause 9.4" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C042R0016 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 189" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:supported_by ex:C042P0189 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C042R0017 a ct:Rule ;
+    rdfs:label "Termination — source passage 220" ;
+    ct:kind "TERMINATION" ;
+    ct:supported_by ex:C042P0220 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C042R0018 a ct:Rule ;
+    rdfs:label "Termination — source passage 221" ;
+    ct:kind "TERMINATION" ;
+    ct:supported_by ex:C042P0221 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C042R0019 a ct:Rule ;
+    rdfs:label "Termination — source passage 222" ;
+    ct:kind "TERMINATION" ;
+    ct:subject_to ex:C042R0019Condition222 ;
+    ct:supported_by ex:C042P0222 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C042R0019Condition222 a ct:Condition ;
+    ct:description "(i) if the other party shall commit any act of bankruptcy,                   shall have a receiving order made against it, shall make or                   negotiate for any composition or arrangement with or                   assignment for the benefit of its creditors or if the other                   party, being a body corporate, shall present a petition or                   have a petition presented by a creditor for its winding up or                   shall enter into any liquidation (other than for the purposes                   of reconstruction or amalgamation), shall call any meeting of                   its creditors, shall have a receiver of all or any of its                   undertakings or assets appointed, shall be deemed by virtue of                   the relevant statutory provisions under the applicable law to                   be unable to pay its debts, or shall cease to carry on                   business;" ;
+    ct:supported_by ex:C042P0222 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C042R0020 a ct:Rule ;
+    rdfs:label "Termination — source passage 223" ;
+    ct:kind "TERMINATION" ;
+    ct:subject_to ex:C042R0020Condition223 ;
+    ct:supported_by ex:C042P0223 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C042R0020Condition223 a ct:Condition ;
+    ct:description "(ii) if the other party shall at any time be in default under                   this Agreement and shall fail to remedy such default within 30                   days from receipt of notice in writing from the first party                   specifying such default." ;
+    ct:supported_by ex:C042P0223 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C042R0021 a ct:Rule ;
+    rdfs:label "Termination — source passage 224" ;
+    ct:kind "TERMINATION" ;
+    ct:supported_by ex:C042P0224 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C042R0022 a ct:Rule ;
+    rdfs:label "Termination — source passage 225" ;
+    ct:kind "TERMINATION" ;
+    ct:supported_by ex:C042P0225 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C042R0023 a ct:Rule ;
+    rdfs:label "Termination — source passage 226" ;
+    ct:kind "TERMINATION" ;
+    ct:subject_to ex:C042R0023Condition226 ;
+    ct:supported_by ex:C042P0226 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C042R0023Condition226 a ct:Condition ;
+    ct:description "32.2.1. if either party is in breach of any term, condition or                           provision of this Agreement or required by law and                           fails to remedy such breach (if capable of remedy)                           within 14 days of receipt of notice from the other                           party specifying such breach;" ;
+    ct:supported_by ex:C042P0226 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C042R0024 a ct:Rule ;
+    rdfs:label "Termination — source passage 229" ;
+    ct:kind "TERMINATION" ;
+    ct:subject_to ex:C042R0024Condition229 ;
+    ct:supported_by ex:C042P0229 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C042R0024Condition229 a ct:Condition ;
+    ct:description "If there is a change in Control of the first party,                           the second party may, entirely at their own option and                           without thereby becoming liable for any costs or                           losses which the first party or its holding company or                           any company in which it may hold shares may suffer as                           a result terminate the Agreement by notice in writing                           to first party." ;
+    ct:supported_by ex:C042P0229 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C042R0025 a ct:Rule ;
+    rdfs:label "Termination — source passage 231" ;
+    ct:kind "TERMINATION" ;
+    ct:supported_by ex:C042P0231 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C042R0026 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 232" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:supported_by ex:C042P0232 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C042R0027 a ct:Rule ;
+    rdfs:label "Termination — source passage 233" ;
+    ct:kind "TERMINATION" ;
+    ct:supported_by ex:C042P0233 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C042R0028 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 234" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:supported_by ex:C042P0234 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C042R0029 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 235" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:supported_by ex:C042P0235 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C042R0030 a ct:Rule ;
+    rdfs:label "Termination — source passage 242" ;
+    ct:kind "TERMINATION" ;
+    ct:references_section ex:C042R0030Ref0 ;
+    ct:supported_by ex:C042P0242 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C042R0030Ref0 a ct:Reference ;
+    rdfs:label "Clause 33" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C042R0031 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 243" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:supported_by ex:C042P0243 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C042R0032 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 416" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:supported_by ex:C042P0416 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C042R0033 a ct:Rule ;
+    rdfs:label "Initial Term — source passage 761" ;
+    ct:kind "INITIAL_TERM" ;
+    ct:supported_by ex:C042P0761 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C042P0054 a ct:SourcePassage ;
+    ct:end_char 11651 ;
+    ct:exact_text "5.2.  If HealthGate fails to complete the System by the end of the tenth             week after the System Completion Date then the Publishers (unless             such failure demonstrably results from the Publishers' default in             the performance of its obligations under this Agreement) will be             entitled without prejudice to any other rights or remedies they may             have under this Agreement or at law or in equity to terminate this             Agreement immediately by written notice." ;
+    ct:source_path "cuad/HEALTHGATEDATACORP_11_24_1999-EX-10.1-HOSTING AND MANAGEMENT AGREEMENT (1).txt" ;
+    ct:source_sha256 "8180c54f224250c10362b5d159032157a5d30a1821b0897f392c971a8764925a" ;
+    ct:start_char 11134 .
+
+ex:C042P0079 a ct:SourcePassage ;
+    ct:end_char 17826 ;
+    ct:exact_text "10.2.1. On termination of the provision of the Services by                     HealthGate to the Publishers for whatever reason, HealthGate                     shall at the Publishers' option:" ;
+    ct:source_path "cuad/HEALTHGATEDATACORP_11_24_1999-EX-10.1-HOSTING AND MANAGEMENT AGREEMENT (1).txt" ;
+    ct:source_sha256 "8180c54f224250c10362b5d159032157a5d30a1821b0897f392c971a8764925a" ;
+    ct:start_char 17634 .
+
+ex:C042P0113 a ct:SourcePassage ;
+    ct:end_char 26120 ;
+    ct:exact_text "17.1  The Publishers shall have the right to renew the term of the             Services by notice in writing to HealthGate to be given on or before             30 September 1999. If the Publishers exercise their right to renew,             the term of the Services shall be extended by one further year, up             to and including 28 February 2001. The Use Fees shall remain the             same as in the Initial Period and the fee for the Services shall not             exceed $7000 for additional journals, $2000 maintenance fee on             existing journals and $2000 per Gigabyte." ;
+    ct:source_path "cuad/HEALTHGATEDATACORP_11_24_1999-EX-10.1-HOSTING AND MANAGEMENT AGREEMENT (1).txt" ;
+    ct:source_sha256 "8180c54f224250c10362b5d159032157a5d30a1821b0897f392c971a8764925a" ;
+    ct:start_char 25527 .
+
+ex:C042P0114 a ct:SourcePassage ;
+    ct:end_char 26571 ;
+    ct:exact_text "17.2  If the Publishers exercise their right of renewal under Clause 17.1,             then the Publishers shall have a further right of renewal for each             of the subsequent three years, provided that the right to renew             shall be conditional upon the Publishers having exercised their             right in the previous year, and giving notice on or before the 30             September before the renewal is to take effect." ;
+    ct:source_path "cuad/HEALTHGATEDATACORP_11_24_1999-EX-10.1-HOSTING AND MANAGEMENT AGREEMENT (1).txt" ;
+    ct:source_sha256 "8180c54f224250c10362b5d159032157a5d30a1821b0897f392c971a8764925a" ;
+    ct:start_char 26128 .
+
+ex:C042P0136 a ct:SourcePassage ;
+    ct:end_char 30698 ;
+    ct:exact_text "PROVIDED ALWAYS THAT if the Agreement is terminated in accordance with       Clause 9.4 then the financial provisions of that Clause will apply in       place of this Clause 19." ;
+    ct:source_path "cuad/HEALTHGATEDATACORP_11_24_1999-EX-10.1-HOSTING AND MANAGEMENT AGREEMENT (1).txt" ;
+    ct:source_sha256 "8180c54f224250c10362b5d159032157a5d30a1821b0897f392c971a8764925a" ;
+    ct:start_char 30521 .
+
+ex:C042P0140 a ct:SourcePassage ;
+    ct:end_char 31816 ;
+    ct:exact_text "Interest on late payment by either party shall be charged at 2%             above base rate for the time being of Barclays Bank plc in England.             This sub-Clause 19.5 shall survive termination under Clause 9.4." ;
+    ct:source_path "cuad/HEALTHGATEDATACORP_11_24_1999-EX-10.1-HOSTING AND MANAGEMENT AGREEMENT (1).txt" ;
+    ct:source_sha256 "8180c54f224250c10362b5d159032157a5d30a1821b0897f392c971a8764925a" ;
+    ct:start_char 31596 .
+
+ex:C042P0222 a ct:SourcePassage ;
+    ct:end_char 56190 ;
+    ct:exact_text "(i) if the other party shall commit any act of bankruptcy,                   shall have a receiving order made against it, shall make or                   negotiate for any composition or arrangement with or                   assignment for the benefit of its creditors or if the other                   party, being a body corporate, shall present a petition or                   have a petition presented by a creditor for its winding up or                   shall enter into any liquidation (other than for the purposes                   of reconstruction or amalgamation), shall call any meeting of                   its creditors, shall have a receiver of all or any of its                   undertakings or assets appointed, shall be deemed by virtue of                   the relevant statutory provisions under the applicable law to                   be unable to pay its debts, or shall cease to carry on                   business;" ;
+    ct:source_path "cuad/HEALTHGATEDATACORP_11_24_1999-EX-10.1-HOSTING AND MANAGEMENT AGREEMENT (1).txt" ;
+    ct:source_sha256 "8180c54f224250c10362b5d159032157a5d30a1821b0897f392c971a8764925a" ;
+    ct:start_char 55250 .
+
+ex:C042P0223 a ct:SourcePassage ;
+    ct:end_char 56473 ;
+    ct:exact_text "(ii) if the other party shall at any time be in default under                   this Agreement and shall fail to remedy such default within 30                   days from receipt of notice in writing from the first party                   specifying such default." ;
+    ct:source_path "cuad/HEALTHGATEDATACORP_11_24_1999-EX-10.1-HOSTING AND MANAGEMENT AGREEMENT (1).txt" ;
+    ct:source_sha256 "8180c54f224250c10362b5d159032157a5d30a1821b0897f392c971a8764925a" ;
+    ct:start_char 56210 .
+
+ex:C042P0226 a ct:SourcePassage ;
+    ct:end_char 57235 ;
+    ct:exact_text "32.2.1. if either party is in breach of any term, condition or                           provision of this Agreement or required by law and                           fails to remedy such breach (if capable of remedy)                           within 14 days of receipt of notice from the other                           party specifying such breach;" ;
+    ct:source_path "cuad/HEALTHGATEDATACORP_11_24_1999-EX-10.1-HOSTING AND MANAGEMENT AGREEMENT (1).txt" ;
+    ct:source_sha256 "8180c54f224250c10362b5d159032157a5d30a1821b0897f392c971a8764925a" ;
+    ct:start_char 56886 .
+
+ex:C042P0229 a ct:SourcePassage ;
+    ct:end_char 57841 ;
+    ct:exact_text "If there is a change in Control of the first party,                           the second party may, entirely at their own option and                           without thereby becoming liable for any costs or                           losses which the first party or its holding company or                           any company in which it may hold shares may suffer as                           a result terminate the Agreement by notice in writing                           to first party." ;
+    ct:source_path "cuad/HEALTHGATEDATACORP_11_24_1999-EX-10.1-HOSTING AND MANAGEMENT AGREEMENT (1).txt" ;
+    ct:source_sha256 "8180c54f224250c10362b5d159032157a5d30a1821b0897f392c971a8764925a" ;
+    ct:start_char 57351 .
+
+ct:Agreement a owl:Class ;
+    rdfs:label "Agreement" .
+
+ct:Condition a owl:Class ;
+    rdfs:label "Condition" .
+
+ct:Reference a owl:Class ;
+    rdfs:label "Reference" .
+
+ct:SourcePassage a owl:Class ;
+    rdfs:label "SourcePassage" .
+
+ct:Rule a owl:Class ;
+    rdfs:label "Rule" .
+

@@ -1,0 +1,442 @@
+@prefix ct: <https://cimulink.local/ontology/contract-terms/0.1#> .
+@prefix ex: <https://cimulink.local/ontology/llm100-v1/> .
+@prefix meta: <https://cimulink.local/ontology/extraction#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ct: a owl:Ontology ;
+    rdfs:comment "Partial five-contract development sample. No claim of complete contract coverage or legal correctness." .
+
+ct:agreement_effective_from a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:applies_within a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:calendar_date_status a owl:DatatypeProperty .
+
+ct:coverage a owl:DatatypeProperty .
+
+ct:description a owl:DatatypeProperty .
+
+ct:duration a owl:DatatypeProperty .
+
+ct:duration_status a owl:DatatypeProperty .
+
+ct:end_char a owl:DatatypeProperty .
+
+ct:end_date_status a owl:DatatypeProperty .
+
+ct:ends_on_event a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:exact_text a owl:DatatypeProperty .
+
+ct:has_party a owl:ObjectProperty ;
+    rdfs:domain ct:Agreement ;
+    rdfs:range ct:Party .
+
+ct:has_rule a owl:ObjectProperty ;
+    rdfs:domain ct:Agreement ;
+    rdfs:range ct:Rule .
+
+ct:kind a owl:DatatypeProperty .
+
+ct:notice_actor a owl:DatatypeProperty .
+
+ct:notice_form a owl:DatatypeProperty .
+
+ct:notice_period_status a owl:DatatypeProperty .
+
+ct:qualifies a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Rule .
+
+ct:references_section a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:renewal_count a owl:DatatypeProperty .
+
+ct:resolution_status a owl:DatatypeProperty .
+
+ct:resolved_to a owl:ObjectProperty ;
+    rdfs:domain ct:Reference ;
+    rdfs:range ct:SourcePassage .
+
+ct:source_path a owl:DatatypeProperty .
+
+ct:source_sha256 a owl:DatatypeProperty .
+
+ct:start_char a owl:DatatypeProperty .
+
+ct:starts_from a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:stated_end_date a owl:DatatypeProperty .
+
+ct:subject_to a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Condition .
+
+ct:supported_by a owl:ObjectProperty ;
+    rdfs:range ct:SourcePassage .
+
+ct:termination_notice a owl:DatatypeProperty .
+
+ex:C032 a ct:Agreement ;
+    rdfs:label "EUROPEANMICROHOLDINGSINC_03_06_1998-EX-10.6-DISTRIBUTOR AGREEMENT.txt" ;
+    ct:coverage "LOCAL_LLM_PROPOSED_PARTIAL; NOT_HUMAN_REVIEWED" ;
+    ct:has_rule ex:C032R0001,
+        ex:C032R0002,
+        ex:C032R0003,
+        ex:C032R0004,
+        ex:C032R0005,
+        ex:C032R0006,
+        ex:C032R0007,
+        ex:C032R0008,
+        ex:C032R0009,
+        ex:C032R0010,
+        ex:C032R0011,
+        ex:C032R0012,
+        ex:C032R0013,
+        ex:C032R0014,
+        ex:C032R0015,
+        ex:C032R0016,
+        ex:C032R0017,
+        ex:C032R0018,
+        ex:C032R0019,
+        ex:C032R0020,
+        ex:C032R0021 ;
+    ct:source_path "cuad/EUROPEANMICROHOLDINGSINC_03_06_1998-EX-10.6-DISTRIBUTOR AGREEMENT.txt" ;
+    ct:source_sha256 "d806943ae391f6f5a4d5ee897e2b40107cc948056d0faff9d2e81d231fb059d8" ;
+    meta:model_digest "0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0" .
+
+ct:Party a owl:Class ;
+    rdfs:label "Party" .
+
+ex:C032P0004 a ct:SourcePassage ;
+    ct:end_char 419 ;
+    ct:exact_text "This Agreement is made and entered into effective as of November 5, 1997 (the \"effective Date), by and between WatchGuard Technologies, Inc., a Delaware corporation (\"WGT\"), and European Micro (\"Distributor\"). WGT and Distributor agree as follows:" ;
+    ct:source_path "cuad/EUROPEANMICROHOLDINGSINC_03_06_1998-EX-10.6-DISTRIBUTOR AGREEMENT.txt" ;
+    ct:source_sha256 "d806943ae391f6f5a4d5ee897e2b40107cc948056d0faff9d2e81d231fb059d8" ;
+    ct:start_char 172 .
+
+ex:C032P0015 a ct:SourcePassage ;
+    ct:end_char 2393 ;
+    ct:exact_text "\"Term\" means the period of time determined in accordance with Section 5." ;
+    ct:source_path "cuad/EUROPEANMICROHOLDINGSINC_03_06_1998-EX-10.6-DISTRIBUTOR AGREEMENT.txt" ;
+    ct:source_sha256 "d806943ae391f6f5a4d5ee897e2b40107cc948056d0faff9d2e81d231fb059d8" ;
+    ct:start_char 2321 .
+
+ex:C032P0059 a ct:SourcePassage ;
+    ct:end_char 12135 ;
+    ct:exact_text "5.1  Term. The Term will commence on the Effective Date of this Agreement and      will remain in effect, unless sooner terminated under paragraphs 5.2, 5.3,      or 5.4, until the termination date specified in Exhibit A." ;
+    ct:source_path "cuad/EUROPEANMICROHOLDINGSINC_03_06_1998-EX-10.6-DISTRIBUTOR AGREEMENT.txt" ;
+    ct:source_sha256 "d806943ae391f6f5a4d5ee897e2b40107cc948056d0faff9d2e81d231fb059d8" ;
+    ct:start_char 11914 .
+
+ex:C032P0061 a ct:SourcePassage ;
+    ct:end_char 13002 ;
+    ct:exact_text "5.2  Termination by WGT. Upon the occurrence of any of the following, WGT may      terminate the Term by giving Distributor written notice of such termination      for:" ;
+    ct:source_path "cuad/EUROPEANMICROHOLDINGSINC_03_06_1998-EX-10.6-DISTRIBUTOR AGREEMENT.txt" ;
+    ct:source_sha256 "d806943ae391f6f5a4d5ee897e2b40107cc948056d0faff9d2e81d231fb059d8" ;
+    ct:start_char 12834 .
+
+ex:C032P0068 a ct:SourcePassage ;
+    ct:end_char 14491 ;
+    ct:exact_text "(f)  any failure by Distributor to perform any of its other obligations under      this Agreement where such failure continues for thirty (30) days after      written notice thereof by WGT to Distributor; or" ;
+    ct:source_path "cuad/EUROPEANMICROHOLDINGSINC_03_06_1998-EX-10.6-DISTRIBUTOR AGREEMENT.txt" ;
+    ct:source_sha256 "d806943ae391f6f5a4d5ee897e2b40107cc948056d0faff9d2e81d231fb059d8" ;
+    ct:start_char 14284 .
+
+ex:C032P0069 a ct:SourcePassage ;
+    ct:end_char 14635 ;
+    ct:exact_text "(g)  WGT giving Distributor ninety (90) days' advance written notice of      termination at any time after the expiration of the Initial Term." ;
+    ct:source_path "cuad/EUROPEANMICROHOLDINGSINC_03_06_1998-EX-10.6-DISTRIBUTOR AGREEMENT.txt" ;
+    ct:source_sha256 "d806943ae391f6f5a4d5ee897e2b40107cc948056d0faff9d2e81d231fb059d8" ;
+    ct:start_char 14493 .
+
+ex:C032P0071 a ct:SourcePassage ;
+    ct:end_char 15639 ;
+    ct:exact_text "5.4  Termination by Distributor. Upon the occurrence of any of the following,      Distributor may terminate the Term by giving WGT written notice of such      termination;" ;
+    ct:source_path "cuad/EUROPEANMICROHOLDINGSINC_03_06_1998-EX-10.6-DISTRIBUTOR AGREEMENT.txt" ;
+    ct:source_sha256 "d806943ae391f6f5a4d5ee897e2b40107cc948056d0faff9d2e81d231fb059d8" ;
+    ct:start_char 15467 .
+
+ex:C032P0073 a ct:SourcePassage ;
+    ct:end_char 16096 ;
+    ct:exact_text "(b)  any failure by WGT to perform any of its obligations under this Agreement      where such failure continues for thirty (30) days after written notice      thereof by Distributor to WGT; or" ;
+    ct:source_path "cuad/EUROPEANMICROHOLDINGSINC_03_06_1998-EX-10.6-DISTRIBUTOR AGREEMENT.txt" ;
+    ct:source_sha256 "d806943ae391f6f5a4d5ee897e2b40107cc948056d0faff9d2e81d231fb059d8" ;
+    ct:start_char 15903 .
+
+ex:C032P0074 a ct:SourcePassage ;
+    ct:end_char 16437 ;
+    ct:exact_text "(c)  for convenience whether or not extended beyond the Initial Term, provided      Distributor gives WGT thirty (30) days' advance written notice and, within      such thirty (30) day period, Distributor pays to WGT a lump-sum payment      equal to fifty (50%) of the unpaid balance of cumulative Guaranteed Minimum      Purchase amounts." ;
+    ct:source_path "cuad/EUROPEANMICROHOLDINGSINC_03_06_1998-EX-10.6-DISTRIBUTOR AGREEMENT.txt" ;
+    ct:source_sha256 "d806943ae391f6f5a4d5ee897e2b40107cc948056d0faff9d2e81d231fb059d8" ;
+    ct:start_char 16098 .
+
+ex:C032P0075 a ct:SourcePassage ;
+    ct:end_char 16885 ;
+    ct:exact_text "5.5  Effect of Termination. Any termination pursuant to paragraphs 5.2, 5.3, or      5.4 will be without prejudice to any other right or remedy afforded to      either party under this Agreement or any applicable law (e.g., in the case      of any breach or default by the other party), and will not affect any      rights or obligations which have arisen prior to the date of such      termination. In the event of termination, Distributor will:" ;
+    ct:source_path "cuad/EUROPEANMICROHOLDINGSINC_03_06_1998-EX-10.6-DISTRIBUTOR AGREEMENT.txt" ;
+    ct:source_sha256 "d806943ae391f6f5a4d5ee897e2b40107cc948056d0faff9d2e81d231fb059d8" ;
+    ct:start_char 16439 .
+
+ex:C032P0079 a ct:SourcePassage ;
+    ct:end_char 17435 ;
+    ct:exact_text "(c)  return to WGT within twenty (20) days following the expiration or      termination of the Term, any and all (i) demonstration Product provided to      Distributor; (ii) Products not already paid for in full by Distributor; and      (iii) promotional literature, data, information and other items received by      Distributor under this Agreement; and" ;
+    ct:source_path "cuad/EUROPEANMICROHOLDINGSINC_03_06_1998-EX-10.6-DISTRIBUTOR AGREEMENT.txt" ;
+    ct:source_sha256 "d806943ae391f6f5a4d5ee897e2b40107cc948056d0faff9d2e81d231fb059d8" ;
+    ct:start_char 17080 .
+
+ex:C032P0081 a ct:SourcePassage ;
+    ct:end_char 18065 ;
+    ct:exact_text "Upon the expiration or termination of the Term, the license granted under Section 2 of this Agreement will terminate. Any end-user licenses of the Software granted under the terms of this Agreement will survive the end of the Term in accordance with the terms of the applicable end-user license agreement." ;
+    ct:source_path "cuad/EUROPEANMICROHOLDINGSINC_03_06_1998-EX-10.6-DISTRIBUTOR AGREEMENT.txt" ;
+    ct:source_sha256 "d806943ae391f6f5a4d5ee897e2b40107cc948056d0faff9d2e81d231fb059d8" ;
+    ct:start_char 17760 .
+
+ex:C032P0082 a ct:SourcePassage ;
+    ct:end_char 18983 ;
+    ct:exact_text "5.6  Acknowledgment. Any expiration or termination of the Term will be final and      absolute. Except as expressly set forth in paragraphs 5.3 and 5.5(c),      Distributor waives any right, either express or implied by applicable law      or otherwise, to the renewal of this Agreement or to any damages or      compensation for any expiration or termination of the Term in accordance      with this Section 5. Each of the parties have considered the possibility of      such expiration or termination and the possibility of loss and damage      resulting therefrom in making expenditures pursuant to the performance of      this Agreement. It is the express intent and agreement of the parties that      neither will be liable to the other for damages, except as expressly set      forth in paragraphs 5.3 and 5.5(c), or otherwise by reason of the      expiration or termination of the Term as provided for herein." ;
+    ct:source_path "cuad/EUROPEANMICROHOLDINGSINC_03_06_1998-EX-10.6-DISTRIBUTOR AGREEMENT.txt" ;
+    ct:source_sha256 "d806943ae391f6f5a4d5ee897e2b40107cc948056d0faff9d2e81d231fb059d8" ;
+    ct:start_char 18067 .
+
+ex:C032P0104 a ct:SourcePassage ;
+    ct:end_char 23877 ;
+    ct:exact_text "TERMINATION DATE:                                           September 30, 1997 TRADEMARKS:" ;
+    ct:source_path "cuad/EUROPEANMICROHOLDINGSINC_03_06_1998-EX-10.6-DISTRIBUTOR AGREEMENT.txt" ;
+    ct:source_sha256 "d806943ae391f6f5a4d5ee897e2b40107cc948056d0faff9d2e81d231fb059d8" ;
+    ct:start_char 23787 .
+
+ex:C032P0119 a ct:SourcePassage ;
+    ct:end_char 26437 ;
+    ct:exact_text "Section A.3 As a Full Service Master Distributor, Distributor agrees to sign up a minimum of 10 new WatchGuard resellers in the Territory within the Initial Term of the Agreement." ;
+    ct:source_path "cuad/EUROPEANMICROHOLDINGSINC_03_06_1998-EX-10.6-DISTRIBUTOR AGREEMENT.txt" ;
+    ct:source_sha256 "d806943ae391f6f5a4d5ee897e2b40107cc948056d0faff9d2e81d231fb059d8" ;
+    ct:start_char 26258 .
+
+ex:C032P0169 a ct:SourcePassage ;
+    ct:end_char 49959 ;
+    ct:exact_text "25.  Survival. Paragraphs 1, 2, 3, 13 through 23 and all accrued obligations to      pay, together with all other provisions of this Agreement which may      reasonably be interpreted or construed as surviving the expiration or      termination of the Term, will survive the expiration or termination of the      Term." ;
+    ct:source_path "cuad/EUROPEANMICROHOLDINGSINC_03_06_1998-EX-10.6-DISTRIBUTOR AGREEMENT.txt" ;
+    ct:source_sha256 "d806943ae391f6f5a4d5ee897e2b40107cc948056d0faff9d2e81d231fb059d8" ;
+    ct:start_char 49641 .
+
+ex:C032R0001 a ct:Rule ;
+    rdfs:label "Initial Term — source passage 4" ;
+    ct:kind "INITIAL_TERM" ;
+    ct:supported_by ex:C032P0004 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C032R0002 a ct:Rule ;
+    rdfs:label "Conditional Referenced Term — source passage 15" ;
+    ct:kind "CONDITIONAL_REFERENCED_TERM" ;
+    ct:references_section ex:C032R0002Ref0 ;
+    ct:supported_by ex:C032P0015 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C032R0002Ref0 a ct:Reference ;
+    rdfs:label "Section 5" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C032R0003 a ct:Rule ;
+    rdfs:label "Termination — source passage 58" ;
+    ct:kind "TERMINATION" ;
+    ct:references_section ex:C032R0003Ref0 ;
+    ct:supported_by ex:C032P0058 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C032R0003Ref0 a ct:Reference ;
+    rdfs:label "Section 5" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C032R0004 a ct:Rule ;
+    rdfs:label "Conditional Referenced Term — source passage 58" ;
+    ct:kind "CONDITIONAL_REFERENCED_TERM" ;
+    ct:references_section ex:C032R0004Ref0 ;
+    ct:supported_by ex:C032P0058 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C032R0004Ref0 a ct:Reference ;
+    rdfs:label "Section 5" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C032R0005 a ct:Rule ;
+    rdfs:label "Initial Term — source passage 59" ;
+    ct:kind "INITIAL_TERM" ;
+    ct:references_section ex:C032R0005Ref0 ;
+    ct:supported_by ex:C032P0059 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C032R0005Ref0 a ct:Reference ;
+    rdfs:label "Exhibit A" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C032R0006 a ct:Rule ;
+    rdfs:label "Automatic Renewal — source passage 60" ;
+    ct:kind "AUTOMATIC_RENEWAL" ;
+    ct:references_section ex:C032R0006Ref0 ;
+    ct:subject_to ex:C032R0006Condition60 ;
+    ct:supported_by ex:C032P0060 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C032R0006Condition60 a ct:Condition ;
+    ct:description "The Term will automatically renew for successive additional periods of one (1) year each, provided that: (a) Distributor has made all Guaranteed Minimum Purchases and has complied with the marketing requirements under paragraph 4.1(b); (b) the parties have agreed in writing upon the Guaranteed Minimum Purchase amounts and Product price discounts for the next subsequent one (1) year renewal period; (c) neither party provided the other party with notice of such party's intention not to renew this Agreement at least thirty (30) days prior to any year's Expiration Date; and (d) neither party provided the other party with such notice as may be required pursuant to paragraphs 5.2, 5.3 or 5.4." ;
+    ct:supported_by ex:C032P0060 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C032R0006Ref0 a ct:Reference ;
+    rdfs:label "paragraph 4.1(b)" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C032R0007 a ct:Rule ;
+    rdfs:label "Termination — source passage 61" ;
+    ct:kind "TERMINATION" ;
+    ct:supported_by ex:C032P0061 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C032R0008 a ct:Rule ;
+    rdfs:label "Termination — source passage 68" ;
+    ct:kind "TERMINATION" ;
+    ct:supported_by ex:C032P0068 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C032R0009 a ct:Rule ;
+    rdfs:label "Termination — source passage 69" ;
+    ct:kind "TERMINATION" ;
+    ct:supported_by ex:C032P0069 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C032R0010 a ct:Rule ;
+    rdfs:label "Termination — source passage 70" ;
+    ct:kind "TERMINATION" ;
+    ct:supported_by ex:C032P0070 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C032R0011 a ct:Rule ;
+    rdfs:label "Conditional Referenced Term — source passage 70" ;
+    ct:kind "CONDITIONAL_REFERENCED_TERM" ;
+    ct:supported_by ex:C032P0070 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C032R0012 a ct:Rule ;
+    rdfs:label "Termination — source passage 71" ;
+    ct:kind "TERMINATION" ;
+    ct:supported_by ex:C032P0071 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C032R0013 a ct:Rule ;
+    rdfs:label "Termination — source passage 73" ;
+    ct:kind "TERMINATION" ;
+    ct:supported_by ex:C032P0073 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C032R0014 a ct:Rule ;
+    rdfs:label "Optional Renewal — source passage 74" ;
+    ct:kind "OPTIONAL_RENEWAL" ;
+    ct:supported_by ex:C032P0074 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C032R0015 a ct:Rule ;
+    rdfs:label "Termination — source passage 75" ;
+    ct:kind "TERMINATION" ;
+    ct:supported_by ex:C032P0075 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C032R0016 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 79" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:supported_by ex:C032P0079 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C032R0017 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 81" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:references_section ex:C032R0017Ref0 ;
+    ct:supported_by ex:C032P0081 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C032R0017Ref0 a ct:Reference ;
+    rdfs:label "Section 2" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C032R0018 a ct:Rule ;
+    rdfs:label "Termination — source passage 82" ;
+    ct:kind "TERMINATION" ;
+    ct:references_section ex:C032R0018Ref0 ;
+    ct:supported_by ex:C032P0082 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C032R0018Ref0 a ct:Reference ;
+    rdfs:label "Section 5" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C032R0019 a ct:Rule ;
+    rdfs:label "Termination — source passage 104" ;
+    ct:kind "TERMINATION" ;
+    ct:supported_by ex:C032P0104 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C032R0020 a ct:Rule ;
+    rdfs:label "Initial Term — source passage 119" ;
+    ct:kind "INITIAL_TERM" ;
+    ct:references_section ex:C032R0020Ref0 ;
+    ct:supported_by ex:C032P0119 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C032R0020Ref0 a ct:Reference ;
+    rdfs:label "Section A" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C032R0021 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 169" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:supported_by ex:C032P0169 ;
+    meta:review_status "UNREVIEWED" .
+
+ct:Condition a owl:Class ;
+    rdfs:label "Condition" .
+
+ex:C032P0058 a ct:SourcePassage ;
+    ct:end_char 11912 ;
+    ct:exact_text "Section 5. Term and Termination." ;
+    ct:source_path "cuad/EUROPEANMICROHOLDINGSINC_03_06_1998-EX-10.6-DISTRIBUTOR AGREEMENT.txt" ;
+    ct:source_sha256 "d806943ae391f6f5a4d5ee897e2b40107cc948056d0faff9d2e81d231fb059d8" ;
+    ct:start_char 11880 .
+
+ex:C032P0060 a ct:SourcePassage ;
+    ct:end_char 12832 ;
+    ct:exact_text "The Term will automatically renew for successive additional periods of one (1) year each, provided that: (a) Distributor has made all Guaranteed Minimum Purchases and has complied with the marketing requirements under paragraph 4.1(b); (b) the parties have agreed in writing upon the Guaranteed Minimum Purchase amounts and Product price discounts for the next subsequent one (1) year renewal period; (c) neither party provided the other party with notice of such party's intention not to renew this Agreement at least thirty (30) days prior to any year's Expiration Date; and (d) neither party provided the other party with such notice as may be required pursuant to paragraphs 5.2, 5.3 or 5.4." ;
+    ct:source_path "cuad/EUROPEANMICROHOLDINGSINC_03_06_1998-EX-10.6-DISTRIBUTOR AGREEMENT.txt" ;
+    ct:source_sha256 "d806943ae391f6f5a4d5ee897e2b40107cc948056d0faff9d2e81d231fb059d8" ;
+    ct:start_char 12137 .
+
+ex:C032P0070 a ct:SourcePassage ;
+    ct:end_char 15465 ;
+    ct:exact_text "5.3  Failure to Make Guaranteed Minimum Purchases. Upon any failure by      Distributor to make Gross Purchases in sufficient amounts to meet or exceed      the applicable cumulative Guaranteed Minimum Purchases, WGT may, at its      sole option and effective upon notice to Distributor, terminate this      Agreement. Distributor shall pay WGT fifty percent (50%) of the unpaid      balance of cumulative Guaranteed Minimum Purchase amounts as liquidated      damages. The parties acknowledge and agree that it would be difficult or      impossible to calculate WGT's actual damages arising from Distributor's      failure to timely pay all of the Guaranteed Minimum Purchases. Therefore,      the parties have agreed upon the above payment of liquidated damages in      lieu of WGT's claim for actual damages from such breach." ;
+    ct:source_path "cuad/EUROPEANMICROHOLDINGSINC_03_06_1998-EX-10.6-DISTRIBUTOR AGREEMENT.txt" ;
+    ct:source_sha256 "d806943ae391f6f5a4d5ee897e2b40107cc948056d0faff9d2e81d231fb059d8" ;
+    ct:start_char 14637 .
+
+ct:Agreement a owl:Class ;
+    rdfs:label "Agreement" .
+
+ct:Reference a owl:Class ;
+    rdfs:label "Reference" .
+
+ct:SourcePassage a owl:Class ;
+    rdfs:label "SourcePassage" .
+
+ct:Rule a owl:Class ;
+    rdfs:label "Rule" .
+

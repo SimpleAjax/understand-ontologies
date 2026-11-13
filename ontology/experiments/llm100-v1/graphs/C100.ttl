@@ -1,0 +1,407 @@
+@prefix ct: <https://cimulink.local/ontology/contract-terms/0.1#> .
+@prefix ex: <https://cimulink.local/ontology/llm100-v1/> .
+@prefix meta: <https://cimulink.local/ontology/extraction#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ct: a owl:Ontology ;
+    rdfs:comment "Partial five-contract development sample. No claim of complete contract coverage or legal correctness." .
+
+ct:agreement_effective_from a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:applies_within a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:calendar_date_status a owl:DatatypeProperty .
+
+ct:coverage a owl:DatatypeProperty .
+
+ct:description a owl:DatatypeProperty .
+
+ct:duration a owl:DatatypeProperty .
+
+ct:duration_status a owl:DatatypeProperty .
+
+ct:end_char a owl:DatatypeProperty .
+
+ct:end_date_status a owl:DatatypeProperty .
+
+ct:ends_on_event a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:exact_text a owl:DatatypeProperty .
+
+ct:has_party a owl:ObjectProperty ;
+    rdfs:domain ct:Agreement ;
+    rdfs:range ct:Party .
+
+ct:has_rule a owl:ObjectProperty ;
+    rdfs:domain ct:Agreement ;
+    rdfs:range ct:Rule .
+
+ct:kind a owl:DatatypeProperty .
+
+ct:notice_actor a owl:DatatypeProperty .
+
+ct:notice_form a owl:DatatypeProperty .
+
+ct:notice_period_status a owl:DatatypeProperty .
+
+ct:qualifies a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Rule .
+
+ct:references_section a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:renewal_count a owl:DatatypeProperty .
+
+ct:resolution_status a owl:DatatypeProperty .
+
+ct:resolved_to a owl:ObjectProperty ;
+    rdfs:domain ct:Reference ;
+    rdfs:range ct:SourcePassage .
+
+ct:source_path a owl:DatatypeProperty .
+
+ct:source_sha256 a owl:DatatypeProperty .
+
+ct:start_char a owl:DatatypeProperty .
+
+ct:starts_from a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:stated_end_date a owl:DatatypeProperty .
+
+ct:subject_to a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Condition .
+
+ct:supported_by a owl:ObjectProperty ;
+    rdfs:range ct:SourcePassage .
+
+ct:termination_notice a owl:DatatypeProperty .
+
+ex:C100 a ct:Agreement ;
+    rdfs:label "ZEBRATECHNOLOGIESCORP_04_16_2014-EX-10.1-INTELLECTUAL PROPERTY AGREEMENT.txt" ;
+    ct:coverage "LOCAL_LLM_PROPOSED_PARTIAL; NOT_HUMAN_REVIEWED" ;
+    ct:has_rule ex:C100R0001,
+        ex:C100R0002,
+        ex:C100R0003,
+        ex:C100R0004,
+        ex:C100R0005,
+        ex:C100R0006,
+        ex:C100R0007,
+        ex:C100R0008,
+        ex:C100R0009 ;
+    ct:source_path "cuad/ZEBRATECHNOLOGIESCORP_04_16_2014-EX-10.1-INTELLECTUAL PROPERTY AGREEMENT.txt" ;
+    ct:source_sha256 "7531749b5e46a8c1523b8469a1d1d629a2447c354f97bb9bf850fe683d530443" ;
+    meta:model_digest "0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0" .
+
+ct:Party a owl:Class ;
+    rdfs:label "Party" .
+
+ex:C100R0001 a ct:Rule ;
+    rdfs:label "Initial Term — source passage 185" ;
+    ct:kind "INITIAL_TERM" ;
+    ct:references_section ex:C100R0001Ref0 ;
+    ct:subject_to ex:C100R0001Condition185 ;
+    ct:supported_by ex:C100P0185 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C100R0001Condition185 a ct:Condition ;
+    ct:description "(i) License Grant. Effective as of the Initial Closing Date, the Seller hereby grants (and will cause each other Seller Party to grant, following each applicable Closing Date, to the Purchaser Licensees) a perpetual (unless terminated in accordance with Section 4.2(ii)(c)), fully paid-up, royalty-free, worldwide, non-transferable (except as set forth herein), non-exclusive license to use any and all Licensed Trademarks in the Business (including with respect to the Purchaser Licensed Activities), including with respect to all Derivative Works and natural evolutions of such Business, in a manner that is the same or substantially similar to the manner in which the Seller Entities have used the Licensed Trademarks in the Business." ;
+    ct:supported_by ex:C100P0185 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C100R0001Ref0 a ct:Reference ;
+    rdfs:label "Section 4.2(ii)(c)" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C100R0002 a ct:Rule ;
+    rdfs:label "Termination — source passage 206" ;
+    ct:kind "TERMINATION" ;
+    ct:subject_to ex:C100R0002Condition206 ;
+    ct:supported_by ex:C100P0206 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C100R0002Condition206 a ct:Condition ;
+    ct:description "(a) Termination of Third Party Contracts. The license rights granted to the Purchaser Licensees under any Licensed IP that constitutes Third-Party Intellectual Property, if any, are subject to the terms and conditions of the Contracts applicable to such Licensed IP, and will terminate upon (i) termination of such Contracts, or (ii) termination of the Seller Parties' right to sublicense the Purchaser Licensees under such Contracts, in each case by the applicable third party licensor or sublicensor, as applicable (and not by a Seller Party)." ;
+    ct:supported_by ex:C100P0206 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C100R0003 a ct:Rule ;
+    rdfs:label "Initial Term — source passage 238" ;
+    ct:kind "INITIAL_TERM" ;
+    ct:references_section ex:C100R0003Ref0,
+        ex:C100R0003Ref1,
+        ex:C100R0003Ref2 ;
+    ct:subject_to ex:C100R0003Condition238 ;
+    ct:supported_by ex:C100P0238 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C100R0003Condition238 a ct:Condition ;
+    ct:description "Section 4.1 Term. The term of this IP Agreement shall be from the Effective Date until all of the Intellectual Property licensed hereunder is in the public domain (provided, however, that in such event the representations and warranties in Article III shall survive (and terminate) in accordance with the Acquisition Agreement) or this IP Agreement is terminated pursuant to Section 4.3. This IP Agreement shall not expire or terminate for any other reason (even in the event of a material breach)." ;
+    ct:supported_by ex:C100P0238 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C100R0003Ref0 a ct:Reference ;
+    rdfs:label "Section 4.1" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C100R0003Ref1 a ct:Reference ;
+    rdfs:label "Article III" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C100R0003Ref2 a ct:Reference ;
+    rdfs:label "Section 4.3" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C100R0004 a ct:Rule ;
+    rdfs:label "Conditional Referenced Term — source passage 238" ;
+    ct:kind "CONDITIONAL_REFERENCED_TERM" ;
+    ct:references_section ex:C100R0004Ref0,
+        ex:C100R0004Ref1,
+        ex:C100R0004Ref2 ;
+    ct:subject_to ex:C100R0004Condition238 ;
+    ct:supported_by ex:C100P0238 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C100R0004Condition238 a ct:Condition ;
+    ct:description "Section 4.1 Term. The term of this IP Agreement shall be from the Effective Date until all of the Intellectual Property licensed hereunder is in the public domain (provided, however, that in such event the representations and warranties in Article III shall survive (and terminate) in accordance with the Acquisition Agreement) or this IP Agreement is terminated pursuant to Section 4.3. This IP Agreement shall not expire or terminate for any other reason (even in the event of a material breach)." ;
+    ct:supported_by ex:C100P0238 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C100R0004Ref0 a ct:Reference ;
+    rdfs:label "Section 4.1" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C100R0004Ref1 a ct:Reference ;
+    rdfs:label "Article III" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C100R0004Ref2 a ct:Reference ;
+    rdfs:label "Section 4.3" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C100R0005 a ct:Rule ;
+    rdfs:label "Termination — source passage 239" ;
+    ct:kind "TERMINATION" ;
+    ct:references_section ex:C100R0005Ref0,
+        ex:C100R0005Ref1 ;
+    ct:subject_to ex:C100R0005Condition239 ;
+    ct:supported_by ex:C100P0239 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C100R0005Condition239 a ct:Condition ;
+    ct:description "Section 4.2 Irrevocability of Licenses. Each of the parties acknowledges and agrees that the licenses granted hereunder (i) are irrevocable and (ii) may not be terminated for any reason (even in the event of a material breach), except that (a) with respect to Licensed IP that constitutes Third-Party Intellectual Property, solely as provided in Section 2.4(a), (b) with respect to a particular Patent licensed under this IP Agreement, the license granted to such Patent shall automatically terminate upon the expiration of the statutory term (including all extensions   32" ;
+    ct:supported_by ex:C100P0239 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C100R0005Ref0 a ct:Reference ;
+    rdfs:label "Section 4.2" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C100R0005Ref1 a ct:Reference ;
+    rdfs:label "Section 2.4(a)" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C100R0006 a ct:Rule ;
+    rdfs:label "Termination — source passage 240" ;
+    ct:kind "TERMINATION" ;
+    ct:references_section ex:C100R0006Ref0 ;
+    ct:subject_to ex:C100R0006Condition240 ;
+    ct:supported_by ex:C100P0240 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C100R0006Condition240 a ct:Condition ;
+    ct:description "and renewals) of such Patent, and (c) Seller may terminate the license granted to the Purchaser Licensees pursuant to Section 2.2(c) (and no other provision of this IP Agreement), following the Initial Closing Date and upon prior written notice to Purchaser, in the event Purchaser materially breaches Section 2.2(c) and fails to cure such material breach within one hundred twenty (120) days after Purchaser's receipt of written notice from Seller (which such notice shall contain a reasonable description of such material breach and a statement of Seller's intent to terminate the license granted to the Purchaser Licensees pursuant to Section 2.2(c) if such material breach is not cured within such one hundred twenty (120) day period). Nothing herein shall preclude any party from seeking damages or other remedies at law or in equity (other than termination of this IP Agreement or any license to any Intellectual Property granted under this IP Agreement) for any breach hereof." ;
+    ct:supported_by ex:C100P0240 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C100R0006Ref0 a ct:Reference ;
+    rdfs:label "Section 2.2(c)" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C100R0007 a ct:Rule ;
+    rdfs:label "Conditional Referenced Term — source passage 240" ;
+    ct:kind "CONDITIONAL_REFERENCED_TERM" ;
+    ct:references_section ex:C100R0007Ref0 ;
+    ct:subject_to ex:C100R0007Condition240 ;
+    ct:supported_by ex:C100P0240 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C100R0007Condition240 a ct:Condition ;
+    ct:description "and renewals) of such Patent, and (c) Seller may terminate the license granted to the Purchaser Licensees pursuant to Section 2.2(c) (and no other provision of this IP Agreement), following the Initial Closing Date and upon prior written notice to Purchaser, in the event Purchaser materially breaches Section 2.2(c) and fails to cure such material breach within one hundred twenty (120) days after Purchaser's receipt of written notice from Seller (which such notice shall contain a reasonable description of such material breach and a statement of Seller's intent to terminate the license granted to the Purchaser Licensees pursuant to Section 2.2(c) if such material breach is not cured within such one hundred twenty (120) day period). Nothing herein shall preclude any party from seeking damages or other remedies at law or in equity (other than termination of this IP Agreement or any license to any Intellectual Property granted under this IP Agreement) for any breach hereof." ;
+    ct:supported_by ex:C100P0240 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C100R0007Ref0 a ct:Reference ;
+    rdfs:label "Section 2.2(c)" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C100R0008 a ct:Rule ;
+    rdfs:label "Conditional Referenced Term — source passage 241" ;
+    ct:kind "CONDITIONAL_REFERENCED_TERM" ;
+    ct:references_section ex:C100R0008Ref0 ;
+    ct:subject_to ex:C100R0008Condition241 ;
+    ct:supported_by ex:C100P0241 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C100R0008Condition241 a ct:Condition ;
+    ct:description "Section 4.3 Termination of Agreement. This IP Agreement will terminate automatically and without need for further action by either party in the event that the Acquisition Agreement is terminated in accordance with its terms." ;
+    ct:supported_by ex:C100P0241 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C100R0008Ref0 a ct:Reference ;
+    rdfs:label "Section 4.3" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C100R0009 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 242" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:references_section ex:C100R0009Ref0,
+        ex:C100R0009Ref1,
+        ex:C100R0009Ref10,
+        ex:C100R0009Ref11,
+        ex:C100R0009Ref12,
+        ex:C100R0009Ref2,
+        ex:C100R0009Ref3,
+        ex:C100R0009Ref4,
+        ex:C100R0009Ref5,
+        ex:C100R0009Ref6,
+        ex:C100R0009Ref7,
+        ex:C100R0009Ref8,
+        ex:C100R0009Ref9 ;
+    ct:subject_to ex:C100R0009Condition242 ;
+    ct:supported_by ex:C100P0242 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C100R0009Condition242 a ct:Condition ;
+    ct:description "Section 4.4 Effect of Termination. Upon termination of this IP Agreement pursuant to Section 4.3, this IP Agreement and the rights and obligations of the parties under this IP Agreement, including any obligation to make any assignment or grant any license hereunder, automatically end without any liability against any party or its Affiliates, except as otherwise provided in the Acquisition Agreement and except that the provisions of this Section 4.4, Article V, Section 6.1, Section 6.2, Section 6.6, Section 6.7, Section 6.8, Section 6.9, Section 6.10, Section 6.11, Section 6.12, and Section 6.13 will remain in force and survive any termination of this IP Agreement." ;
+    ct:supported_by ex:C100P0242 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C100R0009Ref0 a ct:Reference ;
+    rdfs:label "Section 4.4" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C100R0009Ref1 a ct:Reference ;
+    rdfs:label "Section 4.3" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C100R0009Ref10 a ct:Reference ;
+    rdfs:label "Section 6.11" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C100R0009Ref11 a ct:Reference ;
+    rdfs:label "Section 6.12" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C100R0009Ref12 a ct:Reference ;
+    rdfs:label "Section 6.13" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C100R0009Ref2 a ct:Reference ;
+    rdfs:label "Article V" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C100R0009Ref3 a ct:Reference ;
+    rdfs:label "Section 6.1" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C100R0009Ref4 a ct:Reference ;
+    rdfs:label "Section 6.2" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C100R0009Ref5 a ct:Reference ;
+    rdfs:label "Section 6.6" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C100R0009Ref6 a ct:Reference ;
+    rdfs:label "Section 6.7" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C100R0009Ref7 a ct:Reference ;
+    rdfs:label "Section 6.8" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C100R0009Ref8 a ct:Reference ;
+    rdfs:label "Section 6.9" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C100R0009Ref9 a ct:Reference ;
+    rdfs:label "Section 6.10" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C100P0185 a ct:SourcePassage ;
+    ct:end_char 65943 ;
+    ct:exact_text "(i) License Grant. Effective as of the Initial Closing Date, the Seller hereby grants (and will cause each other Seller Party to grant, following each applicable Closing Date, to the Purchaser Licensees) a perpetual (unless terminated in accordance with Section 4.2(ii)(c)), fully paid-up, royalty-free, worldwide, non-transferable (except as set forth herein), non-exclusive license to use any and all Licensed Trademarks in the Business (including with respect to the Purchaser Licensed Activities), including with respect to all Derivative Works and natural evolutions of such Business, in a manner that is the same or substantially similar to the manner in which the Seller Entities have used the Licensed Trademarks in the Business." ;
+    ct:source_path "cuad/ZEBRATECHNOLOGIESCORP_04_16_2014-EX-10.1-INTELLECTUAL PROPERTY AGREEMENT.txt" ;
+    ct:source_sha256 "7531749b5e46a8c1523b8469a1d1d629a2447c354f97bb9bf850fe683d530443" ;
+    ct:start_char 65206 .
+
+ex:C100P0206 a ct:SourcePassage ;
+    ct:end_char 78471 ;
+    ct:exact_text "(a) Termination of Third Party Contracts. The license rights granted to the Purchaser Licensees under any Licensed IP that constitutes Third-Party Intellectual Property, if any, are subject to the terms and conditions of the Contracts applicable to such Licensed IP, and will terminate upon (i) termination of such Contracts, or (ii) termination of the Seller Parties' right to sublicense the Purchaser Licensees under such Contracts, in each case by the applicable third party licensor or sublicensor, as applicable (and not by a Seller Party)." ;
+    ct:source_path "cuad/ZEBRATECHNOLOGIESCORP_04_16_2014-EX-10.1-INTELLECTUAL PROPERTY AGREEMENT.txt" ;
+    ct:source_sha256 "7531749b5e46a8c1523b8469a1d1d629a2447c354f97bb9bf850fe683d530443" ;
+    ct:start_char 77926 .
+
+ex:C100P0239 a ct:SourcePassage ;
+    ct:end_char 103755 ;
+    ct:exact_text "Section 4.2 Irrevocability of Licenses. Each of the parties acknowledges and agrees that the licenses granted hereunder (i) are irrevocable and (ii) may not be terminated for any reason (even in the event of a material breach), except that (a) with respect to Licensed IP that constitutes Third-Party Intellectual Property, solely as provided in Section 2.4(a), (b) with respect to a particular Patent licensed under this IP Agreement, the license granted to such Patent shall automatically terminate upon the expiration of the statutory term (including all extensions   32" ;
+    ct:source_path "cuad/ZEBRATECHNOLOGIESCORP_04_16_2014-EX-10.1-INTELLECTUAL PROPERTY AGREEMENT.txt" ;
+    ct:source_sha256 "7531749b5e46a8c1523b8469a1d1d629a2447c354f97bb9bf850fe683d530443" ;
+    ct:start_char 103182 .
+
+ex:C100P0241 a ct:SourcePassage ;
+    ct:end_char 104970 ;
+    ct:exact_text "Section 4.3 Termination of Agreement. This IP Agreement will terminate automatically and without need for further action by either party in the event that the Acquisition Agreement is terminated in accordance with its terms." ;
+    ct:source_path "cuad/ZEBRATECHNOLOGIESCORP_04_16_2014-EX-10.1-INTELLECTUAL PROPERTY AGREEMENT.txt" ;
+    ct:source_sha256 "7531749b5e46a8c1523b8469a1d1d629a2447c354f97bb9bf850fe683d530443" ;
+    ct:start_char 104746 .
+
+ex:C100P0242 a ct:SourcePassage ;
+    ct:end_char 105644 ;
+    ct:exact_text "Section 4.4 Effect of Termination. Upon termination of this IP Agreement pursuant to Section 4.3, this IP Agreement and the rights and obligations of the parties under this IP Agreement, including any obligation to make any assignment or grant any license hereunder, automatically end without any liability against any party or its Affiliates, except as otherwise provided in the Acquisition Agreement and except that the provisions of this Section 4.4, Article V, Section 6.1, Section 6.2, Section 6.6, Section 6.7, Section 6.8, Section 6.9, Section 6.10, Section 6.11, Section 6.12, and Section 6.13 will remain in force and survive any termination of this IP Agreement." ;
+    ct:source_path "cuad/ZEBRATECHNOLOGIESCORP_04_16_2014-EX-10.1-INTELLECTUAL PROPERTY AGREEMENT.txt" ;
+    ct:source_sha256 "7531749b5e46a8c1523b8469a1d1d629a2447c354f97bb9bf850fe683d530443" ;
+    ct:start_char 104972 .
+
+ct:Agreement a owl:Class ;
+    rdfs:label "Agreement" .
+
+ex:C100P0238 a ct:SourcePassage ;
+    ct:end_char 103180 ;
+    ct:exact_text "Section 4.1 Term. The term of this IP Agreement shall be from the Effective Date until all of the Intellectual Property licensed hereunder is in the public domain (provided, however, that in such event the representations and warranties in Article III shall survive (and terminate) in accordance with the Acquisition Agreement) or this IP Agreement is terminated pursuant to Section 4.3. This IP Agreement shall not expire or terminate for any other reason (even in the event of a material breach)." ;
+    ct:source_path "cuad/ZEBRATECHNOLOGIESCORP_04_16_2014-EX-10.1-INTELLECTUAL PROPERTY AGREEMENT.txt" ;
+    ct:source_sha256 "7531749b5e46a8c1523b8469a1d1d629a2447c354f97bb9bf850fe683d530443" ;
+    ct:start_char 102682 .
+
+ex:C100P0240 a ct:SourcePassage ;
+    ct:end_char 104744 ;
+    ct:exact_text "and renewals) of such Patent, and (c) Seller may terminate the license granted to the Purchaser Licensees pursuant to Section 2.2(c) (and no other provision of this IP Agreement), following the Initial Closing Date and upon prior written notice to Purchaser, in the event Purchaser materially breaches Section 2.2(c) and fails to cure such material breach within one hundred twenty (120) days after Purchaser's receipt of written notice from Seller (which such notice shall contain a reasonable description of such material breach and a statement of Seller's intent to terminate the license granted to the Purchaser Licensees pursuant to Section 2.2(c) if such material breach is not cured within such one hundred twenty (120) day period). Nothing herein shall preclude any party from seeking damages or other remedies at law or in equity (other than termination of this IP Agreement or any license to any Intellectual Property granted under this IP Agreement) for any breach hereof." ;
+    ct:source_path "cuad/ZEBRATECHNOLOGIESCORP_04_16_2014-EX-10.1-INTELLECTUAL PROPERTY AGREEMENT.txt" ;
+    ct:source_sha256 "7531749b5e46a8c1523b8469a1d1d629a2447c354f97bb9bf850fe683d530443" ;
+    ct:start_char 103761 .
+
+ct:SourcePassage a owl:Class ;
+    rdfs:label "SourcePassage" .
+
+ct:Condition a owl:Class ;
+    rdfs:label "Condition" .
+
+ct:Rule a owl:Class ;
+    rdfs:label "Rule" .
+
+ct:Reference a owl:Class ;
+    rdfs:label "Reference" .
+

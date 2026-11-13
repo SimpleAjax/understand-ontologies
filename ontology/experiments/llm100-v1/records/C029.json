@@ -1,0 +1,259 @@
+{
+  "document_id": "C029",
+  "file_path": "cuad/DigitalCinemaDestinationsCorp_20111220_S-1_EX-10.10_7346719_EX-10.10_Affiliate Agreement.txt",
+  "model_digest": "0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0",
+  "rules": [
+    {
+      "passage_id": 9,
+      "kind": "INITIAL_TERM",
+      "label": "Initial Term — source passage 9",
+      "condition_ids": [],
+      "reference_labels": [
+        "Section 3.10(a)",
+        "Section 6.1",
+        "Section 3.2(a)",
+        "Section 3.10(b)",
+        "Section 11.2",
+        "Section 8.1",
+        "Exhibit A",
+        "Section 5.3(a)",
+        "Section 7.2",
+        "Section 2.3",
+        "Exhibit C",
+        "Section 12.1"
+      ],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 24,
+      "kind": "POST_EXPIRY_CONTINUATION",
+      "label": "Post Expiry Continuation — source passage 24",
+      "condition_ids": [],
+      "reference_labels": [
+        "Section 2.3"
+      ],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 73,
+      "kind": "TERMINATION",
+      "label": "Termination — source passage 73",
+      "condition_ids": [
+        73
+      ],
+      "reference_labels": [],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 82,
+      "kind": "TERMINATION",
+      "label": "Termination — source passage 82",
+      "condition_ids": [
+        82
+      ],
+      "reference_labels": [],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 82,
+      "kind": "CONDITIONAL_REFERENCED_TERM",
+      "label": "Conditional Referenced Term — source passage 82",
+      "condition_ids": [
+        82
+      ],
+      "reference_labels": [],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 94,
+      "kind": "INITIAL_TERM",
+      "label": "Initial Term — source passage 94",
+      "condition_ids": [
+        94
+      ],
+      "reference_labels": [
+        "ARTICLE VIII",
+        "Section 8.1"
+      ],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 94,
+      "kind": "OPTIONAL_RENEWAL",
+      "label": "Optional Renewal — source passage 94",
+      "condition_ids": [
+        94
+      ],
+      "reference_labels": [
+        "ARTICLE VIII",
+        "Section 8.1"
+      ],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 95,
+      "kind": "OPTIONAL_RENEWAL",
+      "label": "Optional Renewal — source passage 95",
+      "condition_ids": [
+        95
+      ],
+      "reference_labels": [
+        "Section 8.2"
+      ],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 98,
+      "kind": "TERMINATION",
+      "label": "Termination — source passage 98",
+      "condition_ids": [
+        98
+      ],
+      "reference_labels": [
+        "Section 14.8"
+      ],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 98,
+      "kind": "CONDITIONAL_REFERENCED_TERM",
+      "label": "Conditional Referenced Term — source passage 98",
+      "condition_ids": [
+        98
+      ],
+      "reference_labels": [
+        "Section 14.8"
+      ],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 99,
+      "kind": "TERMINATION",
+      "label": "Termination — source passage 99",
+      "condition_ids": [
+        99
+      ],
+      "reference_labels": [
+        "Section 8.3",
+        "Exhibit B",
+        "Section 8.4",
+        "Section 8.5"
+      ],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 99,
+      "kind": "POST_EXPIRY_CONTINUATION",
+      "label": "Post Expiry Continuation — source passage 99",
+      "condition_ids": [
+        99
+      ],
+      "reference_labels": [
+        "Section 8.3",
+        "Exhibit B",
+        "Section 8.4",
+        "Section 8.5"
+      ],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 100,
+      "kind": "POST_EXPIRY_CONTINUATION",
+      "label": "Post Expiry Continuation — source passage 100",
+      "condition_ids": [
+        100
+      ],
+      "reference_labels": [
+        "Section 2.3",
+        "Section 8.6"
+      ],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 100,
+      "kind": "TERMINATION",
+      "label": "Termination — source passage 100",
+      "condition_ids": [
+        100
+      ],
+      "reference_labels": [
+        "Section 2.3",
+        "Section 8.6"
+      ],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 101,
+      "kind": "POST_EXPIRY_CONTINUATION",
+      "label": "Post Expiry Continuation — source passage 101",
+      "condition_ids": [],
+      "reference_labels": [],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 113,
+      "kind": "TERMINATION",
+      "label": "Termination — source passage 113",
+      "condition_ids": [
+        113
+      ],
+      "reference_labels": [
+        "Section 10.3 (a)",
+        "Article X",
+        "Section 10.3"
+      ],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 113,
+      "kind": "POST_EXPIRY_CONTINUATION",
+      "label": "Post Expiry Continuation — source passage 113",
+      "condition_ids": [
+        113
+      ],
+      "reference_labels": [
+        "Section 10.3 (a)",
+        "Article X",
+        "Section 10.3"
+      ],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    }
+  ],
+  "rejected_rules": [],
+  "review_status": "UNREVIEWED",
+  "coverage": "Lexically selected source windows; completeness not guaranteed."
+}

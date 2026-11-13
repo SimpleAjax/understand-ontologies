@@ -1,0 +1,303 @@
+@prefix ct: <https://cimulink.local/ontology/contract-terms/0.1#> .
+@prefix ex: <https://cimulink.local/ontology/llm100-v1/> .
+@prefix meta: <https://cimulink.local/ontology/extraction#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ct: a owl:Ontology ;
+    rdfs:comment "Partial five-contract development sample. No claim of complete contract coverage or legal correctness." .
+
+ct:agreement_effective_from a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:applies_within a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:calendar_date_status a owl:DatatypeProperty .
+
+ct:coverage a owl:DatatypeProperty .
+
+ct:description a owl:DatatypeProperty .
+
+ct:duration a owl:DatatypeProperty .
+
+ct:duration_status a owl:DatatypeProperty .
+
+ct:end_char a owl:DatatypeProperty .
+
+ct:end_date_status a owl:DatatypeProperty .
+
+ct:ends_on_event a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:exact_text a owl:DatatypeProperty .
+
+ct:has_party a owl:ObjectProperty ;
+    rdfs:domain ct:Agreement ;
+    rdfs:range ct:Party .
+
+ct:has_rule a owl:ObjectProperty ;
+    rdfs:domain ct:Agreement ;
+    rdfs:range ct:Rule .
+
+ct:kind a owl:DatatypeProperty .
+
+ct:notice_actor a owl:DatatypeProperty .
+
+ct:notice_form a owl:DatatypeProperty .
+
+ct:notice_period_status a owl:DatatypeProperty .
+
+ct:qualifies a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Rule .
+
+ct:references_section a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:renewal_count a owl:DatatypeProperty .
+
+ct:resolution_status a owl:DatatypeProperty .
+
+ct:resolved_to a owl:ObjectProperty ;
+    rdfs:domain ct:Reference ;
+    rdfs:range ct:SourcePassage .
+
+ct:source_path a owl:DatatypeProperty .
+
+ct:source_sha256 a owl:DatatypeProperty .
+
+ct:start_char a owl:DatatypeProperty .
+
+ct:starts_from a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:stated_end_date a owl:DatatypeProperty .
+
+ct:subject_to a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Condition .
+
+ct:supported_by a owl:ObjectProperty ;
+    rdfs:range ct:SourcePassage .
+
+ct:termination_notice a owl:DatatypeProperty .
+
+ex:C096 a ct:Agreement ;
+    rdfs:label "WestPharmaceuticalServicesInc_20200116_8-K_EX-10.1_11947529_EX-10.1_Supply Agreement.txt" ;
+    ct:coverage "LOCAL_LLM_PROPOSED_PARTIAL; NOT_HUMAN_REVIEWED" ;
+    ct:has_rule ex:C096R0001,
+        ex:C096R0002,
+        ex:C096R0003,
+        ex:C096R0004,
+        ex:C096R0005,
+        ex:C096R0006,
+        ex:C096R0007,
+        ex:C096R0008,
+        ex:C096R0009,
+        ex:C096R0010,
+        ex:C096R0011 ;
+    ct:source_path "cuad/WestPharmaceuticalServicesInc_20200116_8-K_EX-10.1_11947529_EX-10.1_Supply Agreement.txt" ;
+    ct:source_sha256 "7c991c9f55f81fd83a885f40cf89eb81f276897ee3ff068f0b7d689b6f88d495" ;
+    meta:model_digest "0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0" .
+
+ct:Party a owl:Class ;
+    rdfs:label "Party" .
+
+ex:C096P0054 a ct:SourcePassage ;
+    ct:end_char 10345 ;
+    ct:exact_text "Termination Date: December 31, 2023" ;
+    ct:source_path "cuad/WestPharmaceuticalServicesInc_20200116_8-K_EX-10.1_11947529_EX-10.1_Supply Agreement.txt" ;
+    ct:source_sha256 "7c991c9f55f81fd83a885f40cf89eb81f276897ee3ff068f0b7d689b6f88d495" ;
+    ct:start_char 10310 .
+
+ex:C096P0101 a ct:SourcePassage ;
+    ct:end_char 23163 ;
+    ct:exact_text "TERMINATION" ;
+    ct:source_path "cuad/WestPharmaceuticalServicesInc_20200116_8-K_EX-10.1_11947529_EX-10.1_Supply Agreement.txt" ;
+    ct:source_sha256 "7c991c9f55f81fd83a885f40cf89eb81f276897ee3ff068f0b7d689b6f88d495" ;
+    ct:start_char 23152 .
+
+ex:C096P0252 a ct:SourcePassage ;
+    ct:end_char 70572 ;
+    ct:exact_text "10. Failure by Buyer to pay on the due date shall make all sums owing by Buyer to EM on any account whatsoever immediately and automatically due and payable, without prejudice to EM's right to charge automatically and without giving any notice the statutory late payment interest rate as defined in applicable legislation on combating late payment in commercial transactions." ;
+    ct:source_path "cuad/WestPharmaceuticalServicesInc_20200116_8-K_EX-10.1_11947529_EX-10.1_Supply Agreement.txt" ;
+    ct:source_sha256 "7c991c9f55f81fd83a885f40cf89eb81f276897ee3ff068f0b7d689b6f88d495" ;
+    ct:start_char 70197 .
+
+ex:C096P0269 a ct:SourcePassage ;
+    ct:end_char 81709 ;
+    ct:exact_text "then the other party may (but is not obliged to) terminate this Agreement forthwith upon notice to the Affected Party. Such termination is without prejudice to the rights and obligations of the parties that have accrued up to and including the date of termination. As used above, \"Change of Control\" means any of the following: (i) any transaction, or series of transactions, that would result in the transfer of at least fifty percent (50%) of the equity interest in a party (or of at least fifty percent (50%) of the equity interest in any business entity that owns or controls, directly or indirectly, at least fifty percent (50%) of the equity interest in a party (\"Party's Parent\")) to a single transferee or multiple transferees under common control; (ii) any transaction that would result in a Party's (or Party's Parent's) merging with one or more other entities." ;
+    ct:source_path "cuad/WestPharmaceuticalServicesInc_20200116_8-K_EX-10.1_11947529_EX-10.1_Supply Agreement.txt" ;
+    ct:source_sha256 "7c991c9f55f81fd83a885f40cf89eb81f276897ee3ff068f0b7d689b6f88d495" ;
+    ct:start_char 80838 .
+
+ex:C096R0001 a ct:Rule ;
+    rdfs:label "Termination — source passage 54" ;
+    ct:kind "TERMINATION" ;
+    ct:supported_by ex:C096P0054 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C096R0002 a ct:Rule ;
+    rdfs:label "Conditional Referenced Term — source passage 81" ;
+    ct:kind "CONDITIONAL_REFERENCED_TERM" ;
+    ct:subject_to ex:C096R0002Condition81 ;
+    ct:supported_by ex:C096P0081 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C096R0002Condition81 a ct:Condition ;
+    ct:description "It is understood and agreed that the basis for this Agreement is an extraordinary level of mutual trust and confidence between the parties, not only in matters of price, quality, and service relating to the quantities of Product purchased and sold hereunder, but also with respect to the accommodation of changes that may develop in the business environment or the pursuit of such mutual undertakings as may benefit either or both of the parties to this Agreement. Moreover, the terms relating to quantity and price presume the continuation of economic conditions and trends now prevailing, including but not limited to levels of industrial production, tire demand, labor rates, energy costs, and foreign exchange relationships. In the event that, in the view of either party, a significant change of any kind does occur which materially and significantly alters the value received by either party in this transaction, that party may, upon written notice of its election and reasons therefor, request that this Agreement be renegotiated and the other party will be obligated to enter into the renegotiation unless the request is formally withdrawn. Neither party shall unreasonably request such renegotiation" ;
+    ct:supported_by ex:C096P0081 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C096R0003 a ct:Rule ;
+    rdfs:label "Termination — source passage 88" ;
+    ct:kind "TERMINATION" ;
+    ct:subject_to ex:C096R0003Condition88 ;
+    ct:supported_by ex:C096P0088 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C096R0003Condition88 a ct:Condition ;
+    ct:description "Notwithstanding anything to the contrary in Attachments A, G or H, in connection with any Change in Circumstances (as defined below), and without limiting Seller's/ExxonMobil Selling Affiliate's other rights under this Agreement or applicable law, Seller/ExxonMobil Selling Affiliates shall have the right: (i) only if required to enable Seller/ExxonMobil Selling Affiliate to comply with applicable laws and regulations, to terminate this Agreement and accelerate all amounts due from Buyer hereunder, making them immediately payable (ii) to modify the payment terms hereunder; and/or (iii) to require that Buyer/Buyer Affiliates pay in advance for shipments hereunder." ;
+    ct:supported_by ex:C096P0088 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C096R0004 a ct:Rule ;
+    rdfs:label "Conditional Referenced Term — source passage 88" ;
+    ct:kind "CONDITIONAL_REFERENCED_TERM" ;
+    ct:subject_to ex:C096R0004Condition88 ;
+    ct:supported_by ex:C096P0088 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C096R0004Condition88 a ct:Condition ;
+    ct:description "Notwithstanding anything to the contrary in Attachments A, G or H, in connection with any Change in Circumstances (as defined below), and without limiting Seller's/ExxonMobil Selling Affiliate's other rights under this Agreement or applicable law, Seller/ExxonMobil Selling Affiliates shall have the right: (i) only if required to enable Seller/ExxonMobil Selling Affiliate to comply with applicable laws and regulations, to terminate this Agreement and accelerate all amounts due from Buyer hereunder, making them immediately payable (ii) to modify the payment terms hereunder; and/or (iii) to require that Buyer/Buyer Affiliates pay in advance for shipments hereunder." ;
+    ct:supported_by ex:C096P0088 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C096R0005 a ct:Rule ;
+    rdfs:label "Termination — source passage 101" ;
+    ct:kind "TERMINATION" ;
+    ct:supported_by ex:C096P0101 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C096R0006 a ct:Rule ;
+    rdfs:label "Termination — source passage 128" ;
+    ct:kind "TERMINATION" ;
+    ct:subject_to ex:C096R0006Condition128 ;
+    ct:supported_by ex:C096P0128 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C096R0006Condition128 a ct:Condition ;
+    ct:description "6. CHANGE IN CIRCUMSTANCES In connection with any Change in Circumstances (as defined below), and without limiting Seller's other rights under this Agreement or applicable law, Seller shall have the right: (i) to terminate this Agreement and accelerate all amounts due from Buyer hereunder, making them immediately payable; (ii) to modify the payment terms hereunder; and/or (iii) to require Buyer to pay in advance for shipments hereunder." ;
+    ct:supported_by ex:C096P0128 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C096R0007 a ct:Rule ;
+    rdfs:label "Conditional Referenced Term — source passage 128" ;
+    ct:kind "CONDITIONAL_REFERENCED_TERM" ;
+    ct:subject_to ex:C096R0007Condition128 ;
+    ct:supported_by ex:C096P0128 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C096R0007Condition128 a ct:Condition ;
+    ct:description "6. CHANGE IN CIRCUMSTANCES In connection with any Change in Circumstances (as defined below), and without limiting Seller's other rights under this Agreement or applicable law, Seller shall have the right: (i) to terminate this Agreement and accelerate all amounts due from Buyer hereunder, making them immediately payable; (ii) to modify the payment terms hereunder; and/or (iii) to require Buyer to pay in advance for shipments hereunder." ;
+    ct:supported_by ex:C096P0128 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C096R0008 a ct:Rule ;
+    rdfs:label "Termination — source passage 146" ;
+    ct:kind "TERMINATION" ;
+    ct:subject_to ex:C096R0008Condition146 ;
+    ct:supported_by ex:C096P0146 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C096R0008Condition146 a ct:Condition ;
+    ct:description "17. AMENDMENT; CANCELLATION No modification of this Agreement shall be of any force or effect unless such modification is in writing, expressly designated as an amendment hereto and signed by the parties' duly authorized representatives; and no modification shall be effected by the acknowledgment or acceptance of purchase order forms containing terms or conditions at variance with those set forth herein. Except as explicitly set forth in this Agreement, this Agreement and the transaction(s) specified herein can be cancelled only with both parties' written consent." ;
+    ct:supported_by ex:C096P0146 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C096R0009 a ct:Rule ;
+    rdfs:label "Termination — source passage 252" ;
+    ct:kind "TERMINATION" ;
+    ct:supported_by ex:C096P0252 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C096R0010 a ct:Rule ;
+    rdfs:label "Termination — source passage 263" ;
+    ct:kind "TERMINATION" ;
+    ct:references_section ex:C096R0010Ref0 ;
+    ct:subject_to ex:C096R0010Condition263 ;
+    ct:supported_by ex:C096P0263 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C096R0010Condition263 a ct:Condition ;
+    ct:description "17. In case of any material breach of the terms and conditions contained in the Agreement by one of the parties, the other party may, without giving prior written notice in the event the material breach is not cured within such notice period or without undertaking any recourse to legal proceedings, suspend its further performance, terminate the Agreement or require specific performance by the other party of the Agreement in whole or in part, without prejudice to its right to damages for any losses incurred subject to Article 14." ;
+    ct:supported_by ex:C096P0263 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C096R0010Ref0 a ct:Reference ;
+    rdfs:label "Article 14" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C096R0011 a ct:Rule ;
+    rdfs:label "Termination — source passage 269" ;
+    ct:kind "TERMINATION" ;
+    ct:supported_by ex:C096P0269 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C096P0081 a ct:SourcePassage ;
+    ct:end_char 16140 ;
+    ct:exact_text "It is understood and agreed that the basis for this Agreement is an extraordinary level of mutual trust and confidence between the parties, not only in matters of price, quality, and service relating to the quantities of Product purchased and sold hereunder, but also with respect to the accommodation of changes that may develop in the business environment or the pursuit of such mutual undertakings as may benefit either or both of the parties to this Agreement. Moreover, the terms relating to quantity and price presume the continuation of economic conditions and trends now prevailing, including but not limited to levels of industrial production, tire demand, labor rates, energy costs, and foreign exchange relationships. In the event that, in the view of either party, a significant change of any kind does occur which materially and significantly alters the value received by either party in this transaction, that party may, upon written notice of its election and reasons therefor, request that this Agreement be renegotiated and the other party will be obligated to enter into the renegotiation unless the request is formally withdrawn. Neither party shall unreasonably request such renegotiation" ;
+    ct:source_path "cuad/WestPharmaceuticalServicesInc_20200116_8-K_EX-10.1_11947529_EX-10.1_Supply Agreement.txt" ;
+    ct:source_sha256 "7c991c9f55f81fd83a885f40cf89eb81f276897ee3ff068f0b7d689b6f88d495" ;
+    ct:start_char 14932 .
+
+ex:C096P0146 a ct:SourcePassage ;
+    ct:end_char 41929 ;
+    ct:exact_text "17. AMENDMENT; CANCELLATION No modification of this Agreement shall be of any force or effect unless such modification is in writing, expressly designated as an amendment hereto and signed by the parties' duly authorized representatives; and no modification shall be effected by the acknowledgment or acceptance of purchase order forms containing terms or conditions at variance with those set forth herein. Except as explicitly set forth in this Agreement, this Agreement and the transaction(s) specified herein can be cancelled only with both parties' written consent." ;
+    ct:source_path "cuad/WestPharmaceuticalServicesInc_20200116_8-K_EX-10.1_11947529_EX-10.1_Supply Agreement.txt" ;
+    ct:source_sha256 "7c991c9f55f81fd83a885f40cf89eb81f276897ee3ff068f0b7d689b6f88d495" ;
+    ct:start_char 41359 .
+
+ex:C096P0263 a ct:SourcePassage ;
+    ct:end_char 77595 ;
+    ct:exact_text "17. In case of any material breach of the terms and conditions contained in the Agreement by one of the parties, the other party may, without giving prior written notice in the event the material breach is not cured within such notice period or without undertaking any recourse to legal proceedings, suspend its further performance, terminate the Agreement or require specific performance by the other party of the Agreement in whole or in part, without prejudice to its right to damages for any losses incurred subject to Article 14." ;
+    ct:source_path "cuad/WestPharmaceuticalServicesInc_20200116_8-K_EX-10.1_11947529_EX-10.1_Supply Agreement.txt" ;
+    ct:source_sha256 "7c991c9f55f81fd83a885f40cf89eb81f276897ee3ff068f0b7d689b6f88d495" ;
+    ct:start_char 77061 .
+
+ct:Agreement a owl:Class ;
+    rdfs:label "Agreement" .
+
+ex:C096P0088 a ct:SourcePassage ;
+    ct:end_char 18996 ;
+    ct:exact_text "Notwithstanding anything to the contrary in Attachments A, G or H, in connection with any Change in Circumstances (as defined below), and without limiting Seller's/ExxonMobil Selling Affiliate's other rights under this Agreement or applicable law, Seller/ExxonMobil Selling Affiliates shall have the right: (i) only if required to enable Seller/ExxonMobil Selling Affiliate to comply with applicable laws and regulations, to terminate this Agreement and accelerate all amounts due from Buyer hereunder, making them immediately payable (ii) to modify the payment terms hereunder; and/or (iii) to require that Buyer/Buyer Affiliates pay in advance for shipments hereunder." ;
+    ct:source_path "cuad/WestPharmaceuticalServicesInc_20200116_8-K_EX-10.1_11947529_EX-10.1_Supply Agreement.txt" ;
+    ct:source_sha256 "7c991c9f55f81fd83a885f40cf89eb81f276897ee3ff068f0b7d689b6f88d495" ;
+    ct:start_char 18326 .
+
+ex:C096P0128 a ct:SourcePassage ;
+    ct:end_char 30782 ;
+    ct:exact_text "6. CHANGE IN CIRCUMSTANCES In connection with any Change in Circumstances (as defined below), and without limiting Seller's other rights under this Agreement or applicable law, Seller shall have the right: (i) to terminate this Agreement and accelerate all amounts due from Buyer hereunder, making them immediately payable; (ii) to modify the payment terms hereunder; and/or (iii) to require Buyer to pay in advance for shipments hereunder." ;
+    ct:source_path "cuad/WestPharmaceuticalServicesInc_20200116_8-K_EX-10.1_11947529_EX-10.1_Supply Agreement.txt" ;
+    ct:source_sha256 "7c991c9f55f81fd83a885f40cf89eb81f276897ee3ff068f0b7d689b6f88d495" ;
+    ct:start_char 30342 .
+
+ct:Reference a owl:Class ;
+    rdfs:label "Reference" .
+
+ct:Condition a owl:Class ;
+    rdfs:label "Condition" .
+
+ct:SourcePassage a owl:Class ;
+    rdfs:label "SourcePassage" .
+
+ct:Rule a owl:Class ;
+    rdfs:label "Rule" .
+

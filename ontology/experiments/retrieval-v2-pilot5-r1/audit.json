@@ -1,0 +1,25 @@
+{
+  "score_checks": 20,
+  "all_passed": true,
+  "all_5_sample_and_graph_seals_verified": true,
+  "query_round_limits_verified": true,
+  "llm_calls": 14,
+  "cached_calls": 1,
+  "total_prompt_plus_output_tokens": 103285,
+  "reference_status_counts": {
+    "resolved": 11,
+    "unresolved": 19
+  },
+  "remaining_missing": [
+    {
+      "source_index": 2316,
+      "snippet_coverages": [
+        1.0,
+        0.8560606060606061
+      ],
+      "expected_characters": 318,
+      "covered_characters": 299
+    }
+  ],
+  "latency_caveat": "Per-sample times include cached call wall time on resume and exclude the failed GPU attempt. Setup receipt describes the final resumed process, not total installation/development time. No production latency claim."
+}

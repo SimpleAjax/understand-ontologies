@@ -1,0 +1,343 @@
+@prefix ct: <https://cimulink.local/ontology/contract-terms/0.1#> .
+@prefix ex: <https://cimulink.local/ontology/llm100-pilot-single/> .
+@prefix meta: <https://cimulink.local/ontology/extraction#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ct: a owl:Ontology ;
+    rdfs:comment "Partial five-contract development sample. No claim of complete contract coverage or legal correctness." .
+
+ct:agreement_effective_from a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:applies_within a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:calendar_date_status a owl:DatatypeProperty .
+
+ct:coverage a owl:DatatypeProperty .
+
+ct:description a owl:DatatypeProperty .
+
+ct:duration a owl:DatatypeProperty .
+
+ct:duration_status a owl:DatatypeProperty .
+
+ct:end_char a owl:DatatypeProperty .
+
+ct:end_date_status a owl:DatatypeProperty .
+
+ct:ends_on_event a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:exact_text a owl:DatatypeProperty .
+
+ct:has_party a owl:ObjectProperty ;
+    rdfs:domain ct:Agreement ;
+    rdfs:range ct:Party .
+
+ct:has_rule a owl:ObjectProperty ;
+    rdfs:domain ct:Agreement ;
+    rdfs:range ct:Rule .
+
+ct:kind a owl:DatatypeProperty .
+
+ct:notice_actor a owl:DatatypeProperty .
+
+ct:notice_form a owl:DatatypeProperty .
+
+ct:notice_period_status a owl:DatatypeProperty .
+
+ct:qualifies a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Rule .
+
+ct:references_section a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:renewal_count a owl:DatatypeProperty .
+
+ct:resolution_status a owl:DatatypeProperty .
+
+ct:resolved_to a owl:ObjectProperty ;
+    rdfs:domain ct:Reference ;
+    rdfs:range ct:SourcePassage .
+
+ct:source_path a owl:DatatypeProperty .
+
+ct:source_sha256 a owl:DatatypeProperty .
+
+ct:start_char a owl:DatatypeProperty .
+
+ct:starts_from a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:stated_end_date a owl:DatatypeProperty .
+
+ct:subject_to a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Condition .
+
+ct:supported_by a owl:ObjectProperty ;
+    rdfs:range ct:SourcePassage .
+
+ct:termination_notice a owl:DatatypeProperty .
+
+ex:C034 a ct:Agreement ;
+    rdfs:label "EuromediaHoldingsCorp_20070215_10SB12G_EX-10.B(01)_525118_EX-10.B(01)_Content License Agreement.txt" ;
+    ct:coverage "LOCAL_LLM_PROPOSED_PARTIAL; NOT_HUMAN_REVIEWED" ;
+    ct:has_rule ex:C034R0001,
+        ex:C034R0002,
+        ex:C034R0003,
+        ex:C034R0004,
+        ex:C034R0005,
+        ex:C034R0006,
+        ex:C034R0007,
+        ex:C034R0008,
+        ex:C034R0009,
+        ex:C034R0010,
+        ex:C034R0011,
+        ex:C034R0012,
+        ex:C034R0013,
+        ex:C034R0014 ;
+    ct:source_path "cuad/EuromediaHoldingsCorp_20070215_10SB12G_EX-10.B(01)_525118_EX-10.B(01)_Content License Agreement.txt" ;
+    ct:source_sha256 "410d3d3ff1c928befd4d2c5f405cc1215f4687db744c5abf1e98adefd97d7478" ;
+    meta:model_digest "0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0" .
+
+ct:Party a owl:Class ;
+    rdfs:label "Party" .
+
+ex:C034P0026 a ct:SourcePassage ;
+    ct:end_char 19253 ;
+    ct:exact_text "(d) Rogers, or any person to whom Rogers has assigned, sold or transferred this Agreement, ceases to offer the ROD Service.     20. EFFECT OF TERMINATION.   If either party terminates this Agreement prior to its expiration, Rogers shall be entitled to continue to distribute and exhibit all Licensed Programs then being distributed and exhibited on the ROD Service, in each case, for a period of sixty (60) days from the effective date of termination or the expiry of the relevant License Period, whichever is earlier, and, in such event, Rogers shall continue to be bound by its payment obligations set forth herein in respect of such Licensed Programs. This Section shall survive the termination of this Agreement for a period of sixty (60) days.     21. MOST FAVOURED NATIONS.   If Licensor enters, or has entered, into an agreement or series of agreements (including side letters, understandings or arrangements, whether oral or written, whether formal or informal, whether now or hereafter effective, or whether on a long-term basis or short-term basis) with a third party for the distribution and exhibition of Licensed Programs in the U.S. " ;
+    ct:source_path "cuad/EuromediaHoldingsCorp_20070215_10SB12G_EX-10.B(01)_525118_EX-10.B(01)_Content License Agreement.txt" ;
+    ct:source_sha256 "410d3d3ff1c928befd4d2c5f405cc1215f4687db744c5abf1e98adefd97d7478" ;
+    ct:start_char 18106 .
+
+ex:C034P0028 a ct:SourcePassage ;
+    ct:end_char 20882 ;
+    ct:exact_text "During the Term, and for a period of twelve (12) months thereafter, Rogers (and its representatives) shall have the right, upon reasonable prior written notice to Licensor, and during regular business hours, to inspect and/or audit Licensor's books and records to confirm compliance with Licensor's obligations under this Section. This Section shall survive the expiry or other termination of this Agreement for a period of twelve (12) months.   -8-" ;
+    ct:source_path "cuad/EuromediaHoldingsCorp_20070215_10SB12G_EX-10.B(01)_525118_EX-10.B(01)_Content License Agreement.txt" ;
+    ct:source_sha256 "410d3d3ff1c928befd4d2c5f405cc1215f4687db744c5abf1e98adefd97d7478" ;
+    ct:start_char 20433 .
+
+ex:C034P0032 a ct:SourcePassage ;
+    ct:end_char 24410 ;
+    ct:exact_text "This Section shall survive the termination or expiration of this Agreement.     24. ASSIGNMENT.   This Agreement may not be assigned, sold or transferred without the prior written consent of the other party. Notwithstanding the foregoing, Rogers may, without consent, assign its rights and obligations under this Agreement in whole or in part to: (i) a person that directly or indirectly controls, is controlled by or is under common control with Rogers; or (ii) a purchaser of all or substantially all of the assets used in connection with the ROD Service. A change of control of Rogers shall not be considered an assignment of this Agreement. Any purported assignment, sale, or transfer in contravention of this Section shall be null and void.   -9-" ;
+    ct:source_path "cuad/EuromediaHoldingsCorp_20070215_10SB12G_EX-10.B(01)_525118_EX-10.B(01)_Content License Agreement.txt" ;
+    ct:source_sha256 "410d3d3ff1c928befd4d2c5f405cc1215f4687db744c5abf1e98adefd97d7478" ;
+    ct:start_char 23659 .
+
+ex:C034R0001 a ct:Rule ;
+    rdfs:label "Conditional Referenced Term — source passage 6" ;
+    ct:kind "CONDITIONAL_REFERENCED_TERM" ;
+    ct:subject_to ex:C034R0001Condition6 ;
+    ct:supported_by ex:C034P0006 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C034R0001Condition6 a ct:Condition ;
+    ct:description "(b) In the event that Licensor grants to another VOD or Pay-Per-View (\"PPV\") service provider in the U.S. or the Territory the right to distribute or exhibit any Licensed Program on an earlier availability date, then Licensor shall also grant to Rogers the right to distribute and exhibit such Licensed Program on such earlier availability date, on the terms provided herein.     (c) Licensor shall not authorize the distribution or exhibition of any Licensed Program by any other means, including, without limitation, television (other than PPV) and internet, for a period of ninety (90) consecutive days following such Licensed Program's VOD availability date.     4. LICENSE PERIOD.   During the Term, Rogers shall have the non-exclusive right to distribute and exhibit each Licensed Program on a VOD basis for a period of ninety (90) consecutive days, or such longer period as may be agreed to by Rogers and Licensor (the \"License Period\").     5. VIEWING PERIOD.   The viewing period for each Licensed Program shall be at least twenty-four (24) consecutive hours, or such longer period as may be agreed to by Rogers and Licensor from time to time (the \"Viewing Period\"). " ;
+    ct:supported_by ex:C034P0006 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C034R0002 a ct:Rule ;
+    rdfs:label "Initial Term — source passage 10" ;
+    ct:kind "INITIAL_TERM" ;
+    ct:supported_by ex:C034P0010 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C034R0003 a ct:Rule ;
+    rdfs:label "Optional Renewal — source passage 10" ;
+    ct:kind "OPTIONAL_RENEWAL" ;
+    ct:supported_by ex:C034P0010 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C034R0004 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 11" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:subject_to ex:C034R0004Condition11 ;
+    ct:supported_by ex:C034P0011 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C034R0004Condition11 a ct:Condition ;
+    ct:description "Notwithstanding the foregoing, if, at the expiry of this Agreement following the Initial Term or the Renewal Term (if any), as applicable, Licensor and Rogers have not executed a new agreement governing the VOD distribution and exhibition of Licensed Programs and Rogers (or its permitted assigns) continues to distribute and exhibit Licensed Programs on the ROD Service following such expiry, such continued distribution and exhibition shall be governed by the terms of this Agreement in effect at the time of expiry, except that each of Licensor and Rogers shall have the right, on sixty (60) days' prior written notice, to terminate this Agreement, as so extended. For greater certainty, all references to \"Term\" in this Agreement shall include the Initial Term, the Renewal Term (if any) and any period during which this Agreement continues following its expiry in accordance with this Section.   -3-" ;
+    ct:supported_by ex:C034P0011 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C034R0005 a ct:Rule ;
+    rdfs:label "Termination — source passage 11" ;
+    ct:kind "TERMINATION" ;
+    ct:subject_to ex:C034R0005Condition11 ;
+    ct:supported_by ex:C034P0011 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C034R0005Condition11 a ct:Condition ;
+    ct:description "Notwithstanding the foregoing, if, at the expiry of this Agreement following the Initial Term or the Renewal Term (if any), as applicable, Licensor and Rogers have not executed a new agreement governing the VOD distribution and exhibition of Licensed Programs and Rogers (or its permitted assigns) continues to distribute and exhibit Licensed Programs on the ROD Service following such expiry, such continued distribution and exhibition shall be governed by the terms of this Agreement in effect at the time of expiry, except that each of Licensor and Rogers shall have the right, on sixty (60) days' prior written notice, to terminate this Agreement, as so extended. For greater certainty, all references to \"Term\" in this Agreement shall include the Initial Term, the Renewal Term (if any) and any period during which this Agreement continues following its expiry in accordance with this Section.   -3-" ;
+    ct:supported_by ex:C034P0011 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C034R0006 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 23" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:subject_to ex:C034R0006Condition23 ;
+    ct:supported_by ex:C034P0023 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C034R0006Condition23 a ct:Condition ;
+    ct:description "(b) Rogers shall indemnify Licensor and its affiliates from and against any and all claims, damages, liabilities, costs and expenses (including, without limitation, reasonable legal fees) arising out of or caused by:     (i) any breach by Rogers of any material term of this Agreement; and     (ii) any claim by a Rogers customer, except a claim related to the content of any Licensed Program, trailer and/or other promotional materials provided by Licensor to Rogers hereunder.     (c) This Section shall survive the termination or expiration of this Agreement.     16. LIMITATION OF LIABILITY.   Except with respect to any claim or liability arising from an infringement of any third party intellectual property right, in no event shall either party be liable for any special, indirect, consequential, punitive or incidental damages of any kind. This Section shall survive the termination or expiration of this Agreement.     17. COPYRIGHT ROYALTY PAYMENTS.   For so long as Rogers is required by Applicable Law to pay copyright royalties relating to Licensed Programs hereunder, Licensor shall reimburse Rogers for 50% of any such royalties actually paid by Rogers, calculated on a rolling basis during the Term and payable monthly. This Section shall survive the termination or expiration of this Agreement.     18. ROGERS' TERMINATION RIGHTS.   " ;
+    ct:supported_by ex:C034P0023 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C034R0007 a ct:Rule ;
+    rdfs:label "Termination — source passage 24" ;
+    ct:kind "TERMINATION" ;
+    ct:subject_to ex:C034R0007Condition24 ;
+    ct:supported_by ex:C034P0024 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C034R0007Condition24 a ct:Condition ;
+    ct:description "Notwithstanding any other provision of this Agreement, Rogers may terminate this Agreement, at any time, upon sixty (60) days' prior written notice to Licensor.     19. MUTUAL TERMINATION RIGHTS.   Either Rogers or Licensor may, at its option and without prejudice to any other remedies available to it, immediately terminate this Agreement by giving written notice thereof to the other party for any one or more of the following causes:     (a) the other party defaults in the performance or observance of any of the material terms of this Agreement and such default continues for a period of thirty (30) days after written notice thereof;     (b) if, at any time, an order is made or an effective resolution is passed for the winding-up, liquidation or dissolution of the other party that is not immediately stayed by appeal;     (c) if, at any time, the other party consents to or makes a general assignment for the benefit of creditors, or makes a proposal under, or takes advantage of, any insolvency, restructuring or reorganization legislation, or is declared bankrupt, or if a liquidator, trustee in bankruptcy, custodian or receiver and manager or other officer with similar powers is appointed of the other party or of all or substantially all of the other party's property which is not immediately stayed by appeal; or   -7-" ;
+    ct:supported_by ex:C034P0024 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C034R0008 a ct:Rule ;
+    rdfs:label "Conditional Referenced Term — source passage 24" ;
+    ct:kind "CONDITIONAL_REFERENCED_TERM" ;
+    ct:subject_to ex:C034R0008Condition24 ;
+    ct:supported_by ex:C034P0024 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C034R0008Condition24 a ct:Condition ;
+    ct:description "Notwithstanding any other provision of this Agreement, Rogers may terminate this Agreement, at any time, upon sixty (60) days' prior written notice to Licensor.     19. MUTUAL TERMINATION RIGHTS.   Either Rogers or Licensor may, at its option and without prejudice to any other remedies available to it, immediately terminate this Agreement by giving written notice thereof to the other party for any one or more of the following causes:     (a) the other party defaults in the performance or observance of any of the material terms of this Agreement and such default continues for a period of thirty (30) days after written notice thereof;     (b) if, at any time, an order is made or an effective resolution is passed for the winding-up, liquidation or dissolution of the other party that is not immediately stayed by appeal;     (c) if, at any time, the other party consents to or makes a general assignment for the benefit of creditors, or makes a proposal under, or takes advantage of, any insolvency, restructuring or reorganization legislation, or is declared bankrupt, or if a liquidator, trustee in bankruptcy, custodian or receiver and manager or other officer with similar powers is appointed of the other party or of all or substantially all of the other party's property which is not immediately stayed by appeal; or   -7-" ;
+    ct:supported_by ex:C034P0024 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C034R0009 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 26" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:supported_by ex:C034P0026 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C034R0010 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 28" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:supported_by ex:C034P0028 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C034R0011 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 31" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:references_section ex:C034R0011Ref0 ;
+    ct:subject_to ex:C034R0011Condition31 ;
+    ct:supported_by ex:C034P0031 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C034R0011Condition31 a ct:Condition ;
+    ct:description "Notwithstanding the foregoing, the receiving party may disclose confidential information to the extent required to comply with the valid order of an administrative agency or court of competent jurisdiction, or with any Applicable Law (provided that the receiving party shall notify the other party as soon as practicable (and if possible prior to disclosure) and any information so disclosed shall be redacted to the greatest extent possible).     (c) Rogers shall own all data and information relating to Rogers' subscribers, including, without limitation, all personal and demographic information, all information relating to an individual subscriber's use of the ROD Service and all aggregate information relating to the use by Rogers' subscribers of the ROD Service (collectively, \"Rogers Subscriber Information\"). Licensor acknowledges that Rogers Subscriber Information constitutes valuable assets of Rogers and agrees to hold all Rogers Subscriber Information strictly confidential in accordance with the provisions set forth in Section 22(b) above.     (d) This Section shall survive the termination or expiration of this Agreement.     23. GOVERNING LAW.   This Agreement shall be governed by laws of the Province of Ontario and the federal laws of Canada applicable therein. The parties hereby attorn to the non-exclusive jurisdiction of the courts of the Province of Ontario. " ;
+    ct:supported_by ex:C034P0031 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C034R0011Ref0 a ct:Reference ;
+    rdfs:label "Section 22(b)" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C034R0012 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 32" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:supported_by ex:C034P0032 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C034R0013 a ct:Rule ;
+    rdfs:label "Termination — source passage 34" ;
+    ct:kind "TERMINATION" ;
+    ct:subject_to ex:C034R0013Condition34 ;
+    ct:supported_by ex:C034P0034 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C034R0013Condition34 a ct:Condition ;
+    ct:description "25. FORCE MAJEURE.   Neither party shall be liable to the other for temporary failure to perform hereunder, if such failure is caused by reason of an Act of God, tempest, satellite circuit failure, labour dispute, strike, temporary or permanent breakdown of facilities, fire, flood, Applicable Law, civil disturbance, or any other cause beyond the parties' respective control. In the event of any force majeure which continues for a period of thirty (30) days or more, the party not immediately affected by such force majeure event may, upon notice to the other party, terminate this Agreement.     26. NOTICES.   Any notice, request, demand, consent or other communication (collectively a \"Notice\") provided or permitted hereunder shall be in writing and given by personal delivery (against receipt), or sent by registered mail (against receipt) postage prepaid, or transmitted by facsimile (provided that a hard copy is immediately sent by registered mail), addressed to the other party for which it is intended at its address below:   To Rogers:   Rogers Cable Communications Inc. 333 Bloor Street East Toronto, Ontario M4W 1G9 Attention: Vice-President, General Manager, Television FAX: (416) 935-4600   with a copy to:   Rogers Communications Inc. " ;
+    ct:supported_by ex:C034P0034 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C034R0014 a ct:Rule ;
+    rdfs:label "Conditional Referenced Term — source passage 34" ;
+    ct:kind "CONDITIONAL_REFERENCED_TERM" ;
+    ct:subject_to ex:C034R0014Condition34 ;
+    ct:supported_by ex:C034P0034 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C034R0014Condition34 a ct:Condition ;
+    ct:description "25. FORCE MAJEURE.   Neither party shall be liable to the other for temporary failure to perform hereunder, if such failure is caused by reason of an Act of God, tempest, satellite circuit failure, labour dispute, strike, temporary or permanent breakdown of facilities, fire, flood, Applicable Law, civil disturbance, or any other cause beyond the parties' respective control. In the event of any force majeure which continues for a period of thirty (30) days or more, the party not immediately affected by such force majeure event may, upon notice to the other party, terminate this Agreement.     26. NOTICES.   Any notice, request, demand, consent or other communication (collectively a \"Notice\") provided or permitted hereunder shall be in writing and given by personal delivery (against receipt), or sent by registered mail (against receipt) postage prepaid, or transmitted by facsimile (provided that a hard copy is immediately sent by registered mail), addressed to the other party for which it is intended at its address below:   To Rogers:   Rogers Cable Communications Inc. 333 Bloor Street East Toronto, Ontario M4W 1G9 Attention: Vice-President, General Manager, Television FAX: (416) 935-4600   with a copy to:   Rogers Communications Inc. " ;
+    ct:supported_by ex:C034P0034 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C034P0006 a ct:SourcePassage ;
+    ct:end_char 3772 ;
+    ct:exact_text "(b) In the event that Licensor grants to another VOD or Pay-Per-View (\"PPV\") service provider in the U.S. or the Territory the right to distribute or exhibit any Licensed Program on an earlier availability date, then Licensor shall also grant to Rogers the right to distribute and exhibit such Licensed Program on such earlier availability date, on the terms provided herein.     (c) Licensor shall not authorize the distribution or exhibition of any Licensed Program by any other means, including, without limitation, television (other than PPV) and internet, for a period of ninety (90) consecutive days following such Licensed Program's VOD availability date.     4. LICENSE PERIOD.   During the Term, Rogers shall have the non-exclusive right to distribute and exhibit each Licensed Program on a VOD basis for a period of ninety (90) consecutive days, or such longer period as may be agreed to by Rogers and Licensor (the \"License Period\").     5. VIEWING PERIOD.   The viewing period for each Licensed Program shall be at least twenty-four (24) consecutive hours, or such longer period as may be agreed to by Rogers and Licensor from time to time (the \"Viewing Period\"). " ;
+    ct:source_path "cuad/EuromediaHoldingsCorp_20070215_10SB12G_EX-10.B(01)_525118_EX-10.B(01)_Content License Agreement.txt" ;
+    ct:source_sha256 "410d3d3ff1c928befd4d2c5f405cc1215f4687db744c5abf1e98adefd97d7478" ;
+    ct:start_char 2596 .
+
+ex:C034P0010 a ct:SourcePassage ;
+    ct:end_char 7300 ;
+    ct:exact_text "(e) There shall be no minimum License Fee or retail viewing fee with respect to any Licensed Program. Additionally, Rogers shall not be required to pay any License Fees for VOD exhibitions of any Licensed Program occurring on or off premises that are made for the purposes of quality assurance or testing.     (f) Rogers shall be entitled to withhold from License Fees applicable withholding taxes and to remit same to the responsible taxing authorities, as required by Applicable Law.     7. TERM.     The term of this Agreement (the \"Initial Term\") shall commence as of the Effective Date and, unless earlier terminated in accordance with this Agreement, shall terminate on June 30, 2010. At Rogers' option, this Agreement shall renew for a subsequent term of two (2) years on the terms and conditions herein (the \"Renewal Term\"). " ;
+    ct:source_path "cuad/EuromediaHoldingsCorp_20070215_10SB12G_EX-10.B(01)_525118_EX-10.B(01)_Content License Agreement.txt" ;
+    ct:source_sha256 "410d3d3ff1c928befd4d2c5f405cc1215f4687db744c5abf1e98adefd97d7478" ;
+    ct:start_char 6467 .
+
+ex:C034P0023 a ct:SourcePassage ;
+    ct:end_char 16706 ;
+    ct:exact_text "(b) Rogers shall indemnify Licensor and its affiliates from and against any and all claims, damages, liabilities, costs and expenses (including, without limitation, reasonable legal fees) arising out of or caused by:     (i) any breach by Rogers of any material term of this Agreement; and     (ii) any claim by a Rogers customer, except a claim related to the content of any Licensed Program, trailer and/or other promotional materials provided by Licensor to Rogers hereunder.     (c) This Section shall survive the termination or expiration of this Agreement.     16. LIMITATION OF LIABILITY.   Except with respect to any claim or liability arising from an infringement of any third party intellectual property right, in no event shall either party be liable for any special, indirect, consequential, punitive or incidental damages of any kind. This Section shall survive the termination or expiration of this Agreement.     17. COPYRIGHT ROYALTY PAYMENTS.   For so long as Rogers is required by Applicable Law to pay copyright royalties relating to Licensed Programs hereunder, Licensor shall reimburse Rogers for 50% of any such royalties actually paid by Rogers, calculated on a rolling basis during the Term and payable monthly. This Section shall survive the termination or expiration of this Agreement.     18. ROGERS' TERMINATION RIGHTS.   " ;
+    ct:source_path "cuad/EuromediaHoldingsCorp_20070215_10SB12G_EX-10.B(01)_525118_EX-10.B(01)_Content License Agreement.txt" ;
+    ct:source_sha256 "410d3d3ff1c928befd4d2c5f405cc1215f4687db744c5abf1e98adefd97d7478" ;
+    ct:start_char 15356 .
+
+ex:C034P0031 a ct:SourcePassage ;
+    ct:end_char 23659 ;
+    ct:exact_text "Notwithstanding the foregoing, the receiving party may disclose confidential information to the extent required to comply with the valid order of an administrative agency or court of competent jurisdiction, or with any Applicable Law (provided that the receiving party shall notify the other party as soon as practicable (and if possible prior to disclosure) and any information so disclosed shall be redacted to the greatest extent possible).     (c) Rogers shall own all data and information relating to Rogers' subscribers, including, without limitation, all personal and demographic information, all information relating to an individual subscriber's use of the ROD Service and all aggregate information relating to the use by Rogers' subscribers of the ROD Service (collectively, \"Rogers Subscriber Information\"). Licensor acknowledges that Rogers Subscriber Information constitutes valuable assets of Rogers and agrees to hold all Rogers Subscriber Information strictly confidential in accordance with the provisions set forth in Section 22(b) above.     (d) This Section shall survive the termination or expiration of this Agreement.     23. GOVERNING LAW.   This Agreement shall be governed by laws of the Province of Ontario and the federal laws of Canada applicable therein. The parties hereby attorn to the non-exclusive jurisdiction of the courts of the Province of Ontario. " ;
+    ct:source_path "cuad/EuromediaHoldingsCorp_20070215_10SB12G_EX-10.B(01)_525118_EX-10.B(01)_Content License Agreement.txt" ;
+    ct:source_sha256 "410d3d3ff1c928befd4d2c5f405cc1215f4687db744c5abf1e98adefd97d7478" ;
+    ct:start_char 22272 .
+
+ct:Agreement a owl:Class ;
+    rdfs:label "Agreement" .
+
+ex:C034P0011 a ct:SourcePassage ;
+    ct:end_char 8204 ;
+    ct:exact_text "Notwithstanding the foregoing, if, at the expiry of this Agreement following the Initial Term or the Renewal Term (if any), as applicable, Licensor and Rogers have not executed a new agreement governing the VOD distribution and exhibition of Licensed Programs and Rogers (or its permitted assigns) continues to distribute and exhibit Licensed Programs on the ROD Service following such expiry, such continued distribution and exhibition shall be governed by the terms of this Agreement in effect at the time of expiry, except that each of Licensor and Rogers shall have the right, on sixty (60) days' prior written notice, to terminate this Agreement, as so extended. For greater certainty, all references to \"Term\" in this Agreement shall include the Initial Term, the Renewal Term (if any) and any period during which this Agreement continues following its expiry in accordance with this Section.   -3-" ;
+    ct:source_path "cuad/EuromediaHoldingsCorp_20070215_10SB12G_EX-10.B(01)_525118_EX-10.B(01)_Content License Agreement.txt" ;
+    ct:source_sha256 "410d3d3ff1c928befd4d2c5f405cc1215f4687db744c5abf1e98adefd97d7478" ;
+    ct:start_char 7300 .
+
+ex:C034P0024 a ct:SourcePassage ;
+    ct:end_char 18041 ;
+    ct:exact_text "Notwithstanding any other provision of this Agreement, Rogers may terminate this Agreement, at any time, upon sixty (60) days' prior written notice to Licensor.     19. MUTUAL TERMINATION RIGHTS.   Either Rogers or Licensor may, at its option and without prejudice to any other remedies available to it, immediately terminate this Agreement by giving written notice thereof to the other party for any one or more of the following causes:     (a) the other party defaults in the performance or observance of any of the material terms of this Agreement and such default continues for a period of thirty (30) days after written notice thereof;     (b) if, at any time, an order is made or an effective resolution is passed for the winding-up, liquidation or dissolution of the other party that is not immediately stayed by appeal;     (c) if, at any time, the other party consents to or makes a general assignment for the benefit of creditors, or makes a proposal under, or takes advantage of, any insolvency, restructuring or reorganization legislation, or is declared bankrupt, or if a liquidator, trustee in bankruptcy, custodian or receiver and manager or other officer with similar powers is appointed of the other party or of all or substantially all of the other party's property which is not immediately stayed by appeal; or   -7-" ;
+    ct:source_path "cuad/EuromediaHoldingsCorp_20070215_10SB12G_EX-10.B(01)_525118_EX-10.B(01)_Content License Agreement.txt" ;
+    ct:source_sha256 "410d3d3ff1c928befd4d2c5f405cc1215f4687db744c5abf1e98adefd97d7478" ;
+    ct:start_char 16706 .
+
+ex:C034P0034 a ct:SourcePassage ;
+    ct:end_char 25728 ;
+    ct:exact_text "25. FORCE MAJEURE.   Neither party shall be liable to the other for temporary failure to perform hereunder, if such failure is caused by reason of an Act of God, tempest, satellite circuit failure, labour dispute, strike, temporary or permanent breakdown of facilities, fire, flood, Applicable Law, civil disturbance, or any other cause beyond the parties' respective control. In the event of any force majeure which continues for a period of thirty (30) days or more, the party not immediately affected by such force majeure event may, upon notice to the other party, terminate this Agreement.     26. NOTICES.   Any notice, request, demand, consent or other communication (collectively a \"Notice\") provided or permitted hereunder shall be in writing and given by personal delivery (against receipt), or sent by registered mail (against receipt) postage prepaid, or transmitted by facsimile (provided that a hard copy is immediately sent by registered mail), addressed to the other party for which it is intended at its address below:   To Rogers:   Rogers Cable Communications Inc. 333 Bloor Street East Toronto, Ontario M4W 1G9 Attention: Vice-President, General Manager, Television FAX: (416) 935-4600   with a copy to:   Rogers Communications Inc. " ;
+    ct:source_path "cuad/EuromediaHoldingsCorp_20070215_10SB12G_EX-10.B(01)_525118_EX-10.B(01)_Content License Agreement.txt" ;
+    ct:source_sha256 "410d3d3ff1c928befd4d2c5f405cc1215f4687db744c5abf1e98adefd97d7478" ;
+    ct:start_char 24475 .
+
+ct:Reference a owl:Class ;
+    rdfs:label "Reference" .
+
+ct:Condition a owl:Class ;
+    rdfs:label "Condition" .
+
+ct:SourcePassage a owl:Class ;
+    rdfs:label "SourcePassage" .
+
+ct:Rule a owl:Class ;
+    rdfs:label "Rule" .
+

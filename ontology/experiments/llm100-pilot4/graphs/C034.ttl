@@ -1,0 +1,239 @@
+@prefix ct: <https://cimulink.local/ontology/contract-terms/0.1#> .
+@prefix ex: <https://cimulink.local/ontology/llm100-pilot4/> .
+@prefix meta: <https://cimulink.local/ontology/extraction#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ct: a owl:Ontology ;
+    rdfs:comment "Partial five-contract development sample. No claim of complete contract coverage or legal correctness." .
+
+ct:agreement_effective_from a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:applies_within a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:calendar_date_status a owl:DatatypeProperty .
+
+ct:coverage a owl:DatatypeProperty .
+
+ct:description a owl:DatatypeProperty .
+
+ct:duration a owl:DatatypeProperty .
+
+ct:duration_status a owl:DatatypeProperty .
+
+ct:end_char a owl:DatatypeProperty .
+
+ct:end_date_status a owl:DatatypeProperty .
+
+ct:ends_on_event a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:exact_text a owl:DatatypeProperty .
+
+ct:has_party a owl:ObjectProperty ;
+    rdfs:domain ct:Agreement ;
+    rdfs:range ct:Party .
+
+ct:has_rule a owl:ObjectProperty ;
+    rdfs:domain ct:Agreement ;
+    rdfs:range ct:Rule .
+
+ct:kind a owl:DatatypeProperty .
+
+ct:notice_actor a owl:DatatypeProperty .
+
+ct:notice_form a owl:DatatypeProperty .
+
+ct:notice_period_status a owl:DatatypeProperty .
+
+ct:qualifies a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Rule .
+
+ct:references_section a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:renewal_count a owl:DatatypeProperty .
+
+ct:resolution_status a owl:DatatypeProperty .
+
+ct:resolved_to a owl:ObjectProperty ;
+    rdfs:domain ct:Reference ;
+    rdfs:range ct:SourcePassage .
+
+ct:source_path a owl:DatatypeProperty .
+
+ct:source_sha256 a owl:DatatypeProperty .
+
+ct:start_char a owl:DatatypeProperty .
+
+ct:starts_from a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:stated_end_date a owl:DatatypeProperty .
+
+ct:subject_to a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Condition .
+
+ct:supported_by a owl:ObjectProperty ;
+    rdfs:range ct:SourcePassage .
+
+ct:termination_notice a owl:DatatypeProperty .
+
+ex:C034 a ct:Agreement ;
+    rdfs:label "EuromediaHoldingsCorp_20070215_10SB12G_EX-10.B(01)_525118_EX-10.B(01)_Content License Agreement.txt" ;
+    ct:coverage "LOCAL_LLM_PROPOSED_PARTIAL; NOT_HUMAN_REVIEWED" ;
+    ct:has_rule ex:C034R0001,
+        ex:C034R0002,
+        ex:C034R0003,
+        ex:C034R0004,
+        ex:C034R0005,
+        ex:C034R0006,
+        ex:C034R0007 ;
+    ct:source_path "cuad/EuromediaHoldingsCorp_20070215_10SB12G_EX-10.B(01)_525118_EX-10.B(01)_Content License Agreement.txt" ;
+    ct:source_sha256 "410d3d3ff1c928befd4d2c5f405cc1215f4687db744c5abf1e98adefd97d7478" ;
+    meta:model_digest "0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0" .
+
+ct:Condition a owl:Class ;
+    rdfs:label "Condition" .
+
+ct:Party a owl:Class ;
+    rdfs:label "Party" .
+
+ex:C034P0018 a ct:SourcePassage ;
+    ct:end_char 13110 ;
+    ct:exact_text "The Production Fund Commitment shall be calculated monthly during the Term and shall be deducted as set out in Section 6 (b).   -5-" ;
+    ct:source_path "cuad/EuromediaHoldingsCorp_20070215_10SB12G_EX-10.B(01)_525118_EX-10.B(01)_Content License Agreement.txt" ;
+    ct:source_sha256 "410d3d3ff1c928befd4d2c5f405cc1215f4687db744c5abf1e98adefd97d7478" ;
+    ct:start_char 12979 .
+
+ex:C034P0039 a ct:SourcePassage ;
+    ct:end_char 28370 ;
+    ct:exact_text "In the event that any such law, regulation or decision comes into force during the Term concerning the subject matter of this Agreement, such that it prevents or diminishes either party's ability to perform under this Agreement, the parties agree to enter into good faith negotiations to amend this Agreement, where required, in order to remedy such diminution of or inability to perform.     28. SET-OFF.   Rogers shall be entitled to set off any sums owing to Licensor against any sums owing by Licensor to Rogers hereunder.     29. LEGAL EFFECT.     (a) Nothing herein contained shall be deemed to create and the parties do not intend to create any relationships of partner, agent or joint venture as between Rogers and Licensor.     (b) Subject to Section 29(d) below, this Agreement constitutes a binding agreement with respect to the matters set out herein and supersedes all prior agreements, negotiations, representations and proposals, whether written or oral. There are no conditions, covenants, representations or warranties, express or implied, statutory or otherwise relating to the subject matter hereof except as herein expressly provided.   -11-" ;
+    ct:source_path "cuad/EuromediaHoldingsCorp_20070215_10SB12G_EX-10.B(01)_525118_EX-10.B(01)_Content License Agreement.txt" ;
+    ct:source_sha256 "410d3d3ff1c928befd4d2c5f405cc1215f4687db744c5abf1e98adefd97d7478" ;
+    ct:start_char 27209 .
+
+ex:C034R0001 a ct:Rule ;
+    rdfs:label "Return of Masters after termination or expiration of agreement" ;
+    ct:applies_within ex:C034R0001Scope ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:supported_by ex:C034P0013 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C034R0001Scope a ct:Reference ;
+    rdfs:label "Such Masters shall at all times remain the sole property of Licensor and, within fifteen (15) days following the termination or expiration of this Agreement, Rogers shall either return to Licensor all" ;
+    ct:resolution_status "SOURCE_QUOTE_ONLY" .
+
+ex:C034R0002 a ct:Rule ;
+    rdfs:label "Termination of agreement by either party upon expiration or termination" ;
+    ct:applies_within ex:C034R0002Scope ;
+    ct:kind "TERMINATION" ;
+    ct:supported_by ex:C034P0013 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C034R0002Scope a ct:Reference ;
+    rdfs:label "within fifteen (15) days following the termination or expiration of this Agreement" ;
+    ct:resolution_status "SOURCE_QUOTE_ONLY" .
+
+ex:C034R0003 a ct:Rule ;
+    rdfs:label "Defectiveness of Master leads to reduction in License Fee" ;
+    ct:applies_within ex:C034R0003Scope ;
+    ct:kind "CONDITIONAL_REFERENCED_TERM" ;
+    ct:supported_by ex:C034P0013 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C034R0003Scope a ct:Reference ;
+    rdfs:label "if Rogers is unable to distribute and/or exhibit the Licensed Program on the availability date as a result of the defectiveness of any such Master, the License Fee payable in respect of such Licensed" ;
+    ct:resolution_status "SOURCE_QUOTE_ONLY" .
+
+ex:C034R0004 a ct:Rule ;
+    rdfs:label "Promotional Programs refreshed at mutually agreed frequency" ;
+    ct:applies_within ex:C034R0004Scope ;
+    ct:kind "OPTIONAL_RENEWAL" ;
+    ct:supported_by ex:C034P0016 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C034R0004Scope a ct:Reference ;
+    rdfs:label "Licensor shall refresh the Promotional Programs at a frequency rate to be mutually agreed upon in writing by Rogers and Licensor" ;
+    ct:resolution_status "SOURCE_QUOTE_ONLY" .
+
+ex:C034R0005 a ct:Rule ;
+    rdfs:label "Promotional materials must be at least 75% promoting Licensed Programs" ;
+    ct:applies_within ex:C034R0005Scope ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:supported_by ex:C034P0016 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C034R0005Scope a ct:Reference ;
+    rdfs:label "Rogers shall ensure that at least 75% of such promotional materials directly or indirectly promotes the Licensed Programs" ;
+    ct:resolution_status "SOURCE_QUOTE_ONLY" .
+
+ex:C034R0006 a ct:Rule ;
+    rdfs:label "Production Fund Commitment calculated monthly during Term" ;
+    ct:applies_within ex:C034R0006Scope ;
+    ct:kind "AUTOMATIC_RENEWAL" ;
+    ct:references_section ex:C034R0006Ref0 ;
+    ct:supported_by ex:C034P0018 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C034R0006Ref0 a ct:Reference ;
+    rdfs:label "Section 6 (b)" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C034R0006Scope a ct:Reference ;
+    rdfs:label "The Production Fund Commitment shall be calculated monthly during the Term" ;
+    ct:resolution_status "SOURCE_QUOTE_ONLY" .
+
+ex:C034R0007 a ct:Rule ;
+    rdfs:label "Amendments required if new law impedes performance" ;
+    ct:applies_within ex:C034R0007Scope ;
+    ct:kind "CONDITIONAL_REFERENCED_TERM" ;
+    ct:references_section ex:C034R0007Ref0 ;
+    ct:supported_by ex:C034P0039 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C034R0007Ref0 a ct:Reference ;
+    rdfs:label "Section 29" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C034R0007Scope a ct:Reference ;
+    rdfs:label """In the event that any such law, regulation or decision comes into force during the Term concerning the subject matter of this Agreement, such that it prevents or diminishes either party's ability to
+ """ ;
+    ct:resolution_status "SOURCE_QUOTE_ONLY" .
+
+ex:C034P0016 a ct:SourcePassage ;
+    ct:end_char 11700 ;
+    ct:exact_text "(b) Licensor shall make available to Rogers, on a free trial basis and at no cost to Rogers, not less than ten (10) Licensed Programs at all times during the Term (each, a \"Promotional Program\") for distribution and exhibition on the ROD Service to promote the Licensed Programs and the ROD Service. Licensor shall refresh the Promotional Programs at a frequency rate to be mutually agreed upon in writing by Rogers and Licensor.     (c) Licensor acknowledges and agrees that Rogers shall be entitled to insert a minimum of four (4) minutes of promotional materials per thirty (30) minutes of Promotional Programs. Rogers shall ensure that at least 75% of such promotional materials directly or indirectly promotes the Licensed Programs.     (d) Licensor shall use commercially reasonable efforts to promote the ROD Service through Licensor's consumer-facing advertising and promotional mediums within the Territory. Such mediums shall include, but not be limited to: (i) television; (ii) radio; (iii) print; (iv) Internet; and (v) event-based marketing. Licensor will deliver accurate, representative samples of all such advertising and promotions to Rogers at least five (5) business days in advance for Rogers' prior review and approval.     11. GUI/EPG.   " ;
+    ct:source_path "cuad/EuromediaHoldingsCorp_20070215_10SB12G_EX-10.B(01)_525118_EX-10.B(01)_Content License Agreement.txt" ;
+    ct:source_sha256 "410d3d3ff1c928befd4d2c5f405cc1215f4687db744c5abf1e98adefd97d7478" ;
+    ct:start_char 10440 .
+
+ct:Agreement a owl:Class ;
+    rdfs:label "Agreement" .
+
+ex:C034P0013 a ct:SourcePassage ;
+    ct:end_char 9512 ;
+    ct:exact_text "8. ENCODING AND DELIVERY OF LICENSED PROGRAMS.     (a) Licensor shall, at its sole expense, encode each Licensed Program selected for distribution and exhibition by Rogers hereunder and shall deliver such fully encoded Licensed Program to Rogers on a DLT master tape, DVD-R disc or other master pre-recorded format acceptable to Rogers (each, a \"Master\") at least thirty (30) days prior to the availability date for such Licensed Program. Such Masters shall at all times remain the sole property of Licensor and, within fifteen (15) days following the termination or expiration of this Agreement, Rogers shall either return to Licensor all such Masters then in its possession, or issue a certificate of erasure.     (b) To the extent any Master delivered by Licensor hereunder is determined by Rogers, in its sole discretion, acting reasonably, to be defective: (i) Licensor shall forthwith provide Rogers with a replacement Master; and (ii) if Rogers is unable to distribute and/or exhibit the Licensed Program on the availability date as a result of the defectiveness of any such Master, the License Fee payable in respect of such Licensed Program shall be reduced by 10% for the balance of the License Period.     9. TECHNICAL STANDARDS.   " ;
+    ct:source_path "cuad/EuromediaHoldingsCorp_20070215_10SB12G_EX-10.B(01)_525118_EX-10.B(01)_Content License Agreement.txt" ;
+    ct:source_sha256 "410d3d3ff1c928befd4d2c5f405cc1215f4687db744c5abf1e98adefd97d7478" ;
+    ct:start_char 8269 .
+
+ct:SourcePassage a owl:Class ;
+    rdfs:label "SourcePassage" .
+
+ct:Reference a owl:Class ;
+    rdfs:label "Reference" .
+
+ct:Rule a owl:Class ;
+    rdfs:label "Rule" .
+

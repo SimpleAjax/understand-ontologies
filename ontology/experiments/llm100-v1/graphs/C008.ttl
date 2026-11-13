@@ -1,0 +1,189 @@
+@prefix ct: <https://cimulink.local/ontology/contract-terms/0.1#> .
+@prefix ex: <https://cimulink.local/ontology/llm100-v1/> .
+@prefix meta: <https://cimulink.local/ontology/extraction#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ct: a owl:Ontology ;
+    rdfs:comment "Partial five-contract development sample. No claim of complete contract coverage or legal correctness." .
+
+ct:agreement_effective_from a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:applies_within a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:calendar_date_status a owl:DatatypeProperty .
+
+ct:coverage a owl:DatatypeProperty .
+
+ct:description a owl:DatatypeProperty .
+
+ct:duration a owl:DatatypeProperty .
+
+ct:duration_status a owl:DatatypeProperty .
+
+ct:end_char a owl:DatatypeProperty .
+
+ct:end_date_status a owl:DatatypeProperty .
+
+ct:ends_on_event a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:exact_text a owl:DatatypeProperty .
+
+ct:has_party a owl:ObjectProperty ;
+    rdfs:domain ct:Agreement ;
+    rdfs:range ct:Party .
+
+ct:has_rule a owl:ObjectProperty ;
+    rdfs:domain ct:Agreement ;
+    rdfs:range ct:Rule .
+
+ct:kind a owl:DatatypeProperty .
+
+ct:notice_actor a owl:DatatypeProperty .
+
+ct:notice_form a owl:DatatypeProperty .
+
+ct:notice_period_status a owl:DatatypeProperty .
+
+ct:qualifies a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Rule .
+
+ct:references_section a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:renewal_count a owl:DatatypeProperty .
+
+ct:resolution_status a owl:DatatypeProperty .
+
+ct:resolved_to a owl:ObjectProperty ;
+    rdfs:domain ct:Reference ;
+    rdfs:range ct:SourcePassage .
+
+ct:source_path a owl:DatatypeProperty .
+
+ct:source_sha256 a owl:DatatypeProperty .
+
+ct:start_char a owl:DatatypeProperty .
+
+ct:starts_from a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:stated_end_date a owl:DatatypeProperty .
+
+ct:subject_to a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Condition .
+
+ct:supported_by a owl:ObjectProperty ;
+    rdfs:range ct:SourcePassage .
+
+ct:termination_notice a owl:DatatypeProperty .
+
+ex:C008 a ct:Agreement ;
+    rdfs:label "ArcGroupInc_20171211_8-K_EX-10.1_10976103_EX-10.1_Sponsorship Agreement.txt" ;
+    ct:coverage "LOCAL_LLM_PROPOSED_PARTIAL; NOT_HUMAN_REVIEWED" ;
+    ct:has_rule ex:C008R0001,
+        ex:C008R0002,
+        ex:C008R0003 ;
+    ct:source_path "cuad/ArcGroupInc_20171211_8-K_EX-10.1_10976103_EX-10.1_Sponsorship Agreement.txt" ;
+    ct:source_sha256 "4f6122be05857c75d5ea3bd3be66bcceaab1a968e276330f8d7ee60e694d1fec" ;
+    meta:model_digest "0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0" .
+
+ct:Party a owl:Class ;
+    rdfs:label "Party" .
+
+ex:C008P0001 a ct:SourcePassage ;
+    ct:end_char 1322 ;
+    ct:exact_text "Exhibit 10.1   JACKSONVILLE JAGUARS SPONSORSHIP AGREEMENT   This Sponsorship Agreement (this \"Agreement\") is entered into as of November 27, 2017 (the \"Execution Date\") by and between Jacksonville Jaguars, LLC, a Delaware limited liability company (\"Club\"), and The ARC Group, Inc., a Florida corporation (owner and operator of Dick's Wings and Grill) (\"Sponsor\"). This Agreement consists of this Sponsorship Agreement and Exhibits A and B hereto, each of which is incorporated into and forms a part of this Agreement by this reference.   RECITALS   A. Club owns and operates the National Football League (\"NFL\") team known as the Jacksonville Jaguars (the \"Team\") and has the right to grant sponsorship rights and to exploit certain commercial, advertising and related opportunities with respect to the Team, including at the football- based stadium in Jacksonville, Florida currently named EverBank Field (the \"Stadium\").   B. Sponsor wishes to obtain certain sponsorship rights, benefits and opportunities with respect to the Team in connection with the advertising and promotion of the Sponsor Business (as defined below).   In consideration of the mutual covenants contained herein, the parties agree as follows:   1. Term of Agreement. This Agreement shall be binding on the parties hereto as of the Execution Date. " ;
+    ct:source_path "cuad/ArcGroupInc_20171211_8-K_EX-10.1_10976103_EX-10.1_Sponsorship Agreement.txt" ;
+    ct:source_sha256 "4f6122be05857c75d5ea3bd3be66bcceaab1a968e276330f8d7ee60e694d1fec" ;
+    ct:start_char 0 .
+
+ex:C008P0002 a ct:SourcePassage ;
+    ct:end_char 2489 ;
+    ct:exact_text "The term of this Agreement (the \"Term\") shall commence as of April 1, 2018 (the \"Effective Date\") and shall expire upon the later of: (a) the conclusion of the 2022/23 NFL season and (b) the last day in February, 2023 (such expiration date, the \"Scheduled Expiration Date\"), unless sooner terminated pursuant to the terms of this Agreement.   2. Sponsor Rights and Benefits. Subject to the terms and conditions of this Agreement, as part of the consideration of the full and timely payment of the Sponsor Fees, Club hereby grants to Sponsor, and Sponsor hereby accepts, solely in the Territory, and during the Term: (i) the right to use the Benefits set forth on Exhibit A and the license and right to use the Team Marks solely in connection with the advertisement and promotion of Sponsor's Dick's Wings and Grill branded restaurants (the \"Sponsor Business\") in accordance with this Agreement; and (ii) the right to use the designation \"Official Wings of the Jacksonville Jaguars\" and such other designations as Club and Sponsor may agree to in a writing from time to time (collectively, the \"Official Designations\"), solely in connection with the Sponsor Business. " ;
+    ct:source_path "cuad/ArcGroupInc_20171211_8-K_EX-10.1_10976103_EX-10.1_Sponsorship Agreement.txt" ;
+    ct:source_sha256 "4f6122be05857c75d5ea3bd3be66bcceaab1a968e276330f8d7ee60e694d1fec" ;
+    ct:start_char 1322 .
+
+ex:C008R0001 a ct:Rule ;
+    rdfs:label "Initial Term — source passage 1" ;
+    ct:kind "INITIAL_TERM" ;
+    ct:references_section ex:C008R0001Ref0 ;
+    ct:supported_by ex:C008P0001 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C008R0001Ref0 a ct:Reference ;
+    rdfs:label "Exhibit 10.1" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C008R0002 a ct:Rule ;
+    rdfs:label "Initial Term — source passage 2" ;
+    ct:kind "INITIAL_TERM" ;
+    ct:references_section ex:C008R0002Ref0 ;
+    ct:supported_by ex:C008P0002 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C008R0002Ref0 a ct:Reference ;
+    rdfs:label "Exhibit A" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C008R0003 a ct:Rule ;
+    rdfs:label "Conditional Referenced Term — source passage 6" ;
+    ct:kind "CONDITIONAL_REFERENCED_TERM" ;
+    ct:references_section ex:C008R0003Ref0,
+        ex:C008R0003Ref1,
+        ex:C008R0003Ref2 ;
+    ct:subject_to ex:C008R0003Condition6 ;
+    ct:supported_by ex:C008P0006 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C008R0003Condition6 a ct:Condition ;
+    ct:description "(c) If, during the Term, the Team plays in the Hall of Fame game, or any post-season playoff game, including any wild card, divisional playoff, conference championship, or Super Bowl (each, a \"Playoff Game\"), to the extent Club has the necessary rights to grant the Benefits identified on Exhibit A for such Playoff Game, Sponsor shall pay Club an additional amount per Playoff Game equal to a pro-rated portion of the Annual Fee applicable during the then-current Contract Year. The pro-rated portion shall be determined by Club using Club's internal line item accounting values as set forth in Club's standard rate card for such Benefits during each Playoff Game; provided that the cost of the Playoff Game tickets shall be based upon the generally applicable price for such tickets (the \"Playoff Payments\"). Sponsor shall pay the Playoff Payments in accordance with Section 2(d) of the Terms and Conditions not later than 30 days following Sponsor's receipt of an invoice requesting payment for such Playoff Games; provided that Club's failure to deliver such an invoice shall not, and not be construed to, relieve Sponsor of any obligation to pay any amount owed to Club.   4. Definitions. Capitalized terms used but not otherwise defined herein have the respective meanings given to them on Exhibit B (as it may be amended or otherwise modified from time to time, the \"Terms and Conditions\").   " ;
+    ct:supported_by ex:C008P0006 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C008R0003Ref0 a ct:Reference ;
+    rdfs:label "Exhibit A" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C008R0003Ref1 a ct:Reference ;
+    rdfs:label "Section 2(d)" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C008R0003Ref2 a ct:Reference ;
+    rdfs:label "Exhibit B" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ct:Condition a owl:Class ;
+    rdfs:label "Condition" .
+
+ex:C008P0006 a ct:SourcePassage ;
+    ct:end_char 6543 ;
+    ct:exact_text "(c) If, during the Term, the Team plays in the Hall of Fame game, or any post-season playoff game, including any wild card, divisional playoff, conference championship, or Super Bowl (each, a \"Playoff Game\"), to the extent Club has the necessary rights to grant the Benefits identified on Exhibit A for such Playoff Game, Sponsor shall pay Club an additional amount per Playoff Game equal to a pro-rated portion of the Annual Fee applicable during the then-current Contract Year. The pro-rated portion shall be determined by Club using Club's internal line item accounting values as set forth in Club's standard rate card for such Benefits during each Playoff Game; provided that the cost of the Playoff Game tickets shall be based upon the generally applicable price for such tickets (the \"Playoff Payments\"). Sponsor shall pay the Playoff Payments in accordance with Section 2(d) of the Terms and Conditions not later than 30 days following Sponsor's receipt of an invoice requesting payment for such Playoff Games; provided that Club's failure to deliver such an invoice shall not, and not be construed to, relieve Sponsor of any obligation to pay any amount owed to Club.   4. Definitions. Capitalized terms used but not otherwise defined herein have the respective meanings given to them on Exhibit B (as it may be amended or otherwise modified from time to time, the \"Terms and Conditions\").   " ;
+    ct:source_path "cuad/ArcGroupInc_20171211_8-K_EX-10.1_10976103_EX-10.1_Sponsorship Agreement.txt" ;
+    ct:source_sha256 "4f6122be05857c75d5ea3bd3be66bcceaab1a968e276330f8d7ee60e694d1fec" ;
+    ct:start_char 5143 .
+
+ct:Agreement a owl:Class ;
+    rdfs:label "Agreement" .
+
+ct:SourcePassage a owl:Class ;
+    rdfs:label "SourcePassage" .
+
+ct:Reference a owl:Class ;
+    rdfs:label "Reference" .
+
+ct:Rule a owl:Class ;
+    rdfs:label "Rule" .
+

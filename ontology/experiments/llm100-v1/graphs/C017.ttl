@@ -1,0 +1,325 @@
+@prefix ct: <https://cimulink.local/ontology/contract-terms/0.1#> .
+@prefix ex: <https://cimulink.local/ontology/llm100-v1/> .
+@prefix meta: <https://cimulink.local/ontology/extraction#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ct: a owl:Ontology ;
+    rdfs:comment "Partial five-contract development sample. No claim of complete contract coverage or legal correctness." .
+
+ct:agreement_effective_from a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:applies_within a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:calendar_date_status a owl:DatatypeProperty .
+
+ct:coverage a owl:DatatypeProperty .
+
+ct:description a owl:DatatypeProperty .
+
+ct:duration a owl:DatatypeProperty .
+
+ct:duration_status a owl:DatatypeProperty .
+
+ct:end_char a owl:DatatypeProperty .
+
+ct:end_date_status a owl:DatatypeProperty .
+
+ct:ends_on_event a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:exact_text a owl:DatatypeProperty .
+
+ct:has_party a owl:ObjectProperty ;
+    rdfs:domain ct:Agreement ;
+    rdfs:range ct:Party .
+
+ct:has_rule a owl:ObjectProperty ;
+    rdfs:domain ct:Agreement ;
+    rdfs:range ct:Rule .
+
+ct:kind a owl:DatatypeProperty .
+
+ct:notice_actor a owl:DatatypeProperty .
+
+ct:notice_form a owl:DatatypeProperty .
+
+ct:notice_period_status a owl:DatatypeProperty .
+
+ct:qualifies a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Rule .
+
+ct:references_section a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:renewal_count a owl:DatatypeProperty .
+
+ct:resolution_status a owl:DatatypeProperty .
+
+ct:resolved_to a owl:ObjectProperty ;
+    rdfs:domain ct:Reference ;
+    rdfs:range ct:SourcePassage .
+
+ct:source_path a owl:DatatypeProperty .
+
+ct:source_sha256 a owl:DatatypeProperty .
+
+ct:start_char a owl:DatatypeProperty .
+
+ct:starts_from a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:stated_end_date a owl:DatatypeProperty .
+
+ct:subject_to a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Condition .
+
+ct:supported_by a owl:ObjectProperty ;
+    rdfs:range ct:SourcePassage .
+
+ct:termination_notice a owl:DatatypeProperty .
+
+ex:C017 a ct:Agreement ;
+    rdfs:label "BNLFINANCIALCORP_03_30_2007-EX-10.8-OUTSOURCING AGREEMENT.txt" ;
+    ct:coverage "LOCAL_LLM_PROPOSED_PARTIAL; NOT_HUMAN_REVIEWED" ;
+    ct:has_rule ex:C017R0001,
+        ex:C017R0002,
+        ex:C017R0003,
+        ex:C017R0004,
+        ex:C017R0005,
+        ex:C017R0006,
+        ex:C017R0007,
+        ex:C017R0008,
+        ex:C017R0009,
+        ex:C017R0010,
+        ex:C017R0011 ;
+    ct:source_path "cuad/BNLFINANCIALCORP_03_30_2007-EX-10.8-OUTSOURCING AGREEMENT.txt" ;
+    ct:source_sha256 "8eb79bb4ec5ab5dd06fd2c7633dc91a84cf816736c1ece4d90ec0b8d71f83ab2" ;
+    meta:model_digest "0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0" .
+
+ct:Party a owl:Class ;
+    rdfs:label "Party" .
+
+ex:C017P0016 a ct:SourcePassage ;
+    ct:end_char 11170 ;
+    ct:exact_text "A. CLIENT DATA. Any original documents or files provided to VIP hereunder by BNL (\"BNL Data\") are and shall remain BNL's property and, upon the termination of this Agreement for any reason, such BNL Data will be returned to BNL by VIP, subject to" ;
+    ct:source_path "cuad/BNLFINANCIALCORP_03_30_2007-EX-10.8-OUTSOURCING AGREEMENT.txt" ;
+    ct:source_sha256 "8eb79bb4ec5ab5dd06fd2c7633dc91a84cf816736c1ece4d90ec0b8d71f83ab2" ;
+    ct:start_char 10924 .
+
+ex:C017P0024 a ct:SourcePassage ;
+    ct:end_char 17165 ;
+    ct:exact_text "The provisions of this paragraph 8 shall survive the termination of this Agreement.   9. VIP REPRESENTATIONS AND WARRANTIES: DISCLAIMER: LIMITATIONS.  In  addition to the other obligations of VIP under this Agreement VIP represents, warrants and covenants to BNL both at the execution of this Agreement and at all times during the term of this Agreement that:   A. VIP is and will remain duly organized and validly existing as an Oklahoma corporation (or another state) authorized to engage in the business of providing EDP Services to its customers;" ;
+    ct:source_path "cuad/BNLFINANCIALCORP_03_30_2007-EX-10.8-OUTSOURCING AGREEMENT.txt" ;
+    ct:source_sha256 "8eb79bb4ec5ab5dd06fd2c7633dc91a84cf816736c1ece4d90ec0b8d71f83ab2" ;
+    ct:start_char 16615 .
+
+ex:C017P0051 a ct:SourcePassage ;
+    ct:end_char 38034 ;
+    ct:exact_text "0. SERVICES FOR OTHERS. BNL understands and agrees that VIP may perform for third. parties similar services using the same personnel, subject to VIP's confidentiality obligations hereunder, and that VIP may utilize such personnel for rendering services for BNL hereunder.   P. SEVERABILITY. If any provision of this Agreement shall be invalid or unenforceable, the remaining provisions of this Agreement shall not be affected thereby and each remaining provision shall be valid and enforceable to the fullest extent permitted by law.   Q. SURVIVAL. All provisions of this Agreement relating to confidentiality and indemnity shall survive the termination of this Agreement.   R. NO THIRD PARTY BENEFICIARY.  No third party is intended to be nor shall any such third party be deemed to be a third party beneficiary of this Agreement nor shall any third party acquire any rights or remedies under or through this Agreement.   S. WAIVER, Any waiver by a party of any breach of any provision of this Agreement shall not be construed as a waiver of any continuing or succeeding breach of such provision, a waiver of that provision itself or a waiver of any other right(s) under this Agreement.   The parties agree and acknowledge that they have read this Agreement. " ;
+    ct:source_path "cuad/BNLFINANCIALCORP_03_30_2007-EX-10.8-OUTSOURCING AGREEMENT.txt" ;
+    ct:source_sha256 "8eb79bb4ec5ab5dd06fd2c7633dc91a84cf816736c1ece4d90ec0b8d71f83ab2" ;
+    ct:start_char 36774 .
+
+ex:C017R0001 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 16" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:supported_by ex:C017P0016 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C017R0002 a ct:Rule ;
+    rdfs:label "Termination — source passage 19" ;
+    ct:kind "TERMINATION" ;
+    ct:subject_to ex:C017R0002Condition19 ;
+    ct:supported_by ex:C017P0019 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C017R0002Condition19 a ct:Condition ;
+    ct:description "Notwithstanding the foregoing, the confidentiality obligations set forth in this paragraph will not apply to any information which (i) is or becomes publicly available without breach of this Agreement, (ii) is independently developed by VIP outside the scope of this Agreement and without reference to the confidential information received under this Agreement, or (iii) is rightfully obtained by VIP from third parties which are not obligated to protect its confidentiality.   7. TERMINATION FOR CAUSE. This Agreement may be terminated by the non- breaching party upon any of the following events:   A. In the event that BNL fails to pay any sums of money due to VIP hereunder and does not cure such default within thirty (30) days after receipt of written notice of such nonpayment from VIP , provided that if BNL notifies VIP in writing that BNL disputes a billing and BNL pays any undisputed portion of such billing VIP shall not institute formal proceedings by arbitration or judicial review or terminate this Agreement with respect to such disputed billing until after VIP has afforded BNL an opportunity for a meeting to discuss such dispute.   B. " ;
+    ct:supported_by ex:C017P0019 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C017R0003 a ct:Rule ;
+    rdfs:label "Termination — source passage 20" ;
+    ct:kind "TERMINATION" ;
+    ct:subject_to ex:C017R0003Condition20 ;
+    ct:supported_by ex:C017P0020 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C017R0003Condition20 a ct:Condition ;
+    ct:description "In the event that a party hereto breaches any of the material terms, covenants or conditions of this Agreement (other than a breach under paragraph (A) above) and fails to cure the same within thirty (30) days after receipt of written notice of such breach from the non-breaching party.   C. In the event that a party hereto becomes or is declared insolvent or bankrupt, is the subject of any proceedings relating to its liquidation, insolvency or for the appointment of a receiver or similar officer for it, makes an assignment for the benefit of all or substantially all of its creditors, or enters into an agreement for the composition, extension, or readjustment of all or substantially all of its obligations or admits of its general inability to pay its debts as they become due.   D. In the event of termination under this section, VIP will give BNL, at its request and" ;
+    ct:supported_by ex:C017P0020 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C017R0004 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 24" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:references_section ex:C017R0004Ref0 ;
+    ct:supported_by ex:C017P0024 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C017R0004Ref0 a ct:Reference ;
+    rdfs:label "paragraph 8" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C017R0005 a ct:Rule ;
+    rdfs:label "Initial Term — source passage 41" ;
+    ct:kind "INITIAL_TERM" ;
+    ct:references_section ex:C017R0005Ref0 ;
+    ct:subject_to ex:C017R0005Condition41 ;
+    ct:supported_by ex:C017P0041 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C017R0005Condition41 a ct:Condition ;
+    ct:description "15. TERM.   A. The initial term (\"Initial Term\") of this Agreement shall be for one year commencing on the 1st day of May, 2006 (\"Effective Date\"). Payments under this Agreement by BNL shall commence as provided in paragraph 5(A) hereof.   B. Unless either party gives written notice to terminate this Agreement at least six (6) months prior to the end of said Initial Term, this Agreement shall continue on a year to year basis (\"Extended Term(s)\") until terminated by either party by giving written notice of termination thereof to the other party at least six (6) months prior to the end of the then current Extended Term.   C. However, if, after the Initial Term, BNL terminates this Agreement during an  Extended Term by giving less than six (6) months notice, in addition to any other sums due VIP under this Agreement, BNL shall pay to VIP a cancellation fee equal to the greater of (i) the Minimum Fee multiplied by the remaining number of months in the then current term, (ii) the average of the monthly billings for the six (6) month period immediately preceding the date upon which the notice of termination is received by VIP from BNL multiplied by the remaining number of months in the then current term or (iii) thirty thousand dollars ($30, 000).   E. " ;
+    ct:supported_by ex:C017P0041 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C017R0005Ref0 a ct:Reference ;
+    rdfs:label "paragraph 5(A)" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C017R0006 a ct:Rule ;
+    rdfs:label "Automatic Renewal — source passage 41" ;
+    ct:kind "AUTOMATIC_RENEWAL" ;
+    ct:references_section ex:C017R0006Ref0 ;
+    ct:subject_to ex:C017R0006Condition41 ;
+    ct:supported_by ex:C017P0041 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C017R0006Condition41 a ct:Condition ;
+    ct:description "15. TERM.   A. The initial term (\"Initial Term\") of this Agreement shall be for one year commencing on the 1st day of May, 2006 (\"Effective Date\"). Payments under this Agreement by BNL shall commence as provided in paragraph 5(A) hereof.   B. Unless either party gives written notice to terminate this Agreement at least six (6) months prior to the end of said Initial Term, this Agreement shall continue on a year to year basis (\"Extended Term(s)\") until terminated by either party by giving written notice of termination thereof to the other party at least six (6) months prior to the end of the then current Extended Term.   C. However, if, after the Initial Term, BNL terminates this Agreement during an  Extended Term by giving less than six (6) months notice, in addition to any other sums due VIP under this Agreement, BNL shall pay to VIP a cancellation fee equal to the greater of (i) the Minimum Fee multiplied by the remaining number of months in the then current term, (ii) the average of the monthly billings for the six (6) month period immediately preceding the date upon which the notice of termination is received by VIP from BNL multiplied by the remaining number of months in the then current term or (iii) thirty thousand dollars ($30, 000).   E. " ;
+    ct:supported_by ex:C017P0041 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C017R0006Ref0 a ct:Reference ;
+    rdfs:label "paragraph 5(A)" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C017R0007 a ct:Rule ;
+    rdfs:label "Conditional Referenced Term — source passage 41" ;
+    ct:kind "CONDITIONAL_REFERENCED_TERM" ;
+    ct:references_section ex:C017R0007Ref0 ;
+    ct:subject_to ex:C017R0007Condition41 ;
+    ct:supported_by ex:C017P0041 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C017R0007Condition41 a ct:Condition ;
+    ct:description "15. TERM.   A. The initial term (\"Initial Term\") of this Agreement shall be for one year commencing on the 1st day of May, 2006 (\"Effective Date\"). Payments under this Agreement by BNL shall commence as provided in paragraph 5(A) hereof.   B. Unless either party gives written notice to terminate this Agreement at least six (6) months prior to the end of said Initial Term, this Agreement shall continue on a year to year basis (\"Extended Term(s)\") until terminated by either party by giving written notice of termination thereof to the other party at least six (6) months prior to the end of the then current Extended Term.   C. However, if, after the Initial Term, BNL terminates this Agreement during an  Extended Term by giving less than six (6) months notice, in addition to any other sums due VIP under this Agreement, BNL shall pay to VIP a cancellation fee equal to the greater of (i) the Minimum Fee multiplied by the remaining number of months in the then current term, (ii) the average of the monthly billings for the six (6) month period immediately preceding the date upon which the notice of termination is received by VIP from BNL multiplied by the remaining number of months in the then current term or (iii) thirty thousand dollars ($30, 000).   E. " ;
+    ct:supported_by ex:C017P0041 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C017R0007Ref0 a ct:Reference ;
+    rdfs:label "paragraph 5(A)" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C017R0008 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 42" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:references_section ex:C017R0008Ref0,
+        ex:C017R0008Ref1 ;
+    ct:supported_by ex:C017P0042 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C017R0008Ref0 a ct:Reference ;
+    rdfs:label "Schedule A" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C017R0008Ref1 a ct:Reference ;
+    rdfs:label "paragraph 16(A)" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C017R0009 a ct:Rule ;
+    rdfs:label "Termination — source passage 42" ;
+    ct:kind "TERMINATION" ;
+    ct:references_section ex:C017R0009Ref0,
+        ex:C017R0009Ref1 ;
+    ct:supported_by ex:C017P0042 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C017R0009Ref0 a ct:Reference ;
+    rdfs:label "Schedule A" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C017R0009Ref1 a ct:Reference ;
+    rdfs:label "paragraph 16(A)" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C017R0010 a ct:Rule ;
+    rdfs:label "Conditional Referenced Term — source passage 48" ;
+    ct:kind "CONDITIONAL_REFERENCED_TERM" ;
+    ct:subject_to ex:C017R0010Condition48 ;
+    ct:supported_by ex:C017P0048 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C017R0010Condition48 a ct:Condition ;
+    ct:description "(vi) BNL's failure to provide any equipment, software, facility or performance called for by this Agreement, and the same is necessary for VIP's performance hereunder, (vii) BNL's material breach of any of the terms, covenants, or representations set forth in this Agreement or (viii) the actions of any government agency or common carrier or other third party over whom VIP has no control. Performance times shall be considered extended for a period of time equivalent to the time lost because of such delay.   K. HEADINGS. The paragraph headings used herein are for reference and convenience only and shall not enter into the interpretation hereof.   L. INDEPENDENT CONTRACTOR. VIP and BNL are strictly independent contractors. Neither party has the right to bind the other in any manner, and nothing in this Agreement shall be interpreted to make either party the agent or legal representative of the other or to make the parties joint venturers or partners.   M. LIMIT A TIONS OF ACTIONS. Any claim of action of any kind which one party to this Agreement may have against the other party relating to or arising out of this Agreement must be commenced within two (2) years from the date such claim or cause of action shall have first accrued. N. NOTICES. " ;
+    ct:supported_by ex:C017P0048 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C017R0011 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 51" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:supported_by ex:C017P0051 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C017P0019 a ct:SourcePassage ;
+    ct:end_char 13511 ;
+    ct:exact_text "Notwithstanding the foregoing, the confidentiality obligations set forth in this paragraph will not apply to any information which (i) is or becomes publicly available without breach of this Agreement, (ii) is independently developed by VIP outside the scope of this Agreement and without reference to the confidential information received under this Agreement, or (iii) is rightfully obtained by VIP from third parties which are not obligated to protect its confidentiality.   7. TERMINATION FOR CAUSE. This Agreement may be terminated by the non- breaching party upon any of the following events:   A. In the event that BNL fails to pay any sums of money due to VIP hereunder and does not cure such default within thirty (30) days after receipt of written notice of such nonpayment from VIP , provided that if BNL notifies VIP in writing that BNL disputes a billing and BNL pays any undisputed portion of such billing VIP shall not institute formal proceedings by arbitration or judicial review or terminate this Agreement with respect to such disputed billing until after VIP has afforded BNL an opportunity for a meeting to discuss such dispute.   B. " ;
+    ct:source_path "cuad/BNLFINANCIALCORP_03_30_2007-EX-10.8-OUTSOURCING AGREEMENT.txt" ;
+    ct:source_sha256 "8eb79bb4ec5ab5dd06fd2c7633dc91a84cf816736c1ece4d90ec0b8d71f83ab2" ;
+    ct:start_char 12356 .
+
+ex:C017P0020 a ct:SourcePassage ;
+    ct:end_char 14387 ;
+    ct:exact_text "In the event that a party hereto breaches any of the material terms, covenants or conditions of this Agreement (other than a breach under paragraph (A) above) and fails to cure the same within thirty (30) days after receipt of written notice of such breach from the non-breaching party.   C. In the event that a party hereto becomes or is declared insolvent or bankrupt, is the subject of any proceedings relating to its liquidation, insolvency or for the appointment of a receiver or similar officer for it, makes an assignment for the benefit of all or substantially all of its creditors, or enters into an agreement for the composition, extension, or readjustment of all or substantially all of its obligations or admits of its general inability to pay its debts as they become due.   D. In the event of termination under this section, VIP will give BNL, at its request and" ;
+    ct:source_path "cuad/BNLFINANCIALCORP_03_30_2007-EX-10.8-OUTSOURCING AGREEMENT.txt" ;
+    ct:source_sha256 "8eb79bb4ec5ab5dd06fd2c7633dc91a84cf816736c1ece4d90ec0b8d71f83ab2" ;
+    ct:start_char 13511 .
+
+ex:C017P0042 a ct:SourcePassage ;
+    ct:end_char 30925 ;
+    ct:exact_text "From and after notice of termination is received by VIP, any new reports or other services provided by VIP other than routine processing services which have been done for BNL under this Agreement shall be deemed to be additional services and shall be performed by VIP at VIP's then current rates for such termination services as specified on Schedule A.   F. Upon termination or expiration of this Agreement, BNL shall return all software and related manuals, if any, provided by VIP to BNL during the term of this Agreement.   16. MISCELLANEOUS.   A. ADVERTISING. During the term of this Agreement BNL consents to the use of the name of BNL by VIP in identifying BNL as a client, in advertising, publicity, or similar materials distributed to prospective clients. Except as set forth in this paragraph 16(A), the terms of this Agreement shall be kept confidential.   B. AMENDMENTS. No amendment, change, waiver, or discharge hereof shall be valid unless in writing and signed by an authorized representative of the party against which such amendment, change, waiver, or discharge is sought to be enforced. Any provision  of BNL' purchase' order or other request for services shall not bind VIP. VIP's failure to object to any such provision shall not be construed as a waiver of the terms and conditions of this Agreement nor as acceptance of any such other provision(s)." ;
+    ct:source_path "cuad/BNLFINANCIALCORP_03_30_2007-EX-10.8-OUTSOURCING AGREEMENT.txt" ;
+    ct:source_sha256 "8eb79bb4ec5ab5dd06fd2c7633dc91a84cf816736c1ece4d90ec0b8d71f83ab2" ;
+    ct:start_char 29553 .
+
+ex:C017P0048 a ct:SourcePassage ;
+    ct:end_char 36223 ;
+    ct:exact_text "(vi) BNL's failure to provide any equipment, software, facility or performance called for by this Agreement, and the same is necessary for VIP's performance hereunder, (vii) BNL's material breach of any of the terms, covenants, or representations set forth in this Agreement or (viii) the actions of any government agency or common carrier or other third party over whom VIP has no control. Performance times shall be considered extended for a period of time equivalent to the time lost because of such delay.   K. HEADINGS. The paragraph headings used herein are for reference and convenience only and shall not enter into the interpretation hereof.   L. INDEPENDENT CONTRACTOR. VIP and BNL are strictly independent contractors. Neither party has the right to bind the other in any manner, and nothing in this Agreement shall be interpreted to make either party the agent or legal representative of the other or to make the parties joint venturers or partners.   M. LIMIT A TIONS OF ACTIONS. Any claim of action of any kind which one party to this Agreement may have against the other party relating to or arising out of this Agreement must be commenced within two (2) years from the date such claim or cause of action shall have first accrued. N. NOTICES. " ;
+    ct:source_path "cuad/BNLFINANCIALCORP_03_30_2007-EX-10.8-OUTSOURCING AGREEMENT.txt" ;
+    ct:source_sha256 "8eb79bb4ec5ab5dd06fd2c7633dc91a84cf816736c1ece4d90ec0b8d71f83ab2" ;
+    ct:start_char 34965 .
+
+ct:Agreement a owl:Class ;
+    rdfs:label "Agreement" .
+
+ex:C017P0041 a ct:SourcePassage ;
+    ct:end_char 29553 ;
+    ct:exact_text "15. TERM.   A. The initial term (\"Initial Term\") of this Agreement shall be for one year commencing on the 1st day of May, 2006 (\"Effective Date\"). Payments under this Agreement by BNL shall commence as provided in paragraph 5(A) hereof.   B. Unless either party gives written notice to terminate this Agreement at least six (6) months prior to the end of said Initial Term, this Agreement shall continue on a year to year basis (\"Extended Term(s)\") until terminated by either party by giving written notice of termination thereof to the other party at least six (6) months prior to the end of the then current Extended Term.   C. However, if, after the Initial Term, BNL terminates this Agreement during an  Extended Term by giving less than six (6) months notice, in addition to any other sums due VIP under this Agreement, BNL shall pay to VIP a cancellation fee equal to the greater of (i) the Minimum Fee multiplied by the remaining number of months in the then current term, (ii) the average of the monthly billings for the six (6) month period immediately preceding the date upon which the notice of termination is received by VIP from BNL multiplied by the remaining number of months in the then current term or (iii) thirty thousand dollars ($30, 000).   E. " ;
+    ct:source_path "cuad/BNLFINANCIALCORP_03_30_2007-EX-10.8-OUTSOURCING AGREEMENT.txt" ;
+    ct:source_sha256 "8eb79bb4ec5ab5dd06fd2c7633dc91a84cf816736c1ece4d90ec0b8d71f83ab2" ;
+    ct:start_char 28286 .
+
+ct:Condition a owl:Class ;
+    rdfs:label "Condition" .
+
+ct:SourcePassage a owl:Class ;
+    rdfs:label "SourcePassage" .
+
+ct:Reference a owl:Class ;
+    rdfs:label "Reference" .
+
+ct:Rule a owl:Class ;
+    rdfs:label "Rule" .
+

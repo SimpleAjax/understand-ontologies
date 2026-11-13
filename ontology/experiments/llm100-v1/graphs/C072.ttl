@@ -1,0 +1,256 @@
+@prefix ct: <https://cimulink.local/ontology/contract-terms/0.1#> .
+@prefix ex: <https://cimulink.local/ontology/llm100-v1/> .
+@prefix meta: <https://cimulink.local/ontology/extraction#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ct: a owl:Ontology ;
+    rdfs:comment "Partial five-contract development sample. No claim of complete contract coverage or legal correctness." .
+
+ct:agreement_effective_from a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:applies_within a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:calendar_date_status a owl:DatatypeProperty .
+
+ct:coverage a owl:DatatypeProperty .
+
+ct:description a owl:DatatypeProperty .
+
+ct:duration a owl:DatatypeProperty .
+
+ct:duration_status a owl:DatatypeProperty .
+
+ct:end_char a owl:DatatypeProperty .
+
+ct:end_date_status a owl:DatatypeProperty .
+
+ct:ends_on_event a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:exact_text a owl:DatatypeProperty .
+
+ct:has_party a owl:ObjectProperty ;
+    rdfs:domain ct:Agreement ;
+    rdfs:range ct:Party .
+
+ct:has_rule a owl:ObjectProperty ;
+    rdfs:domain ct:Agreement ;
+    rdfs:range ct:Rule .
+
+ct:kind a owl:DatatypeProperty .
+
+ct:notice_actor a owl:DatatypeProperty .
+
+ct:notice_form a owl:DatatypeProperty .
+
+ct:notice_period_status a owl:DatatypeProperty .
+
+ct:qualifies a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Rule .
+
+ct:references_section a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:renewal_count a owl:DatatypeProperty .
+
+ct:resolution_status a owl:DatatypeProperty .
+
+ct:resolved_to a owl:ObjectProperty ;
+    rdfs:domain ct:Reference ;
+    rdfs:range ct:SourcePassage .
+
+ct:source_path a owl:DatatypeProperty .
+
+ct:source_sha256 a owl:DatatypeProperty .
+
+ct:start_char a owl:DatatypeProperty .
+
+ct:starts_from a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:stated_end_date a owl:DatatypeProperty .
+
+ct:subject_to a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Condition .
+
+ct:supported_by a owl:ObjectProperty ;
+    rdfs:range ct:SourcePassage .
+
+ct:termination_notice a owl:DatatypeProperty .
+
+ex:C072 a ct:Agreement ;
+    rdfs:label "RISEEDUCATIONCAYMANLTD_04_17_2020-EX-4.23-SERVICE AGREEMENT.txt" ;
+    ct:coverage "LOCAL_LLM_PROPOSED_PARTIAL; NOT_HUMAN_REVIEWED" ;
+    ct:has_rule ex:C072R0001,
+        ex:C072R0002,
+        ex:C072R0003,
+        ex:C072R0004,
+        ex:C072R0005,
+        ex:C072R0006,
+        ex:C072R0007,
+        ex:C072R0008 ;
+    ct:source_path "cuad/RISEEDUCATIONCAYMANLTD_04_17_2020-EX-4.23-SERVICE AGREEMENT.txt" ;
+    ct:source_sha256 "4d9af82e13bc95c4459e66c7d19439753237bc89e6e4bf10819aedcc4018534f" ;
+    meta:model_digest "0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0" .
+
+ct:Party a owl:Class ;
+    rdfs:label "Party" .
+
+ex:C072P0037 a ct:SourcePassage ;
+    ct:end_char 11251 ;
+    ct:exact_text "Either Party's failure to exercise the right to claim liquidated damages or indemnification for losses against the other Party shall not be deemed as a waiver of such right. 10. Termination" ;
+    ct:source_path "cuad/RISEEDUCATIONCAYMANLTD_04_17_2020-EX-4.23-SERVICE AGREEMENT.txt" ;
+    ct:source_sha256 "4d9af82e13bc95c4459e66c7d19439753237bc89e6e4bf10819aedcc4018534f" ;
+    ct:start_char 11062 .
+
+ex:C072R0001 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 33" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:subject_to ex:C072R0001Condition33 ;
+    ct:supported_by ex:C072P0033 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C072R0001Condition33 a ct:Condition ;
+    ct:description "The Parties covenant and confirm that any verbal communications, written documents or electronic information (including but not limited to software codes and any contents contained in the software) relating to this Agreement between the Parties shall be confidential information. Neither Party may disclose any confidential information of the other Party without prior written consent from the other Party, except that: (1) relevant information has been made public not as a result of any fault or disclosure by the information recipient; (2) such disclosure is required under applicable laws or regulations or rules of securities exchanges. Any employees of one Party disclosing any confidential information shall be deemed as the Party disclosing confidential information and such Party shall be liable therefor under this Agreement. This clause shall survive the termination of this Agreement. 4" ;
+    ct:supported_by ex:C072P0033 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C072R0002 a ct:Rule ;
+    rdfs:label "Termination — source passage 36" ;
+    ct:kind "TERMINATION" ;
+    ct:subject_to ex:C072R0002Condition36 ;
+    ct:supported_by ex:C072P0036 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C072R0002Condition36 a ct:Condition ;
+    ct:description "Notwithstanding the foregoing, upon any delay by Service Recipient in its payment of any Service Fee to Service Provider, for each day of delay in such payment, Service Recipient must pay Service Provider liquidated damages at 0.5 percent (0.5%) of the Service Fee that are due and unpaid. In the event that such delay in payment is more than fifteen (15) days, Service Provider may terminate this Agreement. Service Recipient shall be liable for indemnifying Service Provider in full for the losses it incurred therefrom." ;
+    ct:supported_by ex:C072P0036 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C072R0003 a ct:Rule ;
+    rdfs:label "Termination — source passage 37" ;
+    ct:kind "TERMINATION" ;
+    ct:supported_by ex:C072P0037 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C072R0004 a ct:Rule ;
+    rdfs:label "Termination — source passage 38" ;
+    ct:kind "TERMINATION" ;
+    ct:subject_to ex:C072R0004Condition38 ;
+    ct:supported_by ex:C072P0038 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C072R0004Condition38 a ct:Condition ;
+    ct:description "This Agreement shall be terminated upon the occurrence of any of the following: (1) The validity period of this Agreement expires and the Parties fail to reach an agreement on renewal; (2) The Parties mutually agree to terminate this Agreement; or (3) Service Provider exercises the right to terminate this Agreement upon a default by Service Recipient." ;
+    ct:supported_by ex:C072P0038 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C072R0005 a ct:Rule ;
+    rdfs:label "Conditional Referenced Term — source passage 38" ;
+    ct:kind "CONDITIONAL_REFERENCED_TERM" ;
+    ct:subject_to ex:C072R0005Condition38 ;
+    ct:supported_by ex:C072P0038 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C072R0005Condition38 a ct:Condition ;
+    ct:description "This Agreement shall be terminated upon the occurrence of any of the following: (1) The validity period of this Agreement expires and the Parties fail to reach an agreement on renewal; (2) The Parties mutually agree to terminate this Agreement; or (3) Service Provider exercises the right to terminate this Agreement upon a default by Service Recipient." ;
+    ct:supported_by ex:C072P0038 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C072R0006 a ct:Rule ;
+    rdfs:label "Termination — source passage 39" ;
+    ct:kind "TERMINATION" ;
+    ct:subject_to ex:C072R0006Condition39 ;
+    ct:supported_by ex:C072P0039 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C072R0006Condition39 a ct:Condition ;
+    ct:description "If this Agreement is terminated by Service Provider upon a default by Service Recipient, Service Provider will not refund the prepaid Service Fee to Service Recipient. 11. Notice" ;
+    ct:supported_by ex:C072P0039 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C072R0007 a ct:Rule ;
+    rdfs:label "Initial Term — source passage 50" ;
+    ct:kind "INITIAL_TERM" ;
+    ct:subject_to ex:C072R0007Condition50 ;
+    ct:supported_by ex:C072P0050 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C072R0007Condition50 a ct:Condition ;
+    ct:description "This Agreement shall be effective as of the date set forth above in this Agreement. The term of this Agreement shall be five (5) years. This Agreement shall be renewed automatically for another five (5) years upon the expiration unless the Parties confirm, in writing, the termination of this Agreement. 14. Miscellaneous (1) [This Agreement shall supersede other service agreements previously entered into by both Parties. In case of any conflicts in any terms and conditions or any dispute on the interpretation, application or implementation of this Agreement, this Agreement shall prevail. Any amendment to this Agreement shall be in writing and executed by both Parties hereto.] (2) This Agreement is executed in two (2) original copies and each Party shall hold one original copy. Both original copies shall have the same legal effect. (3) This Agreement shall become effective upon being affixed with both Parties' official seals." ;
+    ct:supported_by ex:C072P0050 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C072R0008 a ct:Rule ;
+    rdfs:label "Automatic Renewal — source passage 50" ;
+    ct:kind "AUTOMATIC_RENEWAL" ;
+    ct:subject_to ex:C072R0008Condition50 ;
+    ct:supported_by ex:C072P0050 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C072R0008Condition50 a ct:Condition ;
+    ct:description "This Agreement shall be effective as of the date set forth above in this Agreement. The term of this Agreement shall be five (5) years. This Agreement shall be renewed automatically for another five (5) years upon the expiration unless the Parties confirm, in writing, the termination of this Agreement. 14. Miscellaneous (1) [This Agreement shall supersede other service agreements previously entered into by both Parties. In case of any conflicts in any terms and conditions or any dispute on the interpretation, application or implementation of this Agreement, this Agreement shall prevail. Any amendment to this Agreement shall be in writing and executed by both Parties hereto.] (2) This Agreement is executed in two (2) original copies and each Party shall hold one original copy. Both original copies shall have the same legal effect. (3) This Agreement shall become effective upon being affixed with both Parties' official seals." ;
+    ct:supported_by ex:C072P0050 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C072P0033 a ct:SourcePassage ;
+    ct:end_char 10076 ;
+    ct:exact_text "The Parties covenant and confirm that any verbal communications, written documents or electronic information (including but not limited to software codes and any contents contained in the software) relating to this Agreement between the Parties shall be confidential information. Neither Party may disclose any confidential information of the other Party without prior written consent from the other Party, except that: (1) relevant information has been made public not as a result of any fault or disclosure by the information recipient; (2) such disclosure is required under applicable laws or regulations or rules of securities exchanges. Any employees of one Party disclosing any confidential information shall be deemed as the Party disclosing confidential information and such Party shall be liable therefor under this Agreement. This clause shall survive the termination of this Agreement. 4" ;
+    ct:source_path "cuad/RISEEDUCATIONCAYMANLTD_04_17_2020-EX-4.23-SERVICE AGREEMENT.txt" ;
+    ct:source_sha256 "4d9af82e13bc95c4459e66c7d19439753237bc89e6e4bf10819aedcc4018534f" ;
+    ct:start_char 9178 .
+
+ex:C072P0036 a ct:SourcePassage ;
+    ct:end_char 11060 ;
+    ct:exact_text "Notwithstanding the foregoing, upon any delay by Service Recipient in its payment of any Service Fee to Service Provider, for each day of delay in such payment, Service Recipient must pay Service Provider liquidated damages at 0.5 percent (0.5%) of the Service Fee that are due and unpaid. In the event that such delay in payment is more than fifteen (15) days, Service Provider may terminate this Agreement. Service Recipient shall be liable for indemnifying Service Provider in full for the losses it incurred therefrom." ;
+    ct:source_path "cuad/RISEEDUCATIONCAYMANLTD_04_17_2020-EX-4.23-SERVICE AGREEMENT.txt" ;
+    ct:source_sha256 "4d9af82e13bc95c4459e66c7d19439753237bc89e6e4bf10819aedcc4018534f" ;
+    ct:start_char 10538 .
+
+ex:C072P0039 a ct:SourcePassage ;
+    ct:end_char 11786 ;
+    ct:exact_text "If this Agreement is terminated by Service Provider upon a default by Service Recipient, Service Provider will not refund the prepaid Service Fee to Service Recipient. 11. Notice" ;
+    ct:source_path "cuad/RISEEDUCATIONCAYMANLTD_04_17_2020-EX-4.23-SERVICE AGREEMENT.txt" ;
+    ct:source_sha256 "4d9af82e13bc95c4459e66c7d19439753237bc89e6e4bf10819aedcc4018534f" ;
+    ct:start_char 11608 .
+
+ct:Agreement a owl:Class ;
+    rdfs:label "Agreement" .
+
+ex:C072P0038 a ct:SourcePassage ;
+    ct:end_char 11606 ;
+    ct:exact_text "This Agreement shall be terminated upon the occurrence of any of the following: (1) The validity period of this Agreement expires and the Parties fail to reach an agreement on renewal; (2) The Parties mutually agree to terminate this Agreement; or (3) Service Provider exercises the right to terminate this Agreement upon a default by Service Recipient." ;
+    ct:source_path "cuad/RISEEDUCATIONCAYMANLTD_04_17_2020-EX-4.23-SERVICE AGREEMENT.txt" ;
+    ct:source_sha256 "4d9af82e13bc95c4459e66c7d19439753237bc89e6e4bf10819aedcc4018534f" ;
+    ct:start_char 11253 .
+
+ex:C072P0050 a ct:SourcePassage ;
+    ct:end_char 14215 ;
+    ct:exact_text "This Agreement shall be effective as of the date set forth above in this Agreement. The term of this Agreement shall be five (5) years. This Agreement shall be renewed automatically for another five (5) years upon the expiration unless the Parties confirm, in writing, the termination of this Agreement. 14. Miscellaneous (1) [This Agreement shall supersede other service agreements previously entered into by both Parties. In case of any conflicts in any terms and conditions or any dispute on the interpretation, application or implementation of this Agreement, this Agreement shall prevail. Any amendment to this Agreement shall be in writing and executed by both Parties hereto.] (2) This Agreement is executed in two (2) original copies and each Party shall hold one original copy. Both original copies shall have the same legal effect. (3) This Agreement shall become effective upon being affixed with both Parties' official seals." ;
+    ct:source_path "cuad/RISEEDUCATIONCAYMANLTD_04_17_2020-EX-4.23-SERVICE AGREEMENT.txt" ;
+    ct:source_sha256 "4d9af82e13bc95c4459e66c7d19439753237bc89e6e4bf10819aedcc4018534f" ;
+    ct:start_char 13278 .
+
+ct:Reference a owl:Class ;
+    rdfs:label "Reference" .
+
+ct:Condition a owl:Class ;
+    rdfs:label "Condition" .
+
+ct:SourcePassage a owl:Class ;
+    rdfs:label "SourcePassage" .
+
+ct:Rule a owl:Class ;
+    rdfs:label "Rule" .
+

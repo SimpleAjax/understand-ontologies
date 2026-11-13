@@ -1,0 +1,938 @@
+@prefix ct: <https://cimulink.local/ontology/contract-terms/0.1#> .
+@prefix ex: <https://cimulink.local/ontology/llm100-v1/> .
+@prefix meta: <https://cimulink.local/ontology/extraction#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ct: a owl:Ontology ;
+    rdfs:comment "Partial five-contract development sample. No claim of complete contract coverage or legal correctness." .
+
+ct:agreement_effective_from a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:applies_within a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:calendar_date_status a owl:DatatypeProperty .
+
+ct:coverage a owl:DatatypeProperty .
+
+ct:description a owl:DatatypeProperty .
+
+ct:duration a owl:DatatypeProperty .
+
+ct:duration_status a owl:DatatypeProperty .
+
+ct:end_char a owl:DatatypeProperty .
+
+ct:end_date_status a owl:DatatypeProperty .
+
+ct:ends_on_event a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:exact_text a owl:DatatypeProperty .
+
+ct:has_party a owl:ObjectProperty ;
+    rdfs:domain ct:Agreement ;
+    rdfs:range ct:Party .
+
+ct:has_rule a owl:ObjectProperty ;
+    rdfs:domain ct:Agreement ;
+    rdfs:range ct:Rule .
+
+ct:kind a owl:DatatypeProperty .
+
+ct:notice_actor a owl:DatatypeProperty .
+
+ct:notice_form a owl:DatatypeProperty .
+
+ct:notice_period_status a owl:DatatypeProperty .
+
+ct:qualifies a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Rule .
+
+ct:references_section a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:renewal_count a owl:DatatypeProperty .
+
+ct:resolution_status a owl:DatatypeProperty .
+
+ct:resolved_to a owl:ObjectProperty ;
+    rdfs:domain ct:Reference ;
+    rdfs:range ct:SourcePassage .
+
+ct:source_path a owl:DatatypeProperty .
+
+ct:source_sha256 a owl:DatatypeProperty .
+
+ct:start_char a owl:DatatypeProperty .
+
+ct:starts_from a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:stated_end_date a owl:DatatypeProperty .
+
+ct:subject_to a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Condition .
+
+ct:supported_by a owl:ObjectProperty ;
+    rdfs:range ct:SourcePassage .
+
+ct:termination_notice a owl:DatatypeProperty .
+
+ex:C068 a ct:Agreement ;
+    rdfs:label "PfHospitalityGroupInc_20150923_10-12G_EX-10.1_9266710_EX-10.1_Franchise Agreement1.txt" ;
+    ct:coverage "LOCAL_LLM_PROPOSED_PARTIAL; NOT_HUMAN_REVIEWED" ;
+    ct:has_rule ex:C068R0001,
+        ex:C068R0002,
+        ex:C068R0003,
+        ex:C068R0004,
+        ex:C068R0005,
+        ex:C068R0006,
+        ex:C068R0007,
+        ex:C068R0008,
+        ex:C068R0009,
+        ex:C068R0010,
+        ex:C068R0011,
+        ex:C068R0012,
+        ex:C068R0013,
+        ex:C068R0014,
+        ex:C068R0015,
+        ex:C068R0016,
+        ex:C068R0017,
+        ex:C068R0018,
+        ex:C068R0019,
+        ex:C068R0020,
+        ex:C068R0021,
+        ex:C068R0022,
+        ex:C068R0023,
+        ex:C068R0024,
+        ex:C068R0025,
+        ex:C068R0026,
+        ex:C068R0027,
+        ex:C068R0028,
+        ex:C068R0029,
+        ex:C068R0030,
+        ex:C068R0031,
+        ex:C068R0032,
+        ex:C068R0033,
+        ex:C068R0034,
+        ex:C068R0035,
+        ex:C068R0036,
+        ex:C068R0037,
+        ex:C068R0038,
+        ex:C068R0039 ;
+    ct:source_path "cuad/PfHospitalityGroupInc_20150923_10-12G_EX-10.1_9266710_EX-10.1_Franchise Agreement1.txt" ;
+    ct:source_sha256 "3d9aa8e816a1271c5169e51a03dd88439b1278c21ce57cb28b786e22335108e4" ;
+    meta:model_digest "0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0" .
+
+ct:Party a owl:Class ;
+    rdfs:label "Party" .
+
+ex:C068P0121 a ct:SourcePassage ;
+    ct:end_char 104968 ;
+    ct:exact_text "If you do not obtain execution of the covenants required by this Section 12 and, upon our request, deliver those signed agreements to us, that will constitute a default under Section 15.2.13 [Termination By Us Without A Cure Period] below. Page 26 of 39" ;
+    ct:source_path "cuad/PfHospitalityGroupInc_20150923_10-12G_EX-10.1_9266710_EX-10.1_Franchise Agreement1.txt" ;
+    ct:source_sha256 "3d9aa8e816a1271c5169e51a03dd88439b1278c21ce57cb28b786e22335108e4" ;
+    ct:start_char 104715 .
+
+ex:C068P0136 a ct:SourcePassage ;
+    ct:end_char 118428 ;
+    ct:exact_text "Closing on the purchase will occur within 30 days after our notice to the transferor of the appraiser's determination of fair market value. 14.8.3. If we elect not to exercise our rights under this Section, the transferor may complete the Transfer after complying with Sections 14.2 [No Transfer without Our Prior Written Consent] through 14.6 [Transfer upon Death or Incapacity] above. Closing of the Transfer must occur within 60 calendar days of our election (or such longer period as applicable law may require); otherwise, the third-party's offer will be treated as a new offer subject to our right of first refusal. The Transfer is conditional upon our determination that the Transfer was on terms substantially the same as those offered to us. 15. TERMINATION 15.1. Termination By Us Without Notice. You will be in default under this Agreement and all rights granted by this Agreement will automatically terminate without notice to you if you become insolvent or make an assignment for the benefit of your creditors; if a receiver is appointed; if execution is levied against your business assets; or if suit to foreclose any lien or mortgage or bankruptcy is instituted against you and not dismissed within 60 days. Page 29 of 39" ;
+    ct:source_path "cuad/PfHospitalityGroupInc_20150923_10-12G_EX-10.1_9266710_EX-10.1_Franchise Agreement1.txt" ;
+    ct:source_sha256 "3d9aa8e816a1271c5169e51a03dd88439b1278c21ce57cb28b786e22335108e4" ;
+    ct:start_char 117191 .
+
+ex:C068P0149 a ct:SourcePassage ;
+    ct:end_char 129176 ;
+    ct:exact_text "(a) If we do not elect or are unable to exercise our option to acquire, or to acquire the lease or sublease for the Premises, you must make such modifications or alterations to the premises operated hereunder (including, without limitation, the changing of the telephone number) immediately upon termination or expiration of this Agreement as may be necessary to distinguish the appearance of the Premises from that of other Restaurants under the System, and such specific additional changes as we may reasonably request for that purpose. In addition, you must stop making any use of any telephone number and/or any domain name, website, e-mail address, and any other identifier (whether or not we have authorized its use) that you used in connection with your operation of the Franchised Business, and you must promptly execute such documents or take such steps necessary to remove reference to the Franchised Business from all trade or business telephone directories, including physical and online \"yellow\" and \"white\" pages, or at our request transfer same to us. " ;
+    ct:source_path "cuad/PfHospitalityGroupInc_20150923_10-12G_EX-10.1_9266710_EX-10.1_Franchise Agreement1.txt" ;
+    ct:source_sha256 "3d9aa8e816a1271c5169e51a03dd88439b1278c21ce57cb28b786e22335108e4" ;
+    ct:start_char 128109 .
+
+ex:C068P0165 a ct:SourcePassage ;
+    ct:end_char 143552 ;
+    ct:exact_text "23. CONSTRUCTION OF THE AGREEMENT, SEVERABILITY, AND SURVIVAL 23.1. Clauses are Severable. Each provision of this Agreement is severable from the others. If, for any reason, any provision is determined by a court to be invalid, the invalidity will not impair the operation of the remaining provisions of this Agreement. The latter will continue to be given full force and effect and bind us and you. 23.2. Survival of Clauses. Each provision of this Agreement that expressly or by reasonable implication is to be performed, in whole or in part, after the expiration, termination, or Transfer of this Agreement will survive such expiration, termination, or Transfer. 23.3 Force Majeure. If the performance of any obligation by any party under this Agreement is prevented, hindered or delayed by reason of Force Majeure, which cannot be overcome by reasonable commercial measures, then the parties shall be relieved of their respective obligations (but only to the extent, that the parties, having exercised best efforts, are prevented, hindered or delayed in such performance) during the period of such Force Majeure. The party whose performance is affected by an event of Force Majeure shall give prompt written notice in the circumstances of such Force Majeure event to the other party by describing the nature of the event and an estimate as to its duration, if possible. " ;
+    ct:source_path "cuad/PfHospitalityGroupInc_20150923_10-12G_EX-10.1_9266710_EX-10.1_Franchise Agreement1.txt" ;
+    ct:source_sha256 "3d9aa8e816a1271c5169e51a03dd88439b1278c21ce57cb28b786e22335108e4" ;
+    ct:start_char 142178 .
+
+ex:C068R0001 a ct:Rule ;
+    rdfs:label "Termination — source passage 4" ;
+    ct:kind "TERMINATION" ;
+    ct:references_section ex:C068R0001Ref0,
+        ex:C068R0001Ref1,
+        ex:C068R0001Ref2 ;
+    ct:subject_to ex:C068R0001Condition4 ;
+    ct:supported_by ex:C068P0004 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C068R0001Condition4 a ct:Condition ;
+    ct:description "TABLE OF CONTENTS SECTION PAGE 1. RIGHTS GRANTED 2 2. TERM; SUCCESSOR FRANCHISE AGREEMENTS 4 3. FEES 4 4. OPENING DEADLINE 6 5. TRAINING 10 6. OPERATIONS 11 7. PROPRIETARY MARKS 18 8. BUSINESS RECORDS AND REPORTING 19 9. MARKETING FUND AND ADVERTISING 21 10. TECHNOLOGY 23 11. OPERATING MANUAL 26 12. CONFIDENTIAL INFORMATION 26 13. TRANSFERS BY US 26 14. TRANSFERS BY YOU 27 15. TERMINATION 29 16. OBLIGATIONS ON TERMINATION OR EXPIRATION 31 17. RESTRICTIONS ON COMPETITION 33 18. RELATIONSHIP OF THE PARTIES 34 19. INDEMNIFICATION 35 20. CONSENTS AND WAIVERS 35 21. NOTICES 35 22. ENTIRE AGREEMENT AND AMENDMENTS 35 23. CONSTRUCTION OF THE AGREEMENT, SEVERABILITY, AND SURVIVAL 36 24. GOVERNING LAW 36 25. DISPUTES 36 26. ACKNOWLEDGMENTS 37 Appendix A - Opening Deadline, Delivery/Catering and Advertising Area, and Site Selection Area Appendix B - Personal Guarantee Appendix C - Sample of Non-Disclosure and Non-Competition Agreement - i -" ;
+    ct:supported_by ex:C068P0004 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C068R0001Ref0 a ct:Reference ;
+    rdfs:label "Appendix A" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C068R0001Ref1 a ct:Reference ;
+    rdfs:label "Appendix B" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C068R0001Ref2 a ct:Reference ;
+    rdfs:label "Appendix C" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C068R0002 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 4" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:references_section ex:C068R0002Ref0,
+        ex:C068R0002Ref1,
+        ex:C068R0002Ref2 ;
+    ct:subject_to ex:C068R0002Condition4 ;
+    ct:supported_by ex:C068P0004 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C068R0002Condition4 a ct:Condition ;
+    ct:description "TABLE OF CONTENTS SECTION PAGE 1. RIGHTS GRANTED 2 2. TERM; SUCCESSOR FRANCHISE AGREEMENTS 4 3. FEES 4 4. OPENING DEADLINE 6 5. TRAINING 10 6. OPERATIONS 11 7. PROPRIETARY MARKS 18 8. BUSINESS RECORDS AND REPORTING 19 9. MARKETING FUND AND ADVERTISING 21 10. TECHNOLOGY 23 11. OPERATING MANUAL 26 12. CONFIDENTIAL INFORMATION 26 13. TRANSFERS BY US 26 14. TRANSFERS BY YOU 27 15. TERMINATION 29 16. OBLIGATIONS ON TERMINATION OR EXPIRATION 31 17. RESTRICTIONS ON COMPETITION 33 18. RELATIONSHIP OF THE PARTIES 34 19. INDEMNIFICATION 35 20. CONSENTS AND WAIVERS 35 21. NOTICES 35 22. ENTIRE AGREEMENT AND AMENDMENTS 35 23. CONSTRUCTION OF THE AGREEMENT, SEVERABILITY, AND SURVIVAL 36 24. GOVERNING LAW 36 25. DISPUTES 36 26. ACKNOWLEDGMENTS 37 Appendix A - Opening Deadline, Delivery/Catering and Advertising Area, and Site Selection Area Appendix B - Personal Guarantee Appendix C - Sample of Non-Disclosure and Non-Competition Agreement - i -" ;
+    ct:supported_by ex:C068P0004 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C068R0002Ref0 a ct:Reference ;
+    rdfs:label "Appendix A" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C068R0002Ref1 a ct:Reference ;
+    rdfs:label "Appendix B" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C068R0002Ref2 a ct:Reference ;
+    rdfs:label "Appendix C" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C068R0003 a ct:Rule ;
+    rdfs:label "Initial Term — source passage 20" ;
+    ct:kind "INITIAL_TERM" ;
+    ct:subject_to ex:C068R0003Condition20 ;
+    ct:supported_by ex:C068P0020 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C068R0003Condition20 a ct:Condition ;
+    ct:description "2. TERM; SUCCESSOR FRANCHISE AGREEMENTS 2.1. Term. This Agreement expires ten (10) years from the Agreement Date (the \"Term\"), unless it is terminated sooner as provided in other sections of this Agreement. 2.2. Successor Franchise Agreements. When this Agreement expires, you will have the option to continue the franchise relationship with us for two (2) additional terms of ten (10) years each. We may require you to satisfy any or all of the following as a condition of continuing the franchise relationship with us: 2.2.1. You must give us written notice of your desire to exercise your option not more than twelve (12) months and not less than nine (9) months before this Agreement expires. 2.2.2. You and all Owners must execute the standard form of Pizza Fusion Franchise Agreement that we are then offering to new franchisees (or the standard form that we most recently offered to new franchisees, if we are not at that time actively offering new franchises) (the \"Successor Franchise Agreement\"). The terms of the Successor Franchise Agreement may be substantially different from the terms of this Agreement and may require the payment of different fees. 2.2.3. You must pay all amounts owed to us, to our affiliates, and to your major suppliers; you must not be in default of this Agreement or any other agreement with us, our affiliates, or our suppliers; " ;
+    ct:supported_by ex:C068P0020 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C068R0004 a ct:Rule ;
+    rdfs:label "Optional Renewal — source passage 20" ;
+    ct:kind "OPTIONAL_RENEWAL" ;
+    ct:subject_to ex:C068R0004Condition20 ;
+    ct:supported_by ex:C068P0020 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C068R0004Condition20 a ct:Condition ;
+    ct:description "2. TERM; SUCCESSOR FRANCHISE AGREEMENTS 2.1. Term. This Agreement expires ten (10) years from the Agreement Date (the \"Term\"), unless it is terminated sooner as provided in other sections of this Agreement. 2.2. Successor Franchise Agreements. When this Agreement expires, you will have the option to continue the franchise relationship with us for two (2) additional terms of ten (10) years each. We may require you to satisfy any or all of the following as a condition of continuing the franchise relationship with us: 2.2.1. You must give us written notice of your desire to exercise your option not more than twelve (12) months and not less than nine (9) months before this Agreement expires. 2.2.2. You and all Owners must execute the standard form of Pizza Fusion Franchise Agreement that we are then offering to new franchisees (or the standard form that we most recently offered to new franchisees, if we are not at that time actively offering new franchises) (the \"Successor Franchise Agreement\"). The terms of the Successor Franchise Agreement may be substantially different from the terms of this Agreement and may require the payment of different fees. 2.2.3. You must pay all amounts owed to us, to our affiliates, and to your major suppliers; you must not be in default of this Agreement or any other agreement with us, our affiliates, or our suppliers; " ;
+    ct:supported_by ex:C068P0020 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C068R0005 a ct:Rule ;
+    rdfs:label "Initial Term — source passage 21" ;
+    ct:kind "INITIAL_TERM" ;
+    ct:supported_by ex:C068P0021 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C068R0006 a ct:Rule ;
+    rdfs:label "Optional Renewal — source passage 21" ;
+    ct:kind "OPTIONAL_RENEWAL" ;
+    ct:supported_by ex:C068P0021 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C068R0007 a ct:Rule ;
+    rdfs:label "Termination — source passage 35" ;
+    ct:kind "TERMINATION" ;
+    ct:subject_to ex:C068R0007Condition35 ;
+    ct:supported_by ex:C068P0035 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C068R0007Condition35 a ct:Condition ;
+    ct:description "4.1.2 You must submit a site review report and such other information or materials as we may reasonably require (including but not limited to, photographs, demographic information, an option contract, letter of intent, or other evidence satisfactory to us that confirms your favorable prospects for obtaining the site). We will review site approval submissions on a first-in basis. (a) If we do not approve in writing the proposed site, you must, within 30 days after our disapproval of the proposed site, submit a new proposed site within the Delivery/Catering and Advertising Area for our review and approval. (b) By no later than 90 days after the Agreement Date, you must have obtained our written approval of a site. If you have not done so, we may elect to terminate this Agreement, and we will not refund to you the Initial Franchise Fee or any other money paid to us. (c) We will not unreasonably withhold approval of any site that meets our standards. You may not lease or otherwise acquire the right to occupy the proposed site without our prior written approval. 4.2 Site Lease or Acquisition. You must, within 30 days after we approve a site for the Franchised Business (but in no event later than 120 days after the Agreement Date), either by lease or purchase the approved site for the Premises, as further described below. " ;
+    ct:supported_by ex:C068P0035 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C068R0008 a ct:Rule ;
+    rdfs:label "Conditional Referenced Term — source passage 35" ;
+    ct:kind "CONDITIONAL_REFERENCED_TERM" ;
+    ct:subject_to ex:C068R0008Condition35 ;
+    ct:supported_by ex:C068P0035 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C068R0008Condition35 a ct:Condition ;
+    ct:description "4.1.2 You must submit a site review report and such other information or materials as we may reasonably require (including but not limited to, photographs, demographic information, an option contract, letter of intent, or other evidence satisfactory to us that confirms your favorable prospects for obtaining the site). We will review site approval submissions on a first-in basis. (a) If we do not approve in writing the proposed site, you must, within 30 days after our disapproval of the proposed site, submit a new proposed site within the Delivery/Catering and Advertising Area for our review and approval. (b) By no later than 90 days after the Agreement Date, you must have obtained our written approval of a site. If you have not done so, we may elect to terminate this Agreement, and we will not refund to you the Initial Franchise Fee or any other money paid to us. (c) We will not unreasonably withhold approval of any site that meets our standards. You may not lease or otherwise acquire the right to occupy the proposed site without our prior written approval. 4.2 Site Lease or Acquisition. You must, within 30 days after we approve a site for the Franchised Business (but in no event later than 120 days after the Agreement Date), either by lease or purchase the approved site for the Premises, as further described below. " ;
+    ct:supported_by ex:C068P0035 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C068R0009 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 38" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:subject_to ex:C068R0009Condition38 ;
+    ct:supported_by ex:C068P0038 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C068R0009Condition38 a ct:Condition ;
+    ct:description "(c) Recognize your right to display and use the Proprietary Marks in accordance with the specifications required by the Manual, subject only to the provisions of applicable law; (d) Require that the premises be used solely for the operation of a Franchised Business; and (e) Acknowledge that, if this Agreement is terminated or expires (without you renewing your franchise rights): (i) you must take certain steps to de-identify the location as a Pizza Fusion Restaurant; and (ii) lessor will cooperate with us in enforcing your obligation to de-identity, including allowing us, our employees and/or agents to enter the premises and remove signs, décor and materials that bear or display our Proprietary Marks, designs, or logos. 4.2.2 You must deliver to us a copy of the signed lease or sublease to us within fifteen (15) days after it has been signed by you and by the lessor. You may not execute or agree to any modification of the lease or sublease that would affect our rights without our prior written approval of the modification. 4.3 Location Development and Preparation. You must construct, furnish, and open the Franchised Business as required by this Agreement and must open the Franchised Business not later than six (6) months after securing the necessary authorization and approval for permits and/or certificates. Time is of the essence. " ;
+    ct:supported_by ex:C068P0038 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C068R0010 a ct:Rule ;
+    rdfs:label "Termination — source passage 50" ;
+    ct:kind "TERMINATION" ;
+    ct:references_section ex:C068R0010Ref0 ;
+    ct:subject_to ex:C068R0010Condition50 ;
+    ct:supported_by ex:C068P0050 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C068R0010Condition50 a ct:Condition ;
+    ct:description "5.1.3. We have the right to reduce the duration or content of the training program for any trainee who has prior experience with our concept or in similar businesses. We also may allow you to train certain of your managers (which may include Certified Managers) and successors in those positions at your location. 5.1.4. Failure to complete the initial training program constitutes grounds for termination, as provided in Section 15 of this Agreement. 5.2. Opening Training and Assistance. We provide up to fourteen (14) days of pre-opening training and opening assistance at your Premises. The Operating Principal and the other Manager Trainee and such of your other employees as we designate must attend this component of training, which will begin approximately seven days before the Opening Date and conclude approximately seven days thereafter. 5.3. Additional Training by Us. We may require your Certified Managers and/or other designated persons to successfully complete additional training courses during the Term of this Agreement at a location that we specify (including an annual conference for franchisees in the System). We may also offer optional training programs. You may also request that we provide additional training at the location of your Franchised Business, and we will provide such training if we determine that we are able to do so. " ;
+    ct:supported_by ex:C068P0050 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C068R0010Ref0 a ct:Reference ;
+    rdfs:label "Section 15" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C068R0011 a ct:Rule ;
+    rdfs:label "Conditional Referenced Term — source passage 50" ;
+    ct:kind "CONDITIONAL_REFERENCED_TERM" ;
+    ct:references_section ex:C068R0011Ref0 ;
+    ct:subject_to ex:C068R0011Condition50 ;
+    ct:supported_by ex:C068P0050 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C068R0011Condition50 a ct:Condition ;
+    ct:description "5.1.3. We have the right to reduce the duration or content of the training program for any trainee who has prior experience with our concept or in similar businesses. We also may allow you to train certain of your managers (which may include Certified Managers) and successors in those positions at your location. 5.1.4. Failure to complete the initial training program constitutes grounds for termination, as provided in Section 15 of this Agreement. 5.2. Opening Training and Assistance. We provide up to fourteen (14) days of pre-opening training and opening assistance at your Premises. The Operating Principal and the other Manager Trainee and such of your other employees as we designate must attend this component of training, which will begin approximately seven days before the Opening Date and conclude approximately seven days thereafter. 5.3. Additional Training by Us. We may require your Certified Managers and/or other designated persons to successfully complete additional training courses during the Term of this Agreement at a location that we specify (including an annual conference for franchisees in the System). We may also offer optional training programs. You may also request that we provide additional training at the location of your Franchised Business, and we will provide such training if we determine that we are able to do so. " ;
+    ct:supported_by ex:C068P0050 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C068R0011Ref0 a ct:Reference ;
+    rdfs:label "Section 15" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C068R0012 a ct:Rule ;
+    rdfs:label "Termination — source passage 65" ;
+    ct:kind "TERMINATION" ;
+    ct:subject_to ex:C068R0012Condition65 ;
+    ct:supported_by ex:C068P0065 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C068R0012Condition65 a ct:Condition ;
+    ct:description "We may terminate your right to provide products and services to a Major Account customer at any time by giving you at least 30 days' prior written notice, and you may terminate your right to provide products and services to a Major Account at any time by giving us at least 30 days' prior written notice. If we elect not to offer you the opportunity to provide products or services to a Major Account, if you decline the option to accept a Major Account, if your right to provide products or services to a Major Account terminates, or if you fail to satisfy the conditions and obligations of any Major Account agreement, we have the right to service and/or authorize others to service Major Account customers within your Delivery/Catering and Advertising Area without any compensation to you. We have no obligation to permit you to provide products or services to a Major Account or to transfer any Major Account customer to you if you are subsequently willing and able to provide service. 6.13. Inspections. We have the right, at any time during normal business hours: (i) to conduct inspections of the Franchised Business; (ii) to interview your employees, work crews, and customers; and (iii) to review your business records, including those maintained electronically or off premises. We can initiate these actions with or without prior notice to you. " ;
+    ct:supported_by ex:C068P0065 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C068R0013 a ct:Rule ;
+    rdfs:label "Conditional Referenced Term — source passage 65" ;
+    ct:kind "CONDITIONAL_REFERENCED_TERM" ;
+    ct:subject_to ex:C068R0013Condition65 ;
+    ct:supported_by ex:C068P0065 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C068R0013Condition65 a ct:Condition ;
+    ct:description "We may terminate your right to provide products and services to a Major Account customer at any time by giving you at least 30 days' prior written notice, and you may terminate your right to provide products and services to a Major Account at any time by giving us at least 30 days' prior written notice. If we elect not to offer you the opportunity to provide products or services to a Major Account, if you decline the option to accept a Major Account, if your right to provide products or services to a Major Account terminates, or if you fail to satisfy the conditions and obligations of any Major Account agreement, we have the right to service and/or authorize others to service Major Account customers within your Delivery/Catering and Advertising Area without any compensation to you. We have no obligation to permit you to provide products or services to a Major Account or to transfer any Major Account customer to you if you are subsequently willing and able to provide service. 6.13. Inspections. We have the right, at any time during normal business hours: (i) to conduct inspections of the Franchised Business; (ii) to interview your employees, work crews, and customers; and (iii) to review your business records, including those maintained electronically or off premises. We can initiate these actions with or without prior notice to you. " ;
+    ct:supported_by ex:C068P0065 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C068R0014 a ct:Rule ;
+    rdfs:label "Initial Term — source passage 75" ;
+    ct:kind "INITIAL_TERM" ;
+    ct:references_section ex:C068R0014Ref0 ;
+    ct:supported_by ex:C068P0075 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C068R0014Ref0 a ct:Reference ;
+    rdfs:label "Section 6.19" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C068R0015 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 75" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:references_section ex:C068R0015Ref0 ;
+    ct:supported_by ex:C068P0075 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C068R0015Ref0 a ct:Reference ;
+    rdfs:label "Section 6.19" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C068R0016 a ct:Rule ;
+    rdfs:label "Conditional Referenced Term — source passage 92" ;
+    ct:kind "CONDITIONAL_REFERENCED_TERM" ;
+    ct:references_section ex:C068R0016Ref0 ;
+    ct:subject_to ex:C068R0016Condition92 ;
+    ct:supported_by ex:C068P0092 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C068R0016Condition92 a ct:Condition ;
+    ct:description "If the examination or audit reveals an understatement of Gross Revenues, you must immediately pay us any Royalty fees, Advertising Contributions, or other amounts owing, plus interest as provided in Section 3.8 [Dishonored Payments]. If Gross Revenues have been understated by more than 2% for the period covered by the examination or audit, you must also: (1) reimburse us for the full reasonable cost of the examination or audit, including, travel, lodging, meals, and wages of our representatives and the legal and accounting fees of any attorneys or independent accountants we use for the examination or audit; and (2) at our request, thereafter provide us with periodic audited financial statements. If you have understated Gross Revenues by 2% or more on three or more occasions in any twelve-month period, or by 5% or more for any period of four (or more) consecutive weeks, we have the right to terminate this Agreement with no opportunity for cure. The foregoing remedies are in addition any other remedies and rights available to us under this Agreement or applicable law. 8.4. Governing Documents. " ;
+    ct:supported_by ex:C068P0092 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C068R0016Ref0 a ct:Reference ;
+    rdfs:label "Section 3.8" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C068R0017 a ct:Rule ;
+    rdfs:label "Termination — source passage 92" ;
+    ct:kind "TERMINATION" ;
+    ct:references_section ex:C068R0017Ref0 ;
+    ct:subject_to ex:C068R0017Condition92 ;
+    ct:supported_by ex:C068P0092 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C068R0017Condition92 a ct:Condition ;
+    ct:description "If the examination or audit reveals an understatement of Gross Revenues, you must immediately pay us any Royalty fees, Advertising Contributions, or other amounts owing, plus interest as provided in Section 3.8 [Dishonored Payments]. If Gross Revenues have been understated by more than 2% for the period covered by the examination or audit, you must also: (1) reimburse us for the full reasonable cost of the examination or audit, including, travel, lodging, meals, and wages of our representatives and the legal and accounting fees of any attorneys or independent accountants we use for the examination or audit; and (2) at our request, thereafter provide us with periodic audited financial statements. If you have understated Gross Revenues by 2% or more on three or more occasions in any twelve-month period, or by 5% or more for any period of four (or more) consecutive weeks, we have the right to terminate this Agreement with no opportunity for cure. The foregoing remedies are in addition any other remedies and rights available to us under this Agreement or applicable law. 8.4. Governing Documents. " ;
+    ct:supported_by ex:C068P0092 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C068R0017Ref0 a ct:Reference ;
+    rdfs:label "Section 3.8" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C068R0018 a ct:Rule ;
+    rdfs:label "Conditional Referenced Term — source passage 102" ;
+    ct:kind "CONDITIONAL_REFERENCED_TERM" ;
+    ct:references_section ex:C068R0018Ref0,
+        ex:C068R0018Ref1 ;
+    ct:subject_to ex:C068R0018Condition102 ;
+    ct:supported_by ex:C068P0102 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C068R0018Condition102 a ct:Condition ;
+    ct:description "9.3.6 We will credit the contributions you make to the Regional Fund against the amounts you must spend on local advertising under Section 9.2 [Local Marketing] above. 9.3.7 Although once established, each Regional Fund is intended to be of perpetual duration, we maintain the right to terminate any Regional Fund. A Regional Fund will not be terminated, however, until all monies in that Regional Fund have been expended for marketing and/or promotional purposes. 9.4 Initial Advertising Campaign. You agree to conduct a Grand Opening Advertising Program for the Franchised Business throughout the first four weeks after the Opening Date, spending an amount not less than $12,000. You must obtain our prior written approval as provided in Section 9.5 [Advertising Approval] below before implementing any advertising plans and/or making any use or placement of advertising and promotional materials as part of the Grand Opening Advertising Program. You acknowledge that the Grand Opening Advertising Program may not be sufficient in all cases to develop adequate exposure to the services offered by your Franchised Business, and that it may be necessary for you to supplement the Grand Opening Advertising Program with additional advertising and promotional expenditures and efforts. Page 22 of 39" ;
+    ct:supported_by ex:C068P0102 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C068R0018Ref0 a ct:Reference ;
+    rdfs:label "Section 9.2" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C068R0018Ref1 a ct:Reference ;
+    rdfs:label "Section 9.5" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C068R0019 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 102" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:references_section ex:C068R0019Ref0,
+        ex:C068R0019Ref1 ;
+    ct:subject_to ex:C068R0019Condition102 ;
+    ct:supported_by ex:C068P0102 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C068R0019Condition102 a ct:Condition ;
+    ct:description "9.3.6 We will credit the contributions you make to the Regional Fund against the amounts you must spend on local advertising under Section 9.2 [Local Marketing] above. 9.3.7 Although once established, each Regional Fund is intended to be of perpetual duration, we maintain the right to terminate any Regional Fund. A Regional Fund will not be terminated, however, until all monies in that Regional Fund have been expended for marketing and/or promotional purposes. 9.4 Initial Advertising Campaign. You agree to conduct a Grand Opening Advertising Program for the Franchised Business throughout the first four weeks after the Opening Date, spending an amount not less than $12,000. You must obtain our prior written approval as provided in Section 9.5 [Advertising Approval] below before implementing any advertising plans and/or making any use or placement of advertising and promotional materials as part of the Grand Opening Advertising Program. You acknowledge that the Grand Opening Advertising Program may not be sufficient in all cases to develop adequate exposure to the services offered by your Franchised Business, and that it may be necessary for you to supplement the Grand Opening Advertising Program with additional advertising and promotional expenditures and efforts. Page 22 of 39" ;
+    ct:supported_by ex:C068P0102 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C068R0019Ref0 a ct:Reference ;
+    rdfs:label "Section 9.2" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C068R0019Ref1 a ct:Reference ;
+    rdfs:label "Section 9.5" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C068R0020 a ct:Rule ;
+    rdfs:label "Termination — source passage 121" ;
+    ct:kind "TERMINATION" ;
+    ct:references_section ex:C068R0020Ref0,
+        ex:C068R0020Ref1 ;
+    ct:supported_by ex:C068P0121 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C068R0020Ref0 a ct:Reference ;
+    rdfs:label "Section 12" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C068R0020Ref1 a ct:Reference ;
+    rdfs:label "Section 15.2.13" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C068R0021 a ct:Rule ;
+    rdfs:label "Termination — source passage 132" ;
+    ct:kind "TERMINATION" ;
+    ct:references_section ex:C068R0021Ref0,
+        ex:C068R0021Ref1 ;
+    ct:subject_to ex:C068R0021Condition132 ;
+    ct:supported_by ex:C068P0132 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C068R0021Condition132 a ct:Condition ;
+    ct:description "If an interest is not disposed of under this Section 14.6 [Transfer upon Death or Incapacity] within six (6) months after the date of death or appointment of a personal representative or trustee, we may terminate this Agreement under Section 15.2 [Termination By Us Without A Cure Period] below. Page 28 of 39" ;
+    ct:supported_by ex:C068P0132 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C068R0021Ref0 a ct:Reference ;
+    rdfs:label "Section 14.6" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C068R0021Ref1 a ct:Reference ;
+    rdfs:label "Section 15.2" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C068R0022 a ct:Rule ;
+    rdfs:label "Termination — source passage 136" ;
+    ct:kind "TERMINATION" ;
+    ct:supported_by ex:C068P0136 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C068R0023 a ct:Rule ;
+    rdfs:label "Termination — source passage 138" ;
+    ct:kind "TERMINATION" ;
+    ct:references_section ex:C068R0023Ref0,
+        ex:C068R0023Ref1 ;
+    ct:subject_to ex:C068R0023Condition138 ;
+    ct:supported_by ex:C068P0138 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C068R0023Condition138 a ct:Condition ;
+    ct:description "15.2. Termination By Us Without A Cure Period. We may terminate this Agreement by written notice to you, without giving you an opportunity to cure, upon the occurrence of any of the following events: 15.2.1. You, the Operating Principal, and/or your personnel fail to complete training under Section 5.1 [Initial Training Program] to our satisfaction. 15.2.2. You fail to open for business by the opening deadline specified in Appendix A. 15.2.3. You disclose the contents of the Manual or other trade secrets or confidential information contrary to Sections 11 and 12 of this Agreement. 15.2.4. You refuse to permit, or try to hinder, an examination or audit of your books and records or of the Franchised Business as provided in this Agreement. 15.2.5. You make any material misrepresentation in connection with your application to us for the franchise, or you submit to us any report or statement that you know or should know to be false or misleading. 15.2.6. You understate to us your Gross Revenues, by 2% or more on three or more occasions in any twelve-month period, or by 5% or more for any period of four or more consecutive weeks. 15.2.7. You fail to operate the Franchised Business for three or more consecutive business days on which you were required to operate, unless we determine that the failure was beyond your control. 15.2.8. " ;
+    ct:supported_by ex:C068P0138 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C068R0023Ref0 a ct:Reference ;
+    rdfs:label "Section 5.1" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C068R0023Ref1 a ct:Reference ;
+    rdfs:label "Appendix A" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C068R0024 a ct:Rule ;
+    rdfs:label "Termination — source passage 139" ;
+    ct:kind "TERMINATION" ;
+    ct:references_section ex:C068R0024Ref0,
+        ex:C068R0024Ref1,
+        ex:C068R0024Ref2,
+        ex:C068R0024Ref3,
+        ex:C068R0024Ref4 ;
+    ct:subject_to ex:C068R0024Condition139 ;
+    ct:supported_by ex:C068P0139 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C068R0024Condition139 a ct:Condition ;
+    ct:description "You or any Owner, officer or director is convicted of a crime that we reasonably believe is likely to harm the reputation of the Pizza Fusion concept. 15.2.9. Any Transfer occurs that does not comply with Section 14, including a failure to transfer to a qualified successor after death or disability within the time allowed by Section 14.7 [Non-Conforming Transfers]. 15.2.10. You are in default three (3) or more times under Sections 15.3 [Termination by Us Following Expiration of Cure Period for Monetary Default] and/or 15.4 [Termination by Us Following Expiration of Cure Period] within any twelve (12) month period, whether or not the defaults are similar and whether or not they are cured. 15.2.11. After curing a default pursuant to Sections 15.3 [Termination by Us Following Expiration of Cure Period for Monetary Default] or 15.4 [Termination by Us Following Expiration of Cure Period], you commit the same default within twelve (12) months, whether or not the second default is cured. 15.2.12. Any condition exists with respect to the Franchised Business that, in our reasonable judgment, seriously jeopardizes public health or safety. 15.2.13. You fail to comply with the covenants in Section 17 below or fail to timely obtain execution of the covenants required under Section 12 above and Section 17.3 [Owners and Employees] below. 15.2.14. " ;
+    ct:supported_by ex:C068P0139 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C068R0024Ref0 a ct:Reference ;
+    rdfs:label "Section 14" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C068R0024Ref1 a ct:Reference ;
+    rdfs:label "Section 14.7" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C068R0024Ref2 a ct:Reference ;
+    rdfs:label "Section 17" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C068R0024Ref3 a ct:Reference ;
+    rdfs:label "Section 12" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C068R0024Ref4 a ct:Reference ;
+    rdfs:label "Section 17.3" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C068R0025 a ct:Rule ;
+    rdfs:label "Conditional Referenced Term — source passage 139" ;
+    ct:kind "CONDITIONAL_REFERENCED_TERM" ;
+    ct:references_section ex:C068R0025Ref0,
+        ex:C068R0025Ref1,
+        ex:C068R0025Ref2,
+        ex:C068R0025Ref3,
+        ex:C068R0025Ref4 ;
+    ct:subject_to ex:C068R0025Condition139 ;
+    ct:supported_by ex:C068P0139 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C068R0025Condition139 a ct:Condition ;
+    ct:description "You or any Owner, officer or director is convicted of a crime that we reasonably believe is likely to harm the reputation of the Pizza Fusion concept. 15.2.9. Any Transfer occurs that does not comply with Section 14, including a failure to transfer to a qualified successor after death or disability within the time allowed by Section 14.7 [Non-Conforming Transfers]. 15.2.10. You are in default three (3) or more times under Sections 15.3 [Termination by Us Following Expiration of Cure Period for Monetary Default] and/or 15.4 [Termination by Us Following Expiration of Cure Period] within any twelve (12) month period, whether or not the defaults are similar and whether or not they are cured. 15.2.11. After curing a default pursuant to Sections 15.3 [Termination by Us Following Expiration of Cure Period for Monetary Default] or 15.4 [Termination by Us Following Expiration of Cure Period], you commit the same default within twelve (12) months, whether or not the second default is cured. 15.2.12. Any condition exists with respect to the Franchised Business that, in our reasonable judgment, seriously jeopardizes public health or safety. 15.2.13. You fail to comply with the covenants in Section 17 below or fail to timely obtain execution of the covenants required under Section 12 above and Section 17.3 [Owners and Employees] below. 15.2.14. " ;
+    ct:supported_by ex:C068P0139 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C068R0025Ref0 a ct:Reference ;
+    rdfs:label "Section 14" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C068R0025Ref1 a ct:Reference ;
+    rdfs:label "Section 14.7" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C068R0025Ref2 a ct:Reference ;
+    rdfs:label "Section 17" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C068R0025Ref3 a ct:Reference ;
+    rdfs:label "Section 12" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C068R0025Ref4 a ct:Reference ;
+    rdfs:label "Section 17.3" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C068R0026 a ct:Rule ;
+    rdfs:label "Termination — source passage 140" ;
+    ct:kind "TERMINATION" ;
+    ct:subject_to ex:C068R0026Condition140 ;
+    ct:supported_by ex:C068P0140 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C068R0026Condition140 a ct:Condition ;
+    ct:description "You fail to obtain or maintain required insurance. 15.2.15. You cease to operate the Franchised Business for more than seven (7) consecutive days or fourteen (14) days in any calendar year unless we approved a temporary closing or we determine, that the failure to operate was beyond your control, you otherwise abandon the Franchised Business, or you lose the right to possess the Premises or you otherwise forfeit the right to do or transact business as required under this Agreement. If, however, through no fault of you, the Premises are damaged or destroyed by an event such that repairs or reconstruction cannot be completed within ninety (90) days thereafter, you will have thirty (30) days after such event in which to apply for our approval to relocate and/or reconstruct the premises, and we will not unreasonably hold our approval. Page 30 of 39" ;
+    ct:supported_by ex:C068P0140 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C068R0027 a ct:Rule ;
+    rdfs:label "Conditional Referenced Term — source passage 140" ;
+    ct:kind "CONDITIONAL_REFERENCED_TERM" ;
+    ct:subject_to ex:C068R0027Condition140 ;
+    ct:supported_by ex:C068P0140 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C068R0027Condition140 a ct:Condition ;
+    ct:description "You fail to obtain or maintain required insurance. 15.2.15. You cease to operate the Franchised Business for more than seven (7) consecutive days or fourteen (14) days in any calendar year unless we approved a temporary closing or we determine, that the failure to operate was beyond your control, you otherwise abandon the Franchised Business, or you lose the right to possess the Premises or you otherwise forfeit the right to do or transact business as required under this Agreement. If, however, through no fault of you, the Premises are damaged or destroyed by an event such that repairs or reconstruction cannot be completed within ninety (90) days thereafter, you will have thirty (30) days after such event in which to apply for our approval to relocate and/or reconstruct the premises, and we will not unreasonably hold our approval. Page 30 of 39" ;
+    ct:supported_by ex:C068P0140 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C068R0028 a ct:Rule ;
+    rdfs:label "Termination — source passage 142" ;
+    ct:kind "TERMINATION" ;
+    ct:references_section ex:C068R0028Ref0 ;
+    ct:subject_to ex:C068R0028Condition142 ;
+    ct:supported_by ex:C068P0142 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C068R0028Condition142 a ct:Condition ;
+    ct:description "15.3. Termination by Us Following Expiration of Cure Period for Monetary Default. You will be in default under this Agreement if you fail, refuse, or neglect to pay when due (including if we are not able to collect payments by electronic fund transfer pursuant to Section 3.6 [Method of Payment] due to insufficient funds in your account(s), closure of your account(s), or any other reason resulting in the nonpayment) any monies owing to us, our affiliates, or any lender that has provided financing to you under this Agreement or any other agreement, or to your landlord and/or any supplier of goods or services to your Franchised Business. You will have ten (10) days after written notice of such default from us within which to remedy the default. You may avoid termination by curing the default to our satisfaction within the 10-day period (or such longer period as applicable law may require). If you do not cure the default within such 10-day period (or such longer period as applicable law may require), this Agreement will terminate automatically and without further notice, effective immediately upon the expiration of the specified time period. 15.4 Termination by Us Following Expiration of Cure Period. " ;
+    ct:supported_by ex:C068P0142 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C068R0028Ref0 a ct:Reference ;
+    rdfs:label "Section 3.6" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C068R0029 a ct:Rule ;
+    rdfs:label "Termination — source passage 143" ;
+    ct:kind "TERMINATION" ;
+    ct:subject_to ex:C068R0029Condition143 ;
+    ct:supported_by ex:C068P0143 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C068R0029Condition143 a ct:Condition ;
+    ct:description "For any default not covered under Sections 15.1 [Termination By Us Without Notice], 15.2 [Termination By Us Without A Cure Period], or 15.3 above, you will have thirty (30) days after written notice of default from us within which to remedy the default. You may avoid termination by curing the default to our satisfaction within the 30-day period (or such longer period as applicable law may require). If you do not cure the default within the specified time, this Agreement will terminate automatically and without further notice, effective immediately upon the expiration of the specified time period. Any failure to comply with this Agreement, as amended or reasonably supplemented by the Manual or otherwise in writing, not covered by Sections 15.1 [Termination By Us Without Notice], 15.2 [Termination By Us Without A Cure Period], or 15.3 above constitutes a default, including, but not limited to, the following: 15.3.1. You fail, refuse, or neglect to submit to us the financial and other reports and information required under this Agreement. 15.3.2. You fail to comply with any of the mandatory standards or procedures prescribed by us in this Agreement, the Manual, or otherwise in writing. 15.3.3. " ;
+    ct:supported_by ex:C068P0143 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C068R0030 a ct:Rule ;
+    rdfs:label "Termination — source passage 144" ;
+    ct:kind "TERMINATION" ;
+    ct:references_section ex:C068R0030Ref0 ;
+    ct:subject_to ex:C068R0030Condition144 ;
+    ct:supported_by ex:C068P0144 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C068R0030Condition144 a ct:Condition ;
+    ct:description "You fail, refuse, or neglect to obtain our prior written approval or consent as required by this Agreement (other than a failure to obtain consent to a proposed Transfer, for which we may terminate without a cure period as provided in Section 15.2 [Termination By Us Without A Cure Period]). 15.3.4. For a period of fifteen (15) days, you allow a continued violation of any law, ordinance, rule or regulation of a governmental agency, including the failure to maintain or procure any required licenses, permits, or certifications, in the absence of a good faith dispute over its application or legality and without promptly resorting to an appropriate administrative or judicial forum for relief. 15.3.5. You misuse or make any unauthorized use of the Proprietary Marks or otherwise materially impair our goodwill or rights in the Proprietary Marks. 15.5. Cross-Default. Any default by you (including for this purpose your affiliates) under any other agreement with us will constitute a default under this Agreement, subject to the same provisions for notice and cure, if any, as may be applicable to the default under the other agreement. 16. OBLIGATIONS ON TERMINATION OR EXPIRATION 16.1. Upon termination or expiration of this Agreement for any reason, unless we direct you otherwise: 16.1.1. " ;
+    ct:supported_by ex:C068P0144 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C068R0030Ref0 a ct:Reference ;
+    rdfs:label "Section 15.2" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C068R0031 a ct:Rule ;
+    rdfs:label "Conditional Referenced Term — source passage 144" ;
+    ct:kind "CONDITIONAL_REFERENCED_TERM" ;
+    ct:references_section ex:C068R0031Ref0 ;
+    ct:subject_to ex:C068R0031Condition144 ;
+    ct:supported_by ex:C068P0144 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C068R0031Condition144 a ct:Condition ;
+    ct:description "You fail, refuse, or neglect to obtain our prior written approval or consent as required by this Agreement (other than a failure to obtain consent to a proposed Transfer, for which we may terminate without a cure period as provided in Section 15.2 [Termination By Us Without A Cure Period]). 15.3.4. For a period of fifteen (15) days, you allow a continued violation of any law, ordinance, rule or regulation of a governmental agency, including the failure to maintain or procure any required licenses, permits, or certifications, in the absence of a good faith dispute over its application or legality and without promptly resorting to an appropriate administrative or judicial forum for relief. 15.3.5. You misuse or make any unauthorized use of the Proprietary Marks or otherwise materially impair our goodwill or rights in the Proprietary Marks. 15.5. Cross-Default. Any default by you (including for this purpose your affiliates) under any other agreement with us will constitute a default under this Agreement, subject to the same provisions for notice and cure, if any, as may be applicable to the default under the other agreement. 16. OBLIGATIONS ON TERMINATION OR EXPIRATION 16.1. Upon termination or expiration of this Agreement for any reason, unless we direct you otherwise: 16.1.1. " ;
+    ct:supported_by ex:C068P0144 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C068R0031Ref0 a ct:Reference ;
+    rdfs:label "Section 15.2" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C068R0032 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 149" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:supported_by ex:C068P0149 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C068R0033 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 150" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:references_section ex:C068R0033Ref0 ;
+    ct:subject_to ex:C068R0033Condition150 ;
+    ct:supported_by ex:C068P0150 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C068R0033Condition150 a ct:Condition ;
+    ct:description "(b) If you fail or refuse to comply with the requirements of this Section 16.1.5 [OBLIGATIONS ON TERMINATION OR EXPIRATION], we will have the right to enter upon the Premises, without being guilty of trespass or any other tort, for the purpose of making or causing to be made such changes as may be required, at your expense, which you agree to pay upon demand. 16.2. Purchase of Assets. You agree that, at our option, you will sell to us any or all your assets used to operate the Franchised Business (including equipment, fixtures, furnishings, Delivery Vehicles, supplies, and inventory) that we ask in writing to purchase. 16.2.1. The purchase price for such items will be equal to your depreciated cost (determined below) or fair market value, whichever is less. The cost will be determined based upon a five (5) year straight-line depreciation of original costs. For equipment that is five (5) or more years old, the parties agree that fair market value will be deemed to be ten percent (10%) of the equipment's original cost. The fair market value of tangible assets must be determined without reference to good will, going-concern value, or other intangible assets. Page 32 of 39" ;
+    ct:supported_by ex:C068P0150 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C068R0033Ref0 a ct:Reference ;
+    rdfs:label "Section 16.1.5" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C068R0034 a ct:Rule ;
+    rdfs:label "Conditional Referenced Term — source passage 150" ;
+    ct:kind "CONDITIONAL_REFERENCED_TERM" ;
+    ct:references_section ex:C068R0034Ref0 ;
+    ct:subject_to ex:C068R0034Condition150 ;
+    ct:supported_by ex:C068P0150 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C068R0034Condition150 a ct:Condition ;
+    ct:description "(b) If you fail or refuse to comply with the requirements of this Section 16.1.5 [OBLIGATIONS ON TERMINATION OR EXPIRATION], we will have the right to enter upon the Premises, without being guilty of trespass or any other tort, for the purpose of making or causing to be made such changes as may be required, at your expense, which you agree to pay upon demand. 16.2. Purchase of Assets. You agree that, at our option, you will sell to us any or all your assets used to operate the Franchised Business (including equipment, fixtures, furnishings, Delivery Vehicles, supplies, and inventory) that we ask in writing to purchase. 16.2.1. The purchase price for such items will be equal to your depreciated cost (determined below) or fair market value, whichever is less. The cost will be determined based upon a five (5) year straight-line depreciation of original costs. For equipment that is five (5) or more years old, the parties agree that fair market value will be deemed to be ten percent (10%) of the equipment's original cost. The fair market value of tangible assets must be determined without reference to good will, going-concern value, or other intangible assets. Page 32 of 39" ;
+    ct:supported_by ex:C068P0150 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C068R0034Ref0 a ct:Reference ;
+    rdfs:label "Section 16.1.5" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C068R0035 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 152" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:subject_to ex:C068R0035Condition152 ;
+    ct:supported_by ex:C068P0152 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C068R0035Condition152 a ct:Condition ;
+    ct:description "16.2.2. We may exercise this option by delivering a notice of intent to purchase to you within 30 days after the expiration or termination of this Agreement. During that 30-day period, you agree not to dispose of, transfer, or otherwise hinder our ability to exercise our rights with respect to your assets. 16.2.3. If we exercise our option to purchase, we may setoff all amounts due to us under this Agreement and the cost of the appraisal (if any), against any payment due to you. 16.2.4. If we do not exercise our rights to purchase your Delivery Vehicle(s), you must immediately make such modifications or alterations to the Delivery Vehicle(s) that may be needed to remove any Proprietary Marks and to otherwise distinguish the appearance of the vehicle(s) from those used by other Restaurants. 16.3. Right to Enter and Continue Operations. In order to preserve the goodwill of the System following termination, we (or our designee) have the right to enter the Premises (without liability to you, your Owners, or otherwise) for the purpose continuing the Franchised Business' operation and maintaining the goodwill of the business. 16.4. Liquidated Damages. " ;
+    ct:supported_by ex:C068P0152 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C068R0036 a ct:Rule ;
+    rdfs:label "Termination — source passage 152" ;
+    ct:kind "TERMINATION" ;
+    ct:subject_to ex:C068R0036Condition152 ;
+    ct:supported_by ex:C068P0152 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C068R0036Condition152 a ct:Condition ;
+    ct:description "16.2.2. We may exercise this option by delivering a notice of intent to purchase to you within 30 days after the expiration or termination of this Agreement. During that 30-day period, you agree not to dispose of, transfer, or otherwise hinder our ability to exercise our rights with respect to your assets. 16.2.3. If we exercise our option to purchase, we may setoff all amounts due to us under this Agreement and the cost of the appraisal (if any), against any payment due to you. 16.2.4. If we do not exercise our rights to purchase your Delivery Vehicle(s), you must immediately make such modifications or alterations to the Delivery Vehicle(s) that may be needed to remove any Proprietary Marks and to otherwise distinguish the appearance of the vehicle(s) from those used by other Restaurants. 16.3. Right to Enter and Continue Operations. In order to preserve the goodwill of the System following termination, we (or our designee) have the right to enter the Premises (without liability to you, your Owners, or otherwise) for the purpose continuing the Franchised Business' operation and maintaining the goodwill of the business. 16.4. Liquidated Damages. " ;
+    ct:supported_by ex:C068P0152 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C068R0037 a ct:Rule ;
+    rdfs:label "Termination — source passage 153" ;
+    ct:kind "TERMINATION" ;
+    ct:references_section ex:C068R0037Ref0 ;
+    ct:subject_to ex:C068R0037Condition153 ;
+    ct:supported_by ex:C068P0153 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C068R0037Condition153 a ct:Condition ;
+    ct:description "If this Agreement is terminated due to your default, you must, upon written demand, pay us a lump-sum payment in an amount calculated as follows: (a) the average of your Royalty fees and Advertising Contributions due for the last 60 months before our delivery of notice of default (or, if lesser, the months you had been operating before our delivery of notice of default), (b) multiplied by the lesser of 60 or the number of months remaining in the term of this Agreement. 16.5. Liquidated Damages. 16.5.1 The payments called for in Section 16.4 [Liquidated Damages] above constitute liquidated damages for causing the premature termination of this Agreement and not a penalty. A precise calculation of the full extent of damages that we will incur if this Agreement terminates because you default cannot be reasonably determined. Nevertheless, the parties agree that the lump-sum payment provided under Section 16.4 [Liquidated Damages] above is reasonable in light of the damages for premature termination that may reasonably be expected to occur in such event. 16.5.2 The amounts contemplated under Section 16.4 [Liquidated Damages] above is not a penalty and is intended by the parties only as a compensatory remedy for past breaches and not as a preventative remedy to deter future breaches. " ;
+    ct:supported_by ex:C068P0153 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C068R0037Ref0 a ct:Reference ;
+    rdfs:label "Section 16.4" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C068R0038 a ct:Rule ;
+    rdfs:label "Conditional Referenced Term — source passage 153" ;
+    ct:kind "CONDITIONAL_REFERENCED_TERM" ;
+    ct:references_section ex:C068R0038Ref0 ;
+    ct:subject_to ex:C068R0038Condition153 ;
+    ct:supported_by ex:C068P0153 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C068R0038Condition153 a ct:Condition ;
+    ct:description "If this Agreement is terminated due to your default, you must, upon written demand, pay us a lump-sum payment in an amount calculated as follows: (a) the average of your Royalty fees and Advertising Contributions due for the last 60 months before our delivery of notice of default (or, if lesser, the months you had been operating before our delivery of notice of default), (b) multiplied by the lesser of 60 or the number of months remaining in the term of this Agreement. 16.5. Liquidated Damages. 16.5.1 The payments called for in Section 16.4 [Liquidated Damages] above constitute liquidated damages for causing the premature termination of this Agreement and not a penalty. A precise calculation of the full extent of damages that we will incur if this Agreement terminates because you default cannot be reasonably determined. Nevertheless, the parties agree that the lump-sum payment provided under Section 16.4 [Liquidated Damages] above is reasonable in light of the damages for premature termination that may reasonably be expected to occur in such event. 16.5.2 The amounts contemplated under Section 16.4 [Liquidated Damages] above is not a penalty and is intended by the parties only as a compensatory remedy for past breaches and not as a preventative remedy to deter future breaches. " ;
+    ct:supported_by ex:C068P0153 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C068R0038Ref0 a ct:Reference ;
+    rdfs:label "Section 16.4" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C068R0039 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 165" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:supported_by ex:C068P0165 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C068P0021 a ct:SourcePassage ;
+    ct:end_char 15186 ;
+    ct:exact_text "and you must have substantially and timely complied with all of your obligations throughout the term of each such agreement. 2.2.4. If we inspect your Franchised Business and give you notice at least six months before the end of the term of any required maintenance, refurbishing, renovating, and upgrading (including purchasing one or more new delivery vehicles); then you must complete all such required maintenance, refurbishing, renovating, and upgrading to our reasonable satisfaction no later than 60 days before expiration of the term. 2.2.5. You must pay us a discounted successor franchise fee in the amount of $7,500 or twenty-five percent (25%) of our then- current initial franchise fee (whichever is more). 2.2.6. You and all of your Owners must execute and deliver to us a general release, in a form we require, of any and all claims against us, our affiliates, and our past, present and future officers, directors, shareholders and employees arising out of or relating to your Franchised Business. 2.2.7. You, the Operating Principal, and/or your designated employees must successfully complete any additional or refresher training courses that we may require. 3. FEES 3.1. Initial Franchise Fee. You must pay us an initial franchise fee of $30,000 when you sign this Agreement. " ;
+    ct:source_path "cuad/PfHospitalityGroupInc_20150923_10-12G_EX-10.1_9266710_EX-10.1_Franchise Agreement1.txt" ;
+    ct:source_sha256 "3d9aa8e816a1271c5169e51a03dd88439b1278c21ce57cb28b786e22335108e4" ;
+    ct:start_char 13892 .
+
+ex:C068P0038 a ct:SourcePassage ;
+    ct:end_char 30071 ;
+    ct:exact_text "(c) Recognize your right to display and use the Proprietary Marks in accordance with the specifications required by the Manual, subject only to the provisions of applicable law; (d) Require that the premises be used solely for the operation of a Franchised Business; and (e) Acknowledge that, if this Agreement is terminated or expires (without you renewing your franchise rights): (i) you must take certain steps to de-identify the location as a Pizza Fusion Restaurant; and (ii) lessor will cooperate with us in enforcing your obligation to de-identity, including allowing us, our employees and/or agents to enter the premises and remove signs, décor and materials that bear or display our Proprietary Marks, designs, or logos. 4.2.2 You must deliver to us a copy of the signed lease or sublease to us within fifteen (15) days after it has been signed by you and by the lessor. You may not execute or agree to any modification of the lease or sublease that would affect our rights without our prior written approval of the modification. 4.3 Location Development and Preparation. You must construct, furnish, and open the Franchised Business as required by this Agreement and must open the Franchised Business not later than six (6) months after securing the necessary authorization and approval for permits and/or certificates. Time is of the essence. " ;
+    ct:source_path "cuad/PfHospitalityGroupInc_20150923_10-12G_EX-10.1_9266710_EX-10.1_Franchise Agreement1.txt" ;
+    ct:source_sha256 "3d9aa8e816a1271c5169e51a03dd88439b1278c21ce57cb28b786e22335108e4" ;
+    ct:start_char 28717 .
+
+ex:C068P0075 a ct:SourcePassage ;
+    ct:end_char 64028 ;
+    ct:exact_text "By the dates specified below, an approved insurance company must issue a certificate of insurance showing compliance with the insurance requirements in this Section 6.19 [Insurance] and you must furnish us with a paid receipt showing the certificate number: (a) 30 days before beginning construction of the Premises; (b) if the Premises are constructed and presently owned or leased by you, 10 days from the Agreement Date; or (c) if the Premises are not presently owned or leased, 10 days after ownership of the Premises is conveyed to you or you sign a lease for the Premises. The certificate of insurance must include a statement by the insurer that the policy or policies may not be canceled, subject to nonrenewal, or materially altered without at least 30 days' prior written notice to us. Upon our request, you must supply us with copies of all insurance policies and proof of payment. Every year, you must send us current certificates of insurance and copies of all insurance policies. 6.19.3. Requirements for Construction and Renovation. " ;
+    ct:source_path "cuad/PfHospitalityGroupInc_20150923_10-12G_EX-10.1_9266710_EX-10.1_Franchise Agreement1.txt" ;
+    ct:source_sha256 "3d9aa8e816a1271c5169e51a03dd88439b1278c21ce57cb28b786e22335108e4" ;
+    ct:start_char 62980 .
+
+ex:C068P0132 a ct:SourcePassage ;
+    ct:end_char 114623 ;
+    ct:exact_text "If an interest is not disposed of under this Section 14.6 [Transfer upon Death or Incapacity] within six (6) months after the date of death or appointment of a personal representative or trustee, we may terminate this Agreement under Section 15.2 [Termination By Us Without A Cure Period] below. Page 28 of 39" ;
+    ct:source_path "cuad/PfHospitalityGroupInc_20150923_10-12G_EX-10.1_9266710_EX-10.1_Franchise Agreement1.txt" ;
+    ct:source_sha256 "3d9aa8e816a1271c5169e51a03dd88439b1278c21ce57cb28b786e22335108e4" ;
+    ct:start_char 114314 .
+
+ex:C068P0138 a ct:SourcePassage ;
+    ct:end_char 119835 ;
+    ct:exact_text "15.2. Termination By Us Without A Cure Period. We may terminate this Agreement by written notice to you, without giving you an opportunity to cure, upon the occurrence of any of the following events: 15.2.1. You, the Operating Principal, and/or your personnel fail to complete training under Section 5.1 [Initial Training Program] to our satisfaction. 15.2.2. You fail to open for business by the opening deadline specified in Appendix A. 15.2.3. You disclose the contents of the Manual or other trade secrets or confidential information contrary to Sections 11 and 12 of this Agreement. 15.2.4. You refuse to permit, or try to hinder, an examination or audit of your books and records or of the Franchised Business as provided in this Agreement. 15.2.5. You make any material misrepresentation in connection with your application to us for the franchise, or you submit to us any report or statement that you know or should know to be false or misleading. 15.2.6. You understate to us your Gross Revenues, by 2% or more on three or more occasions in any twelve-month period, or by 5% or more for any period of four or more consecutive weeks. 15.2.7. You fail to operate the Franchised Business for three or more consecutive business days on which you were required to operate, unless we determine that the failure was beyond your control. 15.2.8. " ;
+    ct:source_path "cuad/PfHospitalityGroupInc_20150923_10-12G_EX-10.1_9266710_EX-10.1_Franchise Agreement1.txt" ;
+    ct:source_sha256 "3d9aa8e816a1271c5169e51a03dd88439b1278c21ce57cb28b786e22335108e4" ;
+    ct:start_char 118488 .
+
+ex:C068P0142 a ct:SourcePassage ;
+    ct:end_char 123321 ;
+    ct:exact_text "15.3. Termination by Us Following Expiration of Cure Period for Monetary Default. You will be in default under this Agreement if you fail, refuse, or neglect to pay when due (including if we are not able to collect payments by electronic fund transfer pursuant to Section 3.6 [Method of Payment] due to insufficient funds in your account(s), closure of your account(s), or any other reason resulting in the nonpayment) any monies owing to us, our affiliates, or any lender that has provided financing to you under this Agreement or any other agreement, or to your landlord and/or any supplier of goods or services to your Franchised Business. You will have ten (10) days after written notice of such default from us within which to remedy the default. You may avoid termination by curing the default to our satisfaction within the 10-day period (or such longer period as applicable law may require). If you do not cure the default within such 10-day period (or such longer period as applicable law may require), this Agreement will terminate automatically and without further notice, effective immediately upon the expiration of the specified time period. 15.4 Termination by Us Following Expiration of Cure Period. " ;
+    ct:source_path "cuad/PfHospitalityGroupInc_20150923_10-12G_EX-10.1_9266710_EX-10.1_Franchise Agreement1.txt" ;
+    ct:source_sha256 "3d9aa8e816a1271c5169e51a03dd88439b1278c21ce57cb28b786e22335108e4" ;
+    ct:start_char 122105 .
+
+ex:C068P0143 a ct:SourcePassage ;
+    ct:end_char 124531 ;
+    ct:exact_text "For any default not covered under Sections 15.1 [Termination By Us Without Notice], 15.2 [Termination By Us Without A Cure Period], or 15.3 above, you will have thirty (30) days after written notice of default from us within which to remedy the default. You may avoid termination by curing the default to our satisfaction within the 30-day period (or such longer period as applicable law may require). If you do not cure the default within the specified time, this Agreement will terminate automatically and without further notice, effective immediately upon the expiration of the specified time period. Any failure to comply with this Agreement, as amended or reasonably supplemented by the Manual or otherwise in writing, not covered by Sections 15.1 [Termination By Us Without Notice], 15.2 [Termination By Us Without A Cure Period], or 15.3 above constitutes a default, including, but not limited to, the following: 15.3.1. You fail, refuse, or neglect to submit to us the financial and other reports and information required under this Agreement. 15.3.2. You fail to comply with any of the mandatory standards or procedures prescribed by us in this Agreement, the Manual, or otherwise in writing. 15.3.3. " ;
+    ct:source_path "cuad/PfHospitalityGroupInc_20150923_10-12G_EX-10.1_9266710_EX-10.1_Franchise Agreement1.txt" ;
+    ct:source_sha256 "3d9aa8e816a1271c5169e51a03dd88439b1278c21ce57cb28b786e22335108e4" ;
+    ct:start_char 123321 .
+
+ct:Agreement a owl:Class ;
+    rdfs:label "Agreement" .
+
+ex:C068P0004 a ct:SourcePassage ;
+    ct:end_char 1280 ;
+    ct:exact_text "TABLE OF CONTENTS SECTION PAGE 1. RIGHTS GRANTED 2 2. TERM; SUCCESSOR FRANCHISE AGREEMENTS 4 3. FEES 4 4. OPENING DEADLINE 6 5. TRAINING 10 6. OPERATIONS 11 7. PROPRIETARY MARKS 18 8. BUSINESS RECORDS AND REPORTING 19 9. MARKETING FUND AND ADVERTISING 21 10. TECHNOLOGY 23 11. OPERATING MANUAL 26 12. CONFIDENTIAL INFORMATION 26 13. TRANSFERS BY US 26 14. TRANSFERS BY YOU 27 15. TERMINATION 29 16. OBLIGATIONS ON TERMINATION OR EXPIRATION 31 17. RESTRICTIONS ON COMPETITION 33 18. RELATIONSHIP OF THE PARTIES 34 19. INDEMNIFICATION 35 20. CONSENTS AND WAIVERS 35 21. NOTICES 35 22. ENTIRE AGREEMENT AND AMENDMENTS 35 23. CONSTRUCTION OF THE AGREEMENT, SEVERABILITY, AND SURVIVAL 36 24. GOVERNING LAW 36 25. DISPUTES 36 26. ACKNOWLEDGMENTS 37 Appendix A - Opening Deadline, Delivery/Catering and Advertising Area, and Site Selection Area Appendix B - Personal Guarantee Appendix C - Sample of Non-Disclosure and Non-Competition Agreement - i -" ;
+    ct:source_path "cuad/PfHospitalityGroupInc_20150923_10-12G_EX-10.1_9266710_EX-10.1_Franchise Agreement1.txt" ;
+    ct:source_sha256 "3d9aa8e816a1271c5169e51a03dd88439b1278c21ce57cb28b786e22335108e4" ;
+    ct:start_char 337 .
+
+ex:C068P0020 a ct:SourcePassage ;
+    ct:end_char 13892 ;
+    ct:exact_text "2. TERM; SUCCESSOR FRANCHISE AGREEMENTS 2.1. Term. This Agreement expires ten (10) years from the Agreement Date (the \"Term\"), unless it is terminated sooner as provided in other sections of this Agreement. 2.2. Successor Franchise Agreements. When this Agreement expires, you will have the option to continue the franchise relationship with us for two (2) additional terms of ten (10) years each. We may require you to satisfy any or all of the following as a condition of continuing the franchise relationship with us: 2.2.1. You must give us written notice of your desire to exercise your option not more than twelve (12) months and not less than nine (9) months before this Agreement expires. 2.2.2. You and all Owners must execute the standard form of Pizza Fusion Franchise Agreement that we are then offering to new franchisees (or the standard form that we most recently offered to new franchisees, if we are not at that time actively offering new franchises) (the \"Successor Franchise Agreement\"). The terms of the Successor Franchise Agreement may be substantially different from the terms of this Agreement and may require the payment of different fees. 2.2.3. You must pay all amounts owed to us, to our affiliates, and to your major suppliers; you must not be in default of this Agreement or any other agreement with us, our affiliates, or our suppliers; " ;
+    ct:source_path "cuad/PfHospitalityGroupInc_20150923_10-12G_EX-10.1_9266710_EX-10.1_Franchise Agreement1.txt" ;
+    ct:source_sha256 "3d9aa8e816a1271c5169e51a03dd88439b1278c21ce57cb28b786e22335108e4" ;
+    ct:start_char 12524 .
+
+ex:C068P0035 a ct:SourcePassage ;
+    ct:end_char 27716 ;
+    ct:exact_text "4.1.2 You must submit a site review report and such other information or materials as we may reasonably require (including but not limited to, photographs, demographic information, an option contract, letter of intent, or other evidence satisfactory to us that confirms your favorable prospects for obtaining the site). We will review site approval submissions on a first-in basis. (a) If we do not approve in writing the proposed site, you must, within 30 days after our disapproval of the proposed site, submit a new proposed site within the Delivery/Catering and Advertising Area for our review and approval. (b) By no later than 90 days after the Agreement Date, you must have obtained our written approval of a site. If you have not done so, we may elect to terminate this Agreement, and we will not refund to you the Initial Franchise Fee or any other money paid to us. (c) We will not unreasonably withhold approval of any site that meets our standards. You may not lease or otherwise acquire the right to occupy the proposed site without our prior written approval. 4.2 Site Lease or Acquisition. You must, within 30 days after we approve a site for the Franchised Business (but in no event later than 120 days after the Agreement Date), either by lease or purchase the approved site for the Premises, as further described below. " ;
+    ct:source_path "cuad/PfHospitalityGroupInc_20150923_10-12G_EX-10.1_9266710_EX-10.1_Franchise Agreement1.txt" ;
+    ct:source_sha256 "3d9aa8e816a1271c5169e51a03dd88439b1278c21ce57cb28b786e22335108e4" ;
+    ct:start_char 26378 .
+
+ex:C068P0050 a ct:SourcePassage ;
+    ct:end_char 41089 ;
+    ct:exact_text "5.1.3. We have the right to reduce the duration or content of the training program for any trainee who has prior experience with our concept or in similar businesses. We also may allow you to train certain of your managers (which may include Certified Managers) and successors in those positions at your location. 5.1.4. Failure to complete the initial training program constitutes grounds for termination, as provided in Section 15 of this Agreement. 5.2. Opening Training and Assistance. We provide up to fourteen (14) days of pre-opening training and opening assistance at your Premises. The Operating Principal and the other Manager Trainee and such of your other employees as we designate must attend this component of training, which will begin approximately seven days before the Opening Date and conclude approximately seven days thereafter. 5.3. Additional Training by Us. We may require your Certified Managers and/or other designated persons to successfully complete additional training courses during the Term of this Agreement at a location that we specify (including an annual conference for franchisees in the System). We may also offer optional training programs. You may also request that we provide additional training at the location of your Franchised Business, and we will provide such training if we determine that we are able to do so. " ;
+    ct:source_path "cuad/PfHospitalityGroupInc_20150923_10-12G_EX-10.1_9266710_EX-10.1_Franchise Agreement1.txt" ;
+    ct:source_sha256 "3d9aa8e816a1271c5169e51a03dd88439b1278c21ce57cb28b786e22335108e4" ;
+    ct:start_char 39730 .
+
+ex:C068P0065 a ct:SourcePassage ;
+    ct:end_char 55788 ;
+    ct:exact_text "We may terminate your right to provide products and services to a Major Account customer at any time by giving you at least 30 days' prior written notice, and you may terminate your right to provide products and services to a Major Account at any time by giving us at least 30 days' prior written notice. If we elect not to offer you the opportunity to provide products or services to a Major Account, if you decline the option to accept a Major Account, if your right to provide products or services to a Major Account terminates, or if you fail to satisfy the conditions and obligations of any Major Account agreement, we have the right to service and/or authorize others to service Major Account customers within your Delivery/Catering and Advertising Area without any compensation to you. We have no obligation to permit you to provide products or services to a Major Account or to transfer any Major Account customer to you if you are subsequently willing and able to provide service. 6.13. Inspections. We have the right, at any time during normal business hours: (i) to conduct inspections of the Franchised Business; (ii) to interview your employees, work crews, and customers; and (iii) to review your business records, including those maintained electronically or off premises. We can initiate these actions with or without prior notice to you. " ;
+    ct:source_path "cuad/PfHospitalityGroupInc_20150923_10-12G_EX-10.1_9266710_EX-10.1_Franchise Agreement1.txt" ;
+    ct:source_sha256 "3d9aa8e816a1271c5169e51a03dd88439b1278c21ce57cb28b786e22335108e4" ;
+    ct:start_char 54433 .
+
+ex:C068P0092 a ct:SourcePassage ;
+    ct:end_char 79496 ;
+    ct:exact_text "If the examination or audit reveals an understatement of Gross Revenues, you must immediately pay us any Royalty fees, Advertising Contributions, or other amounts owing, plus interest as provided in Section 3.8 [Dishonored Payments]. If Gross Revenues have been understated by more than 2% for the period covered by the examination or audit, you must also: (1) reimburse us for the full reasonable cost of the examination or audit, including, travel, lodging, meals, and wages of our representatives and the legal and accounting fees of any attorneys or independent accountants we use for the examination or audit; and (2) at our request, thereafter provide us with periodic audited financial statements. If you have understated Gross Revenues by 2% or more on three or more occasions in any twelve-month period, or by 5% or more for any period of four (or more) consecutive weeks, we have the right to terminate this Agreement with no opportunity for cure. The foregoing remedies are in addition any other remedies and rights available to us under this Agreement or applicable law. 8.4. Governing Documents. " ;
+    ct:source_path "cuad/PfHospitalityGroupInc_20150923_10-12G_EX-10.1_9266710_EX-10.1_Franchise Agreement1.txt" ;
+    ct:source_sha256 "3d9aa8e816a1271c5169e51a03dd88439b1278c21ce57cb28b786e22335108e4" ;
+    ct:start_char 78387 .
+
+ex:C068P0102 a ct:SourcePassage ;
+    ct:end_char 88902 ;
+    ct:exact_text "9.3.6 We will credit the contributions you make to the Regional Fund against the amounts you must spend on local advertising under Section 9.2 [Local Marketing] above. 9.3.7 Although once established, each Regional Fund is intended to be of perpetual duration, we maintain the right to terminate any Regional Fund. A Regional Fund will not be terminated, however, until all monies in that Regional Fund have been expended for marketing and/or promotional purposes. 9.4 Initial Advertising Campaign. You agree to conduct a Grand Opening Advertising Program for the Franchised Business throughout the first four weeks after the Opening Date, spending an amount not less than $12,000. You must obtain our prior written approval as provided in Section 9.5 [Advertising Approval] below before implementing any advertising plans and/or making any use or placement of advertising and promotional materials as part of the Grand Opening Advertising Program. You acknowledge that the Grand Opening Advertising Program may not be sufficient in all cases to develop adequate exposure to the services offered by your Franchised Business, and that it may be necessary for you to supplement the Grand Opening Advertising Program with additional advertising and promotional expenditures and efforts. Page 22 of 39" ;
+    ct:source_path "cuad/PfHospitalityGroupInc_20150923_10-12G_EX-10.1_9266710_EX-10.1_Franchise Agreement1.txt" ;
+    ct:source_sha256 "3d9aa8e816a1271c5169e51a03dd88439b1278c21ce57cb28b786e22335108e4" ;
+    ct:start_char 87605 .
+
+ex:C068P0139 a ct:SourcePassage ;
+    ct:end_char 121189 ;
+    ct:exact_text "You or any Owner, officer or director is convicted of a crime that we reasonably believe is likely to harm the reputation of the Pizza Fusion concept. 15.2.9. Any Transfer occurs that does not comply with Section 14, including a failure to transfer to a qualified successor after death or disability within the time allowed by Section 14.7 [Non-Conforming Transfers]. 15.2.10. You are in default three (3) or more times under Sections 15.3 [Termination by Us Following Expiration of Cure Period for Monetary Default] and/or 15.4 [Termination by Us Following Expiration of Cure Period] within any twelve (12) month period, whether or not the defaults are similar and whether or not they are cured. 15.2.11. After curing a default pursuant to Sections 15.3 [Termination by Us Following Expiration of Cure Period for Monetary Default] or 15.4 [Termination by Us Following Expiration of Cure Period], you commit the same default within twelve (12) months, whether or not the second default is cured. 15.2.12. Any condition exists with respect to the Franchised Business that, in our reasonable judgment, seriously jeopardizes public health or safety. 15.2.13. You fail to comply with the covenants in Section 17 below or fail to timely obtain execution of the covenants required under Section 12 above and Section 17.3 [Owners and Employees] below. 15.2.14. " ;
+    ct:source_path "cuad/PfHospitalityGroupInc_20150923_10-12G_EX-10.1_9266710_EX-10.1_Franchise Agreement1.txt" ;
+    ct:source_sha256 "3d9aa8e816a1271c5169e51a03dd88439b1278c21ce57cb28b786e22335108e4" ;
+    ct:start_char 119835 .
+
+ex:C068P0140 a ct:SourcePassage ;
+    ct:end_char 122045 ;
+    ct:exact_text "You fail to obtain or maintain required insurance. 15.2.15. You cease to operate the Franchised Business for more than seven (7) consecutive days or fourteen (14) days in any calendar year unless we approved a temporary closing or we determine, that the failure to operate was beyond your control, you otherwise abandon the Franchised Business, or you lose the right to possess the Premises or you otherwise forfeit the right to do or transact business as required under this Agreement. If, however, through no fault of you, the Premises are damaged or destroyed by an event such that repairs or reconstruction cannot be completed within ninety (90) days thereafter, you will have thirty (30) days after such event in which to apply for our approval to relocate and/or reconstruct the premises, and we will not unreasonably hold our approval. Page 30 of 39" ;
+    ct:source_path "cuad/PfHospitalityGroupInc_20150923_10-12G_EX-10.1_9266710_EX-10.1_Franchise Agreement1.txt" ;
+    ct:source_sha256 "3d9aa8e816a1271c5169e51a03dd88439b1278c21ce57cb28b786e22335108e4" ;
+    ct:start_char 121189 .
+
+ex:C068P0144 a ct:SourcePassage ;
+    ct:end_char 125827 ;
+    ct:exact_text "You fail, refuse, or neglect to obtain our prior written approval or consent as required by this Agreement (other than a failure to obtain consent to a proposed Transfer, for which we may terminate without a cure period as provided in Section 15.2 [Termination By Us Without A Cure Period]). 15.3.4. For a period of fifteen (15) days, you allow a continued violation of any law, ordinance, rule or regulation of a governmental agency, including the failure to maintain or procure any required licenses, permits, or certifications, in the absence of a good faith dispute over its application or legality and without promptly resorting to an appropriate administrative or judicial forum for relief. 15.3.5. You misuse or make any unauthorized use of the Proprietary Marks or otherwise materially impair our goodwill or rights in the Proprietary Marks. 15.5. Cross-Default. Any default by you (including for this purpose your affiliates) under any other agreement with us will constitute a default under this Agreement, subject to the same provisions for notice and cure, if any, as may be applicable to the default under the other agreement. 16. OBLIGATIONS ON TERMINATION OR EXPIRATION 16.1. Upon termination or expiration of this Agreement for any reason, unless we direct you otherwise: 16.1.1. " ;
+    ct:source_path "cuad/PfHospitalityGroupInc_20150923_10-12G_EX-10.1_9266710_EX-10.1_Franchise Agreement1.txt" ;
+    ct:source_sha256 "3d9aa8e816a1271c5169e51a03dd88439b1278c21ce57cb28b786e22335108e4" ;
+    ct:start_char 124531 .
+
+ex:C068P0150 a ct:SourcePassage ;
+    ct:end_char 130363 ;
+    ct:exact_text "(b) If you fail or refuse to comply with the requirements of this Section 16.1.5 [OBLIGATIONS ON TERMINATION OR EXPIRATION], we will have the right to enter upon the Premises, without being guilty of trespass or any other tort, for the purpose of making or causing to be made such changes as may be required, at your expense, which you agree to pay upon demand. 16.2. Purchase of Assets. You agree that, at our option, you will sell to us any or all your assets used to operate the Franchised Business (including equipment, fixtures, furnishings, Delivery Vehicles, supplies, and inventory) that we ask in writing to purchase. 16.2.1. The purchase price for such items will be equal to your depreciated cost (determined below) or fair market value, whichever is less. The cost will be determined based upon a five (5) year straight-line depreciation of original costs. For equipment that is five (5) or more years old, the parties agree that fair market value will be deemed to be ten percent (10%) of the equipment's original cost. The fair market value of tangible assets must be determined without reference to good will, going-concern value, or other intangible assets. Page 32 of 39" ;
+    ct:source_path "cuad/PfHospitalityGroupInc_20150923_10-12G_EX-10.1_9266710_EX-10.1_Franchise Agreement1.txt" ;
+    ct:source_sha256 "3d9aa8e816a1271c5169e51a03dd88439b1278c21ce57cb28b786e22335108e4" ;
+    ct:start_char 129176 .
+
+ex:C068P0152 a ct:SourcePassage ;
+    ct:end_char 131587 ;
+    ct:exact_text "16.2.2. We may exercise this option by delivering a notice of intent to purchase to you within 30 days after the expiration or termination of this Agreement. During that 30-day period, you agree not to dispose of, transfer, or otherwise hinder our ability to exercise our rights with respect to your assets. 16.2.3. If we exercise our option to purchase, we may setoff all amounts due to us under this Agreement and the cost of the appraisal (if any), against any payment due to you. 16.2.4. If we do not exercise our rights to purchase your Delivery Vehicle(s), you must immediately make such modifications or alterations to the Delivery Vehicle(s) that may be needed to remove any Proprietary Marks and to otherwise distinguish the appearance of the vehicle(s) from those used by other Restaurants. 16.3. Right to Enter and Continue Operations. In order to preserve the goodwill of the System following termination, we (or our designee) have the right to enter the Premises (without liability to you, your Owners, or otherwise) for the purpose continuing the Franchised Business' operation and maintaining the goodwill of the business. 16.4. Liquidated Damages. " ;
+    ct:source_path "cuad/PfHospitalityGroupInc_20150923_10-12G_EX-10.1_9266710_EX-10.1_Franchise Agreement1.txt" ;
+    ct:source_sha256 "3d9aa8e816a1271c5169e51a03dd88439b1278c21ce57cb28b786e22335108e4" ;
+    ct:start_char 130423 .
+
+ex:C068P0153 a ct:SourcePassage ;
+    ct:end_char 132885 ;
+    ct:exact_text "If this Agreement is terminated due to your default, you must, upon written demand, pay us a lump-sum payment in an amount calculated as follows: (a) the average of your Royalty fees and Advertising Contributions due for the last 60 months before our delivery of notice of default (or, if lesser, the months you had been operating before our delivery of notice of default), (b) multiplied by the lesser of 60 or the number of months remaining in the term of this Agreement. 16.5. Liquidated Damages. 16.5.1 The payments called for in Section 16.4 [Liquidated Damages] above constitute liquidated damages for causing the premature termination of this Agreement and not a penalty. A precise calculation of the full extent of damages that we will incur if this Agreement terminates because you default cannot be reasonably determined. Nevertheless, the parties agree that the lump-sum payment provided under Section 16.4 [Liquidated Damages] above is reasonable in light of the damages for premature termination that may reasonably be expected to occur in such event. 16.5.2 The amounts contemplated under Section 16.4 [Liquidated Damages] above is not a penalty and is intended by the parties only as a compensatory remedy for past breaches and not as a preventative remedy to deter future breaches. " ;
+    ct:source_path "cuad/PfHospitalityGroupInc_20150923_10-12G_EX-10.1_9266710_EX-10.1_Franchise Agreement1.txt" ;
+    ct:source_sha256 "3d9aa8e816a1271c5169e51a03dd88439b1278c21ce57cb28b786e22335108e4" ;
+    ct:start_char 131587 .
+
+ct:SourcePassage a owl:Class ;
+    rdfs:label "SourcePassage" .
+
+ct:Condition a owl:Class ;
+    rdfs:label "Condition" .
+
+ct:Reference a owl:Class ;
+    rdfs:label "Reference" .
+
+ct:Rule a owl:Class ;
+    rdfs:label "Rule" .
+

@@ -1,0 +1,334 @@
+@prefix ct: <https://cimulink.local/ontology/contract-terms/0.1#> .
+@prefix ex: <https://cimulink.local/ontology/llm100-v1/> .
+@prefix meta: <https://cimulink.local/ontology/extraction#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ct: a owl:Ontology ;
+    rdfs:comment "Partial five-contract development sample. No claim of complete contract coverage or legal correctness." .
+
+ct:agreement_effective_from a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:applies_within a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:calendar_date_status a owl:DatatypeProperty .
+
+ct:coverage a owl:DatatypeProperty .
+
+ct:description a owl:DatatypeProperty .
+
+ct:duration a owl:DatatypeProperty .
+
+ct:duration_status a owl:DatatypeProperty .
+
+ct:end_char a owl:DatatypeProperty .
+
+ct:end_date_status a owl:DatatypeProperty .
+
+ct:ends_on_event a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:exact_text a owl:DatatypeProperty .
+
+ct:has_party a owl:ObjectProperty ;
+    rdfs:domain ct:Agreement ;
+    rdfs:range ct:Party .
+
+ct:has_rule a owl:ObjectProperty ;
+    rdfs:domain ct:Agreement ;
+    rdfs:range ct:Rule .
+
+ct:kind a owl:DatatypeProperty .
+
+ct:notice_actor a owl:DatatypeProperty .
+
+ct:notice_form a owl:DatatypeProperty .
+
+ct:notice_period_status a owl:DatatypeProperty .
+
+ct:qualifies a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Rule .
+
+ct:references_section a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:renewal_count a owl:DatatypeProperty .
+
+ct:resolution_status a owl:DatatypeProperty .
+
+ct:resolved_to a owl:ObjectProperty ;
+    rdfs:domain ct:Reference ;
+    rdfs:range ct:SourcePassage .
+
+ct:source_path a owl:DatatypeProperty .
+
+ct:source_sha256 a owl:DatatypeProperty .
+
+ct:start_char a owl:DatatypeProperty .
+
+ct:starts_from a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:stated_end_date a owl:DatatypeProperty .
+
+ct:subject_to a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Condition .
+
+ct:supported_by a owl:ObjectProperty ;
+    rdfs:range ct:SourcePassage .
+
+ct:termination_notice a owl:DatatypeProperty .
+
+ex:C099 a ct:Agreement ;
+    rdfs:label "XinhuaSportsEntertainmentLtd_20070221_F-1_EX-99.4_645553_EX-99.4_Content License Agreement.txt" ;
+    ct:coverage "LOCAL_LLM_PROPOSED_PARTIAL; NOT_HUMAN_REVIEWED" ;
+    ct:has_rule ex:C099R0001,
+        ex:C099R0002,
+        ex:C099R0003,
+        ex:C099R0004,
+        ex:C099R0005,
+        ex:C099R0006,
+        ex:C099R0007,
+        ex:C099R0008,
+        ex:C099R0009,
+        ex:C099R0010,
+        ex:C099R0011,
+        ex:C099R0012,
+        ex:C099R0013,
+        ex:C099R0014,
+        ex:C099R0015 ;
+    ct:source_path "cuad/XinhuaSportsEntertainmentLtd_20070221_F-1_EX-99.4_645553_EX-99.4_Content License Agreement.txt" ;
+    ct:source_sha256 "d20ca7099b4894b290f3e0399f466b78ab1cd297bdfc9b270b80528607dcab51" ;
+    meta:model_digest "0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0" .
+
+ct:Party a owl:Class ;
+    rdfs:label "Party" .
+
+ex:C099P0033 a ct:SourcePassage ;
+    ct:end_char 5010 ;
+    ct:exact_text "\"TERM\"             means the term as set out in Clause 7; and" ;
+    ct:source_path "cuad/XinhuaSportsEntertainmentLtd_20070221_F-1_EX-99.4_645553_EX-99.4_Content License Agreement.txt" ;
+    ct:source_sha256 "d20ca7099b4894b290f3e0399f466b78ab1cd297bdfc9b270b80528607dcab51" ;
+    ct:start_char 4949 .
+
+ex:C099P0054 a ct:SourcePassage ;
+    ct:end_char 7877 ;
+    ct:exact_text "2.5  XFN and/or its Affiliates have the right at any time to suspend or cease      distributing or making the Content available to the public." ;
+    ct:source_path "cuad/XinhuaSportsEntertainmentLtd_20070221_F-1_EX-99.4_645553_EX-99.4_Content License Agreement.txt" ;
+    ct:source_sha256 "d20ca7099b4894b290f3e0399f466b78ab1cd297bdfc9b270b80528607dcab51" ;
+    ct:start_char 7735 .
+
+ex:C099P0064 a ct:SourcePassage ;
+    ct:end_char 9703 ;
+    ct:exact_text "Hundred Thousand) for a term of twenty (20) years, in cash or such other      consideration as the Parties may agree. The payment schedule shall be by      five (5) instalments of US$220,000 each. The first instalment will be      effect on condition that XFN can raise at least US$1.1 million additional      funding in 2002." ;
+    ct:source_path "cuad/XinhuaSportsEntertainmentLtd_20070221_F-1_EX-99.4_645553_EX-99.4_Content License Agreement.txt" ;
+    ct:source_sha256 "d20ca7099b4894b290f3e0399f466b78ab1cd297bdfc9b270b80528607dcab51" ;
+    ct:start_char 9377 .
+
+ex:C099P0087 a ct:SourcePassage ;
+    ct:end_char 12989 ;
+    ct:exact_text "7.1  This Agreement shall take effect from the Effective Date and continue in      full force and effect for twenty (20) years thereafter, unless otherwise      terminated in accordance with Clause 8." ;
+    ct:source_path "cuad/XinhuaSportsEntertainmentLtd_20070221_F-1_EX-99.4_645553_EX-99.4_Content License Agreement.txt" ;
+    ct:source_sha256 "d20ca7099b4894b290f3e0399f466b78ab1cd297bdfc9b270b80528607dcab51" ;
+    ct:start_char 12789 .
+
+ex:C099P0089 a ct:SourcePassage ;
+    ct:end_char 13206 ;
+    ct:exact_text "8.   TERMINATION" ;
+    ct:source_path "cuad/XinhuaSportsEntertainmentLtd_20070221_F-1_EX-99.4_645553_EX-99.4_Content License Agreement.txt" ;
+    ct:source_sha256 "d20ca7099b4894b290f3e0399f466b78ab1cd297bdfc9b270b80528607dcab51" ;
+    ct:start_char 13190 .
+
+ex:C099P0090 a ct:SourcePassage ;
+    ct:end_char 13305 ;
+    ct:exact_text "8.1  XFN may terminate this Agreement by giving thirty (30) days written notice      to the CEIS." ;
+    ct:source_path "cuad/XinhuaSportsEntertainmentLtd_20070221_F-1_EX-99.4_645553_EX-99.4_Content License Agreement.txt" ;
+    ct:source_sha256 "d20ca7099b4894b290f3e0399f466b78ab1cd297bdfc9b270b80528607dcab51" ;
+    ct:start_char 13208 .
+
+ex:C099P0091 a ct:SourcePassage ;
+    ct:end_char 13354 ;
+    ct:exact_text "8.2  Either Party may terminate this Agreement:" ;
+    ct:source_path "cuad/XinhuaSportsEntertainmentLtd_20070221_F-1_EX-99.4_645553_EX-99.4_Content License Agreement.txt" ;
+    ct:source_sha256 "d20ca7099b4894b290f3e0399f466b78ab1cd297bdfc9b270b80528607dcab51" ;
+    ct:start_char 13307 .
+
+ex:C099P0095 a ct:SourcePassage ;
+    ct:end_char 13841 ;
+    ct:exact_text "8.3  Upon termination of the Agreement:" ;
+    ct:source_path "cuad/XinhuaSportsEntertainmentLtd_20070221_F-1_EX-99.4_645553_EX-99.4_Content License Agreement.txt" ;
+    ct:source_sha256 "d20ca7099b4894b290f3e0399f466b78ab1cd297bdfc9b270b80528607dcab51" ;
+    ct:start_char 13802 .
+
+ex:C099P0096 a ct:SourcePassage ;
+    ct:end_char 13942 ;
+    ct:exact_text "(a)  CEIS shall terminate the transmission of the Content with immediate           effect; and" ;
+    ct:source_path "cuad/XinhuaSportsEntertainmentLtd_20070221_F-1_EX-99.4_645553_EX-99.4_Content License Agreement.txt" ;
+    ct:source_sha256 "d20ca7099b4894b290f3e0399f466b78ab1cd297bdfc9b270b80528607dcab51" ;
+    ct:start_char 13848 .
+
+ex:C099P0097 a ct:SourcePassage ;
+    ct:end_char 14245 ;
+    ct:exact_text "(b)  in the event that this Agreement is terminated prior to the expiry of           the Term, XFN shall recover any sums paid to CEIS in advance for the           unexpired Term of this Agreement, together with interest from the date           those sums were paid until the date of full refund." ;
+    ct:source_path "cuad/XinhuaSportsEntertainmentLtd_20070221_F-1_EX-99.4_645553_EX-99.4_Content License Agreement.txt" ;
+    ct:source_sha256 "d20ca7099b4894b290f3e0399f466b78ab1cd297bdfc9b270b80528607dcab51" ;
+    ct:start_char 13949 .
+
+ex:C099R0001 a ct:Rule ;
+    rdfs:label "Initial Term — source passage 11" ;
+    ct:kind "INITIAL_TERM" ;
+    ct:supported_by ex:C099P0011 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C099R0002 a ct:Rule ;
+    rdfs:label "Termination — source passage 11" ;
+    ct:kind "TERMINATION" ;
+    ct:supported_by ex:C099P0011 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C099R0003 a ct:Rule ;
+    rdfs:label "Conditional Referenced Term — source passage 11" ;
+    ct:kind "CONDITIONAL_REFERENCED_TERM" ;
+    ct:supported_by ex:C099P0011 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C099R0004 a ct:Rule ;
+    rdfs:label "Initial Term — source passage 33" ;
+    ct:kind "INITIAL_TERM" ;
+    ct:references_section ex:C099R0004Ref0 ;
+    ct:supported_by ex:C099P0033 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C099R0004Ref0 a ct:Reference ;
+    rdfs:label "Clause 7" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C099R0005 a ct:Rule ;
+    rdfs:label "Termination — source passage 54" ;
+    ct:kind "TERMINATION" ;
+    ct:supported_by ex:C099P0054 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C099R0006 a ct:Rule ;
+    rdfs:label "Initial Term — source passage 64" ;
+    ct:kind "INITIAL_TERM" ;
+    ct:supported_by ex:C099P0064 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C099R0007 a ct:Rule ;
+    rdfs:label "Initial Term — source passage 87" ;
+    ct:kind "INITIAL_TERM" ;
+    ct:references_section ex:C099R0007Ref0 ;
+    ct:supported_by ex:C099P0087 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C099R0007Ref0 a ct:Reference ;
+    rdfs:label "Clause 8" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C099R0008 a ct:Rule ;
+    rdfs:label "Optional Renewal — source passage 88" ;
+    ct:kind "OPTIONAL_RENEWAL" ;
+    ct:subject_to ex:C099R0008Condition88 ;
+    ct:supported_by ex:C099P0088 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C099R0008Condition88 a ct:Condition ;
+    ct:description "7.2  This Agreement may be renewed for an additional term of ten (10) years by      notice in writing given by XFN to CEIS at the expiry of the Term, for a      consideration to be mutually agreed." ;
+    ct:supported_by ex:C099P0088 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C099R0009 a ct:Rule ;
+    rdfs:label "Termination — source passage 89" ;
+    ct:kind "TERMINATION" ;
+    ct:supported_by ex:C099P0089 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C099R0010 a ct:Rule ;
+    rdfs:label "Termination — source passage 90" ;
+    ct:kind "TERMINATION" ;
+    ct:supported_by ex:C099P0090 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C099R0011 a ct:Rule ;
+    rdfs:label "Termination — source passage 91" ;
+    ct:kind "TERMINATION" ;
+    ct:supported_by ex:C099P0091 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C099R0012 a ct:Rule ;
+    rdfs:label "Conditional Referenced Term — source passage 93" ;
+    ct:kind "CONDITIONAL_REFERENCED_TERM" ;
+    ct:subject_to ex:C099R0012Condition93 ;
+    ct:supported_by ex:C099P0093 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C099R0012Condition93 a ct:Condition ;
+    ct:description "(b)  if the other Party commits a material breach of this Agreement which           is capable of being remedied but not remedied within thirty (30) days           upon receiving written notice from the non-breaching party requiring           remedy; and" ;
+    ct:supported_by ex:C099P0093 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C099R0013 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 95" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:supported_by ex:C099P0095 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C099R0014 a ct:Rule ;
+    rdfs:label "Termination — source passage 96" ;
+    ct:kind "TERMINATION" ;
+    ct:supported_by ex:C099P0096 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C099R0015 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 97" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:supported_by ex:C099P0097 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C099P0088 a ct:SourcePassage ;
+    ct:end_char 13188 ;
+    ct:exact_text "7.2  This Agreement may be renewed for an additional term of ten (10) years by      notice in writing given by XFN to CEIS at the expiry of the Term, for a      consideration to be mutually agreed." ;
+    ct:source_path "cuad/XinhuaSportsEntertainmentLtd_20070221_F-1_EX-99.4_645553_EX-99.4_Content License Agreement.txt" ;
+    ct:source_sha256 "d20ca7099b4894b290f3e0399f466b78ab1cd297bdfc9b270b80528607dcab51" ;
+    ct:start_char 12991 .
+
+ex:C099P0093 a ct:SourcePassage ;
+    ct:end_char 13739 ;
+    ct:exact_text "(b)  if the other Party commits a material breach of this Agreement which           is capable of being remedied but not remedied within thirty (30) days           upon receiving written notice from the non-breaching party requiring           remedy; and" ;
+    ct:source_path "cuad/XinhuaSportsEntertainmentLtd_20070221_F-1_EX-99.4_645553_EX-99.4_Content License Agreement.txt" ;
+    ct:source_sha256 "d20ca7099b4894b290f3e0399f466b78ab1cd297bdfc9b270b80528607dcab51" ;
+    ct:start_char 13485 .
+
+ct:Agreement a owl:Class ;
+    rdfs:label "Agreement" .
+
+ct:Condition a owl:Class ;
+    rdfs:label "Condition" .
+
+ex:C099P0011 a ct:SourcePassage ;
+    ct:end_char 2156 ;
+    ct:exact_text "Clause                                                                      Page ------                                                                      ----                                                                           1.  Definitions and Interpretation.......................................     1 2.  Grant of Rights......................................................     2 3.  Delivery of Content..................................................     3 4.  Consideration........................................................     3 5.  Representations and Warranties.......................................     4 6.  Indemnity............................................................     4 7.  Term.................................................................     5 8.  Termination..........................................................     5 9.  Further Assurance....................................................     6 10. Entire Agreement; Amendments.........................................     6 11. Severance............................................................     6 12. No Waiver............................................................     6 13. Costs And Expenses...................................................     6 14. Counterparts.........................................................     6 15. " ;
+    ct:source_path "cuad/XinhuaSportsEntertainmentLtd_20070221_F-1_EX-99.4_645553_EX-99.4_Content License Agreement.txt" ;
+    ct:source_sha256 "d20ca7099b4894b290f3e0399f466b78ab1cd297bdfc9b270b80528607dcab51" ;
+    ct:start_char 796 .
+
+ct:Reference a owl:Class ;
+    rdfs:label "Reference" .
+
+ct:SourcePassage a owl:Class ;
+    rdfs:label "SourcePassage" .
+
+ct:Rule a owl:Class ;
+    rdfs:label "Rule" .
+

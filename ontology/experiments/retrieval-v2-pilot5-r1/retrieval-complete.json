@@ -1,0 +1,13 @@
+{
+  "completed_at": "2026-11-13T07:19:19.160020+00:00",
+  "files": {
+    "sample-733-retrieval.json": "4f78680c65dd0e5e78ce91edf276de65137227824c1b1066030f064d34dc1b2c",
+    "sample-269-retrieval.json": "b7667c1d046a7b45bab49ea073c7962e9f9f1c6156ab8f8985faef492e449ff3",
+    "sample-1375-retrieval.json": "59c979a58b682f5f2a95ece71f838d5442ede638258baf12c07afa2c3bfa9f43",
+    "sample-2316-retrieval.json": "e99700c6723bf8c6e85f913b222e53a8aa92c277a50b10327797d6ceeebefda8",
+    "sample-10-retrieval.json": "51646c90978f012bdbc8b3766dac407cec58ed1fdaefa186f9bd4b9a1780016f"
+  },
+  "model_load_seconds": 17.24690190004185,
+  "passage_embedding_seconds": 0.6814912999980152,
+  "wall_seconds": 34.32248520012945
+}

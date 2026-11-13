@@ -1,0 +1,354 @@
+@prefix ct: <https://cimulink.local/ontology/contract-terms/0.1#> .
+@prefix ex: <https://cimulink.local/ontology/llm100-v1/> .
+@prefix meta: <https://cimulink.local/ontology/extraction#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ct: a owl:Ontology ;
+    rdfs:comment "Partial five-contract development sample. No claim of complete contract coverage or legal correctness." .
+
+ct:agreement_effective_from a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:applies_within a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:calendar_date_status a owl:DatatypeProperty .
+
+ct:coverage a owl:DatatypeProperty .
+
+ct:description a owl:DatatypeProperty .
+
+ct:duration a owl:DatatypeProperty .
+
+ct:duration_status a owl:DatatypeProperty .
+
+ct:end_char a owl:DatatypeProperty .
+
+ct:end_date_status a owl:DatatypeProperty .
+
+ct:ends_on_event a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:exact_text a owl:DatatypeProperty .
+
+ct:has_party a owl:ObjectProperty ;
+    rdfs:domain ct:Agreement ;
+    rdfs:range ct:Party .
+
+ct:has_rule a owl:ObjectProperty ;
+    rdfs:domain ct:Agreement ;
+    rdfs:range ct:Rule .
+
+ct:kind a owl:DatatypeProperty .
+
+ct:notice_actor a owl:DatatypeProperty .
+
+ct:notice_form a owl:DatatypeProperty .
+
+ct:notice_period_status a owl:DatatypeProperty .
+
+ct:qualifies a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Rule .
+
+ct:references_section a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:renewal_count a owl:DatatypeProperty .
+
+ct:resolution_status a owl:DatatypeProperty .
+
+ct:resolved_to a owl:ObjectProperty ;
+    rdfs:domain ct:Reference ;
+    rdfs:range ct:SourcePassage .
+
+ct:source_path a owl:DatatypeProperty .
+
+ct:source_sha256 a owl:DatatypeProperty .
+
+ct:start_char a owl:DatatypeProperty .
+
+ct:starts_from a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:stated_end_date a owl:DatatypeProperty .
+
+ct:subject_to a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Condition .
+
+ct:supported_by a owl:ObjectProperty ;
+    rdfs:range ct:SourcePassage .
+
+ct:termination_notice a owl:DatatypeProperty .
+
+ex:C043 a ct:Agreement ;
+    rdfs:label "HEMISPHERX - Sales, Marketing, Distribution, and Supply Agreement.txt" ;
+    ct:coverage "LOCAL_LLM_PROPOSED_PARTIAL; NOT_HUMAN_REVIEWED" ;
+    ct:has_rule ex:C043R0001,
+        ex:C043R0002,
+        ex:C043R0003,
+        ex:C043R0004,
+        ex:C043R0005,
+        ex:C043R0006,
+        ex:C043R0007,
+        ex:C043R0008,
+        ex:C043R0009,
+        ex:C043R0010,
+        ex:C043R0011,
+        ex:C043R0012,
+        ex:C043R0013,
+        ex:C043R0014,
+        ex:C043R0015 ;
+    ct:source_path "cuad/HEMISPHERX - Sales, Marketing, Distribution, and Supply Agreement.txt" ;
+    ct:source_sha256 "871238d0e146f01c49d2cccba73c8b8cbaee1d6e5181cdae8d241d0c897200d2" ;
+    meta:model_digest "0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0" .
+
+ct:Party a owl:Class ;
+    rdfs:label "Party" .
+
+ex:C043P0028 a ct:SourcePassage ;
+    ct:end_char 24133 ;
+    ct:exact_text "Subject to clause X.B 1.), SCIEN shall defend and indemnify HEMISPHERX and its Affiliates and hold each of them harmless against all claims, demands, actions, losses, expenses, damages, liabilities, costs (including interest, penalties and reasonable attorneys' fees) and judgements suffered by each of them, which arise out of SCIEN's negligent or wilful acts or omissions or which otherwise arise out of SCIEN's breach of the Agreement.   Survivability. The obligations set forth in this Section X. shall survive the termination of this Agreement for the legal periods of limitation provided by US law." ;
+    ct:source_path "cuad/HEMISPHERX - Sales, Marketing, Distribution, and Supply Agreement.txt" ;
+    ct:source_sha256 "871238d0e146f01c49d2cccba73c8b8cbaee1d6e5181cdae8d241d0c897200d2" ;
+    ct:start_char 23529 .
+
+ex:C043P0030 a ct:SourcePassage ;
+    ct:end_char 25740 ;
+    ct:exact_text "XI. CONFIDENTIALITY   A. SCIEN and HEMISPHERX agree to keep secret and confidential all confidential, proprietary or non-public information (\"Confidential Information\") of the other Party .This provision shall survive termination or expiration of this Agreement.   B. Such Confidential Information will be kept confidential until 5 years after the expiration of termination of this Agreement. Notwithstanding the foregoing , Confidential Information of a Party shall not include information which the other Party can establish by written documentation was (a) to have been publicly known prior to disclosure of such information by the disclosing Party to the other Party, (b) to have become publicly known, without fault on the part of the other Party, subsequent to disclosure of such information by the disclosing Party to the other Party, (c) to have been received by the other Party at any time from a source , other than the disclosing Party, rightfully having possession of and the right to disclose such information, (d) to have been otherwise known by the other Party prior to disclosure of such information by the disclosing Party to the other Party, or (e) to have been independently developed by employees or agents of the other Party without access to or use of such information disclosed by the disclosing Party to the other Party.   C. " ;
+    ct:source_path "cuad/HEMISPHERX - Sales, Marketing, Distribution, and Supply Agreement.txt" ;
+    ct:source_sha256 "871238d0e146f01c49d2cccba73c8b8cbaee1d6e5181cdae8d241d0c897200d2" ;
+    ct:start_char 24390 .
+
+ex:C043P0078 a ct:SourcePassage ;
+    ct:end_char 64228 ;
+    ct:exact_text "Subcontractors   SCIEN may enter into agreements between SCIEN and a subcontractor. SCIEN will identify the services performed by each such subcontractor. SCIEN is responsible for the performance of all services provided on behalf HEMISPHERX and the compliance of each subcontractor to the terms of this Agreement. HEMISPHERX will be permitted to conduct periodic audits of the subcontractors to assure compliance to applicable GMP's, GLP's and federal regulations (CFR's).   11. Standard Operating Procedures (SOP's)   The following HEMISPHERX SOP's are relevant to this Quality Agreement and interactions between HEMISPHERX and SCIEN and affiliates.   A. CLN-009 Handling Adverse Event Reports and Records B. RA-001 Post Marketing Adverse Experience Reporting C. QC-006 Investigation of Out of Specification Results   12. Laboratory Controls-N/A   13. Documentation and Record Maintenance   SCIEN shall preserve all records in accordance with any applicable federal, state or local requirements. Raw data, documentation, batch records, source documents, product disposition records and reports (collectively, \"Documentation\") shall be retained by SCIEN for a minimum period of two (2) years after termination or expiration of the Specialty Distributor Purchase and Service Agreement between HEMISPHERX and SCIEN. " ;
+    ct:source_path "cuad/HEMISPHERX - Sales, Marketing, Distribution, and Supply Agreement.txt" ;
+    ct:source_sha256 "871238d0e146f01c49d2cccba73c8b8cbaee1d6e5181cdae8d241d0c897200d2" ;
+    ct:start_char 62913 .
+
+ex:C043R0001 a ct:Rule ;
+    rdfs:label "Termination — source passage 15" ;
+    ct:kind "TERMINATION" ;
+    ct:subject_to ex:C043R0001Condition15 ;
+    ct:supported_by ex:C043P0015 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C043R0001Condition15 a ct:Condition ;
+    ct:description "SCIEN's acceptance of the Product shall relieve HEMISPHERX from the obligations arising from this warranty   H. SCIEN shall have the right to return and demand replacement of any Product which violates this warranty.   I. HEMISPHERX and/or SCIEN shall have the right to cancel, without further obligation to the other party, one or more orders for Product(s) if HEMISPHERX's or SCIEN's business is interrupted because of an event of force majeure beyond the control of HEMISPHERX or SCIEN.   J. HEMISPHERX shall permit SCIEN or its agent, at SCIENs' expense, to conduct periodic audits of HEMISPHERX's Quality System and Manufacturing records relating to HEMISPHERX's performance under this Agreement. The audits shall be conducted upon reasonable advance notice during regular business hours at HEMISPHERX's principal office and in such a manner as not to unduly interfere with HEMISPHERX's operations." ;
+    ct:supported_by ex:C043P0015 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C043R0002 a ct:Rule ;
+    rdfs:label "Conditional Referenced Term — source passage 15" ;
+    ct:kind "CONDITIONAL_REFERENCED_TERM" ;
+    ct:subject_to ex:C043R0002Condition15 ;
+    ct:supported_by ex:C043P0015 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C043R0002Condition15 a ct:Condition ;
+    ct:description "SCIEN's acceptance of the Product shall relieve HEMISPHERX from the obligations arising from this warranty   H. SCIEN shall have the right to return and demand replacement of any Product which violates this warranty.   I. HEMISPHERX and/or SCIEN shall have the right to cancel, without further obligation to the other party, one or more orders for Product(s) if HEMISPHERX's or SCIEN's business is interrupted because of an event of force majeure beyond the control of HEMISPHERX or SCIEN.   J. HEMISPHERX shall permit SCIEN or its agent, at SCIENs' expense, to conduct periodic audits of HEMISPHERX's Quality System and Manufacturing records relating to HEMISPHERX's performance under this Agreement. The audits shall be conducted upon reasonable advance notice during regular business hours at HEMISPHERX's principal office and in such a manner as not to unduly interfere with HEMISPHERX's operations." ;
+    ct:supported_by ex:C043P0015 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C043R0003 a ct:Rule ;
+    rdfs:label "Conditional Referenced Term — source passage 18" ;
+    ct:kind "CONDITIONAL_REFERENCED_TERM" ;
+    ct:subject_to ex:C043R0003Condition18 ;
+    ct:supported_by ex:C043P0018 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C043R0003Condition18 a ct:Condition ;
+    ct:description "Price Increase: Beginning on the second year anniversary of the signing of this Agreement (\"Effective Date\") and on each succeeding anniversary of the Effective Date during the term of this agreement and in consideration of a varies of economic factors such as for example, costs of labour, costs of material and costs the price paid by SCIEN for Product(s) shall be renegotiated. Any price increase will need to be justified by HEMISPHERX. Both parties shall, in good faith, attempt to agree upon a reasonable price increase. In the event agreement cannot be reached the Agreement shall terminate.   D. All payments hereunder will be made by SCIEN in United States Dollars by wire transfer of immediately available funds to an account designated by HEMISPHERX. The following is wire transfer information:   Domestic (U.S.): {***}" ;
+    ct:supported_by ex:C043P0018 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C043R0004 a ct:Rule ;
+    rdfs:label "Termination — source passage 18" ;
+    ct:kind "TERMINATION" ;
+    ct:subject_to ex:C043R0004Condition18 ;
+    ct:supported_by ex:C043P0018 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C043R0004Condition18 a ct:Condition ;
+    ct:description "Price Increase: Beginning on the second year anniversary of the signing of this Agreement (\"Effective Date\") and on each succeeding anniversary of the Effective Date during the term of this agreement and in consideration of a varies of economic factors such as for example, costs of labour, costs of material and costs the price paid by SCIEN for Product(s) shall be renegotiated. Any price increase will need to be justified by HEMISPHERX. Both parties shall, in good faith, attempt to agree upon a reasonable price increase. In the event agreement cannot be reached the Agreement shall terminate.   D. All payments hereunder will be made by SCIEN in United States Dollars by wire transfer of immediately available funds to an account designated by HEMISPHERX. The following is wire transfer information:   Domestic (U.S.): {***}" ;
+    ct:supported_by ex:C043P0018 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C043R0005 a ct:Rule ;
+    rdfs:label "Initial Term — source passage 19" ;
+    ct:kind "INITIAL_TERM" ;
+    ct:subject_to ex:C043R0005Condition19 ;
+    ct:supported_by ex:C043P0019 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C043R0005Condition19 a ct:Condition ;
+    ct:description "International: {***}   VI. TERM/TERMINATION   A. The Term will be 3 years from Effective Date with an automatic 2 year term extensions unless otherwise advised by one of the Parties.   B. Termination for breach will include:   1. Failure to purchase Product and distribute to End Users as called for in II D.   2. Failure of SCIEN achieving less than 50% achievement of the minimum Purchases as in III B.7. for two (2) consecutive years,   3. Insolvency, or the filing for protection under either Party's bankruptcy laws. Upon the filing of a petition in bankruptcy, insolvency or reorganization against or by either Party, or either Party becoming subject to a composition for creditors , whether by law or agreement, or either party going into receivership or otherwise becoming insolvent (such party hereinafter referred to as the \"insolvent party\"), this Agreement may be terminated by the other Party by giving written notice of termination to the insolvent Party, such termination immediately effective upon the giving of such notice of termination." ;
+    ct:supported_by ex:C043P0019 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C043R0006 a ct:Rule ;
+    rdfs:label "Automatic Renewal — source passage 19" ;
+    ct:kind "AUTOMATIC_RENEWAL" ;
+    ct:subject_to ex:C043R0006Condition19 ;
+    ct:supported_by ex:C043P0019 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C043R0006Condition19 a ct:Condition ;
+    ct:description "International: {***}   VI. TERM/TERMINATION   A. The Term will be 3 years from Effective Date with an automatic 2 year term extensions unless otherwise advised by one of the Parties.   B. Termination for breach will include:   1. Failure to purchase Product and distribute to End Users as called for in II D.   2. Failure of SCIEN achieving less than 50% achievement of the minimum Purchases as in III B.7. for two (2) consecutive years,   3. Insolvency, or the filing for protection under either Party's bankruptcy laws. Upon the filing of a petition in bankruptcy, insolvency or reorganization against or by either Party, or either Party becoming subject to a composition for creditors , whether by law or agreement, or either party going into receivership or otherwise becoming insolvent (such party hereinafter referred to as the \"insolvent party\"), this Agreement may be terminated by the other Party by giving written notice of termination to the insolvent Party, such termination immediately effective upon the giving of such notice of termination." ;
+    ct:supported_by ex:C043P0019 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C043R0007 a ct:Rule ;
+    rdfs:label "Conditional Referenced Term — source passage 19" ;
+    ct:kind "CONDITIONAL_REFERENCED_TERM" ;
+    ct:subject_to ex:C043R0007Condition19 ;
+    ct:supported_by ex:C043P0019 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C043R0007Condition19 a ct:Condition ;
+    ct:description "International: {***}   VI. TERM/TERMINATION   A. The Term will be 3 years from Effective Date with an automatic 2 year term extensions unless otherwise advised by one of the Parties.   B. Termination for breach will include:   1. Failure to purchase Product and distribute to End Users as called for in II D.   2. Failure of SCIEN achieving less than 50% achievement of the minimum Purchases as in III B.7. for two (2) consecutive years,   3. Insolvency, or the filing for protection under either Party's bankruptcy laws. Upon the filing of a petition in bankruptcy, insolvency or reorganization against or by either Party, or either Party becoming subject to a composition for creditors , whether by law or agreement, or either party going into receivership or otherwise becoming insolvent (such party hereinafter referred to as the \"insolvent party\"), this Agreement may be terminated by the other Party by giving written notice of termination to the insolvent Party, such termination immediately effective upon the giving of such notice of termination." ;
+    ct:supported_by ex:C043P0019 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C043R0008 a ct:Rule ;
+    rdfs:label "Termination — source passage 21" ;
+    ct:kind "TERMINATION" ;
+    ct:supported_by ex:C043P0021 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C043R0009 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 21" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:supported_by ex:C043P0021 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C043R0010 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 28" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:references_section ex:C043R0010Ref0,
+        ex:C043R0010Ref1 ;
+    ct:supported_by ex:C043P0028 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C043R0010Ref0 a ct:Reference ;
+    rdfs:label "clause X" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C043R0010Ref1 a ct:Reference ;
+    rdfs:label "Section X" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C043R0011 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 30" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:supported_by ex:C043P0030 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C043R0012 a ct:Rule ;
+    rdfs:label "Conditional Referenced Term — source passage 34" ;
+    ct:kind "CONDITIONAL_REFERENCED_TERM" ;
+    ct:subject_to ex:C043R0012Condition34 ;
+    ct:supported_by ex:C043P0034 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C043R0012Condition34 a ct:Condition ;
+    ct:description "F. HEMISPHERX is and shall remain the sole legal and registered owner for any trademark or trade name of \"Interferon alfa-n3 (human leukocyte derived)\". The parties shall work together, upon commercial approval in the Territory to secure a trade name in the Territory.   G. HEMISPHERX hereby grants to SCIEN and SCIEN hereby accepts the right, privilege and exclusive license to use of \"Interferon alfa-n3 (human leukocyte derived)\" solely in connection with the terms of the Sales, Marketing, Distribution and Supply Agreement of Product in the Territory for the Term of this Agreement. Should the Agreement expire or terminate, the right to use the trademark shall also terminate. SCIEN shall use \"Interferon alfa-n3 (human leukocyte derived)\" at all times for the sole purpose of marketing of Product for no other purpose.   H. The terms of the intellectual property license hereby granted shall be effective upon the Effective Date of this Agreement and during the term of this Agreement, unless sooner terminated in accordance with the provisions of the Sales, Marketing, Distribution and Supply Agreement between the parties.   1. Good Will. SCIEN recognizes that there exists great value and good will associated with the Intellectual Property of Interferon alfa-n3 (human leukocyte derived)\"   2. " ;
+    ct:supported_by ex:C043P0034 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C043R0013 a ct:Rule ;
+    rdfs:label "Termination — source passage 36" ;
+    ct:kind "TERMINATION" ;
+    ct:subject_to ex:C043R0013Condition36 ;
+    ct:supported_by ex:C043P0036 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C043R0013Condition36 a ct:Condition ;
+    ct:description "It is agreed that nothing contained in this Sales, Marketing, Distribution, and Supply Agreement shall be construed as an assignment or grant to the SCIEN of any rights, title or interest in or to \"Interferon alfa-n3 (human leukocyte derived)\".   L. It is further understood that all rights relating thereto are reserved by HEMISPHERX, except for the license hereunder to SCIEN of the right to use and utilize the name Interferon alfa-n3 (human leukocyte derived) only as specifically and expressly provided in this Agreement.   M. In the event of termination of this license for any reason, SCIEN shall within 6months (as described in the Termination clause), cease all use of the \"Interferon alfa-n3 (human leukocyte derived)\". SCIEN shall not thereafter use any names, mark or trade name similar thereto belonging to HEMISPHERX. Termination of the license under the provisions of this Agreement shall be without prejudice to any rights which HEMISPHERX may otherwise have against SCIEN.   N. SCIEN shall, and shall cause its shareholders, officers, directors, and managing personnel to, comply with all laws, rules and government regulations pertaining to its business and shall not violate any laws which would create an adverse effect on \"Interferon alfa-n3 (human leukocyte derived)\" in the U.S. and/or the Territory.   O. Relationship of Parties. " ;
+    ct:supported_by ex:C043P0036 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C043R0014 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 36" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:subject_to ex:C043R0014Condition36 ;
+    ct:supported_by ex:C043P0036 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C043R0014Condition36 a ct:Condition ;
+    ct:description "It is agreed that nothing contained in this Sales, Marketing, Distribution, and Supply Agreement shall be construed as an assignment or grant to the SCIEN of any rights, title or interest in or to \"Interferon alfa-n3 (human leukocyte derived)\".   L. It is further understood that all rights relating thereto are reserved by HEMISPHERX, except for the license hereunder to SCIEN of the right to use and utilize the name Interferon alfa-n3 (human leukocyte derived) only as specifically and expressly provided in this Agreement.   M. In the event of termination of this license for any reason, SCIEN shall within 6months (as described in the Termination clause), cease all use of the \"Interferon alfa-n3 (human leukocyte derived)\". SCIEN shall not thereafter use any names, mark or trade name similar thereto belonging to HEMISPHERX. Termination of the license under the provisions of this Agreement shall be without prejudice to any rights which HEMISPHERX may otherwise have against SCIEN.   N. SCIEN shall, and shall cause its shareholders, officers, directors, and managing personnel to, comply with all laws, rules and government regulations pertaining to its business and shall not violate any laws which would create an adverse effect on \"Interferon alfa-n3 (human leukocyte derived)\" in the U.S. and/or the Territory.   O. Relationship of Parties. " ;
+    ct:supported_by ex:C043P0036 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C043R0015 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 78" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:supported_by ex:C043P0078 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C043P0021 a ct:SourcePassage ;
+    ct:end_char 18006 ;
+    ct:exact_text "C. Upon the occurrence of a breach or default as to any obligation hereunder by either Party and the failure of the breaching Party to cure (within thirty (30) days after receiving written notice thereof from the non-breaching Party) such breach or default, this Agreement may be terminated by the non- breaching Party by giving written notice of termination to the breaching Party, such termination being immediately effective upon the giving of such notice of termination.   D. In the event this Agreement is terminated by either Party for any reason whatsoever, HEMISPHERX agrees to reasonable efforts to make Product available to SCIEN for a period of three (3) months after the termination date at the same Transfer Price and under the same terms of payment.   E. In the event of termination of this Agreement, SCIEN will have the right to complete all contracts for the sale or disposition of Product) under which SCIEN is obligated on the date of termination, provided SCIEN pays the associated Transfer Price and provided all such sales or dispositions are completed within three (3) months after the date of termination. Thereafter, HEMISPHERX shall purchase from the SCIEN all remaining stock of Product that is of merchantable quality at the same price as was paid by SCIEN.   VII. " ;
+    ct:source_path "cuad/HEMISPHERX - Sales, Marketing, Distribution, and Supply Agreement.txt" ;
+    ct:source_sha256 "871238d0e146f01c49d2cccba73c8b8cbaee1d6e5181cdae8d241d0c897200d2" ;
+    ct:start_char 16713 .
+
+ex:C043P0034 a ct:SourcePassage ;
+    ct:end_char 29665 ;
+    ct:exact_text "F. HEMISPHERX is and shall remain the sole legal and registered owner for any trademark or trade name of \"Interferon alfa-n3 (human leukocyte derived)\". The parties shall work together, upon commercial approval in the Territory to secure a trade name in the Territory.   G. HEMISPHERX hereby grants to SCIEN and SCIEN hereby accepts the right, privilege and exclusive license to use of \"Interferon alfa-n3 (human leukocyte derived)\" solely in connection with the terms of the Sales, Marketing, Distribution and Supply Agreement of Product in the Territory for the Term of this Agreement. Should the Agreement expire or terminate, the right to use the trademark shall also terminate. SCIEN shall use \"Interferon alfa-n3 (human leukocyte derived)\" at all times for the sole purpose of marketing of Product for no other purpose.   H. The terms of the intellectual property license hereby granted shall be effective upon the Effective Date of this Agreement and during the term of this Agreement, unless sooner terminated in accordance with the provisions of the Sales, Marketing, Distribution and Supply Agreement between the parties.   1. Good Will. SCIEN recognizes that there exists great value and good will associated with the Intellectual Property of Interferon alfa-n3 (human leukocyte derived)\"   2. " ;
+    ct:source_path "cuad/HEMISPHERX - Sales, Marketing, Distribution, and Supply Agreement.txt" ;
+    ct:source_sha256 "871238d0e146f01c49d2cccba73c8b8cbaee1d6e5181cdae8d241d0c897200d2" ;
+    ct:start_char 28360 .
+
+ct:Agreement a owl:Class ;
+    rdfs:label "Agreement" .
+
+ex:C043P0015 a ct:SourcePassage ;
+    ct:end_char 13259 ;
+    ct:exact_text "SCIEN's acceptance of the Product shall relieve HEMISPHERX from the obligations arising from this warranty   H. SCIEN shall have the right to return and demand replacement of any Product which violates this warranty.   I. HEMISPHERX and/or SCIEN shall have the right to cancel, without further obligation to the other party, one or more orders for Product(s) if HEMISPHERX's or SCIEN's business is interrupted because of an event of force majeure beyond the control of HEMISPHERX or SCIEN.   J. HEMISPHERX shall permit SCIEN or its agent, at SCIENs' expense, to conduct periodic audits of HEMISPHERX's Quality System and Manufacturing records relating to HEMISPHERX's performance under this Agreement. The audits shall be conducted upon reasonable advance notice during regular business hours at HEMISPHERX's principal office and in such a manner as not to unduly interfere with HEMISPHERX's operations." ;
+    ct:source_path "cuad/HEMISPHERX - Sales, Marketing, Distribution, and Supply Agreement.txt" ;
+    ct:source_sha256 "871238d0e146f01c49d2cccba73c8b8cbaee1d6e5181cdae8d241d0c897200d2" ;
+    ct:start_char 12356 .
+
+ex:C043P0018 a ct:SourcePassage ;
+    ct:end_char 15399 ;
+    ct:exact_text "Price Increase: Beginning on the second year anniversary of the signing of this Agreement (\"Effective Date\") and on each succeeding anniversary of the Effective Date during the term of this agreement and in consideration of a varies of economic factors such as for example, costs of labour, costs of material and costs the price paid by SCIEN for Product(s) shall be renegotiated. Any price increase will need to be justified by HEMISPHERX. Both parties shall, in good faith, attempt to agree upon a reasonable price increase. In the event agreement cannot be reached the Agreement shall terminate.   D. All payments hereunder will be made by SCIEN in United States Dollars by wire transfer of immediately available funds to an account designated by HEMISPHERX. The following is wire transfer information:   Domestic (U.S.): {***}" ;
+    ct:source_path "cuad/HEMISPHERX - Sales, Marketing, Distribution, and Supply Agreement.txt" ;
+    ct:source_sha256 "871238d0e146f01c49d2cccba73c8b8cbaee1d6e5181cdae8d241d0c897200d2" ;
+    ct:start_char 14569 .
+
+ex:C043P0036 a ct:SourcePassage ;
+    ct:end_char 32276 ;
+    ct:exact_text "It is agreed that nothing contained in this Sales, Marketing, Distribution, and Supply Agreement shall be construed as an assignment or grant to the SCIEN of any rights, title or interest in or to \"Interferon alfa-n3 (human leukocyte derived)\".   L. It is further understood that all rights relating thereto are reserved by HEMISPHERX, except for the license hereunder to SCIEN of the right to use and utilize the name Interferon alfa-n3 (human leukocyte derived) only as specifically and expressly provided in this Agreement.   M. In the event of termination of this license for any reason, SCIEN shall within 6months (as described in the Termination clause), cease all use of the \"Interferon alfa-n3 (human leukocyte derived)\". SCIEN shall not thereafter use any names, mark or trade name similar thereto belonging to HEMISPHERX. Termination of the license under the provisions of this Agreement shall be without prejudice to any rights which HEMISPHERX may otherwise have against SCIEN.   N. SCIEN shall, and shall cause its shareholders, officers, directors, and managing personnel to, comply with all laws, rules and government regulations pertaining to its business and shall not violate any laws which would create an adverse effect on \"Interferon alfa-n3 (human leukocyte derived)\" in the U.S. and/or the Territory.   O. Relationship of Parties. " ;
+    ct:source_path "cuad/HEMISPHERX - Sales, Marketing, Distribution, and Supply Agreement.txt" ;
+    ct:source_sha256 "871238d0e146f01c49d2cccba73c8b8cbaee1d6e5181cdae8d241d0c897200d2" ;
+    ct:start_char 30922 .
+
+ex:C043P0019 a ct:SourcePassage ;
+    ct:end_char 16456 ;
+    ct:exact_text "International: {***}   VI. TERM/TERMINATION   A. The Term will be 3 years from Effective Date with an automatic 2 year term extensions unless otherwise advised by one of the Parties.   B. Termination for breach will include:   1. Failure to purchase Product and distribute to End Users as called for in II D.   2. Failure of SCIEN achieving less than 50% achievement of the minimum Purchases as in III B.7. for two (2) consecutive years,   3. Insolvency, or the filing for protection under either Party's bankruptcy laws. Upon the filing of a petition in bankruptcy, insolvency or reorganization against or by either Party, or either Party becoming subject to a composition for creditors , whether by law or agreement, or either party going into receivership or otherwise becoming insolvent (such party hereinafter referred to as the \"insolvent party\"), this Agreement may be terminated by the other Party by giving written notice of termination to the insolvent Party, such termination immediately effective upon the giving of such notice of termination." ;
+    ct:source_path "cuad/HEMISPHERX - Sales, Marketing, Distribution, and Supply Agreement.txt" ;
+    ct:source_sha256 "871238d0e146f01c49d2cccba73c8b8cbaee1d6e5181cdae8d241d0c897200d2" ;
+    ct:start_char 15401 .
+
+ct:Reference a owl:Class ;
+    rdfs:label "Reference" .
+
+ct:Condition a owl:Class ;
+    rdfs:label "Condition" .
+
+ct:SourcePassage a owl:Class ;
+    rdfs:label "SourcePassage" .
+
+ct:Rule a owl:Class ;
+    rdfs:label "Rule" .
+

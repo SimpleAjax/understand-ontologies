@@ -1,0 +1,281 @@
+@prefix ct: <https://cimulink.local/ontology/contract-terms/0.1#> .
+@prefix ex: <https://cimulink.local/ontology/llm100-v1/> .
+@prefix meta: <https://cimulink.local/ontology/extraction#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ct: a owl:Ontology ;
+    rdfs:comment "Partial five-contract development sample. No claim of complete contract coverage or legal correctness." .
+
+ct:agreement_effective_from a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:applies_within a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:calendar_date_status a owl:DatatypeProperty .
+
+ct:coverage a owl:DatatypeProperty .
+
+ct:description a owl:DatatypeProperty .
+
+ct:duration a owl:DatatypeProperty .
+
+ct:duration_status a owl:DatatypeProperty .
+
+ct:end_char a owl:DatatypeProperty .
+
+ct:end_date_status a owl:DatatypeProperty .
+
+ct:ends_on_event a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:exact_text a owl:DatatypeProperty .
+
+ct:has_party a owl:ObjectProperty ;
+    rdfs:domain ct:Agreement ;
+    rdfs:range ct:Party .
+
+ct:has_rule a owl:ObjectProperty ;
+    rdfs:domain ct:Agreement ;
+    rdfs:range ct:Rule .
+
+ct:kind a owl:DatatypeProperty .
+
+ct:notice_actor a owl:DatatypeProperty .
+
+ct:notice_form a owl:DatatypeProperty .
+
+ct:notice_period_status a owl:DatatypeProperty .
+
+ct:qualifies a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Rule .
+
+ct:references_section a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:renewal_count a owl:DatatypeProperty .
+
+ct:resolution_status a owl:DatatypeProperty .
+
+ct:resolved_to a owl:ObjectProperty ;
+    rdfs:domain ct:Reference ;
+    rdfs:range ct:SourcePassage .
+
+ct:source_path a owl:DatatypeProperty .
+
+ct:source_sha256 a owl:DatatypeProperty .
+
+ct:start_char a owl:DatatypeProperty .
+
+ct:starts_from a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Reference .
+
+ct:stated_end_date a owl:DatatypeProperty .
+
+ct:subject_to a owl:ObjectProperty ;
+    rdfs:domain ct:Rule ;
+    rdfs:range ct:Condition .
+
+ct:supported_by a owl:ObjectProperty ;
+    rdfs:range ct:SourcePassage .
+
+ct:termination_notice a owl:DatatypeProperty .
+
+ex:C012 a ct:Agreement ;
+    rdfs:label "BANUESTRAFINANCIALCORP_09_08_2006-EX-10.16-AGENCY AGREEMENT.txt" ;
+    ct:coverage "LOCAL_LLM_PROPOSED_PARTIAL; NOT_HUMAN_REVIEWED" ;
+    ct:has_rule ex:C012R0001,
+        ex:C012R0002,
+        ex:C012R0003,
+        ex:C012R0004,
+        ex:C012R0005,
+        ex:C012R0006,
+        ex:C012R0007,
+        ex:C012R0008,
+        ex:C012R0009 ;
+    ct:source_path "cuad/BANUESTRAFINANCIALCORP_09_08_2006-EX-10.16-AGENCY AGREEMENT.txt" ;
+    ct:source_sha256 "8a409e55f61a647c258e02748912d68112b3a13fce72f17a060135157c73cd9c" ;
+    meta:model_digest "0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0" .
+
+ct:Party a owl:Class ;
+    rdfs:label "Party" .
+
+ex:C012P0020 a ct:SourcePassage ;
+    ct:end_char 6220 ;
+    ct:exact_text "In the event the Offering is terminated and the Closing (as defined below) does not occur, then the Agent shall not receive the fees set forth in subparagraph (a) below (the \"Fees\"); provided, however, regardless of whether or not the Closing occurs, the Agent shall be entitled to receive reimbursement of its actual accountable out-of-pocket expenses, as set forth in subparagraph (b) below." ;
+    ct:source_path "cuad/BANUESTRAFINANCIALCORP_09_08_2006-EX-10.16-AGENCY AGREEMENT.txt" ;
+    ct:source_sha256 "8a409e55f61a647c258e02748912d68112b3a13fce72f17a060135157c73cd9c" ;
+    ct:start_char 5827 .
+
+ex:C012P0026 a ct:SourcePassage ;
+    ct:end_char 8494 ;
+    ct:exact_text "b. Agent shall be reimbursed for expenses as contemplated by Section 8 of this Agreement, regardless of whether the Offering is successfully completed. Any out-of-pocket expenses or commissions payable under this Agreement shall be paid in next day funds on the earlier of the initial Closing Date or a determination by the Company to terminate or abandon the Offering, and on each subsequent Closing Date thereafter." ;
+    ct:source_path "cuad/BANUESTRAFINANCIALCORP_09_08_2006-EX-10.16-AGENCY AGREEMENT.txt" ;
+    ct:source_sha256 "8a409e55f61a647c258e02748912d68112b3a13fce72f17a060135157c73cd9c" ;
+    ct:start_char 8077 .
+
+ex:C012P0093 a ct:SourcePassage ;
+    ct:end_char 41248 ;
+    ct:exact_text "12. Representations and Indemnities to Survive. All representations, warranties and agreements contained in this Agreement of the Company and the Agent shall remain in full force and effect, regardless of any termination or cancellation of this Agreement, and shall survive delivery of and payment for the Shares." ;
+    ct:source_path "cuad/BANUESTRAFINANCIALCORP_09_08_2006-EX-10.16-AGENCY AGREEMENT.txt" ;
+    ct:source_sha256 "8a409e55f61a647c258e02748912d68112b3a13fce72f17a060135157c73cd9c" ;
+    ct:start_char 40935 .
+
+ex:C012P0094 a ct:SourcePassage ;
+    ct:end_char 41889 ;
+    ct:exact_text "13. Termination and Payment of Expenses. This Agreement shall become effective on the date hereof and shall terminate upon the termination of the Offering. If for any reason any Shares are not delivered by or on behalf of the Company as provided herein, the Company will reimburse the Agent for all actual and accountable out-of-pocket expenses, including fees and disbursements of counsel, reasonably incurred by the Agent in making preparations for the purchase, sale and delivery of the Shares not so delivered, but the Company shall then be under no further liability to the Agent except as provided in Section 8 and Section 10 hereof." ;
+    ct:source_path "cuad/BANUESTRAFINANCIALCORP_09_08_2006-EX-10.16-AGENCY AGREEMENT.txt" ;
+    ct:source_sha256 "8a409e55f61a647c258e02748912d68112b3a13fce72f17a060135157c73cd9c" ;
+    ct:start_char 41250 .
+
+ex:C012R0001 a ct:Rule ;
+    rdfs:label "Conditional Referenced Term — source passage 18" ;
+    ct:kind "CONDITIONAL_REFERENCED_TERM" ;
+    ct:subject_to ex:C012R0001Condition18 ;
+    ct:supported_by ex:C012P0018 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C012R0001Condition18 a ct:Condition ;
+    ct:description "On the basis of the representations and warranties and subject to the terms and conditions of this Agreement, the Agent accepts such appointment. The Agent shall not be obligated to purchase any Shares and shall not be obligated to take any action which Agent deems to be inconsistent with any applicable law, regulation, decision or order. Subscriptions will be offered as described in the Registration Statement. Except as otherwise provided in this Agreement, the appointment of the Agent will terminate upon completion, expiration or termination of the Offering." ;
+    ct:supported_by ex:C012P0018 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C012R0002 a ct:Rule ;
+    rdfs:label "Termination — source passage 19" ;
+    ct:kind "TERMINATION" ;
+    ct:references_section ex:C012R0002Ref0 ;
+    ct:supported_by ex:C012P0019 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C012R0002Ref0 a ct:Reference ;
+    rdfs:label "Section 2" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C012R0003 a ct:Rule ;
+    rdfs:label "Conditional Referenced Term — source passage 19" ;
+    ct:kind "CONDITIONAL_REFERENCED_TERM" ;
+    ct:references_section ex:C012R0003Ref0 ;
+    ct:supported_by ex:C012P0019 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C012R0003Ref0 a ct:Reference ;
+    rdfs:label "Section 2" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C012R0004 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 20" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:supported_by ex:C012P0020 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C012R0005 a ct:Rule ;
+    rdfs:label "Initial Term — source passage 21" ;
+    ct:kind "INITIAL_TERM" ;
+    ct:references_section ex:C012R0005Ref0 ;
+    ct:subject_to ex:C012R0005Condition21 ;
+    ct:supported_by ex:C012P0021 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C012R0005Condition21 a ct:Condition ;
+    ct:description "If all conditions precedent to the consummation of the Offering are satisfied, the Company agrees to issue, or have issued, the Shares sold in the Offering and to release for delivery certificates for such Shares on the Closing Date (as defined below) against payment to the Company by any means authorized pursuant hereto; provided, however, that no funds shall be released to the Company until the conditions specified in Section 9 hereof shall have been complied with to the reasonable satisfaction of the Company. The release of Shares against payment therefor shall be made on a date or dates and at a place determined by the Company (each closing, a \"Closing\"). Certificates for Shares shall be delivered directly to the purchasers in accordance with their directions. The date upon which the Company shall release or deliver the Shares sold in the Offering, in accordance with the terms herein, is called the \"Closing Date.\" After the initial Closing, which may occur at any time after the minimum of 1,875,000 Shares have been sold, the Company may continue the Offering and the Agent may continue to solicit purchasers for the Shares up to the maximum amount of the Offering or until the Offering expires or is closed by the Company as set forth in the Prospectus. " ;
+    ct:supported_by ex:C012P0021 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C012R0005Ref0 a ct:Reference ;
+    rdfs:label "Section 9" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C012R0006 a ct:Rule ;
+    rdfs:label "Optional Renewal — source passage 21" ;
+    ct:kind "OPTIONAL_RENEWAL" ;
+    ct:references_section ex:C012R0006Ref0 ;
+    ct:subject_to ex:C012R0006Condition21 ;
+    ct:supported_by ex:C012P0021 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C012R0006Condition21 a ct:Condition ;
+    ct:description "If all conditions precedent to the consummation of the Offering are satisfied, the Company agrees to issue, or have issued, the Shares sold in the Offering and to release for delivery certificates for such Shares on the Closing Date (as defined below) against payment to the Company by any means authorized pursuant hereto; provided, however, that no funds shall be released to the Company until the conditions specified in Section 9 hereof shall have been complied with to the reasonable satisfaction of the Company. The release of Shares against payment therefor shall be made on a date or dates and at a place determined by the Company (each closing, a \"Closing\"). Certificates for Shares shall be delivered directly to the purchasers in accordance with their directions. The date upon which the Company shall release or deliver the Shares sold in the Offering, in accordance with the terms herein, is called the \"Closing Date.\" After the initial Closing, which may occur at any time after the minimum of 1,875,000 Shares have been sold, the Company may continue the Offering and the Agent may continue to solicit purchasers for the Shares up to the maximum amount of the Offering or until the Offering expires or is closed by the Company as set forth in the Prospectus. " ;
+    ct:supported_by ex:C012P0021 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C012R0006Ref0 a ct:Reference ;
+    rdfs:label "Section 9" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C012R0007 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 26" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:references_section ex:C012R0007Ref0 ;
+    ct:supported_by ex:C012P0026 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C012R0007Ref0 a ct:Reference ;
+    rdfs:label "Section 8" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C012R0008 a ct:Rule ;
+    rdfs:label "Post Expiry Continuation — source passage 93" ;
+    ct:kind "POST_EXPIRY_CONTINUATION" ;
+    ct:supported_by ex:C012P0093 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C012R0009 a ct:Rule ;
+    rdfs:label "Termination — source passage 94" ;
+    ct:kind "TERMINATION" ;
+    ct:references_section ex:C012R0009Ref0,
+        ex:C012R0009Ref1 ;
+    ct:supported_by ex:C012P0094 ;
+    meta:review_status "UNREVIEWED" .
+
+ex:C012R0009Ref0 a ct:Reference ;
+    rdfs:label "Section 8" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C012R0009Ref1 a ct:Reference ;
+    rdfs:label "Section 10" ;
+    ct:resolution_status "UNRESOLVED" .
+
+ex:C012P0018 a ct:SourcePassage ;
+    ct:end_char 5303 ;
+    ct:exact_text "On the basis of the representations and warranties and subject to the terms and conditions of this Agreement, the Agent accepts such appointment. The Agent shall not be obligated to purchase any Shares and shall not be obligated to take any action which Agent deems to be inconsistent with any applicable law, regulation, decision or order. Subscriptions will be offered as described in the Registration Statement. Except as otherwise provided in this Agreement, the appointment of the Agent will terminate upon completion, expiration or termination of the Offering." ;
+    ct:source_path "cuad/BANUESTRAFINANCIALCORP_09_08_2006-EX-10.16-AGENCY AGREEMENT.txt" ;
+    ct:source_sha256 "8a409e55f61a647c258e02748912d68112b3a13fce72f17a060135157c73cd9c" ;
+    ct:start_char 4737 .
+
+ex:C012P0019 a ct:SourcePassage ;
+    ct:end_char 5825 ;
+    ct:exact_text "In the event the Company is unable to sell a minimum of 1,875,000 Shares on or before June 30, 2007, this Agreement shall terminate and the Company shall cause the Escrow Agent (as defined below) to refund to any persons who have subscribed for any of the Shares the full amount it received from them, without interest, as set forth in the Prospectus; and none of the parties to this Agreement shall have any obligation to the other parties hereunder, except as set forth in this Section 2 and in Sections 8, 10, and 11." ;
+    ct:source_path "cuad/BANUESTRAFINANCIALCORP_09_08_2006-EX-10.16-AGENCY AGREEMENT.txt" ;
+    ct:source_sha256 "8a409e55f61a647c258e02748912d68112b3a13fce72f17a060135157c73cd9c" ;
+    ct:start_char 5305 .
+
+ct:Agreement a owl:Class ;
+    rdfs:label "Agreement" .
+
+ct:Condition a owl:Class ;
+    rdfs:label "Condition" .
+
+ex:C012P0021 a ct:SourcePassage ;
+    ct:end_char 7496 ;
+    ct:exact_text "If all conditions precedent to the consummation of the Offering are satisfied, the Company agrees to issue, or have issued, the Shares sold in the Offering and to release for delivery certificates for such Shares on the Closing Date (as defined below) against payment to the Company by any means authorized pursuant hereto; provided, however, that no funds shall be released to the Company until the conditions specified in Section 9 hereof shall have been complied with to the reasonable satisfaction of the Company. The release of Shares against payment therefor shall be made on a date or dates and at a place determined by the Company (each closing, a \"Closing\"). Certificates for Shares shall be delivered directly to the purchasers in accordance with their directions. The date upon which the Company shall release or deliver the Shares sold in the Offering, in accordance with the terms herein, is called the \"Closing Date.\" After the initial Closing, which may occur at any time after the minimum of 1,875,000 Shares have been sold, the Company may continue the Offering and the Agent may continue to solicit purchasers for the Shares up to the maximum amount of the Offering or until the Offering expires or is closed by the Company as set forth in the Prospectus. " ;
+    ct:source_path "cuad/BANUESTRAFINANCIALCORP_09_08_2006-EX-10.16-AGENCY AGREEMENT.txt" ;
+    ct:source_sha256 "8a409e55f61a647c258e02748912d68112b3a13fce72f17a060135157c73cd9c" ;
+    ct:start_char 6222 .
+
+ct:SourcePassage a owl:Class ;
+    rdfs:label "SourcePassage" .
+
+ct:Reference a owl:Class ;
+    rdfs:label "Reference" .
+
+ct:Rule a owl:Class ;
+    rdfs:label "Rule" .
+

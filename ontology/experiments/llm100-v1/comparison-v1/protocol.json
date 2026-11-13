@@ -1,0 +1,43 @@
+{
+  "created_at": "2026-11-13T04:43:13.704182+00:00",
+  "graph_lock_sha256": "69b3a7b80a7db1c992653c6aefe7eda1a0839b227e5199e808fb45481b223815",
+  "code_hashes": {
+    "scripts/compare_llm100.py": "b0ab9fc0c8cc6dda8338aeacbdb0684b5a16ee76a52240331c65b5f491c41cb4",
+    "scripts/compare_retrieval.py": "05e981cfe07b94cdde6411e7f21c84b798eae0dffc24957d9c4bb048b6ffb917",
+    "scripts/evaluate.py": "5f03bff6d1b75bc4dd0a5be933ffb8476d4b5f2be590b7c737605ac4efe6bc69",
+    "scripts/pipeline.py": "3a8b407fba947a39cf9dfb1d1033eb4c7858040faa6d4d208d2f62e2cb9bef19"
+  },
+  "ingestion": "d891bfe3634a5bf21d97",
+  "top_k": 5,
+  "character_budget": 6000,
+  "topic_kinds": {
+    "expiry": [
+      "INITIAL_TERM",
+      "CONDITIONAL_REFERENCED_TERM",
+      "POST_EXPIRY_CONTINUATION"
+    ],
+    "renewal": [
+      "OPTIONAL_RENEWAL",
+      "AUTOMATIC_RENEWAL",
+      "POST_EXPIRY_CONTINUATION"
+    ],
+    "renewal_notice": [
+      "TERMINATION",
+      "OPTIONAL_RENEWAL",
+      "AUTOMATIC_RENEWAL",
+      "POST_EXPIRY_CONTINUATION"
+    ]
+  },
+  "scope": "Expiry, renewal term, renewal notice. Selected from query text only.",
+  "agreement_routing": "Benchmark supplies the correct contract to ALL methods. Not an end-to-end entity-routing test. File identity comes from benchmark metadata; offsets/answers are used only by scoring.",
+  "vector": "Pinned BGE query embedding; exact pgvector cosine ranking of original chunks within supplied contract; top 5.",
+  "catalogue": "Same BGE query, cosine ranking of ALL distinct extracted evidence passages in supplied contract; top 5. No kind filters or relationship traversal.",
+  "ontology": "Same BGE query, cosine ranking of distinct evidence passages of query-selected rule kinds; top 5 seed passages; follow subject_to/supported_by and resolved reference links for seed rules. No fallback to gold or other kinds.",
+  "budgeting": "All methods capped at 6000 unique source characters, ranked order, overlap removed.",
+  "metrics": "Macro character-overlap precision/recall using pinned LegalBench-RAG; latency includes query embedding per method (shared embedding measured once and charged equally), candidate lookup/ranking and budgeting; excludes scoring and cold setup.",
+  "splits": "Report development and not_in_known_exposure_artifacts separately; neither proves pretraining/historical blinding.",
+  "prior_knowledge": "Task templates and earlier experiments were already inspected. No claim of fresh blindness. This protocol is frozen before running this comparison; extraction remains sealed.",
+  "ablation": "Compare ontology seed-only vs relationship-expanded source ranges before budget to measure additional evidence.",
+  "local_api_cost_usd": 0,
+  "cost_caveat": "Local CPU/GPU, electricity, labor and hardware are not priced."
+}

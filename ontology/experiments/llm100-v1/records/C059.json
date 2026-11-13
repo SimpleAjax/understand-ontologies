@@ -1,0 +1,42 @@
+{
+  "document_id": "C059",
+  "file_path": "cuad/NOVOINTEGRATEDSCIENCES,INC_12_23_2019-EX-10.1-JOINT VENTURE AGREEMENT.txt",
+  "model_digest": "0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0",
+  "rules": [
+    {
+      "passage_id": 11,
+      "kind": "INITIAL_TERM",
+      "label": "Initial Term — source passage 11",
+      "condition_ids": [
+        11
+      ],
+      "reference_labels": [
+        "ARTICLE 7",
+        "ARTICLE 8",
+        "ARTICLE 9"
+      ],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 11,
+      "kind": "OPTIONAL_RENEWAL",
+      "label": "Optional Renewal — source passage 11",
+      "condition_ids": [
+        11
+      ],
+      "reference_labels": [
+        "ARTICLE 7",
+        "ARTICLE 8",
+        "ARTICLE 9"
+      ],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    }
+  ],
+  "rejected_rules": [],
+  "review_status": "UNREVIEWED",
+  "coverage": "Lexically selected source windows; completeness not guaranteed."
+}

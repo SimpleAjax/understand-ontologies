@@ -1,0 +1,50 @@
+{
+  "document_id": "C008",
+  "file_path": "cuad/ArcGroupInc_20171211_8-K_EX-10.1_10976103_EX-10.1_Sponsorship Agreement.txt",
+  "model_digest": "0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0",
+  "rules": [
+    {
+      "passage_id": 1,
+      "kind": "INITIAL_TERM",
+      "label": "Initial Term — source passage 1",
+      "condition_ids": [],
+      "reference_labels": [
+        "Exhibit 10.1"
+      ],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 2,
+      "kind": "INITIAL_TERM",
+      "label": "Initial Term — source passage 2",
+      "condition_ids": [],
+      "reference_labels": [
+        "Exhibit A"
+      ],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    },
+    {
+      "passage_id": 6,
+      "kind": "CONDITIONAL_REFERENCED_TERM",
+      "label": "Conditional Referenced Term — source passage 6",
+      "condition_ids": [
+        6
+      ],
+      "reference_labels": [
+        "Exhibit A",
+        "Section 2(d)",
+        "Exhibit B"
+      ],
+      "scope_quote": "",
+      "date_quote": "",
+      "duration_quote": ""
+    }
+  ],
+  "rejected_rules": [],
+  "review_status": "UNREVIEWED",
+  "coverage": "Lexically selected source windows; completeness not guaranteed."
+}
