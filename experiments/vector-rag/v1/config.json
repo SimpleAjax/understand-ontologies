@@ -1,0 +1,11 @@
+{
+  "experiment_id": "vector-v1",
+  "shared_version": "v1",
+  "evaluation_version": "v1",
+  "dataset": "pilot-5",
+  "sample_cap": 5,
+  "kind": "baseline",
+  "description": "Original chunks, BGE cosine search, top five.",
+  "top_k": 5,
+  "character_budget": 6000
+}

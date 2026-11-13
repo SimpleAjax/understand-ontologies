@@ -1,0 +1,12 @@
+{
+  "experiment_id": "sentence-selection-v1",
+  "shared_version": "v1",
+  "evaluation_version": "v1",
+  "dataset": "pilot-5",
+  "sample_cap": 5,
+  "kind": "selection",
+  "description": "Select exact sentence/clauses from FIXED saved agentic evidence, reading full paragraph context.",
+  "top_k": 5,
+  "character_budget": 6000,
+  "source_run": "ontology/experiments/retrieval-v2-pilot5-r1"
+}

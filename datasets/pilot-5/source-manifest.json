@@ -1,0 +1,36 @@
+{
+  "split": "known-development",
+  "description": "Five previously inspected samples, not held-out. Correct contract supplied.",
+  "documents": [
+    {
+      "id": "C096",
+      "file_path": "cuad/WestPharmaceuticalServicesInc_20200116_8-K_EX-10.1_11947529_EX-10.1_Supply Agreement.txt",
+      "local_file_path": "cuad/WestPharmaceuticalServicesInc_20200116_8-K_EX-10.1_11947529_EX-10.1_Supply Agreement.txt",
+      "sha256": "7c991c9f55f81fd83a885f40cf89eb81f276897ee3ff068f0b7d689b6f88d495"
+    },
+    {
+      "id": "C067",
+      "file_path": "cuad/PareteumCorp_20081001_8-K_EX-99.1_2654808_EX-99.1_Hosting Agreement.txt",
+      "local_file_path": "cuad/PareteumCorp_20081001_8-K_EX-99.1_2654808_EX-99.1_Hosting Agreement.txt",
+      "sha256": "9c66eef9725257be89d3735e03bde9a00c307f60d1668d177cc88b42c35d4edc"
+    },
+    {
+      "id": "C028",
+      "file_path": "cuad/DataCallTechnologies_20060918_SB-2A_EX-10.9_944510_EX-10.9_Content License Agreement.txt",
+      "local_file_path": "cuad/DataCallTechnologies_20060918_SB-2A_EX-10.9_944510_EX-10.9_Content License Agreement.txt",
+      "sha256": "20f0f1630d8ae7ba221fbbf9d0449a593605989dfa3c779cafdb9c233bb6ebe7"
+    },
+    {
+      "id": "C020",
+      "file_path": "cuad/CHAPARRALRESOURCESINC_03_30_2000-EX-10.66-TRANSPORTATION CONTRACT.txt",
+      "local_file_path": "cuad/CHAPARRALRESOURCESINC_03_30_2000-EX-10.66-TRANSPORTATION CONTRACT.txt",
+      "sha256": "0e03737ee6eafee156bb168e59f3134ba959e8e5f38ef4b5548a62798caf3174"
+    },
+    {
+      "id": "C034",
+      "file_path": "cuad/EuromediaHoldingsCorp_20070215_10SB12G_EX-10.B(01)_525118_EX-10.B(01)_Content License Agreement.txt",
+      "local_file_path": "cuad/EuromediaHoldingsCorp_20070215_10SB12G_EX-10.B(01)_525118_EX-10.B(01)_Content License Agreement.txt",
+      "sha256": "410d3d3ff1c928befd4d2c5f405cc1215f4687db744c5abf1e98adefd97d7478"
+    }
+  ]
+}

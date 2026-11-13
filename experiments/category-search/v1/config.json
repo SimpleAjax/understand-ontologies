@@ -1,0 +1,11 @@
+{
+  "experiment_id": "category-v1",
+  "shared_version": "v1",
+  "evaluation_version": "v1",
+  "dataset": "pilot-5",
+  "sample_cap": 5,
+  "kind": "baseline",
+  "description": "Earlier strict category-filtered evidence search with stored graph links.",
+  "top_k": 5,
+  "character_budget": 6000
+}

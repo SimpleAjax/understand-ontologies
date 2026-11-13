@@ -1,0 +1,11 @@
+{
+  "experiment_id": "catalogue-v1",
+  "shared_version": "v1",
+  "evaluation_version": "v1",
+  "dataset": "pilot-5",
+  "sample_cap": 5,
+  "kind": "baseline",
+  "description": "Extracted passages, BGE search, top five; no category filtering.",
+  "top_k": 5,
+  "character_budget": 6000
+}

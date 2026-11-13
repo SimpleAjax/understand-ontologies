@@ -1,0 +1,11 @@
+{
+  "experiment_id": "agentic-v2",
+  "shared_version": "v1",
+  "evaluation_version": "v1",
+  "dataset": "pilot-5",
+  "sample_cap": 5,
+  "kind": "agentic",
+  "description": "Fresh hybrid search, soft categories, Qwen reranking, section lookup and bounded follow-up.",
+  "top_k": 5,
+  "character_budget": 6000
+}

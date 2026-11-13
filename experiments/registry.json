@@ -1,0 +1,33 @@
+{
+  "schema_version": 2,
+  "default_sample_set": "ontology/experiments/retrieval-v2-pilot5-r1/samples.json",
+  "sample_cap": 5,
+  "experiments": {
+    "vector-v1": {
+      "description": "Original chunks, BGE cosine search, top five.",
+      "kind": "baseline",
+      "version_path": "experiments/vector-rag/v1"
+    },
+    "catalogue-v1": {
+      "description": "Extracted passages, BGE search, top five; no category filtering.",
+      "kind": "baseline",
+      "version_path": "experiments/catalogue-search/v1"
+    },
+    "category-v1": {
+      "description": "Earlier strict category-filtered evidence search with stored graph links.",
+      "kind": "baseline",
+      "version_path": "experiments/category-search/v1"
+    },
+    "agentic-v2": {
+      "description": "Fresh hybrid search, soft categories, Qwen reranking, section lookup and bounded follow-up.",
+      "kind": "agentic",
+      "version_path": "experiments/agentic-search/v2"
+    },
+    "sentence-selection-v1": {
+      "description": "Select exact sentence/clauses from FIXED saved agentic evidence, reading full paragraph context.",
+      "kind": "selection",
+      "default_source": "ontology/experiments/retrieval-v2-pilot5-r1",
+      "version_path": "experiments/sentence-selection/v1"
+    }
+  }
+}

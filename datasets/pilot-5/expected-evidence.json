@@ -1,0 +1,76 @@
+{
+  "733": [
+    {
+      "file_path": "cuad/WestPharmaceuticalServicesInc_20200116_8-K_EX-10.1_11947529_EX-10.1_Supply Agreement.txt",
+      "span": [
+        10310,
+        10345
+      ],
+      "answer": "Termination Date: December 31, 2023"
+    }
+  ],
+  "269": [
+    {
+      "file_path": "cuad/PareteumCorp_20081001_8-K_EX-99.1_2654808_EX-99.1_Hosting Agreement.txt",
+      "span": [
+        54077,
+        54349
+      ],
+      "answer": "If no termination notice is provided, the Agreement will be automatically extended for consecutive *** periods until such time as *** termination notice is provided. At the end of *** Parties will negotiate in good faith regarding a possible extension of the Initial Term."
+    },
+    {
+      "file_path": "cuad/PareteumCorp_20081001_8-K_EX-99.1_2654808_EX-99.1_Hosting Agreement.txt",
+      "span": [
+        54353,
+        54494
+      ],
+      "answer": "Parties can mutually agree in writing to deviate from an automatic extension of *** by extending this Agreement for a longer period than ***."
+    }
+  ],
+  "1375": [
+    {
+      "file_path": "cuad/DataCallTechnologies_20060918_SB-2A_EX-10.9_944510_EX-10.9_Content License Agreement.txt",
+      "span": [
+        7285,
+        7556
+      ],
+      "answer": "Unless  otherwise  stated  in  the  Appendix  the  term of this letter           Agreement  shall  continue  for  twenty-four  (24)  months  with  the           effective  date  unless  terminated sooner or extended pursuant to the           terms hereof (\"Initial Term\")"
+    },
+    {
+      "file_path": "cuad/DataCallTechnologies_20060918_SB-2A_EX-10.9_944510_EX-10.9_Content License Agreement.txt",
+      "span": [
+        13704,
+        13728
+      ],
+      "answer": "Contract  end:  04-01-08"
+    }
+  ],
+  "2316": [
+    {
+      "file_path": "cuad/CHAPARRALRESOURCESINC_03_30_2000-EX-10.66-TRANSPORTATION CONTRACT.txt",
+      "span": [
+        3807,
+        3993
+      ],
+      "answer": "\"Initial Term\" means the period commencing on the Effective Date and concluding on the last day of the month in which the fifth anniversary of the Offtake Agreement Effective Date falls."
+    },
+    {
+      "file_path": "cuad/CHAPARRALRESOURCESINC_03_30_2000-EX-10.66-TRANSPORTATION CONTRACT.txt",
+      "span": [
+        4318,
+        4450
+      ],
+      "answer": "\"Offtake Agreement\" means that certain Crude Oil Sale and Purchase Agreement between the Principal and STASCO dated 1 November 1999."
+    }
+  ],
+  "10": [
+    {
+      "file_path": "cuad/EuromediaHoldingsCorp_20070215_10SB12G_EX-10.B(01)_525118_EX-10.B(01)_Content License Agreement.txt",
+      "span": [
+        6970,
+        7157
+      ],
+      "answer": "The term of this Agreement (the \"Initial Term\") shall commence as of the Effective Date and, unless earlier terminated in accordance with this Agreement, shall terminate on June 30, 2010."
+    }
+  ]
+}

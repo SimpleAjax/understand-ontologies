@@ -1,0 +1,2 @@
+# Separate from the older sealed experiment's requirements.txt.
+langfuse==5.2.0
