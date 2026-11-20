@@ -1,0 +1,22 @@
+{
+  "passed": true,
+  "triples": 834,
+  "numbered_clauses": 18,
+  "source_passages": 21,
+  "provisions": 36,
+  "checks": [
+    "Turtle parses",
+    "source SHA matches",
+    "all source offsets match exact text",
+    "all 18 clauses present",
+    "all provisions have actor/action/target/evidence",
+    "no dangling local references",
+    "either-party versus joint-party distinction",
+    "competition exception retained",
+    "unreadable percentage not invented",
+    "unknown payment actor retained",
+    "no actual orders invented",
+    "post-termination SPARQL query returns clause 11 and acceptance condition"
+  ],
+  "limitation": "Structural/source validation only. No domain-expert legal review or completeness proof."
+}

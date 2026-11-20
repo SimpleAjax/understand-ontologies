@@ -1,0 +1,1077 @@
+@prefix d: <https://cimulink.local/ontology/distribution/1#> .
+@prefix ex: <https://cimulink.local/agreements/precheck/1#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ex:CameronGundry a d:Person ;
+    rdfs:label "Cameron Gundry" ;
+    d:signsFor ex:CoDiagnostics ;
+    d:statedTitle "Dir. of Commercialization" ;
+    d:supportedBy ex:Signatures .
+
+ex:JustinAnderson a d:Person ;
+    rdfs:label "Justin Anderson" ;
+    d:signsFor ex:PreCheck ;
+    d:statedTitle "CEO" ;
+    d:supportedBy ex:Signatures .
+
+ex:Subsidiaries a d:GenericScope ;
+    rdfs:label "Unnamed Distributor subsidiaries" ;
+    d:instanceStatus "GENERIC_DESCRIPTION_NOT_A_KNOWN_TRANSACTION_OR_PERSON" ;
+    d:supportedBy ex:Preamble .
+
+<https://cimulink.local/ontology/distribution/1> a owl:Ontology ;
+    rdfs:comment "Source-linked domain interpretation for one agreement. Not an exhaustive legal model, expert opinion, or inference engine. Generic scopes and event types do not assert actual transactions." .
+
+d:action a owl:DatatypeProperty .
+
+d:actor a owl:ObjectProperty .
+
+d:allowedForms a owl:DatatypeProperty .
+
+d:appliesAfter a owl:ObjectProperty .
+
+d:clauseNumber a owl:DatatypeProperty .
+
+d:concerning a owl:ObjectProperty .
+
+d:condition a owl:ObjectProperty .
+
+d:constrains a owl:ObjectProperty .
+
+d:dependsOn a owl:ObjectProperty .
+
+d:describedIn a owl:ObjectProperty .
+
+d:endChar a owl:DatatypeProperty .
+
+d:endsAt a owl:ObjectProperty .
+
+d:establishes a owl:ObjectProperty .
+
+d:exactText a owl:DatatypeProperty .
+
+d:exception a owl:ObjectProperty .
+
+d:exclusivity a owl:DatatypeProperty .
+
+d:hasClause a owl:ObjectProperty .
+
+d:hasCoverageNote a owl:ObjectProperty .
+
+d:hasPartyRole a owl:ObjectProperty .
+
+d:hasProvision a owl:ObjectProperty .
+
+d:initialPlace a owl:ObjectProperty .
+
+d:instanceStatus a owl:DatatypeProperty .
+
+d:interpretationNote a owl:DatatypeProperty .
+
+d:member a owl:ObjectProperty .
+
+d:namedProductDescription a owl:ObjectProperty .
+
+d:noticeDays a owl:DatatypeProperty .
+
+d:noticeForm a owl:DatatypeProperty .
+
+d:offsetConvention a owl:DatatypeProperty .
+
+d:payeeStatus a owl:DatatypeProperty .
+
+d:payerStatus a owl:DatatypeProperty .
+
+d:percentageStatus a owl:DatatypeProperty .
+
+d:potentiallyRelevantProvision a owl:ObjectProperty .
+
+d:producesEventType a owl:ObjectProperty .
+
+d:qualifies a owl:ObjectProperty .
+
+d:reviewStatus a owl:DatatypeProperty .
+
+d:roleHolder a owl:ObjectProperty .
+
+d:selectionMode a owl:DatatypeProperty .
+
+d:sha256 a owl:DatatypeProperty .
+
+d:signsFor a owl:ObjectProperty .
+
+d:sourceDocument a owl:ObjectProperty .
+
+d:sourcePath a owl:DatatypeProperty .
+
+d:sourcePercentageText a owl:DatatypeProperty .
+
+d:startChar a owl:DatatypeProperty .
+
+d:statedAgreementDate a owl:DatatypeProperty .
+
+d:statedDate a owl:DatatypeProperty .
+
+d:statedLocation a owl:ObjectProperty .
+
+d:statedOperatingOrPlannedRegion a owl:ObjectProperty .
+
+d:statedTitle a owl:DatatypeProperty .
+
+d:supportedBy a owl:ObjectProperty .
+
+d:target a owl:ObjectProperty .
+
+d:temporalScope a owl:DatatypeProperty .
+
+d:territory a owl:ObjectProperty .
+
+d:triggeredBy a owl:ObjectProperty .
+
+d:variability a owl:DatatypeProperty .
+
+d:withinAgreement a owl:ObjectProperty .
+
+ex:AcceptedBeforeTermination a d:Condition ;
+    rdfs:label "Principal accepted the order before termination" ;
+    d:constrains ex:AcceptedOrders ;
+    d:dependsOn ex:OrderAcceptance ;
+    d:supportedBy ex:Clause11 ;
+    d:withinAgreement ex:Agreement .
+
+ex:AddProducts a d:ConditionalPermission ;
+    rdfs:label "add Products to covered product list" ;
+    d:action "add Products to covered product list" ;
+    d:actor ex:BothParties ;
+    d:condition ex:MutualAgreement ;
+    d:reviewStatus "UNREVIEWED_INTERPRETATION" ;
+    d:supportedBy ex:Clause5 ;
+    d:target ex:Products ;
+    d:withinAgreement ex:Agreement .
+
+ex:ApplicableLaw a d:GenericScope ;
+    rdfs:label "Applicable local, state and federal laws, rules and regulations" ;
+    d:instanceStatus "GENERIC_DESCRIPTION_NOT_A_KNOWN_TRANSACTION_OR_PERSON" ;
+    d:supportedBy ex:Clause7 .
+
+ex:Appointment a d:Appointment ;
+    rdfs:label "appoint as non-exclusive distributor" ;
+    d:action "appoint as non-exclusive distributor" ;
+    d:actor ex:CoDiagnostics ;
+    d:establishes ex:DistributionRight ;
+    d:reviewStatus "UNREVIEWED_INTERPRETATION" ;
+    d:supportedBy ex:Clause1 ;
+    d:target ex:PreCheck ;
+    d:withinAgreement ex:Agreement .
+
+ex:Assignment a d:RestrictedPermission ;
+    rdfs:label "assign this agreement" ;
+    d:action "assign this agreement" ;
+    d:actor ex:PreCheck ;
+    d:condition ex:PriorWrittenConsent ;
+    d:reviewStatus "UNREVIEWED_INTERPRETATION" ;
+    d:supportedBy ex:Clause15 ;
+    d:target ex:Agreement ;
+    d:withinAgreement ex:Agreement .
+
+ex:Attention a d:Obligation ;
+    rdfs:label "devote reasonably necessary time and attention" ;
+    d:action "devote reasonably necessary time and attention" ;
+    d:actor ex:PreCheck ;
+    d:reviewStatus "UNREVIEWED_INTERPRETATION" ;
+    d:supportedBy ex:Clause3 ;
+    d:target ex:Agreement ;
+    d:withinAgreement ex:Agreement .
+
+ex:AuthorityToContract a d:Representation ;
+    rdfs:label "has right to enter agreement and does not violate another agreement" ;
+    d:action "has right to enter agreement and does not violate another agreement" ;
+    d:actor ex:EitherParty ;
+    d:reviewStatus "UNREVIEWED_INTERPRETATION" ;
+    d:supportedBy ex:Clause18 ;
+    d:target ex:Agreement ;
+    d:withinAgreement ex:Agreement .
+
+ex:ChangePrices a d:Permission ;
+    rdfs:label "unilaterally change product prices" ;
+    d:action "unilaterally change product prices" ;
+    d:actor ex:CoDiagnostics ;
+    d:reviewStatus "UNREVIEWED_INTERPRETATION" ;
+    d:supportedBy ex:Clause5 ;
+    d:target ex:Products ;
+    d:withinAgreement ex:Agreement .
+
+ex:CoDxBox a d:ProductDescription ;
+    rdfs:label "Co-Dx Box instrument" ;
+    d:supportedBy ex:Clause1 .
+
+ex:CompetingProductRestriction a d:Prohibition ;
+    rdfs:label "handle competing products directly or indirectly" ;
+    d:action "handle competing products directly or indirectly" ;
+    d:actor ex:PreCheck ;
+    d:condition ex:WithinTerritory ;
+    d:exception ex:PrincipalAcceptance ;
+    d:reviewStatus "UNREVIEWED_INTERPRETATION" ;
+    d:supportedBy ex:Clause6 ;
+    d:target ex:CompetitiveProducts ;
+    d:temporalScope "DURING_AGREEMENT_TERM" ;
+    d:withinAgreement ex:Agreement .
+
+ex:CompetitiveProducts a d:GenericScope ;
+    rdfs:label "Products competitive with the covered Products" ;
+    d:instanceStatus "GENERIC_DESCRIPTION_NOT_A_KNOWN_TRANSACTION_OR_PERSON" ;
+    d:supportedBy ex:Clause6 .
+
+ex:Customers a d:GenericScope ;
+    rdfs:label "Potential customers" ;
+    d:instanceStatus "GENERIC_DESCRIPTION_NOT_A_KNOWN_TRANSACTION_OR_PERSON" ;
+    d:supportedBy ex:Clause4 .
+
+ex:Discount a d:Obligation ;
+    rdfs:label "grant Distributor a discount based on Products and Prices" ;
+    d:action "grant Distributor a discount based on Products and Prices" ;
+    d:actor ex:CoDiagnostics ;
+    d:percentageStatus "UNREADABLE_IN_SOURCE" ;
+    d:reviewStatus "UNREVIEWED_INTERPRETATION" ;
+    d:sourcePercentageText "¨%" ;
+    d:supportedBy ex:Clause9 ;
+    d:target ex:PreCheck ;
+    d:variability "May vary with ordered product volume or promotions; no numeric value inferred" ;
+    d:withinAgreement ex:Agreement .
+
+ex:DistributorRegistration a d:Representation ;
+    rdfs:label "Distributor or a subsidiary is or will be licensed and registered in Territory" ;
+    d:action "Distributor or a subsidiary is or will be licensed and registered in Territory" ;
+    d:actor ex:PreCheck ;
+    d:reviewStatus "UNREVIEWED_INTERPRETATION" ;
+    d:supportedBy ex:Preamble ;
+    d:target ex:Territory ;
+    d:withinAgreement ex:Agreement .
+
+ex:DistributorRejectsAddition a d:Condition ;
+    rdfs:label "Distributor rejects a proposed product addition" ;
+    d:supportedBy ex:Clause5 ;
+    d:withinAgreement ex:Agreement .
+
+ex:DistributorRole a d:PartyRole ;
+    rdfs:label "Distributor" ;
+    d:roleHolder ex:PreCheck ;
+    d:supportedBy ex:Preamble ;
+    d:withinAgreement ex:Agreement .
+
+ex:EarlyTerminationRight a d:Permission ;
+    rdfs:label "terminate without cause before stated end date" ;
+    d:action "terminate without cause before stated end date" ;
+    d:actor ex:EitherParty ;
+    d:condition ex:WrittenNotice30Days ;
+    d:producesEventType ex:Termination ;
+    d:reviewStatus "UNREVIEWED_INTERPRETATION" ;
+    d:supportedBy ex:Clause10 ;
+    d:target ex:Agreement ;
+    d:withinAgreement ex:Agreement .
+
+ex:EngageRepresentatives a d:Permission ;
+    rdfs:label "employ or engage representatives or sub-distributors" ;
+    d:action "employ or engage representatives or sub-distributors" ;
+    d:actor ex:PreCheck ;
+    d:reviewStatus "UNREVIEWED_INTERPRETATION" ;
+    d:supportedBy ex:Clause8 ;
+    d:target ex:Representatives ;
+    d:withinAgreement ex:Agreement .
+
+ex:EntireAgreement a d:IntegrationProvision ;
+    rdfs:label "agreement supersedes prior agreements and is complete and exclusive statement on its subject matter" ;
+    d:action "agreement supersedes prior agreements and is complete and exclusive statement on its subject matter" ;
+    d:actor ex:BothParties ;
+    d:reviewStatus "UNREVIEWED_INTERPRETATION" ;
+    d:supportedBy ex:Clause14 ;
+    d:target ex:PriorAgreements ;
+    d:withinAgreement ex:Agreement .
+
+ex:Europe a d:Place ;
+    rdfs:label "Europe" ;
+    d:supportedBy ex:Preamble .
+
+ex:Expiry a d:EventType ;
+    rdfs:label "Reaching the stated agreement end date" ;
+    d:statedDate "2021-03-18"^^xsd:date ;
+    d:supportedBy ex:Clause10 .
+
+ex:FollowPolicies a d:Obligation ;
+    rdfs:label "abide by Principal policies" ;
+    d:action "abide by Principal policies" ;
+    d:actor ex:PreCheck ;
+    d:reviewStatus "UNREVIEWED_INTERPRETATION" ;
+    d:supportedBy ex:Clause3 ;
+    d:target ex:Policies ;
+    d:withinAgreement ex:Agreement .
+
+ex:GoverningLaw a d:GoverningLawProvision ;
+    rdfs:label "construe and govern agreement under Texas law without conflict-of-laws principles" ;
+    d:action "construe and govern agreement under Texas law without conflict-of-laws principles" ;
+    d:actor ex:BothParties ;
+    d:reviewStatus "UNREVIEWED_INTERPRETATION" ;
+    d:supportedBy ex:Clause17 ;
+    d:target ex:TexasLaw ;
+    d:withinAgreement ex:Agreement .
+
+ex:HeirsSuccessors a d:GenericScope ;
+    rdfs:label "Parties, heirs and successors" ;
+    d:instanceStatus "GENERIC_DESCRIPTION_NOT_A_KNOWN_TRANSACTION_OR_PERSON" ;
+    d:supportedBy ex:Clause12 .
+
+ex:IPRights a d:Representation ;
+    rdfs:label "owns or has rights to intellectual property embodied in Products" ;
+    d:action "owns or has rights to intellectual property embodied in Products" ;
+    d:actor ex:CoDiagnostics ;
+    d:reviewStatus "UNREVIEWED_INTERPRETATION" ;
+    d:supportedBy ex:Clause18 ;
+    d:target ex:ProductIP ;
+    d:withinAgreement ex:Agreement .
+
+ex:IndependentContractor a d:StatusStatement ;
+    rdfs:label "is an independent contractor; not Principal partner or employee" ;
+    d:action "is an independent contractor; not Principal partner or employee" ;
+    d:actor ex:PreCheck ;
+    d:reviewStatus "UNREVIEWED_INTERPRETATION" ;
+    d:supportedBy ex:Clause13 ;
+    d:target ex:CoDiagnostics ;
+    d:withinAgreement ex:Agreement .
+
+ex:LatinAmerica a d:Place ;
+    rdfs:label "Latin America" ;
+    d:supportedBy ex:Preamble .
+
+ex:LawfulConduct a d:RepresentationAndWarranty ;
+    rdfs:label "conduct business in strict conformity with applicable law" ;
+    d:action "conduct business in strict conformity with applicable law" ;
+    d:actor ex:PreCheck ;
+    d:reviewStatus "UNREVIEWED_INTERPRETATION" ;
+    d:supportedBy ex:Clause7 ;
+    d:target ex:ApplicableLaw ;
+    d:withinAgreement ex:Agreement .
+
+ex:LogixSmart a d:ProductDescription ;
+    rdfs:label "Logix Smart COVID-19 PCR diagnostic test" ;
+    d:supportedBy ex:Clause1 .
+
+ex:MissingExhibitProducts a d:CoverageNote ;
+    rdfs:label "Exhibit A product-list heading has no populated list in extracted text" ;
+    d:supportedBy ex:ExhibitA .
+
+ex:Modification a d:ValidityCondition ;
+    rdfs:label "modify this agreement" ;
+    d:action "modify this agreement" ;
+    d:actor ex:BothParties ;
+    d:condition ex:WrittenSignedChange ;
+    d:reviewStatus "UNREVIEWED_INTERPRETATION" ;
+    d:supportedBy ex:Clause14 ;
+    d:target ex:Agreement ;
+    d:withinAgreement ex:Agreement .
+
+ex:MutualAgreement a d:Condition ;
+    rdfs:label "Mutual agreement of the parties" ;
+    d:supportedBy ex:Clause5 ;
+    d:withinAgreement ex:Agreement .
+
+ex:MutualWrittenAgreement a d:Condition ;
+    rdfs:label "Mutual written agreement to change Territory" ;
+    d:supportedBy ex:Clause2 ;
+    d:withinAgreement ex:Agreement .
+
+ex:NoActualOrders a d:CoverageNote ;
+    rdfs:label "No actual orders, shipments or termination events are identified" ;
+    d:supportedBy ex:Clause11 .
+
+ex:NoBindingAuthority a d:Prohibition ;
+    rdfs:label "bind the other party" ;
+    d:action "bind the other party" ;
+    d:actor ex:EitherParty ;
+    d:reviewStatus "UNREVIEWED_INTERPRETATION" ;
+    d:supportedBy ex:Clause13 ;
+    d:target ex:Agreement ;
+    d:withinAgreement ex:Agreement .
+
+ex:NoOtherUnderstandings a d:Declaration ;
+    rdfs:label "no other agreements or understandings on this subject matter" ;
+    d:action "no other agreements or understandings on this subject matter" ;
+    d:actor ex:BothParties ;
+    d:reviewStatus "UNREVIEWED_INTERPRETATION" ;
+    d:supportedBy ex:Clause14 ;
+    d:target ex:Agreement ;
+    d:withinAgreement ex:Agreement .
+
+ex:NoTerminationChallenge a d:Prohibition ;
+    rdfs:label "challenge or contest termination" ;
+    d:action "challenge or contest termination" ;
+    d:actor ex:HeirsSuccessors ;
+    d:appliesAfter ex:Termination ;
+    d:reviewStatus "UNREVIEWED_INTERPRETATION" ;
+    d:supportedBy ex:Clause12 ;
+    d:target ex:Termination ;
+    d:withinAgreement ex:Agreement .
+
+ex:NotPrincipalEmployees a d:StatusStatement ;
+    rdfs:label "are not deemed employees of Principal" ;
+    d:action "are not deemed employees of Principal" ;
+    d:actor ex:Representatives ;
+    d:reviewStatus "UNREVIEWED_INTERPRETATION" ;
+    d:supportedBy ex:Clause8 ;
+    d:target ex:CoDiagnostics ;
+    d:withinAgreement ex:Agreement .
+
+ex:ObtainPermits a d:Obligation ;
+    rdfs:label "obtain all necessary licenses and permits at own expense" ;
+    d:action "obtain all necessary licenses and permits at own expense" ;
+    d:actor ex:PreCheck ;
+    d:reviewStatus "UNREVIEWED_INTERPRETATION" ;
+    d:supportedBy ex:Clause7 ;
+    d:target ex:Permits ;
+    d:withinAgreement ex:Agreement .
+
+ex:PassLeads a d:Obligation ;
+    rdfs:label "pass sales leads and orders to Distributor" ;
+    d:action "pass sales leads and orders to Distributor" ;
+    d:actor ex:CoDiagnostics ;
+    d:concerning ex:Orders,
+        ex:SalesLeads ;
+    d:reviewStatus "UNREVIEWED_INTERPRETATION" ;
+    d:supportedBy ex:Clause4 ;
+    d:target ex:PreCheck ;
+    d:withinAgreement ex:Agreement .
+
+ex:PaymentUponShipment a d:PaymentProvision ;
+    rdfs:label "payment to be made upon shipment" ;
+    d:action "payment to be made upon shipment" ;
+    d:actor ex:UnspecifiedPaymentActor ;
+    d:payeeStatus "NOT_EXPLICIT_IN_THIS_SENTENCE" ;
+    d:payerStatus "NOT_EXPLICIT_IN_THIS_SENTENCE" ;
+    d:reviewStatus "UNREVIEWED_INTERPRETATION" ;
+    d:supportedBy ex:Clause11 ;
+    d:target ex:AcceptedOrders ;
+    d:triggeredBy ex:Shipment ;
+    d:withinAgreement ex:Agreement .
+
+ex:Permits a d:GenericScope ;
+    rdfs:label "Necessary distribution licenses and permits" ;
+    d:instanceStatus "GENERIC_DESCRIPTION_NOT_A_KNOWN_TRANSACTION_OR_PERSON" ;
+    d:supportedBy ex:Clause7 .
+
+ex:Policies a d:GenericScope ;
+    rdfs:label "Principal policies" ;
+    d:instanceStatus "GENERIC_DESCRIPTION_NOT_A_KNOWN_TRANSACTION_OR_PERSON" ;
+    d:supportedBy ex:Clause3 .
+
+ex:PostTerminationOrders a d:Permission ;
+    rdfs:label "receive accepted orders and sell the ordered Products" ;
+    d:action "receive accepted orders and sell the ordered Products" ;
+    d:actor ex:PreCheck ;
+    d:appliesAfter ex:Termination ;
+    d:condition ex:AcceptedBeforeTermination ;
+    d:interpretationNote "Explicit accepted-order continuation. Does not assert a general post-termination right to place new orders or that all other rights end." ;
+    d:qualifies ex:DistributionRight ;
+    d:reviewStatus "UNREVIEWED_INTERPRETATION" ;
+    d:supportedBy ex:Clause11 ;
+    d:target ex:AcceptedOrders ;
+    d:territory ex:Territory ;
+    d:withinAgreement ex:Agreement .
+
+ex:PrincipalAcceptance a d:Condition ;
+    rdfs:label "Principal accepts competing-product handling" ;
+    d:supportedBy ex:Clause6 ;
+    d:withinAgreement ex:Agreement .
+
+ex:PrincipalMarketing a d:Permission ;
+    rdfs:label "contact and market products to potential customers" ;
+    d:action "contact and market products to potential customers" ;
+    d:actor ex:CoDiagnostics ;
+    d:condition ex:WithinTerritory ;
+    d:reviewStatus "UNREVIEWED_INTERPRETATION" ;
+    d:supportedBy ex:Clause4 ;
+    d:target ex:Customers ;
+    d:withinAgreement ex:Agreement .
+
+ex:PrincipalRole a d:PartyRole ;
+    rdfs:label "Principal" ;
+    d:roleHolder ex:CoDiagnostics ;
+    d:supportedBy ex:Preamble ;
+    d:withinAgreement ex:Agreement .
+
+ex:PriorAgreements a d:GenericScope ;
+    rdfs:label "Prior agreements between these parties concerning this subject matter" ;
+    d:instanceStatus "GENERIC_DESCRIPTION_NOT_A_KNOWN_TRANSACTION_OR_PERSON" ;
+    d:supportedBy ex:Clause14 .
+
+ex:PriorWrittenConsent a d:Condition ;
+    rdfs:label "Principal gives prior written consent to assignment" ;
+    d:supportedBy ex:Clause15 ;
+    d:withinAgreement ex:Agreement .
+
+ex:ProductIP a d:GenericScope ;
+    rdfs:label "Intellectual property embodied in Products" ;
+    d:instanceStatus "GENERIC_DESCRIPTION_NOT_A_KNOWN_TRANSACTION_OR_PERSON" ;
+    d:supportedBy ex:Clause18 .
+
+ex:Promote a d:Obligation ;
+    rdfs:label "promote, market and sell with commercially reasonable efforts" ;
+    d:action "promote, market and sell with commercially reasonable efforts" ;
+    d:actor ex:PreCheck ;
+    d:condition ex:WithinTerritory ;
+    d:reviewStatus "UNREVIEWED_INTERPRETATION" ;
+    d:supportedBy ex:Clause3 ;
+    d:target ex:Products ;
+    d:withinAgreement ex:Agreement .
+
+ex:QPCRKits a d:ProductDescription ;
+    rdfs:label "qPCR infectious disease kits" ;
+    d:supportedBy ex:Clause1 .
+
+ex:RecipientAcknowledgement a d:Condition ;
+    rdfs:label "Recipient acknowledges written or email communication" ;
+    d:supportedBy ex:Clause16 ;
+    d:withinAgreement ex:Agreement .
+
+ex:RejectedProductRight a d:Permission ;
+    rdfs:label "market and distribute the rejected new product" ;
+    d:action "market and distribute the rejected new product" ;
+    d:actor ex:CoDiagnostics ;
+    d:condition ex:DistributorRejectsAddition ;
+    d:reviewStatus "UNREVIEWED_INTERPRETATION" ;
+    d:supportedBy ex:Clause5 ;
+    d:target ex:Products ;
+    d:withinAgreement ex:Agreement .
+
+ex:RemoveProducts a d:Permission ;
+    rdfs:label "unilaterally remove Products from catalog" ;
+    d:action "unilaterally remove Products from catalog" ;
+    d:actor ex:CoDiagnostics ;
+    d:reviewStatus "UNREVIEWED_INTERPRETATION" ;
+    d:supportedBy ex:Clause5 ;
+    d:target ex:Products ;
+    d:withinAgreement ex:Agreement .
+
+ex:RepresentativePay a d:Obligation ;
+    rdfs:label "solely pay representative wages or commissions" ;
+    d:action "solely pay representative wages or commissions" ;
+    d:actor ex:PreCheck ;
+    d:reviewStatus "UNREVIEWED_INTERPRETATION" ;
+    d:supportedBy ex:Clause8 ;
+    d:target ex:Representatives ;
+    d:withinAgreement ex:Agreement .
+
+ex:Romania a d:Place ;
+    rdfs:label "Romania" .
+
+ex:Russia a d:Place ;
+    rdfs:label "Russia" ;
+    d:supportedBy ex:Preamble .
+
+ex:SalesLeads a d:GenericScope ;
+    rdfs:label "Sales leads" ;
+    d:instanceStatus "GENERIC_DESCRIPTION_NOT_A_KNOWN_TRANSACTION_OR_PERSON" ;
+    d:supportedBy ex:Clause4 .
+
+ex:Shipment a d:EventType ;
+    rdfs:label "Shipment of ordered products; not an actual shipment" ;
+    d:supportedBy ex:Clause11 .
+
+ex:StatedTerm a d:TermProvision ;
+    rdfs:label "agreement remains in effect until stated end date unless sooner terminated" ;
+    d:action "agreement remains in effect until stated end date unless sooner terminated" ;
+    d:actor ex:BothParties ;
+    d:endsAt ex:Expiry ;
+    d:exception ex:Termination ;
+    d:reviewStatus "UNREVIEWED_INTERPRETATION" ;
+    d:supportedBy ex:Clause10 ;
+    d:target ex:Agreement ;
+    d:withinAgreement ex:Agreement .
+
+ex:TerritoryChange a d:Permission ;
+    rdfs:label "amend Territory" ;
+    d:action "amend Territory" ;
+    d:actor ex:BothParties ;
+    d:condition ex:MutualWrittenAgreement ;
+    d:reviewStatus "UNREVIEWED_INTERPRETATION" ;
+    d:supportedBy ex:Clause2 ;
+    d:target ex:Territory ;
+    d:withinAgreement ex:Agreement .
+
+ex:TexasLaw a d:LegalFramework ;
+    rdfs:label "Laws of the State of Texas" ;
+    d:supportedBy ex:Clause17 .
+
+ex:UnitedStates a d:Place ;
+    rdfs:label "United States of America" ;
+    d:supportedBy ex:Preamble .
+
+ex:UnknownDiscount a d:CoverageNote ;
+    rdfs:label "Discount percentage is unreadable" ;
+    d:supportedBy ex:Clause9 .
+
+ex:UnspecifiedPaymentActor a d:ActorExpression ;
+    rdfs:label "Payment actor not expressly named in clause 11 sentence" ;
+    d:supportedBy ex:Clause11 .
+
+ex:Utah a d:Place ;
+    rdfs:label "Utah" ;
+    d:supportedBy ex:Preamble .
+
+ex:WrittenNotice30Days a d:Condition ;
+    rdfs:label "Early termination requires 30 days written notice" ;
+    d:interpretationNote "Clause 16 may affect notice delivery; graph does not decide whether every acknowledged email satisfies clause 10 written notice." ;
+    d:noticeDays 30 ;
+    d:noticeForm "WRITTEN" ;
+    d:potentiallyRelevantProvision ex:OfficialCommunication ;
+    d:supportedBy ex:Clause10 ;
+    d:withinAgreement ex:Agreement .
+
+ex:WrittenSignedChange a d:Condition ;
+    rdfs:label "Change must be written and signed by the parties" ;
+    d:supportedBy ex:Clause14 ;
+    d:withinAgreement ex:Agreement .
+
+d:Agreement a owl:Class .
+
+d:Appointment a owl:Class .
+
+d:ConditionalPermission a owl:Class .
+
+d:Declaration a owl:Class .
+
+d:Discretion a owl:Class .
+
+d:FormRequirement a owl:Class .
+
+d:GoverningLawProvision a owl:Class .
+
+d:IntegrationProvision a owl:Class .
+
+d:LegalFramework a owl:Class .
+
+d:PaymentProvision a owl:Class .
+
+d:ProductScope a owl:Class .
+
+d:RepresentationAndWarranty a owl:Class .
+
+d:RestrictedPermission a owl:Class .
+
+d:SourceDocument a owl:Class .
+
+d:TermProvision a owl:Class .
+
+d:TerritoryScope a owl:Class .
+
+d:ValidityCondition a owl:Class .
+
+ex:ExhibitA a d:SourcePassage ;
+    rdfs:label "Exhibit A: product-list heading" ;
+    d:endChar 6320 ;
+    d:exactText """.EXHIBIT A LIST OF PRODUCTS
+
+Source: PRECHECK HEALTH SERVICES, INC., 8-K, 3/20/2020
+
+
+
+
+
+Source: PRECHECK HEALTH SERVICES, INC., 8-K, 3/20/2020
+
+
+
+
+
+Source: PRECHECK HEALTH SERVICES, INC., 8-K, 3/20/2020""" ;
+    d:sourceDocument ex:Document ;
+    d:startChar 6117 .
+
+ex:OfficialCommunication a d:FormRequirement ;
+    rdfs:label "send official communication in writing or email acknowledged by recipient" ;
+    d:action "send official communication in writing or email acknowledged by recipient" ;
+    d:actor ex:EitherParty ;
+    d:allowedForms "WRITING_OR_EMAIL" ;
+    d:condition ex:RecipientAcknowledgement ;
+    d:reviewStatus "UNREVIEWED_INTERPRETATION" ;
+    d:supportedBy ex:Clause16 ;
+    d:target ex:Agreement ;
+    d:withinAgreement ex:Agreement .
+
+ex:OrderAcceptance a d:Discretion ;
+    rdfs:label "accept or reject submitted Distributor orders in sole discretion" ;
+    d:action "accept or reject submitted Distributor orders in sole discretion" ;
+    d:actor ex:CoDiagnostics ;
+    d:reviewStatus "UNREVIEWED_INTERPRETATION" ;
+    d:supportedBy ex:Clause13 ;
+    d:target ex:Orders ;
+    d:withinAgreement ex:Agreement .
+
+ex:Orders a d:GenericScope ;
+    rdfs:label "Orders under this agreement" ;
+    d:instanceStatus "GENERIC_DESCRIPTION_NOT_A_KNOWN_TRANSACTION_OR_PERSON" ;
+    d:supportedBy ex:Clause13,
+        ex:Clause4 .
+
+ex:Signatures a d:SourcePassage ;
+    rdfs:label "Execution wording and signatories" ;
+    d:endChar 6117 ;
+    d:exactText """Intending to be legally bound, the parties hereto have caused this Agreement to be executed as of the date first above written. BY /s/ Cameron Gundry BY /s/ Justin Anderson Cameron Gundry, Dir. of Commercialization Justin Anderson, CEO Co-Diagnostics, Inc. PreCheck Health Services, Inc. (Principal) (Distributor)
+
+Source: PRECHECK HEALTH SERVICES, INC., 8-K, 3/20/2020
+
+
+
+
+
+""" ;
+    d:sourceDocument ex:Document ;
+    d:startChar 5742 .
+
+d:Organization a owl:Class .
+
+d:PartyRole a owl:Class .
+
+d:Person a owl:Class .
+
+d:StatusStatement a owl:Class .
+
+ex:AcceptedOrders a d:GenericScope ;
+    rdfs:label "Orders accepted by Principal before termination" ;
+    d:instanceStatus "GENERIC_DESCRIPTION_NOT_A_KNOWN_TRANSACTION_OR_PERSON" ;
+    d:supportedBy ex:Clause11 .
+
+ex:Clause15 a d:Clause ;
+    rdfs:label "Clause 15" ;
+    d:clauseNumber 15 ;
+    d:endChar 5175 ;
+    d:exactText "15. This Agreement shall not be assigned by the Distributor without the prior written consent of the Principal. " ;
+    d:sourceDocument ex:Document ;
+    d:startChar 5063 .
+
+ex:Clause16 a d:Clause ;
+    rdfs:label "Clause 16" ;
+    d:clauseNumber 16 ;
+    d:endChar 5305 ;
+    d:exactText "16. Official communication from Distributor or the Principal shall be in written form or by email, acknowledged by the recipient. " ;
+    d:sourceDocument ex:Document ;
+    d:startChar 5175 .
+
+ex:Clause17 a d:Clause ;
+    rdfs:label "Clause 17" ;
+    d:clauseNumber 17 ;
+    d:endChar 5460 ;
+    d:exactText "17. This Agreement shall be construed in accordance with and governed by the laws of the State of Texas without regard to principles of conflicts of laws. " ;
+    d:sourceDocument ex:Document ;
+    d:startChar 5305 .
+
+ex:Clause9 a d:Clause ;
+    rdfs:label "Clause 9" ;
+    d:clauseNumber 9 ;
+    d:endChar 3627 ;
+    d:exactText "9. Principal will grant Distributor a discount based on the Products and Prices. The proposed discount is expected to be ¨%. Discount may vary depending on product volume ordered or promotions. " ;
+    d:sourceDocument ex:Document ;
+    d:startChar 3433 .
+
+ex:DistributionRight a d:Permission ;
+    rdfs:label "sell covered products" ;
+    d:action "sell covered products" ;
+    d:actor ex:PreCheck ;
+    d:condition ex:WithinTerritory ;
+    d:exclusivity "NON_EXCLUSIVE" ;
+    d:reviewStatus "UNREVIEWED_INTERPRETATION" ;
+    d:supportedBy ex:Clause1,
+        ex:Clause2 ;
+    d:target ex:Products ;
+    d:territory ex:Territory ;
+    d:withinAgreement ex:Agreement .
+
+ex:Representatives a d:GenericScope ;
+    rdfs:label "Representatives or sub-distributors engaged by Distributor" ;
+    d:instanceStatus "GENERIC_DESCRIPTION_NOT_A_KNOWN_TRANSACTION_OR_PERSON" ;
+    d:supportedBy ex:Clause8 .
+
+d:ActorExpression a owl:Class .
+
+d:CoverageNote a owl:Class .
+
+d:EventType a owl:Class .
+
+d:ProductDescription a owl:Class .
+
+d:Prohibition a owl:Class .
+
+d:Representation a owl:Class .
+
+d:SourcePassage a owl:Class .
+
+ex:Clause12 a d:Clause ;
+    rdfs:label "Clause 12" ;
+    d:clauseNumber 12 ;
+    d:endChar 4209 ;
+    d:exactText "12. In the event of termination, neither party, their heirs nor successors shall issue any challenge whatsoever to contest the termination. " ;
+    d:sourceDocument ex:Document ;
+    d:startChar 4069 .
+
+ex:Clause18 a d:Clause ;
+    rdfs:label "Clause 18" ;
+    d:clauseNumber 18 ;
+    d:endChar 5742 ;
+    d:exactText "18. Each of Principal and Distributor represents that it has the right to enter into this Agreement and that this Agreement does not violate any agreement to which it is a party. Principal represents that it owns or has rights to the intellectual property embodied in the Products. " ;
+    d:sourceDocument ex:Document ;
+    d:startChar 5460 .
+
+ex:Clause6 a d:Clause ;
+    rdfs:label "Clause 6" ;
+    d:clauseNumber 6 ;
+    d:endChar 2682 ;
+    d:exactText "6. Unless accepted by the Principal, the Distributor agrees that during the term of this Agreement, the Distributor, either directly or indirectly, shall handle no products that are competitive with the Products within the Territory. " ;
+    d:sourceDocument ex:Document ;
+    d:startChar 2448 .
+
+ex:EitherParty a d:ActorExpression ;
+    rdfs:label "Either party independently" ;
+    d:member ex:CoDiagnostics,
+        ex:PreCheck ;
+    d:selectionMode "ANY_ONE" ;
+    d:withinAgreement ex:Agreement .
+
+ex:Territory a d:TerritoryScope ;
+    rdfs:label "Contract territory; initially Romania" ;
+    d:initialPlace ex:Romania ;
+    d:supportedBy ex:Clause2 .
+
+ex:WithinTerritory a d:Condition ;
+    rdfs:label "Activity concerns the agreement Territory" ;
+    d:supportedBy ex:Clause1,
+        ex:Clause2 ;
+    d:withinAgreement ex:Agreement .
+
+ex:Clause13 a d:Clause ;
+    rdfs:label "Clause 13" ;
+    d:clauseNumber 13 ;
+    d:endChar 4617 ;
+    d:exactText "13. The Distributor is an independent contractor and nothing contained in this agreement shall be deemed or interpreted to constitute the Distributor as a partner or employee of the Principal, nor shall either party have any authority to bind the other in any respect, it being understood and agreed that all orders submitted by the Distributor are subject to acceptance by Principal in its sole discretion. " ;
+    d:sourceDocument ex:Document ;
+    d:startChar 4209 .
+
+ex:Clause3 a d:Clause ;
+    rdfs:label "Clause 3" ;
+    d:clauseNumber 3 ;
+    d:endChar 1818 ;
+    d:exactText "3. The Distributor accepts the appointment and shall use its commercially reasonable efforts to promote, market and sell the Products within the Territory, devote such time and attention as may be reasonably necessary and abide by the Principal's policies. " ;
+    d:sourceDocument ex:Document ;
+    d:startChar 1561 .
+
+ex:Clause7 a d:Clause ;
+    rdfs:label "Clause 7" ;
+    d:clauseNumber 7 ;
+    d:endChar 3006 ;
+    d:exactText "7. The Distributor shall obtain at its own expense, all necessary licenses and permits to allow the Distributor to conduct business as contemplated herein. The Distributor represents and warrants that the Distributor shall conduct business in strict conformity with all local, state and federal laws, rules and regulations. " ;
+    d:sourceDocument ex:Document ;
+    d:startChar 2682 .
+
+ex:Clause8 a d:Clause ;
+    rdfs:label "Clause 8" ;
+    d:clauseNumber 8 ;
+    d:endChar 3433 ;
+    d:exactText "8. The Principal agrees that the Distributor may employ or engage representatives or sub-distributors in furtherance of this Agreement and the Distributor agrees that the Distributor shall be solely responsible for the payment of wages or commissions to those representatives and sub-distributors, and that under no circumstances shall Distributor's representatives be deemed employees of Principal for any purpose whatsoever. " ;
+    d:sourceDocument ex:Document ;
+    d:startChar 3006 .
+
+ex:Termination a d:EventType ;
+    rdfs:label "Early termination of this agreement; not an actual recorded termination" ;
+    d:supportedBy ex:Clause10,
+        ex:Clause11,
+        ex:Clause12 .
+
+ex:Clause10 a d:Clause ;
+    rdfs:label "Clause 10" ;
+    d:clauseNumber 10 ;
+    d:endChar 3774 ;
+    d:exactText "10. This Agreement shall be in effect until March 18. 2021, unless sooner terminated by either party upon (30) days written notice, without cause. " ;
+    d:sourceDocument ex:Document ;
+    d:startChar 3627 .
+
+ex:Clause14 a d:Clause ;
+    rdfs:label "Clause 14" ;
+    d:clauseNumber 14 ;
+    d:endChar 5063 ;
+    d:exactText "14. It is agreed between the parties that there are no other agreements or understandings between them relating to the subject matter of this Agreement. This Agreement supersedes all prior agreements, oral or written, between the parties and is intended as a complete and exclusive statement of the agreement between the parties. No change or modification of this Agreement shall be valid unless the same be in writing and signed by the parties. " ;
+    d:sourceDocument ex:Document ;
+    d:startChar 4617 .
+
+ex:Clause2 a d:Clause ;
+    rdfs:label "Clause 2" ;
+    d:clauseNumber 2 ;
+    d:endChar 1561 ;
+    d:exactText """2. The Principal grants Distributor non- exclusive rights to sell these products within the countries of Romania (the "Territory"), which may be amended by mutual written agreement.
+
+Source: PRECHECK HEALTH SERVICES, INC., 8-K, 3/20/2020
+
+
+
+
+
+""" ;
+    d:sourceDocument ex:Document ;
+    d:startChar 1318 .
+
+ex:Clause4 a d:Clause ;
+    rdfs:label "Clause 4" ;
+    d:clauseNumber 4 ;
+    d:endChar 2005 ;
+    d:exactText "4. The Principal shall maintain the right to contact and market its products to potential customers in the Territory; but agrees to pass on all sales leads and orders to the Distributor. " ;
+    d:sourceDocument ex:Document ;
+    d:startChar 1818 .
+
+ex:Products a d:ProductScope ;
+    rdfs:label "Products covered by this agreement; amendable list" ;
+    d:describedIn ex:ExhibitA ;
+    d:namedProductDescription ex:CoDxBox,
+        ex:LogixSmart,
+        ex:QPCRKits ;
+    d:supportedBy ex:Clause1,
+        ex:Clause5 .
+
+d:Place a owl:Class .
+
+ex:BothParties a d:ActorExpression ;
+    rdfs:label "Both parties jointly" ;
+    d:member ex:CoDiagnostics,
+        ex:PreCheck ;
+    d:selectionMode "ALL" ;
+    d:withinAgreement ex:Agreement .
+
+d:Obligation a owl:Class .
+
+ex:Clause1 a d:Clause ;
+    rdfs:label "Clause 1" ;
+    d:clauseNumber 1 ;
+    d:endChar 1318 ;
+    d:exactText "1. The Principal appoints the Distributor as a non-exclusive distributor, to sell Principal's qPCR infectious disease kits, Logix Smart COVID-19 PCR diagnostic test and Co-Dx Box™ instrument (the \"Products\"). The Products are described on Exhibit A to this Agreement. " ;
+    d:sourceDocument ex:Document ;
+    d:startChar 1050 .
+
+ex:Clause5 a d:Clause ;
+    rdfs:label "Clause 5" ;
+    d:clauseNumber 5 ;
+    d:endChar 2448 ;
+    d:exactText "5. The parties agree that the list of Products and/or prices may be amended from time to time. The Principal may unilaterally remove Products from the catalog or change prices. Additions to the Products shall be by mutual agreement. However, in the event the Distributor rejects a new product addition to the product list, the Principal shall then retain the right to market and distribute the new product that is rejected by the Distributor. " ;
+    d:sourceDocument ex:Document ;
+    d:startChar 2005 .
+
+ex:Clause11 a d:Clause ;
+    rdfs:label "Clause 11" ;
+    d:clauseNumber 11 ;
+    d:endChar 4069 ;
+    d:exactText """11. In the event of termination, the Distributor shall be entitled to receive all orders accepted by the Principal prior to the date of termination and may sell the ordered Products in the Territory. Payment to be made upon shipment.
+
+Source: PRECHECK HEALTH SERVICES, INC., 8-K, 3/20/2020
+
+
+
+
+
+""" ;
+    d:sourceDocument ex:Document ;
+    d:startChar 3774 .
+
+d:Permission a owl:Class .
+
+ex:Preamble a d:SourcePassage ;
+    rdfs:label "Preamble and business descriptions" ;
+    d:endChar 1050 ;
+    d:exactText "EXHIBIT 99.2 Page 1 of 3 DISTRIBUTOR AGREEMENT Agreement made this 19t h day of March, 2020 Between: Co-Diagnostics, Inc. (herein referred to as \"Principal\") And PreCheck Health Services, Inc. (herein referred to as \"Distributor\"). In consideration of the mutual terms, conditions and covenants hereinafter set forth, Principal and Distributor acknowledge and agree to the following descriptions and conditions: DESCRIPTION OF PRINCIPAL The Principal is a company located in Utah, United States and is in the business of research and development of reagents. The Principal markets and sells it products globally through direct sales and distributors. DESCRIPTION OF DISTRIBUTOR The Distributor is a company operating or planning to operate in the United States of America, Latin America, Europe and Russia. The Distributor represents that the Distributor or a subsidiary of the Distributor is or will be fully licensed and registered in the Territory and will provide professional distribution services for the products of the Principal. CONDITIONS: " ;
+    d:sourceDocument ex:Document ;
+    d:startChar 0 .
+
+d:Condition a owl:Class .
+
+d:GenericScope a owl:Class .
+
+ex:CoDiagnostics a d:Organization ;
+    rdfs:label "Co-Diagnostics, Inc." ;
+    d:statedLocation ex:Utah .
+
+d:Clause a owl:Class .
+
+ex:PreCheck a d:Organization ;
+    rdfs:label "PreCheck Health Services, Inc." ;
+    d:statedOperatingOrPlannedRegion ex:Europe,
+        ex:LatinAmerica,
+        ex:Russia,
+        ex:UnitedStates .
+
+ex:Document a d:SourceDocument ;
+    rdfs:label "Extracted PreCheck distributor agreement" ;
+    d:offsetConvention "0-based, end-exclusive Unicode characters after Python UTF-8 text reading; not PDF page positions" ;
+    d:sha256 "beee329d09f6bd58196158ac36e7a86ad2f6a85be51594d77cf766e979c214fc" ;
+    d:sourcePath "data/corpus/cuad/PrecheckHealthServicesInc_20200320_8-K_EX-99.2_12070169_EX-99.2_Distributor Agreement.txt" .
+
+ex:Agreement a d:Agreement ;
+    rdfs:label "Co-Diagnostics / PreCheck Distributor Agreement" ;
+    d:hasClause ex:Clause1,
+        ex:Clause10,
+        ex:Clause11,
+        ex:Clause12,
+        ex:Clause13,
+        ex:Clause14,
+        ex:Clause15,
+        ex:Clause16,
+        ex:Clause17,
+        ex:Clause18,
+        ex:Clause2,
+        ex:Clause3,
+        ex:Clause4,
+        ex:Clause5,
+        ex:Clause6,
+        ex:Clause7,
+        ex:Clause8,
+        ex:Clause9 ;
+    d:hasCoverageNote ex:MissingExhibitProducts,
+        ex:NoActualOrders,
+        ex:UnknownDiscount ;
+    d:hasPartyRole ex:DistributorRole,
+        ex:PrincipalRole ;
+    d:hasProvision ex:AddProducts,
+        ex:Appointment,
+        ex:Assignment,
+        ex:Attention,
+        ex:AuthorityToContract,
+        ex:ChangePrices,
+        ex:CompetingProductRestriction,
+        ex:Discount,
+        ex:DistributionRight,
+        ex:DistributorRegistration,
+        ex:EarlyTerminationRight,
+        ex:EngageRepresentatives,
+        ex:EntireAgreement,
+        ex:FollowPolicies,
+        ex:GoverningLaw,
+        ex:IPRights,
+        ex:IndependentContractor,
+        ex:LawfulConduct,
+        ex:Modification,
+        ex:NoBindingAuthority,
+        ex:NoOtherUnderstandings,
+        ex:NoTerminationChallenge,
+        ex:NotPrincipalEmployees,
+        ex:ObtainPermits,
+        ex:OfficialCommunication,
+        ex:OrderAcceptance,
+        ex:PassLeads,
+        ex:PaymentUponShipment,
+        ex:PostTerminationOrders,
+        ex:PrincipalMarketing,
+        ex:Promote,
+        ex:RejectedProductRight,
+        ex:RemoveProducts,
+        ex:RepresentativePay,
+        ex:StatedTerm,
+        ex:TerritoryChange ;
+    d:reviewStatus "ASSISTANT_AUTHORED_DRAFT_NOT_LEGAL_REVIEWED" ;
+    d:sourceDocument ex:Document ;
+    d:statedAgreementDate "2020-03-19"^^xsd:date ;
+    d:supportedBy ex:Preamble .
+

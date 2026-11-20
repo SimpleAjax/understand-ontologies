@@ -142,3 +142,21 @@ Older reports and `scripts/experiment_lab.py` remain untouched. Those earlier ru
 - No full benchmark, new extraction or new Qwen experiment was executed for this restructuring.
 
 Verified comparison: `artifacts/experiment-comparisons/compare-e3bd1b8c.md`.
+
+
+## Domain ontology experiment (ten agreements)
+
+A separate `domain-ontology-v1` experiment builds richer source-linked graphs before selecting one evaluation question per agreement. It uses graph-only agent tools and produces a cited answer; a normal-RAG comparator runs separately afterward. Its agreement cap is ten; the earlier experiments retain their five-question cap.
+
+See [its design and commands](experiments/domain-ontology/v1/README.md). Unlike `agentic-v2`, it has no vector or keyword fallback. This first evaluation supplies the correct agreement to both methods and does not evaluate cross-document routing. Full source preservation is not proof of full semantic extraction, and generated answers need human review.
+
+
+## Current domain inference model
+
+Use [domain-deepseek-v2](experiments/domain-deepseek/v2/README.md) for new domain-query experiments: all LLM inference is DeepSeek via OpenRouter, with no local Qwen dependency. It reuses frozen graph pairs to isolate inference changes. Historical local versions remain available for comparison.
+
+## Broader document validation
+
+[domain-deepseek-v3](experiments/domain-deepseek/v3/README.md) selects 20 additional agreements uniformly from the remaining 90 using seed 20261115. It rebuilds both graph variants from source with the same DeepSeek prompts and semantic limits, freezes them, then evaluates every eligible question. It compares normal RAG, existing ontology and additive expanded relationships. Size/validation failures stay in the denominator. This tests applicability to longer, more varied agreements; it does not test cross-document routing or legal-answer correctness.
+
+Run with `.\.venv\Scripts\python.exe lab.py run domain-deepseek-v3 --limit 20`. Use `--extraction-cache <prior-run>` to recover exact matching source-only API responses after interruption; their original raw responses and provenance remain recorded. `rerun` executes the completed run's archived code against its frozen graphs; `replay --no-langfuse` rescoring makes no new model calls. Include interrupted-attempt spend when reporting recovery costs.

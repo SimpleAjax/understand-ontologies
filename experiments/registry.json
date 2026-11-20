@@ -28,6 +28,26 @@
       "kind": "selection",
       "default_source": "ontology/experiments/retrieval-v2-pilot5-r1",
       "version_path": "experiments/sentence-selection/v1"
+    },
+    "domain-ontology-v1": {
+      "kind": "domain",
+      "description": "Source-only full-domain extraction for ten short agreements; bounded graph-only agent and cited answer, followed by evidence evaluation.",
+      "version_path": "experiments/domain-ontology/v1"
+    },
+    "domain-deepseek-v1": {
+      "kind": "domain",
+      "version_path": "experiments/domain-deepseek/v1",
+      "description": "DeepSeek extraction with existing design, plus expanded relationships on fixed base nodes; same local query agent."
+    },
+    "domain-deepseek-v2": {
+      "kind": "domain",
+      "version_path": "experiments/domain-deepseek/v2",
+      "description": "DeepSeek-only graph querying and answering over fixed B/C graphs; no local Qwen runtime."
+    },
+    "domain-deepseek-v3": {
+      "kind": "domain",
+      "version_path": "experiments/domain-deepseek/v3",
+      "description": "20 randomly selected additional agreements, all benchmark questions, frozen DeepSeek-only settings and failure-inclusive metrics."
     }
   }
 }

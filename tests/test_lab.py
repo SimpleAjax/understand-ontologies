@@ -15,6 +15,23 @@ spec.loader.exec_module(lab)
 
 
 class ArchiveTests(unittest.TestCase):
+    def test_domain_rerun_reuses_graphs_without_expanded_query_cache(self):
+        with tempfile.TemporaryDirectory() as tmp,patch.object(lab,'ROOT',Path(tmp)):
+            root=Path(tmp);source=self.fixture(root)
+            lab.save(source/'code/experiment/config.json',{'experiment_id':'domain','kind':'domain'})
+            lab.save(source/'bundle-lock.json',{'files':lab.files(source/'code'),'inputs_sha256':lab.sha(source/'inputs.json')})
+            lab.save(source/'model.json',{'query_model':'remote'})
+            lab.save(source/'manifest.json',{'status':'complete'})
+            v=source/'variants/expanded';(v/'graphs').mkdir(parents=True);(v/'graphs/doc.ttl').write_text('graph')
+            (v/'responses/search').mkdir(parents=True);lab.save(v/'responses/search/old.json',{'cached':'query'})
+            lab.save(v/'api-calls-old.json',[{'cost':1}]);lab.save(v/'graph-lock.json',{'files':{}})
+            lab.save(source/'run-lock.json',{'files':{p.relative_to(source).as_posix():lab.sha(p) for p in source.rglob('*') if p.is_file()}})
+            with patch.object(lab,'execute',side_effect=lambda folder,*args:folder):
+                result=lab.repeat(source,'rerun',True)
+            self.assertEqual((result/'variants/expanded/graphs/doc.ttl').read_text(),'graph')
+            self.assertFalse((result/'variants/expanded/responses').exists())
+            self.assertFalse((result/'variants/expanded/api-calls-old.json').exists())
+
     def fixture(self, root):
         folder=root/'saved'; (folder/'code/experiment').mkdir(parents=True)
         (folder/'code/experiment/pipeline.py').write_text("VALUE='old'\n")

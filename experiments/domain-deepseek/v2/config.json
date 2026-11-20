@@ -1,0 +1,51 @@
+{
+  "experiment_id": "domain-deepseek-v2",
+  "kind": "domain",
+  "shared_version": "v1",
+  "evaluation_version": "v1",
+  "dataset": "domain-10",
+  "sample_cap": 10,
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "extraction_batch_characters": 3600,
+  "unit_characters": 700,
+  "max_provisions_per_batch": 14,
+  "agent_rounds": 3,
+  "inspect_limit": 5,
+  "neighbor_limit": 6,
+  "character_budget": 6000,
+  "query_seed": 20261115,
+  "questions_per_agreement": 1,
+  "options": {
+    "num_ctx": 8192,
+    "num_predict": 2304,
+    "temperature": 0,
+    "seed": 42
+  },
+  "search_options": {
+    "num_ctx": 12288,
+    "num_predict": 512,
+    "temperature": 0,
+    "seed": 42
+  },
+  "answer_options": {
+    "num_ctx": 12288,
+    "num_predict": 768,
+    "temperature": 0,
+    "seed": 42
+  },
+  "relation_options": {
+    "num_ctx": 12288,
+    "num_predict": 2048,
+    "temperature": 0,
+    "seed": 42
+  },
+  "remote_model": "deepseek/deepseek-v4.1-flash-1017",
+  "provider": "wafer/us",
+  "workers": 3,
+  "remote_max_tokens": 8192,
+  "remote_output_retry": 16384,
+  "spend_limit_usd": 2.0,
+  "baseline_run": "artifacts/experiment-runs/domain-ontology-v1/20261115T064313020578Z-3ffb82",
+  "frozen_graph_source": "artifacts/experiment-runs/domain-deepseek-v1/20261115T095703165091Z-08ab55",
+  "inference_only": true
+}

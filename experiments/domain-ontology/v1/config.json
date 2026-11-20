@@ -1,0 +1,44 @@
+{
+  "experiment_id": "domain-ontology-v1",
+  "kind": "domain",
+  "shared_version": "v1",
+  "evaluation_version": "v1",
+  "dataset": "domain-10",
+  "sample_cap": 10,
+  "model": "qwen3:4b-instruct-2507-q4_K_M",
+  "model_digest": "0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0",
+  "api": "http://127.0.0.1:18765",
+  "extraction_batch_characters": 3600,
+  "unit_characters": 700,
+  "max_provisions_per_batch": 14,
+  "agent_rounds": 3,
+  "inspect_limit": 5,
+  "neighbor_limit": 6,
+  "character_budget": 6000,
+  "query_seed": 20261115,
+  "questions_per_agreement": 1,
+  "options": {
+    "num_ctx": 8192,
+    "num_predict": 2304,
+    "temperature": 0,
+    "seed": 42
+  },
+  "search_options": {
+    "num_ctx": 12288,
+    "num_predict": 512,
+    "temperature": 0,
+    "seed": 42
+  },
+  "answer_options": {
+    "num_ctx": 12288,
+    "num_predict": 768,
+    "temperature": 0,
+    "seed": 42
+  },
+  "relation_options": {
+    "num_ctx": 12288,
+    "num_predict": 2048,
+    "temperature": 0,
+    "seed": 42
+  }
+}
